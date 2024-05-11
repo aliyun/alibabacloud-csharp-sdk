@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The features supported by the instance. Valid values:
         /// 
-        /// *   sample_data: sample dataset. For more information, see [Sample dataset](~~452278~~).
-        /// *   diagnose_and_optimize: diagnostics and optimization. For more information, see [Diagnostics and optimization](~~323453~~).
+        /// *   sample_data: sample dataset. For more information, see [Sample dataset](https://help.aliyun.com/document_detail/452278.html).
+        /// *   diagnose_and_optimize: diagnostics and optimization. For more information, see [Diagnostics and optimization](https://help.aliyun.com/document_detail/323453.html).
         /// </summary>
         [NameInMap("SupportFeatureList")]
         [Validation(Required=false)]

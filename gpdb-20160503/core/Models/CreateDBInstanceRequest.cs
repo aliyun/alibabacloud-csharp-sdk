@@ -12,14 +12,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The ID of the backup set.
         /// 
-        /// >  You can call the [DescribeDataBackups](~~210093~~) operation to query the IDs of all backup sets in the instance.
+        /// >  You can call the [DescribeDataBackups](https://help.aliyun.com/document_detail/210093.html) operation to query the IDs of all backup sets in the instance.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. For more information, see [Ensure idempotence](~~327176~~).
+        /// The client token that is used to ensure the idempotence of the request. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/327176.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceCategory { get; set; }
 
         /// <summary>
-        /// The instance type of the instance. For information, see [Instance types](~~86942~~).
+        /// The instance type of the instance. For information, see [Instance types](https://help.aliyun.com/document_detail/86942.html).
         /// 
         /// > This parameter must be specified when you create an instance in reserved storage mode.
         /// </summary>
@@ -82,6 +82,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// - **Classic**: reserved storage mode.
         /// 
         /// > This parameter must be specified.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceMode")]
         [Validation(Required=false)]
@@ -114,6 +116,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The database engine of the instance. Set the value to gpdb.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -124,6 +128,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// 
         /// - 6.0
         /// - 7.0
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -243,7 +249,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProdType { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+        /// The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -259,7 +267,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The IP address whitelist of the instance.
         /// 
-        /// A value of 127.0.0.1 specifies that no IP address is allowed for external access. You can call the [ModifySecurityIps](~~86928~~) operation to modify the IP address whitelist after you create an instance.
+        /// A value of 127.0.0.1 specifies that no IP address is allowed for external access. You can call the [ModifySecurityIps](https://help.aliyun.com/document_detail/86928.html) operation to modify the IP address whitelist after you create an instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityIPList")]
         [Validation(Required=false)]
@@ -328,7 +338,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The ID of the source instance.
         /// 
-        /// >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
         /// </summary>
         [NameInMap("SrcDbInstanceName")]
         [Validation(Required=false)]
@@ -435,7 +445,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string VectorConfigurationStatus { get; set; }
 
         /// <summary>
-        /// The zone ID of the read-only instance. You can call the [DescribeRegions](~~86912~~) operation to query the most recent zone list.
+        /// The zone ID of the read-only instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent zone list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// The prefix of the endpoint.
         /// 
         /// Specify a prefix for the endpoint. Example: `gp-bp12ga6v69h86****`. In this example, the endpoint is `gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
@@ -36,7 +38,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The port number. Example: 5432.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]

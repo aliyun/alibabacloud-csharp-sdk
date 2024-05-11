@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// *   Friday
         /// *   Saturday
         /// *   Sunday
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PreferredBackupPeriod")]
         [Validation(Required=false)]
@@ -52,6 +56,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The backup window. Specify the backup window in the HH:mmZ-HH:mmZ format. The backup window must be in UTC. Default value: 00:00-01:00.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PreferredBackupTime")]
         [Validation(Required=false)]

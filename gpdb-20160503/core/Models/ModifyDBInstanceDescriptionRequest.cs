@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// The description of the instance.
         /// 
         /// The description must be 2 to 256 characters in length. It cannot start with http:// or https://.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -21,7 +23,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// >  You can call the [DescribeDBInstances](~~86911~~) operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.
+        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

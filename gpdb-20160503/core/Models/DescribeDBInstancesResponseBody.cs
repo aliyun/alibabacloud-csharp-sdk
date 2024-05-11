@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// An invalid parameter. It is no longer returned when you call this operation.
                 /// 
-                /// You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the access mode of an instance.
+                /// You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/86910.html) operation to query the access mode of an instance.
                 /// </summary>
                 [NameInMap("ConnectionMode")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string DBInstanceNetType { get; set; }
 
                 /// <summary>
-                /// The state of the instance. For more information, see [Instance statuses](~~86944~~).
+                /// The state of the instance. For more information, see [Instance statuses](https://help.aliyun.com/document_detail/86944.html).
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]

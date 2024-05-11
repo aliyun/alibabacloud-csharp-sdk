@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// *   0: disables SSL encryption.
         /// *   1: enables SSL encryption.
         /// *   2: updates SSL encryption.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SSLEnabled")]
         [Validation(Required=false)]

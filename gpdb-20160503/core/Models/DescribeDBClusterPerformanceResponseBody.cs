@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The name of the performance metric. For more information, see [Performance parameters](~~86943~~).
+        /// The name of the performance metric. For more information, see [Performance parameters](https://help.aliyun.com/document_detail/86943.html).
         /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
         public List<DescribeDBClusterPerformanceResponseBodyPerformanceKeys> PerformanceKeys { get; set; }
         public class DescribeDBClusterPerformanceResponseBodyPerformanceKeys : TeaModel {
             /// <summary>
-            /// The name of the performance metric. For more information, see [Performance parameters](~~86943~~).
+            /// The name of the performance metric. For more information, see [Performance parameters](https://help.aliyun.com/document_detail/86943.html).
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

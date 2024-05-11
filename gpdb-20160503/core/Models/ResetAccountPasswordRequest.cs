@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
     public class ResetAccountPasswordRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The name of the account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// 
         /// *   The instance is in the running state.
         /// *   The instance is not locked.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

@@ -19,10 +19,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The name of the privileged account.
         /// 
-        /// *   The name can contain lowercase letters, digits, and underscores (\_).
+        /// *   The name can contain lowercase letters, digits, and underscores (_).
         /// *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
         /// *   The name cannot start with gp.
         /// *   The name must be 2 to 16 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
         /// *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
         /// *   The password must be 8 to 32 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
@@ -42,7 +46,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

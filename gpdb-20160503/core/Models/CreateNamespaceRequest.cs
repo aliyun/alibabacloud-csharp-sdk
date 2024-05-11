@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The instance ID.
         /// 
-        /// > You can call the [DescribeDBInstances](~~196830~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+        /// > You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/196830.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The name of the manager account that has the rds_superuser permission.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ManagerAccount")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The password of the manager account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ManagerAccountPassword")]
         [Validation(Required=false)]
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The password of the namespace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NamespacePassword")]
         [Validation(Required=false)]
@@ -53,7 +61,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The region ID of the instance.
         /// 
-        /// > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

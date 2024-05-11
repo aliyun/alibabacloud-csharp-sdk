@@ -1,3 +1,6 @@
+2024-05-11 Version: 1.8.1
+- Generated csharp 2016-05-03 for gpdb.
+
 2024-05-09 Version: 1.8.0
 - Support API DescribeDBResourceManagementMode.
 

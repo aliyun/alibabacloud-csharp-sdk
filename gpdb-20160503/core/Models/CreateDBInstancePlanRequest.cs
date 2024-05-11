@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The instance ID.
         /// 
-        /// > You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.
+        /// > You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of **PlanType** and **PlanScheduleType**. The following section describes the PlanConfig parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PlanConfig")]
         [Validation(Required=false)]
@@ -51,6 +55,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The name of the plan.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PlanName")]
         [Validation(Required=false)]
@@ -61,6 +67,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// 
         /// *   **Postpone**: The plan is executed later.
         /// *   **Regular**: The plan is executed periodically.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PlanScheduleType")]
         [Validation(Required=false)]
@@ -91,6 +99,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// *   You can specify the value to Resize only for instances in Serverless mode.
         /// 
         /// *   You can specify the value to ModifySpec only for instances in elastic storage mode.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PlanType")]
         [Validation(Required=false)]

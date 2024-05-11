@@ -54,13 +54,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to apply for a public endpoint for an AnalyticDB for PostgreSQL instance. Both the primary and instance endpoints of an AnalyticDB for PostgreSQL instance can be public endpoints. For more information, see [Endpoints of an instance and its primary coordinator node](~~204879~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AllocateInstancePublicConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AllocateInstancePublicConnectionResponse
+         * @summary Allocates a public endpoint for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to apply for a public endpoint for an AnalyticDB for PostgreSQL instance. Both the primary and instance endpoints of an AnalyticDB for PostgreSQL instance can be public endpoints. For more information, see [Endpoints of an instance and its primary coordinator node](https://help.aliyun.com/document_detail/204879.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request AllocateInstancePublicConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AllocateInstancePublicConnectionResponse
          */
         public AllocateInstancePublicConnectionResponse AllocateInstancePublicConnectionWithOptions(AllocateInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -114,13 +116,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to apply for a public endpoint for an AnalyticDB for PostgreSQL instance. Both the primary and instance endpoints of an AnalyticDB for PostgreSQL instance can be public endpoints. For more information, see [Endpoints of an instance and its primary coordinator node](~~204879~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AllocateInstancePublicConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AllocateInstancePublicConnectionResponse
+         * @summary Allocates a public endpoint for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to apply for a public endpoint for an AnalyticDB for PostgreSQL instance. Both the primary and instance endpoints of an AnalyticDB for PostgreSQL instance can be public endpoints. For more information, see [Endpoints of an instance and its primary coordinator node](https://help.aliyun.com/document_detail/204879.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request AllocateInstancePublicConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AllocateInstancePublicConnectionResponse
          */
         public async Task<AllocateInstancePublicConnectionResponse> AllocateInstancePublicConnectionWithOptionsAsync(AllocateInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -174,12 +178,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to apply for a public endpoint for an AnalyticDB for PostgreSQL instance. Both the primary and instance endpoints of an AnalyticDB for PostgreSQL instance can be public endpoints. For more information, see [Endpoints of an instance and its primary coordinator node](~~204879~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AllocateInstancePublicConnectionRequest
-          * @return AllocateInstancePublicConnectionResponse
+         * @summary Allocates a public endpoint for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to apply for a public endpoint for an AnalyticDB for PostgreSQL instance. Both the primary and instance endpoints of an AnalyticDB for PostgreSQL instance can be public endpoints. For more information, see [Endpoints of an instance and its primary coordinator node](https://help.aliyun.com/document_detail/204879.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request AllocateInstancePublicConnectionRequest
+         * @return AllocateInstancePublicConnectionResponse
          */
         public AllocateInstancePublicConnectionResponse AllocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request)
         {
@@ -188,12 +194,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to apply for a public endpoint for an AnalyticDB for PostgreSQL instance. Both the primary and instance endpoints of an AnalyticDB for PostgreSQL instance can be public endpoints. For more information, see [Endpoints of an instance and its primary coordinator node](~~204879~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AllocateInstancePublicConnectionRequest
-          * @return AllocateInstancePublicConnectionResponse
+         * @summary Allocates a public endpoint for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to apply for a public endpoint for an AnalyticDB for PostgreSQL instance. Both the primary and instance endpoints of an AnalyticDB for PostgreSQL instance can be public endpoints. For more information, see [Endpoints of an instance and its primary coordinator node](https://help.aliyun.com/document_detail/204879.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request AllocateInstancePublicConnectionRequest
+         * @return AllocateInstancePublicConnectionResponse
          */
         public async Task<AllocateInstancePublicConnectionResponse> AllocateInstancePublicConnectionAsync(AllocateInstancePublicConnectionRequest request)
         {
@@ -201,6 +209,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await AllocateInstancePublicConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 取消上传文档任务
+         *
+         * @param request CancelUploadDocumentJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelUploadDocumentJobResponse
+         */
         public CancelUploadDocumentJobResponse CancelUploadDocumentJobWithOptions(CancelUploadDocumentJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -254,6 +269,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CancelUploadDocumentJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 取消上传文档任务
+         *
+         * @param request CancelUploadDocumentJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelUploadDocumentJobResponse
+         */
         public async Task<CancelUploadDocumentJobResponse> CancelUploadDocumentJobWithOptionsAsync(CancelUploadDocumentJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -307,18 +329,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CancelUploadDocumentJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 取消上传文档任务
+         *
+         * @param request CancelUploadDocumentJobRequest
+         * @return CancelUploadDocumentJobResponse
+         */
         public CancelUploadDocumentJobResponse CancelUploadDocumentJob(CancelUploadDocumentJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelUploadDocumentJobWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 取消上传文档任务
+         *
+         * @param request CancelUploadDocumentJobRequest
+         * @return CancelUploadDocumentJobResponse
+         */
         public async Task<CancelUploadDocumentJobResponse> CancelUploadDocumentJobAsync(CancelUploadDocumentJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelUploadDocumentJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 取消上传数据任务
+         *
+         * @param request CancelUpsertCollectionDataJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelUpsertCollectionDataJobResponse
+         */
         public CancelUpsertCollectionDataJobResponse CancelUpsertCollectionDataJobWithOptions(CancelUpsertCollectionDataJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -372,6 +413,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CancelUpsertCollectionDataJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 取消上传数据任务
+         *
+         * @param request CancelUpsertCollectionDataJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelUpsertCollectionDataJobResponse
+         */
         public async Task<CancelUpsertCollectionDataJobResponse> CancelUpsertCollectionDataJobWithOptionsAsync(CancelUpsertCollectionDataJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -425,18 +473,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CancelUpsertCollectionDataJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 取消上传数据任务
+         *
+         * @param request CancelUpsertCollectionDataJobRequest
+         * @return CancelUpsertCollectionDataJobResponse
+         */
         public CancelUpsertCollectionDataJobResponse CancelUpsertCollectionDataJob(CancelUpsertCollectionDataJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelUpsertCollectionDataJobWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 取消上传数据任务
+         *
+         * @param request CancelUpsertCollectionDataJobRequest
+         * @return CancelUpsertCollectionDataJobResponse
+         */
         public async Task<CancelUpsertCollectionDataJobResponse> CancelUpsertCollectionDataJobAsync(CancelUpsertCollectionDataJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelUpsertCollectionDataJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries whether a service-linked role is created.
+         *
+         * @param request CheckServiceLinkedRoleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckServiceLinkedRoleResponse
+         */
         public CheckServiceLinkedRoleResponse CheckServiceLinkedRoleWithOptions(CheckServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -464,6 +531,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CheckServiceLinkedRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries whether a service-linked role is created.
+         *
+         * @param request CheckServiceLinkedRoleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckServiceLinkedRoleResponse
+         */
         public async Task<CheckServiceLinkedRoleResponse> CheckServiceLinkedRoleWithOptionsAsync(CheckServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -491,12 +565,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CheckServiceLinkedRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries whether a service-linked role is created.
+         *
+         * @param request CheckServiceLinkedRoleRequest
+         * @return CheckServiceLinkedRoleResponse
+         */
         public CheckServiceLinkedRoleResponse CheckServiceLinkedRole(CheckServiceLinkedRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckServiceLinkedRoleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries whether a service-linked role is created.
+         *
+         * @param request CheckServiceLinkedRoleRequest
+         * @return CheckServiceLinkedRoleResponse
+         */
         public async Task<CheckServiceLinkedRoleResponse> CheckServiceLinkedRoleAsync(CheckServiceLinkedRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -504,14 +590,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
-          * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](~~50206~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateAccountResponse
+         * @summary Creates a privileged account for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
+         * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](https://help.aliyun.com/document_detail/50206.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAccountResponse
          */
         public CreateAccountResponse CreateAccountWithOptions(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -565,14 +653,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
-          * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](~~50206~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateAccountResponse
+         * @summary Creates a privileged account for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
+         * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](https://help.aliyun.com/document_detail/50206.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAccountResponse
          */
         public async Task<CreateAccountResponse> CreateAccountWithOptionsAsync(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -626,13 +716,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
-          * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](~~50206~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateAccountRequest
-          * @return CreateAccountResponse
+         * @summary Creates a privileged account for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
+         * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](https://help.aliyun.com/document_detail/50206.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateAccountRequest
+         * @return CreateAccountResponse
          */
         public CreateAccountResponse CreateAccount(CreateAccountRequest request)
         {
@@ -641,13 +733,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
-          * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](~~50206~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateAccountRequest
-          * @return CreateAccountResponse
+         * @summary Creates a privileged account for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
+         * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](https://help.aliyun.com/document_detail/50206.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateAccountRequest
+         * @return CreateAccountResponse
          */
         public async Task<CreateAccountResponse> CreateAccountAsync(CreateAccountRequest request)
         {
@@ -655,6 +749,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await CreateAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 创建Collection
+         *
+         * @param request CreateCollectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCollectionResponse
+         */
         public CreateCollectionResponse CreateCollectionWithOptions(CreateCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -738,6 +839,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CreateCollectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 创建Collection
+         *
+         * @param request CreateCollectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCollectionResponse
+         */
         public async Task<CreateCollectionResponse> CreateCollectionWithOptionsAsync(CreateCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -821,12 +929,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CreateCollectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 创建Collection
+         *
+         * @param request CreateCollectionRequest
+         * @return CreateCollectionResponse
+         */
         public CreateCollectionResponse CreateCollection(CreateCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCollectionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 创建Collection
+         *
+         * @param request CreateCollectionRequest
+         * @return CreateCollectionResponse
+         */
         public async Task<CreateCollectionResponse> CreateCollectionAsync(CreateCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -834,14 +954,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation when you need to create AnalyticDB for PostgreSQL instances to meet the requirements of new applications or services.
-          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-          *
-          * @param request CreateDBInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDBInstanceResponse
+         * @summary Creates an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation when you need to create AnalyticDB for PostgreSQL instances to meet the requirements of new applications or services.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+         *
+         * @param request CreateDBInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDBInstanceResponse
          */
         public CreateDBInstanceResponse CreateDBInstanceWithOptions(CreateDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1027,14 +1149,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation when you need to create AnalyticDB for PostgreSQL instances to meet the requirements of new applications or services.
-          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-          *
-          * @param request CreateDBInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDBInstanceResponse
+         * @summary Creates an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation when you need to create AnalyticDB for PostgreSQL instances to meet the requirements of new applications or services.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+         *
+         * @param request CreateDBInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDBInstanceResponse
          */
         public async Task<CreateDBInstanceResponse> CreateDBInstanceWithOptionsAsync(CreateDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1220,13 +1344,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation when you need to create AnalyticDB for PostgreSQL instances to meet the requirements of new applications or services.
-          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-          *
-          * @param request CreateDBInstanceRequest
-          * @return CreateDBInstanceResponse
+         * @summary Creates an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation when you need to create AnalyticDB for PostgreSQL instances to meet the requirements of new applications or services.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+         *
+         * @param request CreateDBInstanceRequest
+         * @return CreateDBInstanceResponse
          */
         public CreateDBInstanceResponse CreateDBInstance(CreateDBInstanceRequest request)
         {
@@ -1235,13 +1361,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation when you need to create AnalyticDB for PostgreSQL instances to meet the requirements of new applications or services.
-          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-          *
-          * @param request CreateDBInstanceRequest
-          * @return CreateDBInstanceResponse
+         * @summary Creates an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation when you need to create AnalyticDB for PostgreSQL instances to meet the requirements of new applications or services.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+         *
+         * @param request CreateDBInstanceRequest
+         * @return CreateDBInstanceResponse
          */
         public async Task<CreateDBInstanceResponse> CreateDBInstanceAsync(CreateDBInstanceRequest request)
         {
@@ -1250,13 +1378,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * *   The plan management feature is supported only for pay-as-you-go instances.
-          * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
-          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          *
-          * @param request CreateDBInstancePlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDBInstancePlanResponse
+         * @summary Creates a plan for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description *   The plan management feature is supported only for pay-as-you-go instances.
+         * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         *
+         * @param request CreateDBInstancePlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDBInstancePlanResponse
          */
         public CreateDBInstancePlanResponse CreateDBInstancePlanWithOptions(CreateDBInstancePlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1318,13 +1448,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * *   The plan management feature is supported only for pay-as-you-go instances.
-          * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
-          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          *
-          * @param request CreateDBInstancePlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDBInstancePlanResponse
+         * @summary Creates a plan for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description *   The plan management feature is supported only for pay-as-you-go instances.
+         * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         *
+         * @param request CreateDBInstancePlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDBInstancePlanResponse
          */
         public async Task<CreateDBInstancePlanResponse> CreateDBInstancePlanWithOptionsAsync(CreateDBInstancePlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1386,12 +1518,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * *   The plan management feature is supported only for pay-as-you-go instances.
-          * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
-          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          *
-          * @param request CreateDBInstancePlanRequest
-          * @return CreateDBInstancePlanResponse
+         * @summary Creates a plan for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description *   The plan management feature is supported only for pay-as-you-go instances.
+         * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         *
+         * @param request CreateDBInstancePlanRequest
+         * @return CreateDBInstancePlanResponse
          */
         public CreateDBInstancePlanResponse CreateDBInstancePlan(CreateDBInstancePlanRequest request)
         {
@@ -1400,12 +1534,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * *   The plan management feature is supported only for pay-as-you-go instances.
-          * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
-          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          *
-          * @param request CreateDBInstancePlanRequest
-          * @return CreateDBInstancePlanResponse
+         * @summary Creates a plan for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description *   The plan management feature is supported only for pay-as-you-go instances.
+         * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         *
+         * @param request CreateDBInstancePlanRequest
+         * @return CreateDBInstancePlanResponse
          */
         public async Task<CreateDBInstancePlanResponse> CreateDBInstancePlanAsync(CreateDBInstancePlanRequest request)
         {
@@ -1413,6 +1549,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await CreateDBInstancePlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 创建知识库
+         *
+         * @param request CreateDocumentCollectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDocumentCollectionResponse
+         */
         public CreateDocumentCollectionResponse CreateDocumentCollectionWithOptions(CreateDocumentCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1496,6 +1639,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CreateDocumentCollectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 创建知识库
+         *
+         * @param request CreateDocumentCollectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDocumentCollectionResponse
+         */
         public async Task<CreateDocumentCollectionResponse> CreateDocumentCollectionWithOptionsAsync(CreateDocumentCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1579,18 +1729,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CreateDocumentCollectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 创建知识库
+         *
+         * @param request CreateDocumentCollectionRequest
+         * @return CreateDocumentCollectionResponse
+         */
         public CreateDocumentCollectionResponse CreateDocumentCollection(CreateDocumentCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDocumentCollectionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 创建知识库
+         *
+         * @param request CreateDocumentCollectionRequest
+         * @return CreateDocumentCollectionResponse
+         */
         public async Task<CreateDocumentCollectionResponse> CreateDocumentCollectionAsync(CreateDocumentCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDocumentCollectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a vector namespace.
+         *
+         * @param request CreateNamespaceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateNamespaceResponse
+         */
         public CreateNamespaceResponse CreateNamespaceWithOptions(CreateNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1642,6 +1811,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CreateNamespaceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a vector namespace.
+         *
+         * @param request CreateNamespaceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateNamespaceResponse
+         */
         public async Task<CreateNamespaceResponse> CreateNamespaceWithOptionsAsync(CreateNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1693,12 +1869,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CreateNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a vector namespace.
+         *
+         * @param request CreateNamespaceRequest
+         * @return CreateNamespaceResponse
+         */
         public CreateNamespaceResponse CreateNamespace(CreateNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNamespaceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a vector namespace.
+         *
+         * @param request CreateNamespaceRequest
+         * @return CreateNamespaceResponse
+         */
         public async Task<CreateNamespaceResponse> CreateNamespaceAsync(CreateNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1706,18 +1894,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to load a sample dataset to an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see [Dataset information and query examples](~~452277~~).
-          * ## Precautions
-          * - If your instance is in elastic storage mode, the sample dataset is supported only for V6.3.10.3 or later. If your instance is in Serverless mode, the sample dataset is supported only for V1.0.4.0 or later. For more information about how to update the minor engine version of an instance, see [Update the minor engine version](/help/en/analyticdb-for-postgresql/latest/upgrade-the-engine-version).
-          * - The sample dataset is about 10 GB in size. Make sure that your instance has sufficient storage space.
-          * - The sample dataset contains a database named `ADB_SampleData_TPCH`. Make sure that your instance does not have a database with the same name. Otherwise, the dataset may fail to be loaded.
-          * - It may take 6 to 8 minutes to load the sample dataset. During this period, operations on your instance such as adding nodes or changing node specifications may be affected.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateSampleDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateSampleDataResponse
+         * @summary Creates a sample dataset for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to load a sample dataset to an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see [Dataset information and query examples](https://help.aliyun.com/document_detail/452277.html).
+         * ## Precautions
+         * - If your instance is in elastic storage mode, the sample dataset is supported only for V6.3.10.3 or later. If your instance is in Serverless mode, the sample dataset is supported only for V1.0.4.0 or later. For more information about how to update the minor engine version of an instance, see [Update the minor engine version](/help/en/analyticdb-for-postgresql/latest/upgrade-the-engine-version).
+         * - The sample dataset is about 10 GB in size. Make sure that your instance has sufficient storage space.
+         * - The sample dataset contains a database named `ADB_SampleData_TPCH`. Make sure that your instance does not have a database with the same name. Otherwise, the dataset may fail to be loaded.
+         * - It may take 6 to 8 minutes to load the sample dataset. During this period, operations on your instance such as adding nodes or changing node specifications may be affected.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateSampleDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSampleDataResponse
          */
         public CreateSampleDataResponse CreateSampleDataWithOptions(CreateSampleDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1751,18 +1941,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to load a sample dataset to an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see [Dataset information and query examples](~~452277~~).
-          * ## Precautions
-          * - If your instance is in elastic storage mode, the sample dataset is supported only for V6.3.10.3 or later. If your instance is in Serverless mode, the sample dataset is supported only for V1.0.4.0 or later. For more information about how to update the minor engine version of an instance, see [Update the minor engine version](/help/en/analyticdb-for-postgresql/latest/upgrade-the-engine-version).
-          * - The sample dataset is about 10 GB in size. Make sure that your instance has sufficient storage space.
-          * - The sample dataset contains a database named `ADB_SampleData_TPCH`. Make sure that your instance does not have a database with the same name. Otherwise, the dataset may fail to be loaded.
-          * - It may take 6 to 8 minutes to load the sample dataset. During this period, operations on your instance such as adding nodes or changing node specifications may be affected.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateSampleDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateSampleDataResponse
+         * @summary Creates a sample dataset for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to load a sample dataset to an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see [Dataset information and query examples](https://help.aliyun.com/document_detail/452277.html).
+         * ## Precautions
+         * - If your instance is in elastic storage mode, the sample dataset is supported only for V6.3.10.3 or later. If your instance is in Serverless mode, the sample dataset is supported only for V1.0.4.0 or later. For more information about how to update the minor engine version of an instance, see [Update the minor engine version](/help/en/analyticdb-for-postgresql/latest/upgrade-the-engine-version).
+         * - The sample dataset is about 10 GB in size. Make sure that your instance has sufficient storage space.
+         * - The sample dataset contains a database named `ADB_SampleData_TPCH`. Make sure that your instance does not have a database with the same name. Otherwise, the dataset may fail to be loaded.
+         * - It may take 6 to 8 minutes to load the sample dataset. During this period, operations on your instance such as adding nodes or changing node specifications may be affected.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateSampleDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSampleDataResponse
          */
         public async Task<CreateSampleDataResponse> CreateSampleDataWithOptionsAsync(CreateSampleDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1796,17 +1988,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to load a sample dataset to an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see [Dataset information and query examples](~~452277~~).
-          * ## Precautions
-          * - If your instance is in elastic storage mode, the sample dataset is supported only for V6.3.10.3 or later. If your instance is in Serverless mode, the sample dataset is supported only for V1.0.4.0 or later. For more information about how to update the minor engine version of an instance, see [Update the minor engine version](/help/en/analyticdb-for-postgresql/latest/upgrade-the-engine-version).
-          * - The sample dataset is about 10 GB in size. Make sure that your instance has sufficient storage space.
-          * - The sample dataset contains a database named `ADB_SampleData_TPCH`. Make sure that your instance does not have a database with the same name. Otherwise, the dataset may fail to be loaded.
-          * - It may take 6 to 8 minutes to load the sample dataset. During this period, operations on your instance such as adding nodes or changing node specifications may be affected.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateSampleDataRequest
-          * @return CreateSampleDataResponse
+         * @summary Creates a sample dataset for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to load a sample dataset to an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see [Dataset information and query examples](https://help.aliyun.com/document_detail/452277.html).
+         * ## Precautions
+         * - If your instance is in elastic storage mode, the sample dataset is supported only for V6.3.10.3 or later. If your instance is in Serverless mode, the sample dataset is supported only for V1.0.4.0 or later. For more information about how to update the minor engine version of an instance, see [Update the minor engine version](/help/en/analyticdb-for-postgresql/latest/upgrade-the-engine-version).
+         * - The sample dataset is about 10 GB in size. Make sure that your instance has sufficient storage space.
+         * - The sample dataset contains a database named `ADB_SampleData_TPCH`. Make sure that your instance does not have a database with the same name. Otherwise, the dataset may fail to be loaded.
+         * - It may take 6 to 8 minutes to load the sample dataset. During this period, operations on your instance such as adding nodes or changing node specifications may be affected.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateSampleDataRequest
+         * @return CreateSampleDataResponse
          */
         public CreateSampleDataResponse CreateSampleData(CreateSampleDataRequest request)
         {
@@ -1815,17 +2009,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to load a sample dataset to an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see [Dataset information and query examples](~~452277~~).
-          * ## Precautions
-          * - If your instance is in elastic storage mode, the sample dataset is supported only for V6.3.10.3 or later. If your instance is in Serverless mode, the sample dataset is supported only for V1.0.4.0 or later. For more information about how to update the minor engine version of an instance, see [Update the minor engine version](/help/en/analyticdb-for-postgresql/latest/upgrade-the-engine-version).
-          * - The sample dataset is about 10 GB in size. Make sure that your instance has sufficient storage space.
-          * - The sample dataset contains a database named `ADB_SampleData_TPCH`. Make sure that your instance does not have a database with the same name. Otherwise, the dataset may fail to be loaded.
-          * - It may take 6 to 8 minutes to load the sample dataset. During this period, operations on your instance such as adding nodes or changing node specifications may be affected.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateSampleDataRequest
-          * @return CreateSampleDataResponse
+         * @summary Creates a sample dataset for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to load a sample dataset to an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see [Dataset information and query examples](https://help.aliyun.com/document_detail/452277.html).
+         * ## Precautions
+         * - If your instance is in elastic storage mode, the sample dataset is supported only for V6.3.10.3 or later. If your instance is in Serverless mode, the sample dataset is supported only for V1.0.4.0 or later. For more information about how to update the minor engine version of an instance, see [Update the minor engine version](/help/en/analyticdb-for-postgresql/latest/upgrade-the-engine-version).
+         * - The sample dataset is about 10 GB in size. Make sure that your instance has sufficient storage space.
+         * - The sample dataset contains a database named `ADB_SampleData_TPCH`. Make sure that your instance does not have a database with the same name. Otherwise, the dataset may fail to be loaded.
+         * - It may take 6 to 8 minutes to load the sample dataset. During this period, operations on your instance such as adding nodes or changing node specifications may be affected.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateSampleDataRequest
+         * @return CreateSampleDataResponse
          */
         public async Task<CreateSampleDataResponse> CreateSampleDataAsync(CreateSampleDataRequest request)
         {
@@ -1833,6 +2029,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await CreateSampleDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a service-linked role.
+         *
+         * @param request CreateServiceLinkedRoleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateServiceLinkedRoleResponse
+         */
         public CreateServiceLinkedRoleResponse CreateServiceLinkedRoleWithOptions(CreateServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1864,6 +2067,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CreateServiceLinkedRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a service-linked role.
+         *
+         * @param request CreateServiceLinkedRoleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateServiceLinkedRoleResponse
+         */
         public async Task<CreateServiceLinkedRoleResponse> CreateServiceLinkedRoleWithOptionsAsync(CreateServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1895,18 +2105,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CreateServiceLinkedRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a service-linked role.
+         *
+         * @param request CreateServiceLinkedRoleRequest
+         * @return CreateServiceLinkedRoleResponse
+         */
         public CreateServiceLinkedRoleResponse CreateServiceLinkedRole(CreateServiceLinkedRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateServiceLinkedRoleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a service-linked role.
+         *
+         * @param request CreateServiceLinkedRoleRequest
+         * @return CreateServiceLinkedRoleResponse
+         */
         public async Task<CreateServiceLinkedRoleResponse> CreateServiceLinkedRoleAsync(CreateServiceLinkedRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateServiceLinkedRoleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 创建向量索引
+         *
+         * @param request CreateVectorIndexRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateVectorIndexResponse
+         */
         public CreateVectorIndexResponse CreateVectorIndexWithOptions(CreateVectorIndexRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1978,6 +2207,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CreateVectorIndexResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 创建向量索引
+         *
+         * @param request CreateVectorIndexRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateVectorIndexResponse
+         */
         public async Task<CreateVectorIndexResponse> CreateVectorIndexWithOptionsAsync(CreateVectorIndexRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2049,18 +2285,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<CreateVectorIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 创建向量索引
+         *
+         * @param request CreateVectorIndexRequest
+         * @return CreateVectorIndexResponse
+         */
         public CreateVectorIndexResponse CreateVectorIndex(CreateVectorIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateVectorIndexWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 创建向量索引
+         *
+         * @param request CreateVectorIndexRequest
+         * @return CreateVectorIndexResponse
+         */
         public async Task<CreateVectorIndexResponse> CreateVectorIndexAsync(CreateVectorIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVectorIndexWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a vector collection.
+         *
+         * @param request DeleteCollectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCollectionResponse
+         */
         public DeleteCollectionResponse DeleteCollectionWithOptions(DeleteCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2108,6 +2363,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DeleteCollectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a vector collection.
+         *
+         * @param request DeleteCollectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCollectionResponse
+         */
         public async Task<DeleteCollectionResponse> DeleteCollectionWithOptionsAsync(DeleteCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2155,18 +2417,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DeleteCollectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a vector collection.
+         *
+         * @param request DeleteCollectionRequest
+         * @return DeleteCollectionResponse
+         */
         public DeleteCollectionResponse DeleteCollection(DeleteCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCollectionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a vector collection.
+         *
+         * @param request DeleteCollectionRequest
+         * @return DeleteCollectionResponse
+         */
         public async Task<DeleteCollectionResponse> DeleteCollectionAsync(DeleteCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCollectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes vector data.
+         *
+         * @param request DeleteCollectionDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCollectionDataResponse
+         */
         public DeleteCollectionDataResponse DeleteCollectionDataWithOptions(DeleteCollectionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2222,6 +2503,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DeleteCollectionDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes vector data.
+         *
+         * @param request DeleteCollectionDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCollectionDataResponse
+         */
         public async Task<DeleteCollectionDataResponse> DeleteCollectionDataWithOptionsAsync(DeleteCollectionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2277,12 +2565,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DeleteCollectionDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes vector data.
+         *
+         * @param request DeleteCollectionDataRequest
+         * @return DeleteCollectionDataResponse
+         */
         public DeleteCollectionDataResponse DeleteCollectionData(DeleteCollectionDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCollectionDataWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes vector data.
+         *
+         * @param request DeleteCollectionDataRequest
+         * @return DeleteCollectionDataResponse
+         */
         public async Task<DeleteCollectionDataResponse> DeleteCollectionDataAsync(DeleteCollectionDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2290,14 +2590,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * *   Subscription instances cannot be manually released. They are automatically released when they expire.
-          * *   You can call this operation to release pay-as-you-go instances only when they are in the **Running** state.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteDBInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDBInstanceResponse
+         * @summary Releases a pay-as-you-go AnalyticDB for PostgreSQL instance.
+         *
+         * @description *   Subscription instances cannot be manually released. They are automatically released when they expire.
+         * *   You can call this operation to release pay-as-you-go instances only when they are in the **Running** state.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteDBInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDBInstanceResponse
          */
         public DeleteDBInstanceResponse DeleteDBInstanceWithOptions(DeleteDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2339,14 +2641,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * *   Subscription instances cannot be manually released. They are automatically released when they expire.
-          * *   You can call this operation to release pay-as-you-go instances only when they are in the **Running** state.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteDBInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDBInstanceResponse
+         * @summary Releases a pay-as-you-go AnalyticDB for PostgreSQL instance.
+         *
+         * @description *   Subscription instances cannot be manually released. They are automatically released when they expire.
+         * *   You can call this operation to release pay-as-you-go instances only when they are in the **Running** state.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteDBInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDBInstanceResponse
          */
         public async Task<DeleteDBInstanceResponse> DeleteDBInstanceWithOptionsAsync(DeleteDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2388,13 +2692,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * *   Subscription instances cannot be manually released. They are automatically released when they expire.
-          * *   You can call this operation to release pay-as-you-go instances only when they are in the **Running** state.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteDBInstanceRequest
-          * @return DeleteDBInstanceResponse
+         * @summary Releases a pay-as-you-go AnalyticDB for PostgreSQL instance.
+         *
+         * @description *   Subscription instances cannot be manually released. They are automatically released when they expire.
+         * *   You can call this operation to release pay-as-you-go instances only when they are in the **Running** state.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteDBInstanceRequest
+         * @return DeleteDBInstanceResponse
          */
         public DeleteDBInstanceResponse DeleteDBInstance(DeleteDBInstanceRequest request)
         {
@@ -2403,13 +2709,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * *   Subscription instances cannot be manually released. They are automatically released when they expire.
-          * *   You can call this operation to release pay-as-you-go instances only when they are in the **Running** state.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteDBInstanceRequest
-          * @return DeleteDBInstanceResponse
+         * @summary Releases a pay-as-you-go AnalyticDB for PostgreSQL instance.
+         *
+         * @description *   Subscription instances cannot be manually released. They are automatically released when they expire.
+         * *   You can call this operation to release pay-as-you-go instances only when they are in the **Running** state.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteDBInstanceRequest
+         * @return DeleteDBInstanceResponse
          */
         public async Task<DeleteDBInstanceResponse> DeleteDBInstanceAsync(DeleteDBInstanceRequest request)
         {
@@ -2418,13 +2726,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * If you no longer need a plan, you can call this operation to delete the plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteDBInstancePlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDBInstancePlanResponse
+         * @summary Deletes a plan from an AnalyticDB for PostgreSQL instance.
+         *
+         * @description If you no longer need a plan, you can call this operation to delete the plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteDBInstancePlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDBInstancePlanResponse
          */
         public DeleteDBInstancePlanResponse DeleteDBInstancePlanWithOptions(DeleteDBInstancePlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2462,13 +2772,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * If you no longer need a plan, you can call this operation to delete the plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteDBInstancePlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDBInstancePlanResponse
+         * @summary Deletes a plan from an AnalyticDB for PostgreSQL instance.
+         *
+         * @description If you no longer need a plan, you can call this operation to delete the plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteDBInstancePlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDBInstancePlanResponse
          */
         public async Task<DeleteDBInstancePlanResponse> DeleteDBInstancePlanWithOptionsAsync(DeleteDBInstancePlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2506,12 +2818,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * If you no longer need a plan, you can call this operation to delete the plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteDBInstancePlanRequest
-          * @return DeleteDBInstancePlanResponse
+         * @summary Deletes a plan from an AnalyticDB for PostgreSQL instance.
+         *
+         * @description If you no longer need a plan, you can call this operation to delete the plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteDBInstancePlanRequest
+         * @return DeleteDBInstancePlanResponse
          */
         public DeleteDBInstancePlanResponse DeleteDBInstancePlan(DeleteDBInstancePlanRequest request)
         {
@@ -2520,12 +2834,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * If you no longer need a plan, you can call this operation to delete the plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteDBInstancePlanRequest
-          * @return DeleteDBInstancePlanResponse
+         * @summary Deletes a plan from an AnalyticDB for PostgreSQL instance.
+         *
+         * @description If you no longer need a plan, you can call this operation to delete the plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteDBInstancePlanRequest
+         * @return DeleteDBInstancePlanResponse
          */
         public async Task<DeleteDBInstancePlanResponse> DeleteDBInstancePlanAsync(DeleteDBInstancePlanRequest request)
         {
@@ -2533,6 +2849,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DeleteDBInstancePlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 删除文档
+         *
+         * @param request DeleteDocumentRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDocumentResponse
+         */
         public DeleteDocumentResponse DeleteDocumentWithOptions(DeleteDocumentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2584,6 +2907,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DeleteDocumentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除文档
+         *
+         * @param request DeleteDocumentRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDocumentResponse
+         */
         public async Task<DeleteDocumentResponse> DeleteDocumentWithOptionsAsync(DeleteDocumentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2635,18 +2965,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DeleteDocumentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除文档
+         *
+         * @param request DeleteDocumentRequest
+         * @return DeleteDocumentResponse
+         */
         public DeleteDocumentResponse DeleteDocument(DeleteDocumentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDocumentWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 删除文档
+         *
+         * @param request DeleteDocumentRequest
+         * @return DeleteDocumentResponse
+         */
         public async Task<DeleteDocumentResponse> DeleteDocumentAsync(DeleteDocumentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDocumentWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 删除知识库
+         *
+         * @param request DeleteDocumentCollectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDocumentCollectionResponse
+         */
         public DeleteDocumentCollectionResponse DeleteDocumentCollectionWithOptions(DeleteDocumentCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2694,6 +3043,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DeleteDocumentCollectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除知识库
+         *
+         * @param request DeleteDocumentCollectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDocumentCollectionResponse
+         */
         public async Task<DeleteDocumentCollectionResponse> DeleteDocumentCollectionWithOptionsAsync(DeleteDocumentCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2741,18 +3097,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DeleteDocumentCollectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除知识库
+         *
+         * @param request DeleteDocumentCollectionRequest
+         * @return DeleteDocumentCollectionResponse
+         */
         public DeleteDocumentCollectionResponse DeleteDocumentCollection(DeleteDocumentCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDocumentCollectionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 删除知识库
+         *
+         * @param request DeleteDocumentCollectionRequest
+         * @return DeleteDocumentCollectionResponse
+         */
         public async Task<DeleteDocumentCollectionResponse> DeleteDocumentCollectionAsync(DeleteDocumentCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDocumentCollectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a namespace.
+         *
+         * @param request DeleteNamespaceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNamespaceResponse
+         */
         public DeleteNamespaceResponse DeleteNamespaceWithOptions(DeleteNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2800,6 +3175,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DeleteNamespaceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a namespace.
+         *
+         * @param request DeleteNamespaceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNamespaceResponse
+         */
         public async Task<DeleteNamespaceResponse> DeleteNamespaceWithOptionsAsync(DeleteNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2847,18 +3229,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DeleteNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a namespace.
+         *
+         * @param request DeleteNamespaceRequest
+         * @return DeleteNamespaceResponse
+         */
         public DeleteNamespaceResponse DeleteNamespace(DeleteNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNamespaceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a namespace.
+         *
+         * @param request DeleteNamespaceRequest
+         * @return DeleteNamespaceResponse
+         */
         public async Task<DeleteNamespaceResponse> DeleteNamespaceAsync(DeleteNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNamespaceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a vector index.
+         *
+         * @param request DeleteVectorIndexRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteVectorIndexResponse
+         */
         public DeleteVectorIndexResponse DeleteVectorIndexWithOptions(DeleteVectorIndexRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2910,6 +3311,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DeleteVectorIndexResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a vector index.
+         *
+         * @param request DeleteVectorIndexRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteVectorIndexResponse
+         */
         public async Task<DeleteVectorIndexResponse> DeleteVectorIndexWithOptionsAsync(DeleteVectorIndexRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2961,12 +3369,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DeleteVectorIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a vector index.
+         *
+         * @param request DeleteVectorIndexRequest
+         * @return DeleteVectorIndexResponse
+         */
         public DeleteVectorIndexResponse DeleteVectorIndex(DeleteVectorIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteVectorIndexWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a vector index.
+         *
+         * @param request DeleteVectorIndexRequest
+         * @return DeleteVectorIndexResponse
+         */
         public async Task<DeleteVectorIndexResponse> DeleteVectorIndexAsync(DeleteVectorIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2974,13 +3394,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the information of the privileged account in an AnalyticDB for PostgreSQL instance, such as its state, description, and the instance.
-          * ## Limit
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeAccountsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAccountsResponse
+         * @summary Queries the information about database accounts for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is called to query the information of the privileged account in an AnalyticDB for PostgreSQL instance, such as its state, description, and the instance.
+         * ## Limit
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeAccountsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAccountsResponse
          */
         public DescribeAccountsResponse DescribeAccountsWithOptions(DescribeAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3014,13 +3436,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the information of the privileged account in an AnalyticDB for PostgreSQL instance, such as its state, description, and the instance.
-          * ## Limit
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeAccountsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAccountsResponse
+         * @summary Queries the information about database accounts for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is called to query the information of the privileged account in an AnalyticDB for PostgreSQL instance, such as its state, description, and the instance.
+         * ## Limit
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeAccountsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAccountsResponse
          */
         public async Task<DescribeAccountsResponse> DescribeAccountsWithOptionsAsync(DescribeAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3054,12 +3478,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the information of the privileged account in an AnalyticDB for PostgreSQL instance, such as its state, description, and the instance.
-          * ## Limit
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeAccountsRequest
-          * @return DescribeAccountsResponse
+         * @summary Queries the information about database accounts for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is called to query the information of the privileged account in an AnalyticDB for PostgreSQL instance, such as its state, description, and the instance.
+         * ## Limit
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeAccountsRequest
+         * @return DescribeAccountsResponse
          */
         public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest request)
         {
@@ -3068,12 +3494,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the information of the privileged account in an AnalyticDB for PostgreSQL instance, such as its state, description, and the instance.
-          * ## Limit
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeAccountsRequest
-          * @return DescribeAccountsResponse
+         * @summary Queries the information about database accounts for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is called to query the information of the privileged account in an AnalyticDB for PostgreSQL instance, such as its state, description, and the instance.
+         * ## Limit
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeAccountsRequest
+         * @return DescribeAccountsResponse
          */
         public async Task<DescribeAccountsResponse> DescribeAccountsAsync(DescribeAccountsRequest request)
         {
@@ -3081,6 +3509,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeAccountsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取实例活跃的SQL列表
+         *
+         * @param request DescribeActiveSQLRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeActiveSQLRecordsResponse
+         */
         public DescribeActiveSQLRecordsResponse DescribeActiveSQLRecordsWithOptions(DescribeActiveSQLRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3140,6 +3575,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeActiveSQLRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取实例活跃的SQL列表
+         *
+         * @param request DescribeActiveSQLRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeActiveSQLRecordsResponse
+         */
         public async Task<DescribeActiveSQLRecordsResponse> DescribeActiveSQLRecordsWithOptionsAsync(DescribeActiveSQLRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3199,12 +3641,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeActiveSQLRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取实例活跃的SQL列表
+         *
+         * @param request DescribeActiveSQLRecordsRequest
+         * @return DescribeActiveSQLRecordsResponse
+         */
         public DescribeActiveSQLRecordsResponse DescribeActiveSQLRecords(DescribeActiveSQLRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeActiveSQLRecordsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 获取实例活跃的SQL列表
+         *
+         * @param request DescribeActiveSQLRecordsRequest
+         * @return DescribeActiveSQLRecordsResponse
+         */
         public async Task<DescribeActiveSQLRecordsResponse> DescribeActiveSQLRecordsAsync(DescribeActiveSQLRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3212,11 +3666,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
-          *
-          * @param request DescribeAvailableResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAvailableResourcesResponse
+         * @summary Queries the information about available resources of AnalyticDB for PostgreSQL.
+         *
+         * @description When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
+         *
+         * @param request DescribeAvailableResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAvailableResourcesResponse
          */
         public DescribeAvailableResourcesResponse DescribeAvailableResourcesWithOptions(DescribeAvailableResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3254,11 +3710,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
-          *
-          * @param request DescribeAvailableResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAvailableResourcesResponse
+         * @summary Queries the information about available resources of AnalyticDB for PostgreSQL.
+         *
+         * @description When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
+         *
+         * @param request DescribeAvailableResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAvailableResourcesResponse
          */
         public async Task<DescribeAvailableResourcesResponse> DescribeAvailableResourcesWithOptionsAsync(DescribeAvailableResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3296,10 +3754,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
-          *
-          * @param request DescribeAvailableResourcesRequest
-          * @return DescribeAvailableResourcesResponse
+         * @summary Queries the information about available resources of AnalyticDB for PostgreSQL.
+         *
+         * @description When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
+         *
+         * @param request DescribeAvailableResourcesRequest
+         * @return DescribeAvailableResourcesResponse
          */
         public DescribeAvailableResourcesResponse DescribeAvailableResources(DescribeAvailableResourcesRequest request)
         {
@@ -3308,10 +3768,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
-          *
-          * @param request DescribeAvailableResourcesRequest
-          * @return DescribeAvailableResourcesResponse
+         * @summary Queries the information about available resources of AnalyticDB for PostgreSQL.
+         *
+         * @description When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
+         *
+         * @param request DescribeAvailableResourcesRequest
+         * @return DescribeAvailableResourcesResponse
          */
         public async Task<DescribeAvailableResourcesResponse> DescribeAvailableResourcesAsync(DescribeAvailableResourcesRequest request)
         {
@@ -3320,13 +3782,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the backup settings of an AnalyticDB for PostgreSQL instance in elastic storage mode. Periodically backing data can prevent data loss. For more information about how to modify backup policies, see [ModifyBackupPolicy](~~210095~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeBackupPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeBackupPolicyResponse
+         * @summary Queries the backup policy of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the backup settings of an AnalyticDB for PostgreSQL instance in elastic storage mode. Periodically backing data can prevent data loss. For more information about how to modify backup policies, see [ModifyBackupPolicy](https://help.aliyun.com/document_detail/210095.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackupPolicyResponse
          */
         public DescribeBackupPolicyResponse DescribeBackupPolicyWithOptions(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3356,13 +3820,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the backup settings of an AnalyticDB for PostgreSQL instance in elastic storage mode. Periodically backing data can prevent data loss. For more information about how to modify backup policies, see [ModifyBackupPolicy](~~210095~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeBackupPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeBackupPolicyResponse
+         * @summary Queries the backup policy of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the backup settings of an AnalyticDB for PostgreSQL instance in elastic storage mode. Periodically backing data can prevent data loss. For more information about how to modify backup policies, see [ModifyBackupPolicy](https://help.aliyun.com/document_detail/210095.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackupPolicyResponse
          */
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyWithOptionsAsync(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3392,12 +3858,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the backup settings of an AnalyticDB for PostgreSQL instance in elastic storage mode. Periodically backing data can prevent data loss. For more information about how to modify backup policies, see [ModifyBackupPolicy](~~210095~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeBackupPolicyRequest
-          * @return DescribeBackupPolicyResponse
+         * @summary Queries the backup policy of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the backup settings of an AnalyticDB for PostgreSQL instance in elastic storage mode. Periodically backing data can prevent data loss. For more information about how to modify backup policies, see [ModifyBackupPolicy](https://help.aliyun.com/document_detail/210095.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeBackupPolicyRequest
+         * @return DescribeBackupPolicyResponse
          */
         public DescribeBackupPolicyResponse DescribeBackupPolicy(DescribeBackupPolicyRequest request)
         {
@@ -3406,12 +3874,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the backup settings of an AnalyticDB for PostgreSQL instance in elastic storage mode. Periodically backing data can prevent data loss. For more information about how to modify backup policies, see [ModifyBackupPolicy](~~210095~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeBackupPolicyRequest
-          * @return DescribeBackupPolicyResponse
+         * @summary Queries the backup policy of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the backup settings of an AnalyticDB for PostgreSQL instance in elastic storage mode. Periodically backing data can prevent data loss. For more information about how to modify backup policies, see [ModifyBackupPolicy](https://help.aliyun.com/document_detail/210095.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeBackupPolicyRequest
+         * @return DescribeBackupPolicyResponse
          */
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyAsync(DescribeBackupPolicyRequest request)
         {
@@ -3419,6 +3889,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeBackupPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about a vector collection.
+         *
+         * @param request DescribeCollectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCollectionResponse
+         */
         public DescribeCollectionResponse DescribeCollectionWithOptions(DescribeCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3466,6 +3943,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeCollectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about a vector collection.
+         *
+         * @param request DescribeCollectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCollectionResponse
+         */
         public async Task<DescribeCollectionResponse> DescribeCollectionWithOptionsAsync(DescribeCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3513,12 +3997,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeCollectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about a vector collection.
+         *
+         * @param request DescribeCollectionRequest
+         * @return DescribeCollectionResponse
+         */
         public DescribeCollectionResponse DescribeCollection(DescribeCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCollectionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about a vector collection.
+         *
+         * @param request DescribeCollectionRequest
+         * @return DescribeCollectionResponse
+         */
         public async Task<DescribeCollectionResponse> DescribeCollectionAsync(DescribeCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3526,14 +4022,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * ##
-          * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBClusterNodeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterNodeResponse
+         * @summary Queries a list of nodes in an AnalyticDB for PostgreSQL instance.
+         *
+         * @description ##
+         * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBClusterNodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterNodeResponse
          */
         public DescribeDBClusterNodeResponse DescribeDBClusterNodeWithOptions(DescribeDBClusterNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3567,14 +4065,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * ##
-          * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBClusterNodeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterNodeResponse
+         * @summary Queries a list of nodes in an AnalyticDB for PostgreSQL instance.
+         *
+         * @description ##
+         * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBClusterNodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterNodeResponse
          */
         public async Task<DescribeDBClusterNodeResponse> DescribeDBClusterNodeWithOptionsAsync(DescribeDBClusterNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3608,13 +4108,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * ##
-          * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBClusterNodeRequest
-          * @return DescribeDBClusterNodeResponse
+         * @summary Queries a list of nodes in an AnalyticDB for PostgreSQL instance.
+         *
+         * @description ##
+         * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBClusterNodeRequest
+         * @return DescribeDBClusterNodeResponse
          */
         public DescribeDBClusterNodeResponse DescribeDBClusterNode(DescribeDBClusterNodeRequest request)
         {
@@ -3623,13 +4125,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * ##
-          * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBClusterNodeRequest
-          * @return DescribeDBClusterNodeResponse
+         * @summary Queries a list of nodes in an AnalyticDB for PostgreSQL instance.
+         *
+         * @description ##
+         * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBClusterNodeRequest
+         * @return DescribeDBClusterNodeResponse
          */
         public async Task<DescribeDBClusterNodeResponse> DescribeDBClusterNodeAsync(DescribeDBClusterNodeRequest request)
         {
@@ -3638,11 +4142,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can query monitoring information only within the last 30 days.
-          *
-          * @param request DescribeDBClusterPerformanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterPerformanceResponse
+         * @summary Queries the information about performance metrics of an AnalyticDB for PostgreSQL instance within a time range.
+         *
+         * @description You can query monitoring information only within the last 30 days.
+         *
+         * @param request DescribeDBClusterPerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterPerformanceResponse
          */
         public DescribeDBClusterPerformanceResponse DescribeDBClusterPerformanceWithOptions(DescribeDBClusterPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3696,11 +4202,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can query monitoring information only within the last 30 days.
-          *
-          * @param request DescribeDBClusterPerformanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBClusterPerformanceResponse
+         * @summary Queries the information about performance metrics of an AnalyticDB for PostgreSQL instance within a time range.
+         *
+         * @description You can query monitoring information only within the last 30 days.
+         *
+         * @param request DescribeDBClusterPerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBClusterPerformanceResponse
          */
         public async Task<DescribeDBClusterPerformanceResponse> DescribeDBClusterPerformanceWithOptionsAsync(DescribeDBClusterPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3754,10 +4262,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can query monitoring information only within the last 30 days.
-          *
-          * @param request DescribeDBClusterPerformanceRequest
-          * @return DescribeDBClusterPerformanceResponse
+         * @summary Queries the information about performance metrics of an AnalyticDB for PostgreSQL instance within a time range.
+         *
+         * @description You can query monitoring information only within the last 30 days.
+         *
+         * @param request DescribeDBClusterPerformanceRequest
+         * @return DescribeDBClusterPerformanceResponse
          */
         public DescribeDBClusterPerformanceResponse DescribeDBClusterPerformance(DescribeDBClusterPerformanceRequest request)
         {
@@ -3766,10 +4276,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can query monitoring information only within the last 30 days.
-          *
-          * @param request DescribeDBClusterPerformanceRequest
-          * @return DescribeDBClusterPerformanceResponse
+         * @summary Queries the information about performance metrics of an AnalyticDB for PostgreSQL instance within a time range.
+         *
+         * @description You can query monitoring information only within the last 30 days.
+         *
+         * @param request DescribeDBClusterPerformanceRequest
+         * @return DescribeDBClusterPerformanceResponse
          */
         public async Task<DescribeDBClusterPerformanceResponse> DescribeDBClusterPerformanceAsync(DescribeDBClusterPerformanceRequest request)
         {
@@ -3778,14 +4290,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * ##
-          * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceAttributeResponse
+         * @summary Queries the information about an AnalyticDB for PostgreSQL instance.
+         *
+         * @description ##
+         * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceAttributeResponse
          */
         public DescribeDBInstanceAttributeResponse DescribeDBInstanceAttributeWithOptions(DescribeDBInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3823,14 +4337,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * ##
-          * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceAttributeResponse
+         * @summary Queries the information about an AnalyticDB for PostgreSQL instance.
+         *
+         * @description ##
+         * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceAttributeResponse
          */
         public async Task<DescribeDBInstanceAttributeResponse> DescribeDBInstanceAttributeWithOptionsAsync(DescribeDBInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3868,13 +4384,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * ##
-          * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceAttributeRequest
-          * @return DescribeDBInstanceAttributeResponse
+         * @summary Queries the information about an AnalyticDB for PostgreSQL instance.
+         *
+         * @description ##
+         * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceAttributeRequest
+         * @return DescribeDBInstanceAttributeResponse
          */
         public DescribeDBInstanceAttributeResponse DescribeDBInstanceAttribute(DescribeDBInstanceAttributeRequest request)
         {
@@ -3883,13 +4401,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * ##
-          * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceAttributeRequest
-          * @return DescribeDBInstanceAttributeResponse
+         * @summary Queries the information about an AnalyticDB for PostgreSQL instance.
+         *
+         * @description ##
+         * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceAttributeRequest
+         * @return DescribeDBInstanceAttributeResponse
          */
         public async Task<DescribeDBInstanceAttributeResponse> DescribeDBInstanceAttributeAsync(DescribeDBInstanceAttributeRequest request)
         {
@@ -3898,13 +4418,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of data bloat on an AnalyticDB for PostgreSQL instance in elastic storage mode. The minor version of the instance must be V6.3.10.1 or later. For more information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceDataBloatRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceDataBloatResponse
+         * @summary Queries the information about data bloat for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of data bloat on an AnalyticDB for PostgreSQL instance in elastic storage mode. The minor version of the instance must be V6.3.10.1 or later. For more information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceDataBloatRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceDataBloatResponse
          */
         public DescribeDBInstanceDataBloatResponse DescribeDBInstanceDataBloatWithOptions(DescribeDBInstanceDataBloatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3942,13 +4464,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of data bloat on an AnalyticDB for PostgreSQL instance in elastic storage mode. The minor version of the instance must be V6.3.10.1 or later. For more information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceDataBloatRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceDataBloatResponse
+         * @summary Queries the information about data bloat for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of data bloat on an AnalyticDB for PostgreSQL instance in elastic storage mode. The minor version of the instance must be V6.3.10.1 or later. For more information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceDataBloatRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceDataBloatResponse
          */
         public async Task<DescribeDBInstanceDataBloatResponse> DescribeDBInstanceDataBloatWithOptionsAsync(DescribeDBInstanceDataBloatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3986,12 +4510,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of data bloat on an AnalyticDB for PostgreSQL instance in elastic storage mode. The minor version of the instance must be V6.3.10.1 or later. For more information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceDataBloatRequest
-          * @return DescribeDBInstanceDataBloatResponse
+         * @summary Queries the information about data bloat for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of data bloat on an AnalyticDB for PostgreSQL instance in elastic storage mode. The minor version of the instance must be V6.3.10.1 or later. For more information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceDataBloatRequest
+         * @return DescribeDBInstanceDataBloatResponse
          */
         public DescribeDBInstanceDataBloatResponse DescribeDBInstanceDataBloat(DescribeDBInstanceDataBloatRequest request)
         {
@@ -4000,12 +4526,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of data bloat on an AnalyticDB for PostgreSQL instance in elastic storage mode. The minor version of the instance must be V6.3.10.1 or later. For more information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceDataBloatRequest
-          * @return DescribeDBInstanceDataBloatResponse
+         * @summary Queries the information about data bloat for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of data bloat on an AnalyticDB for PostgreSQL instance in elastic storage mode. The minor version of the instance must be V6.3.10.1 or later. For more information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceDataBloatRequest
+         * @return DescribeDBInstanceDataBloatResponse
          */
         public async Task<DescribeDBInstanceDataBloatResponse> DescribeDBInstanceDataBloatAsync(DescribeDBInstanceDataBloatRequest request)
         {
@@ -4014,13 +4542,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To prevent data skew from affecting your database service, you can call this operation to query the details about data skew on an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceDataSkewRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceDataSkewResponse
+         * @summary Queries the information about data skew for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To prevent data skew from affecting your database service, you can call this operation to query the details about data skew on an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceDataSkewRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceDataSkewResponse
          */
         public DescribeDBInstanceDataSkewResponse DescribeDBInstanceDataSkewWithOptions(DescribeDBInstanceDataSkewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4058,13 +4588,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To prevent data skew from affecting your database service, you can call this operation to query the details about data skew on an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceDataSkewRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceDataSkewResponse
+         * @summary Queries the information about data skew for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To prevent data skew from affecting your database service, you can call this operation to query the details about data skew on an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceDataSkewRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceDataSkewResponse
          */
         public async Task<DescribeDBInstanceDataSkewResponse> DescribeDBInstanceDataSkewWithOptionsAsync(DescribeDBInstanceDataSkewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4102,12 +4634,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To prevent data skew from affecting your database service, you can call this operation to query the details about data skew on an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceDataSkewRequest
-          * @return DescribeDBInstanceDataSkewResponse
+         * @summary Queries the information about data skew for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To prevent data skew from affecting your database service, you can call this operation to query the details about data skew on an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceDataSkewRequest
+         * @return DescribeDBInstanceDataSkewResponse
          */
         public DescribeDBInstanceDataSkewResponse DescribeDBInstanceDataSkew(DescribeDBInstanceDataSkewRequest request)
         {
@@ -4116,12 +4650,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To prevent data skew from affecting your database service, you can call this operation to query the details about data skew on an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceDataSkewRequest
-          * @return DescribeDBInstanceDataSkewResponse
+         * @summary Queries the information about data skew for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To prevent data skew from affecting your database service, you can call this operation to query the details about data skew on an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceDataSkewRequest
+         * @return DescribeDBInstanceDataSkewResponse
          */
         public async Task<DescribeDBInstanceDataSkewResponse> DescribeDBInstanceDataSkewAsync(DescribeDBInstanceDataSkewRequest request)
         {
@@ -4130,11 +4666,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
-          *
-          * @param request DescribeDBInstanceDiagnosisSummaryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceDiagnosisSummaryResponse
+         * @summary Queries the information about nodes in an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeDBInstanceDiagnosisSummaryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceDiagnosisSummaryResponse
          */
         public DescribeDBInstanceDiagnosisSummaryResponse DescribeDBInstanceDiagnosisSummaryWithOptions(DescribeDBInstanceDiagnosisSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4184,11 +4722,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
-          *
-          * @param request DescribeDBInstanceDiagnosisSummaryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceDiagnosisSummaryResponse
+         * @summary Queries the information about nodes in an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeDBInstanceDiagnosisSummaryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceDiagnosisSummaryResponse
          */
         public async Task<DescribeDBInstanceDiagnosisSummaryResponse> DescribeDBInstanceDiagnosisSummaryWithOptionsAsync(DescribeDBInstanceDiagnosisSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4238,10 +4778,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
-          *
-          * @param request DescribeDBInstanceDiagnosisSummaryRequest
-          * @return DescribeDBInstanceDiagnosisSummaryResponse
+         * @summary Queries the information about nodes in an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeDBInstanceDiagnosisSummaryRequest
+         * @return DescribeDBInstanceDiagnosisSummaryResponse
          */
         public DescribeDBInstanceDiagnosisSummaryResponse DescribeDBInstanceDiagnosisSummary(DescribeDBInstanceDiagnosisSummaryRequest request)
         {
@@ -4250,10 +4792,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
-          *
-          * @param request DescribeDBInstanceDiagnosisSummaryRequest
-          * @return DescribeDBInstanceDiagnosisSummaryResponse
+         * @summary Queries the information about nodes in an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeDBInstanceDiagnosisSummaryRequest
+         * @return DescribeDBInstanceDiagnosisSummaryResponse
          */
         public async Task<DescribeDBInstanceDiagnosisSummaryResponse> DescribeDBInstanceDiagnosisSummaryAsync(DescribeDBInstanceDiagnosisSummaryRequest request)
         {
@@ -4262,13 +4806,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the error logs of an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceErrorLogRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceErrorLogResponse
+         * @summary Queries the error logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the error logs of an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceErrorLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceErrorLogResponse
          */
         public DescribeDBInstanceErrorLogResponse DescribeDBInstanceErrorLogWithOptions(DescribeDBInstanceErrorLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4334,13 +4880,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the error logs of an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceErrorLogRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceErrorLogResponse
+         * @summary Queries the error logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the error logs of an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceErrorLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceErrorLogResponse
          */
         public async Task<DescribeDBInstanceErrorLogResponse> DescribeDBInstanceErrorLogWithOptionsAsync(DescribeDBInstanceErrorLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4406,12 +4954,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the error logs of an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceErrorLogRequest
-          * @return DescribeDBInstanceErrorLogResponse
+         * @summary Queries the error logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the error logs of an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceErrorLogRequest
+         * @return DescribeDBInstanceErrorLogResponse
          */
         public DescribeDBInstanceErrorLogResponse DescribeDBInstanceErrorLog(DescribeDBInstanceErrorLogRequest request)
         {
@@ -4420,12 +4970,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the error logs of an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceErrorLogRequest
-          * @return DescribeDBInstanceErrorLogResponse
+         * @summary Queries the error logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the error logs of an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceErrorLogRequest
+         * @return DescribeDBInstanceErrorLogResponse
          */
         public async Task<DescribeDBInstanceErrorLogResponse> DescribeDBInstanceErrorLogAsync(DescribeDBInstanceErrorLogRequest request)
         {
@@ -4434,13 +4986,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the whitelists of IP addresses that are allowed to access an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceIPArrayListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceIPArrayListResponse
+         * @summary Queries the whitelists of IP addresses that are allowed to access an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the whitelists of IP addresses that are allowed to access an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceIPArrayListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceIPArrayListResponse
          */
         public DescribeDBInstanceIPArrayListResponse DescribeDBInstanceIPArrayListWithOptions(DescribeDBInstanceIPArrayListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4478,13 +5032,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the whitelists of IP addresses that are allowed to access an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceIPArrayListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceIPArrayListResponse
+         * @summary Queries the whitelists of IP addresses that are allowed to access an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the whitelists of IP addresses that are allowed to access an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceIPArrayListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceIPArrayListResponse
          */
         public async Task<DescribeDBInstanceIPArrayListResponse> DescribeDBInstanceIPArrayListWithOptionsAsync(DescribeDBInstanceIPArrayListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4522,12 +5078,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the whitelists of IP addresses that are allowed to access an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceIPArrayListRequest
-          * @return DescribeDBInstanceIPArrayListResponse
+         * @summary Queries the whitelists of IP addresses that are allowed to access an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the whitelists of IP addresses that are allowed to access an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceIPArrayListRequest
+         * @return DescribeDBInstanceIPArrayListResponse
          */
         public DescribeDBInstanceIPArrayListResponse DescribeDBInstanceIPArrayList(DescribeDBInstanceIPArrayListRequest request)
         {
@@ -4536,12 +5094,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the whitelists of IP addresses that are allowed to access an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstanceIPArrayListRequest
-          * @return DescribeDBInstanceIPArrayListResponse
+         * @summary Queries the whitelists of IP addresses that are allowed to access an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the whitelists of IP addresses that are allowed to access an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstanceIPArrayListRequest
+         * @return DescribeDBInstanceIPArrayListResponse
          */
         public async Task<DescribeDBInstanceIPArrayListResponse> DescribeDBInstanceIPArrayListAsync(DescribeDBInstanceIPArrayListRequest request)
         {
@@ -4550,12 +5110,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          *
-          * @param request DescribeDBInstanceIndexUsageRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceIndexUsageResponse
+         * @summary Queries the index usage of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         *
+         * @param request DescribeDBInstanceIndexUsageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceIndexUsageResponse
          */
         public DescribeDBInstanceIndexUsageResponse DescribeDBInstanceIndexUsageWithOptions(DescribeDBInstanceIndexUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4593,12 +5155,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          *
-          * @param request DescribeDBInstanceIndexUsageRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstanceIndexUsageResponse
+         * @summary Queries the index usage of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         *
+         * @param request DescribeDBInstanceIndexUsageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceIndexUsageResponse
          */
         public async Task<DescribeDBInstanceIndexUsageResponse> DescribeDBInstanceIndexUsageWithOptionsAsync(DescribeDBInstanceIndexUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4636,11 +5200,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          *
-          * @param request DescribeDBInstanceIndexUsageRequest
-          * @return DescribeDBInstanceIndexUsageResponse
+         * @summary Queries the index usage of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         *
+         * @param request DescribeDBInstanceIndexUsageRequest
+         * @return DescribeDBInstanceIndexUsageResponse
          */
         public DescribeDBInstanceIndexUsageResponse DescribeDBInstanceIndexUsage(DescribeDBInstanceIndexUsageRequest request)
         {
@@ -4649,11 +5215,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          *
-          * @param request DescribeDBInstanceIndexUsageRequest
-          * @return DescribeDBInstanceIndexUsageResponse
+         * @summary Queries the index usage of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         *
+         * @param request DescribeDBInstanceIndexUsageRequest
+         * @return DescribeDBInstanceIndexUsageResponse
          */
         public async Task<DescribeDBInstanceIndexUsageResponse> DescribeDBInstanceIndexUsageAsync(DescribeDBInstanceIndexUsageRequest request)
         {
@@ -4661,6 +5229,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeDBInstanceIndexUsageWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the connection information of an instance.
+         *
+         * @param request DescribeDBInstanceNetInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceNetInfoResponse
+         */
         public DescribeDBInstanceNetInfoResponse DescribeDBInstanceNetInfoWithOptions(DescribeDBInstanceNetInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4692,6 +5267,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDBInstanceNetInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the connection information of an instance.
+         *
+         * @param request DescribeDBInstanceNetInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceNetInfoResponse
+         */
         public async Task<DescribeDBInstanceNetInfoResponse> DescribeDBInstanceNetInfoWithOptionsAsync(DescribeDBInstanceNetInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4723,18 +5305,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDBInstanceNetInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the connection information of an instance.
+         *
+         * @param request DescribeDBInstanceNetInfoRequest
+         * @return DescribeDBInstanceNetInfoResponse
+         */
         public DescribeDBInstanceNetInfoResponse DescribeDBInstanceNetInfo(DescribeDBInstanceNetInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceNetInfoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the connection information of an instance.
+         *
+         * @param request DescribeDBInstanceNetInfoRequest
+         * @return DescribeDBInstanceNetInfoResponse
+         */
         public async Task<DescribeDBInstanceNetInfoResponse> DescribeDBInstanceNetInfoAsync(DescribeDBInstanceNetInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceNetInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about performance metrics of an AnalyticDB for PostgreSQL instance within a time range.
+         *
+         * @param request DescribeDBInstancePerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstancePerformanceResponse
+         */
         public DescribeDBInstancePerformanceResponse DescribeDBInstancePerformanceWithOptions(DescribeDBInstancePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4778,6 +5379,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDBInstancePerformanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about performance metrics of an AnalyticDB for PostgreSQL instance within a time range.
+         *
+         * @param request DescribeDBInstancePerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstancePerformanceResponse
+         */
         public async Task<DescribeDBInstancePerformanceResponse> DescribeDBInstancePerformanceWithOptionsAsync(DescribeDBInstancePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4821,12 +5429,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDBInstancePerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about performance metrics of an AnalyticDB for PostgreSQL instance within a time range.
+         *
+         * @param request DescribeDBInstancePerformanceRequest
+         * @return DescribeDBInstancePerformanceResponse
+         */
         public DescribeDBInstancePerformanceResponse DescribeDBInstancePerformance(DescribeDBInstancePerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancePerformanceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about performance metrics of an AnalyticDB for PostgreSQL instance within a time range.
+         *
+         * @param request DescribeDBInstancePerformanceRequest
+         * @return DescribeDBInstancePerformanceResponse
+         */
         public async Task<DescribeDBInstancePerformanceResponse> DescribeDBInstancePerformanceAsync(DescribeDBInstancePerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4834,13 +5454,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of plans for an AnalyticDB for PostgreSQL instance in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstancePlansRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstancePlansResponse
+         * @summary Queries the information about plans for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of plans for an AnalyticDB for PostgreSQL instance in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstancePlansRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstancePlansResponse
          */
         public DescribeDBInstancePlansResponse DescribeDBInstancePlansWithOptions(DescribeDBInstancePlansRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4894,13 +5516,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of plans for an AnalyticDB for PostgreSQL instance in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstancePlansRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstancePlansResponse
+         * @summary Queries the information about plans for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of plans for an AnalyticDB for PostgreSQL instance in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstancePlansRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstancePlansResponse
          */
         public async Task<DescribeDBInstancePlansResponse> DescribeDBInstancePlansWithOptionsAsync(DescribeDBInstancePlansRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4954,12 +5578,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of plans for an AnalyticDB for PostgreSQL instance in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstancePlansRequest
-          * @return DescribeDBInstancePlansResponse
+         * @summary Queries the information about plans for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of plans for an AnalyticDB for PostgreSQL instance in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstancePlansRequest
+         * @return DescribeDBInstancePlansResponse
          */
         public DescribeDBInstancePlansResponse DescribeDBInstancePlans(DescribeDBInstancePlansRequest request)
         {
@@ -4968,12 +5594,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of plans for an AnalyticDB for PostgreSQL instance in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstancePlansRequest
-          * @return DescribeDBInstancePlansResponse
+         * @summary Queries the information about plans for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of plans for an AnalyticDB for PostgreSQL instance in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstancePlansRequest
+         * @return DescribeDBInstancePlansResponse
          */
         public async Task<DescribeDBInstancePlansResponse> DescribeDBInstancePlansAsync(DescribeDBInstancePlansRequest request)
         {
@@ -4981,6 +5609,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeDBInstancePlansWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the SSL information about an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeDBInstanceSSLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceSSLResponse
+         */
         public DescribeDBInstanceSSLResponse DescribeDBInstanceSSLWithOptions(DescribeDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5008,6 +5643,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDBInstanceSSLResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the SSL information about an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeDBInstanceSSLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceSSLResponse
+         */
         public async Task<DescribeDBInstanceSSLResponse> DescribeDBInstanceSSLWithOptionsAsync(DescribeDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5035,18 +5677,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDBInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the SSL information about an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeDBInstanceSSLRequest
+         * @return DescribeDBInstanceSSLResponse
+         */
         public DescribeDBInstanceSSLResponse DescribeDBInstanceSSL(DescribeDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceSSLWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the SSL information about an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeDBInstanceSSLRequest
+         * @return DescribeDBInstanceSSLResponse
+         */
         public async Task<DescribeDBInstanceSSLResponse> DescribeDBInstanceSSLAsync(DescribeDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceSSLWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询实例最大吞吐和IOPS
+         *
+         * @param request DescribeDBInstanceSupportMaxPerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceSupportMaxPerformanceResponse
+         */
         public DescribeDBInstanceSupportMaxPerformanceResponse DescribeDBInstanceSupportMaxPerformanceWithOptions(DescribeDBInstanceSupportMaxPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5078,6 +5739,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDBInstanceSupportMaxPerformanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询实例最大吞吐和IOPS
+         *
+         * @param request DescribeDBInstanceSupportMaxPerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceSupportMaxPerformanceResponse
+         */
         public async Task<DescribeDBInstanceSupportMaxPerformanceResponse> DescribeDBInstanceSupportMaxPerformanceWithOptionsAsync(DescribeDBInstanceSupportMaxPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5109,12 +5777,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDBInstanceSupportMaxPerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询实例最大吞吐和IOPS
+         *
+         * @param request DescribeDBInstanceSupportMaxPerformanceRequest
+         * @return DescribeDBInstanceSupportMaxPerformanceResponse
+         */
         public DescribeDBInstanceSupportMaxPerformanceResponse DescribeDBInstanceSupportMaxPerformance(DescribeDBInstanceSupportMaxPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceSupportMaxPerformanceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询实例最大吞吐和IOPS
+         *
+         * @param request DescribeDBInstanceSupportMaxPerformanceRequest
+         * @return DescribeDBInstanceSupportMaxPerformanceResponse
+         */
         public async Task<DescribeDBInstanceSupportMaxPerformanceResponse> DescribeDBInstanceSupportMaxPerformanceAsync(DescribeDBInstanceSupportMaxPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5122,14 +5802,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * ##
-          * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param tmpReq DescribeDBInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstancesResponse
+         * @summary Queries a list of AnalyticDB for PostgreSQL instances.
+         *
+         * @description ##
+         * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param tmpReq DescribeDBInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstancesResponse
          */
         public DescribeDBInstancesResponse DescribeDBInstancesWithOptions(DescribeDBInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5229,14 +5911,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * ##
-          * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param tmpReq DescribeDBInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBInstancesResponse
+         * @summary Queries a list of AnalyticDB for PostgreSQL instances.
+         *
+         * @description ##
+         * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param tmpReq DescribeDBInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstancesResponse
          */
         public async Task<DescribeDBInstancesResponse> DescribeDBInstancesWithOptionsAsync(DescribeDBInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5336,13 +6020,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * ##
-          * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstancesRequest
-          * @return DescribeDBInstancesResponse
+         * @summary Queries a list of AnalyticDB for PostgreSQL instances.
+         *
+         * @description ##
+         * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstancesRequest
+         * @return DescribeDBInstancesResponse
          */
         public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest request)
         {
@@ -5351,13 +6037,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * ##
-          * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDBInstancesRequest
-          * @return DescribeDBInstancesResponse
+         * @summary Queries a list of AnalyticDB for PostgreSQL instances.
+         *
+         * @description ##
+         * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDBInstancesRequest
+         * @return DescribeDBInstancesResponse
          */
         public async Task<DescribeDBInstancesResponse> DescribeDBInstancesAsync(DescribeDBInstancesRequest request)
         {
@@ -5365,10 +6053,25 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeDBInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取资源管理模式
+         *
+         * @param request DescribeDBResourceManagementModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBResourceManagementModeResponse
+         */
         public DescribeDBResourceManagementModeResponse DescribeDBResourceManagementModeWithOptions(DescribeDBResourceManagementModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5379,7 +6082,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                 Version = "2016-05-03",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -5388,10 +6091,25 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDBResourceManagementModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取资源管理模式
+         *
+         * @param request DescribeDBResourceManagementModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBResourceManagementModeResponse
+         */
         public async Task<DescribeDBResourceManagementModeResponse> DescribeDBResourceManagementModeWithOptionsAsync(DescribeDBResourceManagementModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5402,7 +6120,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                 Version = "2016-05-03",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -5411,18 +6129,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDBResourceManagementModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取资源管理模式
+         *
+         * @param request DescribeDBResourceManagementModeRequest
+         * @return DescribeDBResourceManagementModeResponse
+         */
         public DescribeDBResourceManagementModeResponse DescribeDBResourceManagementMode(DescribeDBResourceManagementModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBResourceManagementModeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 获取资源管理模式
+         *
+         * @param request DescribeDBResourceManagementModeRequest
+         * @return DescribeDBResourceManagementModeResponse
+         */
         public async Task<DescribeDBResourceManagementModeResponse> DescribeDBResourceManagementModeAsync(DescribeDBResourceManagementModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBResourceManagementModeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about minor versions of AnalyticDB for PostgreSQL instances.
+         *
+         * @param request DescribeDBVersionInfosRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBVersionInfosResponse
+         */
         public DescribeDBVersionInfosResponse DescribeDBVersionInfosWithOptions(DescribeDBVersionInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5466,6 +6203,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDBVersionInfosResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about minor versions of AnalyticDB for PostgreSQL instances.
+         *
+         * @param request DescribeDBVersionInfosRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBVersionInfosResponse
+         */
         public async Task<DescribeDBVersionInfosResponse> DescribeDBVersionInfosWithOptionsAsync(DescribeDBVersionInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5509,12 +6253,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDBVersionInfosResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about minor versions of AnalyticDB for PostgreSQL instances.
+         *
+         * @param request DescribeDBVersionInfosRequest
+         * @return DescribeDBVersionInfosResponse
+         */
         public DescribeDBVersionInfosResponse DescribeDBVersionInfos(DescribeDBVersionInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBVersionInfosWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about minor versions of AnalyticDB for PostgreSQL instances.
+         *
+         * @param request DescribeDBVersionInfosRequest
+         * @return DescribeDBVersionInfosResponse
+         */
         public async Task<DescribeDBVersionInfosResponse> DescribeDBVersionInfosAsync(DescribeDBVersionInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5522,11 +6278,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
-          *
-          * @param request DescribeDataBackupsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDataBackupsResponse
+         * @summary Queries a list of backup sets of full backup or point-in-time backup for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
+         *
+         * @param request DescribeDataBackupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataBackupsResponse
          */
         public DescribeDataBackupsResponse DescribeDataBackupsWithOptions(DescribeDataBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5588,11 +6346,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
-          *
-          * @param request DescribeDataBackupsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDataBackupsResponse
+         * @summary Queries a list of backup sets of full backup or point-in-time backup for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
+         *
+         * @param request DescribeDataBackupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataBackupsResponse
          */
         public async Task<DescribeDataBackupsResponse> DescribeDataBackupsWithOptionsAsync(DescribeDataBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5654,10 +6414,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
-          *
-          * @param request DescribeDataBackupsRequest
-          * @return DescribeDataBackupsResponse
+         * @summary Queries a list of backup sets of full backup or point-in-time backup for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
+         *
+         * @param request DescribeDataBackupsRequest
+         * @return DescribeDataBackupsResponse
          */
         public DescribeDataBackupsResponse DescribeDataBackups(DescribeDataBackupsRequest request)
         {
@@ -5666,10 +6428,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
-          *
-          * @param request DescribeDataBackupsRequest
-          * @return DescribeDataBackupsResponse
+         * @summary Queries a list of backup sets of full backup or point-in-time backup for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
+         *
+         * @param request DescribeDataBackupsRequest
+         * @return DescribeDataBackupsResponse
          */
         public async Task<DescribeDataBackupsResponse> DescribeDataBackupsAsync(DescribeDataBackupsRequest request)
         {
@@ -5677,6 +6441,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeDataBackupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the data redistribution information about an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
+         *
+         * @param request DescribeDataReDistributeInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataReDistributeInfoResponse
+         */
         public DescribeDataReDistributeInfoResponse DescribeDataReDistributeInfoWithOptions(DescribeDataReDistributeInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5708,6 +6479,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDataReDistributeInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the data redistribution information about an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
+         *
+         * @param request DescribeDataReDistributeInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataReDistributeInfoResponse
+         */
         public async Task<DescribeDataReDistributeInfoResponse> DescribeDataReDistributeInfoWithOptionsAsync(DescribeDataReDistributeInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5739,12 +6517,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDataReDistributeInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the data redistribution information about an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
+         *
+         * @param request DescribeDataReDistributeInfoRequest
+         * @return DescribeDataReDistributeInfoResponse
+         */
         public DescribeDataReDistributeInfoResponse DescribeDataReDistributeInfo(DescribeDataReDistributeInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataReDistributeInfoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the data redistribution information about an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
+         *
+         * @param request DescribeDataReDistributeInfoRequest
+         * @return DescribeDataReDistributeInfoResponse
+         */
         public async Task<DescribeDataReDistributeInfoResponse> DescribeDataReDistributeInfoAsync(DescribeDataReDistributeInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5752,11 +6542,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Data sharing is supported only for instances in Serverless mode.
-          *
-          * @param request DescribeDataShareInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDataShareInstancesResponse
+         * @summary Queries the state of data sharing for AnalyticDB for PostgreSQL instances.
+         *
+         * @description Data sharing is supported only for instances in Serverless mode.
+         *
+         * @param request DescribeDataShareInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataShareInstancesResponse
          */
         public DescribeDataShareInstancesResponse DescribeDataShareInstancesWithOptions(DescribeDataShareInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5806,11 +6598,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Data sharing is supported only for instances in Serverless mode.
-          *
-          * @param request DescribeDataShareInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDataShareInstancesResponse
+         * @summary Queries the state of data sharing for AnalyticDB for PostgreSQL instances.
+         *
+         * @description Data sharing is supported only for instances in Serverless mode.
+         *
+         * @param request DescribeDataShareInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataShareInstancesResponse
          */
         public async Task<DescribeDataShareInstancesResponse> DescribeDataShareInstancesWithOptionsAsync(DescribeDataShareInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5860,10 +6654,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Data sharing is supported only for instances in Serverless mode.
-          *
-          * @param request DescribeDataShareInstancesRequest
-          * @return DescribeDataShareInstancesResponse
+         * @summary Queries the state of data sharing for AnalyticDB for PostgreSQL instances.
+         *
+         * @description Data sharing is supported only for instances in Serverless mode.
+         *
+         * @param request DescribeDataShareInstancesRequest
+         * @return DescribeDataShareInstancesResponse
          */
         public DescribeDataShareInstancesResponse DescribeDataShareInstances(DescribeDataShareInstancesRequest request)
         {
@@ -5872,10 +6668,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Data sharing is supported only for instances in Serverless mode.
-          *
-          * @param request DescribeDataShareInstancesRequest
-          * @return DescribeDataShareInstancesResponse
+         * @summary Queries the state of data sharing for AnalyticDB for PostgreSQL instances.
+         *
+         * @description Data sharing is supported only for instances in Serverless mode.
+         *
+         * @param request DescribeDataShareInstancesRequest
+         * @return DescribeDataShareInstancesResponse
          */
         public async Task<DescribeDataShareInstancesResponse> DescribeDataShareInstancesAsync(DescribeDataShareInstancesRequest request)
         {
@@ -5884,13 +6682,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataSharePerformanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDataSharePerformanceResponse
+         * @summary Queries the information about data sharing performance metrics.
+         *
+         * @description You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataSharePerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataSharePerformanceResponse
          */
         public DescribeDataSharePerformanceResponse DescribeDataSharePerformanceWithOptions(DescribeDataSharePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5936,13 +6736,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataSharePerformanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDataSharePerformanceResponse
+         * @summary Queries the information about data sharing performance metrics.
+         *
+         * @description You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataSharePerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataSharePerformanceResponse
          */
         public async Task<DescribeDataSharePerformanceResponse> DescribeDataSharePerformanceWithOptionsAsync(DescribeDataSharePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5988,12 +6790,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataSharePerformanceRequest
-          * @return DescribeDataSharePerformanceResponse
+         * @summary Queries the information about data sharing performance metrics.
+         *
+         * @description You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataSharePerformanceRequest
+         * @return DescribeDataSharePerformanceResponse
          */
         public DescribeDataSharePerformanceResponse DescribeDataSharePerformance(DescribeDataSharePerformanceRequest request)
         {
@@ -6002,12 +6806,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataSharePerformanceRequest
-          * @return DescribeDataSharePerformanceResponse
+         * @summary Queries the information about data sharing performance metrics.
+         *
+         * @description You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataSharePerformanceRequest
+         * @return DescribeDataSharePerformanceResponse
          */
         public async Task<DescribeDataSharePerformanceResponse> DescribeDataSharePerformanceAsync(DescribeDataSharePerformanceRequest request)
         {
@@ -6016,13 +6822,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To facilitate management, you can call this operation to query all databases and database accounts on an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDiagnosisDimensionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisDimensionsResponse
+         * @summary Queries all databases and database accounts for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To facilitate management, you can call this operation to query all databases and database accounts on an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDiagnosisDimensionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisDimensionsResponse
          */
         public DescribeDiagnosisDimensionsResponse DescribeDiagnosisDimensionsWithOptions(DescribeDiagnosisDimensionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6052,13 +6860,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To facilitate management, you can call this operation to query all databases and database accounts on an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDiagnosisDimensionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisDimensionsResponse
+         * @summary Queries all databases and database accounts for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To facilitate management, you can call this operation to query all databases and database accounts on an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDiagnosisDimensionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisDimensionsResponse
          */
         public async Task<DescribeDiagnosisDimensionsResponse> DescribeDiagnosisDimensionsWithOptionsAsync(DescribeDiagnosisDimensionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6088,12 +6898,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To facilitate management, you can call this operation to query all databases and database accounts on an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDiagnosisDimensionsRequest
-          * @return DescribeDiagnosisDimensionsResponse
+         * @summary Queries all databases and database accounts for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To facilitate management, you can call this operation to query all databases and database accounts on an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDiagnosisDimensionsRequest
+         * @return DescribeDiagnosisDimensionsResponse
          */
         public DescribeDiagnosisDimensionsResponse DescribeDiagnosisDimensions(DescribeDiagnosisDimensionsRequest request)
         {
@@ -6102,12 +6914,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To facilitate management, you can call this operation to query all databases and database accounts on an AnalyticDB for PostgreSQL instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDiagnosisDimensionsRequest
-          * @return DescribeDiagnosisDimensionsResponse
+         * @summary Queries all databases and database accounts for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To facilitate management, you can call this operation to query all databases and database accounts on an AnalyticDB for PostgreSQL instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDiagnosisDimensionsRequest
+         * @return DescribeDiagnosisDimensionsResponse
          */
         public async Task<DescribeDiagnosisDimensionsResponse> DescribeDiagnosisDimensionsAsync(DescribeDiagnosisDimensionsRequest request)
         {
@@ -6116,13 +6930,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of query execution on an AnalyticDB for PostgreSQL instance in elastic storage mode within a specified time range.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDiagnosisMonitorPerformanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisMonitorPerformanceResponse
+         * @summary Queries the details of query execution on an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of query execution on an AnalyticDB for PostgreSQL instance in elastic storage mode within a specified time range.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDiagnosisMonitorPerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisMonitorPerformanceResponse
          */
         public DescribeDiagnosisMonitorPerformanceResponse DescribeDiagnosisMonitorPerformanceWithOptions(DescribeDiagnosisMonitorPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6172,13 +6988,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of query execution on an AnalyticDB for PostgreSQL instance in elastic storage mode within a specified time range.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDiagnosisMonitorPerformanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisMonitorPerformanceResponse
+         * @summary Queries the details of query execution on an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of query execution on an AnalyticDB for PostgreSQL instance in elastic storage mode within a specified time range.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDiagnosisMonitorPerformanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisMonitorPerformanceResponse
          */
         public async Task<DescribeDiagnosisMonitorPerformanceResponse> DescribeDiagnosisMonitorPerformanceWithOptionsAsync(DescribeDiagnosisMonitorPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6228,12 +7046,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of query execution on an AnalyticDB for PostgreSQL instance in elastic storage mode within a specified time range.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDiagnosisMonitorPerformanceRequest
-          * @return DescribeDiagnosisMonitorPerformanceResponse
+         * @summary Queries the details of query execution on an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of query execution on an AnalyticDB for PostgreSQL instance in elastic storage mode within a specified time range.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDiagnosisMonitorPerformanceRequest
+         * @return DescribeDiagnosisMonitorPerformanceResponse
          */
         public DescribeDiagnosisMonitorPerformanceResponse DescribeDiagnosisMonitorPerformance(DescribeDiagnosisMonitorPerformanceRequest request)
         {
@@ -6242,12 +7062,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of query execution on an AnalyticDB for PostgreSQL instance in elastic storage mode within a specified time range.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDiagnosisMonitorPerformanceRequest
-          * @return DescribeDiagnosisMonitorPerformanceResponse
+         * @summary Queries the details of query execution on an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of query execution on an AnalyticDB for PostgreSQL instance in elastic storage mode within a specified time range.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDiagnosisMonitorPerformanceRequest
+         * @return DescribeDiagnosisMonitorPerformanceResponse
          */
         public async Task<DescribeDiagnosisMonitorPerformanceResponse> DescribeDiagnosisMonitorPerformanceAsync(DescribeDiagnosisMonitorPerformanceRequest request)
         {
@@ -6256,13 +7078,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of SQL queries on an AnalyticDB for PostgreSQL instance within a specified time range.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDiagnosisRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisRecordsResponse
+         * @summary Queries the information about SQL queries for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of SQL queries on an AnalyticDB for PostgreSQL instance within a specified time range.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDiagnosisRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisRecordsResponse
          */
         public DescribeDiagnosisRecordsResponse DescribeDiagnosisRecordsWithOptions(DescribeDiagnosisRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6328,13 +7152,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of SQL queries on an AnalyticDB for PostgreSQL instance within a specified time range.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDiagnosisRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisRecordsResponse
+         * @summary Queries the information about SQL queries for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of SQL queries on an AnalyticDB for PostgreSQL instance within a specified time range.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDiagnosisRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisRecordsResponse
          */
         public async Task<DescribeDiagnosisRecordsResponse> DescribeDiagnosisRecordsWithOptionsAsync(DescribeDiagnosisRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6400,12 +7226,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of SQL queries on an AnalyticDB for PostgreSQL instance within a specified time range.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDiagnosisRecordsRequest
-          * @return DescribeDiagnosisRecordsResponse
+         * @summary Queries the information about SQL queries for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of SQL queries on an AnalyticDB for PostgreSQL instance within a specified time range.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDiagnosisRecordsRequest
+         * @return DescribeDiagnosisRecordsResponse
          */
         public DescribeDiagnosisRecordsResponse DescribeDiagnosisRecords(DescribeDiagnosisRecordsRequest request)
         {
@@ -6414,12 +7242,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of SQL queries on an AnalyticDB for PostgreSQL instance within a specified time range.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDiagnosisRecordsRequest
-          * @return DescribeDiagnosisRecordsResponse
+         * @summary Queries the information about SQL queries for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of SQL queries on an AnalyticDB for PostgreSQL instance within a specified time range.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDiagnosisRecordsRequest
+         * @return DescribeDiagnosisRecordsResponse
          */
         public async Task<DescribeDiagnosisRecordsResponse> DescribeDiagnosisRecordsAsync(DescribeDiagnosisRecordsRequest request)
         {
@@ -6428,12 +7258,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          *
-          * @param request DescribeDiagnosisSQLInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisSQLInfoResponse
+         * @summary Queries the information about a query for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         *
+         * @param request DescribeDiagnosisSQLInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisSQLInfoResponse
          */
         public DescribeDiagnosisSQLInfoResponse DescribeDiagnosisSQLInfoWithOptions(DescribeDiagnosisSQLInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6471,12 +7303,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          *
-          * @param request DescribeDiagnosisSQLInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDiagnosisSQLInfoResponse
+         * @summary Queries the information about a query for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         *
+         * @param request DescribeDiagnosisSQLInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDiagnosisSQLInfoResponse
          */
         public async Task<DescribeDiagnosisSQLInfoResponse> DescribeDiagnosisSQLInfoWithOptionsAsync(DescribeDiagnosisSQLInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6514,11 +7348,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          *
-          * @param request DescribeDiagnosisSQLInfoRequest
-          * @return DescribeDiagnosisSQLInfoResponse
+         * @summary Queries the information about a query for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         *
+         * @param request DescribeDiagnosisSQLInfoRequest
+         * @return DescribeDiagnosisSQLInfoResponse
          */
         public DescribeDiagnosisSQLInfoResponse DescribeDiagnosisSQLInfo(DescribeDiagnosisSQLInfoRequest request)
         {
@@ -6527,11 +7363,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          *
-          * @param request DescribeDiagnosisSQLInfoRequest
-          * @return DescribeDiagnosisSQLInfoResponse
+         * @summary Queries the information about a query for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         *
+         * @param request DescribeDiagnosisSQLInfoRequest
+         * @return DescribeDiagnosisSQLInfoResponse
          */
         public async Task<DescribeDiagnosisSQLInfoResponse> DescribeDiagnosisSQLInfoAsync(DescribeDiagnosisSQLInfoRequest request)
         {
@@ -6539,6 +7377,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeDiagnosisSQLInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取文档详情
+         *
+         * @param request DescribeDocumentRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDocumentResponse
+         */
         public DescribeDocumentResponse DescribeDocumentWithOptions(DescribeDocumentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6590,6 +7435,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDocumentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取文档详情
+         *
+         * @param request DescribeDocumentRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDocumentResponse
+         */
         public async Task<DescribeDocumentResponse> DescribeDocumentWithOptionsAsync(DescribeDocumentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6641,12 +7493,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDocumentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取文档详情
+         *
+         * @param request DescribeDocumentRequest
+         * @return DescribeDocumentResponse
+         */
         public DescribeDocumentResponse DescribeDocument(DescribeDocumentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDocumentWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 获取文档详情
+         *
+         * @param request DescribeDocumentRequest
+         * @return DescribeDocumentResponse
+         */
         public async Task<DescribeDocumentResponse> DescribeDocumentAsync(DescribeDocumentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6654,12 +7518,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          *
-          * @param request DescribeDownloadRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDownloadRecordsResponse
+         * @summary Queries the download records of query diagnostic information for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You must call the [DownloadDiagnosisRecords](https://help.aliyun.com/document_detail/447700.html) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         *
+         * @param request DescribeDownloadRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDownloadRecordsResponse
          */
         public DescribeDownloadRecordsResponse DescribeDownloadRecordsWithOptions(DescribeDownloadRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6689,12 +7555,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          *
-          * @param request DescribeDownloadRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDownloadRecordsResponse
+         * @summary Queries the download records of query diagnostic information for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You must call the [DownloadDiagnosisRecords](https://help.aliyun.com/document_detail/447700.html) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         *
+         * @param request DescribeDownloadRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDownloadRecordsResponse
          */
         public async Task<DescribeDownloadRecordsResponse> DescribeDownloadRecordsWithOptionsAsync(DescribeDownloadRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6724,11 +7592,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          *
-          * @param request DescribeDownloadRecordsRequest
-          * @return DescribeDownloadRecordsResponse
+         * @summary Queries the download records of query diagnostic information for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You must call the [DownloadDiagnosisRecords](https://help.aliyun.com/document_detail/447700.html) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         *
+         * @param request DescribeDownloadRecordsRequest
+         * @return DescribeDownloadRecordsResponse
          */
         public DescribeDownloadRecordsResponse DescribeDownloadRecords(DescribeDownloadRecordsRequest request)
         {
@@ -6737,11 +7607,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          *
-          * @param request DescribeDownloadRecordsRequest
-          * @return DescribeDownloadRecordsResponse
+         * @summary Queries the download records of query diagnostic information for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You must call the [DownloadDiagnosisRecords](https://help.aliyun.com/document_detail/447700.html) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         *
+         * @param request DescribeDownloadRecordsRequest
+         * @return DescribeDownloadRecordsResponse
          */
         public async Task<DescribeDownloadRecordsResponse> DescribeDownloadRecordsAsync(DescribeDownloadRecordsRequest request)
         {
@@ -6749,6 +7621,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeDownloadRecordsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the last five download records of slow query logs for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeDownloadSQLLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDownloadSQLLogsResponse
+         */
         public DescribeDownloadSQLLogsResponse DescribeDownloadSQLLogsWithOptions(DescribeDownloadSQLLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6776,6 +7655,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDownloadSQLLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the last five download records of slow query logs for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeDownloadSQLLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDownloadSQLLogsResponse
+         */
         public async Task<DescribeDownloadSQLLogsResponse> DescribeDownloadSQLLogsWithOptionsAsync(DescribeDownloadSQLLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6803,12 +7689,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeDownloadSQLLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the last five download records of slow query logs for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeDownloadSQLLogsRequest
+         * @return DescribeDownloadSQLLogsResponse
+         */
         public DescribeDownloadSQLLogsResponse DescribeDownloadSQLLogs(DescribeDownloadSQLLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDownloadSQLLogsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the last five download records of slow query logs for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeDownloadSQLLogsRequest
+         * @return DescribeDownloadSQLLogsResponse
+         */
         public async Task<DescribeDownloadSQLLogsResponse> DescribeDownloadSQLLogsAsync(DescribeDownloadSQLLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6816,13 +7714,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the health status of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode and its coordinator and compute nodes.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeHealthStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeHealthStatusResponse
+         * @summary Queries the health status of an AnalyticDB for PostgreSQL instance and its nodes.
+         *
+         * @description This operation is called to query the health status of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode and its coordinator and compute nodes.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeHealthStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHealthStatusResponse
          */
         public DescribeHealthStatusResponse DescribeHealthStatusWithOptions(DescribeHealthStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6856,13 +7756,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the health status of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode and its coordinator and compute nodes.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeHealthStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeHealthStatusResponse
+         * @summary Queries the health status of an AnalyticDB for PostgreSQL instance and its nodes.
+         *
+         * @description This operation is called to query the health status of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode and its coordinator and compute nodes.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeHealthStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHealthStatusResponse
          */
         public async Task<DescribeHealthStatusResponse> DescribeHealthStatusWithOptionsAsync(DescribeHealthStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6896,12 +7798,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the health status of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode and its coordinator and compute nodes.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeHealthStatusRequest
-          * @return DescribeHealthStatusResponse
+         * @summary Queries the health status of an AnalyticDB for PostgreSQL instance and its nodes.
+         *
+         * @description This operation is called to query the health status of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode and its coordinator and compute nodes.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeHealthStatusRequest
+         * @return DescribeHealthStatusResponse
          */
         public DescribeHealthStatusResponse DescribeHealthStatus(DescribeHealthStatusRequest request)
         {
@@ -6910,12 +7814,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to query the health status of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode and its coordinator and compute nodes.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeHealthStatusRequest
-          * @return DescribeHealthStatusResponse
+         * @summary Queries the health status of an AnalyticDB for PostgreSQL instance and its nodes.
+         *
+         * @description This operation is called to query the health status of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode and its coordinator and compute nodes.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeHealthStatusRequest
+         * @return DescribeHealthStatusResponse
          */
         public async Task<DescribeHealthStatusResponse> DescribeHealthStatusAsync(DescribeHealthStatusRequest request)
         {
@@ -6923,6 +7829,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeHealthStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询实时物化视图信息
+         *
+         * @param request DescribeIMVInfosRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeIMVInfosResponse
+         */
         public DescribeIMVInfosResponse DescribeIMVInfosWithOptions(DescribeIMVInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6958,6 +7871,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeIMVInfosResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询实时物化视图信息
+         *
+         * @param request DescribeIMVInfosRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeIMVInfosResponse
+         */
         public async Task<DescribeIMVInfosResponse> DescribeIMVInfosWithOptionsAsync(DescribeIMVInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6993,18 +7913,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeIMVInfosResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询实时物化视图信息
+         *
+         * @param request DescribeIMVInfosRequest
+         * @return DescribeIMVInfosResponse
+         */
         public DescribeIMVInfosResponse DescribeIMVInfos(DescribeIMVInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeIMVInfosWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询实时物化视图信息
+         *
+         * @param request DescribeIMVInfosRequest
+         * @return DescribeIMVInfosResponse
+         */
         public async Task<DescribeIMVInfosResponse> DescribeIMVInfosAsync(DescribeIMVInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeIMVInfosWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of log backups.
+         *
+         * @param request DescribeLogBackupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeLogBackupsResponse
+         */
         public DescribeLogBackupsResponse DescribeLogBackupsWithOptions(DescribeLogBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7048,6 +7987,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeLogBackupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of log backups.
+         *
+         * @param request DescribeLogBackupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeLogBackupsResponse
+         */
         public async Task<DescribeLogBackupsResponse> DescribeLogBackupsWithOptionsAsync(DescribeLogBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7091,18 +8037,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeLogBackupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of log backups.
+         *
+         * @param request DescribeLogBackupsRequest
+         * @return DescribeLogBackupsResponse
+         */
         public DescribeLogBackupsResponse DescribeLogBackups(DescribeLogBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeLogBackupsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of log backups.
+         *
+         * @param request DescribeLogBackupsRequest
+         * @return DescribeLogBackupsResponse
+         */
         public async Task<DescribeLogBackupsResponse> DescribeLogBackupsAsync(DescribeLogBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeLogBackupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the parameter modification logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeModifyParameterLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeModifyParameterLogResponse
+         */
         public DescribeModifyParameterLogResponse DescribeModifyParameterLogWithOptions(DescribeModifyParameterLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7138,6 +8103,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeModifyParameterLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the parameter modification logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeModifyParameterLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeModifyParameterLogResponse
+         */
         public async Task<DescribeModifyParameterLogResponse> DescribeModifyParameterLogWithOptionsAsync(DescribeModifyParameterLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7173,18 +8145,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeModifyParameterLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the parameter modification logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeModifyParameterLogRequest
+         * @return DescribeModifyParameterLogResponse
+         */
         public DescribeModifyParameterLogResponse DescribeModifyParameterLog(DescribeModifyParameterLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeModifyParameterLogWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the parameter modification logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeModifyParameterLogRequest
+         * @return DescribeModifyParameterLogResponse
+         */
         public async Task<DescribeModifyParameterLogResponse> DescribeModifyParameterLogAsync(DescribeModifyParameterLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeModifyParameterLogWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about a namespace.
+         *
+         * @param request DescribeNamespaceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNamespaceResponse
+         */
         public DescribeNamespaceResponse DescribeNamespaceWithOptions(DescribeNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7232,6 +8223,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeNamespaceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about a namespace.
+         *
+         * @param request DescribeNamespaceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNamespaceResponse
+         */
         public async Task<DescribeNamespaceResponse> DescribeNamespaceWithOptionsAsync(DescribeNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7279,12 +8277,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about a namespace.
+         *
+         * @param request DescribeNamespaceRequest
+         * @return DescribeNamespaceResponse
+         */
         public DescribeNamespaceResponse DescribeNamespace(DescribeNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNamespaceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about a namespace.
+         *
+         * @param request DescribeNamespaceRequest
+         * @return DescribeNamespaceResponse
+         */
         public async Task<DescribeNamespaceResponse> DescribeNamespaceAsync(DescribeNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7292,13 +8302,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation can be called to query the details of parameters in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeParametersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeParametersResponse
+         * @summary Queries the information about configuration parameters for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation can be called to query the details of parameters in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeParametersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParametersResponse
          */
         public DescribeParametersResponse DescribeParametersWithOptions(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7328,13 +8340,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation can be called to query the details of parameters in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeParametersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeParametersResponse
+         * @summary Queries the information about configuration parameters for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation can be called to query the details of parameters in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeParametersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParametersResponse
          */
         public async Task<DescribeParametersResponse> DescribeParametersWithOptionsAsync(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7364,12 +8378,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation can be called to query the details of parameters in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeParametersRequest
-          * @return DescribeParametersResponse
+         * @summary Queries the information about configuration parameters for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation can be called to query the details of parameters in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeParametersRequest
+         * @return DescribeParametersResponse
          */
         public DescribeParametersResponse DescribeParameters(DescribeParametersRequest request)
         {
@@ -7378,12 +8394,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation can be called to query the details of parameters in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeParametersRequest
-          * @return DescribeParametersResponse
+         * @summary Queries the information about configuration parameters for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation can be called to query the details of parameters in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeParametersRequest
+         * @return DescribeParametersResponse
          */
         public async Task<DescribeParametersResponse> DescribeParametersAsync(DescribeParametersRequest request)
         {
@@ -7392,13 +8410,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create AnalyticDB for PostgreSQL instances, you can call this operation to query the details of vSwitches within a specified region or zone.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRdsVSwitchsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRdsVSwitchsResponse
+         * @summary Queries a list of vSwitches.
+         *
+         * @description When you create AnalyticDB for PostgreSQL instances, you can call this operation to query the details of vSwitches within a specified region or zone.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRdsVSwitchsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRdsVSwitchsResponse
          */
         public DescribeRdsVSwitchsResponse DescribeRdsVSwitchsWithOptions(DescribeRdsVSwitchsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7460,13 +8480,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create AnalyticDB for PostgreSQL instances, you can call this operation to query the details of vSwitches within a specified region or zone.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRdsVSwitchsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRdsVSwitchsResponse
+         * @summary Queries a list of vSwitches.
+         *
+         * @description When you create AnalyticDB for PostgreSQL instances, you can call this operation to query the details of vSwitches within a specified region or zone.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRdsVSwitchsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRdsVSwitchsResponse
          */
         public async Task<DescribeRdsVSwitchsResponse> DescribeRdsVSwitchsWithOptionsAsync(DescribeRdsVSwitchsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7528,12 +8550,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create AnalyticDB for PostgreSQL instances, you can call this operation to query the details of vSwitches within a specified region or zone.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRdsVSwitchsRequest
-          * @return DescribeRdsVSwitchsResponse
+         * @summary Queries a list of vSwitches.
+         *
+         * @description When you create AnalyticDB for PostgreSQL instances, you can call this operation to query the details of vSwitches within a specified region or zone.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRdsVSwitchsRequest
+         * @return DescribeRdsVSwitchsResponse
          */
         public DescribeRdsVSwitchsResponse DescribeRdsVSwitchs(DescribeRdsVSwitchsRequest request)
         {
@@ -7542,12 +8566,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create AnalyticDB for PostgreSQL instances, you can call this operation to query the details of vSwitches within a specified region or zone.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRdsVSwitchsRequest
-          * @return DescribeRdsVSwitchsResponse
+         * @summary Queries a list of vSwitches.
+         *
+         * @description When you create AnalyticDB for PostgreSQL instances, you can call this operation to query the details of vSwitches within a specified region or zone.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRdsVSwitchsRequest
+         * @return DescribeRdsVSwitchsResponse
          */
         public async Task<DescribeRdsVSwitchsResponse> DescribeRdsVSwitchsAsync(DescribeRdsVSwitchsRequest request)
         {
@@ -7556,13 +8582,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available VPCs within a specified region or zone.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRdsVpcsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRdsVpcsResponse
+         * @summary Queries a list of VPCs.
+         *
+         * @description When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available VPCs within a specified region or zone.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRdsVpcsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRdsVpcsResponse
          */
         public DescribeRdsVpcsResponse DescribeRdsVpcsWithOptions(DescribeRdsVpcsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7620,13 +8648,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available VPCs within a specified region or zone.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRdsVpcsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRdsVpcsResponse
+         * @summary Queries a list of VPCs.
+         *
+         * @description When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available VPCs within a specified region or zone.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRdsVpcsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRdsVpcsResponse
          */
         public async Task<DescribeRdsVpcsResponse> DescribeRdsVpcsWithOptionsAsync(DescribeRdsVpcsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7684,12 +8714,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available VPCs within a specified region or zone.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRdsVpcsRequest
-          * @return DescribeRdsVpcsResponse
+         * @summary Queries a list of VPCs.
+         *
+         * @description When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available VPCs within a specified region or zone.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRdsVpcsRequest
+         * @return DescribeRdsVpcsResponse
          */
         public DescribeRdsVpcsResponse DescribeRdsVpcs(DescribeRdsVpcsRequest request)
         {
@@ -7698,12 +8730,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available VPCs within a specified region or zone.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRdsVpcsRequest
-          * @return DescribeRdsVpcsResponse
+         * @summary Queries a list of VPCs.
+         *
+         * @description When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available VPCs within a specified region or zone.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRdsVpcsRequest
+         * @return DescribeRdsVpcsResponse
          */
         public async Task<DescribeRdsVpcsResponse> DescribeRdsVpcsAsync(DescribeRdsVpcsRequest request)
         {
@@ -7712,13 +8746,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.
-          * ## Limit
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRegionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRegionsResponse
+         * @summary Queries a list of regions and zones where AnalyticDB for PostgreSQL is available.
+         *
+         * @description Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.
+         * ## Limit
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRegionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRegionsResponse
          */
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7748,13 +8784,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.
-          * ## Limit
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRegionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRegionsResponse
+         * @summary Queries a list of regions and zones where AnalyticDB for PostgreSQL is available.
+         *
+         * @description Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.
+         * ## Limit
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRegionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRegionsResponse
          */
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7784,12 +8822,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.
-          * ## Limit
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRegionsRequest
-          * @return DescribeRegionsResponse
+         * @summary Queries a list of regions and zones where AnalyticDB for PostgreSQL is available.
+         *
+         * @description Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.
+         * ## Limit
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRegionsRequest
+         * @return DescribeRegionsResponse
          */
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
@@ -7798,12 +8838,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.
-          * ## Limit
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRegionsRequest
-          * @return DescribeRegionsResponse
+         * @summary Queries a list of regions and zones where AnalyticDB for PostgreSQL is available.
+         *
+         * @description Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.
+         * ## Limit
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRegionsRequest
+         * @return DescribeRegionsResponse
          */
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
@@ -7812,11 +8854,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is not available for instances in reserved storage mode.
-          *
-          * @param request DescribeSQLLogCountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSQLLogCountResponse
+         * @summary Queries the number of audit logs for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not available for instances in reserved storage mode.
+         *
+         * @param request DescribeSQLLogCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSQLLogCountResponse
          */
         public DescribeSQLLogCountResponse DescribeSQLLogCountWithOptions(DescribeSQLLogCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7894,11 +8938,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is not available for instances in reserved storage mode.
-          *
-          * @param request DescribeSQLLogCountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSQLLogCountResponse
+         * @summary Queries the number of audit logs for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not available for instances in reserved storage mode.
+         *
+         * @param request DescribeSQLLogCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSQLLogCountResponse
          */
         public async Task<DescribeSQLLogCountResponse> DescribeSQLLogCountWithOptionsAsync(DescribeSQLLogCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7976,10 +9022,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is not available for instances in reserved storage mode.
-          *
-          * @param request DescribeSQLLogCountRequest
-          * @return DescribeSQLLogCountResponse
+         * @summary Queries the number of audit logs for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not available for instances in reserved storage mode.
+         *
+         * @param request DescribeSQLLogCountRequest
+         * @return DescribeSQLLogCountResponse
          */
         public DescribeSQLLogCountResponse DescribeSQLLogCount(DescribeSQLLogCountRequest request)
         {
@@ -7988,10 +9036,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is not available for instances in reserved storage mode.
-          *
-          * @param request DescribeSQLLogCountRequest
-          * @return DescribeSQLLogCountResponse
+         * @summary Queries the number of audit logs for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not available for instances in reserved storage mode.
+         *
+         * @param request DescribeSQLLogCountRequest
+         * @return DescribeSQLLogCountResponse
          */
         public async Task<DescribeSQLLogCountResponse> DescribeSQLLogCountAsync(DescribeSQLLogCountRequest request)
         {
@@ -8000,11 +9050,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * > This operation is no longer used. To query SQL execution logs, call the [DescribeSQLLogsV2](~~453722~~) operation.
-          *
-          * @param request DescribeSQLLogsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSQLLogsResponse
+         * @summary Queries the SQL execution logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description > This operation is no longer used. To query SQL execution logs, call the [DescribeSQLLogsV2](https://help.aliyun.com/document_detail/453722.html) operation.
+         *
+         * @param request DescribeSQLLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSQLLogsResponse
          */
         public DescribeSQLLogsResponse DescribeSQLLogsWithOptions(DescribeSQLLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8090,11 +9142,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * > This operation is no longer used. To query SQL execution logs, call the [DescribeSQLLogsV2](~~453722~~) operation.
-          *
-          * @param request DescribeSQLLogsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSQLLogsResponse
+         * @summary Queries the SQL execution logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description > This operation is no longer used. To query SQL execution logs, call the [DescribeSQLLogsV2](https://help.aliyun.com/document_detail/453722.html) operation.
+         *
+         * @param request DescribeSQLLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSQLLogsResponse
          */
         public async Task<DescribeSQLLogsResponse> DescribeSQLLogsWithOptionsAsync(DescribeSQLLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8180,10 +9234,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * > This operation is no longer used. To query SQL execution logs, call the [DescribeSQLLogsV2](~~453722~~) operation.
-          *
-          * @param request DescribeSQLLogsRequest
-          * @return DescribeSQLLogsResponse
+         * @summary Queries the SQL execution logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description > This operation is no longer used. To query SQL execution logs, call the [DescribeSQLLogsV2](https://help.aliyun.com/document_detail/453722.html) operation.
+         *
+         * @param request DescribeSQLLogsRequest
+         * @return DescribeSQLLogsResponse
          */
         public DescribeSQLLogsResponse DescribeSQLLogs(DescribeSQLLogsRequest request)
         {
@@ -8192,10 +9248,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * > This operation is no longer used. To query SQL execution logs, call the [DescribeSQLLogsV2](~~453722~~) operation.
-          *
-          * @param request DescribeSQLLogsRequest
-          * @return DescribeSQLLogsResponse
+         * @summary Queries the SQL execution logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description > This operation is no longer used. To query SQL execution logs, call the [DescribeSQLLogsV2](https://help.aliyun.com/document_detail/453722.html) operation.
+         *
+         * @param request DescribeSQLLogsRequest
+         * @return DescribeSQLLogsResponse
          */
         public async Task<DescribeSQLLogsResponse> DescribeSQLLogsAsync(DescribeSQLLogsRequest request)
         {
@@ -8204,13 +9262,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query SQL logs of an AnalyticDB for PostgreSQL instance within a specific time range.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSQLLogsV2Request
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSQLLogsV2Response
+         * @summary Queries SQL logs within a specific time range.
+         *
+         * @description You can call this operation to query SQL logs of an AnalyticDB for PostgreSQL instance within a specific time range.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSQLLogsV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSQLLogsV2Response
          */
         public DescribeSQLLogsV2Response DescribeSQLLogsV2WithOptions(DescribeSQLLogsV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8304,13 +9364,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query SQL logs of an AnalyticDB for PostgreSQL instance within a specific time range.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSQLLogsV2Request
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSQLLogsV2Response
+         * @summary Queries SQL logs within a specific time range.
+         *
+         * @description You can call this operation to query SQL logs of an AnalyticDB for PostgreSQL instance within a specific time range.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSQLLogsV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSQLLogsV2Response
          */
         public async Task<DescribeSQLLogsV2Response> DescribeSQLLogsV2WithOptionsAsync(DescribeSQLLogsV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8404,12 +9466,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query SQL logs of an AnalyticDB for PostgreSQL instance within a specific time range.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSQLLogsV2Request
-          * @return DescribeSQLLogsV2Response
+         * @summary Queries SQL logs within a specific time range.
+         *
+         * @description You can call this operation to query SQL logs of an AnalyticDB for PostgreSQL instance within a specific time range.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSQLLogsV2Request
+         * @return DescribeSQLLogsV2Response
          */
         public DescribeSQLLogsV2Response DescribeSQLLogsV2(DescribeSQLLogsV2Request request)
         {
@@ -8418,12 +9482,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query SQL logs of an AnalyticDB for PostgreSQL instance within a specific time range.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSQLLogsV2Request
-          * @return DescribeSQLLogsV2Response
+         * @summary Queries SQL logs within a specific time range.
+         *
+         * @description You can call this operation to query SQL logs of an AnalyticDB for PostgreSQL instance within a specific time range.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSQLLogsV2Request
+         * @return DescribeSQLLogsV2Response
          */
         public async Task<DescribeSQLLogsV2Response> DescribeSQLLogsV2Async(DescribeSQLLogsV2Request request)
         {
@@ -8432,11 +9498,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSampleDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSampleDataResponse
+         * @summary Queries whether a sample dataset is loaded to an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSampleDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSampleDataResponse
          */
         public DescribeSampleDataResponse DescribeSampleDataWithOptions(DescribeSampleDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8470,11 +9538,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSampleDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSampleDataResponse
+         * @summary Queries whether a sample dataset is loaded to an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSampleDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSampleDataResponse
          */
         public async Task<DescribeSampleDataResponse> DescribeSampleDataWithOptionsAsync(DescribeSampleDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8508,10 +9578,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSampleDataRequest
-          * @return DescribeSampleDataResponse
+         * @summary Queries whether a sample dataset is loaded to an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSampleDataRequest
+         * @return DescribeSampleDataResponse
          */
         public DescribeSampleDataResponse DescribeSampleData(DescribeSampleDataRequest request)
         {
@@ -8520,10 +9592,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSampleDataRequest
-          * @return DescribeSampleDataResponse
+         * @summary Queries whether a sample dataset is loaded to an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSampleDataRequest
+         * @return DescribeSampleDataResponse
          */
         public async Task<DescribeSampleDataResponse> DescribeSampleDataAsync(DescribeSampleDataRequest request)
         {
@@ -8531,6 +9605,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeSampleDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the features that are supported by an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeSupportFeaturesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSupportFeaturesResponse
+         */
         public DescribeSupportFeaturesResponse DescribeSupportFeaturesWithOptions(DescribeSupportFeaturesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8562,6 +9643,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeSupportFeaturesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the features that are supported by an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeSupportFeaturesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSupportFeaturesResponse
+         */
         public async Task<DescribeSupportFeaturesResponse> DescribeSupportFeaturesWithOptionsAsync(DescribeSupportFeaturesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8593,18 +9681,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeSupportFeaturesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the features that are supported by an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeSupportFeaturesRequest
+         * @return DescribeSupportFeaturesResponse
+         */
         public DescribeSupportFeaturesResponse DescribeSupportFeatures(DescribeSupportFeaturesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSupportFeaturesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the features that are supported by an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DescribeSupportFeaturesRequest
+         * @return DescribeSupportFeaturesResponse
+         */
         public async Task<DescribeSupportFeaturesResponse> DescribeSupportFeaturesAsync(DescribeSupportFeaturesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSupportFeaturesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of tags for AnalyticDB for PostgreSQL instances.
+         *
+         * @param request DescribeTagsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTagsResponse
+         */
         public DescribeTagsResponse DescribeTagsWithOptions(DescribeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8656,6 +9763,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeTagsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of tags for AnalyticDB for PostgreSQL instances.
+         *
+         * @param request DescribeTagsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTagsResponse
+         */
         public async Task<DescribeTagsResponse> DescribeTagsWithOptionsAsync(DescribeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8707,18 +9821,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of tags for AnalyticDB for PostgreSQL instances.
+         *
+         * @param request DescribeTagsRequest
+         * @return DescribeTagsResponse
+         */
         public DescribeTagsResponse DescribeTags(DescribeTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTagsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of tags for AnalyticDB for PostgreSQL instances.
+         *
+         * @param request DescribeTagsRequest
+         * @return DescribeTagsResponse
+         */
         public async Task<DescribeTagsResponse> DescribeTagsAsync(DescribeTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTagsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of Key Management Service (KMS) keys.
+         *
+         * @param request DescribeUserEncryptionKeyListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserEncryptionKeyListResponse
+         */
         public DescribeUserEncryptionKeyListResponse DescribeUserEncryptionKeyListWithOptions(DescribeUserEncryptionKeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8754,6 +9887,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeUserEncryptionKeyListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of Key Management Service (KMS) keys.
+         *
+         * @param request DescribeUserEncryptionKeyListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserEncryptionKeyListResponse
+         */
         public async Task<DescribeUserEncryptionKeyListResponse> DescribeUserEncryptionKeyListWithOptionsAsync(DescribeUserEncryptionKeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8789,12 +9929,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DescribeUserEncryptionKeyListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of Key Management Service (KMS) keys.
+         *
+         * @param request DescribeUserEncryptionKeyListRequest
+         * @return DescribeUserEncryptionKeyListResponse
+         */
         public DescribeUserEncryptionKeyListResponse DescribeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserEncryptionKeyListWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of Key Management Service (KMS) keys.
+         *
+         * @param request DescribeUserEncryptionKeyListRequest
+         * @return DescribeUserEncryptionKeyListResponse
+         */
         public async Task<DescribeUserEncryptionKeyListResponse> DescribeUserEncryptionKeyListAsync(DescribeUserEncryptionKeyListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8802,13 +9954,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of a lock-waiting query only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWaitingSQLInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeWaitingSQLInfoResponse
+         * @summary Queries the information about a lock-waiting query for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of a lock-waiting query only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWaitingSQLInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWaitingSQLInfoResponse
          */
         public DescribeWaitingSQLInfoResponse DescribeWaitingSQLInfoWithOptions(DescribeWaitingSQLInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8846,13 +10000,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of a lock-waiting query only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWaitingSQLInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeWaitingSQLInfoResponse
+         * @summary Queries the information about a lock-waiting query for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of a lock-waiting query only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWaitingSQLInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWaitingSQLInfoResponse
          */
         public async Task<DescribeWaitingSQLInfoResponse> DescribeWaitingSQLInfoWithOptionsAsync(DescribeWaitingSQLInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8890,12 +10046,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of a lock-waiting query only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWaitingSQLInfoRequest
-          * @return DescribeWaitingSQLInfoResponse
+         * @summary Queries the information about a lock-waiting query for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of a lock-waiting query only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWaitingSQLInfoRequest
+         * @return DescribeWaitingSQLInfoResponse
          */
         public DescribeWaitingSQLInfoResponse DescribeWaitingSQLInfo(DescribeWaitingSQLInfoRequest request)
         {
@@ -8904,12 +10062,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the details of a lock-waiting query only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWaitingSQLInfoRequest
-          * @return DescribeWaitingSQLInfoResponse
+         * @summary Queries the information about a lock-waiting query for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the details of a lock-waiting query only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWaitingSQLInfoRequest
+         * @return DescribeWaitingSQLInfoResponse
          */
         public async Task<DescribeWaitingSQLInfoResponse> DescribeWaitingSQLInfoAsync(DescribeWaitingSQLInfoRequest request)
         {
@@ -8918,13 +10078,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the lock diagnostics records only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWaitingSQLRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeWaitingSQLRecordsResponse
+         * @summary Queries the lock diagnostic records of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the lock diagnostics records only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWaitingSQLRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWaitingSQLRecordsResponse
          */
         public DescribeWaitingSQLRecordsResponse DescribeWaitingSQLRecordsWithOptions(DescribeWaitingSQLRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8990,13 +10152,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the lock diagnostics records only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWaitingSQLRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeWaitingSQLRecordsResponse
+         * @summary Queries the lock diagnostic records of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the lock diagnostics records only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWaitingSQLRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWaitingSQLRecordsResponse
          */
         public async Task<DescribeWaitingSQLRecordsResponse> DescribeWaitingSQLRecordsWithOptionsAsync(DescribeWaitingSQLRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9062,12 +10226,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the lock diagnostics records only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWaitingSQLRecordsRequest
-          * @return DescribeWaitingSQLRecordsResponse
+         * @summary Queries the lock diagnostic records of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the lock diagnostics records only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWaitingSQLRecordsRequest
+         * @return DescribeWaitingSQLRecordsResponse
          */
         public DescribeWaitingSQLRecordsResponse DescribeWaitingSQLRecords(DescribeWaitingSQLRecordsRequest request)
         {
@@ -9076,12 +10242,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to query the lock diagnostics records only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWaitingSQLRecordsRequest
-          * @return DescribeWaitingSQLRecordsResponse
+         * @summary Queries the lock diagnostic records of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to query the lock diagnostics records only for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWaitingSQLRecordsRequest
+         * @return DescribeWaitingSQLRecordsResponse
          */
         public async Task<DescribeWaitingSQLRecordsResponse> DescribeWaitingSQLRecordsAsync(DescribeWaitingSQLRecordsRequest request)
         {
@@ -9090,14 +10258,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to download the query diagnostic information of an AnalyticDB for PostgreSQL instance. After the download is complete, you can call the [DescribeDownloadRecords](~~447712~~) operation to query download records and download URLs.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DownloadDiagnosisRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DownloadDiagnosisRecordsResponse
+         * @summary Downloads the query diagnostic information of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to download the query diagnostic information of an AnalyticDB for PostgreSQL instance. After the download is complete, you can call the [DescribeDownloadRecords](https://help.aliyun.com/document_detail/447712.html) operation to query download records and download URLs.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DownloadDiagnosisRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DownloadDiagnosisRecordsResponse
          */
         public DownloadDiagnosisRecordsResponse DownloadDiagnosisRecordsWithOptions(DownloadDiagnosisRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9155,14 +10325,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to download the query diagnostic information of an AnalyticDB for PostgreSQL instance. After the download is complete, you can call the [DescribeDownloadRecords](~~447712~~) operation to query download records and download URLs.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DownloadDiagnosisRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DownloadDiagnosisRecordsResponse
+         * @summary Downloads the query diagnostic information of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to download the query diagnostic information of an AnalyticDB for PostgreSQL instance. After the download is complete, you can call the [DescribeDownloadRecords](https://help.aliyun.com/document_detail/447712.html) operation to query download records and download URLs.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DownloadDiagnosisRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DownloadDiagnosisRecordsResponse
          */
         public async Task<DownloadDiagnosisRecordsResponse> DownloadDiagnosisRecordsWithOptionsAsync(DownloadDiagnosisRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9220,13 +10392,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to download the query diagnostic information of an AnalyticDB for PostgreSQL instance. After the download is complete, you can call the [DescribeDownloadRecords](~~447712~~) operation to query download records and download URLs.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DownloadDiagnosisRecordsRequest
-          * @return DownloadDiagnosisRecordsResponse
+         * @summary Downloads the query diagnostic information of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to download the query diagnostic information of an AnalyticDB for PostgreSQL instance. After the download is complete, you can call the [DescribeDownloadRecords](https://help.aliyun.com/document_detail/447712.html) operation to query download records and download URLs.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DownloadDiagnosisRecordsRequest
+         * @return DownloadDiagnosisRecordsResponse
          */
         public DownloadDiagnosisRecordsResponse DownloadDiagnosisRecords(DownloadDiagnosisRecordsRequest request)
         {
@@ -9235,13 +10409,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to download the query diagnostic information of an AnalyticDB for PostgreSQL instance. After the download is complete, you can call the [DescribeDownloadRecords](~~447712~~) operation to query download records and download URLs.
-          * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DownloadDiagnosisRecordsRequest
-          * @return DownloadDiagnosisRecordsResponse
+         * @summary Downloads the query diagnostic information of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to download the query diagnostic information of an AnalyticDB for PostgreSQL instance. After the download is complete, you can call the [DescribeDownloadRecords](https://help.aliyun.com/document_detail/447712.html) operation to query download records and download URLs.
+         * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DownloadDiagnosisRecordsRequest
+         * @return DownloadDiagnosisRecordsResponse
          */
         public async Task<DownloadDiagnosisRecordsResponse> DownloadDiagnosisRecordsAsync(DownloadDiagnosisRecordsRequest request)
         {
@@ -9249,6 +10425,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DownloadDiagnosisRecordsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Download the slow query logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DownloadSQLLogsRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DownloadSQLLogsRecordsResponse
+         */
         public DownloadSQLLogsRecordsResponse DownloadSQLLogsRecordsWithOptions(DownloadSQLLogsRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9336,6 +10519,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DownloadSQLLogsRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Download the slow query logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DownloadSQLLogsRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DownloadSQLLogsRecordsResponse
+         */
         public async Task<DownloadSQLLogsRecordsResponse> DownloadSQLLogsRecordsWithOptionsAsync(DownloadSQLLogsRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9423,18 +10613,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<DownloadSQLLogsRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Download the slow query logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DownloadSQLLogsRecordsRequest
+         * @return DownloadSQLLogsRecordsResponse
+         */
         public DownloadSQLLogsRecordsResponse DownloadSQLLogsRecords(DownloadSQLLogsRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DownloadSQLLogsRecordsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Download the slow query logs of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request DownloadSQLLogsRecordsRequest
+         * @return DownloadSQLLogsRecordsResponse
+         */
         public async Task<DownloadSQLLogsRecordsResponse> DownloadSQLLogsRecordsAsync(DownloadSQLLogsRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DownloadSQLLogsRecordsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询上传文档任务的状态
+         *
+         * @param request GetUploadDocumentJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetUploadDocumentJobResponse
+         */
         public GetUploadDocumentJobResponse GetUploadDocumentJobWithOptions(GetUploadDocumentJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9488,6 +10697,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<GetUploadDocumentJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询上传文档任务的状态
+         *
+         * @param request GetUploadDocumentJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetUploadDocumentJobResponse
+         */
         public async Task<GetUploadDocumentJobResponse> GetUploadDocumentJobWithOptionsAsync(GetUploadDocumentJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9541,18 +10757,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<GetUploadDocumentJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询上传文档任务的状态
+         *
+         * @param request GetUploadDocumentJobRequest
+         * @return GetUploadDocumentJobResponse
+         */
         public GetUploadDocumentJobResponse GetUploadDocumentJob(GetUploadDocumentJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetUploadDocumentJobWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询上传文档任务的状态
+         *
+         * @param request GetUploadDocumentJobRequest
+         * @return GetUploadDocumentJobResponse
+         */
         public async Task<GetUploadDocumentJobResponse> GetUploadDocumentJobAsync(GetUploadDocumentJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUploadDocumentJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询上传向量任务结果
+         *
+         * @param request GetUpsertCollectionDataJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetUpsertCollectionDataJobResponse
+         */
         public GetUpsertCollectionDataJobResponse GetUpsertCollectionDataJobWithOptions(GetUpsertCollectionDataJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9606,6 +10841,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<GetUpsertCollectionDataJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询上传向量任务结果
+         *
+         * @param request GetUpsertCollectionDataJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetUpsertCollectionDataJobResponse
+         */
         public async Task<GetUpsertCollectionDataJobResponse> GetUpsertCollectionDataJobWithOptionsAsync(GetUpsertCollectionDataJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9659,18 +10901,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<GetUpsertCollectionDataJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询上传向量任务结果
+         *
+         * @param request GetUpsertCollectionDataJobRequest
+         * @return GetUpsertCollectionDataJobResponse
+         */
         public GetUpsertCollectionDataJobResponse GetUpsertCollectionDataJob(GetUpsertCollectionDataJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetUpsertCollectionDataJobWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询上传向量任务结果
+         *
+         * @param request GetUpsertCollectionDataJobRequest
+         * @return GetUpsertCollectionDataJobResponse
+         */
         public async Task<GetUpsertCollectionDataJobResponse> GetUpsertCollectionDataJobAsync(GetUpsertCollectionDataJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUpsertCollectionDataJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Grants vector collection permissions to a namespace.
+         *
+         * @param request GrantCollectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GrantCollectionResponse
+         */
         public GrantCollectionResponse GrantCollectionWithOptions(GrantCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9730,6 +10991,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<GrantCollectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Grants vector collection permissions to a namespace.
+         *
+         * @param request GrantCollectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GrantCollectionResponse
+         */
         public async Task<GrantCollectionResponse> GrantCollectionWithOptionsAsync(GrantCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9789,18 +11057,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<GrantCollectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Grants vector collection permissions to a namespace.
+         *
+         * @param request GrantCollectionRequest
+         * @return GrantCollectionResponse
+         */
         public GrantCollectionResponse GrantCollection(GrantCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GrantCollectionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Grants vector collection permissions to a namespace.
+         *
+         * @param request GrantCollectionRequest
+         * @return GrantCollectionResponse
+         */
         public async Task<GrantCollectionResponse> GrantCollectionAsync(GrantCollectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GrantCollectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 处理指定的查询SQL
+         *
+         * @param request HandleActiveSQLRecordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HandleActiveSQLRecordResponse
+         */
         public HandleActiveSQLRecordResponse HandleActiveSQLRecordWithOptions(HandleActiveSQLRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9836,6 +11123,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<HandleActiveSQLRecordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 处理指定的查询SQL
+         *
+         * @param request HandleActiveSQLRecordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HandleActiveSQLRecordResponse
+         */
         public async Task<HandleActiveSQLRecordResponse> HandleActiveSQLRecordWithOptionsAsync(HandleActiveSQLRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9871,18 +11165,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<HandleActiveSQLRecordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 处理指定的查询SQL
+         *
+         * @param request HandleActiveSQLRecordRequest
+         * @return HandleActiveSQLRecordResponse
+         */
         public HandleActiveSQLRecordResponse HandleActiveSQLRecord(HandleActiveSQLRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return HandleActiveSQLRecordWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 处理指定的查询SQL
+         *
+         * @param request HandleActiveSQLRecordRequest
+         * @return HandleActiveSQLRecordResponse
+         */
         public async Task<HandleActiveSQLRecordResponse> HandleActiveSQLRecordAsync(HandleActiveSQLRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await HandleActiveSQLRecordWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Initializes vector databases.
+         *
+         * @param request InitVectorDatabaseRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InitVectorDatabaseResponse
+         */
         public InitVectorDatabaseResponse InitVectorDatabaseWithOptions(InitVectorDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9926,6 +11239,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<InitVectorDatabaseResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Initializes vector databases.
+         *
+         * @param request InitVectorDatabaseRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InitVectorDatabaseResponse
+         */
         public async Task<InitVectorDatabaseResponse> InitVectorDatabaseWithOptionsAsync(InitVectorDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9969,18 +11289,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<InitVectorDatabaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Initializes vector databases.
+         *
+         * @param request InitVectorDatabaseRequest
+         * @return InitVectorDatabaseResponse
+         */
         public InitVectorDatabaseResponse InitVectorDatabase(InitVectorDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InitVectorDatabaseWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Initializes vector databases.
+         *
+         * @param request InitVectorDatabaseRequest
+         * @return InitVectorDatabaseResponse
+         */
         public async Task<InitVectorDatabaseResponse> InitVectorDatabaseAsync(InitVectorDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InitVectorDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of vector collections.
+         *
+         * @param request ListCollectionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListCollectionsResponse
+         */
         public ListCollectionsResponse ListCollectionsWithOptions(ListCollectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10024,6 +11363,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ListCollectionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of vector collections.
+         *
+         * @param request ListCollectionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListCollectionsResponse
+         */
         public async Task<ListCollectionsResponse> ListCollectionsWithOptionsAsync(ListCollectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10067,18 +11413,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ListCollectionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of vector collections.
+         *
+         * @param request ListCollectionsRequest
+         * @return ListCollectionsResponse
+         */
         public ListCollectionsResponse ListCollections(ListCollectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCollectionsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of vector collections.
+         *
+         * @param request ListCollectionsRequest
+         * @return ListCollectionsResponse
+         */
         public async Task<ListCollectionsResponse> ListCollectionsAsync(ListCollectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCollectionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取知识库列表
+         *
+         * @param request ListDocumentCollectionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListDocumentCollectionsResponse
+         */
         public ListDocumentCollectionsResponse ListDocumentCollectionsWithOptions(ListDocumentCollectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10122,6 +11487,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ListDocumentCollectionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取知识库列表
+         *
+         * @param request ListDocumentCollectionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListDocumentCollectionsResponse
+         */
         public async Task<ListDocumentCollectionsResponse> ListDocumentCollectionsWithOptionsAsync(ListDocumentCollectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10165,18 +11537,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ListDocumentCollectionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取知识库列表
+         *
+         * @param request ListDocumentCollectionsRequest
+         * @return ListDocumentCollectionsResponse
+         */
         public ListDocumentCollectionsResponse ListDocumentCollections(ListDocumentCollectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDocumentCollectionsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 获取知识库列表
+         *
+         * @param request ListDocumentCollectionsRequest
+         * @return ListDocumentCollectionsResponse
+         */
         public async Task<ListDocumentCollectionsResponse> ListDocumentCollectionsAsync(ListDocumentCollectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDocumentCollectionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询文档列表
+         *
+         * @param request ListDocumentsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListDocumentsResponse
+         */
         public ListDocumentsResponse ListDocumentsWithOptions(ListDocumentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10224,6 +11615,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ListDocumentsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询文档列表
+         *
+         * @param request ListDocumentsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListDocumentsResponse
+         */
         public async Task<ListDocumentsResponse> ListDocumentsWithOptionsAsync(ListDocumentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10271,18 +11669,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ListDocumentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询文档列表
+         *
+         * @param request ListDocumentsRequest
+         * @return ListDocumentsResponse
+         */
         public ListDocumentsResponse ListDocuments(ListDocumentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDocumentsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询文档列表
+         *
+         * @param request ListDocumentsRequest
+         * @return ListDocumentsResponse
+         */
         public async Task<ListDocumentsResponse> ListDocumentsAsync(ListDocumentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDocumentsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of namespaces.
+         *
+         * @param request ListNamespacesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListNamespacesResponse
+         */
         public ListNamespacesResponse ListNamespacesWithOptions(ListNamespacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10326,6 +11743,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ListNamespacesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of namespaces.
+         *
+         * @param request ListNamespacesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListNamespacesResponse
+         */
         public async Task<ListNamespacesResponse> ListNamespacesWithOptionsAsync(ListNamespacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10369,18 +11793,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ListNamespacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of namespaces.
+         *
+         * @param request ListNamespacesRequest
+         * @return ListNamespacesResponse
+         */
         public ListNamespacesResponse ListNamespaces(ListNamespacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListNamespacesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of namespaces.
+         *
+         * @param request ListNamespacesRequest
+         * @return ListNamespacesResponse
+         */
         public async Task<ListNamespacesResponse> ListNamespacesAsync(ListNamespacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListNamespacesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of tags that are added to AnalyticDB for PostgreSQL instances.
+         *
+         * @param request ListTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10440,6 +11883,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of tags that are added to AnalyticDB for PostgreSQL instances.
+         *
+         * @param request ListTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10499,18 +11949,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of tags that are added to AnalyticDB for PostgreSQL instances.
+         *
+         * @param request ListTagResourcesRequest
+         * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of tags that are added to AnalyticDB for PostgreSQL instances.
+         *
+         * @param request ListTagResourcesRequest
+         * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the description of a database account for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyAccountDescriptionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAccountDescriptionResponse
+         */
         public ModifyAccountDescriptionResponse ModifyAccountDescriptionWithOptions(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10546,6 +12015,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyAccountDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the description of a database account for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyAccountDescriptionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAccountDescriptionResponse
+         */
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionWithOptionsAsync(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10581,18 +12057,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyAccountDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the description of a database account for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyAccountDescriptionRequest
+         * @return ModifyAccountDescriptionResponse
+         */
         public ModifyAccountDescriptionResponse ModifyAccountDescription(ModifyAccountDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAccountDescriptionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the description of a database account for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyAccountDescriptionRequest
+         * @return ModifyAccountDescriptionResponse
+         */
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionAsync(ModifyAccountDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAccountDescriptionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Configures the backup policy of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBackupPolicyResponse
+         */
         public ModifyBackupPolicyResponse ModifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10640,6 +12135,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures the backup policy of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBackupPolicyResponse
+         */
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyWithOptionsAsync(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10687,18 +12189,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures the backup policy of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @return ModifyBackupPolicyResponse
+         */
         public ModifyBackupPolicyResponse ModifyBackupPolicy(ModifyBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyBackupPolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Configures the backup policy of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @return ModifyBackupPolicyResponse
+         */
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyAsync(ModifyBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyBackupPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Changes the threshold of computing resources and the wait period of idle resources for an AnalyticDB for PostgreSQL instance in Serverless automatic scheduling mode.
+         *
+         * @param request ModifyDBInstanceConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceConfigResponse
+         */
         public ModifyDBInstanceConfigResponse ModifyDBInstanceConfigWithOptions(ModifyDBInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10742,6 +12263,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyDBInstanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the threshold of computing resources and the wait period of idle resources for an AnalyticDB for PostgreSQL instance in Serverless automatic scheduling mode.
+         *
+         * @param request ModifyDBInstanceConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceConfigResponse
+         */
         public async Task<ModifyDBInstanceConfigResponse> ModifyDBInstanceConfigWithOptionsAsync(ModifyDBInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10785,18 +12313,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyDBInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the threshold of computing resources and the wait period of idle resources for an AnalyticDB for PostgreSQL instance in Serverless automatic scheduling mode.
+         *
+         * @param request ModifyDBInstanceConfigRequest
+         * @return ModifyDBInstanceConfigResponse
+         */
         public ModifyDBInstanceConfigResponse ModifyDBInstanceConfig(ModifyDBInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceConfigWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Changes the threshold of computing resources and the wait period of idle resources for an AnalyticDB for PostgreSQL instance in Serverless automatic scheduling mode.
+         *
+         * @param request ModifyDBInstanceConfigRequest
+         * @return ModifyDBInstanceConfigResponse
+         */
         public async Task<ModifyDBInstanceConfigResponse> ModifyDBInstanceConfigAsync(ModifyDBInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Changes the endpoint of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyDBInstanceConnectionStringRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceConnectionStringResponse
+         */
         public ModifyDBInstanceConnectionStringResponse ModifyDBInstanceConnectionStringWithOptions(ModifyDBInstanceConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10836,6 +12383,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the endpoint of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyDBInstanceConnectionStringRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceConnectionStringResponse
+         */
         public async Task<ModifyDBInstanceConnectionStringResponse> ModifyDBInstanceConnectionStringWithOptionsAsync(ModifyDBInstanceConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10875,12 +12429,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the endpoint of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyDBInstanceConnectionStringRequest
+         * @return ModifyDBInstanceConnectionStringResponse
+         */
         public ModifyDBInstanceConnectionStringResponse ModifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceConnectionStringWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Changes the endpoint of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyDBInstanceConnectionStringRequest
+         * @return ModifyDBInstanceConnectionStringResponse
+         */
         public async Task<ModifyDBInstanceConnectionStringResponse> ModifyDBInstanceConnectionStringAsync(ModifyDBInstanceConnectionStringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10888,13 +12454,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To make it easy to identify AnalyticDB for PostgreSQL instances, you can call this operation to modify the description of instances.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyDBInstanceDescriptionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBInstanceDescriptionResponse
+         * @summary Changes the description of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To make it easy to identify AnalyticDB for PostgreSQL instances, you can call this operation to modify the description of instances.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyDBInstanceDescriptionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceDescriptionResponse
          */
         public ModifyDBInstanceDescriptionResponse ModifyDBInstanceDescriptionWithOptions(ModifyDBInstanceDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10932,13 +12500,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To make it easy to identify AnalyticDB for PostgreSQL instances, you can call this operation to modify the description of instances.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyDBInstanceDescriptionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBInstanceDescriptionResponse
+         * @summary Changes the description of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To make it easy to identify AnalyticDB for PostgreSQL instances, you can call this operation to modify the description of instances.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyDBInstanceDescriptionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceDescriptionResponse
          */
         public async Task<ModifyDBInstanceDescriptionResponse> ModifyDBInstanceDescriptionWithOptionsAsync(ModifyDBInstanceDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10976,12 +12546,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To make it easy to identify AnalyticDB for PostgreSQL instances, you can call this operation to modify the description of instances.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyDBInstanceDescriptionRequest
-          * @return ModifyDBInstanceDescriptionResponse
+         * @summary Changes the description of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To make it easy to identify AnalyticDB for PostgreSQL instances, you can call this operation to modify the description of instances.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyDBInstanceDescriptionRequest
+         * @return ModifyDBInstanceDescriptionResponse
          */
         public ModifyDBInstanceDescriptionResponse ModifyDBInstanceDescription(ModifyDBInstanceDescriptionRequest request)
         {
@@ -10990,12 +12562,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To make it easy to identify AnalyticDB for PostgreSQL instances, you can call this operation to modify the description of instances.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyDBInstanceDescriptionRequest
-          * @return ModifyDBInstanceDescriptionResponse
+         * @summary Changes the description of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To make it easy to identify AnalyticDB for PostgreSQL instances, you can call this operation to modify the description of instances.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyDBInstanceDescriptionRequest
+         * @return ModifyDBInstanceDescriptionResponse
          */
         public async Task<ModifyDBInstanceDescriptionResponse> ModifyDBInstanceDescriptionAsync(ModifyDBInstanceDescriptionRequest request)
         {
@@ -11004,13 +12578,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * The system maintains AnalyticDB for PostgreSQL instances during the maintenance window that you specify. We recommend that you set the maintenance window to off-peak hours to minimize the impact on your business.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyDBInstanceMaintainTimeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBInstanceMaintainTimeResponse
+         * @summary Modifies the maintenance window of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description The system maintains AnalyticDB for PostgreSQL instances during the maintenance window that you specify. We recommend that you set the maintenance window to off-peak hours to minimize the impact on your business.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyDBInstanceMaintainTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceMaintainTimeResponse
          */
         public ModifyDBInstanceMaintainTimeResponse ModifyDBInstanceMaintainTimeWithOptions(ModifyDBInstanceMaintainTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11052,13 +12628,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * The system maintains AnalyticDB for PostgreSQL instances during the maintenance window that you specify. We recommend that you set the maintenance window to off-peak hours to minimize the impact on your business.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyDBInstanceMaintainTimeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBInstanceMaintainTimeResponse
+         * @summary Modifies the maintenance window of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description The system maintains AnalyticDB for PostgreSQL instances during the maintenance window that you specify. We recommend that you set the maintenance window to off-peak hours to minimize the impact on your business.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyDBInstanceMaintainTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceMaintainTimeResponse
          */
         public async Task<ModifyDBInstanceMaintainTimeResponse> ModifyDBInstanceMaintainTimeWithOptionsAsync(ModifyDBInstanceMaintainTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11100,12 +12678,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * The system maintains AnalyticDB for PostgreSQL instances during the maintenance window that you specify. We recommend that you set the maintenance window to off-peak hours to minimize the impact on your business.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyDBInstanceMaintainTimeRequest
-          * @return ModifyDBInstanceMaintainTimeResponse
+         * @summary Modifies the maintenance window of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description The system maintains AnalyticDB for PostgreSQL instances during the maintenance window that you specify. We recommend that you set the maintenance window to off-peak hours to minimize the impact on your business.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyDBInstanceMaintainTimeRequest
+         * @return ModifyDBInstanceMaintainTimeResponse
          */
         public ModifyDBInstanceMaintainTimeResponse ModifyDBInstanceMaintainTime(ModifyDBInstanceMaintainTimeRequest request)
         {
@@ -11114,12 +12694,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * The system maintains AnalyticDB for PostgreSQL instances during the maintenance window that you specify. We recommend that you set the maintenance window to off-peak hours to minimize the impact on your business.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyDBInstanceMaintainTimeRequest
-          * @return ModifyDBInstanceMaintainTimeResponse
+         * @summary Modifies the maintenance window of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description The system maintains AnalyticDB for PostgreSQL instances during the maintenance window that you specify. We recommend that you set the maintenance window to off-peak hours to minimize the impact on your business.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyDBInstanceMaintainTimeRequest
+         * @return ModifyDBInstanceMaintainTimeResponse
          */
         public async Task<ModifyDBInstanceMaintainTimeResponse> ModifyDBInstanceMaintainTimeAsync(ModifyDBInstanceMaintainTimeRequest request)
         {
@@ -11128,11 +12710,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
-          *
-          * @param request ModifyDBInstanceResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBInstanceResourceGroupResponse
+         * @summary Moves an AnalyticDB for PostgreSQL instance to a resource group.
+         *
+         * @description Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
+         *
+         * @param request ModifyDBInstanceResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceResourceGroupResponse
          */
         public ModifyDBInstanceResourceGroupResponse ModifyDBInstanceResourceGroupWithOptions(ModifyDBInstanceResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11186,11 +12770,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
-          *
-          * @param request ModifyDBInstanceResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBInstanceResourceGroupResponse
+         * @summary Moves an AnalyticDB for PostgreSQL instance to a resource group.
+         *
+         * @description Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
+         *
+         * @param request ModifyDBInstanceResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceResourceGroupResponse
          */
         public async Task<ModifyDBInstanceResourceGroupResponse> ModifyDBInstanceResourceGroupWithOptionsAsync(ModifyDBInstanceResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11244,10 +12830,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
-          *
-          * @param request ModifyDBInstanceResourceGroupRequest
-          * @return ModifyDBInstanceResourceGroupResponse
+         * @summary Moves an AnalyticDB for PostgreSQL instance to a resource group.
+         *
+         * @description Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
+         *
+         * @param request ModifyDBInstanceResourceGroupRequest
+         * @return ModifyDBInstanceResourceGroupResponse
          */
         public ModifyDBInstanceResourceGroupResponse ModifyDBInstanceResourceGroup(ModifyDBInstanceResourceGroupRequest request)
         {
@@ -11256,10 +12844,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
-          *
-          * @param request ModifyDBInstanceResourceGroupRequest
-          * @return ModifyDBInstanceResourceGroupResponse
+         * @summary Moves an AnalyticDB for PostgreSQL instance to a resource group.
+         *
+         * @description Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
+         *
+         * @param request ModifyDBInstanceResourceGroupRequest
+         * @return ModifyDBInstanceResourceGroupResponse
          */
         public async Task<ModifyDBInstanceResourceGroupResponse> ModifyDBInstanceResourceGroupAsync(ModifyDBInstanceResourceGroupRequest request)
         {
@@ -11267,6 +12857,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await ModifyDBInstanceResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables, disables, or updates SSL encryption for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyDBInstanceSSLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceSSLResponse
+         */
         public ModifyDBInstanceSSLResponse ModifyDBInstanceSSLWithOptions(ModifyDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11302,6 +12899,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyDBInstanceSSLResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables, disables, or updates SSL encryption for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyDBInstanceSSLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceSSLResponse
+         */
         public async Task<ModifyDBInstanceSSLResponse> ModifyDBInstanceSSLWithOptionsAsync(ModifyDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11337,18 +12941,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyDBInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables, disables, or updates SSL encryption for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyDBInstanceSSLRequest
+         * @return ModifyDBInstanceSSLResponse
+         */
         public ModifyDBInstanceSSLResponse ModifyDBInstanceSSL(ModifyDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceSSLWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables, disables, or updates SSL encryption for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyDBInstanceSSLRequest
+         * @return ModifyDBInstanceSSLResponse
+         */
         public async Task<ModifyDBInstanceSSLResponse> ModifyDBInstanceSSLAsync(ModifyDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceSSLWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 修改master规格
+         *
+         * @param request ModifyMasterSpecRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyMasterSpecResponse
+         */
         public ModifyMasterSpecResponse ModifyMasterSpecWithOptions(ModifyMasterSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11388,6 +13011,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyMasterSpecResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改master规格
+         *
+         * @param request ModifyMasterSpecRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyMasterSpecResponse
+         */
         public async Task<ModifyMasterSpecResponse> ModifyMasterSpecWithOptionsAsync(ModifyMasterSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11427,12 +13057,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyMasterSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改master规格
+         *
+         * @param request ModifyMasterSpecRequest
+         * @return ModifyMasterSpecResponse
+         */
         public ModifyMasterSpecResponse ModifyMasterSpec(ModifyMasterSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyMasterSpecWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 修改master规格
+         *
+         * @param request ModifyMasterSpecRequest
+         * @return ModifyMasterSpecResponse
+         */
         public async Task<ModifyMasterSpecResponse> ModifyMasterSpecAsync(ModifyMasterSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11440,13 +13082,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation can be called to modify parameters of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyParametersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyParametersResponse
+         * @summary Modifies the configuration parameters of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation can be called to modify parameters of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyParametersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyParametersResponse
          */
         public ModifyParametersResponse ModifyParametersWithOptions(ModifyParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11484,13 +13128,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation can be called to modify parameters of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyParametersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyParametersResponse
+         * @summary Modifies the configuration parameters of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation can be called to modify parameters of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyParametersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyParametersResponse
          */
         public async Task<ModifyParametersResponse> ModifyParametersWithOptionsAsync(ModifyParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11528,12 +13174,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation can be called to modify parameters of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyParametersRequest
-          * @return ModifyParametersResponse
+         * @summary Modifies the configuration parameters of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation can be called to modify parameters of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyParametersRequest
+         * @return ModifyParametersResponse
          */
         public ModifyParametersResponse ModifyParameters(ModifyParametersRequest request)
         {
@@ -11542,12 +13190,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation can be called to modify parameters of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyParametersRequest
-          * @return ModifyParametersResponse
+         * @summary Modifies the configuration parameters of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation can be called to modify parameters of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyParametersRequest
+         * @return ModifyParametersResponse
          */
         public async Task<ModifyParametersResponse> ModifyParametersAsync(ModifyParametersRequest request)
         {
@@ -11555,6 +13205,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await ModifyParametersWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables the SQL Explorer feature for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifySQLCollectorPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifySQLCollectorPolicyResponse
+         */
         public ModifySQLCollectorPolicyResponse ModifySQLCollectorPolicyWithOptions(ModifySQLCollectorPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11586,6 +13243,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifySQLCollectorPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables the SQL Explorer feature for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifySQLCollectorPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifySQLCollectorPolicyResponse
+         */
         public async Task<ModifySQLCollectorPolicyResponse> ModifySQLCollectorPolicyWithOptionsAsync(ModifySQLCollectorPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11617,12 +13281,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifySQLCollectorPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables the SQL Explorer feature for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifySQLCollectorPolicyRequest
+         * @return ModifySQLCollectorPolicyResponse
+         */
         public ModifySQLCollectorPolicyResponse ModifySQLCollectorPolicy(ModifySQLCollectorPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySQLCollectorPolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables the SQL Explorer feature for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifySQLCollectorPolicyRequest
+         * @return ModifySQLCollectorPolicyResponse
+         */
         public async Task<ModifySQLCollectorPolicyResponse> ModifySQLCollectorPolicyAsync(ModifySQLCollectorPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11630,13 +13306,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To ensure the security and stability of AnalyticDB for PostgreSQL instances, the system denies all external IP addresses to access AnalyticDB for PostgreSQL instances by default. Before you can use an AnalyticDB for PostgreSQL instance, you must add the IP address or CIDR block of your client to the IP address whitelist of the instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifySecurityIpsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifySecurityIpsResponse
+         * @summary Modifies the IP address whitelist of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To ensure the security and stability of AnalyticDB for PostgreSQL instances, the system denies all external IP addresses to access AnalyticDB for PostgreSQL instances by default. Before you can use an AnalyticDB for PostgreSQL instance, you must add the IP address or CIDR block of your client to the IP address whitelist of the instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifySecurityIpsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifySecurityIpsResponse
          */
         public ModifySecurityIpsResponse ModifySecurityIpsWithOptions(ModifySecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11686,13 +13364,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To ensure the security and stability of AnalyticDB for PostgreSQL instances, the system denies all external IP addresses to access AnalyticDB for PostgreSQL instances by default. Before you can use an AnalyticDB for PostgreSQL instance, you must add the IP address or CIDR block of your client to the IP address whitelist of the instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifySecurityIpsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifySecurityIpsResponse
+         * @summary Modifies the IP address whitelist of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To ensure the security and stability of AnalyticDB for PostgreSQL instances, the system denies all external IP addresses to access AnalyticDB for PostgreSQL instances by default. Before you can use an AnalyticDB for PostgreSQL instance, you must add the IP address or CIDR block of your client to the IP address whitelist of the instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifySecurityIpsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifySecurityIpsResponse
          */
         public async Task<ModifySecurityIpsResponse> ModifySecurityIpsWithOptionsAsync(ModifySecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11742,12 +13422,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To ensure the security and stability of AnalyticDB for PostgreSQL instances, the system denies all external IP addresses to access AnalyticDB for PostgreSQL instances by default. Before you can use an AnalyticDB for PostgreSQL instance, you must add the IP address or CIDR block of your client to the IP address whitelist of the instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifySecurityIpsRequest
-          * @return ModifySecurityIpsResponse
+         * @summary Modifies the IP address whitelist of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To ensure the security and stability of AnalyticDB for PostgreSQL instances, the system denies all external IP addresses to access AnalyticDB for PostgreSQL instances by default. Before you can use an AnalyticDB for PostgreSQL instance, you must add the IP address or CIDR block of your client to the IP address whitelist of the instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifySecurityIpsRequest
+         * @return ModifySecurityIpsResponse
          */
         public ModifySecurityIpsResponse ModifySecurityIps(ModifySecurityIpsRequest request)
         {
@@ -11756,12 +13438,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * To ensure the security and stability of AnalyticDB for PostgreSQL instances, the system denies all external IP addresses to access AnalyticDB for PostgreSQL instances by default. Before you can use an AnalyticDB for PostgreSQL instance, you must add the IP address or CIDR block of your client to the IP address whitelist of the instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifySecurityIpsRequest
-          * @return ModifySecurityIpsResponse
+         * @summary Modifies the IP address whitelist of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description To ensure the security and stability of AnalyticDB for PostgreSQL instances, the system denies all external IP addresses to access AnalyticDB for PostgreSQL instances by default. Before you can use an AnalyticDB for PostgreSQL instance, you must add the IP address or CIDR block of your client to the IP address whitelist of the instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifySecurityIpsRequest
+         * @return ModifySecurityIpsResponse
          */
         public async Task<ModifySecurityIpsResponse> ModifySecurityIpsAsync(ModifySecurityIpsRequest request)
         {
@@ -11769,6 +13453,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await ModifySecurityIpsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the vector engine optimization configuration of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyVectorConfigurationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyVectorConfigurationResponse
+         */
         public ModifyVectorConfigurationResponse ModifyVectorConfigurationWithOptions(ModifyVectorConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11804,6 +13495,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyVectorConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the vector engine optimization configuration of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyVectorConfigurationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyVectorConfigurationResponse
+         */
         public async Task<ModifyVectorConfigurationResponse> ModifyVectorConfigurationWithOptionsAsync(ModifyVectorConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11839,12 +13537,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ModifyVectorConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the vector engine optimization configuration of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyVectorConfigurationRequest
+         * @return ModifyVectorConfigurationResponse
+         */
         public ModifyVectorConfigurationResponse ModifyVectorConfiguration(ModifyVectorConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyVectorConfigurationWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the vector engine optimization configuration of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ModifyVectorConfigurationRequest
+         * @return ModifyVectorConfigurationResponse
+         */
         public async Task<ModifyVectorConfigurationResponse> ModifyVectorConfigurationAsync(ModifyVectorConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11852,15 +13562,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to pause an AnalyticDB for PostgreSQL instance that is in the **Running** state.
-          * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request PauseInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PauseInstanceResponse
+         * @summary Pauses an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to pause an AnalyticDB for PostgreSQL instance that is in the **Running** state.
+         * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request PauseInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PauseInstanceResponse
          */
         public PauseInstanceResponse PauseInstanceWithOptions(PauseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11894,15 +13606,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to pause an AnalyticDB for PostgreSQL instance that is in the **Running** state.
-          * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request PauseInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PauseInstanceResponse
+         * @summary Pauses an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to pause an AnalyticDB for PostgreSQL instance that is in the **Running** state.
+         * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request PauseInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PauseInstanceResponse
          */
         public async Task<PauseInstanceResponse> PauseInstanceWithOptionsAsync(PauseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11936,14 +13650,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to pause an AnalyticDB for PostgreSQL instance that is in the **Running** state.
-          * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request PauseInstanceRequest
-          * @return PauseInstanceResponse
+         * @summary Pauses an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to pause an AnalyticDB for PostgreSQL instance that is in the **Running** state.
+         * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request PauseInstanceRequest
+         * @return PauseInstanceResponse
          */
         public PauseInstanceResponse PauseInstance(PauseInstanceRequest request)
         {
@@ -11952,14 +13668,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to pause an AnalyticDB for PostgreSQL instance that is in the **Running** state.
-          * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request PauseInstanceRequest
-          * @return PauseInstanceResponse
+         * @summary Pauses an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to pause an AnalyticDB for PostgreSQL instance that is in the **Running** state.
+         * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request PauseInstanceRequest
+         * @return PauseInstanceResponse
          */
         public async Task<PauseInstanceResponse> PauseInstanceAsync(PauseInstanceRequest request)
         {
@@ -11967,6 +13685,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await PauseInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询向量数据
+         *
+         * @param tmpReq QueryCollectionDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryCollectionDataResponse
+         */
         public QueryCollectionDataResponse QueryCollectionDataWithOptions(QueryCollectionDataRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12068,6 +13793,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<QueryCollectionDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询向量数据
+         *
+         * @param tmpReq QueryCollectionDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryCollectionDataResponse
+         */
         public async Task<QueryCollectionDataResponse> QueryCollectionDataWithOptionsAsync(QueryCollectionDataRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12169,18 +13901,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<QueryCollectionDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询向量数据
+         *
+         * @param request QueryCollectionDataRequest
+         * @return QueryCollectionDataResponse
+         */
         public QueryCollectionDataResponse QueryCollectionData(QueryCollectionDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryCollectionDataWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询向量数据
+         *
+         * @param request QueryCollectionDataRequest
+         * @return QueryCollectionDataResponse
+         */
         public async Task<QueryCollectionDataResponse> QueryCollectionDataAsync(QueryCollectionDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryCollectionDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询
+         *
+         * @param tmpReq QueryContentRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryContentResponse
+         */
         public QueryContentResponse QueryContentWithOptions(QueryContentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12290,6 +14041,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<QueryContentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询
+         *
+         * @param tmpReq QueryContentRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryContentResponse
+         */
         public async Task<QueryContentResponse> QueryContentWithOptionsAsync(QueryContentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12399,12 +14157,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<QueryContentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询
+         *
+         * @param request QueryContentRequest
+         * @return QueryContentResponse
+         */
         public QueryContentResponse QueryContent(QueryContentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryContentWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询
+         *
+         * @param request QueryContentRequest
+         * @return QueryContentResponse
+         */
         public async Task<QueryContentResponse> QueryContentAsync(QueryContentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12573,6 +14343,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return queryContentResp;
         }
 
+        /**
+         * @summary Rebalances an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request RebalanceDBInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RebalanceDBInstanceResponse
+         */
         public RebalanceDBInstanceResponse RebalanceDBInstanceWithOptions(RebalanceDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12604,6 +14381,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<RebalanceDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Rebalances an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request RebalanceDBInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RebalanceDBInstanceResponse
+         */
         public async Task<RebalanceDBInstanceResponse> RebalanceDBInstanceWithOptionsAsync(RebalanceDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12635,18 +14419,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<RebalanceDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Rebalances an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request RebalanceDBInstanceRequest
+         * @return RebalanceDBInstanceResponse
+         */
         public RebalanceDBInstanceResponse RebalanceDBInstance(RebalanceDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RebalanceDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Rebalances an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request RebalanceDBInstanceRequest
+         * @return RebalanceDBInstanceResponse
+         */
         public async Task<RebalanceDBInstanceResponse> RebalanceDBInstanceAsync(RebalanceDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RebalanceDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Releases the public endpoint of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ReleaseInstancePublicConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReleaseInstancePublicConnectionResponse
+         */
         public ReleaseInstancePublicConnectionResponse ReleaseInstancePublicConnectionWithOptions(ReleaseInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12682,6 +14485,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Releases the public endpoint of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ReleaseInstancePublicConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReleaseInstancePublicConnectionResponse
+         */
         public async Task<ReleaseInstancePublicConnectionResponse> ReleaseInstancePublicConnectionWithOptionsAsync(ReleaseInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12717,18 +14527,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Releases the public endpoint of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ReleaseInstancePublicConnectionRequest
+         * @return ReleaseInstancePublicConnectionResponse
+         */
         public ReleaseInstancePublicConnectionResponse ReleaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseInstancePublicConnectionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Releases the public endpoint of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ReleaseInstancePublicConnectionRequest
+         * @return ReleaseInstancePublicConnectionResponse
+         */
         public async Task<ReleaseInstancePublicConnectionResponse> ReleaseInstancePublicConnectionAsync(ReleaseInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseInstancePublicConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Resets the password of a database account for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ResetAccountPasswordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetAccountPasswordResponse
+         */
         public ResetAccountPasswordResponse ResetAccountPasswordWithOptions(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12764,6 +14593,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ResetAccountPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Resets the password of a database account for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ResetAccountPasswordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetAccountPasswordResponse
+         */
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordWithOptionsAsync(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12799,18 +14635,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ResetAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Resets the password of a database account for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ResetAccountPasswordRequest
+         * @return ResetAccountPasswordResponse
+         */
         public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetAccountPasswordWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Resets the password of a database account for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request ResetAccountPasswordRequest
+         * @return ResetAccountPasswordResponse
+         */
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordAsync(ResetAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetAccountPasswordWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 重置IMV统计信息
+         *
+         * @param request ResetIMVMonitorDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetIMVMonitorDataResponse
+         */
         public ResetIMVMonitorDataResponse ResetIMVMonitorDataWithOptions(ResetIMVMonitorDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12842,6 +14697,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ResetIMVMonitorDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 重置IMV统计信息
+         *
+         * @param request ResetIMVMonitorDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetIMVMonitorDataResponse
+         */
         public async Task<ResetIMVMonitorDataResponse> ResetIMVMonitorDataWithOptionsAsync(ResetIMVMonitorDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12873,12 +14735,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<ResetIMVMonitorDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 重置IMV统计信息
+         *
+         * @param request ResetIMVMonitorDataRequest
+         * @return ResetIMVMonitorDataResponse
+         */
         public ResetIMVMonitorDataResponse ResetIMVMonitorData(ResetIMVMonitorDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetIMVMonitorDataWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 重置IMV统计信息
+         *
+         * @param request ResetIMVMonitorDataRequest
+         * @return ResetIMVMonitorDataResponse
+         */
         public async Task<ResetIMVMonitorDataResponse> ResetIMVMonitorDataAsync(ResetIMVMonitorDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12886,13 +14760,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * A restart takes about 3 to 30 minutes. During the restart, services are unavailable. We recommend that you restart the instance during off-peak hours. After the instance is restarted and enters the running state, you can access the instance.
-          * ## Limit
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request RestartDBInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RestartDBInstanceResponse
+         * @summary Restarts an AnalyticDB for PostgreSQL instance.
+         *
+         * @description A restart takes about 3 to 30 minutes. During the restart, services are unavailable. We recommend that you restart the instance during off-peak hours. After the instance is restarted and enters the running state, you can access the instance.
+         * ## Limit
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request RestartDBInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RestartDBInstanceResponse
          */
         public RestartDBInstanceResponse RestartDBInstanceWithOptions(RestartDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12926,13 +14802,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * A restart takes about 3 to 30 minutes. During the restart, services are unavailable. We recommend that you restart the instance during off-peak hours. After the instance is restarted and enters the running state, you can access the instance.
-          * ## Limit
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request RestartDBInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RestartDBInstanceResponse
+         * @summary Restarts an AnalyticDB for PostgreSQL instance.
+         *
+         * @description A restart takes about 3 to 30 minutes. During the restart, services are unavailable. We recommend that you restart the instance during off-peak hours. After the instance is restarted and enters the running state, you can access the instance.
+         * ## Limit
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request RestartDBInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RestartDBInstanceResponse
          */
         public async Task<RestartDBInstanceResponse> RestartDBInstanceWithOptionsAsync(RestartDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12966,12 +14844,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * A restart takes about 3 to 30 minutes. During the restart, services are unavailable. We recommend that you restart the instance during off-peak hours. After the instance is restarted and enters the running state, you can access the instance.
-          * ## Limit
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request RestartDBInstanceRequest
-          * @return RestartDBInstanceResponse
+         * @summary Restarts an AnalyticDB for PostgreSQL instance.
+         *
+         * @description A restart takes about 3 to 30 minutes. During the restart, services are unavailable. We recommend that you restart the instance during off-peak hours. After the instance is restarted and enters the running state, you can access the instance.
+         * ## Limit
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request RestartDBInstanceRequest
+         * @return RestartDBInstanceResponse
          */
         public RestartDBInstanceResponse RestartDBInstance(RestartDBInstanceRequest request)
         {
@@ -12980,12 +14860,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * A restart takes about 3 to 30 minutes. During the restart, services are unavailable. We recommend that you restart the instance during off-peak hours. After the instance is restarted and enters the running state, you can access the instance.
-          * ## Limit
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request RestartDBInstanceRequest
-          * @return RestartDBInstanceResponse
+         * @summary Restarts an AnalyticDB for PostgreSQL instance.
+         *
+         * @description A restart takes about 3 to 30 minutes. During the restart, services are unavailable. We recommend that you restart the instance during off-peak hours. After the instance is restarted and enters the running state, you can access the instance.
+         * ## Limit
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request RestartDBInstanceRequest
+         * @return RestartDBInstanceResponse
          */
         public async Task<RestartDBInstanceResponse> RestartDBInstanceAsync(RestartDBInstanceRequest request)
         {
@@ -12994,15 +14876,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to resume an AnalyticDB for PostgreSQL instance that is in the **Paused** state.
-          * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ResumeInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResumeInstanceResponse
+         * @summary Resumes an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to resume an AnalyticDB for PostgreSQL instance that is in the **Paused** state.
+         * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ResumeInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResumeInstanceResponse
          */
         public ResumeInstanceResponse ResumeInstanceWithOptions(ResumeInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13036,15 +14920,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to resume an AnalyticDB for PostgreSQL instance that is in the **Paused** state.
-          * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ResumeInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResumeInstanceResponse
+         * @summary Resumes an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to resume an AnalyticDB for PostgreSQL instance that is in the **Paused** state.
+         * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ResumeInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResumeInstanceResponse
          */
         public async Task<ResumeInstanceResponse> ResumeInstanceWithOptionsAsync(ResumeInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13078,14 +14964,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to resume an AnalyticDB for PostgreSQL instance that is in the **Paused** state.
-          * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ResumeInstanceRequest
-          * @return ResumeInstanceResponse
+         * @summary Resumes an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to resume an AnalyticDB for PostgreSQL instance that is in the **Paused** state.
+         * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ResumeInstanceRequest
+         * @return ResumeInstanceResponse
          */
         public ResumeInstanceResponse ResumeInstance(ResumeInstanceRequest request)
         {
@@ -13094,14 +14982,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to resume an AnalyticDB for PostgreSQL instance that is in the **Paused** state.
-          * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-          * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ResumeInstanceRequest
-          * @return ResumeInstanceResponse
+         * @summary Resumes an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to resume an AnalyticDB for PostgreSQL instance that is in the **Paused** state.
+         * This operation is available only for AnalyticDB for PostgreSQL instances in Serverless mode that run V1.0.2.1 or later. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](https://help.aliyun.com/document_detail/277424.html) and [Update the minor engine version](https://help.aliyun.com/document_detail/139271.html).
+         * >  Before you call this operation, make sure that you are familiar with the billing methods and pricing of AnalyticDB for PostgreSQL instances. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ResumeInstanceRequest
+         * @return ResumeInstanceResponse
          */
         public async Task<ResumeInstanceResponse> ResumeInstanceAsync(ResumeInstanceRequest request)
         {
@@ -13110,13 +15000,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to enable or disable a specified plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request SetDBInstancePlanStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetDBInstancePlanStatusResponse
+         * @summary Enables or disables a plan for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to enable or disable a specified plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request SetDBInstancePlanStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDBInstancePlanStatusResponse
          */
         public SetDBInstancePlanStatusResponse SetDBInstancePlanStatusWithOptions(SetDBInstancePlanStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13158,13 +15050,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to enable or disable a specified plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request SetDBInstancePlanStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetDBInstancePlanStatusResponse
+         * @summary Enables or disables a plan for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to enable or disable a specified plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request SetDBInstancePlanStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDBInstancePlanStatusResponse
          */
         public async Task<SetDBInstancePlanStatusResponse> SetDBInstancePlanStatusWithOptionsAsync(SetDBInstancePlanStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13206,12 +15100,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to enable or disable a specified plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request SetDBInstancePlanStatusRequest
-          * @return SetDBInstancePlanStatusResponse
+         * @summary Enables or disables a plan for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to enable or disable a specified plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request SetDBInstancePlanStatusRequest
+         * @return SetDBInstancePlanStatusResponse
          */
         public SetDBInstancePlanStatusResponse SetDBInstancePlanStatus(SetDBInstancePlanStatusRequest request)
         {
@@ -13220,12 +15116,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to enable or disable a specified plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request SetDBInstancePlanStatusRequest
-          * @return SetDBInstancePlanStatusResponse
+         * @summary Enables or disables a plan for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to enable or disable a specified plan. The plan management feature is supported only for AnalyticDB for PostgreSQL instances in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request SetDBInstancePlanStatusRequest
+         * @return SetDBInstancePlanStatusResponse
          */
         public async Task<SetDBInstancePlanStatusResponse> SetDBInstancePlanStatusAsync(SetDBInstancePlanStatusRequest request)
         {
@@ -13234,13 +15132,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
-          *
-          * @param tmpReq SetDataShareInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetDataShareInstanceResponse
+         * @summary Enables or disables data sharing for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+         *
+         * @param tmpReq SetDataShareInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDataShareInstanceResponse
          */
         public SetDataShareInstanceResponse SetDataShareInstanceWithOptions(SetDataShareInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13288,13 +15188,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
-          *
-          * @param tmpReq SetDataShareInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetDataShareInstanceResponse
+         * @summary Enables or disables data sharing for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+         *
+         * @param tmpReq SetDataShareInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDataShareInstanceResponse
          */
         public async Task<SetDataShareInstanceResponse> SetDataShareInstanceWithOptionsAsync(SetDataShareInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13342,12 +15244,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
-          *
-          * @param request SetDataShareInstanceRequest
-          * @return SetDataShareInstanceResponse
+         * @summary Enables or disables data sharing for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+         *
+         * @param request SetDataShareInstanceRequest
+         * @return SetDataShareInstanceResponse
          */
         public SetDataShareInstanceResponse SetDataShareInstance(SetDataShareInstanceRequest request)
         {
@@ -13356,12 +15260,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
-          *
-          * @param request SetDataShareInstanceRequest
-          * @return SetDataShareInstanceResponse
+         * @summary Enables or disables data sharing for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+         *
+         * @param request SetDataShareInstanceRequest
+         * @return SetDataShareInstanceResponse
          */
         public async Task<SetDataShareInstanceResponse> SetDataShareInstanceAsync(SetDataShareInstanceRequest request)
         {
@@ -13369,6 +15275,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await SetDataShareInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Switches the internal or public endpoint for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request SwitchDBInstanceNetTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SwitchDBInstanceNetTypeResponse
+         */
         public SwitchDBInstanceNetTypeResponse SwitchDBInstanceNetTypeWithOptions(SwitchDBInstanceNetTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13404,6 +15317,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<SwitchDBInstanceNetTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Switches the internal or public endpoint for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request SwitchDBInstanceNetTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SwitchDBInstanceNetTypeResponse
+         */
         public async Task<SwitchDBInstanceNetTypeResponse> SwitchDBInstanceNetTypeWithOptionsAsync(SwitchDBInstanceNetTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13439,18 +15359,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<SwitchDBInstanceNetTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Switches the internal or public endpoint for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request SwitchDBInstanceNetTypeRequest
+         * @return SwitchDBInstanceNetTypeResponse
+         */
         public SwitchDBInstanceNetTypeResponse SwitchDBInstanceNetType(SwitchDBInstanceNetTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchDBInstanceNetTypeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Switches the internal or public endpoint for an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request SwitchDBInstanceNetTypeRequest
+         * @return SwitchDBInstanceNetTypeResponse
+         */
         public async Task<SwitchDBInstanceNetTypeResponse> SwitchDBInstanceNetTypeAsync(SwitchDBInstanceNetTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchDBInstanceNetTypeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates and adds tags to AnalyticDB for PostgreSQL instances.
+         *
+         * @param request TagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13506,6 +15445,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates and adds tags to AnalyticDB for PostgreSQL instances.
+         *
+         * @param request TagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13561,12 +15507,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates and adds tags to AnalyticDB for PostgreSQL instances.
+         *
+         * @param request TagResourcesRequest
+         * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates and adds tags to AnalyticDB for PostgreSQL instances.
+         *
+         * @param request TagResourcesRequest
+         * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13574,13 +15532,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to release a sample dataset from an AnalyticDB for PostgreSQL instance. You must have already loaded the sample dataset.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request UnloadSampleDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UnloadSampleDataResponse
+         * @summary Releases a sample dataset from an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to release a sample dataset from an AnalyticDB for PostgreSQL instance. You must have already loaded the sample dataset.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request UnloadSampleDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnloadSampleDataResponse
          */
         public UnloadSampleDataResponse UnloadSampleDataWithOptions(UnloadSampleDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13614,13 +15574,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to release a sample dataset from an AnalyticDB for PostgreSQL instance. You must have already loaded the sample dataset.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request UnloadSampleDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UnloadSampleDataResponse
+         * @summary Releases a sample dataset from an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to release a sample dataset from an AnalyticDB for PostgreSQL instance. You must have already loaded the sample dataset.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request UnloadSampleDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnloadSampleDataResponse
          */
         public async Task<UnloadSampleDataResponse> UnloadSampleDataWithOptionsAsync(UnloadSampleDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13654,12 +15616,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to release a sample dataset from an AnalyticDB for PostgreSQL instance. You must have already loaded the sample dataset.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request UnloadSampleDataRequest
-          * @return UnloadSampleDataResponse
+         * @summary Releases a sample dataset from an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to release a sample dataset from an AnalyticDB for PostgreSQL instance. You must have already loaded the sample dataset.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request UnloadSampleDataRequest
+         * @return UnloadSampleDataResponse
          */
         public UnloadSampleDataResponse UnloadSampleData(UnloadSampleDataRequest request)
         {
@@ -13668,12 +15632,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to release a sample dataset from an AnalyticDB for PostgreSQL instance. You must have already loaded the sample dataset.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request UnloadSampleDataRequest
-          * @return UnloadSampleDataResponse
+         * @summary Releases a sample dataset from an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to release a sample dataset from an AnalyticDB for PostgreSQL instance. You must have already loaded the sample dataset.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request UnloadSampleDataRequest
+         * @return UnloadSampleDataResponse
          */
         public async Task<UnloadSampleDataResponse> UnloadSampleDataAsync(UnloadSampleDataRequest request)
         {
@@ -13681,6 +15647,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await UnloadSampleDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Removes tags from AnalyticDB for PostgreSQL instances. If the tags that you remove are not added to other instances, the tags are automatically deleted.
+         *
+         * @param request UntagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13740,6 +15713,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes tags from AnalyticDB for PostgreSQL instances. If the tags that you remove are not added to other instances, the tags are automatically deleted.
+         *
+         * @param request UntagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13799,18 +15779,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes tags from AnalyticDB for PostgreSQL instances. If the tags that you remove are not added to other instances, the tags are automatically deleted.
+         *
+         * @param request UntagResourcesRequest
+         * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Removes tags from AnalyticDB for PostgreSQL instances. If the tags that you remove are not added to other instances, the tags are automatically deleted.
+         *
+         * @param request UntagResourcesRequest
+         * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 更新Collection Data的Metadata数据
+         *
+         * @param tmpReq UpdateCollectionDataMetadataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateCollectionDataMetadataResponse
+         */
         public UpdateCollectionDataMetadataResponse UpdateCollectionDataMetadataWithOptions(UpdateCollectionDataMetadataRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13880,6 +15879,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UpdateCollectionDataMetadataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 更新Collection Data的Metadata数据
+         *
+         * @param tmpReq UpdateCollectionDataMetadataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateCollectionDataMetadataResponse
+         */
         public async Task<UpdateCollectionDataMetadataResponse> UpdateCollectionDataMetadataWithOptionsAsync(UpdateCollectionDataMetadataRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13949,12 +15955,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UpdateCollectionDataMetadataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 更新Collection Data的Metadata数据
+         *
+         * @param request UpdateCollectionDataMetadataRequest
+         * @return UpdateCollectionDataMetadataResponse
+         */
         public UpdateCollectionDataMetadataResponse UpdateCollectionDataMetadata(UpdateCollectionDataMetadataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateCollectionDataMetadataWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 更新Collection Data的Metadata数据
+         *
+         * @param request UpdateCollectionDataMetadataRequest
+         * @return UpdateCollectionDataMetadataResponse
+         */
         public async Task<UpdateCollectionDataMetadataResponse> UpdateCollectionDataMetadataAsync(UpdateCollectionDataMetadataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13962,13 +15980,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to modify a plan for an AnalyticDB for PostgreSQL instance in Serverless mode. For example, you can modify a plan for periodically pausing and resuming an instance or scaling an instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request UpdateDBInstancePlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateDBInstancePlanResponse
+         * @summary Modifies a plan for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to modify a plan for an AnalyticDB for PostgreSQL instance in Serverless mode. For example, you can modify a plan for periodically pausing and resuming an instance or scaling an instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request UpdateDBInstancePlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateDBInstancePlanResponse
          */
         public UpdateDBInstancePlanResponse UpdateDBInstancePlanWithOptions(UpdateDBInstancePlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14026,13 +16046,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to modify a plan for an AnalyticDB for PostgreSQL instance in Serverless mode. For example, you can modify a plan for periodically pausing and resuming an instance or scaling an instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request UpdateDBInstancePlanRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateDBInstancePlanResponse
+         * @summary Modifies a plan for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to modify a plan for an AnalyticDB for PostgreSQL instance in Serverless mode. For example, you can modify a plan for periodically pausing and resuming an instance or scaling an instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request UpdateDBInstancePlanRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateDBInstancePlanResponse
          */
         public async Task<UpdateDBInstancePlanResponse> UpdateDBInstancePlanWithOptionsAsync(UpdateDBInstancePlanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14090,12 +16112,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to modify a plan for an AnalyticDB for PostgreSQL instance in Serverless mode. For example, you can modify a plan for periodically pausing and resuming an instance or scaling an instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request UpdateDBInstancePlanRequest
-          * @return UpdateDBInstancePlanResponse
+         * @summary Modifies a plan for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to modify a plan for an AnalyticDB for PostgreSQL instance in Serverless mode. For example, you can modify a plan for periodically pausing and resuming an instance or scaling an instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request UpdateDBInstancePlanRequest
+         * @return UpdateDBInstancePlanResponse
          */
         public UpdateDBInstancePlanResponse UpdateDBInstancePlan(UpdateDBInstancePlanRequest request)
         {
@@ -14104,12 +16128,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * You can call this operation to modify a plan for an AnalyticDB for PostgreSQL instance in Serverless mode. For example, you can modify a plan for periodically pausing and resuming an instance or scaling an instance.
-          * ## Limits
-          * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request UpdateDBInstancePlanRequest
-          * @return UpdateDBInstancePlanResponse
+         * @summary Modifies a plan for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description You can call this operation to modify a plan for an AnalyticDB for PostgreSQL instance in Serverless mode. For example, you can modify a plan for periodically pausing and resuming an instance or scaling an instance.
+         * ## Limits
+         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request UpdateDBInstancePlanRequest
+         * @return UpdateDBInstancePlanResponse
          */
         public async Task<UpdateDBInstancePlanResponse> UpdateDBInstancePlanAsync(UpdateDBInstancePlanRequest request)
         {
@@ -14118,12 +16144,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is not available for instances in reserved storage mode.
-          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          *
-          * @param request UpgradeDBInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpgradeDBInstanceResponse
+         * @summary Changes the configurations of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not available for instances in reserved storage mode.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         *
+         * @param request UpgradeDBInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpgradeDBInstanceResponse
          */
         public UpgradeDBInstanceResponse UpgradeDBInstanceWithOptions(UpgradeDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14205,12 +16233,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is not available for instances in reserved storage mode.
-          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          *
-          * @param request UpgradeDBInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpgradeDBInstanceResponse
+         * @summary Changes the configurations of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not available for instances in reserved storage mode.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         *
+         * @param request UpgradeDBInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpgradeDBInstanceResponse
          */
         public async Task<UpgradeDBInstanceResponse> UpgradeDBInstanceWithOptionsAsync(UpgradeDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14292,11 +16322,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is not available for instances in reserved storage mode.
-          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          *
-          * @param request UpgradeDBInstanceRequest
-          * @return UpgradeDBInstanceResponse
+         * @summary Changes the configurations of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not available for instances in reserved storage mode.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         *
+         * @param request UpgradeDBInstanceRequest
+         * @return UpgradeDBInstanceResponse
          */
         public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest request)
         {
@@ -14305,11 +16337,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-          * This operation is not available for instances in reserved storage mode.
-          * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-          *
-          * @param request UpgradeDBInstanceRequest
-          * @return UpgradeDBInstanceResponse
+         * @summary Changes the configurations of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not available for instances in reserved storage mode.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
+         *
+         * @param request UpgradeDBInstanceRequest
+         * @return UpgradeDBInstanceResponse
          */
         public async Task<UpgradeDBInstanceResponse> UpgradeDBInstanceAsync(UpgradeDBInstanceRequest request)
         {
@@ -14317,6 +16351,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await UpgradeDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Upgrades the minor version of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request UpgradeDBVersionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpgradeDBVersionResponse
+         */
         public UpgradeDBVersionResponse UpgradeDBVersionWithOptions(UpgradeDBVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14368,6 +16409,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UpgradeDBVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Upgrades the minor version of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request UpgradeDBVersionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpgradeDBVersionResponse
+         */
         public async Task<UpgradeDBVersionResponse> UpgradeDBVersionWithOptionsAsync(UpgradeDBVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14419,18 +16467,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UpgradeDBVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Upgrades the minor version of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request UpgradeDBVersionRequest
+         * @return UpgradeDBVersionResponse
+         */
         public UpgradeDBVersionResponse UpgradeDBVersion(UpgradeDBVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeDBVersionWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Upgrades the minor version of an AnalyticDB for PostgreSQL instance.
+         *
+         * @param request UpgradeDBVersionRequest
+         * @return UpgradeDBVersionResponse
+         */
         public async Task<UpgradeDBVersionResponse> UpgradeDBVersionAsync(UpgradeDBVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeDBVersionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 异步上传文档
+         *
+         * @param tmpReq UploadDocumentAsyncRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UploadDocumentAsyncResponse
+         */
         public UploadDocumentAsyncResponse UploadDocumentAsyncWithOptions(UploadDocumentAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14530,6 +16597,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UploadDocumentAsyncResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 异步上传文档
+         *
+         * @param tmpReq UploadDocumentAsyncRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UploadDocumentAsyncResponse
+         */
         public async Task<UploadDocumentAsyncResponse> UploadDocumentAsyncWithOptionsAsync(UploadDocumentAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14629,12 +16703,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UploadDocumentAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 异步上传文档
+         *
+         * @param request UploadDocumentAsyncRequest
+         * @return UploadDocumentAsyncResponse
+         */
         public UploadDocumentAsyncResponse UploadDocumentAsync(UploadDocumentAsyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UploadDocumentAsyncWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 异步上传文档
+         *
+         * @param request UploadDocumentAsyncRequest
+         * @return UploadDocumentAsyncResponse
+         */
         public async Task<UploadDocumentAsyncResponse> UploadDocumentAsyncAsync(UploadDocumentAsyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14803,6 +16889,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return uploadDocumentAsyncResp;
         }
 
+        /**
+         * @summary 上传切分后的文本
+         *
+         * @param tmpReq UpsertChunksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpsertChunksResponse
+         */
         public UpsertChunksResponse UpsertChunksWithOptions(UpsertChunksRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14866,6 +16959,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UpsertChunksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 上传切分后的文本
+         *
+         * @param tmpReq UpsertChunksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpsertChunksResponse
+         */
         public async Task<UpsertChunksResponse> UpsertChunksWithOptionsAsync(UpsertChunksRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14929,18 +17029,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UpsertChunksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 上传切分后的文本
+         *
+         * @param request UpsertChunksRequest
+         * @return UpsertChunksResponse
+         */
         public UpsertChunksResponse UpsertChunks(UpsertChunksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpsertChunksWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 上传切分后的文本
+         *
+         * @param request UpsertChunksRequest
+         * @return UpsertChunksResponse
+         */
         public async Task<UpsertChunksResponse> UpsertChunksAsync(UpsertChunksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpsertChunksWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Uploads vector data to a vector collection.
+         *
+         * @param tmpReq UpsertCollectionDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpsertCollectionDataResponse
+         */
         public UpsertCollectionDataResponse UpsertCollectionDataWithOptions(UpsertCollectionDataRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -15000,6 +17119,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UpsertCollectionDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Uploads vector data to a vector collection.
+         *
+         * @param tmpReq UpsertCollectionDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpsertCollectionDataResponse
+         */
         public async Task<UpsertCollectionDataResponse> UpsertCollectionDataWithOptionsAsync(UpsertCollectionDataRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -15059,18 +17185,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UpsertCollectionDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Uploads vector data to a vector collection.
+         *
+         * @param request UpsertCollectionDataRequest
+         * @return UpsertCollectionDataResponse
+         */
         public UpsertCollectionDataResponse UpsertCollectionData(UpsertCollectionDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpsertCollectionDataWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Uploads vector data to a vector collection.
+         *
+         * @param request UpsertCollectionDataRequest
+         * @return UpsertCollectionDataResponse
+         */
         public async Task<UpsertCollectionDataResponse> UpsertCollectionDataAsync(UpsertCollectionDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpsertCollectionDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 上传向量数据异步接口
+         *
+         * @param request UpsertCollectionDataAsyncRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpsertCollectionDataAsyncResponse
+         */
         public UpsertCollectionDataAsyncResponse UpsertCollectionDataAsyncWithOptions(UpsertCollectionDataAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15124,6 +17269,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UpsertCollectionDataAsyncResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 上传向量数据异步接口
+         *
+         * @param request UpsertCollectionDataAsyncRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpsertCollectionDataAsyncResponse
+         */
         public async Task<UpsertCollectionDataAsyncResponse> UpsertCollectionDataAsyncWithOptionsAsync(UpsertCollectionDataAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15177,12 +17329,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return TeaModel.ToObject<UpsertCollectionDataAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 上传向量数据异步接口
+         *
+         * @param request UpsertCollectionDataAsyncRequest
+         * @return UpsertCollectionDataAsyncResponse
+         */
         public UpsertCollectionDataAsyncResponse UpsertCollectionDataAsync(UpsertCollectionDataAsyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpsertCollectionDataAsyncWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 上传向量数据异步接口
+         *
+         * @param request UpsertCollectionDataAsyncRequest
+         * @return UpsertCollectionDataAsyncResponse
+         */
         public async Task<UpsertCollectionDataAsyncResponse> UpsertCollectionDataAsyncAsync(UpsertCollectionDataAsyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// 
         /// *   The prefix can contain lowercase letters, digits, and hyphens (-) and must start with a lowercase letter.
         /// *   The prefix can be up to 30 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
@@ -22,7 +24,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The instance ID.
         /// 
-        /// > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+        /// > You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The port number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]

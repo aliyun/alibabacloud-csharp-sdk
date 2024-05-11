@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
     public class UpgradeDBVersionRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

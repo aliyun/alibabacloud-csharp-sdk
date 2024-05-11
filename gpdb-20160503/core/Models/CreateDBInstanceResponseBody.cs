@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// An invalid parameter. It is no longer returned when you call this operation.
         /// 
-        /// You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the endpoint that is used to connect to the instance.
+        /// You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/86910.html) operation to query the endpoint that is used to connect to the instance.
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// An invalid parameter. It is no longer returned when you call this operation.
         /// 
-        /// You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the port number that is used to connect to the instance.
+        /// You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/86910.html) operation to query the port number that is used to connect to the instance.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
