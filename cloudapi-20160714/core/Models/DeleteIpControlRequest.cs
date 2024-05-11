@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class DeleteIpControlRequest : TeaModel {
         /// <summary>
         /// The ID of the ACL. The ID is unique.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpControlId")]
         [Validation(Required=false)]

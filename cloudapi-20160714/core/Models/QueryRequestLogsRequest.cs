@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class QueryRequestLogsRequest : TeaModel {
         /// <summary>
         /// The ID of the request log.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RequestLogId")]
         [Validation(Required=false)]

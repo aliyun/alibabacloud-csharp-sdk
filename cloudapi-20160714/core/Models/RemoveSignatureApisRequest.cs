@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the API group to which the API that you want to manage belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the signature key.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// 
         /// *   **RELEASE**
         /// *   **TEST**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

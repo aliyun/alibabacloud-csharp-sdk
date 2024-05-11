@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeBackendListRequest : TeaModel {
         /// <summary>
-        /// The name of the backend service. You can use \* to perform fuzzy queries.
+        /// The name of the backend service. You can use \\* to perform fuzzy queries.
         /// </summary>
         [NameInMap("BackendName")]
         [Validation(Required=false)]

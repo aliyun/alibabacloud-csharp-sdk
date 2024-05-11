@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the plug-in to be bound.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PluginId")]
         [Validation(Required=false)]
@@ -47,6 +49,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// *   **RELEASE**
         /// *   **PRE: the pre-release environment**
         /// *   **TEST**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

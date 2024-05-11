@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeVpcAccessesRequest : TeaModel {
+        [NameInMap("AccurateQuery")]
+        [Validation(Required=false)]
+        public bool? AccurateQuery { get; set; }
+
         /// <summary>
         /// The ID of the instance.
         /// </summary>

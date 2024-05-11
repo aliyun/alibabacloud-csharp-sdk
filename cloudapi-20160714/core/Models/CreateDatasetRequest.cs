@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class CreateDatasetRequest : TeaModel {
         /// <summary>
         /// The name of the dataset.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// * JWT_BLOCKING: a JSON Web Token (JWT) blacklist
         /// * IP_WHITELIST_CIDR : an IP address whitelist
         /// * PARAMETER_ACCESS : parameter-based access control
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatasetType")]
         [Validation(Required=false)]

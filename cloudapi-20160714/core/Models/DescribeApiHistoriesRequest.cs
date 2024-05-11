@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the API group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

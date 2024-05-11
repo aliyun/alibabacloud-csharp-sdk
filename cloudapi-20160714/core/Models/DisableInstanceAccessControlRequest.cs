@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class DisableInstanceAccessControlRequest : TeaModel {
         /// <summary>
         /// The ID of the access control policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

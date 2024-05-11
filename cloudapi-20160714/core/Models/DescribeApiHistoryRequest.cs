@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class DescribeApiHistoryRequest : TeaModel {
         /// <summary>
         /// The ID of the API.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// Specifies the version number that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HistoryVersion")]
         [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// *   **RELEASE**
         /// *   **TEST**: the test environment
         /// *   **PRE**: the pre-release environment
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// *   **plugin**
         /// *   **app**
         /// *   **api**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

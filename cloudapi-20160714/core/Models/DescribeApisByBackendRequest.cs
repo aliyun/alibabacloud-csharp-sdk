@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class DescribeApisByBackendRequest : TeaModel {
         /// <summary>
         /// The ID of the backend service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BackendId")]
         [Validation(Required=false)]

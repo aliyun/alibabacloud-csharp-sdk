@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// *   The name of a VPC authorization cannot be changed. You cannot use this parameter to change the name of a VPC authorization.
         /// 
         /// *   You must set this parameter to the name of the current VPC authorization.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

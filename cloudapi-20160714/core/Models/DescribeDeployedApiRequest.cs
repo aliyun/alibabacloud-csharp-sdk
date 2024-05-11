@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class DescribeDeployedApiRequest : TeaModel {
         /// <summary>
         /// The ID of the API.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// *   **RELEASE**
         /// *   **PRE: the pre-release environment**
         /// *   **TEST**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

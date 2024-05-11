@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class SwitchApiRequest : TeaModel {
         /// <summary>
         /// The ID of the API.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The description of the switch operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The historical version that you want to switch to.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HistoryVersion")]
         [Validation(Required=false)]
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// 
         /// *   **RELEASE**
         /// *   **TEST**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

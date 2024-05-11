@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The IP address or CIDR block that is defined in a policy. Separate multiple IP addresses or CIDR blocks with semicolons (;). You can add a maximum of 10 IP addresses or CIDR blocks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CidrIp")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the ACL. The ID is unique.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpControlId")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyItemId")]
         [Validation(Required=false)]

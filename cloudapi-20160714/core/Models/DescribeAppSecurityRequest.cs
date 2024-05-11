@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class DescribeAppSecurityRequest : TeaModel {
         /// <summary>
         /// The ID of the app.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public class DescribeAppSecurityRequestTag : TeaModel {
             /// <summary>
             /// The key of the tag.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

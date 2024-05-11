@@ -24,7 +24,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string AppKey { get; set; }
 
         /// <summary>
-        /// The name of the application. The name must be 4 to 26 characters in length. The name can contain letters, digits, and underscores (\_), and must start with a letter.
+        /// The name of the application. The name must be 4 to 26 characters in length. The name can contain letters, digits, and underscores (_), and must start with a letter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]

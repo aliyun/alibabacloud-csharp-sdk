@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class ResetAppSecretRequest : TeaModel {
         /// <summary>
         /// The key of the application that is used to make an API call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]

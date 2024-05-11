@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The specifications of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceSpec")]
         [Validation(Required=false)]
@@ -56,6 +60,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The password.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Token")]
         [Validation(Required=false)]

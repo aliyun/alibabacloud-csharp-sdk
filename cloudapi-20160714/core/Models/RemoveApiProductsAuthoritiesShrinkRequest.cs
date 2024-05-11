@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class RemoveApiProductsAuthoritiesShrinkRequest : TeaModel {
         /// <summary>
         /// The API products.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiProductIds")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The application ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

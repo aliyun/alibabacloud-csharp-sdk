@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class CreateTrafficControlRequest : TeaModel {
         /// <summary>
         /// The default throttling value for each API.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiDefault")]
         [Validation(Required=false)]
@@ -38,7 +40,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The name of the throttling policy. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It cannot start with an underscore.
+        /// The name of the throttling policy. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (_). It cannot start with an underscore.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficControlName")]
         [Validation(Required=false)]
@@ -51,6 +55,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// *   **MINUTE**
         /// *   **HOUR**
         /// *   **DAY**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficControlUnit")]
         [Validation(Required=false)]

@@ -22,7 +22,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string AllowSignatureMethod { get; set; }
 
         /// <summary>
-        /// The name of the API that you want to create. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (\_).
+        /// The name of the API that you want to create. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (_).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiName")]
         [Validation(Required=false)]
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// The configuration items of API requests sent by the consumer to API Gateway.
         /// 
-        /// For more information, see [RequestConfig](~~43985~~).
+        /// For more information, see [RequestConfig](https://help.aliyun.com/document_detail/43985.html).
         /// </summary>
         [NameInMap("AuthType")]
         [Validation(Required=false)]
@@ -99,6 +101,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the API group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -117,7 +121,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// The configuration items of API requests sent by API Gateway to the backend service.
         /// 
-        /// For more information, see [ServiceConfig](~~43987~~).
+        /// For more information, see [ServiceConfig](https://help.aliyun.com/document_detail/43987.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RequestConfig")]
         [Validation(Required=false)]
@@ -157,7 +163,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// The parameters of API requests sent by the consumer to API Gateway.
         /// 
-        /// For more information, see [RequestParameter](~~43986~~).
+        /// For more information, see [RequestParameter](https://help.aliyun.com/document_detail/43986.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceConfig")]
         [Validation(Required=false)]
@@ -203,6 +211,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// 
         /// *   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.
         /// *   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Visibility")]
         [Validation(Required=false)]

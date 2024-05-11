@@ -90,6 +90,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             /// The value of tag N.
             /// 
             /// Valid values of n: `[1, 20]`.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class DryRunSwaggerRequest : TeaModel {
         /// <summary>
         /// The Swagger text content.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// 
         /// *   json
         /// *   yaml
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataFormat")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the API group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// Specifies whether to overwrite the existing API.
         /// 
         /// APIs with the same HTTP request type and backend request path are considered the same.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Overwrite")]
         [Validation(Required=false)]

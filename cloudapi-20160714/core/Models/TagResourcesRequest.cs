@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class TagResourcesRequest : TeaModel {
         /// <summary>
         /// The ID of the resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// *   **apiGroup**
         /// *   **plugin**
         /// *   **app**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The tag of objects that match the lifecycle rule. You can specify multiple tags.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -40,6 +46,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
             /// The key of tag N.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -47,6 +55,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
             /// <summary>
             /// The value of tag N.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

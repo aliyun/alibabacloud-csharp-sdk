@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the throttling policy that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficControlId")]
         [Validation(Required=false)]

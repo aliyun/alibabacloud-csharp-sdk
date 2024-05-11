@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the API group to which the model belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The name of the model. The name must be unique within the group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ModelName")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The definition of the model in JSON Schema.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Schema")]
         [Validation(Required=false)]

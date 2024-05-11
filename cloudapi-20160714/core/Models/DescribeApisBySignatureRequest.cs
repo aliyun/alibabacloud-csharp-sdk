@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the signature key.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class BatchAbolishApisRequest : TeaModel {
         /// <summary>
         /// The APIs that you want to operate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Api")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public class BatchAbolishApisRequestApi : TeaModel {
             /// <summary>
             /// The ID of the API.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ApiUid")]
             [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
             /// <summary>
             /// The ID of the API group.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]

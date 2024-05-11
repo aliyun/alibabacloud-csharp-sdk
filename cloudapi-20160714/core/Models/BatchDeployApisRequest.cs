@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public class BatchDeployApisRequestApi : TeaModel {
             /// <summary>
             /// The API ID.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ApiUid")]
             [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
             /// <summary>
             /// The API group ID.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The description.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -49,6 +55,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// *   **RELEASE**
         /// *   **TEST**
         /// *   PRE: the pre-release environment
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

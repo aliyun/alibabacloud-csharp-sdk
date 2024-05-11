@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string BackendId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BackendModelId")]
         [Validation(Required=false)]
         public string BackendModelId { get; set; }

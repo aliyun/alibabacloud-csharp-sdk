@@ -11,13 +11,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class ModifyAppRequest : TeaModel {
         /// <summary>
         /// The ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public long? AppId { get; set; }
 
         /// <summary>
-        /// The ID must be 4 to 26 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.
+        /// The ID must be 4 to 26 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.
         /// 
         /// If you do not want to modify the existing value, do not specify this parameter.
         /// </summary>
@@ -53,6 +55,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             /// The key of the tag.
             /// 
             /// Valid values of n: `[1, 20]`.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

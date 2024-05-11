@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the app or Alibaba Cloud account. Specify this parameter based on the value of the **SpecialType** parameter. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.3f053654YpMPwo#/secure) page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SpecialKey")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// 
         /// *   **APP**
         /// *   **USER**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SpecialType")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the specified throttling policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficControlId")]
         [Validation(Required=false)]
@@ -42,6 +48,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The special throttling value.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficValue")]
         [Validation(Required=false)]

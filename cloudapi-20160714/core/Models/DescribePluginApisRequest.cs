@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string Path { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PluginId")]
         [Validation(Required=false)]
         public string PluginId { get; set; }

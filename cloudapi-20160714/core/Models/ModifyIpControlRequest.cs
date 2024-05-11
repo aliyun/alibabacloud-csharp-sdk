@@ -18,13 +18,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the ACL. The ID is unique.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpControlId")]
         [Validation(Required=false)]
         public string IpControlId { get; set; }
 
         /// <summary>
-        /// The name of the ACL. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (\_). The name cannot start with an underscore (\_).
+        /// The name of the ACL. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (_). The name cannot start with an underscore (_).
         /// </summary>
         [NameInMap("IpControlName")]
         [Validation(Required=false)]

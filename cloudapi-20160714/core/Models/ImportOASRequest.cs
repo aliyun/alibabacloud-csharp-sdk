@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The OAS-compliant text file or OSS object URL.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the API group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -61,6 +65,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// Specifies whether to overwrite an existing API.
         /// 
         /// If an existing API has the same HTTP request type and backend request path as the API to be imported, the existing API is overwritten.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Overwrite")]
         [Validation(Required=false)]

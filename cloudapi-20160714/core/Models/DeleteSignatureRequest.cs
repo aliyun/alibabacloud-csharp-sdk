@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the key to be deleted.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]

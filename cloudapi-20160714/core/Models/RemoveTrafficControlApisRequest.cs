@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the API group containing the APIs from which you want to unbind a specified throttling policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// 
         /// *   **RELEASE**
         /// *   **TEST**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]
@@ -45,6 +49,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the throttling policy that you want to unbind from APIs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficControlId")]
         [Validation(Required=false)]

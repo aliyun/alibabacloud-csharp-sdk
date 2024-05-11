@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class DescribeDatasetInfoRequest : TeaModel {
         /// <summary>
         /// The ID of the dataset.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatasetId")]
         [Validation(Required=false)]

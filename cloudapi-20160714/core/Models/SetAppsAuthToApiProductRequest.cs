@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetAppsAuthToApiProductRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ApiProductId")]
         [Validation(Required=false)]
         public string ApiProductId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppIds")]
         [Validation(Required=false)]
         public List<long?> AppIds { get; set; }

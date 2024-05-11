@@ -39,13 +39,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the throttling policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficControlId")]
         [Validation(Required=false)]
         public string TrafficControlId { get; set; }
 
         /// <summary>
-        /// The throttling policy name. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It cannot start with an underscore.
+        /// The throttling policy name. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (_). It cannot start with an underscore.
         /// </summary>
         [NameInMap("TrafficControlName")]
         [Validation(Required=false)]

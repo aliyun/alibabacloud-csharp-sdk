@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class DeletePluginRequest : TeaModel {
         /// <summary>
         /// The ID of the plug-in to be deleted.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PluginId")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             /// The key of the tag.
             /// 
             /// N can be an integer from 1 to 20.``
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             /// The value of the tag.
             /// 
             /// N can be an integer from 1 to 20.``
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

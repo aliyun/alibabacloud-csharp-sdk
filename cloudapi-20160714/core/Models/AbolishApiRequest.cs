@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class AbolishApiRequest : TeaModel {
         /// <summary>
         /// The ID of the specified API.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// 
         /// *   **RELEASE**
         /// *   **TEST**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

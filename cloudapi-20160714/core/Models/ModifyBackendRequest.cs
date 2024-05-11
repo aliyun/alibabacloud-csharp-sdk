@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyBackendRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BackendId")]
         [Validation(Required=false)]
         public string BackendId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BackendName")]
         [Validation(Required=false)]
         public string BackendName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BackendType")]
         [Validation(Required=false)]
         public string BackendType { get; set; }

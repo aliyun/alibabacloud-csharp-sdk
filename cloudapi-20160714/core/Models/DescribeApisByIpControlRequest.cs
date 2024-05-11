@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class DescribeApisByIpControlRequest : TeaModel {
         /// <summary>
         /// The ID of the ACL.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpControlId")]
         [Validation(Required=false)]

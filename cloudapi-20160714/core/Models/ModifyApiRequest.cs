@@ -23,13 +23,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the API.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
         /// <summary>
-        /// The name of the API. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (\_).
+        /// The name of the API. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (_).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiName")]
         [Validation(Required=false)]
@@ -123,6 +127,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The configuration items of API requests sent by API Gateway to the backend service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RequestConfig")]
         [Validation(Required=false)]
@@ -161,6 +167,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The parameters of API requests sent by the consumer to API Gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceConfig")]
         [Validation(Required=false)]
@@ -183,6 +191,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// 
         /// *   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.
         /// *   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Visibility")]
         [Validation(Required=false)]

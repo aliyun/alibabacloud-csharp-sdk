@@ -25,13 +25,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the plug-in whose information you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PluginId")]
         [Validation(Required=false)]
         public string PluginId { get; set; }
 
         /// <summary>
-        /// The name of the plug-in. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). However, it cannot start with an underscore.
+        /// The name of the plug-in. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (_). However, it cannot start with an underscore.
         /// </summary>
         [NameInMap("PluginName")]
         [Validation(Required=false)]
@@ -52,6 +54,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             /// The key of the tag.
             /// 
             /// N can be an integer from 1 to 20.``
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -61,6 +65,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             /// The value of the tag.
             /// 
             /// N can be an integer from 1 to 20.``
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

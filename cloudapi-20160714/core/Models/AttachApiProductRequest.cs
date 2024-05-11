@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class AttachApiProductRequest : TeaModel {
         /// <summary>
         /// The ID of the API product.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiProductId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The APIs to be attached.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Apis")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public class AttachApiProductRequestApis : TeaModel {
             /// <summary>
             /// The API ID.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ApiId")]
             [Validation(Required=false)]
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             /// *   **RELEASE**: the production environment
             /// *   **PRE**: the staging environment
             /// *   **TEST**: the test environment
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("StageName")]
             [Validation(Required=false)]

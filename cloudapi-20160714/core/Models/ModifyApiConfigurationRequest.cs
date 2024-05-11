@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the API.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
@@ -115,7 +117,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// The sample error codes returned by the backend service.
         /// 
-        /// For more information, see [ErrorCodeSample](~~44392~~).
+        /// For more information, see [ErrorCodeSample](https://help.aliyun.com/document_detail/44392.html).
         /// </summary>
         [NameInMap("ErrorCodeSamples")]
         [Validation(Required=false)]
@@ -199,7 +201,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// The parameters of API requests sent by the consumer to API Gateway.
         /// 
-        /// For more information, see [RequestParameter](~~43986~~).
+        /// For more information, see [RequestParameter](https://help.aliyun.com/document_detail/43986.html).
         /// </summary>
         [NameInMap("RequestParameters")]
         [Validation(Required=false)]
@@ -240,7 +242,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// The parameters of API requests sent by API Gateway to the backend service.
         /// 
-        /// For more information, see [ServiceParameter](~~43988~~).
+        /// For more information, see [ServiceParameter](https://help.aliyun.com/document_detail/43988.html).
         /// </summary>
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]
@@ -249,7 +251,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.
         /// 
-        /// For more information, see [ServiceParameterMap](~~43989~~).
+        /// For more information, see [ServiceParameterMap](https://help.aliyun.com/document_detail/43989.html).
         /// </summary>
         [NameInMap("ServiceParametersMap")]
         [Validation(Required=false)]

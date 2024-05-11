@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class DeleteDatasetItemRequest : TeaModel {
         /// <summary>
         /// The ID of the dataset.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatasetId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the data entry.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatasetItemId")]
         [Validation(Required=false)]

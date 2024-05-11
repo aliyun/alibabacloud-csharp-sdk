@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class CreateApiStageVariableRequest : TeaModel {
         /// <summary>
         /// The ID of the API group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the runtime environment.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StageId")]
         [Validation(Required=false)]
@@ -41,6 +45,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The name of the variable to be added. This parameter is case-sensitive.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VariableName")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class DeleteApiProductRequest : TeaModel {
         /// <summary>
         /// The ID of the API product.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiProductId")]
         [Validation(Required=false)]

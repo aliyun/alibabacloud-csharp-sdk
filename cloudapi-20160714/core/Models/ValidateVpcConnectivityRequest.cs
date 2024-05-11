@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
     public class ValidateVpcConnectivityRequest : TeaModel {
         /// <summary>
         /// The ID of the API Gateway instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// The ID of the VPC access authorization.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcAccessId")]
         [Validation(Required=false)]
