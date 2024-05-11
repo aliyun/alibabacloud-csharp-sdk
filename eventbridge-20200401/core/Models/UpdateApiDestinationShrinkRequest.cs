@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
     public class UpdateApiDestinationShrinkRequest : TeaModel {
         /// <summary>
         /// The name of the API destination. The name must be 2 to 127 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiDestinationName")]
         [Validation(Required=false)]

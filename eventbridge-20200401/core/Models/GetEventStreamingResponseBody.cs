@@ -1414,7 +1414,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// Source Kafka Parameters
+                /// The parameters that are returned if ApsaraMQ for Kafka is specified as the event source.
                 /// </summary>
                 [NameInMap("SourceKafkaParameters")]
                 [Validation(Required=false)]
@@ -1476,6 +1476,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public string VSwitchIds { get; set; }
 
+                    /// <summary>
+                    /// The encoding or decoding format. Valid values: Json, Text, and Binary. The value Json indicates that bytes are decoded into UTF-8 strings and then parsed into JSON format. The value Text indicates that bytes are decoded into UTF-8 strings and then put into the payload. The value Binary indicates that bytes are encoded into Base64 strings and put into the payload.
+                    /// </summary>
                     [NameInMap("ValueDataType")]
                     [Validation(Required=false)]
                     public string ValueDataType { get; set; }
@@ -1759,6 +1762,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public List<GetEventStreamingResponseBodyDataTransforms> Transforms { get; set; }
             public class GetEventStreamingResponseBodyDataTransforms : TeaModel {
+                /// <summary>
+                /// The Alibaba Cloud Resource Name (ARN) of the cloud service, such as the ARN of a Function Compute function.
+                /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
                 public string Arn { get; set; }

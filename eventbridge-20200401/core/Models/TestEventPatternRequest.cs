@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
     public class TestEventPatternRequest : TeaModel {
         /// <summary>
         /// The event.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Event")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The event pattern.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventPattern")]
         [Validation(Required=false)]

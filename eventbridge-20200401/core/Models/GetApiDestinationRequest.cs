@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
     public class GetApiDestinationRequest : TeaModel {
         /// <summary>
         /// The name of the API destination.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiDestinationName")]
         [Validation(Required=false)]

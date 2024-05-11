@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The name of the event bus with which the event source is associated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The name of the event source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventSourceName")]
         [Validation(Required=false)]
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// 
             /// *   HTTP
             /// *   HTTPS
-            /// *   HTTP\&HTTPS
+            /// *   HTTP\\&HTTPS
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -216,7 +220,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
+            /// The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).
             /// </summary>
             [NameInMap("QueueName")]
             [Validation(Required=false)]
@@ -230,7 +234,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
+            /// The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).
             /// </summary>
             [NameInMap("VirtualHostName")]
             [Validation(Required=false)]
@@ -267,7 +271,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string InstanceEndpoint { get; set; }
 
             /// <summary>
-            /// The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
+            /// The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -297,8 +301,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <summary>
             /// The type of the Message Queue for Apache RocketMQ instance. Valid values:
             /// 
-            /// *   Cloud\_4: Message Queue for Apache RocketMQ 4.0 instance.
-            /// *   Cloud\_5: Message Queue for Apache RocketMQ 5.0 instance.
+            /// *   Cloud_4: Message Queue for Apache RocketMQ 4.0 instance.
+            /// *   Cloud_5: Message Queue for Apache RocketMQ 5.0 instance.
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
@@ -354,7 +358,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public long? Timestamp { get; set; }
 
             /// <summary>
-            /// The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
+            /// The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).
             /// </summary>
             [NameInMap("Topic")]
             [Validation(Required=false)]

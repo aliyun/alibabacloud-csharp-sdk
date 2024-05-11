@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The name of the event bus.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// The event pattern, in JSON format. Valid values: stringEqual stringExpression Each field can have a maximum of five expressions in the map data structure.
         /// 
         /// Each field can have a maximum of five expressions in the map data structure.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FilterPattern")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The name of the event rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

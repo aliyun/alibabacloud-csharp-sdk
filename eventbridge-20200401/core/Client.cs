@@ -38,11 +38,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an API destination.
-          *
-          * @param tmpReq CreateApiDestinationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateApiDestinationResponse
+         * @summary Creates an API destination.
+         *
+         * @description You can call this API operation to create an API destination.
+         *
+         * @param tmpReq CreateApiDestinationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateApiDestinationResponse
          */
         public CreateApiDestinationResponse CreateApiDestinationWithOptions(CreateApiDestinationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -90,11 +92,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an API destination.
-          *
-          * @param tmpReq CreateApiDestinationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateApiDestinationResponse
+         * @summary Creates an API destination.
+         *
+         * @description You can call this API operation to create an API destination.
+         *
+         * @param tmpReq CreateApiDestinationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateApiDestinationResponse
          */
         public async Task<CreateApiDestinationResponse> CreateApiDestinationWithOptionsAsync(CreateApiDestinationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -142,10 +146,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an API destination.
-          *
-          * @param request CreateApiDestinationRequest
-          * @return CreateApiDestinationResponse
+         * @summary Creates an API destination.
+         *
+         * @description You can call this API operation to create an API destination.
+         *
+         * @param request CreateApiDestinationRequest
+         * @return CreateApiDestinationResponse
          */
         public CreateApiDestinationResponse CreateApiDestination(CreateApiDestinationRequest request)
         {
@@ -154,10 +160,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an API destination.
-          *
-          * @param request CreateApiDestinationRequest
-          * @return CreateApiDestinationResponse
+         * @summary Creates an API destination.
+         *
+         * @description You can call this API operation to create an API destination.
+         *
+         * @param request CreateApiDestinationRequest
+         * @return CreateApiDestinationResponse
          */
         public async Task<CreateApiDestinationResponse> CreateApiDestinationAsync(CreateApiDestinationRequest request)
         {
@@ -166,11 +174,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create a connection.
-          *
-          * @param tmpReq CreateConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateConnectionResponse
+         * @summary Creates a connection.
+         *
+         * @description You can call this API operation to create a connection.
+         *
+         * @param tmpReq CreateConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateConnectionResponse
          */
         public CreateConnectionResponse CreateConnectionWithOptions(CreateConnectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -222,11 +232,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create a connection.
-          *
-          * @param tmpReq CreateConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateConnectionResponse
+         * @summary Creates a connection.
+         *
+         * @description You can call this API operation to create a connection.
+         *
+         * @param tmpReq CreateConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateConnectionResponse
          */
         public async Task<CreateConnectionResponse> CreateConnectionWithOptionsAsync(CreateConnectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -278,10 +290,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create a connection.
-          *
-          * @param request CreateConnectionRequest
-          * @return CreateConnectionResponse
+         * @summary Creates a connection.
+         *
+         * @description You can call this API operation to create a connection.
+         *
+         * @param request CreateConnectionRequest
+         * @return CreateConnectionResponse
          */
         public CreateConnectionResponse CreateConnection(CreateConnectionRequest request)
         {
@@ -290,10 +304,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create a connection.
-          *
-          * @param request CreateConnectionRequest
-          * @return CreateConnectionResponse
+         * @summary Creates a connection.
+         *
+         * @description You can call this API operation to create a connection.
+         *
+         * @param request CreateConnectionRequest
+         * @return CreateConnectionResponse
          */
         public async Task<CreateConnectionResponse> CreateConnectionAsync(CreateConnectionRequest request)
         {
@@ -302,11 +318,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an event bus.
-          *
-          * @param request CreateEventBusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateEventBusResponse
+         * @summary Creates an event bus.
+         *
+         * @description You can call this API operation to create an event bus.
+         *
+         * @param request CreateEventBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateEventBusResponse
          */
         public CreateEventBusResponse CreateEventBusWithOptions(CreateEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -340,11 +358,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an event bus.
-          *
-          * @param request CreateEventBusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateEventBusResponse
+         * @summary Creates an event bus.
+         *
+         * @description You can call this API operation to create an event bus.
+         *
+         * @param request CreateEventBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateEventBusResponse
          */
         public async Task<CreateEventBusResponse> CreateEventBusWithOptionsAsync(CreateEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -378,10 +398,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an event bus.
-          *
-          * @param request CreateEventBusRequest
-          * @return CreateEventBusResponse
+         * @summary Creates an event bus.
+         *
+         * @description You can call this API operation to create an event bus.
+         *
+         * @param request CreateEventBusRequest
+         * @return CreateEventBusResponse
          */
         public CreateEventBusResponse CreateEventBus(CreateEventBusRequest request)
         {
@@ -390,10 +412,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an event bus.
-          *
-          * @param request CreateEventBusRequest
-          * @return CreateEventBusResponse
+         * @summary Creates an event bus.
+         *
+         * @description You can call this API operation to create an event bus.
+         *
+         * @param request CreateEventBusRequest
+         * @return CreateEventBusResponse
          */
         public async Task<CreateEventBusResponse> CreateEventBusAsync(CreateEventBusRequest request)
         {
@@ -402,11 +426,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this operation to create an event source.
-          *
-          * @param tmpReq CreateEventSourceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateEventSourceResponse
+         * @summary Creates an event source.
+         *
+         * @description You can call this operation to create an event source.
+         *
+         * @param tmpReq CreateEventSourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateEventSourceResponse
          */
         public CreateEventSourceResponse CreateEventSourceWithOptions(CreateEventSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -502,11 +528,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this operation to create an event source.
-          *
-          * @param tmpReq CreateEventSourceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateEventSourceResponse
+         * @summary Creates an event source.
+         *
+         * @description You can call this operation to create an event source.
+         *
+         * @param tmpReq CreateEventSourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateEventSourceResponse
          */
         public async Task<CreateEventSourceResponse> CreateEventSourceWithOptionsAsync(CreateEventSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -602,10 +630,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this operation to create an event source.
-          *
-          * @param request CreateEventSourceRequest
-          * @return CreateEventSourceResponse
+         * @summary Creates an event source.
+         *
+         * @description You can call this operation to create an event source.
+         *
+         * @param request CreateEventSourceRequest
+         * @return CreateEventSourceResponse
          */
         public CreateEventSourceResponse CreateEventSource(CreateEventSourceRequest request)
         {
@@ -614,10 +644,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this operation to create an event source.
-          *
-          * @param request CreateEventSourceRequest
-          * @return CreateEventSourceResponse
+         * @summary Creates an event source.
+         *
+         * @description You can call this operation to create an event source.
+         *
+         * @param request CreateEventSourceRequest
+         * @return CreateEventSourceResponse
          */
         public async Task<CreateEventSourceResponse> CreateEventSourceAsync(CreateEventSourceRequest request)
         {
@@ -626,11 +658,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an event stream.
-          *
-          * @param tmpReq CreateEventStreamingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateEventStreamingResponse
+         * @summary Creates an event stream.
+         *
+         * @description You can call this API operation to create an event stream.
+         *
+         * @param tmpReq CreateEventStreamingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateEventStreamingResponse
          */
         public CreateEventStreamingResponse CreateEventStreamingWithOptions(CreateEventStreamingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -702,11 +736,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an event stream.
-          *
-          * @param tmpReq CreateEventStreamingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateEventStreamingResponse
+         * @summary Creates an event stream.
+         *
+         * @description You can call this API operation to create an event stream.
+         *
+         * @param tmpReq CreateEventStreamingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateEventStreamingResponse
          */
         public async Task<CreateEventStreamingResponse> CreateEventStreamingWithOptionsAsync(CreateEventStreamingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -778,10 +814,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an event stream.
-          *
-          * @param request CreateEventStreamingRequest
-          * @return CreateEventStreamingResponse
+         * @summary Creates an event stream.
+         *
+         * @description You can call this API operation to create an event stream.
+         *
+         * @param request CreateEventStreamingRequest
+         * @return CreateEventStreamingResponse
          */
         public CreateEventStreamingResponse CreateEventStreaming(CreateEventStreamingRequest request)
         {
@@ -790,10 +828,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an event stream.
-          *
-          * @param request CreateEventStreamingRequest
-          * @return CreateEventStreamingResponse
+         * @summary Creates an event stream.
+         *
+         * @description You can call this API operation to create an event stream.
+         *
+         * @param request CreateEventStreamingRequest
+         * @return CreateEventStreamingResponse
          */
         public async Task<CreateEventStreamingResponse> CreateEventStreamingAsync(CreateEventStreamingRequest request)
         {
@@ -802,11 +842,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an event rule.
-          *
-          * @param tmpReq CreateRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateRuleResponse
+         * @summary Creates an event rule.
+         *
+         * @description You can call this API operation to create an event rule.
+         *
+         * @param tmpReq CreateRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRuleResponse
          */
         public CreateRuleResponse CreateRuleWithOptions(CreateRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -862,11 +904,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an event rule.
-          *
-          * @param tmpReq CreateRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateRuleResponse
+         * @summary Creates an event rule.
+         *
+         * @description You can call this API operation to create an event rule.
+         *
+         * @param tmpReq CreateRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRuleResponse
          */
         public async Task<CreateRuleResponse> CreateRuleWithOptionsAsync(CreateRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -922,10 +966,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an event rule.
-          *
-          * @param request CreateRuleRequest
-          * @return CreateRuleResponse
+         * @summary Creates an event rule.
+         *
+         * @description You can call this API operation to create an event rule.
+         *
+         * @param request CreateRuleRequest
+         * @return CreateRuleResponse
          */
         public CreateRuleResponse CreateRule(CreateRuleRequest request)
         {
@@ -934,10 +980,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create an event rule.
-          *
-          * @param request CreateRuleRequest
-          * @return CreateRuleResponse
+         * @summary Creates an event rule.
+         *
+         * @description You can call this API operation to create an event rule.
+         *
+         * @param request CreateRuleRequest
+         * @return CreateRuleResponse
          */
         public async Task<CreateRuleResponse> CreateRuleAsync(CreateRuleRequest request)
         {
@@ -946,11 +994,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create a service-linked role for your cloud service.
-          *
-          * @param request CreateServiceLinkedRoleForProductRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateServiceLinkedRoleForProductResponse
+         * @summary Creates a service-linked role for your cloud service.
+         *
+         * @description You can call this API operation to create a service-linked role for your cloud service.
+         *
+         * @param request CreateServiceLinkedRoleForProductRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateServiceLinkedRoleForProductResponse
          */
         public CreateServiceLinkedRoleForProductResponse CreateServiceLinkedRoleForProductWithOptions(CreateServiceLinkedRoleForProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -980,11 +1030,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create a service-linked role for your cloud service.
-          *
-          * @param request CreateServiceLinkedRoleForProductRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateServiceLinkedRoleForProductResponse
+         * @summary Creates a service-linked role for your cloud service.
+         *
+         * @description You can call this API operation to create a service-linked role for your cloud service.
+         *
+         * @param request CreateServiceLinkedRoleForProductRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateServiceLinkedRoleForProductResponse
          */
         public async Task<CreateServiceLinkedRoleForProductResponse> CreateServiceLinkedRoleForProductWithOptionsAsync(CreateServiceLinkedRoleForProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1014,10 +1066,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create a service-linked role for your cloud service.
-          *
-          * @param request CreateServiceLinkedRoleForProductRequest
-          * @return CreateServiceLinkedRoleForProductResponse
+         * @summary Creates a service-linked role for your cloud service.
+         *
+         * @description You can call this API operation to create a service-linked role for your cloud service.
+         *
+         * @param request CreateServiceLinkedRoleForProductRequest
+         * @return CreateServiceLinkedRoleForProductResponse
          */
         public CreateServiceLinkedRoleForProductResponse CreateServiceLinkedRoleForProduct(CreateServiceLinkedRoleForProductRequest request)
         {
@@ -1026,10 +1080,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create a service-linked role for your cloud service.
-          *
-          * @param request CreateServiceLinkedRoleForProductRequest
-          * @return CreateServiceLinkedRoleForProductResponse
+         * @summary Creates a service-linked role for your cloud service.
+         *
+         * @description You can call this API operation to create a service-linked role for your cloud service.
+         *
+         * @param request CreateServiceLinkedRoleForProductRequest
+         * @return CreateServiceLinkedRoleForProductResponse
          */
         public async Task<CreateServiceLinkedRoleForProductResponse> CreateServiceLinkedRoleForProductAsync(CreateServiceLinkedRoleForProductRequest request)
         {
@@ -1038,11 +1094,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an API destination.
-          *
-          * @param request DeleteApiDestinationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteApiDestinationResponse
+         * @summary Deletes an API destination.
+         *
+         * @description You can call this API operation to delete an API destination.
+         *
+         * @param request DeleteApiDestinationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteApiDestinationResponse
          */
         public DeleteApiDestinationResponse DeleteApiDestinationWithOptions(DeleteApiDestinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1072,11 +1130,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an API destination.
-          *
-          * @param request DeleteApiDestinationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteApiDestinationResponse
+         * @summary Deletes an API destination.
+         *
+         * @description You can call this API operation to delete an API destination.
+         *
+         * @param request DeleteApiDestinationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteApiDestinationResponse
          */
         public async Task<DeleteApiDestinationResponse> DeleteApiDestinationWithOptionsAsync(DeleteApiDestinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1106,10 +1166,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an API destination.
-          *
-          * @param request DeleteApiDestinationRequest
-          * @return DeleteApiDestinationResponse
+         * @summary Deletes an API destination.
+         *
+         * @description You can call this API operation to delete an API destination.
+         *
+         * @param request DeleteApiDestinationRequest
+         * @return DeleteApiDestinationResponse
          */
         public DeleteApiDestinationResponse DeleteApiDestination(DeleteApiDestinationRequest request)
         {
@@ -1118,10 +1180,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an API destination.
-          *
-          * @param request DeleteApiDestinationRequest
-          * @return DeleteApiDestinationResponse
+         * @summary Deletes an API destination.
+         *
+         * @description You can call this API operation to delete an API destination.
+         *
+         * @param request DeleteApiDestinationRequest
+         * @return DeleteApiDestinationResponse
          */
         public async Task<DeleteApiDestinationResponse> DeleteApiDestinationAsync(DeleteApiDestinationRequest request)
         {
@@ -1130,11 +1194,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete a connection.
-          *
-          * @param request DeleteConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteConnectionResponse
+         * @summary Deletes a connection.
+         *
+         * @description You can call this API operation to delete a connection.
+         *
+         * @param request DeleteConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteConnectionResponse
          */
         public DeleteConnectionResponse DeleteConnectionWithOptions(DeleteConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1164,11 +1230,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete a connection.
-          *
-          * @param request DeleteConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteConnectionResponse
+         * @summary Deletes a connection.
+         *
+         * @description You can call this API operation to delete a connection.
+         *
+         * @param request DeleteConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteConnectionResponse
          */
         public async Task<DeleteConnectionResponse> DeleteConnectionWithOptionsAsync(DeleteConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1198,10 +1266,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete a connection.
-          *
-          * @param request DeleteConnectionRequest
-          * @return DeleteConnectionResponse
+         * @summary Deletes a connection.
+         *
+         * @description You can call this API operation to delete a connection.
+         *
+         * @param request DeleteConnectionRequest
+         * @return DeleteConnectionResponse
          */
         public DeleteConnectionResponse DeleteConnection(DeleteConnectionRequest request)
         {
@@ -1210,10 +1280,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete a connection.
-          *
-          * @param request DeleteConnectionRequest
-          * @return DeleteConnectionResponse
+         * @summary Deletes a connection.
+         *
+         * @description You can call this API operation to delete a connection.
+         *
+         * @param request DeleteConnectionRequest
+         * @return DeleteConnectionResponse
          */
         public async Task<DeleteConnectionResponse> DeleteConnectionAsync(DeleteConnectionRequest request)
         {
@@ -1222,11 +1294,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event bus.
-          *
-          * @param request DeleteEventBusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteEventBusResponse
+         * @summary Deletes an event bus.
+         *
+         * @description You can call this API operation to delete an event bus.
+         *
+         * @param request DeleteEventBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteEventBusResponse
          */
         public DeleteEventBusResponse DeleteEventBusWithOptions(DeleteEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1256,11 +1330,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event bus.
-          *
-          * @param request DeleteEventBusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteEventBusResponse
+         * @summary Deletes an event bus.
+         *
+         * @description You can call this API operation to delete an event bus.
+         *
+         * @param request DeleteEventBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteEventBusResponse
          */
         public async Task<DeleteEventBusResponse> DeleteEventBusWithOptionsAsync(DeleteEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1290,10 +1366,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event bus.
-          *
-          * @param request DeleteEventBusRequest
-          * @return DeleteEventBusResponse
+         * @summary Deletes an event bus.
+         *
+         * @description You can call this API operation to delete an event bus.
+         *
+         * @param request DeleteEventBusRequest
+         * @return DeleteEventBusResponse
          */
         public DeleteEventBusResponse DeleteEventBus(DeleteEventBusRequest request)
         {
@@ -1302,10 +1380,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event bus.
-          *
-          * @param request DeleteEventBusRequest
-          * @return DeleteEventBusResponse
+         * @summary Deletes an event bus.
+         *
+         * @description You can call this API operation to delete an event bus.
+         *
+         * @param request DeleteEventBusRequest
+         * @return DeleteEventBusResponse
          */
         public async Task<DeleteEventBusResponse> DeleteEventBusAsync(DeleteEventBusRequest request)
         {
@@ -1314,11 +1394,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event source.
-          *
-          * @param request DeleteEventSourceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteEventSourceResponse
+         * @summary Deletes an event source.
+         *
+         * @description You can call this API operation to delete an event source.
+         *
+         * @param request DeleteEventSourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteEventSourceResponse
          */
         public DeleteEventSourceResponse DeleteEventSourceWithOptions(DeleteEventSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1352,11 +1434,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event source.
-          *
-          * @param request DeleteEventSourceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteEventSourceResponse
+         * @summary Deletes an event source.
+         *
+         * @description You can call this API operation to delete an event source.
+         *
+         * @param request DeleteEventSourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteEventSourceResponse
          */
         public async Task<DeleteEventSourceResponse> DeleteEventSourceWithOptionsAsync(DeleteEventSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1390,10 +1474,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event source.
-          *
-          * @param request DeleteEventSourceRequest
-          * @return DeleteEventSourceResponse
+         * @summary Deletes an event source.
+         *
+         * @description You can call this API operation to delete an event source.
+         *
+         * @param request DeleteEventSourceRequest
+         * @return DeleteEventSourceResponse
          */
         public DeleteEventSourceResponse DeleteEventSource(DeleteEventSourceRequest request)
         {
@@ -1402,10 +1488,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event source.
-          *
-          * @param request DeleteEventSourceRequest
-          * @return DeleteEventSourceResponse
+         * @summary Deletes an event source.
+         *
+         * @description You can call this API operation to delete an event source.
+         *
+         * @param request DeleteEventSourceRequest
+         * @return DeleteEventSourceResponse
          */
         public async Task<DeleteEventSourceResponse> DeleteEventSourceAsync(DeleteEventSourceRequest request)
         {
@@ -1414,11 +1502,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event stream.
-          *
-          * @param request DeleteEventStreamingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteEventStreamingResponse
+         * @summary Deletes an event stream.
+         *
+         * @description You can call this API operation to delete an event stream.
+         *
+         * @param request DeleteEventStreamingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteEventStreamingResponse
          */
         public DeleteEventStreamingResponse DeleteEventStreamingWithOptions(DeleteEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1448,11 +1538,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event stream.
-          *
-          * @param request DeleteEventStreamingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteEventStreamingResponse
+         * @summary Deletes an event stream.
+         *
+         * @description You can call this API operation to delete an event stream.
+         *
+         * @param request DeleteEventStreamingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteEventStreamingResponse
          */
         public async Task<DeleteEventStreamingResponse> DeleteEventStreamingWithOptionsAsync(DeleteEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1482,10 +1574,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event stream.
-          *
-          * @param request DeleteEventStreamingRequest
-          * @return DeleteEventStreamingResponse
+         * @summary Deletes an event stream.
+         *
+         * @description You can call this API operation to delete an event stream.
+         *
+         * @param request DeleteEventStreamingRequest
+         * @return DeleteEventStreamingResponse
          */
         public DeleteEventStreamingResponse DeleteEventStreaming(DeleteEventStreamingRequest request)
         {
@@ -1494,10 +1588,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event stream.
-          *
-          * @param request DeleteEventStreamingRequest
-          * @return DeleteEventStreamingResponse
+         * @summary Deletes an event stream.
+         *
+         * @description You can call this API operation to delete an event stream.
+         *
+         * @param request DeleteEventStreamingRequest
+         * @return DeleteEventStreamingResponse
          */
         public async Task<DeleteEventStreamingResponse> DeleteEventStreamingAsync(DeleteEventStreamingRequest request)
         {
@@ -1506,11 +1602,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event rule.
-          *
-          * @param request DeleteRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteRuleResponse
+         * @summary Deletes an event rule.
+         *
+         * @description You can call this API operation to delete an event rule.
+         *
+         * @param request DeleteRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRuleResponse
          */
         public DeleteRuleResponse DeleteRuleWithOptions(DeleteRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1544,11 +1642,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event rule.
-          *
-          * @param request DeleteRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteRuleResponse
+         * @summary Deletes an event rule.
+         *
+         * @description You can call this API operation to delete an event rule.
+         *
+         * @param request DeleteRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRuleResponse
          */
         public async Task<DeleteRuleResponse> DeleteRuleWithOptionsAsync(DeleteRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1582,10 +1682,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event rule.
-          *
-          * @param request DeleteRuleRequest
-          * @return DeleteRuleResponse
+         * @summary Deletes an event rule.
+         *
+         * @description You can call this API operation to delete an event rule.
+         *
+         * @param request DeleteRuleRequest
+         * @return DeleteRuleResponse
          */
         public DeleteRuleResponse DeleteRule(DeleteRuleRequest request)
         {
@@ -1594,10 +1696,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete an event rule.
-          *
-          * @param request DeleteRuleRequest
-          * @return DeleteRuleResponse
+         * @summary Deletes an event rule.
+         *
+         * @description You can call this API operation to delete an event rule.
+         *
+         * @param request DeleteRuleRequest
+         * @return DeleteRuleResponse
          */
         public async Task<DeleteRuleResponse> DeleteRuleAsync(DeleteRuleRequest request)
         {
@@ -1606,11 +1710,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete one or more event targets of an event rule.
-          *
-          * @param tmpReq DeleteTargetsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteTargetsResponse
+         * @summary Deletes one or more event targets of an event rule.
+         *
+         * @description You can call this API operation to delete one or more event targets of an event rule.
+         *
+         * @param tmpReq DeleteTargetsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteTargetsResponse
          */
         public DeleteTargetsResponse DeleteTargetsWithOptions(DeleteTargetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1654,11 +1760,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete one or more event targets of an event rule.
-          *
-          * @param tmpReq DeleteTargetsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteTargetsResponse
+         * @summary Deletes one or more event targets of an event rule.
+         *
+         * @description You can call this API operation to delete one or more event targets of an event rule.
+         *
+         * @param tmpReq DeleteTargetsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteTargetsResponse
          */
         public async Task<DeleteTargetsResponse> DeleteTargetsWithOptionsAsync(DeleteTargetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1702,10 +1810,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete one or more event targets of an event rule.
-          *
-          * @param request DeleteTargetsRequest
-          * @return DeleteTargetsResponse
+         * @summary Deletes one or more event targets of an event rule.
+         *
+         * @description You can call this API operation to delete one or more event targets of an event rule.
+         *
+         * @param request DeleteTargetsRequest
+         * @return DeleteTargetsResponse
          */
         public DeleteTargetsResponse DeleteTargets(DeleteTargetsRequest request)
         {
@@ -1714,10 +1824,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to delete one or more event targets of an event rule.
-          *
-          * @param request DeleteTargetsRequest
-          * @return DeleteTargetsResponse
+         * @summary Deletes one or more event targets of an event rule.
+         *
+         * @description You can call this API operation to delete one or more event targets of an event rule.
+         *
+         * @param request DeleteTargetsRequest
+         * @return DeleteTargetsResponse
          */
         public async Task<DeleteTargetsResponse> DeleteTargetsAsync(DeleteTargetsRequest request)
         {
@@ -1726,11 +1838,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to disable an event rule.
-          *
-          * @param request DisableRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DisableRuleResponse
+         * @summary Disables an event rule.
+         *
+         * @description You can call this API operation to disable an event rule.
+         *
+         * @param request DisableRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableRuleResponse
          */
         public DisableRuleResponse DisableRuleWithOptions(DisableRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1764,11 +1878,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to disable an event rule.
-          *
-          * @param request DisableRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DisableRuleResponse
+         * @summary Disables an event rule.
+         *
+         * @description You can call this API operation to disable an event rule.
+         *
+         * @param request DisableRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableRuleResponse
          */
         public async Task<DisableRuleResponse> DisableRuleWithOptionsAsync(DisableRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1802,10 +1918,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to disable an event rule.
-          *
-          * @param request DisableRuleRequest
-          * @return DisableRuleResponse
+         * @summary Disables an event rule.
+         *
+         * @description You can call this API operation to disable an event rule.
+         *
+         * @param request DisableRuleRequest
+         * @return DisableRuleResponse
          */
         public DisableRuleResponse DisableRule(DisableRuleRequest request)
         {
@@ -1814,10 +1932,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to disable an event rule.
-          *
-          * @param request DisableRuleRequest
-          * @return DisableRuleResponse
+         * @summary Disables an event rule.
+         *
+         * @description You can call this API operation to disable an event rule.
+         *
+         * @param request DisableRuleRequest
+         * @return DisableRuleResponse
          */
         public async Task<DisableRuleResponse> DisableRuleAsync(DisableRuleRequest request)
         {
@@ -1826,11 +1946,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to enable an event rule.
-          *
-          * @param request EnableRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return EnableRuleResponse
+         * @summary Enables an event rule.
+         *
+         * @description You can call this API operation to enable an event rule.
+         *
+         * @param request EnableRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableRuleResponse
          */
         public EnableRuleResponse EnableRuleWithOptions(EnableRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1864,11 +1986,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to enable an event rule.
-          *
-          * @param request EnableRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return EnableRuleResponse
+         * @summary Enables an event rule.
+         *
+         * @description You can call this API operation to enable an event rule.
+         *
+         * @param request EnableRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableRuleResponse
          */
         public async Task<EnableRuleResponse> EnableRuleWithOptionsAsync(EnableRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1902,10 +2026,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to enable an event rule.
-          *
-          * @param request EnableRuleRequest
-          * @return EnableRuleResponse
+         * @summary Enables an event rule.
+         *
+         * @description You can call this API operation to enable an event rule.
+         *
+         * @param request EnableRuleRequest
+         * @return EnableRuleResponse
          */
         public EnableRuleResponse EnableRule(EnableRuleRequest request)
         {
@@ -1914,10 +2040,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to enable an event rule.
-          *
-          * @param request EnableRuleRequest
-          * @return EnableRuleResponse
+         * @summary Enables an event rule.
+         *
+         * @description You can call this API operation to enable an event rule.
+         *
+         * @param request EnableRuleRequest
+         * @return EnableRuleResponse
          */
         public async Task<EnableRuleResponse> EnableRuleAsync(EnableRuleRequest request)
         {
@@ -1926,11 +2054,361 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the information about an API destination.
-          *
-          * @param request GetApiDestinationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetApiDestinationResponse
+         * @summary EventCenterCheckEnabledOnDefaultBus
+         *
+         * @param request EventCenterCheckEnabledOnDefaultBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EventCenterCheckEnabledOnDefaultBusResponse
+         */
+        public EventCenterCheckEnabledOnDefaultBusResponse EventCenterCheckEnabledOnDefaultBusWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventCenterCheckEnabledOnDefaultBus",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventCenterCheckEnabledOnDefaultBusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary EventCenterCheckEnabledOnDefaultBus
+         *
+         * @param request EventCenterCheckEnabledOnDefaultBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EventCenterCheckEnabledOnDefaultBusResponse
+         */
+        public async Task<EventCenterCheckEnabledOnDefaultBusResponse> EventCenterCheckEnabledOnDefaultBusWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventCenterCheckEnabledOnDefaultBus",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventCenterCheckEnabledOnDefaultBusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary EventCenterCheckEnabledOnDefaultBus
+         *
+         * @return EventCenterCheckEnabledOnDefaultBusResponse
+         */
+        public EventCenterCheckEnabledOnDefaultBusResponse EventCenterCheckEnabledOnDefaultBus()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EventCenterCheckEnabledOnDefaultBusWithOptions(runtime);
+        }
+
+        /**
+         * @summary EventCenterCheckEnabledOnDefaultBus
+         *
+         * @return EventCenterCheckEnabledOnDefaultBusResponse
+         */
+        public async Task<EventCenterCheckEnabledOnDefaultBusResponse> EventCenterCheckEnabledOnDefaultBusAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EventCenterCheckEnabledOnDefaultBusWithOptionsAsync(runtime);
+        }
+
+        /**
+         * @summary EventCenterDisableOnDefaultBus
+         *
+         * @param request EventCenterDisableOnDefaultBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EventCenterDisableOnDefaultBusResponse
+         */
+        public EventCenterDisableOnDefaultBusResponse EventCenterDisableOnDefaultBusWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventCenterDisableOnDefaultBus",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventCenterDisableOnDefaultBusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary EventCenterDisableOnDefaultBus
+         *
+         * @param request EventCenterDisableOnDefaultBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EventCenterDisableOnDefaultBusResponse
+         */
+        public async Task<EventCenterDisableOnDefaultBusResponse> EventCenterDisableOnDefaultBusWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventCenterDisableOnDefaultBus",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventCenterDisableOnDefaultBusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary EventCenterDisableOnDefaultBus
+         *
+         * @return EventCenterDisableOnDefaultBusResponse
+         */
+        public EventCenterDisableOnDefaultBusResponse EventCenterDisableOnDefaultBus()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EventCenterDisableOnDefaultBusWithOptions(runtime);
+        }
+
+        /**
+         * @summary EventCenterDisableOnDefaultBus
+         *
+         * @return EventCenterDisableOnDefaultBusResponse
+         */
+        public async Task<EventCenterDisableOnDefaultBusResponse> EventCenterDisableOnDefaultBusAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EventCenterDisableOnDefaultBusWithOptionsAsync(runtime);
+        }
+
+        /**
+         * @summary EventCenterEnableOnDefaultBus
+         *
+         * @param request EventCenterEnableOnDefaultBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EventCenterEnableOnDefaultBusResponse
+         */
+        public EventCenterEnableOnDefaultBusResponse EventCenterEnableOnDefaultBusWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventCenterEnableOnDefaultBus",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventCenterEnableOnDefaultBusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary EventCenterEnableOnDefaultBus
+         *
+         * @param request EventCenterEnableOnDefaultBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EventCenterEnableOnDefaultBusResponse
+         */
+        public async Task<EventCenterEnableOnDefaultBusResponse> EventCenterEnableOnDefaultBusWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventCenterEnableOnDefaultBus",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventCenterEnableOnDefaultBusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary EventCenterEnableOnDefaultBus
+         *
+         * @return EventCenterEnableOnDefaultBusResponse
+         */
+        public EventCenterEnableOnDefaultBusResponse EventCenterEnableOnDefaultBus()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EventCenterEnableOnDefaultBusWithOptions(runtime);
+        }
+
+        /**
+         * @summary EventCenterEnableOnDefaultBus
+         *
+         * @return EventCenterEnableOnDefaultBusResponse
+         */
+        public async Task<EventCenterEnableOnDefaultBusResponse> EventCenterEnableOnDefaultBusAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EventCenterEnableOnDefaultBusWithOptionsAsync(runtime);
+        }
+
+        /**
+         * @summary EventCenterQueryEvents
+         *
+         * @param tmpReq EventCenterQueryEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EventCenterQueryEventsResponse
+         */
+        public EventCenterQueryEventsResponse EventCenterQueryEventsWithOptions(EventCenterQueryEventsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EventCenterQueryEventsShrinkRequest request = new EventCenterQueryEventsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "Body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusName))
+            {
+                query["BusName"] = request.BusName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["Body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventCenterQueryEvents",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventCenterQueryEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary EventCenterQueryEvents
+         *
+         * @param tmpReq EventCenterQueryEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EventCenterQueryEventsResponse
+         */
+        public async Task<EventCenterQueryEventsResponse> EventCenterQueryEventsWithOptionsAsync(EventCenterQueryEventsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EventCenterQueryEventsShrinkRequest request = new EventCenterQueryEventsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "Body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusName))
+            {
+                query["BusName"] = request.BusName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["Body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventCenterQueryEvents",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventCenterQueryEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary EventCenterQueryEvents
+         *
+         * @param request EventCenterQueryEventsRequest
+         * @return EventCenterQueryEventsResponse
+         */
+        public EventCenterQueryEventsResponse EventCenterQueryEvents(EventCenterQueryEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EventCenterQueryEventsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary EventCenterQueryEvents
+         *
+         * @param request EventCenterQueryEventsRequest
+         * @return EventCenterQueryEventsResponse
+         */
+        public async Task<EventCenterQueryEventsResponse> EventCenterQueryEventsAsync(EventCenterQueryEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EventCenterQueryEventsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Queries the information about an API destination.
+         *
+         * @description You can call this API operation to query the information about an API destination.
+         *
+         * @param request GetApiDestinationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetApiDestinationResponse
          */
         public GetApiDestinationResponse GetApiDestinationWithOptions(GetApiDestinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1960,11 +2438,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the information about an API destination.
-          *
-          * @param request GetApiDestinationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetApiDestinationResponse
+         * @summary Queries the information about an API destination.
+         *
+         * @description You can call this API operation to query the information about an API destination.
+         *
+         * @param request GetApiDestinationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetApiDestinationResponse
          */
         public async Task<GetApiDestinationResponse> GetApiDestinationWithOptionsAsync(GetApiDestinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1994,10 +2474,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the information about an API destination.
-          *
-          * @param request GetApiDestinationRequest
-          * @return GetApiDestinationResponse
+         * @summary Queries the information about an API destination.
+         *
+         * @description You can call this API operation to query the information about an API destination.
+         *
+         * @param request GetApiDestinationRequest
+         * @return GetApiDestinationResponse
          */
         public GetApiDestinationResponse GetApiDestination(GetApiDestinationRequest request)
         {
@@ -2006,10 +2488,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the information about an API destination.
-          *
-          * @param request GetApiDestinationRequest
-          * @return GetApiDestinationResponse
+         * @summary Queries the information about an API destination.
+         *
+         * @description You can call this API operation to query the information about an API destination.
+         *
+         * @param request GetApiDestinationRequest
+         * @return GetApiDestinationResponse
          */
         public async Task<GetApiDestinationResponse> GetApiDestinationAsync(GetApiDestinationRequest request)
         {
@@ -2018,11 +2502,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the configurations of a connection.
-          *
-          * @param request GetConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetConnectionResponse
+         * @summary Queries the configurations of a connection.
+         *
+         * @description You can call this API operation to query the configurations of a connection.
+         *
+         * @param request GetConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetConnectionResponse
          */
         public GetConnectionResponse GetConnectionWithOptions(GetConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2052,11 +2538,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the configurations of a connection.
-          *
-          * @param request GetConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetConnectionResponse
+         * @summary Queries the configurations of a connection.
+         *
+         * @description You can call this API operation to query the configurations of a connection.
+         *
+         * @param request GetConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetConnectionResponse
          */
         public async Task<GetConnectionResponse> GetConnectionWithOptionsAsync(GetConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2086,10 +2574,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the configurations of a connection.
-          *
-          * @param request GetConnectionRequest
-          * @return GetConnectionResponse
+         * @summary Queries the configurations of a connection.
+         *
+         * @description You can call this API operation to query the configurations of a connection.
+         *
+         * @param request GetConnectionRequest
+         * @return GetConnectionResponse
          */
         public GetConnectionResponse GetConnection(GetConnectionRequest request)
         {
@@ -2098,10 +2588,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the configurations of a connection.
-          *
-          * @param request GetConnectionRequest
-          * @return GetConnectionResponse
+         * @summary Queries the configurations of a connection.
+         *
+         * @description You can call this API operation to query the configurations of a connection.
+         *
+         * @param request GetConnectionRequest
+         * @return GetConnectionResponse
          */
         public async Task<GetConnectionResponse> GetConnectionAsync(GetConnectionRequest request)
         {
@@ -2110,11 +2602,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the detailed information about an event bus.
-          *
-          * @param request GetEventBusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetEventBusResponse
+         * @summary Queries the detailed information about an event bus.
+         *
+         * @description You can call this API operation to query the detailed information about an event bus.
+         *
+         * @param request GetEventBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetEventBusResponse
          */
         public GetEventBusResponse GetEventBusWithOptions(GetEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2144,11 +2638,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the detailed information about an event bus.
-          *
-          * @param request GetEventBusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetEventBusResponse
+         * @summary Queries the detailed information about an event bus.
+         *
+         * @description You can call this API operation to query the detailed information about an event bus.
+         *
+         * @param request GetEventBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetEventBusResponse
          */
         public async Task<GetEventBusResponse> GetEventBusWithOptionsAsync(GetEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2178,10 +2674,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the detailed information about an event bus.
-          *
-          * @param request GetEventBusRequest
-          * @return GetEventBusResponse
+         * @summary Queries the detailed information about an event bus.
+         *
+         * @description You can call this API operation to query the detailed information about an event bus.
+         *
+         * @param request GetEventBusRequest
+         * @return GetEventBusResponse
          */
         public GetEventBusResponse GetEventBus(GetEventBusRequest request)
         {
@@ -2190,10 +2688,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the detailed information about an event bus.
-          *
-          * @param request GetEventBusRequest
-          * @return GetEventBusResponse
+         * @summary Queries the detailed information about an event bus.
+         *
+         * @description You can call this API operation to query the detailed information about an event bus.
+         *
+         * @param request GetEventBusRequest
+         * @return GetEventBusResponse
          */
         public async Task<GetEventBusResponse> GetEventBusAsync(GetEventBusRequest request)
         {
@@ -2202,11 +2702,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the details of an event stream.
-          *
-          * @param request GetEventStreamingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetEventStreamingResponse
+         * @summary Queries the details of an event stream.
+         *
+         * @description You can call this API operation to query the details of an event stream.
+         *
+         * @param request GetEventStreamingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetEventStreamingResponse
          */
         public GetEventStreamingResponse GetEventStreamingWithOptions(GetEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2236,11 +2738,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the details of an event stream.
-          *
-          * @param request GetEventStreamingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetEventStreamingResponse
+         * @summary Queries the details of an event stream.
+         *
+         * @description You can call this API operation to query the details of an event stream.
+         *
+         * @param request GetEventStreamingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetEventStreamingResponse
          */
         public async Task<GetEventStreamingResponse> GetEventStreamingWithOptionsAsync(GetEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2270,10 +2774,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the details of an event stream.
-          *
-          * @param request GetEventStreamingRequest
-          * @return GetEventStreamingResponse
+         * @summary Queries the details of an event stream.
+         *
+         * @description You can call this API operation to query the details of an event stream.
+         *
+         * @param request GetEventStreamingRequest
+         * @return GetEventStreamingResponse
          */
         public GetEventStreamingResponse GetEventStreaming(GetEventStreamingRequest request)
         {
@@ -2282,10 +2788,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the details of an event stream.
-          *
-          * @param request GetEventStreamingRequest
-          * @return GetEventStreamingResponse
+         * @summary Queries the details of an event stream.
+         *
+         * @description You can call this API operation to query the details of an event stream.
+         *
+         * @param request GetEventStreamingRequest
+         * @return GetEventStreamingResponse
          */
         public async Task<GetEventStreamingResponse> GetEventStreamingAsync(GetEventStreamingRequest request)
         {
@@ -2294,11 +2802,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the details of an event rule.
-          *
-          * @param request GetRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetRuleResponse
+         * @summary Queries the details of an event rule.
+         *
+         * @description You can call this API operation to query the details of an event rule.
+         *
+         * @param request GetRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetRuleResponse
          */
         public GetRuleResponse GetRuleWithOptions(GetRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2332,11 +2842,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the details of an event rule.
-          *
-          * @param request GetRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetRuleResponse
+         * @summary Queries the details of an event rule.
+         *
+         * @description You can call this API operation to query the details of an event rule.
+         *
+         * @param request GetRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetRuleResponse
          */
         public async Task<GetRuleResponse> GetRuleWithOptionsAsync(GetRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2370,10 +2882,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the details of an event rule.
-          *
-          * @param request GetRuleRequest
-          * @return GetRuleResponse
+         * @summary Queries the details of an event rule.
+         *
+         * @description You can call this API operation to query the details of an event rule.
+         *
+         * @param request GetRuleRequest
+         * @return GetRuleResponse
          */
         public GetRuleResponse GetRule(GetRuleRequest request)
         {
@@ -2382,10 +2896,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the details of an event rule.
-          *
-          * @param request GetRuleRequest
-          * @return GetRuleResponse
+         * @summary Queries the details of an event rule.
+         *
+         * @description You can call this API operation to query the details of an event rule.
+         *
+         * @param request GetRuleRequest
+         * @return GetRuleResponse
          */
         public async Task<GetRuleResponse> GetRuleAsync(GetRuleRequest request)
         {
@@ -2394,11 +2910,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query all Alibaba Cloud service event sources.
-          *
-          * @param request ListAliyunOfficialEventSourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListAliyunOfficialEventSourcesResponse
+         * @summary Queries all Alibaba Cloud service event sources.
+         *
+         * @description You can call this API operation to query all Alibaba Cloud service event sources.
+         *
+         * @param request ListAliyunOfficialEventSourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAliyunOfficialEventSourcesResponse
          */
         public ListAliyunOfficialEventSourcesResponse ListAliyunOfficialEventSourcesWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2419,11 +2937,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query all Alibaba Cloud service event sources.
-          *
-          * @param request ListAliyunOfficialEventSourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListAliyunOfficialEventSourcesResponse
+         * @summary Queries all Alibaba Cloud service event sources.
+         *
+         * @description You can call this API operation to query all Alibaba Cloud service event sources.
+         *
+         * @param request ListAliyunOfficialEventSourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAliyunOfficialEventSourcesResponse
          */
         public async Task<ListAliyunOfficialEventSourcesResponse> ListAliyunOfficialEventSourcesWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2444,9 +2964,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query all Alibaba Cloud service event sources.
-          *
-          * @return ListAliyunOfficialEventSourcesResponse
+         * @summary Queries all Alibaba Cloud service event sources.
+         *
+         * @description You can call this API operation to query all Alibaba Cloud service event sources.
+         *
+         * @return ListAliyunOfficialEventSourcesResponse
          */
         public ListAliyunOfficialEventSourcesResponse ListAliyunOfficialEventSources()
         {
@@ -2455,9 +2977,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query all Alibaba Cloud service event sources.
-          *
-          * @return ListAliyunOfficialEventSourcesResponse
+         * @summary Queries all Alibaba Cloud service event sources.
+         *
+         * @description You can call this API operation to query all Alibaba Cloud service event sources.
+         *
+         * @return ListAliyunOfficialEventSourcesResponse
          */
         public async Task<ListAliyunOfficialEventSourcesResponse> ListAliyunOfficialEventSourcesAsync()
         {
@@ -2466,11 +2990,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can use this API operation to query a list of API destinations.
-          *
-          * @param request ListApiDestinationsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListApiDestinationsResponse
+         * @summary Queries a list of API destinations.
+         *
+         * @description You can use this API operation to query a list of API destinations.
+         *
+         * @param request ListApiDestinationsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListApiDestinationsResponse
          */
         public ListApiDestinationsResponse ListApiDestinationsWithOptions(ListApiDestinationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2512,11 +3038,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can use this API operation to query a list of API destinations.
-          *
-          * @param request ListApiDestinationsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListApiDestinationsResponse
+         * @summary Queries a list of API destinations.
+         *
+         * @description You can use this API operation to query a list of API destinations.
+         *
+         * @param request ListApiDestinationsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListApiDestinationsResponse
          */
         public async Task<ListApiDestinationsResponse> ListApiDestinationsWithOptionsAsync(ListApiDestinationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2558,10 +3086,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can use this API operation to query a list of API destinations.
-          *
-          * @param request ListApiDestinationsRequest
-          * @return ListApiDestinationsResponse
+         * @summary Queries a list of API destinations.
+         *
+         * @description You can use this API operation to query a list of API destinations.
+         *
+         * @param request ListApiDestinationsRequest
+         * @return ListApiDestinationsResponse
          */
         public ListApiDestinationsResponse ListApiDestinations(ListApiDestinationsRequest request)
         {
@@ -2570,10 +3100,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can use this API operation to query a list of API destinations.
-          *
-          * @param request ListApiDestinationsRequest
-          * @return ListApiDestinationsResponse
+         * @summary Queries a list of API destinations.
+         *
+         * @description You can use this API operation to query a list of API destinations.
+         *
+         * @param request ListApiDestinationsRequest
+         * @return ListApiDestinationsResponse
          */
         public async Task<ListApiDestinationsResponse> ListApiDestinationsAsync(ListApiDestinationsRequest request)
         {
@@ -2582,11 +3114,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query connections.
-          *
-          * @param request ListConnectionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListConnectionsResponse
+         * @summary Queries connections.
+         *
+         * @description You can call this API operation to query connections.
+         *
+         * @param request ListConnectionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListConnectionsResponse
          */
         public ListConnectionsResponse ListConnectionsWithOptions(ListConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2624,11 +3158,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query connections.
-          *
-          * @param request ListConnectionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListConnectionsResponse
+         * @summary Queries connections.
+         *
+         * @description You can call this API operation to query connections.
+         *
+         * @param request ListConnectionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListConnectionsResponse
          */
         public async Task<ListConnectionsResponse> ListConnectionsWithOptionsAsync(ListConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2666,10 +3202,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query connections.
-          *
-          * @param request ListConnectionsRequest
-          * @return ListConnectionsResponse
+         * @summary Queries connections.
+         *
+         * @description You can call this API operation to query connections.
+         *
+         * @param request ListConnectionsRequest
+         * @return ListConnectionsResponse
          */
         public ListConnectionsResponse ListConnections(ListConnectionsRequest request)
         {
@@ -2678,10 +3216,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query connections.
-          *
-          * @param request ListConnectionsRequest
-          * @return ListConnectionsResponse
+         * @summary Queries connections.
+         *
+         * @description You can call this API operation to query connections.
+         *
+         * @param request ListConnectionsRequest
+         * @return ListConnectionsResponse
          */
         public async Task<ListConnectionsResponse> ListConnectionsAsync(ListConnectionsRequest request)
         {
@@ -2690,11 +3230,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query all event buses.
-          *
-          * @param request ListEventBusesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListEventBusesResponse
+         * @summary Queries all event buses.
+         *
+         * @description You can call this API operation to query all event buses.
+         *
+         * @param request ListEventBusesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEventBusesResponse
          */
         public ListEventBusesResponse ListEventBusesWithOptions(ListEventBusesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2732,11 +3274,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query all event buses.
-          *
-          * @param request ListEventBusesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListEventBusesResponse
+         * @summary Queries all event buses.
+         *
+         * @description You can call this API operation to query all event buses.
+         *
+         * @param request ListEventBusesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEventBusesResponse
          */
         public async Task<ListEventBusesResponse> ListEventBusesWithOptionsAsync(ListEventBusesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2774,10 +3318,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query all event buses.
-          *
-          * @param request ListEventBusesRequest
-          * @return ListEventBusesResponse
+         * @summary Queries all event buses.
+         *
+         * @description You can call this API operation to query all event buses.
+         *
+         * @param request ListEventBusesRequest
+         * @return ListEventBusesResponse
          */
         public ListEventBusesResponse ListEventBuses(ListEventBusesRequest request)
         {
@@ -2786,10 +3332,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query all event buses.
-          *
-          * @param request ListEventBusesRequest
-          * @return ListEventBusesResponse
+         * @summary Queries all event buses.
+         *
+         * @description You can call this API operation to query all event buses.
+         *
+         * @param request ListEventBusesRequest
+         * @return ListEventBusesResponse
          */
         public async Task<ListEventBusesResponse> ListEventBusesAsync(ListEventBusesRequest request)
         {
@@ -2798,11 +3346,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event streams.
-          *
-          * @param request ListEventStreamingsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListEventStreamingsResponse
+         * @summary Queries event streams.
+         *
+         * @description You can call this API operation to query event streams.
+         *
+         * @param request ListEventStreamingsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEventStreamingsResponse
          */
         public ListEventStreamingsResponse ListEventStreamingsWithOptions(ListEventStreamingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2848,11 +3398,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event streams.
-          *
-          * @param request ListEventStreamingsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListEventStreamingsResponse
+         * @summary Queries event streams.
+         *
+         * @description You can call this API operation to query event streams.
+         *
+         * @param request ListEventStreamingsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListEventStreamingsResponse
          */
         public async Task<ListEventStreamingsResponse> ListEventStreamingsWithOptionsAsync(ListEventStreamingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2898,10 +3450,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event streams.
-          *
-          * @param request ListEventStreamingsRequest
-          * @return ListEventStreamingsResponse
+         * @summary Queries event streams.
+         *
+         * @description You can call this API operation to query event streams.
+         *
+         * @param request ListEventStreamingsRequest
+         * @return ListEventStreamingsResponse
          */
         public ListEventStreamingsResponse ListEventStreamings(ListEventStreamingsRequest request)
         {
@@ -2910,10 +3464,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event streams.
-          *
-          * @param request ListEventStreamingsRequest
-          * @return ListEventStreamingsResponse
+         * @summary Queries event streams.
+         *
+         * @description You can call this API operation to query event streams.
+         *
+         * @param request ListEventStreamingsRequest
+         * @return ListEventStreamingsResponse
          */
         public async Task<ListEventStreamingsResponse> ListEventStreamingsAsync(ListEventStreamingsRequest request)
         {
@@ -2922,11 +3478,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query all rules of an event bus.
-          *
-          * @param request ListRulesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListRulesResponse
+         * @summary Queries all rules of an event bus.
+         *
+         * @description You can call this API operation to query all rules of an event bus.
+         *
+         * @param request ListRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListRulesResponse
          */
         public ListRulesResponse ListRulesWithOptions(ListRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2968,11 +3526,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query all rules of an event bus.
-          *
-          * @param request ListRulesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListRulesResponse
+         * @summary Queries all rules of an event bus.
+         *
+         * @description You can call this API operation to query all rules of an event bus.
+         *
+         * @param request ListRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListRulesResponse
          */
         public async Task<ListRulesResponse> ListRulesWithOptionsAsync(ListRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3014,10 +3574,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query all rules of an event bus.
-          *
-          * @param request ListRulesRequest
-          * @return ListRulesResponse
+         * @summary Queries all rules of an event bus.
+         *
+         * @description You can call this API operation to query all rules of an event bus.
+         *
+         * @param request ListRulesRequest
+         * @return ListRulesResponse
          */
         public ListRulesResponse ListRules(ListRulesRequest request)
         {
@@ -3026,10 +3588,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query all rules of an event bus.
-          *
-          * @param request ListRulesRequest
-          * @return ListRulesResponse
+         * @summary Queries all rules of an event bus.
+         *
+         * @description You can call this API operation to query all rules of an event bus.
+         *
+         * @param request ListRulesRequest
+         * @return ListRulesResponse
          */
         public async Task<ListRulesResponse> ListRulesAsync(ListRulesRequest request)
         {
@@ -3037,6 +3601,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             return await ListRulesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries all event targets of an event rule.
+         *
+         * @param request ListTargetsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTargetsResponse
+         */
         public ListTargetsResponse ListTargetsWithOptions(ListTargetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3080,6 +3651,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             return TeaModel.ToObject<ListTargetsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries all event targets of an event rule.
+         *
+         * @param request ListTargetsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTargetsResponse
+         */
         public async Task<ListTargetsResponse> ListTargetsWithOptionsAsync(ListTargetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3123,12 +3701,24 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             return TeaModel.ToObject<ListTargetsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries all event targets of an event rule.
+         *
+         * @param request ListTargetsRequest
+         * @return ListTargetsResponse
+         */
         public ListTargetsResponse ListTargets(ListTargetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTargetsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries all event targets of an event rule.
+         *
+         * @param request ListTargetsRequest
+         * @return ListTargetsResponse
+         */
         public async Task<ListTargetsResponse> ListTargetsAsync(ListTargetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3136,11 +3726,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query custom event sources.
-          *
-          * @param request ListUserDefinedEventSourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListUserDefinedEventSourcesResponse
+         * @summary Queries all custom event sources.
+         *
+         * @description You can call this API operation to query custom event sources.
+         *
+         * @param request ListUserDefinedEventSourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUserDefinedEventSourcesResponse
          */
         public ListUserDefinedEventSourcesResponse ListUserDefinedEventSourcesWithOptions(ListUserDefinedEventSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3182,11 +3774,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query custom event sources.
-          *
-          * @param request ListUserDefinedEventSourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListUserDefinedEventSourcesResponse
+         * @summary Queries all custom event sources.
+         *
+         * @description You can call this API operation to query custom event sources.
+         *
+         * @param request ListUserDefinedEventSourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUserDefinedEventSourcesResponse
          */
         public async Task<ListUserDefinedEventSourcesResponse> ListUserDefinedEventSourcesWithOptionsAsync(ListUserDefinedEventSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3228,10 +3822,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query custom event sources.
-          *
-          * @param request ListUserDefinedEventSourcesRequest
-          * @return ListUserDefinedEventSourcesResponse
+         * @summary Queries all custom event sources.
+         *
+         * @description You can call this API operation to query custom event sources.
+         *
+         * @param request ListUserDefinedEventSourcesRequest
+         * @return ListUserDefinedEventSourcesResponse
          */
         public ListUserDefinedEventSourcesResponse ListUserDefinedEventSources(ListUserDefinedEventSourcesRequest request)
         {
@@ -3240,10 +3836,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query custom event sources.
-          *
-          * @param request ListUserDefinedEventSourcesRequest
-          * @return ListUserDefinedEventSourcesResponse
+         * @summary Queries all custom event sources.
+         *
+         * @description You can call this API operation to query custom event sources.
+         *
+         * @param request ListUserDefinedEventSourcesRequest
+         * @return ListUserDefinedEventSourcesResponse
          */
         public async Task<ListUserDefinedEventSourcesResponse> ListUserDefinedEventSourcesAsync(ListUserDefinedEventSourcesRequest request)
         {
@@ -3252,11 +3850,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to stop an event stream that is running.
-          *
-          * @param request PauseEventStreamingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PauseEventStreamingResponse
+         * @summary Stops an event stream that is running.
+         *
+         * @description You can call this API operation to stop an event stream that is running.
+         *
+         * @param request PauseEventStreamingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PauseEventStreamingResponse
          */
         public PauseEventStreamingResponse PauseEventStreamingWithOptions(PauseEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3286,11 +3886,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to stop an event stream that is running.
-          *
-          * @param request PauseEventStreamingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PauseEventStreamingResponse
+         * @summary Stops an event stream that is running.
+         *
+         * @description You can call this API operation to stop an event stream that is running.
+         *
+         * @param request PauseEventStreamingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PauseEventStreamingResponse
          */
         public async Task<PauseEventStreamingResponse> PauseEventStreamingWithOptionsAsync(PauseEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3320,10 +3922,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to stop an event stream that is running.
-          *
-          * @param request PauseEventStreamingRequest
-          * @return PauseEventStreamingResponse
+         * @summary Stops an event stream that is running.
+         *
+         * @description You can call this API operation to stop an event stream that is running.
+         *
+         * @param request PauseEventStreamingRequest
+         * @return PauseEventStreamingResponse
          */
         public PauseEventStreamingResponse PauseEventStreaming(PauseEventStreamingRequest request)
         {
@@ -3332,10 +3936,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to stop an event stream that is running.
-          *
-          * @param request PauseEventStreamingRequest
-          * @return PauseEventStreamingResponse
+         * @summary Stops an event stream that is running.
+         *
+         * @description You can call this API operation to stop an event stream that is running.
+         *
+         * @param request PauseEventStreamingRequest
+         * @return PauseEventStreamingResponse
          */
         public async Task<PauseEventStreamingResponse> PauseEventStreamingAsync(PauseEventStreamingRequest request)
         {
@@ -3344,11 +3950,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create or update event targets under a rule.
-          *
-          * @param tmpReq PutTargetsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PutTargetsResponse
+         * @summary Creates or updates event targets under a rule.
+         *
+         * @description You can call this API operation to create or update event targets under a rule.
+         *
+         * @param tmpReq PutTargetsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PutTargetsResponse
          */
         public PutTargetsResponse PutTargetsWithOptions(PutTargetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3392,11 +4000,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create or update event targets under a rule.
-          *
-          * @param tmpReq PutTargetsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PutTargetsResponse
+         * @summary Creates or updates event targets under a rule.
+         *
+         * @description You can call this API operation to create or update event targets under a rule.
+         *
+         * @param tmpReq PutTargetsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PutTargetsResponse
          */
         public async Task<PutTargetsResponse> PutTargetsWithOptionsAsync(PutTargetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3440,10 +4050,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create or update event targets under a rule.
-          *
-          * @param request PutTargetsRequest
-          * @return PutTargetsResponse
+         * @summary Creates or updates event targets under a rule.
+         *
+         * @description You can call this API operation to create or update event targets under a rule.
+         *
+         * @param request PutTargetsRequest
+         * @return PutTargetsResponse
          */
         public PutTargetsResponse PutTargets(PutTargetsRequest request)
         {
@@ -3452,10 +4064,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to create or update event targets under a rule.
-          *
-          * @param request PutTargetsRequest
-          * @return PutTargetsResponse
+         * @summary Creates or updates event targets under a rule.
+         *
+         * @description You can call this API operation to create or update event targets under a rule.
+         *
+         * @param request PutTargetsRequest
+         * @return PutTargetsResponse
          */
         public async Task<PutTargetsResponse> PutTargetsAsync(PutTargetsRequest request)
         {
@@ -3464,11 +4078,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the content of an event.
-          *
-          * @param request QueryEventRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return QueryEventResponse
+         * @summary Queries the content of an event.
+         *
+         * @description You can call this API operation to query the content of an event.
+         *
+         * @param request QueryEventRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryEventResponse
          */
         public QueryEventResponse QueryEventWithOptions(QueryEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3506,11 +4122,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the content of an event.
-          *
-          * @param request QueryEventRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return QueryEventResponse
+         * @summary Queries the content of an event.
+         *
+         * @description You can call this API operation to query the content of an event.
+         *
+         * @param request QueryEventRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryEventResponse
          */
         public async Task<QueryEventResponse> QueryEventWithOptionsAsync(QueryEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3548,10 +4166,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the content of an event.
-          *
-          * @param request QueryEventRequest
-          * @return QueryEventResponse
+         * @summary Queries the content of an event.
+         *
+         * @description You can call this API operation to query the content of an event.
+         *
+         * @param request QueryEventRequest
+         * @return QueryEventResponse
          */
         public QueryEventResponse QueryEvent(QueryEventRequest request)
         {
@@ -3560,10 +4180,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query the content of an event.
-          *
-          * @param request QueryEventRequest
-          * @return QueryEventResponse
+         * @summary Queries the content of an event.
+         *
+         * @description You can call this API operation to query the content of an event.
+         *
+         * @param request QueryEventRequest
+         * @return QueryEventResponse
          */
         public async Task<QueryEventResponse> QueryEventAsync(QueryEventRequest request)
         {
@@ -3572,11 +4194,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event traces.
-          *
-          * @param request QueryEventTracesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return QueryEventTracesResponse
+         * @summary Queries event traces.
+         *
+         * @description You can call this API operation to query event traces.
+         *
+         * @param request QueryEventTracesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryEventTracesResponse
          */
         public QueryEventTracesResponse QueryEventTracesWithOptions(QueryEventTracesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3610,11 +4234,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event traces.
-          *
-          * @param request QueryEventTracesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return QueryEventTracesResponse
+         * @summary Queries event traces.
+         *
+         * @description You can call this API operation to query event traces.
+         *
+         * @param request QueryEventTracesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryEventTracesResponse
          */
         public async Task<QueryEventTracesResponse> QueryEventTracesWithOptionsAsync(QueryEventTracesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3648,10 +4274,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event traces.
-          *
-          * @param request QueryEventTracesRequest
-          * @return QueryEventTracesResponse
+         * @summary Queries event traces.
+         *
+         * @description You can call this API operation to query event traces.
+         *
+         * @param request QueryEventTracesRequest
+         * @return QueryEventTracesResponse
          */
         public QueryEventTracesResponse QueryEventTraces(QueryEventTracesRequest request)
         {
@@ -3660,10 +4288,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event traces.
-          *
-          * @param request QueryEventTracesRequest
-          * @return QueryEventTracesResponse
+         * @summary Queries event traces.
+         *
+         * @description You can call this API operation to query event traces.
+         *
+         * @param request QueryEventTracesRequest
+         * @return QueryEventTracesResponse
          */
         public async Task<QueryEventTracesResponse> QueryEventTracesAsync(QueryEventTracesRequest request)
         {
@@ -3672,11 +4302,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event traces by event ID.
-          *
-          * @param request QueryTracedEventByEventIdRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return QueryTracedEventByEventIdResponse
+         * @summary Queries event traces by event ID.
+         *
+         * @description You can call this API operation to query event traces by event ID.
+         *
+         * @param request QueryTracedEventByEventIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryTracedEventByEventIdResponse
          */
         public QueryTracedEventByEventIdResponse QueryTracedEventByEventIdWithOptions(QueryTracedEventByEventIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3714,11 +4346,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event traces by event ID.
-          *
-          * @param request QueryTracedEventByEventIdRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return QueryTracedEventByEventIdResponse
+         * @summary Queries event traces by event ID.
+         *
+         * @description You can call this API operation to query event traces by event ID.
+         *
+         * @param request QueryTracedEventByEventIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryTracedEventByEventIdResponse
          */
         public async Task<QueryTracedEventByEventIdResponse> QueryTracedEventByEventIdWithOptionsAsync(QueryTracedEventByEventIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3756,10 +4390,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event traces by event ID.
-          *
-          * @param request QueryTracedEventByEventIdRequest
-          * @return QueryTracedEventByEventIdResponse
+         * @summary Queries event traces by event ID.
+         *
+         * @description You can call this API operation to query event traces by event ID.
+         *
+         * @param request QueryTracedEventByEventIdRequest
+         * @return QueryTracedEventByEventIdResponse
          */
         public QueryTracedEventByEventIdResponse QueryTracedEventByEventId(QueryTracedEventByEventIdRequest request)
         {
@@ -3768,10 +4404,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event traces by event ID.
-          *
-          * @param request QueryTracedEventByEventIdRequest
-          * @return QueryTracedEventByEventIdResponse
+         * @summary Queries event traces by event ID.
+         *
+         * @description You can call this API operation to query event traces by event ID.
+         *
+         * @param request QueryTracedEventByEventIdRequest
+         * @return QueryTracedEventByEventIdResponse
          */
         public async Task<QueryTracedEventByEventIdResponse> QueryTracedEventByEventIdAsync(QueryTracedEventByEventIdRequest request)
         {
@@ -3780,11 +4418,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event traces by time range.
-          *
-          * @param request QueryTracedEventsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return QueryTracedEventsResponse
+         * @summary Queries event traces by time range.
+         *
+         * @description You can call this API operation to query event traces by time range.
+         *
+         * @param request QueryTracedEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryTracedEventsResponse
          */
         public QueryTracedEventsResponse QueryTracedEventsWithOptions(QueryTracedEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3842,11 +4482,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event traces by time range.
-          *
-          * @param request QueryTracedEventsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return QueryTracedEventsResponse
+         * @summary Queries event traces by time range.
+         *
+         * @description You can call this API operation to query event traces by time range.
+         *
+         * @param request QueryTracedEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryTracedEventsResponse
          */
         public async Task<QueryTracedEventsResponse> QueryTracedEventsWithOptionsAsync(QueryTracedEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3904,10 +4546,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event traces by time range.
-          *
-          * @param request QueryTracedEventsRequest
-          * @return QueryTracedEventsResponse
+         * @summary Queries event traces by time range.
+         *
+         * @description You can call this API operation to query event traces by time range.
+         *
+         * @param request QueryTracedEventsRequest
+         * @return QueryTracedEventsResponse
          */
         public QueryTracedEventsResponse QueryTracedEvents(QueryTracedEventsRequest request)
         {
@@ -3916,10 +4560,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to query event traces by time range.
-          *
-          * @param request QueryTracedEventsRequest
-          * @return QueryTracedEventsResponse
+         * @summary Queries event traces by time range.
+         *
+         * @description You can call this API operation to query event traces by time range.
+         *
+         * @param request QueryTracedEventsRequest
+         * @return QueryTracedEventsResponse
          */
         public async Task<QueryTracedEventsResponse> QueryTracedEventsAsync(QueryTracedEventsRequest request)
         {
@@ -3928,11 +4574,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to enable a created or deactivated event stream.
-          *
-          * @param request StartEventStreamingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartEventStreamingResponse
+         * @summary Enables a created or deactivated event stream.
+         *
+         * @description You can call this API operation to enable a created or deactivated event stream.
+         *
+         * @param request StartEventStreamingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartEventStreamingResponse
          */
         public StartEventStreamingResponse StartEventStreamingWithOptions(StartEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3962,11 +4610,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to enable a created or deactivated event stream.
-          *
-          * @param request StartEventStreamingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartEventStreamingResponse
+         * @summary Enables a created or deactivated event stream.
+         *
+         * @description You can call this API operation to enable a created or deactivated event stream.
+         *
+         * @param request StartEventStreamingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartEventStreamingResponse
          */
         public async Task<StartEventStreamingResponse> StartEventStreamingWithOptionsAsync(StartEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3996,10 +4646,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to enable a created or deactivated event stream.
-          *
-          * @param request StartEventStreamingRequest
-          * @return StartEventStreamingResponse
+         * @summary Enables a created or deactivated event stream.
+         *
+         * @description You can call this API operation to enable a created or deactivated event stream.
+         *
+         * @param request StartEventStreamingRequest
+         * @return StartEventStreamingResponse
          */
         public StartEventStreamingResponse StartEventStreaming(StartEventStreamingRequest request)
         {
@@ -4008,10 +4660,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to enable a created or deactivated event stream.
-          *
-          * @param request StartEventStreamingRequest
-          * @return StartEventStreamingResponse
+         * @summary Enables a created or deactivated event stream.
+         *
+         * @description You can call this API operation to enable a created or deactivated event stream.
+         *
+         * @param request StartEventStreamingRequest
+         * @return StartEventStreamingResponse
          */
         public async Task<StartEventStreamingResponse> StartEventStreamingAsync(StartEventStreamingRequest request)
         {
@@ -4020,11 +4674,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to check whether the event pattern matches the provided JSON format.
-          *
-          * @param request TestEventPatternRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TestEventPatternResponse
+         * @summary Checks whether the event pattern matches the provided JSON format.
+         *
+         * @description You can call this API operation to check whether the event pattern matches the provided JSON format.
+         *
+         * @param request TestEventPatternRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TestEventPatternResponse
          */
         public TestEventPatternResponse TestEventPatternWithOptions(TestEventPatternRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4058,11 +4714,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to check whether the event pattern matches the provided JSON format.
-          *
-          * @param request TestEventPatternRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TestEventPatternResponse
+         * @summary Checks whether the event pattern matches the provided JSON format.
+         *
+         * @description You can call this API operation to check whether the event pattern matches the provided JSON format.
+         *
+         * @param request TestEventPatternRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TestEventPatternResponse
          */
         public async Task<TestEventPatternResponse> TestEventPatternWithOptionsAsync(TestEventPatternRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4096,10 +4754,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to check whether the event pattern matches the provided JSON format.
-          *
-          * @param request TestEventPatternRequest
-          * @return TestEventPatternResponse
+         * @summary Checks whether the event pattern matches the provided JSON format.
+         *
+         * @description You can call this API operation to check whether the event pattern matches the provided JSON format.
+         *
+         * @param request TestEventPatternRequest
+         * @return TestEventPatternResponse
          */
         public TestEventPatternResponse TestEventPattern(TestEventPatternRequest request)
         {
@@ -4108,10 +4768,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to check whether the event pattern matches the provided JSON format.
-          *
-          * @param request TestEventPatternRequest
-          * @return TestEventPatternResponse
+         * @summary Checks whether the event pattern matches the provided JSON format.
+         *
+         * @description You can call this API operation to check whether the event pattern matches the provided JSON format.
+         *
+         * @param request TestEventPatternRequest
+         * @return TestEventPatternResponse
          */
         public async Task<TestEventPatternResponse> TestEventPatternAsync(TestEventPatternRequest request)
         {
@@ -4120,11 +4782,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update an API destination.
-          *
-          * @param tmpReq UpdateApiDestinationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateApiDestinationResponse
+         * @summary Updates an API destination.
+         *
+         * @description You can call this API operation to update an API destination.
+         *
+         * @param tmpReq UpdateApiDestinationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateApiDestinationResponse
          */
         public UpdateApiDestinationResponse UpdateApiDestinationWithOptions(UpdateApiDestinationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4172,11 +4836,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update an API destination.
-          *
-          * @param tmpReq UpdateApiDestinationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateApiDestinationResponse
+         * @summary Updates an API destination.
+         *
+         * @description You can call this API operation to update an API destination.
+         *
+         * @param tmpReq UpdateApiDestinationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateApiDestinationResponse
          */
         public async Task<UpdateApiDestinationResponse> UpdateApiDestinationWithOptionsAsync(UpdateApiDestinationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4224,10 +4890,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update an API destination.
-          *
-          * @param request UpdateApiDestinationRequest
-          * @return UpdateApiDestinationResponse
+         * @summary Updates an API destination.
+         *
+         * @description You can call this API operation to update an API destination.
+         *
+         * @param request UpdateApiDestinationRequest
+         * @return UpdateApiDestinationResponse
          */
         public UpdateApiDestinationResponse UpdateApiDestination(UpdateApiDestinationRequest request)
         {
@@ -4236,10 +4904,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update an API destination.
-          *
-          * @param request UpdateApiDestinationRequest
-          * @return UpdateApiDestinationResponse
+         * @summary Updates an API destination.
+         *
+         * @description You can call this API operation to update an API destination.
+         *
+         * @param request UpdateApiDestinationRequest
+         * @return UpdateApiDestinationResponse
          */
         public async Task<UpdateApiDestinationResponse> UpdateApiDestinationAsync(UpdateApiDestinationRequest request)
         {
@@ -4248,11 +4918,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update a connection.
-          *
-          * @param tmpReq UpdateConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateConnectionResponse
+         * @summary Updates a connection.
+         *
+         * @description You can call this API operation to update a connection.
+         *
+         * @param tmpReq UpdateConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateConnectionResponse
          */
         public UpdateConnectionResponse UpdateConnectionWithOptions(UpdateConnectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4304,11 +4976,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update a connection.
-          *
-          * @param tmpReq UpdateConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateConnectionResponse
+         * @summary Updates a connection.
+         *
+         * @description You can call this API operation to update a connection.
+         *
+         * @param tmpReq UpdateConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateConnectionResponse
          */
         public async Task<UpdateConnectionResponse> UpdateConnectionWithOptionsAsync(UpdateConnectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4360,10 +5034,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update a connection.
-          *
-          * @param request UpdateConnectionRequest
-          * @return UpdateConnectionResponse
+         * @summary Updates a connection.
+         *
+         * @description You can call this API operation to update a connection.
+         *
+         * @param request UpdateConnectionRequest
+         * @return UpdateConnectionResponse
          */
         public UpdateConnectionResponse UpdateConnection(UpdateConnectionRequest request)
         {
@@ -4372,10 +5048,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update a connection.
-          *
-          * @param request UpdateConnectionRequest
-          * @return UpdateConnectionResponse
+         * @summary Updates a connection.
+         *
+         * @description You can call this API operation to update a connection.
+         *
+         * @param request UpdateConnectionRequest
+         * @return UpdateConnectionResponse
          */
         public async Task<UpdateConnectionResponse> UpdateConnectionAsync(UpdateConnectionRequest request)
         {
@@ -4384,11 +5062,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to modify an event bus.
-          *
-          * @param request UpdateEventBusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateEventBusResponse
+         * @summary Modifies an event bus.
+         *
+         * @description You can call this API operation to modify an event bus.
+         *
+         * @param request UpdateEventBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateEventBusResponse
          */
         public UpdateEventBusResponse UpdateEventBusWithOptions(UpdateEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4422,11 +5102,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to modify an event bus.
-          *
-          * @param request UpdateEventBusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateEventBusResponse
+         * @summary Modifies an event bus.
+         *
+         * @description You can call this API operation to modify an event bus.
+         *
+         * @param request UpdateEventBusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateEventBusResponse
          */
         public async Task<UpdateEventBusResponse> UpdateEventBusWithOptionsAsync(UpdateEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4460,10 +5142,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to modify an event bus.
-          *
-          * @param request UpdateEventBusRequest
-          * @return UpdateEventBusResponse
+         * @summary Modifies an event bus.
+         *
+         * @description You can call this API operation to modify an event bus.
+         *
+         * @param request UpdateEventBusRequest
+         * @return UpdateEventBusResponse
          */
         public UpdateEventBusResponse UpdateEventBus(UpdateEventBusRequest request)
         {
@@ -4472,10 +5156,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to modify an event bus.
-          *
-          * @param request UpdateEventBusRequest
-          * @return UpdateEventBusResponse
+         * @summary Modifies an event bus.
+         *
+         * @description You can call this API operation to modify an event bus.
+         *
+         * @param request UpdateEventBusRequest
+         * @return UpdateEventBusResponse
          */
         public async Task<UpdateEventBusResponse> UpdateEventBusAsync(UpdateEventBusRequest request)
         {
@@ -4484,11 +5170,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update an event source.
-          *
-          * @param tmpReq UpdateEventSourceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateEventSourceResponse
+         * @summary Updates an event source.
+         *
+         * @description You can call this API operation to update an event source.
+         *
+         * @param tmpReq UpdateEventSourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateEventSourceResponse
          */
         public UpdateEventSourceResponse UpdateEventSourceWithOptions(UpdateEventSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4584,11 +5272,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update an event source.
-          *
-          * @param tmpReq UpdateEventSourceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateEventSourceResponse
+         * @summary Updates an event source.
+         *
+         * @description You can call this API operation to update an event source.
+         *
+         * @param tmpReq UpdateEventSourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateEventSourceResponse
          */
         public async Task<UpdateEventSourceResponse> UpdateEventSourceWithOptionsAsync(UpdateEventSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4684,10 +5374,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update an event source.
-          *
-          * @param request UpdateEventSourceRequest
-          * @return UpdateEventSourceResponse
+         * @summary Updates an event source.
+         *
+         * @description You can call this API operation to update an event source.
+         *
+         * @param request UpdateEventSourceRequest
+         * @return UpdateEventSourceResponse
          */
         public UpdateEventSourceResponse UpdateEventSource(UpdateEventSourceRequest request)
         {
@@ -4696,10 +5388,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update an event source.
-          *
-          * @param request UpdateEventSourceRequest
-          * @return UpdateEventSourceResponse
+         * @summary Updates an event source.
+         *
+         * @description You can call this API operation to update an event source.
+         *
+         * @param request UpdateEventSourceRequest
+         * @return UpdateEventSourceResponse
          */
         public async Task<UpdateEventSourceResponse> UpdateEventSourceAsync(UpdateEventSourceRequest request)
         {
@@ -4708,11 +5402,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-          *
-          * @param tmpReq UpdateEventStreamingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateEventStreamingResponse
+         * @summary Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
+         *
+         * @description You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
+         *
+         * @param tmpReq UpdateEventStreamingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateEventStreamingResponse
          */
         public UpdateEventStreamingResponse UpdateEventStreamingWithOptions(UpdateEventStreamingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4784,11 +5480,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-          *
-          * @param tmpReq UpdateEventStreamingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateEventStreamingResponse
+         * @summary Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
+         *
+         * @description You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
+         *
+         * @param tmpReq UpdateEventStreamingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateEventStreamingResponse
          */
         public async Task<UpdateEventStreamingResponse> UpdateEventStreamingWithOptionsAsync(UpdateEventStreamingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4860,10 +5558,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-          *
-          * @param request UpdateEventStreamingRequest
-          * @return UpdateEventStreamingResponse
+         * @summary Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
+         *
+         * @description You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
+         *
+         * @param request UpdateEventStreamingRequest
+         * @return UpdateEventStreamingResponse
          */
         public UpdateEventStreamingResponse UpdateEventStreaming(UpdateEventStreamingRequest request)
         {
@@ -4872,10 +5572,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-          *
-          * @param request UpdateEventStreamingRequest
-          * @return UpdateEventStreamingResponse
+         * @summary Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
+         *
+         * @description You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
+         *
+         * @param request UpdateEventStreamingRequest
+         * @return UpdateEventStreamingResponse
          */
         public async Task<UpdateEventStreamingResponse> UpdateEventStreamingAsync(UpdateEventStreamingRequest request)
         {
@@ -4884,11 +5586,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update the configurations of an event rule.
-          *
-          * @param request UpdateRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateRuleResponse
+         * @summary Updates the configurations of an event rule.
+         *
+         * @description You can call this API operation to update the configurations of an event rule.
+         *
+         * @param request UpdateRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateRuleResponse
          */
         public UpdateRuleResponse UpdateRuleWithOptions(UpdateRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4934,11 +5638,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update the configurations of an event rule.
-          *
-          * @param request UpdateRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateRuleResponse
+         * @summary Updates the configurations of an event rule.
+         *
+         * @description You can call this API operation to update the configurations of an event rule.
+         *
+         * @param request UpdateRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateRuleResponse
          */
         public async Task<UpdateRuleResponse> UpdateRuleWithOptionsAsync(UpdateRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4984,10 +5690,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update the configurations of an event rule.
-          *
-          * @param request UpdateRuleRequest
-          * @return UpdateRuleResponse
+         * @summary Updates the configurations of an event rule.
+         *
+         * @description You can call this API operation to update the configurations of an event rule.
+         *
+         * @param request UpdateRuleRequest
+         * @return UpdateRuleResponse
          */
         public UpdateRuleResponse UpdateRule(UpdateRuleRequest request)
         {
@@ -4996,10 +5704,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         }
 
         /**
-          * You can call this API operation to update the configurations of an event rule.
-          *
-          * @param request UpdateRuleRequest
-          * @return UpdateRuleResponse
+         * @summary Updates the configurations of an event rule.
+         *
+         * @description You can call this API operation to update the configurations of an event rule.
+         *
+         * @param request UpdateRuleRequest
+         * @return UpdateRuleResponse
          */
         public async Task<UpdateRuleResponse> UpdateRuleAsync(UpdateRuleRequest request)
         {

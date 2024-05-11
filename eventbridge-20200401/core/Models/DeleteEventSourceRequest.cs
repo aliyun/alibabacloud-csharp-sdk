@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The name of the event source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventSourceName")]
         [Validation(Required=false)]

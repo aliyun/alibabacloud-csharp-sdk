@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The name of the event bus with which the event source is associated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The name of the event source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventSourceName")]
         [Validation(Required=false)]

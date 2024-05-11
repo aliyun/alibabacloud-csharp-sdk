@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The name of the event stream.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventStreamingName")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The rule that is used to filter events. If you leave this parameter empty, all events are matched.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FilterPattern")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The event target. You must and can specify only one event target.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Sink")]
         [Validation(Required=false)]
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The event provider, which is also known as the event source. You must and can specify only one event source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

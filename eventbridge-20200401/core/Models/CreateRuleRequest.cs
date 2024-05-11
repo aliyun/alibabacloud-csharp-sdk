@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The name of the event bus.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
@@ -62,6 +64,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// The ID of the custom event target.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -113,6 +117,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// The type of the event target. For more information, see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -124,6 +130,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// The event pattern, in JSON format. Valid values: stringEqual and stringExpression. You can specify up to five expressions in the map data structure in each field.
         /// 
         /// You can specify up to five expressions in the map data structure in each field.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FilterPattern")]
         [Validation(Required=false)]
@@ -131,6 +139,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The name of the event rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

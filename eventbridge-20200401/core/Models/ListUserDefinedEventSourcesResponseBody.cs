@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     /// 
                     /// *   HTTP
                     /// *   HTTPS
-                    /// *   HTTP\&HTTPS
+                    /// *   HTTP\\&HTTPS
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -261,14 +261,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceRabbitMQParameters SourceRabbitMQParameters { get; set; }
                 public class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceRabbitMQParameters : TeaModel {
                     /// <summary>
-                    /// The ID of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
+                    /// The ID of the Message Queue for RabbitMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
+                    /// The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).
                     /// </summary>
                     [NameInMap("QueueName")]
                     [Validation(Required=false)]
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
+                    /// The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).
                     /// </summary>
                     [NameInMap("VirtualHostName")]
                     [Validation(Required=false)]
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceEndpoint { get; set; }
 
                     /// <summary>
-                    /// The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
+                    /// The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -347,7 +347,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceSecurityGroupId { get; set; }
 
                     /// <summary>
-                    /// The instance type. Valid values: CLOUD\_4, CLOUD\_5, and SELF_BUILT. The value CLOUD\_4 indicates that the instance is a Message Queue for Apache RocketMQ 4.0 instance. The value CLOUD\_5 indicates that the instance is a Message Queue for Apache RocketMQ 5.0 instance. The value SELF_BUILT indicates that the instance is a self-managed RocketMQ instance.
+                    /// The instance type. Valid values: CLOUD_4, CLOUD_5, and SELF_BUILT. The value CLOUD_4 indicates that the instance is a Message Queue for Apache RocketMQ 4.0 instance. The value CLOUD_5 indicates that the instance is a Message Queue for Apache RocketMQ 5.0 instance. The value SELF_BUILT indicates that the instance is a self-managed RocketMQ instance.
                     /// </summary>
                     [NameInMap("InstanceType")]
                     [Validation(Required=false)]
@@ -409,7 +409,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public float? Timestamp { get; set; }
 
                     /// <summary>
-                    /// The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
+                    /// The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]

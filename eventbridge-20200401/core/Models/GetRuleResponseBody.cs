@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public List<GetRuleResponseBodyDataTargetsParamList> ParamList { get; set; }
                 public class GetRuleResponseBodyDataTargetsParamList : TeaModel {
                     /// <summary>
-                    /// The method that is used to deliver events to the event target. For more information, see [Limits](~~163289~~).
+                    /// The method that is used to deliver events to the event target. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).
                     /// </summary>
                     [NameInMap("Form")]
                     [Validation(Required=false)]
                     public string Form { get; set; }
 
                     /// <summary>
-                    /// The resource key of the event target. For more information, see [Limits](~~163289~~).
+                    /// The resource key of the event target. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).
                     /// </summary>
                     [NameInMap("ResourceKey")]
                     [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string PushSelector { get; set; }
 
                 /// <summary>
-                /// The type of the event target. For more information, see [Event target parameters](~~185887~~).
+                /// The type of the event target. For more information, see [Event target parameters](https://help.aliyun.com/document_detail/185887.html).
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

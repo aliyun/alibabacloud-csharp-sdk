@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
     public class QueryEventTracesRequest : TeaModel {
         /// <summary>
         /// The name of the event bus.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The event ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]

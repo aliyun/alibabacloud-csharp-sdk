@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
     public class GetConnectionRequest : TeaModel {
         /// <summary>
         /// The connection name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectionName")]
         [Validation(Required=false)]

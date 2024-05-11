@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
     public class PutTargetsRequest : TeaModel {
         /// <summary>
         /// The name of the event bus.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The name of the event rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The event targets to be created or updated. For more information, see [Limits.](https://www.alibabacloud.com/help/en/eventbridge/latest/limits)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
@@ -66,6 +72,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// The ID of the custom event target.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -121,6 +129,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// The type of the event target. For more information, see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// The type of the event target. For more information, see [Event target parameters](~~183698~~).
+                /// The type of the event target. For more information, see [Event target parameters](https://help.aliyun.com/document_detail/183698.html).
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

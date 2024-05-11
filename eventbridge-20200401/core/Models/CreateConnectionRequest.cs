@@ -243,6 +243,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The name of the connection. The name must be 2 to 127 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectionName")]
         [Validation(Required=false)]
@@ -257,6 +259,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The parameters that are configured for the network.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkParameters")]
         [Validation(Required=false)]
@@ -268,6 +272,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// PublicNetwork and PrivateNetwork.
             /// 
             /// *   Note: If you set this parameter to PrivateNetwork, you must configure VpcId, VswitcheId, and SecurityGroupId.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("NetworkType")]
             [Validation(Required=false)]

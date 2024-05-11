@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
     public class CreateApiDestinationShrinkRequest : TeaModel {
         /// <summary>
         /// The name of the API destination. The name must be 2 to 127 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiDestinationName")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// 
         /// > 
         /// >  Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectionName")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// The parameters that are configured for the API destination.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HttpApiParameters")]
         [Validation(Required=false)]
