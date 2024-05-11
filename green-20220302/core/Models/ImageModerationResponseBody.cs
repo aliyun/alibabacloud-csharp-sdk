@@ -25,6 +25,38 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public ImageModerationResponseBodyDataExt Ext { get; set; }
             public class ImageModerationResponseBodyDataExt : TeaModel {
+                [NameInMap("OcrResult")]
+                [Validation(Required=false)]
+                public List<ImageModerationResponseBodyDataExtOcrResult> OcrResult { get; set; }
+                public class ImageModerationResponseBodyDataExtOcrResult : TeaModel {
+                    [NameInMap("Location")]
+                    [Validation(Required=false)]
+                    public ImageModerationResponseBodyDataExtOcrResultLocation Location { get; set; }
+                    public class ImageModerationResponseBodyDataExtOcrResultLocation : TeaModel {
+                        [NameInMap("H")]
+                        [Validation(Required=false)]
+                        public int? H { get; set; }
+
+                        [NameInMap("W")]
+                        [Validation(Required=false)]
+                        public int? W { get; set; }
+
+                        [NameInMap("X")]
+                        [Validation(Required=false)]
+                        public int? X { get; set; }
+
+                        [NameInMap("Y")]
+                        [Validation(Required=false)]
+                        public int? Y { get; set; }
+
+                    }
+
+                    [NameInMap("Text")]
+                    [Validation(Required=false)]
+                    public string Text { get; set; }
+
+                }
+
                 [NameInMap("Recognition")]
                 [Validation(Required=false)]
                 public List<ImageModerationResponseBodyDataExtRecognition> Recognition { get; set; }
