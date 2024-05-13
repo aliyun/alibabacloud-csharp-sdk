@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class CreateInstanceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AdminRamIdList")]
         [Validation(Required=false)]
         public string AdminRamIdList { get; set; }
@@ -17,14 +20,23 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("NumberList")]
         [Validation(Required=false)]
         public string NumberList { get; set; }

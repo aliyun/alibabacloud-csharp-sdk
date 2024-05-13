@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class CreateCallTagsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CallTagNameList")]
         [Validation(Required=false)]
         public string CallTagNameList { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
