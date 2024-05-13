@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string DivisionCode { get; set; }
 
+        [NameInMap("extendProperties")]
+        [Validation(Required=false)]
+        public List<ProductExtendProperty> ExtendProperties { get; set; }
+
         [NameInMap("fuzzyQuantity")]
         [Validation(Required=false)]
         public string FuzzyQuantity { get; set; }
