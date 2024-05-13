@@ -1,3 +1,7 @@
+2024-05-13 Version: 1.8.2
+- Update API CreateDBInstance: update param SecurityIPList.
+
+
 2024-05-11 Version: 1.8.1
 - Generated csharp 2016-05-03 for gpdb.
 
