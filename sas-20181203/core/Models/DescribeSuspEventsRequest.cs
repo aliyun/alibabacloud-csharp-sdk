@@ -266,6 +266,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("StrictMode")]
+        [Validation(Required=false)]
+        public string StrictMode { get; set; }
+
         /// <summary>
         /// The tactic ID of ATT\\&CK.
         /// </summary>

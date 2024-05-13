@@ -34927,6 +34927,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrictMode))
+            {
+                query["StrictMode"] = request.StrictMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
             {
                 query["TargetType"] = request.TargetType;
@@ -35086,6 +35090,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrictMode))
+            {
+                query["StrictMode"] = request.StrictMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
             {
