@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class FetchImageTaskRequest : TeaModel {
+    public class ListCustomTextRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -16,19 +16,9 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("ArticleTaskId")]
+        [NameInMap("CommodityCode")]
         [Validation(Required=false)]
-        public string ArticleTaskId { get; set; }
-
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("TaskIdList")]
-        [Validation(Required=false)]
-        public List<string> TaskIdList { get; set; }
+        public string CommodityCode { get; set; }
 
     }
 
