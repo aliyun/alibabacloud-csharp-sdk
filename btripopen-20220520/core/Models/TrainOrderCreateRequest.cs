@@ -215,9 +215,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ProjectCode { get; set; }
 
-                [NameInMap("project_name")]
+                [NameInMap("project_title")]
                 [Validation(Required=false)]
-                public string ProjectName { get; set; }
+                public string ProjectTitle { get; set; }
 
             }
 
