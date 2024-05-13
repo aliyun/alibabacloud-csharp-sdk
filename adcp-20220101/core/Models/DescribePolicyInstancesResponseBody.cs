@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
             /// <summary>
             /// The applicable scope of the policy instance.
             /// 
-            /// A value of \* indicates all namespaces. This is the default value.
+            /// A value of \\* indicates all namespaces. This is the default value.
             /// 
             /// Multiple namespaces are separated by commas (,).
             /// </summary>

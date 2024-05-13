@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 
         /// <summary>
         /// The ID of the RAM user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

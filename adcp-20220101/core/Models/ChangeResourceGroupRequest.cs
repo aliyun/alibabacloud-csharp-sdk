@@ -8,31 +8,31 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
-    public class DetachClusterFromHubRequest : TeaModel {
+    public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the new resource group.
         /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("ClusterId")]
+        [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **DetachClusterFromHub**.
+        /// The resource ID. If ResourceType=cluster, the resource ID is ClusterId.
         /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("ClusterIds")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public string ClusterIds { get; set; }
+        public string ResourceId { get; set; }
 
         /// <summary>
-        /// Example 1
+        /// The type of the resource. Only cluster are supported. Set the value to cluster.
         /// </summary>
-        [NameInMap("DetachFromMesh")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public bool? DetachFromMesh { get; set; }
+        public string ResourceType { get; set; }
 
     }
 

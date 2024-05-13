@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -21,6 +18,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 
         /// <summary>
         /// The ID of the task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -28,6 +27,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]

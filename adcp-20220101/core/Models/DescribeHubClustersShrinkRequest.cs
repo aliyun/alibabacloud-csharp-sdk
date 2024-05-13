@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
-    public class DescribeHubClustersRequest : TeaModel {
+    public class DescribeHubClustersShrinkRequest : TeaModel {
         /// <summary>
         /// The configurations of the cluster.
         /// </summary>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<Tag> Tag { get; set; }
+        public string TagShrink { get; set; }
 
     }
 

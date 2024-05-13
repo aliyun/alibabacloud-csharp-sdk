@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
     public class DescribeUserPermissionsRequest : TeaModel {
         /// <summary>
         /// The ID of the RAM user that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

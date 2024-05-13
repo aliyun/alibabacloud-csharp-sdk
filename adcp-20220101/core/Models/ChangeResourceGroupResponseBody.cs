@@ -8,15 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
-    public class DescribePolicyInstancesStatusRequest : TeaModel {
+    public class ChangeResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the master instance.
-        /// 
-        /// This parameter is required.
+        /// Id of the request
         /// </summary>
-        [NameInMap("ClusterId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

@@ -248,6 +248,20 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 [Validation(Required=false)]
                 public string State { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public List<DescribeHubClusterDetailsResponseBodyClusterClusterInfoTags> Tags { get; set; }
+                public class DescribeHubClusterDetailsResponseBodyClusterClusterInfoTags : TeaModel {
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
                 /// <summary>
                 /// The time when the master instance was updated.
                 /// </summary>
@@ -479,7 +493,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                     /// <summary>
                     /// The region ID of the cluster.
                     /// 
-                    /// >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+                    /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/143074.html) operation to query the most recent region list.
                     /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
@@ -502,7 +516,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                         /// <summary>
                         /// The zone ID of the cluster.
                         /// 
-                        /// > You can call the [DescribeRegions](~~143074~~) operation to query the most recent zone list.
+                        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/143074.html) operation to query the most recent zone list.
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]

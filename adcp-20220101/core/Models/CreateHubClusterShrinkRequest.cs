@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
-    public class CreateHubClusterRequest : TeaModel {
+    public class CreateHubClusterShrinkRequest : TeaModel {
         /// <summary>
         /// Specifies whether to expose the API server to the Internet. Valid values:
         /// 
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<Tag> Tag { get; set; }
+        public string TagShrink { get; set; }
 
         /// <summary>
         /// The ID of the vSwitch.

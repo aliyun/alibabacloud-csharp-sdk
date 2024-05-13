@@ -129,6 +129,20 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 [Validation(Required=false)]
                 public string State { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public List<DescribeHubClustersResponseBodyClustersClusterInfoTags> Tags { get; set; }
+                public class DescribeHubClustersResponseBodyClustersClusterInfoTags : TeaModel {
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
                 /// <summary>
                 /// The time when the cluster was last updated.
                 /// </summary>

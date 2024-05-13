@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
     public class DeployPolicyInstanceRequest : TeaModel {
         /// <summary>
         /// The ID of the master instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 
         /// <summary>
         /// An array of JSON strings. The JSON strings in the array indicate the IDs of the associated clusters in which the policy instance is deployed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         /// 
         /// *   deny: blocks deployments that match the policy.
         /// *   warn: generates alerts for deployments that match the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyAction")]
         [Validation(Required=false)]
@@ -42,6 +48,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 
         /// <summary>
         /// The name of the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]

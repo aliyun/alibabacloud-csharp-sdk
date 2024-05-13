@@ -75,6 +75,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         public bool? MonitorEnabled { get; set; }
 
         /// <summary>
-        /// The name of the master instance. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).
+        /// The name of the master instance. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

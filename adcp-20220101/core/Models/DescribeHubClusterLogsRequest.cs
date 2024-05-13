@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
     public class DescribeHubClusterLogsRequest : TeaModel {
         /// <summary>
         /// The ID of the master instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

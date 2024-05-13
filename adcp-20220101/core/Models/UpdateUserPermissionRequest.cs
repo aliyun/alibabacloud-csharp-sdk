@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
     public class UpdateUserPermissionRequest : TeaModel {
         /// <summary>
         /// The ID of the master instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         /// 
         /// *   admin: the administrator role.
         /// *   dev: the developer role.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         /// 
         /// *   cluster: specifies that the permissions are scoped to a master instance.
         /// *   namespace: specifies that the permissions are scoped to a namespace of a cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 
         /// <summary>
         /// The ID of the RAM user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

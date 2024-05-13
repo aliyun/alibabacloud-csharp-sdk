@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
     public class DeletePolicyInstanceRequest : TeaModel {
         /// <summary>
         /// The ID of the master instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 
         /// <summary>
         /// The name of the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
