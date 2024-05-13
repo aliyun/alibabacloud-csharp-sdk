@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 {
-    public class ModifyDefenseThresholdRequest : TeaModel {
+    public class ModifyIpDefenseThresholdRequest : TeaModel {
         /// <summary>
         /// Specifies the traffic scrubbing threshold. Unit: Mbit/s. The traffic scrubbing threshold cannot exceed the peak inbound or outbound Internet traffic, whichever is larger, of the asset.
         /// 
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         public int? Bps { get; set; }
 
         /// <summary>
-        /// The region ID of the asset for which you want to change the scrubbing thresholds.
+        /// The region ID of the asset.
         /// 
         /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/353250.html) operation to query the most recent region list.
         /// 
@@ -58,6 +58,8 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 
         /// <summary>
         /// The IP address of the asset.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InternetIp")]
         [Validation(Required=false)]
@@ -66,10 +68,8 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         /// <summary>
         /// Specifies whether to automatically adjust the scrubbing threshold based on the traffic load on the asset. Valid values:
         /// 
-        /// *   **true**: automatically adjusts the scrubbing thresholds. You do not need to configure the **Bps** and **Pps** parameters.
-        /// *   **false**: The scrubbing threshold is not automatically adjusted. You must configure the **Bps** and **Pps** parameters.
-        /// 
-        /// Default value: false.
+        /// *   **true**: automatically adjusts the scrubbing threshold. You do not need to configure the **Bps** and **Pps** parameters.
+        /// *   **false**: The scrubbing threshold is not automatically adjusted. You must configure the **Bps** and **Pps** parameters. This is the default value.
         /// </summary>
         [NameInMap("IsAuto")]
         [Validation(Required=false)]

@@ -1,3 +1,6 @@
+2024-05-13 Version: 1.0.8
+- Generated csharp 2017-05-18 for antiddos-public.
+
 2022-07-12 Version: 1.0.7
 - Automatically generate sdk tasks.
 
