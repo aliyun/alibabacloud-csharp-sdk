@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetUserRequest : TeaModel {
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string Uid { get; set; }
 
         /// <summary>
-        /// The ID of the user. You can call the [ListUsers](~~141938~~) operation to query the ID of the user.
+        /// The ID of the user. You can call the [ListUsers](https://help.aliyun.com/document_detail/141938.html) operation to query the ID of the user.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

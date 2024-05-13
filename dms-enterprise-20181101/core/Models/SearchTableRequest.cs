@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string DbType { get; set; }
 
         /// <summary>
-        /// The type of the environment to which databases belong. For more information, see [Change the environment type of an instance](~~163309~~).
+        /// The type of the environment to which databases belong. For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The ID of the tenant.
         /// 
-        /// > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
+        /// > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) section of the "Manage DMS tenants" topic.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

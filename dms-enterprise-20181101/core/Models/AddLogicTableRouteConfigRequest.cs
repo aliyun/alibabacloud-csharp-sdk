@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class AddLogicTableRouteConfigRequest : TeaModel {
         /// <summary>
         /// The routing algorithm expression. For more information about how to configure a routing algorithm expression, see [Configure a routing algorithm](https://www.alibabacloud.com/help/en/data-management-service/latest/configure-a-routing-algorithm).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteExpr")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// 
         /// > - You can create a custom unique key for the routing algorithm. No requirements are imposed on custom unique keys.
         /// > - The unique key of the routing algorithm in the same logical table must be unique.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteKey")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The ID of the logical table. You can call the [ListLogicTables](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables) operation to query the ID of the logical table.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableId")]
         [Validation(Required=false)]

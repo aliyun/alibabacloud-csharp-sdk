@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSensitivityLevelRequest : TeaModel {
         /// <summary>
-        /// The ID of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the ID of the classification template.
+        /// The ID of the classification template. You can call the [ListClassificationTemplates](https://help.aliyun.com/document_detail/460613.html) operation to query the ID of the classification template.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public long? TemplateId { get; set; }
 
         /// <summary>
-        /// The type of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the type of the classification template.
+        /// The type of the classification template. You can call the [ListClassificationTemplates](https://help.aliyun.com/document_detail/460613.html) operation to query the type of the classification template.
         /// 
         /// Valid values:
         /// 
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The ID of the tenant.
         /// 
-        /// >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~) in the topic "Manage DMS tenants."
+        /// >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) in the topic "Manage DMS tenants."
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

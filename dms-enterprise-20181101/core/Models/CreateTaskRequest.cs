@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+        /// The ID of the task flow. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to query the task flow ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The name of the node that you want to create.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]
@@ -45,7 +49,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string NodeOutput { get; set; }
 
         /// <summary>
-        /// The type of the node that you want to create. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+        /// The type of the node that you want to create. For more information about the valid values for this parameter, see [NodeType parameter](https://help.aliyun.com/document_detail/424705.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The tenant ID.
         /// 
-        /// >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+        /// >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

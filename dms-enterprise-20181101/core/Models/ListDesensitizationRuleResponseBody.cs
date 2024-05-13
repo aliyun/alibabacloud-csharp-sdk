@@ -90,6 +90,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The error code returned if the request failed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

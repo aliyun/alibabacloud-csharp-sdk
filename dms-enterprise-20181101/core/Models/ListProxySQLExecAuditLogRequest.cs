@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class ListProxySQLExecAuditLogRequest : TeaModel {
         /// <summary>
         /// The end of the time range to query. The value of this parameter must be a timestamp that follows the UNIX time format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -71,13 +73,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The beginning of the time range to query. The value of this parameter must be a timestamp that follows the UNIX time format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// *   **REJECT**
         /// *   **TRANSFER**
         /// *   **ADD_APPROVAL_NODE**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApprovalType")]
         [Validation(Required=false)]
@@ -65,14 +67,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? OldApprover { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
         /// <summary>
-        /// The ID of the approval process. You can call the [GetOrderBaseInfo](~~144642~~) operation to obtain the ID of the approval process.
+        /// The ID of the approval process. You can call the [GetOrderBaseInfo](https://help.aliyun.com/document_detail/144642.html) operation to obtain the ID of the approval process.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WorkflowInstanceId")]
         [Validation(Required=false)]

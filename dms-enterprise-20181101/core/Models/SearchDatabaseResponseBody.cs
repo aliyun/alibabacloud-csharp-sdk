@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string Encoding { get; set; }
 
                 /// <summary>
-                /// The environment type of the database. For more information, see [Change the environment type of an instance](~~163309~~).
+                /// The environment type of the database. For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).
                 /// </summary>
                 [NameInMap("EnvType")]
                 [Validation(Required=false)]

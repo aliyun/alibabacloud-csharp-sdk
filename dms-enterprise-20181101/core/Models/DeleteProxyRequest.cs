@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class DeleteProxyRequest : TeaModel {
         /// <summary>
         /// The ID of the security protection agent. You can call the [ListProxies](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies) or [GetProxy](https://www.alibabacloud.com/help/en/data-management-service/latest/getproxy) operation to obtain this parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProxyId")]
         [Validation(Required=false)]

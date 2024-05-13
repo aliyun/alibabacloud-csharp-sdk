@@ -263,16 +263,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string ClusterNode { get; set; }
 
                     /// <summary>
-                    /// The ID of the database. You can call the [SearchDatabase](~~141876~~) operation to query the ID of the database.
+                    /// The ID of the database. You can call the [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to query the ID of the database.
                     /// 
-                    /// >  You can call the [ListDatabases](~~141873~~) operation to query the ID of a physical database or the [ListLogicDatabases](~~141874~~) operation to query the ID of a logical database.
+                    /// >  You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) operation to query the ID of a physical database or the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) operation to query the ID of a logical database.
                     /// </summary>
                     [NameInMap("DbId")]
                     [Validation(Required=false)]
                     public long? DbId { get; set; }
 
                     /// <summary>
-                    /// The type of the database. For information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+                    /// The type of the database. For information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).
                     /// </summary>
                     [NameInMap("DbType")]
                     [Validation(Required=false)]
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public bool? Logic { get; set; }
 
                     /// <summary>
-                    /// The IDs of the owners of the databases, which are stored as an array. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the IDs of the owners.
+                    /// The IDs of the owners of the databases, which are stored as an array. You can call the [GetUser](https://help.aliyun.com/document_detail/147098.html) or [ListUsers](https://help.aliyun.com/document_detail/141938.html) operation to query the IDs of the owners.
                     /// 
                     /// >  The value of OwnerIds is the same as the value of UserId
                     /// </summary>
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraDataDbBaseInfoStandardGroup StandardGroup { get; set; }
                     public class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraDataDbBaseInfoStandardGroup : TeaModel {
                         /// <summary>
-                        /// The type of the instance engine. For information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+                        /// The type of the instance engine. For information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).
                         /// </summary>
                         [NameInMap("DbType")]
                         [Validation(Required=false)]
@@ -570,7 +570,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string BusinessTime { get; set; }
 
                     /// <summary>
-                    /// The ID of the task. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+                    /// The ID of the task. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to query the task flow ID.
                     /// </summary>
                     [NameInMap("DagId")]
                     [Validation(Required=false)]
@@ -705,7 +705,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The ticket creation parameter. The value is a JSON string. For more information, see [PluginType parameter](~~429109~~).
+            /// The ticket creation parameter. The value is a JSON string. For more information, see [PluginType parameter](https://help.aliyun.com/document_detail/429109.html).
             /// </summary>
             [NameInMap("PluginParam")]
             [Validation(Required=false)]
@@ -803,7 +803,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The plug-in type that corresponds to the type of the ticket. The plug-in type for data archiving is DATA_ARCHIVE. For more information, see [PluginType parameter](~~429109~~).
+            /// The plug-in type that corresponds to the type of the ticket. The plug-in type for data archiving is DATA_ARCHIVE. For more information, see [PluginType parameter](https://help.aliyun.com/document_detail/429109.html).
             /// </summary>
             [NameInMap("PluginType")]
             [Validation(Required=false)]
@@ -846,7 +846,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string StatusDesc { get; set; }
 
             /// <summary>
-            /// The ID of the approval process. You can call the [GetOrderBaseInfo](~~144642~~) operation to obtain the ID of the approval process.
+            /// The ID of the approval process. You can call the [GetOrderBaseInfo](https://help.aliyun.com/document_detail/144642.html) operation to obtain the ID of the approval process.
             /// </summary>
             [NameInMap("WorkflowInstanceId")]
             [Validation(Required=false)]

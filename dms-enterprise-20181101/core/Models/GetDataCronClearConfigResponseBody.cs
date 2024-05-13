@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string CronCallTimes { get; set; }
 
             /// <summary>
-            /// The crontab expression that you can use to run the task at a specified time. For more information, see [Crontab expression](~~206581~~).
+            /// The crontab expression that you can use to run the task at a specified time. For more information, see [Crontab expression](https://help.aliyun.com/document_detail/206581.html).
             /// </summary>
             [NameInMap("CronFormat")]
             [Validation(Required=false)]

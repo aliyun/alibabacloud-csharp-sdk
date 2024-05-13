@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class GetDatabaseRequest : TeaModel {
         /// <summary>
         /// The endpoint that is used to connect to the database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The port that is used to connect to the database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The name of the database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SchemaName")]
         [Validation(Required=false)]
@@ -40,7 +46,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string Sid { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the ID of the tenant.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

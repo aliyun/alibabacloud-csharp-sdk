@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The unique ID (UID) of Alibaba Cloud account to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]

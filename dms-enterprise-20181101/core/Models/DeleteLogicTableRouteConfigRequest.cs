@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class DeleteLogicTableRouteConfigRequest : TeaModel {
         /// <summary>
         /// The unique key of the routing algorithm. You can call the [ListLogicTableRouteConfig](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictablerouteconfig) operation to query the unique key.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteKey")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The ID of the logical table. You can call the [ListLogicTables](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables) operation to query the ID of the logical table.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableId")]
         [Validation(Required=false)]

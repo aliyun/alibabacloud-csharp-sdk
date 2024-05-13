@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateDataCorrectOrderRequest : TeaModel {
         /// <summary>
-        /// The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
+        /// The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to obtain the attachment key from the value of the AttachmentKey parameter.
         /// </summary>
         [NameInMap("AttachmentKey")]
         [Validation(Required=false)]
@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -25,13 +27,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The parameters of the ticket.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Param")]
         [Validation(Required=false)]
         public CreateDataCorrectOrderRequestParam Param { get; set; }
         public class CreateDataCorrectOrderRequestParam : TeaModel {
             /// <summary>
-            /// The key of the attachment that contains the SQL statements used to change data. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
+            /// The key of the attachment that contains the SQL statements used to change data. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to obtain the attachment key from the value of the AttachmentKey parameter.
             /// 
             /// >  This parameter is required if you set the **SqlType** parameter to **ATTACHMENT**.
             /// </summary>
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
             /// <summary>
             /// The databases in which you want to change data.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DbItemList")]
             [Validation(Required=false)]
@@ -56,8 +62,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <summary>
                 /// The ID of the database. The database can be a physical database or a logical database.
                 /// 
-                /// *   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
-                /// *   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
+                /// *   To obtain the ID of a physical database, call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.
+                /// *   To obtain the ID of a logical database, call the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("DbId")]
                 [Validation(Required=false)]
@@ -68,6 +76,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// 
                 /// *   **true**: The database is a logical database.
                 /// *   **false**: The database is a physical database.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("Logic")]
                 [Validation(Required=false)]
@@ -77,6 +87,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
             /// <summary>
             /// The estimated number of data rows to be affected by the data change.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("EstimateAffectRows")]
             [Validation(Required=false)]
@@ -103,7 +115,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string ExecSQL { get; set; }
 
             /// <summary>
-            /// The key of the attachment that contains the SQL statements used to roll back the data change. You can call the [GetUserUploadFileJob](~~206069~~) operation to the attachment key from the value of the AttachmentKey parameter.
+            /// The key of the attachment that contains the SQL statements used to roll back the data change. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to the attachment key from the value of the AttachmentKey parameter.
             /// 
             /// >  This parameter is required if you set the **RollbackSqlType** parameter to **ATTACHMENT**.
             /// </summary>
@@ -135,6 +147,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             /// 
             /// *   **TEXT**: text
             /// *   **ATTACHMENT**: attachment
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("SqlType")]
             [Validation(Required=false)]
@@ -150,7 +164,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public List<long?> RelatedUserList { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

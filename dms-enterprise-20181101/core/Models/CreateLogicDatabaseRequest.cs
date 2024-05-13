@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class CreateLogicDatabaseRequest : TeaModel {
         /// <summary>
         /// The alias of the logical database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Alias")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The IDs of the physical databases that compose the logical database. You can specify one or more database IDs. You can call the [ListDatabases](https://www.alibabacloud.com/help/en/data-management-service/latest/listdatabases) or [SearchDatabase](https://www.alibabacloud.com/help/en/data-management-service/latest/searchdatabase) operation to query the IDs of the physical databases.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatabaseIds")]
         [Validation(Required=false)]

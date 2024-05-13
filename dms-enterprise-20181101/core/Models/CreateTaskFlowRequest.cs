@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class CreateTaskFlowRequest : TeaModel {
         /// <summary>
         /// The name of the task flow.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DagName")]
         [Validation(Required=false)]
@@ -31,7 +33,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? ScenarioId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

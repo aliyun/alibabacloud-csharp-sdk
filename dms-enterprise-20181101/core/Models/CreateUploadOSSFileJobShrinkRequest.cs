@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// The name of the file.
         /// 
         /// > The file name must end with .txt or .sql. For example, the file name can be text.txt.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// *   **order_info_attachment**: The file is uploaded as an attachment in a ticket.
         /// *   **big-file**: The file is uploaded to import multiple data records at a time.
         /// *   **sqlreview**: The file is uploaded for SQL review.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSource")]
         [Validation(Required=false)]
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The ID of the tenant.
         /// 
-        /// > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+        /// > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
@@ -41,6 +45,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The information about the OSS file to be uploaded.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UploadTarget")]
         [Validation(Required=false)]

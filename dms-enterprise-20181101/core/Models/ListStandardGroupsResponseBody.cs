@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public List<ListStandardGroupsResponseBodyStandardGroupList> StandardGroupList { get; set; }
         public class ListStandardGroupsResponseBodyStandardGroupList : TeaModel {
             /// <summary>
-            /// The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+            /// The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).
             /// </summary>
             [NameInMap("DbType")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateOrderShrinkRequest : TeaModel {
         /// <summary>
-        /// The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.
+        /// The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to query the key of the attachment.
         /// </summary>
         [NameInMap("AttachmentKey")]
         [Validation(Required=false)]
@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The description of the ticket to be created.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -25,13 +27,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The ticket creation parameter. The value is a JSON string. The value of this parameter differs based on the type of the ticket. For more information, see the **PluginParam parameter** section in this topic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PluginParam")]
         [Validation(Required=false)]
         public string PluginParamShrink { get; set; }
 
         /// <summary>
-        /// The type of the ticket. For more information, see [PluginType parameter](~~429109~~).
+        /// The type of the ticket. For more information, see [PluginType parameter](https://help.aliyun.com/document_detail/429109.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PluginType")]
         [Validation(Required=false)]
@@ -45,7 +51,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RelatedUserList { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

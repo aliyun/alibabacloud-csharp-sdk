@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public long? DbId { get; set; }
 
             /// <summary>
-            /// The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](~~265977~~) operation to query the details of optimization suggestions based on the key.
+            /// The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](https://help.aliyun.com/document_detail/265977.html) operation to query the details of optimization suggestions based on the key.
             /// </summary>
             [NameInMap("SQLReviewQueryKey")]
             [Validation(Required=false)]

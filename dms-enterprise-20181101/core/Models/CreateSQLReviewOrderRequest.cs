@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class CreateSQLReviewOrderRequest : TeaModel {
         /// <summary>
         /// The purpose or objective of the SQL review. This reduces unnecessary communication.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The parameters of the ticket.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Param")]
         [Validation(Required=false)]
@@ -25,15 +29,19 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public class CreateSQLReviewOrderRequestParam : TeaModel {
             /// <summary>
             /// The files to be reviewed. Multiple files can be reviewed at a time.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("AttachmentKeyList")]
             [Validation(Required=false)]
             public List<string> AttachmentKeyList { get; set; }
 
             /// <summary>
-            /// The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
+            /// The ID of the database. You can call the [SearchDatabases](https://help.aliyun.com/document_detail/141876.html) operation to query the ID of the database.
             /// 
             /// >  You can call this operation to query only physical databases. This operation is unavailable to query logical databases.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DbId")]
             [Validation(Required=false)]
@@ -41,6 +49,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
             /// <summary>
             /// The name of the project.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ProjectName")]
             [Validation(Required=false)]
@@ -56,7 +66,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public List<long?> RelatedUserList { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

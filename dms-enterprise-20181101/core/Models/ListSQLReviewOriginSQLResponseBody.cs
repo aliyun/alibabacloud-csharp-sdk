@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string SQLName { get; set; }
 
             /// <summary>
-            /// The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](https://icms.alibaba-inc.com/content/dms/doc?l=1\&m=61777\&n=2712723\&spm) operation to query the details of optimization suggestions based on the key.
+            /// The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2712723\\&spm) operation to query the details of optimization suggestions based on the key.
             /// </summary>
             [NameInMap("SQLReviewQueryKey")]
             [Validation(Required=false)]

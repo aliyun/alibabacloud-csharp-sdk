@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class DeleteLogicDatabaseRequest : TeaModel {
         /// <summary>
         /// The ID of the logical database. You can call the [ListLogicDatabases](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogicdatabases) or [SearchDatabase](https://www.alibabacloud.com/help/en/data-management-service/latest/searchdatabase) operation to query the ID of the logical database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LogicDbId")]
         [Validation(Required=false)]

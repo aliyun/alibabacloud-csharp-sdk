@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+                /// The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](https://help.aliyun.com/document_detail/424705.html).
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateDatabaseExportOrderShrinkRequest : TeaModel {
         /// <summary>
-        /// The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key.
+        /// The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to obtain the attachment key.
         /// </summary>
         [NameInMap("AttachmentKey")]
         [Validation(Required=false)]
@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The parameters of the ticket.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PluginParam")]
         [Validation(Required=false)]
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The tenant ID.
         /// 
-        /// > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
+        /// > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) section of the "Manage DMS tenants" topic.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

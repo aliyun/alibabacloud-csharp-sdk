@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults> Results { get; set; }
                 public class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults : TeaModel {
                     /// <summary>
-                    /// The comment that is specified when you create the SQL review rule. For more information, see [SQL review optimization](~~194114~~).
+                    /// The comment that is specified when you create the SQL review rule. For more information, see [SQL review optimization](https://help.aliyun.com/document_detail/194114.html).
                     /// </summary>
                     [NameInMap("Comments")]
                     [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> Messages { get; set; }
 
                     /// <summary>
-                    /// The name of the rule. For more information, see [SQL review optimization](~~194114~~).
+                    /// The name of the rule. For more information, see [SQL review optimization](https://help.aliyun.com/document_detail/194114.html).
                     /// </summary>
                     [NameInMap("RuleName")]
                     [Validation(Required=false)]

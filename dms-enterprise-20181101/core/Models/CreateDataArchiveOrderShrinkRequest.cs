@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class CreateDataArchiveOrderShrinkRequest : TeaModel {
         /// <summary>
         /// The description of the task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The parameters for archiving data.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Param")]
         [Validation(Required=false)]
@@ -45,7 +49,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RelatedUserListShrink { get; set; }
 
         /// <summary>
-        /// The tenant ID. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The tenant ID. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

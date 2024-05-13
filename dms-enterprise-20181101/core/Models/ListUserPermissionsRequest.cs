@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+        /// The type of the database. For more information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).
         /// </summary>
         [NameInMap("DbType")]
         [Validation(Required=false)]
@@ -70,6 +70,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// *   TABLE: permissions on tables
         /// *   COLUMN: permissions on fields
         /// *   INSTANCE: permissions on instances
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PermType")]
         [Validation(Required=false)]
@@ -85,16 +87,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The ID of the tenant.
         /// 
-        /// >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+        /// >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
         /// <summary>
-        /// The ID of the user. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.
+        /// The ID of the user. You can call the [GetUser](https://help.aliyun.com/document_detail/147098.html) or [ListUsers](https://help.aliyun.com/document_detail/141938.html) operation to query the ID of the user.
         /// 
         /// >  The user ID is different from the ID of your Alibaba Cloud account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

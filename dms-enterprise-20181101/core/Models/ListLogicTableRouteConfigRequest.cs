@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class ListLogicTableRouteConfigRequest : TeaModel {
         /// <summary>
         /// The ID of the logical table. You can call the [ListLogicTables](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables) operation to query the ID of the logical table.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableId")]
         [Validation(Required=false)]

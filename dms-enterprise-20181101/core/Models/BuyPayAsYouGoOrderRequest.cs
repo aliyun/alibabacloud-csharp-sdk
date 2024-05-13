@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// 
         /// *   **VersionType**: DMS that supports control modes
         /// *   **SensitiveDataProtection**: DMS that supports sensitive data protection
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CommodityType")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// The number of database instances that you want to use DMS to manage.
         /// 
         /// > A quota can be used for only one database instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InsNum")]
         [Validation(Required=false)]
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The ID of the tenant.
         /// 
-        /// > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+        /// > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetUserUploadFileJobRequest : TeaModel {
         /// <summary>
-        /// The key of the file upload task. The key is returned when you call the [CreateUploadFileJob](~~206059~~) or [CreateUploadOSSFileJob](~~206060~~) operation.
+        /// The key of the file upload task. The key is returned when you call the [CreateUploadFileJob](https://help.aliyun.com/document_detail/206059.html) or [CreateUploadOSSFileJob](https://help.aliyun.com/document_detail/206060.html) operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JobKey")]
         [Validation(Required=false)]
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The tenant ID.
         /// 
-        /// > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+        /// > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

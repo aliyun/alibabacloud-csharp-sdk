@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the development database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID.
+        /// The ID of the development database. You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DevDbId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// 
         /// *   **14**: AnalyticDB for MySQL
         /// *   **18**: AnalyticDB for PostgreSQL
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DwDbType")]
         [Validation(Required=false)]
@@ -38,13 +42,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// 
         /// *   **0**: basic mode. This mode is unavailable.
         /// *   **1**: standard mode.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
         /// <summary>
-        /// The ID of the production database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID.
+        /// The ID of the production database. You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the ID.
         /// </summary>
         [NameInMap("ProdDbId")]
         [Validation(Required=false)]
@@ -54,7 +60,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// The configuration of the workspace. Valid values:
         /// 
         /// *   **skipManualRunCheck**: No security rule check is required in the trial run phase.
-        /// *   **skipPublishApprove**: No approval is required for publishing and O\&M.
+        /// *   **skipPublishApprove**: No approval is required for publishing and O\\&M.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SpaceConfig")]
         [Validation(Required=false)]
@@ -62,13 +70,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The name of the workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SpaceName")]
         [Validation(Required=false)]
         public string SpaceName { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

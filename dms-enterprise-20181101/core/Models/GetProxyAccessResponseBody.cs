@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string OriginInfo { get; set; }
 
             /// <summary>
-            /// The ID that DMS generates after the user is authorized to enable the secure access proxy feature for an instance. The ID is unique in DMS. You can call the [ListProxyAccesses](~~295386~~) operation to query the ID.
+            /// The ID that DMS generates after the user is authorized to enable the secure access proxy feature for an instance. The ID is unique in DMS. You can call the [ListProxyAccesses](https://help.aliyun.com/document_detail/295386.html) operation to query the ID.
             /// </summary>
             [NameInMap("ProxyAccessId")]
             [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             /// <summary>
             /// The ID of the secure access proxy.
             /// 
-            /// >  You can call the [ListProxies](~~295371~~) operation to query the ID of the secure access proxy.
+            /// >  You can call the [ListProxies](https://help.aliyun.com/document_detail/295371.html) operation to query the ID of the secure access proxy.
             /// </summary>
             [NameInMap("ProxyId")]
             [Validation(Required=false)]

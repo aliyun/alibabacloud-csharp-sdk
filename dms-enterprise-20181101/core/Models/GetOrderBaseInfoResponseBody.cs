@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string OriginAttachmentName { get; set; }
 
             /// <summary>
-            /// The type of the ticket. For more information about the value of this parameter, see the request parameters of the [CreateOrder](~~465865~~) operation.
+            /// The type of the ticket. For more information about the value of this parameter, see the request parameters of the [CreateOrder](https://help.aliyun.com/document_detail/465865.html) operation.
             /// </summary>
             [NameInMap("PluginType")]
             [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class ListDatabaseUserPermssionsRequest : TeaModel {
         /// <summary>
         /// The ID of the database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbId")]
         [Validation(Required=false)]
@@ -43,6 +45,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// *   DATABASE: permissions on databases
         /// *   TABLE: permissions on tables
         /// *   COLUMN: permissions on fields
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PermType")]
         [Validation(Required=false)]
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The ID of the tenant.
         /// 
-        /// > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
+        /// > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class ListDataCorrectPreCheckDBRequest : TeaModel {
         /// <summary>
         /// The ID of the ticket for the data change.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the ID of the tenant.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

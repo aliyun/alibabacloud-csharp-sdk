@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The key of the task.
         /// 
-        /// >  You can call the [GetUserUploadFileJob](~~206069~~) operation to query the progress and details of the task.
+        /// >  You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to query the progress and details of the task.
         /// </summary>
         [NameInMap("JobKey")]
         [Validation(Required=false)]

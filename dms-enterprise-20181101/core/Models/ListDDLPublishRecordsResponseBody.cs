@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// The ID of the user who creates the ticket. You can obtain the user ID by calling the [GetUser](~~147098~~) operation and querying the value of the UserId parameter. The value is not the unique ID (UID) of the Alibaba Cloud account.
+            /// The ID of the user who creates the ticket. You can obtain the user ID by calling the [GetUser](https://help.aliyun.com/document_detail/147098.html) operation and querying the value of the UserId parameter. The value is not the unique ID (UID) of the Alibaba Cloud account.
             /// </summary>
             [NameInMap("CreatorId")]
             [Validation(Required=false)]

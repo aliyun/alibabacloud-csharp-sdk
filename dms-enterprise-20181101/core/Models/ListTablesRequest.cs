@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListTablesRequest : TeaModel {
         /// <summary>
-        /// The ID of the physical database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID of the physical database.
+        /// The ID of the physical database. You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the ID of the physical database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatabaseId")]
         [Validation(Required=false)]
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string SearchName { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

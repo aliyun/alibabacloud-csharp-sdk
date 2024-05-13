@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string DbType { get; set; }
 
                     /// <summary>
-                    /// The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+                    /// The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).
                     /// </summary>
                     [NameInMap("EnvType")]
                     [Validation(Required=false)]
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string DbaNickName { get; set; }
 
                     /// <summary>
-                    /// The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+                    /// The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).
                     /// </summary>
                     [NameInMap("EnvType")]
                     [Validation(Required=false)]

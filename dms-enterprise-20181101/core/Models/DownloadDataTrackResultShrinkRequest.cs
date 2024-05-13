@@ -52,7 +52,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string FilterTypeListShrink { get; set; }
 
         /// <summary>
-        /// The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
+        /// The ID of the ticket. You can call the [ListOrders](https://help.aliyun.com/document_detail/144643.html) operation to obtain the ticket ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -63,13 +65,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// 
         /// *   **REVERSE**: undoes or rolls back an executed SQL statement, which is equivalent to the UNDO SQL statement.
         /// *   **FORWARD**: redoes or re-executes an SQL statement that failed to be executed, which is equivalent to the REDO SQL statement.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RollbackSQLType")]
         [Validation(Required=false)]
         public string RollbackSQLType { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDataImportSQLRequest : TeaModel {
         /// <summary>
-        /// The ticket ID. You can call the [ListOrders](~~144643~~) operation to query the ticket ID.
+        /// The ticket ID. You can call the [ListOrders](https://help.aliyun.com/document_detail/144643.html) operation to query the ticket ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -18,13 +20,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The SQL ID. You can call the ListDataImportSQLPreCheckDetail operation to query the SQL ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SqlId")]
         [Validation(Required=false)]
         public long? SqlId { get; set; }
 
         /// <summary>
-        /// The tenant ID. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+        /// The tenant ID. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

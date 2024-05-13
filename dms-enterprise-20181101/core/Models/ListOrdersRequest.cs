@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).
+        /// The type of the tickets that you want to query. For more information, see [PluginType parameter](https://help.aliyun.com/document_detail/429109.html).
         /// </summary>
         [NameInMap("PluginType")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

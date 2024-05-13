@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// The ID of the secure access proxy. 
         /// 
         /// >  You can call the [ListProxies](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies) operation to query the ID of the secure access proxy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProxyId")]
         [Validation(Required=false)]

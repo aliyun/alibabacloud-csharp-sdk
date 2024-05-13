@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             /// The configuration of the workspace. Valid values:
             /// 
             /// *   **skipManualRunCheck**: No security rule check is required in the trial run phase.
-            /// *   **skipPublishApprove**: No approval is required for publishing and O\&M.
+            /// *   **skipPublishApprove**: No approval is required for publishing and O\\&M.
             /// </summary>
             [NameInMap("SpaceConfig")]
             [Validation(Required=false)]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The time when the permission expires. Specify the time in the yyyy-MM-DD HH:mm:ss format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExpireDate")]
         [Validation(Required=false)]
@@ -25,13 +27,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The ID of the permission template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public long? TemplateId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// The IDs of users to which you want to grant permissions on resources by using the permission template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserIds")]
         [Validation(Required=false)]
