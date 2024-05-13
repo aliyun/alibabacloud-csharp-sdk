@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The node pool ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("nodepool_id")]
         [Validation(Required=false)]

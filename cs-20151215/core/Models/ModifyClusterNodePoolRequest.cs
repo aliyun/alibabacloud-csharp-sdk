@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Unschedulable { get; set; }
 
             /// <summary>
-            /// The user-defined data of the node pool. For more information, see [Prepare user data](~~49121~~).
+            /// The user-defined data of the node pool. For more information, see [Prepare user data](https://help.aliyun.com/document_detail/49121.html).
             /// </summary>
             [NameInMap("user_data")]
             [Validation(Required=false)]
@@ -502,7 +502,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// 
             ///     **Note** `COST_OPTIMIZED` is valid only when multiple instance types are specified or at least one preemptible instance type is specified.
             /// 
-            /// *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to the insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).
+            /// *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to the insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](https://help.aliyun.com/document_detail/71516.html).
             /// 
             /// Default value: `PRIORITY`.
             /// </summary>
@@ -650,7 +650,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// *   `SpotWithPriceLimit`: specifies the highest bid for the preemptible instance.
             /// *   `SpotAsPriceGo`: automatically submits bids based on the up-to-date market price.
             /// 
-            /// For more information, see [Preemptible instances](~~157759~~).
+            /// For more information, see [Preemptible instances](https://help.aliyun.com/document_detail/157759.html).
             /// </summary>
             [NameInMap("spot_strategy")]
             [Validation(Required=false)]
@@ -704,7 +704,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskKmsKeyId { get; set; }
 
             /// <summary>
-            /// The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for enhanced SSDs. You can specify a higher PL if you increase the size of the system disk. For more information, see [ESSDs](~~122389~~).
+            /// The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for enhanced SSDs. You can specify a higher PL if you increase the size of the system disk. For more information, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).
             /// </summary>
             [NameInMap("system_disk_performance_level")]
             [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     public class GetKubernetesTriggerRequest : TeaModel {
         /// <summary>
         /// The application name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The namespace name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

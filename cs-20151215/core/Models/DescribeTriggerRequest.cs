@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     public class DescribeTriggerRequest : TeaModel {
         /// <summary>
         /// The application name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The namespace to which the application belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

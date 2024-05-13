@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// The component name.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -33,7 +35,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// The component version.
             /// 
-            /// >  You can call the [DescribeClusterAddonsVersion](~~197434~~) operation to query the version of a component.
+            /// >  You can call the [DescribeClusterAddonsVersion](https://help.aliyun.com/document_detail/197434.html) operation to query the version of a component.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]

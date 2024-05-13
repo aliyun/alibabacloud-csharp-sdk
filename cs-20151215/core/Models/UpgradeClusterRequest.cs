@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextVersion { get; set; }
 
         /// <summary>
-        /// The current Kubernetes version of the cluster. For more information, see [Kubernetes versions](~~185269~~).
+        /// The current Kubernetes version of the cluster. For more information, see [Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).
         /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]

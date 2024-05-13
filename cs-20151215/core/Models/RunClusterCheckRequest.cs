@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The check method.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// The validity period of the kubeconfig file. Unit: hours.
         /// 
         /// > The value of expire_hour must be greater than 0 and equal to or smaller than 876000 (100 years).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("expire_hour")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The user ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("user")]
         [Validation(Required=false)]

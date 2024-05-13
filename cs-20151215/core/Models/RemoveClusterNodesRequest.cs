@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The list of nodes to be removed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]

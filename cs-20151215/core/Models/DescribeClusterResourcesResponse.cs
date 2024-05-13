@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The information about the resource. For more information about how to query the source information about a resource, see [ListStackResources](~~133836~~).
+            /// The information about the resource. For more information about how to query the source information about a resource, see [ListStackResources](https://help.aliyun.com/document_detail/133836.html).
             /// </summary>
             [NameInMap("resource_info")]
             [Validation(Required=false)]

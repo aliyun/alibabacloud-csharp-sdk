@@ -71,6 +71,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * @summary You can call the AttachInstances operation to add existing Elastic Compute Service (ECS) instances to a cluster.
+         *
+         * @param request AttachInstancesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachInstancesResponse
+         */
         public AttachInstancesResponse AttachInstancesWithOptions(string ClusterId, AttachInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -147,6 +155,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<AttachInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the AttachInstances operation to add existing Elastic Compute Service (ECS) instances to a cluster.
+         *
+         * @param request AttachInstancesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachInstancesResponse
+         */
         public async Task<AttachInstancesResponse> AttachInstancesWithOptionsAsync(string ClusterId, AttachInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -223,6 +239,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<AttachInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the AttachInstances operation to add existing Elastic Compute Service (ECS) instances to a cluster.
+         *
+         * @param request AttachInstancesRequest
+         * @return AttachInstancesResponse
+         */
         public AttachInstancesResponse AttachInstances(string ClusterId, AttachInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -230,6 +252,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return AttachInstancesWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the AttachInstances operation to add existing Elastic Compute Service (ECS) instances to a cluster.
+         *
+         * @param request AttachInstancesRequest
+         * @return AttachInstancesResponse
+         */
         public async Task<AttachInstancesResponse> AttachInstancesAsync(string ClusterId, AttachInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -237,6 +265,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await AttachInstancesWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the AttachInstancesToNodePool operation to add existing nodes to a node pool.
+         *
+         * @param request AttachInstancesToNodePoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachInstancesToNodePoolResponse
+         */
         public AttachInstancesToNodePoolResponse AttachInstancesToNodePoolWithOptions(string ClusterId, string NodepoolId, AttachInstancesToNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -277,6 +313,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<AttachInstancesToNodePoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the AttachInstancesToNodePool operation to add existing nodes to a node pool.
+         *
+         * @param request AttachInstancesToNodePoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachInstancesToNodePoolResponse
+         */
         public async Task<AttachInstancesToNodePoolResponse> AttachInstancesToNodePoolWithOptionsAsync(string ClusterId, string NodepoolId, AttachInstancesToNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -317,6 +361,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<AttachInstancesToNodePoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the AttachInstancesToNodePool operation to add existing nodes to a node pool.
+         *
+         * @param request AttachInstancesToNodePoolRequest
+         * @return AttachInstancesToNodePoolResponse
+         */
         public AttachInstancesToNodePoolResponse AttachInstancesToNodePool(string ClusterId, string NodepoolId, AttachInstancesToNodePoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -324,6 +374,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return AttachInstancesToNodePoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the AttachInstancesToNodePool operation to add existing nodes to a node pool.
+         *
+         * @param request AttachInstancesToNodePoolRequest
+         * @return AttachInstancesToNodePoolResponse
+         */
         public async Task<AttachInstancesToNodePoolResponse> AttachInstancesToNodePoolAsync(string ClusterId, string NodepoolId, AttachInstancesToNodePoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -332,11 +388,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CancelClusterUpgradeResponse
+         * @deprecated OpenAPI CancelClusterUpgrade is deprecated
+         *
+         * @summary You can call the CancelClusterUpgrade operation to cancel the update of a cluster.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelClusterUpgradeResponse
          */
         // Deprecated
         public CancelClusterUpgradeResponse CancelClusterUpgradeWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -361,11 +419,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CancelClusterUpgradeResponse
+         * @deprecated OpenAPI CancelClusterUpgrade is deprecated
+         *
+         * @summary You can call the CancelClusterUpgrade operation to cancel the update of a cluster.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelClusterUpgradeResponse
          */
         // Deprecated
         public async Task<CancelClusterUpgradeResponse> CancelClusterUpgradeWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -390,9 +450,11 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @return CancelClusterUpgradeResponse
+         * @deprecated OpenAPI CancelClusterUpgrade is deprecated
+         *
+         * @summary You can call the CancelClusterUpgrade operation to cancel the update of a cluster.
+         *
+         * @return CancelClusterUpgradeResponse
          */
         // Deprecated
         public CancelClusterUpgradeResponse CancelClusterUpgrade(string ClusterId)
@@ -403,9 +465,11 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @return CancelClusterUpgradeResponse
+         * @deprecated OpenAPI CancelClusterUpgrade is deprecated
+         *
+         * @summary You can call the CancelClusterUpgrade operation to cancel the update of a cluster.
+         *
+         * @return CancelClusterUpgradeResponse
          */
         // Deprecated
         public async Task<CancelClusterUpgradeResponse> CancelClusterUpgradeAsync(string ClusterId)
@@ -415,6 +479,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CancelClusterUpgradeWithOptionsAsync(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CancelComponentUpgrade operation to cancel the update of a component.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelComponentUpgradeResponse
+         */
         public CancelComponentUpgradeResponse CancelComponentUpgradeWithOptions(string clusterId, string componentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -436,6 +507,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CancelComponentUpgradeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CancelComponentUpgrade operation to cancel the update of a component.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelComponentUpgradeResponse
+         */
         public async Task<CancelComponentUpgradeResponse> CancelComponentUpgradeWithOptionsAsync(string clusterId, string componentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -457,6 +535,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CancelComponentUpgradeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CancelComponentUpgrade operation to cancel the update of a component.
+         *
+         * @return CancelComponentUpgradeResponse
+         */
         public CancelComponentUpgradeResponse CancelComponentUpgrade(string clusterId, string componentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -464,6 +547,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return CancelComponentUpgradeWithOptions(clusterId, componentId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CancelComponentUpgrade operation to cancel the update of a component.
+         *
+         * @return CancelComponentUpgradeResponse
+         */
         public async Task<CancelComponentUpgradeResponse> CancelComponentUpgradeAsync(string clusterId, string componentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -471,6 +559,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CancelComponentUpgradeWithOptionsAsync(clusterId, componentId, headers, runtime);
         }
 
+        /**
+         * @summary 取消自动运维执行计划
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelOperationPlanResponse
+         */
         public CancelOperationPlanResponse CancelOperationPlanWithOptions(string planId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -492,6 +587,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CancelOperationPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 取消自动运维执行计划
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelOperationPlanResponse
+         */
         public async Task<CancelOperationPlanResponse> CancelOperationPlanWithOptionsAsync(string planId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -513,6 +615,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CancelOperationPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 取消自动运维执行计划
+         *
+         * @return CancelOperationPlanResponse
+         */
         public CancelOperationPlanResponse CancelOperationPlan(string planId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -520,6 +627,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return CancelOperationPlanWithOptions(planId, headers, runtime);
         }
 
+        /**
+         * @summary 取消自动运维执行计划
+         *
+         * @return CancelOperationPlanResponse
+         */
         public async Task<CancelOperationPlanResponse> CancelOperationPlanAsync(string planId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -527,6 +639,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CancelOperationPlanWithOptionsAsync(planId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CancelTask operation to cancel a task.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelTaskResponse
+         */
         public CancelTaskResponse CancelTaskWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -548,6 +667,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CancelTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CancelTask operation to cancel a task.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelTaskResponse
+         */
         public async Task<CancelTaskResponse> CancelTaskWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -569,6 +695,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CancelTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CancelTask operation to cancel a task.
+         *
+         * @return CancelTaskResponse
+         */
         public CancelTaskResponse CancelTask(string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -576,6 +707,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return CancelTaskWithOptions(taskId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CancelTask operation to cancel a task.
+         *
+         * @return CancelTaskResponse
+         */
         public async Task<CancelTaskResponse> CancelTaskAsync(string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -583,6 +719,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CancelTaskWithOptionsAsync(taskId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CancelWorkflow operation to cancel an ongoing workflow.
+         *
+         * @param request CancelWorkflowRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelWorkflowResponse
+         */
         public CancelWorkflowResponse CancelWorkflowWithOptions(string workflowName, CancelWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -611,6 +755,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CancelWorkflowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CancelWorkflow operation to cancel an ongoing workflow.
+         *
+         * @param request CancelWorkflowRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelWorkflowResponse
+         */
         public async Task<CancelWorkflowResponse> CancelWorkflowWithOptionsAsync(string workflowName, CancelWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -639,6 +791,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CancelWorkflowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CancelWorkflow operation to cancel an ongoing workflow.
+         *
+         * @param request CancelWorkflowRequest
+         * @return CancelWorkflowResponse
+         */
         public CancelWorkflowResponse CancelWorkflow(string workflowName, CancelWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -646,6 +804,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return CancelWorkflowWithOptions(workflowName, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CancelWorkflow operation to cancel an ongoing workflow.
+         *
+         * @param request CancelWorkflowRequest
+         * @return CancelWorkflowResponse
+         */
         public async Task<CancelWorkflowResponse> CancelWorkflowAsync(string workflowName, CancelWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -653,6 +817,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CancelWorkflowWithOptionsAsync(workflowName, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the current log configuration of control plane components, including the log retention period and the log collection component. Container Service for Kubernetes (ACK) managed clusters can collect the logs of control plane components and deliver the logs to projects in Simple Log Service. These control plane components include Kube API Server, Kube Scheduler, Kube Controller Manager, and Cloud Controller Manager.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckControlPlaneLogEnableResponse
+         */
         public CheckControlPlaneLogEnableResponse CheckControlPlaneLogEnableWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -674,6 +845,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CheckControlPlaneLogEnableResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the current log configuration of control plane components, including the log retention period and the log collection component. Container Service for Kubernetes (ACK) managed clusters can collect the logs of control plane components and deliver the logs to projects in Simple Log Service. These control plane components include Kube API Server, Kube Scheduler, Kube Controller Manager, and Cloud Controller Manager.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckControlPlaneLogEnableResponse
+         */
         public async Task<CheckControlPlaneLogEnableResponse> CheckControlPlaneLogEnableWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -695,6 +873,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CheckControlPlaneLogEnableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the current log configuration of control plane components, including the log retention period and the log collection component. Container Service for Kubernetes (ACK) managed clusters can collect the logs of control plane components and deliver the logs to projects in Simple Log Service. These control plane components include Kube API Server, Kube Scheduler, Kube Controller Manager, and Cloud Controller Manager.
+         *
+         * @return CheckControlPlaneLogEnableResponse
+         */
         public CheckControlPlaneLogEnableResponse CheckControlPlaneLogEnable(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -702,6 +885,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return CheckControlPlaneLogEnableWithOptions(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary Queries the current log configuration of control plane components, including the log retention period and the log collection component. Container Service for Kubernetes (ACK) managed clusters can collect the logs of control plane components and deliver the logs to projects in Simple Log Service. These control plane components include Kube API Server, Kube Scheduler, Kube Controller Manager, and Cloud Controller Manager.
+         *
+         * @return CheckControlPlaneLogEnableResponse
+         */
         public async Task<CheckControlPlaneLogEnableResponse> CheckControlPlaneLogEnableAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -709,6 +897,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CheckControlPlaneLogEnableWithOptionsAsync(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.
+         *
+         * @param request CreateAutoscalingConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAutoscalingConfigResponse
+         */
         public CreateAutoscalingConfigResponse CreateAutoscalingConfigWithOptions(string ClusterId, CreateAutoscalingConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -789,6 +985,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateAutoscalingConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.
+         *
+         * @param request CreateAutoscalingConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAutoscalingConfigResponse
+         */
         public async Task<CreateAutoscalingConfigResponse> CreateAutoscalingConfigWithOptionsAsync(string ClusterId, CreateAutoscalingConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -869,6 +1073,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateAutoscalingConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.
+         *
+         * @param request CreateAutoscalingConfigRequest
+         * @return CreateAutoscalingConfigResponse
+         */
         public CreateAutoscalingConfigResponse CreateAutoscalingConfig(string ClusterId, CreateAutoscalingConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -876,6 +1086,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return CreateAutoscalingConfigWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.
+         *
+         * @param request CreateAutoscalingConfigRequest
+         * @return CreateAutoscalingConfigResponse
+         */
         public async Task<CreateAutoscalingConfigResponse> CreateAutoscalingConfigAsync(string ClusterId, CreateAutoscalingConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -884,18 +1100,20 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
-          * *   [Create an ACK managed cluster](~~90776~~)
-          * *   [Create an ACK dedicated cluster](~~197620~~)
-          * *   [Create an ACK Serverless cluster](~~144246~~)
-          * *   [Create an ACK Edge cluster](~~128204~~)
-          * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-          * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
-          *
-          * @param request CreateClusterRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateClusterResponse
+         * @summary You can call the CreateCluster operation to create a Container Service for Kubernetes (ACK) cluster. ACK clusters include ACK managed clusters, ACK dedicated clusters, ACK Serverless clusters, ACK Edge clusters, ACK clusters that support sandboxed containers, and registered clusters. For more information about how to create different types of ACK clusters, see the following usage notes.
+         *
+         * @description This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
+         * *   [Create an ACK managed cluster](https://help.aliyun.com/document_detail/90776.html)
+         * *   [Create an ACK dedicated cluster](https://help.aliyun.com/document_detail/197620.html)
+         * *   [Create an ACK Serverless cluster](https://help.aliyun.com/document_detail/144246.html)
+         * *   [Create an ACK Edge cluster](https://help.aliyun.com/document_detail/128204.html)
+         * *   [Create an ACK Basic cluster that supports sandboxed containers](https://help.aliyun.com/document_detail/196321.html)
+         * *   [Create an ACK Pro cluster that supports sandboxed containers](https://help.aliyun.com/document_detail/140623.html)
+         *
+         * @param request CreateClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateClusterResponse
          */
         public CreateClusterResponse CreateClusterWithOptions(CreateClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1286,18 +1504,20 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
-          * *   [Create an ACK managed cluster](~~90776~~)
-          * *   [Create an ACK dedicated cluster](~~197620~~)
-          * *   [Create an ACK Serverless cluster](~~144246~~)
-          * *   [Create an ACK Edge cluster](~~128204~~)
-          * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-          * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
-          *
-          * @param request CreateClusterRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateClusterResponse
+         * @summary You can call the CreateCluster operation to create a Container Service for Kubernetes (ACK) cluster. ACK clusters include ACK managed clusters, ACK dedicated clusters, ACK Serverless clusters, ACK Edge clusters, ACK clusters that support sandboxed containers, and registered clusters. For more information about how to create different types of ACK clusters, see the following usage notes.
+         *
+         * @description This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
+         * *   [Create an ACK managed cluster](https://help.aliyun.com/document_detail/90776.html)
+         * *   [Create an ACK dedicated cluster](https://help.aliyun.com/document_detail/197620.html)
+         * *   [Create an ACK Serverless cluster](https://help.aliyun.com/document_detail/144246.html)
+         * *   [Create an ACK Edge cluster](https://help.aliyun.com/document_detail/128204.html)
+         * *   [Create an ACK Basic cluster that supports sandboxed containers](https://help.aliyun.com/document_detail/196321.html)
+         * *   [Create an ACK Pro cluster that supports sandboxed containers](https://help.aliyun.com/document_detail/140623.html)
+         *
+         * @param request CreateClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateClusterResponse
          */
         public async Task<CreateClusterResponse> CreateClusterWithOptionsAsync(CreateClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1688,16 +1908,18 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
-          * *   [Create an ACK managed cluster](~~90776~~)
-          * *   [Create an ACK dedicated cluster](~~197620~~)
-          * *   [Create an ACK Serverless cluster](~~144246~~)
-          * *   [Create an ACK Edge cluster](~~128204~~)
-          * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-          * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
-          *
-          * @param request CreateClusterRequest
-          * @return CreateClusterResponse
+         * @summary You can call the CreateCluster operation to create a Container Service for Kubernetes (ACK) cluster. ACK clusters include ACK managed clusters, ACK dedicated clusters, ACK Serverless clusters, ACK Edge clusters, ACK clusters that support sandboxed containers, and registered clusters. For more information about how to create different types of ACK clusters, see the following usage notes.
+         *
+         * @description This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
+         * *   [Create an ACK managed cluster](https://help.aliyun.com/document_detail/90776.html)
+         * *   [Create an ACK dedicated cluster](https://help.aliyun.com/document_detail/197620.html)
+         * *   [Create an ACK Serverless cluster](https://help.aliyun.com/document_detail/144246.html)
+         * *   [Create an ACK Edge cluster](https://help.aliyun.com/document_detail/128204.html)
+         * *   [Create an ACK Basic cluster that supports sandboxed containers](https://help.aliyun.com/document_detail/196321.html)
+         * *   [Create an ACK Pro cluster that supports sandboxed containers](https://help.aliyun.com/document_detail/140623.html)
+         *
+         * @param request CreateClusterRequest
+         * @return CreateClusterResponse
          */
         public CreateClusterResponse CreateCluster(CreateClusterRequest request)
         {
@@ -1707,16 +1929,18 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
-          * *   [Create an ACK managed cluster](~~90776~~)
-          * *   [Create an ACK dedicated cluster](~~197620~~)
-          * *   [Create an ACK Serverless cluster](~~144246~~)
-          * *   [Create an ACK Edge cluster](~~128204~~)
-          * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-          * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
-          *
-          * @param request CreateClusterRequest
-          * @return CreateClusterResponse
+         * @summary You can call the CreateCluster operation to create a Container Service for Kubernetes (ACK) cluster. ACK clusters include ACK managed clusters, ACK dedicated clusters, ACK Serverless clusters, ACK Edge clusters, ACK clusters that support sandboxed containers, and registered clusters. For more information about how to create different types of ACK clusters, see the following usage notes.
+         *
+         * @description This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
+         * *   [Create an ACK managed cluster](https://help.aliyun.com/document_detail/90776.html)
+         * *   [Create an ACK dedicated cluster](https://help.aliyun.com/document_detail/197620.html)
+         * *   [Create an ACK Serverless cluster](https://help.aliyun.com/document_detail/144246.html)
+         * *   [Create an ACK Edge cluster](https://help.aliyun.com/document_detail/128204.html)
+         * *   [Create an ACK Basic cluster that supports sandboxed containers](https://help.aliyun.com/document_detail/196321.html)
+         * *   [Create an ACK Pro cluster that supports sandboxed containers](https://help.aliyun.com/document_detail/140623.html)
+         *
+         * @param request CreateClusterRequest
+         * @return CreateClusterResponse
          */
         public async Task<CreateClusterResponse> CreateClusterAsync(CreateClusterRequest request)
         {
@@ -1725,6 +1949,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CreateClusterWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CreateClusterNodePool operation to create a node pool for a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request CreateClusterNodePoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateClusterNodePoolResponse
+         */
         public CreateClusterNodePoolResponse CreateClusterNodePoolWithOptions(string ClusterId, CreateClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1793,6 +2025,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateClusterNodePoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CreateClusterNodePool operation to create a node pool for a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request CreateClusterNodePoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateClusterNodePoolResponse
+         */
         public async Task<CreateClusterNodePoolResponse> CreateClusterNodePoolWithOptionsAsync(string ClusterId, CreateClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1861,6 +2101,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateClusterNodePoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CreateClusterNodePool operation to create a node pool for a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request CreateClusterNodePoolRequest
+         * @return CreateClusterNodePoolResponse
+         */
         public CreateClusterNodePoolResponse CreateClusterNodePool(string ClusterId, CreateClusterNodePoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1868,6 +2114,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return CreateClusterNodePoolWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CreateClusterNodePool operation to create a node pool for a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request CreateClusterNodePoolRequest
+         * @return CreateClusterNodePoolResponse
+         */
         public async Task<CreateClusterNodePoolResponse> CreateClusterNodePoolAsync(string ClusterId, CreateClusterNodePoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1875,6 +2127,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CreateClusterNodePoolWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CreateEdgeMachine operation to activate a cloud-native box.
+         *
+         * @param request CreateEdgeMachineRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateEdgeMachineResponse
+         */
         public CreateEdgeMachineResponse CreateEdgeMachineWithOptions(CreateEdgeMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1911,6 +2171,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateEdgeMachineResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CreateEdgeMachine operation to activate a cloud-native box.
+         *
+         * @param request CreateEdgeMachineRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateEdgeMachineResponse
+         */
         public async Task<CreateEdgeMachineResponse> CreateEdgeMachineWithOptionsAsync(CreateEdgeMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1947,6 +2215,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateEdgeMachineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CreateEdgeMachine operation to activate a cloud-native box.
+         *
+         * @param request CreateEdgeMachineRequest
+         * @return CreateEdgeMachineResponse
+         */
         public CreateEdgeMachineResponse CreateEdgeMachine(CreateEdgeMachineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1954,6 +2228,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return CreateEdgeMachineWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CreateEdgeMachine operation to activate a cloud-native box.
+         *
+         * @param request CreateEdgeMachineRequest
+         * @return CreateEdgeMachineResponse
+         */
         public async Task<CreateEdgeMachineResponse> CreateEdgeMachineAsync(CreateEdgeMachineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1961,6 +2241,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CreateEdgeMachineWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CreateKubernetesTrigger operation to create a trigger for an application.
+         *
+         * @param request CreateKubernetesTriggerRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateKubernetesTriggerResponse
+         */
         public CreateKubernetesTriggerResponse CreateKubernetesTriggerWithOptions(CreateKubernetesTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2001,6 +2289,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateKubernetesTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CreateKubernetesTrigger operation to create a trigger for an application.
+         *
+         * @param request CreateKubernetesTriggerRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateKubernetesTriggerResponse
+         */
         public async Task<CreateKubernetesTriggerResponse> CreateKubernetesTriggerWithOptionsAsync(CreateKubernetesTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2041,6 +2337,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateKubernetesTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CreateKubernetesTrigger operation to create a trigger for an application.
+         *
+         * @param request CreateKubernetesTriggerRequest
+         * @return CreateKubernetesTriggerResponse
+         */
         public CreateKubernetesTriggerResponse CreateKubernetesTrigger(CreateKubernetesTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2048,6 +2350,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return CreateKubernetesTriggerWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CreateKubernetesTrigger operation to create a trigger for an application.
+         *
+         * @param request CreateKubernetesTriggerRequest
+         * @return CreateKubernetesTriggerResponse
+         */
         public async Task<CreateKubernetesTriggerResponse> CreateKubernetesTriggerAsync(CreateKubernetesTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2055,6 +2363,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CreateKubernetesTriggerWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary Creates an orchestration template. An orchestration template defines and describes a group of Kubernetes resources. It declaratively describes the configuration of an application or how an application runs. You can use orchestration templates to manage resources in Kubernetes clusters and automate resource deployment, such as pods, Services, Deployments, ConfigMaps, and persistent volumes (PVs).
+         *
+         * @param request CreateTemplateRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTemplateResponse
+         */
         public CreateTemplateResponse CreateTemplateWithOptions(CreateTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2099,6 +2415,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates an orchestration template. An orchestration template defines and describes a group of Kubernetes resources. It declaratively describes the configuration of an application or how an application runs. You can use orchestration templates to manage resources in Kubernetes clusters and automate resource deployment, such as pods, Services, Deployments, ConfigMaps, and persistent volumes (PVs).
+         *
+         * @param request CreateTemplateRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTemplateResponse
+         */
         public async Task<CreateTemplateResponse> CreateTemplateWithOptionsAsync(CreateTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2143,6 +2467,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates an orchestration template. An orchestration template defines and describes a group of Kubernetes resources. It declaratively describes the configuration of an application or how an application runs. You can use orchestration templates to manage resources in Kubernetes clusters and automate resource deployment, such as pods, Services, Deployments, ConfigMaps, and persistent volumes (PVs).
+         *
+         * @param request CreateTemplateRequest
+         * @return CreateTemplateResponse
+         */
         public CreateTemplateResponse CreateTemplate(CreateTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2150,6 +2480,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return CreateTemplateWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Creates an orchestration template. An orchestration template defines and describes a group of Kubernetes resources. It declaratively describes the configuration of an application or how an application runs. You can use orchestration templates to manage resources in Kubernetes clusters and automate resource deployment, such as pods, Services, Deployments, ConfigMaps, and persistent volumes (PVs).
+         *
+         * @param request CreateTemplateRequest
+         * @return CreateTemplateResponse
+         */
         public async Task<CreateTemplateResponse> CreateTemplateAsync(CreateTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2157,6 +2493,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CreateTemplateWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CreateTrigger operation to create a trigger for an application.
+         *
+         * @param request CreateTriggerRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTriggerResponse
+         */
         public CreateTriggerResponse CreateTriggerWithOptions(string clusterId, CreateTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2197,6 +2541,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CreateTrigger operation to create a trigger for an application.
+         *
+         * @param request CreateTriggerRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTriggerResponse
+         */
         public async Task<CreateTriggerResponse> CreateTriggerWithOptionsAsync(string clusterId, CreateTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2237,6 +2589,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the CreateTrigger operation to create a trigger for an application.
+         *
+         * @param request CreateTriggerRequest
+         * @return CreateTriggerResponse
+         */
         public CreateTriggerResponse CreateTrigger(string clusterId, CreateTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2244,6 +2602,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return CreateTriggerWithOptions(clusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the CreateTrigger operation to create a trigger for an application.
+         *
+         * @param request CreateTriggerRequest
+         * @return CreateTriggerResponse
+         */
         public async Task<CreateTriggerResponse> CreateTriggerAsync(string clusterId, CreateTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2251,6 +2615,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CreateTriggerWithOptionsAsync(clusterId, request, headers, runtime);
         }
 
+        /**
+         * @param tmpReq DeleteAlertContactRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAlertContactResponse
+         */
         public DeleteAlertContactResponse DeleteAlertContactWithOptions(DeleteAlertContactRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2285,6 +2655,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteAlertContactResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param tmpReq DeleteAlertContactRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAlertContactResponse
+         */
         public async Task<DeleteAlertContactResponse> DeleteAlertContactWithOptionsAsync(DeleteAlertContactRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2319,6 +2695,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteAlertContactResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DeleteAlertContactRequest
+         * @return DeleteAlertContactResponse
+         */
         public DeleteAlertContactResponse DeleteAlertContact(DeleteAlertContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2326,6 +2706,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return DeleteAlertContactWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @param request DeleteAlertContactRequest
+         * @return DeleteAlertContactResponse
+         */
         public async Task<DeleteAlertContactResponse> DeleteAlertContactAsync(DeleteAlertContactRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2333,6 +2717,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DeleteAlertContactWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @param tmpReq DeleteAlertContactGroupRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAlertContactGroupResponse
+         */
         public DeleteAlertContactGroupResponse DeleteAlertContactGroupWithOptions(DeleteAlertContactGroupRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2367,6 +2757,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteAlertContactGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param tmpReq DeleteAlertContactGroupRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAlertContactGroupResponse
+         */
         public async Task<DeleteAlertContactGroupResponse> DeleteAlertContactGroupWithOptionsAsync(DeleteAlertContactGroupRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2401,6 +2797,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteAlertContactGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DeleteAlertContactGroupRequest
+         * @return DeleteAlertContactGroupResponse
+         */
         public DeleteAlertContactGroupResponse DeleteAlertContactGroup(DeleteAlertContactGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2408,6 +2808,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return DeleteAlertContactGroupWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @param request DeleteAlertContactGroupRequest
+         * @return DeleteAlertContactGroupResponse
+         */
         public async Task<DeleteAlertContactGroupResponse> DeleteAlertContactGroupAsync(DeleteAlertContactGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2415,6 +2819,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DeleteAlertContactGroupWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeleteCluster operation to delete a cluster by cluster ID and release all nodes in the cluster.
+         *
+         * @param tmpReq DeleteClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteClusterResponse
+         */
         public DeleteClusterResponse DeleteClusterWithOptions(string ClusterId, DeleteClusterRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2465,6 +2877,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeleteCluster operation to delete a cluster by cluster ID and release all nodes in the cluster.
+         *
+         * @param tmpReq DeleteClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteClusterResponse
+         */
         public async Task<DeleteClusterResponse> DeleteClusterWithOptionsAsync(string ClusterId, DeleteClusterRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2515,6 +2935,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeleteCluster operation to delete a cluster by cluster ID and release all nodes in the cluster.
+         *
+         * @param request DeleteClusterRequest
+         * @return DeleteClusterResponse
+         */
         public DeleteClusterResponse DeleteCluster(string ClusterId, DeleteClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2522,6 +2948,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DeleteClusterWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeleteCluster operation to delete a cluster by cluster ID and release all nodes in the cluster.
+         *
+         * @param request DeleteClusterRequest
+         * @return DeleteClusterResponse
+         */
         public async Task<DeleteClusterResponse> DeleteClusterAsync(string ClusterId, DeleteClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2529,6 +2961,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DeleteClusterWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeleteClusterNodepool operation to delete a node pool by node pool ID.
+         *
+         * @param request DeleteClusterNodepoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteClusterNodepoolResponse
+         */
         public DeleteClusterNodepoolResponse DeleteClusterNodepoolWithOptions(string ClusterId, string NodepoolId, DeleteClusterNodepoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2557,6 +2997,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteClusterNodepoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeleteClusterNodepool operation to delete a node pool by node pool ID.
+         *
+         * @param request DeleteClusterNodepoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteClusterNodepoolResponse
+         */
         public async Task<DeleteClusterNodepoolResponse> DeleteClusterNodepoolWithOptionsAsync(string ClusterId, string NodepoolId, DeleteClusterNodepoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2585,6 +3033,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteClusterNodepoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeleteClusterNodepool operation to delete a node pool by node pool ID.
+         *
+         * @param request DeleteClusterNodepoolRequest
+         * @return DeleteClusterNodepoolResponse
+         */
         public DeleteClusterNodepoolResponse DeleteClusterNodepool(string ClusterId, string NodepoolId, DeleteClusterNodepoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2592,6 +3046,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DeleteClusterNodepoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeleteClusterNodepool operation to delete a node pool by node pool ID.
+         *
+         * @param request DeleteClusterNodepoolRequest
+         * @return DeleteClusterNodepoolResponse
+         */
         public async Task<DeleteClusterNodepoolResponse> DeleteClusterNodepoolAsync(string ClusterId, string NodepoolId, DeleteClusterNodepoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2600,13 +3060,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * > 
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
-          *
-          * @param request DeleteClusterNodesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteClusterNodesResponse
+         * @summary Removes nodes from a Container Service for Kubernetes (ACK) cluster. When you remove nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes. When you remove nodes, pods on the nodes are migrated. This may adversely affect your businesses. We recommend that you back up data and perform this operation during off-peak hours.
+         *
+         * @description > 
+         * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
+         *
+         * @param request DeleteClusterNodesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteClusterNodesResponse
          */
         public DeleteClusterNodesResponse DeleteClusterNodesWithOptions(string ClusterId, DeleteClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2645,13 +3107,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * > 
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
-          *
-          * @param request DeleteClusterNodesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteClusterNodesResponse
+         * @summary Removes nodes from a Container Service for Kubernetes (ACK) cluster. When you remove nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes. When you remove nodes, pods on the nodes are migrated. This may adversely affect your businesses. We recommend that you back up data and perform this operation during off-peak hours.
+         *
+         * @description > 
+         * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
+         *
+         * @param request DeleteClusterNodesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteClusterNodesResponse
          */
         public async Task<DeleteClusterNodesResponse> DeleteClusterNodesWithOptionsAsync(string ClusterId, DeleteClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2690,11 +3154,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * > 
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
-          *
-          * @param request DeleteClusterNodesRequest
-          * @return DeleteClusterNodesResponse
+         * @summary Removes nodes from a Container Service for Kubernetes (ACK) cluster. When you remove nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes. When you remove nodes, pods on the nodes are migrated. This may adversely affect your businesses. We recommend that you back up data and perform this operation during off-peak hours.
+         *
+         * @description > 
+         * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
+         *
+         * @param request DeleteClusterNodesRequest
+         * @return DeleteClusterNodesResponse
          */
         public DeleteClusterNodesResponse DeleteClusterNodes(string ClusterId, DeleteClusterNodesRequest request)
         {
@@ -2704,11 +3170,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * > 
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
-          *
-          * @param request DeleteClusterNodesRequest
-          * @return DeleteClusterNodesResponse
+         * @summary Removes nodes from a Container Service for Kubernetes (ACK) cluster. When you remove nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes. When you remove nodes, pods on the nodes are migrated. This may adversely affect your businesses. We recommend that you back up data and perform this operation during off-peak hours.
+         *
+         * @description > 
+         * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
+         *
+         * @param request DeleteClusterNodesRequest
+         * @return DeleteClusterNodesResponse
          */
         public async Task<DeleteClusterNodesResponse> DeleteClusterNodesAsync(string ClusterId, DeleteClusterNodesRequest request)
         {
@@ -2717,6 +3185,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DeleteClusterNodesWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeleteEdgeMachine operation to delete a cloud-native box.
+         *
+         * @param request DeleteEdgeMachineRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteEdgeMachineResponse
+         */
         public DeleteEdgeMachineResponse DeleteEdgeMachineWithOptions(string edgeMachineid, DeleteEdgeMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2745,6 +3221,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteEdgeMachineResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeleteEdgeMachine operation to delete a cloud-native box.
+         *
+         * @param request DeleteEdgeMachineRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteEdgeMachineResponse
+         */
         public async Task<DeleteEdgeMachineResponse> DeleteEdgeMachineWithOptionsAsync(string edgeMachineid, DeleteEdgeMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2773,6 +3257,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteEdgeMachineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeleteEdgeMachine operation to delete a cloud-native box.
+         *
+         * @param request DeleteEdgeMachineRequest
+         * @return DeleteEdgeMachineResponse
+         */
         public DeleteEdgeMachineResponse DeleteEdgeMachine(string edgeMachineid, DeleteEdgeMachineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2780,6 +3270,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DeleteEdgeMachineWithOptions(edgeMachineid, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeleteEdgeMachine operation to delete a cloud-native box.
+         *
+         * @param request DeleteEdgeMachineRequest
+         * @return DeleteEdgeMachineResponse
+         */
         public async Task<DeleteEdgeMachineResponse> DeleteEdgeMachineAsync(string edgeMachineid, DeleteEdgeMachineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2787,6 +3283,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DeleteEdgeMachineWithOptionsAsync(edgeMachineid, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeleteKubernetesTrigger operation to delete an application trigger by trigger ID
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteKubernetesTriggerResponse
+         */
         public DeleteKubernetesTriggerResponse DeleteKubernetesTriggerWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2808,6 +3311,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteKubernetesTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeleteKubernetesTrigger operation to delete an application trigger by trigger ID
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteKubernetesTriggerResponse
+         */
         public async Task<DeleteKubernetesTriggerResponse> DeleteKubernetesTriggerWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2829,6 +3339,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteKubernetesTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeleteKubernetesTrigger operation to delete an application trigger by trigger ID
+         *
+         * @return DeleteKubernetesTriggerResponse
+         */
         public DeleteKubernetesTriggerResponse DeleteKubernetesTrigger(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2836,6 +3351,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DeleteKubernetesTriggerWithOptions(Id, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeleteKubernetesTrigger operation to delete an application trigger by trigger ID
+         *
+         * @return DeleteKubernetesTriggerResponse
+         */
         public async Task<DeleteKubernetesTriggerResponse> DeleteKubernetesTriggerAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2843,6 +3363,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DeleteKubernetesTriggerWithOptionsAsync(Id, headers, runtime);
         }
 
+        /**
+         * @summary Deletes policy instances in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request DeletePolicyInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeletePolicyInstanceResponse
+         */
         public DeletePolicyInstanceResponse DeletePolicyInstanceWithOptions(string clusterId, string policyName, DeletePolicyInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2871,6 +3399,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeletePolicyInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes policy instances in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request DeletePolicyInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeletePolicyInstanceResponse
+         */
         public async Task<DeletePolicyInstanceResponse> DeletePolicyInstanceWithOptionsAsync(string clusterId, string policyName, DeletePolicyInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2899,6 +3435,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeletePolicyInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes policy instances in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request DeletePolicyInstanceRequest
+         * @return DeletePolicyInstanceResponse
+         */
         public DeletePolicyInstanceResponse DeletePolicyInstance(string clusterId, string policyName, DeletePolicyInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2906,6 +3448,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DeletePolicyInstanceWithOptions(clusterId, policyName, request, headers, runtime);
         }
 
+        /**
+         * @summary Deletes policy instances in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request DeletePolicyInstanceRequest
+         * @return DeletePolicyInstanceResponse
+         */
         public async Task<DeletePolicyInstanceResponse> DeletePolicyInstanceAsync(string clusterId, string policyName, DeletePolicyInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2913,6 +3461,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DeletePolicyInstanceWithOptionsAsync(clusterId, policyName, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeleteTemplate operation to delete an orchestration template by template ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteTemplateResponse
+         */
         public DeleteTemplateResponse DeleteTemplateWithOptions(string TemplateId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2934,6 +3489,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeleteTemplate operation to delete an orchestration template by template ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteTemplateResponse
+         */
         public async Task<DeleteTemplateResponse> DeleteTemplateWithOptionsAsync(string TemplateId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2955,6 +3517,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeleteTemplate operation to delete an orchestration template by template ID.
+         *
+         * @return DeleteTemplateResponse
+         */
         public DeleteTemplateResponse DeleteTemplate(string TemplateId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2962,6 +3529,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DeleteTemplateWithOptions(TemplateId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeleteTemplate operation to delete an orchestration template by template ID.
+         *
+         * @return DeleteTemplateResponse
+         */
         public async Task<DeleteTemplateResponse> DeleteTemplateAsync(string TemplateId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2969,6 +3541,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DeleteTemplateWithOptionsAsync(TemplateId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeleteTrigger operation to delete an application trigger.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteTriggerResponse
+         */
         public DeleteTriggerResponse DeleteTriggerWithOptions(string clusterId, string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2990,6 +3569,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeleteTrigger operation to delete an application trigger.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteTriggerResponse
+         */
         public async Task<DeleteTriggerResponse> DeleteTriggerWithOptionsAsync(string clusterId, string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3011,6 +3597,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeleteTrigger operation to delete an application trigger.
+         *
+         * @return DeleteTriggerResponse
+         */
         public DeleteTriggerResponse DeleteTrigger(string clusterId, string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3018,6 +3609,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DeleteTriggerWithOptions(clusterId, Id, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeleteTrigger operation to delete an application trigger.
+         *
+         * @return DeleteTriggerResponse
+         */
         public async Task<DeleteTriggerResponse> DeleteTriggerAsync(string clusterId, string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3025,6 +3621,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DeleteTriggerWithOptionsAsync(clusterId, Id, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeployPolicyInstance operation to deploy a policy instance in a cluster.
+         *
+         * @param request DeployPolicyInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeployPolicyInstanceResponse
+         */
         public DeployPolicyInstanceResponse DeployPolicyInstanceWithOptions(string clusterId, string policyName, DeployPolicyInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3061,6 +3665,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeployPolicyInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeployPolicyInstance operation to deploy a policy instance in a cluster.
+         *
+         * @param request DeployPolicyInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeployPolicyInstanceResponse
+         */
         public async Task<DeployPolicyInstanceResponse> DeployPolicyInstanceWithOptionsAsync(string clusterId, string policyName, DeployPolicyInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3097,6 +3709,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeployPolicyInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DeployPolicyInstance operation to deploy a policy instance in a cluster.
+         *
+         * @param request DeployPolicyInstanceRequest
+         * @return DeployPolicyInstanceResponse
+         */
         public DeployPolicyInstanceResponse DeployPolicyInstance(string clusterId, string policyName, DeployPolicyInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3104,6 +3722,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DeployPolicyInstanceWithOptions(clusterId, policyName, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DeployPolicyInstance operation to deploy a policy instance in a cluster.
+         *
+         * @param request DeployPolicyInstanceRequest
+         * @return DeployPolicyInstanceResponse
+         */
         public async Task<DeployPolicyInstanceResponse> DeployPolicyInstanceAsync(string clusterId, string policyName, DeployPolicyInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3111,6 +3735,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DeployPolicyInstanceWithOptionsAsync(clusterId, policyName, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescirbeWorkflow operation to query detailed information about a workflow.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescirbeWorkflowResponse
+         */
         public DescirbeWorkflowResponse DescirbeWorkflowWithOptions(string workflowName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3132,6 +3763,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescirbeWorkflowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescirbeWorkflow operation to query detailed information about a workflow.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescirbeWorkflowResponse
+         */
         public async Task<DescirbeWorkflowResponse> DescirbeWorkflowWithOptionsAsync(string workflowName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3153,6 +3791,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescirbeWorkflowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescirbeWorkflow operation to query detailed information about a workflow.
+         *
+         * @return DescirbeWorkflowResponse
+         */
         public DescirbeWorkflowResponse DescirbeWorkflow(string workflowName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3160,6 +3803,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescirbeWorkflowWithOptions(workflowName, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescirbeWorkflow operation to query detailed information about a workflow.
+         *
+         * @return DescirbeWorkflowResponse
+         */
         public async Task<DescirbeWorkflowResponse> DescirbeWorkflowAsync(string workflowName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3167,6 +3815,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescirbeWorkflowWithOptionsAsync(workflowName, headers, runtime);
         }
 
+        /**
+         * @summary 查询指定集群组件
+         *
+         * @param request DescribeAddonRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAddonResponse
+         */
         public DescribeAddonResponse DescribeAddonWithOptions(string addonName, DescribeAddonRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3219,6 +3875,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeAddonResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询指定集群组件
+         *
+         * @param request DescribeAddonRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAddonResponse
+         */
         public async Task<DescribeAddonResponse> DescribeAddonWithOptionsAsync(string addonName, DescribeAddonRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3271,6 +3935,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeAddonResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询指定集群组件
+         *
+         * @param request DescribeAddonRequest
+         * @return DescribeAddonResponse
+         */
         public DescribeAddonResponse DescribeAddon(string addonName, DescribeAddonRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3278,6 +3948,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeAddonWithOptions(addonName, request, headers, runtime);
         }
 
+        /**
+         * @summary 查询指定集群组件
+         *
+         * @param request DescribeAddonRequest
+         * @return DescribeAddonResponse
+         */
         public async Task<DescribeAddonResponse> DescribeAddonAsync(string addonName, DescribeAddonRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3286,12 +3962,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeAddonsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAddonsResponse
+         * @deprecated OpenAPI DescribeAddons is deprecated
+         *
+         * @summary You can call the DescribeAddons operation to query the details about all components that are supported by Container Service for Kubernetes (ACK).
+         *
+         * @param request DescribeAddonsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAddonsResponse
          */
         // Deprecated
         public DescribeAddonsResponse DescribeAddonsWithOptions(DescribeAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3339,12 +4017,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeAddonsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAddonsResponse
+         * @deprecated OpenAPI DescribeAddons is deprecated
+         *
+         * @summary You can call the DescribeAddons operation to query the details about all components that are supported by Container Service for Kubernetes (ACK).
+         *
+         * @param request DescribeAddonsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAddonsResponse
          */
         // Deprecated
         public async Task<DescribeAddonsResponse> DescribeAddonsWithOptionsAsync(DescribeAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3392,10 +4072,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeAddonsRequest
-          * @return DescribeAddonsResponse
+         * @deprecated OpenAPI DescribeAddons is deprecated
+         *
+         * @summary You can call the DescribeAddons operation to query the details about all components that are supported by Container Service for Kubernetes (ACK).
+         *
+         * @param request DescribeAddonsRequest
+         * @return DescribeAddonsResponse
          */
         // Deprecated
         public DescribeAddonsResponse DescribeAddons(DescribeAddonsRequest request)
@@ -3406,10 +4088,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeAddonsRequest
-          * @return DescribeAddonsResponse
+         * @deprecated OpenAPI DescribeAddons is deprecated
+         *
+         * @summary You can call the DescribeAddons operation to query the details about all components that are supported by Container Service for Kubernetes (ACK).
+         *
+         * @param request DescribeAddonsRequest
+         * @return DescribeAddonsResponse
          */
         // Deprecated
         public async Task<DescribeAddonsResponse> DescribeAddonsAsync(DescribeAddonsRequest request)
@@ -3420,11 +4104,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterAddonInstanceResponse
+         * @deprecated OpenAPI DescribeClusterAddonInstance is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonInstance operation to query the information about a cluster component, including the version, status, and configuration of the component.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAddonInstanceResponse
          */
         // Deprecated
         public DescribeClusterAddonInstanceResponse DescribeClusterAddonInstanceWithOptions(string ClusterID, string AddonName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3449,11 +4135,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterAddonInstanceResponse
+         * @deprecated OpenAPI DescribeClusterAddonInstance is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonInstance operation to query the information about a cluster component, including the version, status, and configuration of the component.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAddonInstanceResponse
          */
         // Deprecated
         public async Task<DescribeClusterAddonInstanceResponse> DescribeClusterAddonInstanceWithOptionsAsync(string ClusterID, string AddonName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3478,9 +4166,11 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @return DescribeClusterAddonInstanceResponse
+         * @deprecated OpenAPI DescribeClusterAddonInstance is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonInstance operation to query the information about a cluster component, including the version, status, and configuration of the component.
+         *
+         * @return DescribeClusterAddonInstanceResponse
          */
         // Deprecated
         public DescribeClusterAddonInstanceResponse DescribeClusterAddonInstance(string ClusterID, string AddonName)
@@ -3491,9 +4181,11 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @return DescribeClusterAddonInstanceResponse
+         * @deprecated OpenAPI DescribeClusterAddonInstance is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonInstance operation to query the information about a cluster component, including the version, status, and configuration of the component.
+         *
+         * @return DescribeClusterAddonInstanceResponse
          */
         // Deprecated
         public async Task<DescribeClusterAddonInstanceResponse> DescribeClusterAddonInstanceAsync(string ClusterID, string AddonName)
@@ -3504,12 +4196,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClusterAddonMetadataRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterAddonMetadataResponse
+         * @deprecated OpenAPI DescribeClusterAddonMetadata is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonMetadata operation to query the metadata of a component version. The metadata includes the component version and available parameters.
+         *
+         * @param request DescribeClusterAddonMetadataRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAddonMetadataResponse
          */
         // Deprecated
         public DescribeClusterAddonMetadataResponse DescribeClusterAddonMetadataWithOptions(string clusterId, string componentId, DescribeClusterAddonMetadataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3541,12 +4235,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClusterAddonMetadataRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterAddonMetadataResponse
+         * @deprecated OpenAPI DescribeClusterAddonMetadata is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonMetadata operation to query the metadata of a component version. The metadata includes the component version and available parameters.
+         *
+         * @param request DescribeClusterAddonMetadataRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAddonMetadataResponse
          */
         // Deprecated
         public async Task<DescribeClusterAddonMetadataResponse> DescribeClusterAddonMetadataWithOptionsAsync(string clusterId, string componentId, DescribeClusterAddonMetadataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3578,10 +4274,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClusterAddonMetadataRequest
-          * @return DescribeClusterAddonMetadataResponse
+         * @deprecated OpenAPI DescribeClusterAddonMetadata is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonMetadata operation to query the metadata of a component version. The metadata includes the component version and available parameters.
+         *
+         * @param request DescribeClusterAddonMetadataRequest
+         * @return DescribeClusterAddonMetadataResponse
          */
         // Deprecated
         public DescribeClusterAddonMetadataResponse DescribeClusterAddonMetadata(string clusterId, string componentId, DescribeClusterAddonMetadataRequest request)
@@ -3592,10 +4290,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClusterAddonMetadataRequest
-          * @return DescribeClusterAddonMetadataResponse
+         * @deprecated OpenAPI DescribeClusterAddonMetadata is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonMetadata operation to query the metadata of a component version. The metadata includes the component version and available parameters.
+         *
+         * @param request DescribeClusterAddonMetadataRequest
+         * @return DescribeClusterAddonMetadataResponse
          */
         // Deprecated
         public async Task<DescribeClusterAddonMetadataResponse> DescribeClusterAddonMetadataAsync(string clusterId, string componentId, DescribeClusterAddonMetadataRequest request)
@@ -3606,11 +4306,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterAddonUpgradeStatusResponse
+         * @deprecated OpenAPI DescribeClusterAddonUpgradeStatus is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonUpgradeStatus operation to query the update progress of a cluster component.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAddonUpgradeStatusResponse
          */
         // Deprecated
         public DescribeClusterAddonUpgradeStatusResponse DescribeClusterAddonUpgradeStatusWithOptions(string ClusterId, string ComponentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3635,11 +4337,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterAddonUpgradeStatusResponse
+         * @deprecated OpenAPI DescribeClusterAddonUpgradeStatus is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonUpgradeStatus operation to query the update progress of a cluster component.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAddonUpgradeStatusResponse
          */
         // Deprecated
         public async Task<DescribeClusterAddonUpgradeStatusResponse> DescribeClusterAddonUpgradeStatusWithOptionsAsync(string ClusterId, string ComponentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3664,9 +4368,11 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @return DescribeClusterAddonUpgradeStatusResponse
+         * @deprecated OpenAPI DescribeClusterAddonUpgradeStatus is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonUpgradeStatus operation to query the update progress of a cluster component.
+         *
+         * @return DescribeClusterAddonUpgradeStatusResponse
          */
         // Deprecated
         public DescribeClusterAddonUpgradeStatusResponse DescribeClusterAddonUpgradeStatus(string ClusterId, string ComponentId)
@@ -3677,9 +4383,11 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @return DescribeClusterAddonUpgradeStatusResponse
+         * @deprecated OpenAPI DescribeClusterAddonUpgradeStatus is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonUpgradeStatus operation to query the update progress of a cluster component.
+         *
+         * @return DescribeClusterAddonUpgradeStatusResponse
          */
         // Deprecated
         public async Task<DescribeClusterAddonUpgradeStatusResponse> DescribeClusterAddonUpgradeStatusAsync(string ClusterId, string ComponentId)
@@ -3690,12 +4398,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param tmpReq DescribeClusterAddonsUpgradeStatusRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterAddonsUpgradeStatusResponse
+         * @deprecated OpenAPI DescribeClusterAddonsUpgradeStatus is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonsUpgradeStatus operation to query the update progress of a component by component name.
+         *
+         * @param tmpReq DescribeClusterAddonsUpgradeStatusRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAddonsUpgradeStatusResponse
          */
         // Deprecated
         public DescribeClusterAddonsUpgradeStatusResponse DescribeClusterAddonsUpgradeStatusWithOptions(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3733,12 +4443,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param tmpReq DescribeClusterAddonsUpgradeStatusRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterAddonsUpgradeStatusResponse
+         * @deprecated OpenAPI DescribeClusterAddonsUpgradeStatus is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonsUpgradeStatus operation to query the update progress of a component by component name.
+         *
+         * @param tmpReq DescribeClusterAddonsUpgradeStatusRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAddonsUpgradeStatusResponse
          */
         // Deprecated
         public async Task<DescribeClusterAddonsUpgradeStatusResponse> DescribeClusterAddonsUpgradeStatusWithOptionsAsync(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3776,10 +4488,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClusterAddonsUpgradeStatusRequest
-          * @return DescribeClusterAddonsUpgradeStatusResponse
+         * @deprecated OpenAPI DescribeClusterAddonsUpgradeStatus is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonsUpgradeStatus operation to query the update progress of a component by component name.
+         *
+         * @param request DescribeClusterAddonsUpgradeStatusRequest
+         * @return DescribeClusterAddonsUpgradeStatusResponse
          */
         // Deprecated
         public DescribeClusterAddonsUpgradeStatusResponse DescribeClusterAddonsUpgradeStatus(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest request)
@@ -3790,10 +4504,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClusterAddonsUpgradeStatusRequest
-          * @return DescribeClusterAddonsUpgradeStatusResponse
+         * @deprecated OpenAPI DescribeClusterAddonsUpgradeStatus is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonsUpgradeStatus operation to query the update progress of a component by component name.
+         *
+         * @param request DescribeClusterAddonsUpgradeStatusRequest
+         * @return DescribeClusterAddonsUpgradeStatusResponse
          */
         // Deprecated
         public async Task<DescribeClusterAddonsUpgradeStatusResponse> DescribeClusterAddonsUpgradeStatusAsync(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest request)
@@ -3804,11 +4520,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterAddonsVersionResponse
+         * @deprecated OpenAPI DescribeClusterAddonsVersion is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonsVersion operation to query the details about all components in a cluster by cluster ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAddonsVersionResponse
          */
         // Deprecated
         public DescribeClusterAddonsVersionResponse DescribeClusterAddonsVersionWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3833,11 +4551,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterAddonsVersionResponse
+         * @deprecated OpenAPI DescribeClusterAddonsVersion is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonsVersion operation to query the details about all components in a cluster by cluster ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAddonsVersionResponse
          */
         // Deprecated
         public async Task<DescribeClusterAddonsVersionResponse> DescribeClusterAddonsVersionWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3862,9 +4582,11 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @return DescribeClusterAddonsVersionResponse
+         * @deprecated OpenAPI DescribeClusterAddonsVersion is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonsVersion operation to query the details about all components in a cluster by cluster ID.
+         *
+         * @return DescribeClusterAddonsVersionResponse
          */
         // Deprecated
         public DescribeClusterAddonsVersionResponse DescribeClusterAddonsVersion(string ClusterId)
@@ -3875,9 +4597,11 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @return DescribeClusterAddonsVersionResponse
+         * @deprecated OpenAPI DescribeClusterAddonsVersion is deprecated
+         *
+         * @summary You can call the DescribeClusterAddonsVersion operation to query the details about all components in a cluster by cluster ID.
+         *
+         * @return DescribeClusterAddonsVersionResponse
          */
         // Deprecated
         public async Task<DescribeClusterAddonsVersionResponse> DescribeClusterAddonsVersionAsync(string ClusterId)
@@ -3887,6 +4611,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterAddonsVersionWithOptionsAsync(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary Queries the script that is used to add existing nodes to a Container Service for Kubernetes (ACK) cluster. You can manually add existing Elastic Compute Service (ECS) instances to an ACK cluster as worker nodes or re-add the worker nodes that you have removed to a node pool.
+         *
+         * @param request DescribeClusterAttachScriptsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAttachScriptsResponse
+         */
         public DescribeClusterAttachScriptsResponse DescribeClusterAttachScriptsWithOptions(string ClusterId, DescribeClusterAttachScriptsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3935,6 +4667,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterAttachScriptsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the script that is used to add existing nodes to a Container Service for Kubernetes (ACK) cluster. You can manually add existing Elastic Compute Service (ECS) instances to an ACK cluster as worker nodes or re-add the worker nodes that you have removed to a node pool.
+         *
+         * @param request DescribeClusterAttachScriptsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterAttachScriptsResponse
+         */
         public async Task<DescribeClusterAttachScriptsResponse> DescribeClusterAttachScriptsWithOptionsAsync(string ClusterId, DescribeClusterAttachScriptsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3983,6 +4723,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterAttachScriptsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the script that is used to add existing nodes to a Container Service for Kubernetes (ACK) cluster. You can manually add existing Elastic Compute Service (ECS) instances to an ACK cluster as worker nodes or re-add the worker nodes that you have removed to a node pool.
+         *
+         * @param request DescribeClusterAttachScriptsRequest
+         * @return DescribeClusterAttachScriptsResponse
+         */
         public DescribeClusterAttachScriptsResponse DescribeClusterAttachScripts(string ClusterId, DescribeClusterAttachScriptsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3990,6 +4736,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterAttachScriptsWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the script that is used to add existing nodes to a Container Service for Kubernetes (ACK) cluster. You can manually add existing Elastic Compute Service (ECS) instances to an ACK cluster as worker nodes or re-add the worker nodes that you have removed to a node pool.
+         *
+         * @param request DescribeClusterAttachScriptsRequest
+         * @return DescribeClusterAttachScriptsResponse
+         */
         public async Task<DescribeClusterAttachScriptsResponse> DescribeClusterAttachScriptsAsync(string ClusterId, DescribeClusterAttachScriptsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3997,6 +4749,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterAttachScriptsWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClusterDetail operation to query the details of a Container Service for Kubernetes (ACK) cluster by cluster ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterDetailResponse
+         */
         public DescribeClusterDetailResponse DescribeClusterDetailWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4018,6 +4777,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClusterDetail operation to query the details of a Container Service for Kubernetes (ACK) cluster by cluster ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterDetailResponse
+         */
         public async Task<DescribeClusterDetailResponse> DescribeClusterDetailWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4039,6 +4805,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClusterDetail operation to query the details of a Container Service for Kubernetes (ACK) cluster by cluster ID.
+         *
+         * @return DescribeClusterDetailResponse
+         */
         public DescribeClusterDetailResponse DescribeClusterDetail(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4046,6 +4817,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterDetailWithOptions(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClusterDetail operation to query the details of a Container Service for Kubernetes (ACK) cluster by cluster ID.
+         *
+         * @return DescribeClusterDetailResponse
+         */
         public async Task<DescribeClusterDetailResponse> DescribeClusterDetailAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4053,6 +4829,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterDetailWithOptionsAsync(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary Queries events and event details in a Container Service for Kubernetes (ACK) cluster, including the severity level, status, and start time of each event. Events are generated when clusters created, modified, and updated, node pools are created and scaled out, and components are installed.
+         *
+         * @param request DescribeClusterEventsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterEventsResponse
+         */
         public DescribeClusterEventsResponse DescribeClusterEventsWithOptions(string ClusterId, DescribeClusterEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4089,6 +4873,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterEventsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries events and event details in a Container Service for Kubernetes (ACK) cluster, including the severity level, status, and start time of each event. Events are generated when clusters created, modified, and updated, node pools are created and scaled out, and components are installed.
+         *
+         * @param request DescribeClusterEventsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterEventsResponse
+         */
         public async Task<DescribeClusterEventsResponse> DescribeClusterEventsWithOptionsAsync(string ClusterId, DescribeClusterEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4125,6 +4917,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries events and event details in a Container Service for Kubernetes (ACK) cluster, including the severity level, status, and start time of each event. Events are generated when clusters created, modified, and updated, node pools are created and scaled out, and components are installed.
+         *
+         * @param request DescribeClusterEventsRequest
+         * @return DescribeClusterEventsResponse
+         */
         public DescribeClusterEventsResponse DescribeClusterEvents(string ClusterId, DescribeClusterEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4132,6 +4930,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterEventsWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries events and event details in a Container Service for Kubernetes (ACK) cluster, including the severity level, status, and start time of each event. Events are generated when clusters created, modified, and updated, node pools are created and scaled out, and components are installed.
+         *
+         * @param request DescribeClusterEventsRequest
+         * @return DescribeClusterEventsResponse
+         */
         public async Task<DescribeClusterEventsResponse> DescribeClusterEventsAsync(string ClusterId, DescribeClusterEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4139,6 +4943,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterEventsWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the cluster log to help analyze cluster issues and locate the cause.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterLogsResponse
+         */
         public DescribeClusterLogsResponse DescribeClusterLogsWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4160,6 +4971,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the cluster log to help analyze cluster issues and locate the cause.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterLogsResponse
+         */
         public async Task<DescribeClusterLogsResponse> DescribeClusterLogsWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4181,6 +4999,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the cluster log to help analyze cluster issues and locate the cause.
+         *
+         * @return DescribeClusterLogsResponse
+         */
         public DescribeClusterLogsResponse DescribeClusterLogs(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4188,6 +5011,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterLogsWithOptions(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary Queries the cluster log to help analyze cluster issues and locate the cause.
+         *
+         * @return DescribeClusterLogsResponse
+         */
         public async Task<DescribeClusterLogsResponse> DescribeClusterLogsAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4195,6 +5023,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterLogsWithOptionsAsync(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClusterNodePoolDetail.html operation to query the details about a node pool in a cluster by node pool ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterNodePoolDetailResponse
+         */
         public DescribeClusterNodePoolDetailResponse DescribeClusterNodePoolDetailWithOptions(string ClusterId, string NodepoolId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4216,6 +5051,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterNodePoolDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClusterNodePoolDetail.html operation to query the details about a node pool in a cluster by node pool ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterNodePoolDetailResponse
+         */
         public async Task<DescribeClusterNodePoolDetailResponse> DescribeClusterNodePoolDetailWithOptionsAsync(string ClusterId, string NodepoolId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4237,6 +5079,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterNodePoolDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClusterNodePoolDetail.html operation to query the details about a node pool in a cluster by node pool ID.
+         *
+         * @return DescribeClusterNodePoolDetailResponse
+         */
         public DescribeClusterNodePoolDetailResponse DescribeClusterNodePoolDetail(string ClusterId, string NodepoolId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4244,6 +5091,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterNodePoolDetailWithOptions(ClusterId, NodepoolId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClusterNodePoolDetail.html operation to query the details about a node pool in a cluster by node pool ID.
+         *
+         * @return DescribeClusterNodePoolDetailResponse
+         */
         public async Task<DescribeClusterNodePoolDetailResponse> DescribeClusterNodePoolDetailAsync(string ClusterId, string NodepoolId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4251,6 +5103,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterNodePoolDetailWithOptionsAsync(ClusterId, NodepoolId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClusterNodePools operation to query node pools in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request DescribeClusterNodePoolsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterNodePoolsResponse
+         */
         public DescribeClusterNodePoolsResponse DescribeClusterNodePoolsWithOptions(string ClusterId, DescribeClusterNodePoolsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4279,6 +5139,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterNodePoolsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClusterNodePools operation to query node pools in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request DescribeClusterNodePoolsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterNodePoolsResponse
+         */
         public async Task<DescribeClusterNodePoolsResponse> DescribeClusterNodePoolsWithOptionsAsync(string ClusterId, DescribeClusterNodePoolsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4307,6 +5175,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterNodePoolsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClusterNodePools operation to query node pools in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request DescribeClusterNodePoolsRequest
+         * @return DescribeClusterNodePoolsResponse
+         */
         public DescribeClusterNodePoolsResponse DescribeClusterNodePools(string ClusterId, DescribeClusterNodePoolsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4314,6 +5188,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterNodePoolsWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClusterNodePools operation to query node pools in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request DescribeClusterNodePoolsRequest
+         * @return DescribeClusterNodePoolsResponse
+         */
         public async Task<DescribeClusterNodePoolsResponse> DescribeClusterNodePoolsAsync(string ClusterId, DescribeClusterNodePoolsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4321,6 +5201,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterNodePoolsWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClusterNodes operation to query the details about all nodes in a cluster by cluster ID.
+         *
+         * @param request DescribeClusterNodesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterNodesResponse
+         */
         public DescribeClusterNodesResponse DescribeClusterNodesWithOptions(string ClusterId, DescribeClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4365,6 +5253,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterNodesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClusterNodes operation to query the details about all nodes in a cluster by cluster ID.
+         *
+         * @param request DescribeClusterNodesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterNodesResponse
+         */
         public async Task<DescribeClusterNodesResponse> DescribeClusterNodesWithOptionsAsync(string ClusterId, DescribeClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4409,6 +5305,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClusterNodes operation to query the details about all nodes in a cluster by cluster ID.
+         *
+         * @param request DescribeClusterNodesRequest
+         * @return DescribeClusterNodesResponse
+         */
         public DescribeClusterNodesResponse DescribeClusterNodes(string ClusterId, DescribeClusterNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4416,6 +5318,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterNodesWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClusterNodes operation to query the details about all nodes in a cluster by cluster ID.
+         *
+         * @param request DescribeClusterNodesRequest
+         * @return DescribeClusterNodesResponse
+         */
         public async Task<DescribeClusterNodesResponse> DescribeClusterNodesAsync(string ClusterId, DescribeClusterNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4423,6 +5331,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterNodesWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClusterResources operation to query all resources in a cluster by cluster ID.
+         *
+         * @param request DescribeClusterResourcesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterResourcesResponse
+         */
         public DescribeClusterResourcesResponse DescribeClusterResourcesWithOptions(string ClusterId, DescribeClusterResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4451,6 +5367,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClusterResources operation to query all resources in a cluster by cluster ID.
+         *
+         * @param request DescribeClusterResourcesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterResourcesResponse
+         */
         public async Task<DescribeClusterResourcesResponse> DescribeClusterResourcesWithOptionsAsync(string ClusterId, DescribeClusterResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4479,6 +5403,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClusterResources operation to query all resources in a cluster by cluster ID.
+         *
+         * @param request DescribeClusterResourcesRequest
+         * @return DescribeClusterResourcesResponse
+         */
         public DescribeClusterResourcesResponse DescribeClusterResources(string ClusterId, DescribeClusterResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4486,6 +5416,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterResourcesWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClusterResources operation to query all resources in a cluster by cluster ID.
+         *
+         * @param request DescribeClusterResourcesRequest
+         * @return DescribeClusterResourcesResponse
+         */
         public async Task<DescribeClusterResourcesResponse> DescribeClusterResourcesAsync(string ClusterId, DescribeClusterResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4493,6 +5429,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterResourcesWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries tasks in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request DescribeClusterTasksRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterTasksResponse
+         */
         public DescribeClusterTasksResponse DescribeClusterTasksWithOptions(string clusterId, DescribeClusterTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4525,6 +5469,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries tasks in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request DescribeClusterTasksRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterTasksResponse
+         */
         public async Task<DescribeClusterTasksResponse> DescribeClusterTasksWithOptionsAsync(string clusterId, DescribeClusterTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4557,6 +5509,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries tasks in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request DescribeClusterTasksRequest
+         * @return DescribeClusterTasksResponse
+         */
         public DescribeClusterTasksResponse DescribeClusterTasks(string clusterId, DescribeClusterTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4564,6 +5522,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterTasksWithOptions(clusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries tasks in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request DescribeClusterTasksRequest
+         * @return DescribeClusterTasksResponse
+         */
         public async Task<DescribeClusterTasksResponse> DescribeClusterTasksAsync(string clusterId, DescribeClusterTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4572,13 +5536,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
-          *
-          * @param request DescribeClusterUserKubeconfigRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterUserKubeconfigResponse
+         * @summary Kubeconfig files store identity and authentication information that is used by clients to access Container Service for Kubernetes (ACK) clusters. To use a kubectl client to manage an ACK cluster, you need to use the corresponding kubeconfig file to connect to the ACK cluster. We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.
+         *
+         * @description **
+         * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
+         *
+         * @param request DescribeClusterUserKubeconfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterUserKubeconfigResponse
          */
         public DescribeClusterUserKubeconfigResponse DescribeClusterUserKubeconfigWithOptions(string ClusterId, DescribeClusterUserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4613,13 +5579,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
-          *
-          * @param request DescribeClusterUserKubeconfigRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterUserKubeconfigResponse
+         * @summary Kubeconfig files store identity and authentication information that is used by clients to access Container Service for Kubernetes (ACK) clusters. To use a kubectl client to manage an ACK cluster, you need to use the corresponding kubeconfig file to connect to the ACK cluster. We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.
+         *
+         * @description **
+         * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
+         *
+         * @param request DescribeClusterUserKubeconfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterUserKubeconfigResponse
          */
         public async Task<DescribeClusterUserKubeconfigResponse> DescribeClusterUserKubeconfigWithOptionsAsync(string ClusterId, DescribeClusterUserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4654,11 +5622,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
-          *
-          * @param request DescribeClusterUserKubeconfigRequest
-          * @return DescribeClusterUserKubeconfigResponse
+         * @summary Kubeconfig files store identity and authentication information that is used by clients to access Container Service for Kubernetes (ACK) clusters. To use a kubectl client to manage an ACK cluster, you need to use the corresponding kubeconfig file to connect to the ACK cluster. We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.
+         *
+         * @description **
+         * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
+         *
+         * @param request DescribeClusterUserKubeconfigRequest
+         * @return DescribeClusterUserKubeconfigResponse
          */
         public DescribeClusterUserKubeconfigResponse DescribeClusterUserKubeconfig(string ClusterId, DescribeClusterUserKubeconfigRequest request)
         {
@@ -4668,11 +5638,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
-          *
-          * @param request DescribeClusterUserKubeconfigRequest
-          * @return DescribeClusterUserKubeconfigResponse
+         * @summary Kubeconfig files store identity and authentication information that is used by clients to access Container Service for Kubernetes (ACK) clusters. To use a kubectl client to manage an ACK cluster, you need to use the corresponding kubeconfig file to connect to the ACK cluster. We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.
+         *
+         * @description **
+         * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
+         *
+         * @param request DescribeClusterUserKubeconfigRequest
+         * @return DescribeClusterUserKubeconfigResponse
          */
         public async Task<DescribeClusterUserKubeconfigResponse> DescribeClusterUserKubeconfigAsync(string ClusterId, DescribeClusterUserKubeconfigRequest request)
         {
@@ -4682,12 +5654,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClusterV2UserKubeconfigRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterV2UserKubeconfigResponse
+         * @deprecated OpenAPI DescribeClusterV2UserKubeconfig is deprecated
+         *
+         * @summary 获取集群kubeconfig接口
+         *
+         * @param request DescribeClusterV2UserKubeconfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterV2UserKubeconfigResponse
          */
         // Deprecated
         public DescribeClusterV2UserKubeconfigResponse DescribeClusterV2UserKubeconfigWithOptions(string ClusterId, DescribeClusterV2UserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4719,12 +5693,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClusterV2UserKubeconfigRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterV2UserKubeconfigResponse
+         * @deprecated OpenAPI DescribeClusterV2UserKubeconfig is deprecated
+         *
+         * @summary 获取集群kubeconfig接口
+         *
+         * @param request DescribeClusterV2UserKubeconfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterV2UserKubeconfigResponse
          */
         // Deprecated
         public async Task<DescribeClusterV2UserKubeconfigResponse> DescribeClusterV2UserKubeconfigWithOptionsAsync(string ClusterId, DescribeClusterV2UserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4756,10 +5732,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClusterV2UserKubeconfigRequest
-          * @return DescribeClusterV2UserKubeconfigResponse
+         * @deprecated OpenAPI DescribeClusterV2UserKubeconfig is deprecated
+         *
+         * @summary 获取集群kubeconfig接口
+         *
+         * @param request DescribeClusterV2UserKubeconfigRequest
+         * @return DescribeClusterV2UserKubeconfigResponse
          */
         // Deprecated
         public DescribeClusterV2UserKubeconfigResponse DescribeClusterV2UserKubeconfig(string ClusterId, DescribeClusterV2UserKubeconfigRequest request)
@@ -4770,10 +5748,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClusterV2UserKubeconfigRequest
-          * @return DescribeClusterV2UserKubeconfigResponse
+         * @deprecated OpenAPI DescribeClusterV2UserKubeconfig is deprecated
+         *
+         * @summary 获取集群kubeconfig接口
+         *
+         * @param request DescribeClusterV2UserKubeconfigRequest
+         * @return DescribeClusterV2UserKubeconfigResponse
          */
         // Deprecated
         public async Task<DescribeClusterV2UserKubeconfigResponse> DescribeClusterV2UserKubeconfigAsync(string ClusterId, DescribeClusterV2UserKubeconfigRequest request)
@@ -4783,6 +5763,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClusterV2UserKubeconfigWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClusterVuls operation to query the vulnerability information of a cluster.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterVulsResponse
+         */
         public DescribeClusterVulsResponse DescribeClusterVulsWithOptions(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4804,6 +5791,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterVulsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClusterVuls operation to query the vulnerability information of a cluster.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterVulsResponse
+         */
         public async Task<DescribeClusterVulsResponse> DescribeClusterVulsWithOptionsAsync(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4825,6 +5819,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterVulsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClusterVuls operation to query the vulnerability information of a cluster.
+         *
+         * @return DescribeClusterVulsResponse
+         */
         public DescribeClusterVulsResponse DescribeClusterVuls(string clusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4832,6 +5831,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClusterVulsWithOptions(clusterId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClusterVuls operation to query the vulnerability information of a cluster.
+         *
+         * @return DescribeClusterVulsResponse
+         */
         public async Task<DescribeClusterVulsResponse> DescribeClusterVulsAsync(string clusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4840,12 +5844,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClustersRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClustersResponse
+         * @deprecated OpenAPI DescribeClusters is deprecated
+         *
+         * @summary You can call the DescribeClusters operation to query all the clusters that belong to the current Alibaba Cloud account, including Kubernetes clusters and Swarm clusters.
+         *
+         * @param request DescribeClustersRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClustersResponse
          */
         // Deprecated
         public DescribeClustersResponse DescribeClustersWithOptions(DescribeClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4881,12 +5887,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClustersRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClustersResponse
+         * @deprecated OpenAPI DescribeClusters is deprecated
+         *
+         * @summary You can call the DescribeClusters operation to query all the clusters that belong to the current Alibaba Cloud account, including Kubernetes clusters and Swarm clusters.
+         *
+         * @param request DescribeClustersRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClustersResponse
          */
         // Deprecated
         public async Task<DescribeClustersResponse> DescribeClustersWithOptionsAsync(DescribeClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4922,10 +5930,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClustersRequest
-          * @return DescribeClustersResponse
+         * @deprecated OpenAPI DescribeClusters is deprecated
+         *
+         * @summary You can call the DescribeClusters operation to query all the clusters that belong to the current Alibaba Cloud account, including Kubernetes clusters and Swarm clusters.
+         *
+         * @param request DescribeClustersRequest
+         * @return DescribeClustersResponse
          */
         // Deprecated
         public DescribeClustersResponse DescribeClusters(DescribeClustersRequest request)
@@ -4936,10 +5946,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeClustersRequest
-          * @return DescribeClustersResponse
+         * @deprecated OpenAPI DescribeClusters is deprecated
+         *
+         * @summary You can call the DescribeClusters operation to query all the clusters that belong to the current Alibaba Cloud account, including Kubernetes clusters and Swarm clusters.
+         *
+         * @param request DescribeClustersRequest
+         * @return DescribeClustersResponse
          */
         // Deprecated
         public async Task<DescribeClustersResponse> DescribeClustersAsync(DescribeClustersRequest request)
@@ -4949,6 +5961,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClustersWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClustersV1 operation to query the details about all Container Service for Kubernetes (ACK) clusters.
+         *
+         * @param request DescribeClustersV1Request
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClustersV1Response
+         */
         public DescribeClustersV1Response DescribeClustersV1WithOptions(DescribeClustersV1Request request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5005,6 +6025,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClustersV1Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClustersV1 operation to query the details about all Container Service for Kubernetes (ACK) clusters.
+         *
+         * @param request DescribeClustersV1Request
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClustersV1Response
+         */
         public async Task<DescribeClustersV1Response> DescribeClustersV1WithOptionsAsync(DescribeClustersV1Request request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5061,6 +6089,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClustersV1Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeClustersV1 operation to query the details about all Container Service for Kubernetes (ACK) clusters.
+         *
+         * @param request DescribeClustersV1Request
+         * @return DescribeClustersV1Response
+         */
         public DescribeClustersV1Response DescribeClustersV1(DescribeClustersV1Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5068,6 +6102,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeClustersV1WithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeClustersV1 operation to query the details about all Container Service for Kubernetes (ACK) clusters.
+         *
+         * @param request DescribeClustersV1Request
+         * @return DescribeClustersV1Response
+         */
         public async Task<DescribeClustersV1Response> DescribeClustersV1Async(DescribeClustersV1Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5075,6 +6115,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClustersV1WithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachineActiveProcess operation to query the activation progress of a cloud-native box.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEdgeMachineActiveProcessResponse
+         */
         public DescribeEdgeMachineActiveProcessResponse DescribeEdgeMachineActiveProcessWithOptions(string edgeMachineid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5096,6 +6143,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeEdgeMachineActiveProcessResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachineActiveProcess operation to query the activation progress of a cloud-native box.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEdgeMachineActiveProcessResponse
+         */
         public async Task<DescribeEdgeMachineActiveProcessResponse> DescribeEdgeMachineActiveProcessWithOptionsAsync(string edgeMachineid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5117,6 +6171,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeEdgeMachineActiveProcessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachineActiveProcess operation to query the activation progress of a cloud-native box.
+         *
+         * @return DescribeEdgeMachineActiveProcessResponse
+         */
         public DescribeEdgeMachineActiveProcessResponse DescribeEdgeMachineActiveProcess(string edgeMachineid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5124,6 +6183,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeEdgeMachineActiveProcessWithOptions(edgeMachineid, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachineActiveProcess operation to query the activation progress of a cloud-native box.
+         *
+         * @return DescribeEdgeMachineActiveProcessResponse
+         */
         public async Task<DescribeEdgeMachineActiveProcessResponse> DescribeEdgeMachineActiveProcessAsync(string edgeMachineid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5131,6 +6195,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeEdgeMachineActiveProcessWithOptionsAsync(edgeMachineid, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachineModels operation to query the cloud-native box models.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEdgeMachineModelsResponse
+         */
         public DescribeEdgeMachineModelsResponse DescribeEdgeMachineModelsWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5152,6 +6223,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeEdgeMachineModelsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachineModels operation to query the cloud-native box models.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEdgeMachineModelsResponse
+         */
         public async Task<DescribeEdgeMachineModelsResponse> DescribeEdgeMachineModelsWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5173,6 +6251,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeEdgeMachineModelsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachineModels operation to query the cloud-native box models.
+         *
+         * @return DescribeEdgeMachineModelsResponse
+         */
         public DescribeEdgeMachineModelsResponse DescribeEdgeMachineModels()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5180,6 +6263,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeEdgeMachineModelsWithOptions(headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachineModels operation to query the cloud-native box models.
+         *
+         * @return DescribeEdgeMachineModelsResponse
+         */
         public async Task<DescribeEdgeMachineModelsResponse> DescribeEdgeMachineModelsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5187,6 +6275,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeEdgeMachineModelsWithOptionsAsync(headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachineTunnelConfigDetail operation to obtain the SSH token of a cloud-native box.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEdgeMachineTunnelConfigDetailResponse
+         */
         public DescribeEdgeMachineTunnelConfigDetailResponse DescribeEdgeMachineTunnelConfigDetailWithOptions(string edgeMachineid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5208,6 +6303,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeEdgeMachineTunnelConfigDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachineTunnelConfigDetail operation to obtain the SSH token of a cloud-native box.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEdgeMachineTunnelConfigDetailResponse
+         */
         public async Task<DescribeEdgeMachineTunnelConfigDetailResponse> DescribeEdgeMachineTunnelConfigDetailWithOptionsAsync(string edgeMachineid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5229,6 +6331,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeEdgeMachineTunnelConfigDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachineTunnelConfigDetail operation to obtain the SSH token of a cloud-native box.
+         *
+         * @return DescribeEdgeMachineTunnelConfigDetailResponse
+         */
         public DescribeEdgeMachineTunnelConfigDetailResponse DescribeEdgeMachineTunnelConfigDetail(string edgeMachineid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5236,6 +6343,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeEdgeMachineTunnelConfigDetailWithOptions(edgeMachineid, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachineTunnelConfigDetail operation to obtain the SSH token of a cloud-native box.
+         *
+         * @return DescribeEdgeMachineTunnelConfigDetailResponse
+         */
         public async Task<DescribeEdgeMachineTunnelConfigDetailResponse> DescribeEdgeMachineTunnelConfigDetailAsync(string edgeMachineid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5243,6 +6355,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeEdgeMachineTunnelConfigDetailWithOptionsAsync(edgeMachineid, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachines operation to query a list of cloud-native boxes.
+         *
+         * @param request DescribeEdgeMachinesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEdgeMachinesResponse
+         */
         public DescribeEdgeMachinesResponse DescribeEdgeMachinesWithOptions(DescribeEdgeMachinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5291,6 +6411,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeEdgeMachinesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachines operation to query a list of cloud-native boxes.
+         *
+         * @param request DescribeEdgeMachinesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEdgeMachinesResponse
+         */
         public async Task<DescribeEdgeMachinesResponse> DescribeEdgeMachinesWithOptionsAsync(DescribeEdgeMachinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5339,6 +6467,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeEdgeMachinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachines operation to query a list of cloud-native boxes.
+         *
+         * @param request DescribeEdgeMachinesRequest
+         * @return DescribeEdgeMachinesResponse
+         */
         public DescribeEdgeMachinesResponse DescribeEdgeMachines(DescribeEdgeMachinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5346,6 +6480,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeEdgeMachinesWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeEdgeMachines operation to query a list of cloud-native boxes.
+         *
+         * @param request DescribeEdgeMachinesRequest
+         * @return DescribeEdgeMachinesResponse
+         */
         public async Task<DescribeEdgeMachinesResponse> DescribeEdgeMachinesAsync(DescribeEdgeMachinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5353,6 +6493,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeEdgeMachinesWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary Queries detailed information about a type of events, including the severity level, status, and start time of each event. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.
+         *
+         * @param request DescribeEventsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEventsResponse
+         */
         public DescribeEventsResponse DescribeEventsWithOptions(DescribeEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5393,6 +6541,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeEventsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries detailed information about a type of events, including the severity level, status, and start time of each event. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.
+         *
+         * @param request DescribeEventsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEventsResponse
+         */
         public async Task<DescribeEventsResponse> DescribeEventsWithOptionsAsync(DescribeEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5433,6 +6589,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries detailed information about a type of events, including the severity level, status, and start time of each event. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.
+         *
+         * @param request DescribeEventsRequest
+         * @return DescribeEventsResponse
+         */
         public DescribeEventsResponse DescribeEvents(DescribeEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5440,6 +6602,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeEventsWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Queries detailed information about a type of events, including the severity level, status, and start time of each event. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.
+         *
+         * @param request DescribeEventsRequest
+         * @return DescribeEventsResponse
+         */
         public async Task<DescribeEventsResponse> DescribeEventsAsync(DescribeEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5448,12 +6616,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * For more information, see [Register an external Kubernetes cluster](~~121053~~).
-          *
-          * @param request DescribeExternalAgentRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeExternalAgentResponse
+         * @summary You can call the DescribeExternalAgent operation to query the agent configurations of a registered cluster by cluster ID.
+         *
+         * @description For more information, see [Register an external Kubernetes cluster](https://help.aliyun.com/document_detail/121053.html).
+         *
+         * @param request DescribeExternalAgentRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeExternalAgentResponse
          */
         public DescribeExternalAgentResponse DescribeExternalAgentWithOptions(string ClusterId, DescribeExternalAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5488,12 +6658,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * For more information, see [Register an external Kubernetes cluster](~~121053~~).
-          *
-          * @param request DescribeExternalAgentRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeExternalAgentResponse
+         * @summary You can call the DescribeExternalAgent operation to query the agent configurations of a registered cluster by cluster ID.
+         *
+         * @description For more information, see [Register an external Kubernetes cluster](https://help.aliyun.com/document_detail/121053.html).
+         *
+         * @param request DescribeExternalAgentRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeExternalAgentResponse
          */
         public async Task<DescribeExternalAgentResponse> DescribeExternalAgentWithOptionsAsync(string ClusterId, DescribeExternalAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5528,10 +6700,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * For more information, see [Register an external Kubernetes cluster](~~121053~~).
-          *
-          * @param request DescribeExternalAgentRequest
-          * @return DescribeExternalAgentResponse
+         * @summary You can call the DescribeExternalAgent operation to query the agent configurations of a registered cluster by cluster ID.
+         *
+         * @description For more information, see [Register an external Kubernetes cluster](https://help.aliyun.com/document_detail/121053.html).
+         *
+         * @param request DescribeExternalAgentRequest
+         * @return DescribeExternalAgentResponse
          */
         public DescribeExternalAgentResponse DescribeExternalAgent(string ClusterId, DescribeExternalAgentRequest request)
         {
@@ -5541,10 +6715,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * For more information, see [Register an external Kubernetes cluster](~~121053~~).
-          *
-          * @param request DescribeExternalAgentRequest
-          * @return DescribeExternalAgentResponse
+         * @summary You can call the DescribeExternalAgent operation to query the agent configurations of a registered cluster by cluster ID.
+         *
+         * @description For more information, see [Register an external Kubernetes cluster](https://help.aliyun.com/document_detail/121053.html).
+         *
+         * @param request DescribeExternalAgentRequest
+         * @return DescribeExternalAgentResponse
          */
         public async Task<DescribeExternalAgentResponse> DescribeExternalAgentAsync(string ClusterId, DescribeExternalAgentRequest request)
         {
@@ -5553,6 +6729,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeExternalAgentWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the detailed information about Kubernetes versions, including the version number, release date, expiration date, compatible OSs, and runtime.
+         *
+         * @param request DescribeKubernetesVersionMetadataRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeKubernetesVersionMetadataResponse
+         */
         public DescribeKubernetesVersionMetadataResponse DescribeKubernetesVersionMetadataWithOptions(DescribeKubernetesVersionMetadataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5601,6 +6785,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeKubernetesVersionMetadataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the detailed information about Kubernetes versions, including the version number, release date, expiration date, compatible OSs, and runtime.
+         *
+         * @param request DescribeKubernetesVersionMetadataRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeKubernetesVersionMetadataResponse
+         */
         public async Task<DescribeKubernetesVersionMetadataResponse> DescribeKubernetesVersionMetadataWithOptionsAsync(DescribeKubernetesVersionMetadataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5649,6 +6841,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeKubernetesVersionMetadataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the detailed information about Kubernetes versions, including the version number, release date, expiration date, compatible OSs, and runtime.
+         *
+         * @param request DescribeKubernetesVersionMetadataRequest
+         * @return DescribeKubernetesVersionMetadataResponse
+         */
         public DescribeKubernetesVersionMetadataResponse DescribeKubernetesVersionMetadata(DescribeKubernetesVersionMetadataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5656,6 +6854,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeKubernetesVersionMetadataWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the detailed information about Kubernetes versions, including the version number, release date, expiration date, compatible OSs, and runtime.
+         *
+         * @param request DescribeKubernetesVersionMetadataRequest
+         * @return DescribeKubernetesVersionMetadataResponse
+         */
         public async Task<DescribeKubernetesVersionMetadataResponse> DescribeKubernetesVersionMetadataAsync(DescribeKubernetesVersionMetadataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5663,6 +6867,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeKubernetesVersionMetadataWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the vulnerability information of a node pool, such as vulnerability names and severity levels, by specifying the ID of the node pool. We recommend that you periodically scan node pools for vulnerabilities to enhance cluster security.
+         *
+         * @param request DescribeNodePoolVulsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNodePoolVulsResponse
+         */
         public DescribeNodePoolVulsResponse DescribeNodePoolVulsWithOptions(string clusterId, string nodepoolId, DescribeNodePoolVulsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5691,6 +6903,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeNodePoolVulsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the vulnerability information of a node pool, such as vulnerability names and severity levels, by specifying the ID of the node pool. We recommend that you periodically scan node pools for vulnerabilities to enhance cluster security.
+         *
+         * @param request DescribeNodePoolVulsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNodePoolVulsResponse
+         */
         public async Task<DescribeNodePoolVulsResponse> DescribeNodePoolVulsWithOptionsAsync(string clusterId, string nodepoolId, DescribeNodePoolVulsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5719,6 +6939,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeNodePoolVulsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the vulnerability information of a node pool, such as vulnerability names and severity levels, by specifying the ID of the node pool. We recommend that you periodically scan node pools for vulnerabilities to enhance cluster security.
+         *
+         * @param request DescribeNodePoolVulsRequest
+         * @return DescribeNodePoolVulsResponse
+         */
         public DescribeNodePoolVulsResponse DescribeNodePoolVuls(string clusterId, string nodepoolId, DescribeNodePoolVulsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5726,6 +6952,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeNodePoolVulsWithOptions(clusterId, nodepoolId, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the vulnerability information of a node pool, such as vulnerability names and severity levels, by specifying the ID of the node pool. We recommend that you periodically scan node pools for vulnerabilities to enhance cluster security.
+         *
+         * @param request DescribeNodePoolVulsRequest
+         * @return DescribeNodePoolVulsResponse
+         */
         public async Task<DescribeNodePoolVulsResponse> DescribeNodePoolVulsAsync(string clusterId, string nodepoolId, DescribeNodePoolVulsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5733,6 +6965,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeNodePoolVulsWithOptionsAsync(clusterId, nodepoolId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribePolicies operation to query a list of policies.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePoliciesResponse
+         */
         public DescribePoliciesResponse DescribePoliciesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5754,6 +6993,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribePoliciesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribePolicies operation to query a list of policies.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePoliciesResponse
+         */
         public async Task<DescribePoliciesResponse> DescribePoliciesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5775,6 +7021,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribePoliciesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribePolicies operation to query a list of policies.
+         *
+         * @return DescribePoliciesResponse
+         */
         public DescribePoliciesResponse DescribePolicies()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5782,6 +7033,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribePoliciesWithOptions(headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribePolicies operation to query a list of policies.
+         *
+         * @return DescribePoliciesResponse
+         */
         public async Task<DescribePoliciesResponse> DescribePoliciesAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5789,6 +7045,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribePoliciesWithOptionsAsync(headers, runtime);
         }
 
+        /**
+         * @summary Container security policies for Container Service for Kubernetes (ACK) clusters offer a variety of built-in policies, including cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment. You can call the DescribePolicyDetails operation to query information about a policy, such as the content, action, and severity level of the policy.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePolicyDetailsResponse
+         */
         public DescribePolicyDetailsResponse DescribePolicyDetailsWithOptions(string policyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5810,6 +7073,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribePolicyDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Container security policies for Container Service for Kubernetes (ACK) clusters offer a variety of built-in policies, including cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment. You can call the DescribePolicyDetails operation to query information about a policy, such as the content, action, and severity level of the policy.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePolicyDetailsResponse
+         */
         public async Task<DescribePolicyDetailsResponse> DescribePolicyDetailsWithOptionsAsync(string policyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5831,6 +7101,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribePolicyDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Container security policies for Container Service for Kubernetes (ACK) clusters offer a variety of built-in policies, including cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment. You can call the DescribePolicyDetails operation to query information about a policy, such as the content, action, and severity level of the policy.
+         *
+         * @return DescribePolicyDetailsResponse
+         */
         public DescribePolicyDetailsResponse DescribePolicyDetails(string policyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5838,6 +7113,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribePolicyDetailsWithOptions(policyName, headers, runtime);
         }
 
+        /**
+         * @summary Container security policies for Container Service for Kubernetes (ACK) clusters offer a variety of built-in policies, including cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment. You can call the DescribePolicyDetails operation to query information about a policy, such as the content, action, and severity level of the policy.
+         *
+         * @return DescribePolicyDetailsResponse
+         */
         public async Task<DescribePolicyDetailsResponse> DescribePolicyDetailsAsync(string policyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5845,6 +7125,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribePolicyDetailsWithOptionsAsync(policyName, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribePolicyGovernanceInCluster operation to query information about policies in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePolicyGovernanceInClusterResponse
+         */
         public DescribePolicyGovernanceInClusterResponse DescribePolicyGovernanceInClusterWithOptions(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5866,6 +7153,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribePolicyGovernanceInClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribePolicyGovernanceInCluster operation to query information about policies in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePolicyGovernanceInClusterResponse
+         */
         public async Task<DescribePolicyGovernanceInClusterResponse> DescribePolicyGovernanceInClusterWithOptionsAsync(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5887,6 +7181,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribePolicyGovernanceInClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribePolicyGovernanceInCluster operation to query information about policies in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @return DescribePolicyGovernanceInClusterResponse
+         */
         public DescribePolicyGovernanceInClusterResponse DescribePolicyGovernanceInCluster(string clusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5894,6 +7193,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribePolicyGovernanceInClusterWithOptions(clusterId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribePolicyGovernanceInCluster operation to query information about policies in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @return DescribePolicyGovernanceInClusterResponse
+         */
         public async Task<DescribePolicyGovernanceInClusterResponse> DescribePolicyGovernanceInClusterAsync(string clusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5901,6 +7205,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribePolicyGovernanceInClusterWithOptionsAsync(clusterId, headers, runtime);
         }
 
+        /**
+         * @summary Queries the detailed information about policy instances of the specified type in a Container Service for Kubernetes (ACK) cluster, such as the policy description and severity level. You can choose a type of security policy for an ACK cluster, specify the action and applicable scope of the policy, and then create and deploy a policy instance.
+         *
+         * @param request DescribePolicyInstancesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePolicyInstancesResponse
+         */
         public DescribePolicyInstancesResponse DescribePolicyInstancesWithOptions(string clusterId, DescribePolicyInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5933,6 +7245,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribePolicyInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the detailed information about policy instances of the specified type in a Container Service for Kubernetes (ACK) cluster, such as the policy description and severity level. You can choose a type of security policy for an ACK cluster, specify the action and applicable scope of the policy, and then create and deploy a policy instance.
+         *
+         * @param request DescribePolicyInstancesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePolicyInstancesResponse
+         */
         public async Task<DescribePolicyInstancesResponse> DescribePolicyInstancesWithOptionsAsync(string clusterId, DescribePolicyInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5965,6 +7285,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribePolicyInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the detailed information about policy instances of the specified type in a Container Service for Kubernetes (ACK) cluster, such as the policy description and severity level. You can choose a type of security policy for an ACK cluster, specify the action and applicable scope of the policy, and then create and deploy a policy instance.
+         *
+         * @param request DescribePolicyInstancesRequest
+         * @return DescribePolicyInstancesResponse
+         */
         public DescribePolicyInstancesResponse DescribePolicyInstances(string clusterId, DescribePolicyInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5972,6 +7298,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribePolicyInstancesWithOptions(clusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the detailed information about policy instances of the specified type in a Container Service for Kubernetes (ACK) cluster, such as the policy description and severity level. You can choose a type of security policy for an ACK cluster, specify the action and applicable scope of the policy, and then create and deploy a policy instance.
+         *
+         * @param request DescribePolicyInstancesRequest
+         * @return DescribePolicyInstancesResponse
+         */
         public async Task<DescribePolicyInstancesResponse> DescribePolicyInstancesAsync(string clusterId, DescribePolicyInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5979,6 +7311,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribePolicyInstancesWithOptionsAsync(clusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the deployment of policy instances in the current Container Service for Kubernetes (ACK) cluster, including the number of policy instances of each type and the number of policy types of each severity level.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePolicyInstancesStatusResponse
+         */
         public DescribePolicyInstancesStatusResponse DescribePolicyInstancesStatusWithOptions(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6000,6 +7339,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribePolicyInstancesStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the deployment of policy instances in the current Container Service for Kubernetes (ACK) cluster, including the number of policy instances of each type and the number of policy types of each severity level.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePolicyInstancesStatusResponse
+         */
         public async Task<DescribePolicyInstancesStatusResponse> DescribePolicyInstancesStatusWithOptionsAsync(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6021,6 +7367,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribePolicyInstancesStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the deployment of policy instances in the current Container Service for Kubernetes (ACK) cluster, including the number of policy instances of each type and the number of policy types of each severity level.
+         *
+         * @return DescribePolicyInstancesStatusResponse
+         */
         public DescribePolicyInstancesStatusResponse DescribePolicyInstancesStatus(string clusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6028,6 +7379,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribePolicyInstancesStatusWithOptions(clusterId, headers, runtime);
         }
 
+        /**
+         * @summary Queries the deployment of policy instances in the current Container Service for Kubernetes (ACK) cluster, including the number of policy instances of each type and the number of policy types of each severity level.
+         *
+         * @return DescribePolicyInstancesStatusResponse
+         */
         public async Task<DescribePolicyInstancesStatusResponse> DescribePolicyInstancesStatusAsync(string clusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6036,13 +7392,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****Only Alibaba Cloud accounts can call this API operation.
-          *
-          * @param request DescribeSubaccountK8sClusterUserConfigRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSubaccountK8sClusterUserConfigResponse
+         * @summary You can use an Alibaba Cloud account to call the DescribeSubaccountK8sClusterUserConfig operation to obtain the cluster kubeconfig file of a RAM user or RAM role.
+         *
+         * @description **
+         * ****Only Alibaba Cloud accounts can call this API operation.
+         *
+         * @param request DescribeSubaccountK8sClusterUserConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSubaccountK8sClusterUserConfigResponse
          */
         public DescribeSubaccountK8sClusterUserConfigResponse DescribeSubaccountK8sClusterUserConfigWithOptions(string ClusterId, string Uid, DescribeSubaccountK8sClusterUserConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6077,13 +7435,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****Only Alibaba Cloud accounts can call this API operation.
-          *
-          * @param request DescribeSubaccountK8sClusterUserConfigRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSubaccountK8sClusterUserConfigResponse
+         * @summary You can use an Alibaba Cloud account to call the DescribeSubaccountK8sClusterUserConfig operation to obtain the cluster kubeconfig file of a RAM user or RAM role.
+         *
+         * @description **
+         * ****Only Alibaba Cloud accounts can call this API operation.
+         *
+         * @param request DescribeSubaccountK8sClusterUserConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSubaccountK8sClusterUserConfigResponse
          */
         public async Task<DescribeSubaccountK8sClusterUserConfigResponse> DescribeSubaccountK8sClusterUserConfigWithOptionsAsync(string ClusterId, string Uid, DescribeSubaccountK8sClusterUserConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6118,11 +7478,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****Only Alibaba Cloud accounts can call this API operation.
-          *
-          * @param request DescribeSubaccountK8sClusterUserConfigRequest
-          * @return DescribeSubaccountK8sClusterUserConfigResponse
+         * @summary You can use an Alibaba Cloud account to call the DescribeSubaccountK8sClusterUserConfig operation to obtain the cluster kubeconfig file of a RAM user or RAM role.
+         *
+         * @description **
+         * ****Only Alibaba Cloud accounts can call this API operation.
+         *
+         * @param request DescribeSubaccountK8sClusterUserConfigRequest
+         * @return DescribeSubaccountK8sClusterUserConfigResponse
          */
         public DescribeSubaccountK8sClusterUserConfigResponse DescribeSubaccountK8sClusterUserConfig(string ClusterId, string Uid, DescribeSubaccountK8sClusterUserConfigRequest request)
         {
@@ -6132,11 +7494,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****Only Alibaba Cloud accounts can call this API operation.
-          *
-          * @param request DescribeSubaccountK8sClusterUserConfigRequest
-          * @return DescribeSubaccountK8sClusterUserConfigResponse
+         * @summary You can use an Alibaba Cloud account to call the DescribeSubaccountK8sClusterUserConfig operation to obtain the cluster kubeconfig file of a RAM user or RAM role.
+         *
+         * @description **
+         * ****Only Alibaba Cloud accounts can call this API operation.
+         *
+         * @param request DescribeSubaccountK8sClusterUserConfigRequest
+         * @return DescribeSubaccountK8sClusterUserConfigResponse
          */
         public async Task<DescribeSubaccountK8sClusterUserConfigResponse> DescribeSubaccountK8sClusterUserConfigAsync(string ClusterId, string Uid, DescribeSubaccountK8sClusterUserConfigRequest request)
         {
@@ -6145,6 +7509,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeSubaccountK8sClusterUserConfigWithOptionsAsync(ClusterId, Uid, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries detailed information about a task, such as the task type, status, and progress.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTaskInfoResponse
+         */
         public DescribeTaskInfoResponse DescribeTaskInfoWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6166,6 +7537,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeTaskInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries detailed information about a task, such as the task type, status, and progress.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTaskInfoResponse
+         */
         public async Task<DescribeTaskInfoResponse> DescribeTaskInfoWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6187,6 +7565,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeTaskInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries detailed information about a task, such as the task type, status, and progress.
+         *
+         * @return DescribeTaskInfoResponse
+         */
         public DescribeTaskInfoResponse DescribeTaskInfo(string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6194,6 +7577,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeTaskInfoWithOptions(taskId, headers, runtime);
         }
 
+        /**
+         * @summary Queries detailed information about a task, such as the task type, status, and progress.
+         *
+         * @return DescribeTaskInfoResponse
+         */
         public async Task<DescribeTaskInfoResponse> DescribeTaskInfoAsync(string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6201,6 +7589,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeTaskInfoWithOptionsAsync(taskId, headers, runtime);
         }
 
+        /**
+         * @summary An orchestration template defines and describes a group of Kubernetes resources. It declaratively describes the configuration of an application or how an application runs. You can call the DescribeTemplates API operation to query orchestration templates and their detailed information, including access permissions, YAML content, and labels.
+         *
+         * @param request DescribeTemplateAttributeRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTemplateAttributeResponse
+         */
         public DescribeTemplateAttributeResponse DescribeTemplateAttributeWithOptions(string TemplateId, DescribeTemplateAttributeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6229,6 +7625,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeTemplateAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary An orchestration template defines and describes a group of Kubernetes resources. It declaratively describes the configuration of an application or how an application runs. You can call the DescribeTemplates API operation to query orchestration templates and their detailed information, including access permissions, YAML content, and labels.
+         *
+         * @param request DescribeTemplateAttributeRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTemplateAttributeResponse
+         */
         public async Task<DescribeTemplateAttributeResponse> DescribeTemplateAttributeWithOptionsAsync(string TemplateId, DescribeTemplateAttributeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6257,6 +7661,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeTemplateAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary An orchestration template defines and describes a group of Kubernetes resources. It declaratively describes the configuration of an application or how an application runs. You can call the DescribeTemplates API operation to query orchestration templates and their detailed information, including access permissions, YAML content, and labels.
+         *
+         * @param request DescribeTemplateAttributeRequest
+         * @return DescribeTemplateAttributeResponse
+         */
         public DescribeTemplateAttributeResponse DescribeTemplateAttribute(string TemplateId, DescribeTemplateAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6264,6 +7674,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeTemplateAttributeWithOptions(TemplateId, request, headers, runtime);
         }
 
+        /**
+         * @summary An orchestration template defines and describes a group of Kubernetes resources. It declaratively describes the configuration of an application or how an application runs. You can call the DescribeTemplates API operation to query orchestration templates and their detailed information, including access permissions, YAML content, and labels.
+         *
+         * @param request DescribeTemplateAttributeRequest
+         * @return DescribeTemplateAttributeResponse
+         */
         public async Task<DescribeTemplateAttributeResponse> DescribeTemplateAttributeAsync(string TemplateId, DescribeTemplateAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6271,6 +7687,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeTemplateAttributeWithOptionsAsync(TemplateId, request, headers, runtime);
         }
 
+        /**
+         * @summary An orchestration template defines and describes a group of Kubernetes resources. It declaratively describes the configuration of an application or how an application runs. You can call the DescribeTemplates API operation to query orchestration templates and their detailed information, including access permissions, YAML content, and labels.
+         *
+         * @param request DescribeTemplatesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTemplatesResponse
+         */
         public DescribeTemplatesResponse DescribeTemplatesWithOptions(DescribeTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6307,6 +7731,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary An orchestration template defines and describes a group of Kubernetes resources. It declaratively describes the configuration of an application or how an application runs. You can call the DescribeTemplates API operation to query orchestration templates and their detailed information, including access permissions, YAML content, and labels.
+         *
+         * @param request DescribeTemplatesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTemplatesResponse
+         */
         public async Task<DescribeTemplatesResponse> DescribeTemplatesWithOptionsAsync(DescribeTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6343,6 +7775,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary An orchestration template defines and describes a group of Kubernetes resources. It declaratively describes the configuration of an application or how an application runs. You can call the DescribeTemplates API operation to query orchestration templates and their detailed information, including access permissions, YAML content, and labels.
+         *
+         * @param request DescribeTemplatesRequest
+         * @return DescribeTemplatesResponse
+         */
         public DescribeTemplatesResponse DescribeTemplates(DescribeTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6350,6 +7788,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeTemplatesWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary An orchestration template defines and describes a group of Kubernetes resources. It declaratively describes the configuration of an application or how an application runs. You can call the DescribeTemplates API operation to query orchestration templates and their detailed information, including access permissions, YAML content, and labels.
+         *
+         * @param request DescribeTemplatesRequest
+         * @return DescribeTemplatesResponse
+         */
         public async Task<DescribeTemplatesResponse> DescribeTemplatesAsync(DescribeTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6357,6 +7801,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeTemplatesWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeTrigger operation to query triggers.
+         *
+         * @param request DescribeTriggerRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTriggerResponse
+         */
         public DescribeTriggerResponse DescribeTriggerWithOptions(string clusterId, DescribeTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6397,6 +7849,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeTrigger operation to query triggers.
+         *
+         * @param request DescribeTriggerRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTriggerResponse
+         */
         public async Task<DescribeTriggerResponse> DescribeTriggerWithOptionsAsync(string clusterId, DescribeTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6437,6 +7897,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeTrigger operation to query triggers.
+         *
+         * @param request DescribeTriggerRequest
+         * @return DescribeTriggerResponse
+         */
         public DescribeTriggerResponse DescribeTrigger(string clusterId, DescribeTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6444,6 +7910,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeTriggerWithOptions(clusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeTrigger operation to query triggers.
+         *
+         * @param request DescribeTriggerRequest
+         * @return DescribeTriggerResponse
+         */
         public async Task<DescribeTriggerResponse> DescribeTriggerAsync(string clusterId, DescribeTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6451,6 +7923,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeTriggerWithOptionsAsync(clusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the Role-Based Access Control (RBAC) permissions that are granted to the current Resource Access Management (RAM) user or RAM role on a Container Service for Kubernetes (ACK) cluster. You can use Kubernetes namespaces to limit users from accessing resources in an ACK cluster. Users that are granted RBAC permissions only on one namespace cannot access resources in other namespaces.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserClusterNamespacesResponse
+         */
         public DescribeUserClusterNamespacesResponse DescribeUserClusterNamespacesWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6472,6 +7951,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeUserClusterNamespacesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the Role-Based Access Control (RBAC) permissions that are granted to the current Resource Access Management (RAM) user or RAM role on a Container Service for Kubernetes (ACK) cluster. You can use Kubernetes namespaces to limit users from accessing resources in an ACK cluster. Users that are granted RBAC permissions only on one namespace cannot access resources in other namespaces.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserClusterNamespacesResponse
+         */
         public async Task<DescribeUserClusterNamespacesResponse> DescribeUserClusterNamespacesWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6493,6 +7979,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeUserClusterNamespacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the Role-Based Access Control (RBAC) permissions that are granted to the current Resource Access Management (RAM) user or RAM role on a Container Service for Kubernetes (ACK) cluster. You can use Kubernetes namespaces to limit users from accessing resources in an ACK cluster. Users that are granted RBAC permissions only on one namespace cannot access resources in other namespaces.
+         *
+         * @return DescribeUserClusterNamespacesResponse
+         */
         public DescribeUserClusterNamespacesResponse DescribeUserClusterNamespaces(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6500,6 +7991,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeUserClusterNamespacesWithOptions(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary Queries the Role-Based Access Control (RBAC) permissions that are granted to the current Resource Access Management (RAM) user or RAM role on a Container Service for Kubernetes (ACK) cluster. You can use Kubernetes namespaces to limit users from accessing resources in an ACK cluster. Users that are granted RBAC permissions only on one namespace cannot access resources in other namespaces.
+         *
+         * @return DescribeUserClusterNamespacesResponse
+         */
         public async Task<DescribeUserClusterNamespacesResponse> DescribeUserClusterNamespacesAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6507,6 +8003,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeUserClusterNamespacesWithOptionsAsync(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary In an Container Service for Kubernetes (ACK) cluster, you can create and specify different Resource Access Management (RAM) users or roles to have different access permissions. This ensures access control and resource isolation. You can call the DescribeUserPermission operation to query the permissions that are granted to a RAM user or RAM role on ACK clusters, including the resources that are allowed to access, the scope of the permissions, the predefined role, and the permission source.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserPermissionResponse
+         */
         public DescribeUserPermissionResponse DescribeUserPermissionWithOptions(string uid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6528,6 +8031,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeUserPermissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary In an Container Service for Kubernetes (ACK) cluster, you can create and specify different Resource Access Management (RAM) users or roles to have different access permissions. This ensures access control and resource isolation. You can call the DescribeUserPermission operation to query the permissions that are granted to a RAM user or RAM role on ACK clusters, including the resources that are allowed to access, the scope of the permissions, the predefined role, and the permission source.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserPermissionResponse
+         */
         public async Task<DescribeUserPermissionResponse> DescribeUserPermissionWithOptionsAsync(string uid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6549,6 +8059,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeUserPermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary In an Container Service for Kubernetes (ACK) cluster, you can create and specify different Resource Access Management (RAM) users or roles to have different access permissions. This ensures access control and resource isolation. You can call the DescribeUserPermission operation to query the permissions that are granted to a RAM user or RAM role on ACK clusters, including the resources that are allowed to access, the scope of the permissions, the predefined role, and the permission source.
+         *
+         * @return DescribeUserPermissionResponse
+         */
         public DescribeUserPermissionResponse DescribeUserPermission(string uid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6556,6 +8071,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeUserPermissionWithOptions(uid, headers, runtime);
         }
 
+        /**
+         * @summary In an Container Service for Kubernetes (ACK) cluster, you can create and specify different Resource Access Management (RAM) users or roles to have different access permissions. This ensures access control and resource isolation. You can call the DescribeUserPermission operation to query the permissions that are granted to a RAM user or RAM role on ACK clusters, including the resources that are allowed to access, the scope of the permissions, the predefined role, and the permission source.
+         *
+         * @return DescribeUserPermissionResponse
+         */
         public async Task<DescribeUserPermissionResponse> DescribeUserPermissionAsync(string uid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6563,6 +8083,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeUserPermissionWithOptionsAsync(uid, headers, runtime);
         }
 
+        /**
+         * @summary Queries quotas related to Container Service for Kubernetes (ACK) clusters, node pools, and nodes. To increase a quota, submit an application in the Quota Center console.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserQuotaResponse
+         */
         public DescribeUserQuotaResponse DescribeUserQuotaWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6584,6 +8111,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeUserQuotaResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries quotas related to Container Service for Kubernetes (ACK) clusters, node pools, and nodes. To increase a quota, submit an application in the Quota Center console.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserQuotaResponse
+         */
         public async Task<DescribeUserQuotaResponse> DescribeUserQuotaWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6605,6 +8139,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeUserQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries quotas related to Container Service for Kubernetes (ACK) clusters, node pools, and nodes. To increase a quota, submit an application in the Quota Center console.
+         *
+         * @return DescribeUserQuotaResponse
+         */
         public DescribeUserQuotaResponse DescribeUserQuota()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6612,6 +8151,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeUserQuotaWithOptions(headers, runtime);
         }
 
+        /**
+         * @summary Queries quotas related to Container Service for Kubernetes (ACK) clusters, node pools, and nodes. To increase a quota, submit an application in the Quota Center console.
+         *
+         * @return DescribeUserQuotaResponse
+         */
         public async Task<DescribeUserQuotaResponse> DescribeUserQuotaAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6619,6 +8163,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeUserQuotaWithOptionsAsync(headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeWorkflows operation to query all workflows.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWorkflowsResponse
+         */
         public DescribeWorkflowsResponse DescribeWorkflowsWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6640,6 +8191,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeWorkflowsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeWorkflows operation to query all workflows.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWorkflowsResponse
+         */
         public async Task<DescribeWorkflowsResponse> DescribeWorkflowsWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6661,6 +8219,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeWorkflowsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the DescribeWorkflows operation to query all workflows.
+         *
+         * @return DescribeWorkflowsResponse
+         */
         public DescribeWorkflowsResponse DescribeWorkflows()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6668,6 +8231,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeWorkflowsWithOptions(headers, runtime);
         }
 
+        /**
+         * @summary You can call the DescribeWorkflows operation to query all workflows.
+         *
+         * @return DescribeWorkflowsResponse
+         */
         public async Task<DescribeWorkflowsResponse> DescribeWorkflowsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6675,6 +8243,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeWorkflowsWithOptionsAsync(headers, runtime);
         }
 
+        /**
+         * @summary You can call the EdgeClusterAddEdgeMachine operation to add a cloud-native box to a Container Service for Kubernetes (ACK) Edge cluster.
+         *
+         * @param request EdgeClusterAddEdgeMachineRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EdgeClusterAddEdgeMachineResponse
+         */
         public EdgeClusterAddEdgeMachineResponse EdgeClusterAddEdgeMachineWithOptions(string clusterid, string edgeMachineid, EdgeClusterAddEdgeMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6711,6 +8287,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<EdgeClusterAddEdgeMachineResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the EdgeClusterAddEdgeMachine operation to add a cloud-native box to a Container Service for Kubernetes (ACK) Edge cluster.
+         *
+         * @param request EdgeClusterAddEdgeMachineRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EdgeClusterAddEdgeMachineResponse
+         */
         public async Task<EdgeClusterAddEdgeMachineResponse> EdgeClusterAddEdgeMachineWithOptionsAsync(string clusterid, string edgeMachineid, EdgeClusterAddEdgeMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6747,6 +8331,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<EdgeClusterAddEdgeMachineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the EdgeClusterAddEdgeMachine operation to add a cloud-native box to a Container Service for Kubernetes (ACK) Edge cluster.
+         *
+         * @param request EdgeClusterAddEdgeMachineRequest
+         * @return EdgeClusterAddEdgeMachineResponse
+         */
         public EdgeClusterAddEdgeMachineResponse EdgeClusterAddEdgeMachine(string clusterid, string edgeMachineid, EdgeClusterAddEdgeMachineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6754,6 +8344,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return EdgeClusterAddEdgeMachineWithOptions(clusterid, edgeMachineid, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the EdgeClusterAddEdgeMachine operation to add a cloud-native box to a Container Service for Kubernetes (ACK) Edge cluster.
+         *
+         * @param request EdgeClusterAddEdgeMachineRequest
+         * @return EdgeClusterAddEdgeMachineResponse
+         */
         public async Task<EdgeClusterAddEdgeMachineResponse> EdgeClusterAddEdgeMachineAsync(string clusterid, string edgeMachineid, EdgeClusterAddEdgeMachineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6762,15 +8358,17 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * 1.  The Common Vulnerabilities and Exposures (CVE) patching feature is developed based on Security Center. To use this feature, you must purchase the Security Center Ultimate Edition that supports Container Service for Kubernetes (ACK).
-          * 2.  ACK may need to restart nodes to patch certain vulnerabilities. ACK drains a node before the node restarts. Make sure that the ACK cluster has sufficient idle nodes to host the pods evicted from the trained nodes. For example, you can scale out a node pool before you patch vulnerabilities for the nodes in the node pool.
-          * 3.  Security Center ensures the compatibility of CVE patches. We recommend that you check the compatibility of a CVE patch with your application before you install the patch. You can pause or cancel a CVE patching task anytime.
-          * 4.  CVE patching is a progressive task that consists of multiple batches. After you pause or cancel a CVE patching task, ACK continues to process the dispatched batches. Only the batches that have not been dispatched are paused or canceled.
-          *
-          * @param request FixNodePoolVulsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return FixNodePoolVulsResponse
+         * @summary Patches node vulnerabilities in a node pool to enhance node security. Cloud Security provided by Alibaba Cloud periodically scans Elastic Compute Service (ECS) instances for vulnerabilities and provides suggestions on how to patch the detected vulnerabilities. Vulnerability patching may require node restarts. Make sure that your cluster has sufficient idle nodes for node draining.
+         *
+         * @description 1.  The Common Vulnerabilities and Exposures (CVE) patching feature is developed based on Security Center. To use this feature, you must purchase the Security Center Ultimate Edition that supports Container Service for Kubernetes (ACK).
+         * 2.  ACK may need to restart nodes to patch certain vulnerabilities. ACK drains a node before the node restarts. Make sure that the ACK cluster has sufficient idle nodes to host the pods evicted from the trained nodes. For example, you can scale out a node pool before you patch vulnerabilities for the nodes in the node pool.
+         * 3.  Security Center ensures the compatibility of CVE patches. We recommend that you check the compatibility of a CVE patch with your application before you install the patch. You can pause or cancel a CVE patching task anytime.
+         * 4.  CVE patching is a progressive task that consists of multiple batches. After you pause or cancel a CVE patching task, ACK continues to process the dispatched batches. Only the batches that have not been dispatched are paused or canceled.
+         *
+         * @param request FixNodePoolVulsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FixNodePoolVulsResponse
          */
         public FixNodePoolVulsResponse FixNodePoolVulsWithOptions(string clusterId, string nodepoolId, FixNodePoolVulsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6813,15 +8411,17 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * 1.  The Common Vulnerabilities and Exposures (CVE) patching feature is developed based on Security Center. To use this feature, you must purchase the Security Center Ultimate Edition that supports Container Service for Kubernetes (ACK).
-          * 2.  ACK may need to restart nodes to patch certain vulnerabilities. ACK drains a node before the node restarts. Make sure that the ACK cluster has sufficient idle nodes to host the pods evicted from the trained nodes. For example, you can scale out a node pool before you patch vulnerabilities for the nodes in the node pool.
-          * 3.  Security Center ensures the compatibility of CVE patches. We recommend that you check the compatibility of a CVE patch with your application before you install the patch. You can pause or cancel a CVE patching task anytime.
-          * 4.  CVE patching is a progressive task that consists of multiple batches. After you pause or cancel a CVE patching task, ACK continues to process the dispatched batches. Only the batches that have not been dispatched are paused or canceled.
-          *
-          * @param request FixNodePoolVulsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return FixNodePoolVulsResponse
+         * @summary Patches node vulnerabilities in a node pool to enhance node security. Cloud Security provided by Alibaba Cloud periodically scans Elastic Compute Service (ECS) instances for vulnerabilities and provides suggestions on how to patch the detected vulnerabilities. Vulnerability patching may require node restarts. Make sure that your cluster has sufficient idle nodes for node draining.
+         *
+         * @description 1.  The Common Vulnerabilities and Exposures (CVE) patching feature is developed based on Security Center. To use this feature, you must purchase the Security Center Ultimate Edition that supports Container Service for Kubernetes (ACK).
+         * 2.  ACK may need to restart nodes to patch certain vulnerabilities. ACK drains a node before the node restarts. Make sure that the ACK cluster has sufficient idle nodes to host the pods evicted from the trained nodes. For example, you can scale out a node pool before you patch vulnerabilities for the nodes in the node pool.
+         * 3.  Security Center ensures the compatibility of CVE patches. We recommend that you check the compatibility of a CVE patch with your application before you install the patch. You can pause or cancel a CVE patching task anytime.
+         * 4.  CVE patching is a progressive task that consists of multiple batches. After you pause or cancel a CVE patching task, ACK continues to process the dispatched batches. Only the batches that have not been dispatched are paused or canceled.
+         *
+         * @param request FixNodePoolVulsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FixNodePoolVulsResponse
          */
         public async Task<FixNodePoolVulsResponse> FixNodePoolVulsWithOptionsAsync(string clusterId, string nodepoolId, FixNodePoolVulsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6864,13 +8464,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * 1.  The Common Vulnerabilities and Exposures (CVE) patching feature is developed based on Security Center. To use this feature, you must purchase the Security Center Ultimate Edition that supports Container Service for Kubernetes (ACK).
-          * 2.  ACK may need to restart nodes to patch certain vulnerabilities. ACK drains a node before the node restarts. Make sure that the ACK cluster has sufficient idle nodes to host the pods evicted from the trained nodes. For example, you can scale out a node pool before you patch vulnerabilities for the nodes in the node pool.
-          * 3.  Security Center ensures the compatibility of CVE patches. We recommend that you check the compatibility of a CVE patch with your application before you install the patch. You can pause or cancel a CVE patching task anytime.
-          * 4.  CVE patching is a progressive task that consists of multiple batches. After you pause or cancel a CVE patching task, ACK continues to process the dispatched batches. Only the batches that have not been dispatched are paused or canceled.
-          *
-          * @param request FixNodePoolVulsRequest
-          * @return FixNodePoolVulsResponse
+         * @summary Patches node vulnerabilities in a node pool to enhance node security. Cloud Security provided by Alibaba Cloud periodically scans Elastic Compute Service (ECS) instances for vulnerabilities and provides suggestions on how to patch the detected vulnerabilities. Vulnerability patching may require node restarts. Make sure that your cluster has sufficient idle nodes for node draining.
+         *
+         * @description 1.  The Common Vulnerabilities and Exposures (CVE) patching feature is developed based on Security Center. To use this feature, you must purchase the Security Center Ultimate Edition that supports Container Service for Kubernetes (ACK).
+         * 2.  ACK may need to restart nodes to patch certain vulnerabilities. ACK drains a node before the node restarts. Make sure that the ACK cluster has sufficient idle nodes to host the pods evicted from the trained nodes. For example, you can scale out a node pool before you patch vulnerabilities for the nodes in the node pool.
+         * 3.  Security Center ensures the compatibility of CVE patches. We recommend that you check the compatibility of a CVE patch with your application before you install the patch. You can pause or cancel a CVE patching task anytime.
+         * 4.  CVE patching is a progressive task that consists of multiple batches. After you pause or cancel a CVE patching task, ACK continues to process the dispatched batches. Only the batches that have not been dispatched are paused or canceled.
+         *
+         * @param request FixNodePoolVulsRequest
+         * @return FixNodePoolVulsResponse
          */
         public FixNodePoolVulsResponse FixNodePoolVuls(string clusterId, string nodepoolId, FixNodePoolVulsRequest request)
         {
@@ -6880,13 +8482,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * 1.  The Common Vulnerabilities and Exposures (CVE) patching feature is developed based on Security Center. To use this feature, you must purchase the Security Center Ultimate Edition that supports Container Service for Kubernetes (ACK).
-          * 2.  ACK may need to restart nodes to patch certain vulnerabilities. ACK drains a node before the node restarts. Make sure that the ACK cluster has sufficient idle nodes to host the pods evicted from the trained nodes. For example, you can scale out a node pool before you patch vulnerabilities for the nodes in the node pool.
-          * 3.  Security Center ensures the compatibility of CVE patches. We recommend that you check the compatibility of a CVE patch with your application before you install the patch. You can pause or cancel a CVE patching task anytime.
-          * 4.  CVE patching is a progressive task that consists of multiple batches. After you pause or cancel a CVE patching task, ACK continues to process the dispatched batches. Only the batches that have not been dispatched are paused or canceled.
-          *
-          * @param request FixNodePoolVulsRequest
-          * @return FixNodePoolVulsResponse
+         * @summary Patches node vulnerabilities in a node pool to enhance node security. Cloud Security provided by Alibaba Cloud periodically scans Elastic Compute Service (ECS) instances for vulnerabilities and provides suggestions on how to patch the detected vulnerabilities. Vulnerability patching may require node restarts. Make sure that your cluster has sufficient idle nodes for node draining.
+         *
+         * @description 1.  The Common Vulnerabilities and Exposures (CVE) patching feature is developed based on Security Center. To use this feature, you must purchase the Security Center Ultimate Edition that supports Container Service for Kubernetes (ACK).
+         * 2.  ACK may need to restart nodes to patch certain vulnerabilities. ACK drains a node before the node restarts. Make sure that the ACK cluster has sufficient idle nodes to host the pods evicted from the trained nodes. For example, you can scale out a node pool before you patch vulnerabilities for the nodes in the node pool.
+         * 3.  Security Center ensures the compatibility of CVE patches. We recommend that you check the compatibility of a CVE patch with your application before you install the patch. You can pause or cancel a CVE patching task anytime.
+         * 4.  CVE patching is a progressive task that consists of multiple batches. After you pause or cancel a CVE patching task, ACK continues to process the dispatched batches. Only the batches that have not been dispatched are paused or canceled.
+         *
+         * @param request FixNodePoolVulsRequest
+         * @return FixNodePoolVulsResponse
          */
         public async Task<FixNodePoolVulsResponse> FixNodePoolVulsAsync(string clusterId, string nodepoolId, FixNodePoolVulsRequest request)
         {
@@ -6895,6 +8499,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await FixNodePoolVulsWithOptionsAsync(clusterId, nodepoolId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the GetClusterAddonInstance operation to query the information of a component instance in a cluster, including the version, configurations, and log status of the component instance.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetClusterAddonInstanceResponse
+         */
         public GetClusterAddonInstanceResponse GetClusterAddonInstanceWithOptions(string clusterId, string instanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6916,6 +8527,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<GetClusterAddonInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the GetClusterAddonInstance operation to query the information of a component instance in a cluster, including the version, configurations, and log status of the component instance.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetClusterAddonInstanceResponse
+         */
         public async Task<GetClusterAddonInstanceResponse> GetClusterAddonInstanceWithOptionsAsync(string clusterId, string instanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6937,6 +8555,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<GetClusterAddonInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the GetClusterAddonInstance operation to query the information of a component instance in a cluster, including the version, configurations, and log status of the component instance.
+         *
+         * @return GetClusterAddonInstanceResponse
+         */
         public GetClusterAddonInstanceResponse GetClusterAddonInstance(string clusterId, string instanceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6944,6 +8567,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return GetClusterAddonInstanceWithOptions(clusterId, instanceName, headers, runtime);
         }
 
+        /**
+         * @summary You can call the GetClusterAddonInstance operation to query the information of a component instance in a cluster, including the version, configurations, and log status of the component instance.
+         *
+         * @return GetClusterAddonInstanceResponse
+         */
         public async Task<GetClusterAddonInstanceResponse> GetClusterAddonInstanceAsync(string clusterId, string instanceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6951,6 +8579,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await GetClusterAddonInstanceWithOptionsAsync(clusterId, instanceName, headers, runtime);
         }
 
+        /**
+         * @summary Queries a cluster check task by cluster ID and task ID. You can view the status, check items, creation time, and end time of the task. Container Intelligence Service (CIS) provides a variety of Kubernetes cluster check features, including cluster update check, cluster migration check, component installation check, component update check, and node pool check.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetClusterCheckResponse
+         */
         public GetClusterCheckResponse GetClusterCheckWithOptions(string clusterId, string checkId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6972,6 +8607,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<GetClusterCheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a cluster check task by cluster ID and task ID. You can view the status, check items, creation time, and end time of the task. Container Intelligence Service (CIS) provides a variety of Kubernetes cluster check features, including cluster update check, cluster migration check, component installation check, component update check, and node pool check.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetClusterCheckResponse
+         */
         public async Task<GetClusterCheckResponse> GetClusterCheckWithOptionsAsync(string clusterId, string checkId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6993,6 +8635,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<GetClusterCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a cluster check task by cluster ID and task ID. You can view the status, check items, creation time, and end time of the task. Container Intelligence Service (CIS) provides a variety of Kubernetes cluster check features, including cluster update check, cluster migration check, component installation check, component update check, and node pool check.
+         *
+         * @return GetClusterCheckResponse
+         */
         public GetClusterCheckResponse GetClusterCheck(string clusterId, string checkId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7000,6 +8647,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return GetClusterCheckWithOptions(clusterId, checkId, headers, runtime);
         }
 
+        /**
+         * @summary Queries a cluster check task by cluster ID and task ID. You can view the status, check items, creation time, and end time of the task. Container Intelligence Service (CIS) provides a variety of Kubernetes cluster check features, including cluster update check, cluster migration check, component installation check, component update check, and node pool check.
+         *
+         * @return GetClusterCheckResponse
+         */
         public async Task<GetClusterCheckResponse> GetClusterCheckAsync(string clusterId, string checkId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7007,6 +8659,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await GetClusterCheckWithOptionsAsync(clusterId, checkId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the GetKubernetesTrigger operationto query the triggers of an application by application name.
+         *
+         * @param request GetKubernetesTriggerRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetKubernetesTriggerResponse
+         */
         public GetKubernetesTriggerResponse GetKubernetesTriggerWithOptions(string ClusterId, GetKubernetesTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7047,6 +8707,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<GetKubernetesTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the GetKubernetesTrigger operationto query the triggers of an application by application name.
+         *
+         * @param request GetKubernetesTriggerRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetKubernetesTriggerResponse
+         */
         public async Task<GetKubernetesTriggerResponse> GetKubernetesTriggerWithOptionsAsync(string ClusterId, GetKubernetesTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7087,6 +8755,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<GetKubernetesTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the GetKubernetesTrigger operationto query the triggers of an application by application name.
+         *
+         * @param request GetKubernetesTriggerRequest
+         * @return GetKubernetesTriggerResponse
+         */
         public GetKubernetesTriggerResponse GetKubernetesTrigger(string ClusterId, GetKubernetesTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7094,6 +8768,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return GetKubernetesTriggerWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the GetKubernetesTrigger operationto query the triggers of an application by application name.
+         *
+         * @param request GetKubernetesTriggerRequest
+         * @return GetKubernetesTriggerResponse
+         */
         public async Task<GetKubernetesTriggerResponse> GetKubernetesTriggerAsync(string ClusterId, GetKubernetesTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7101,6 +8781,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await GetKubernetesTriggerWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the GetUpgradeStatus operation to query the update progress of a cluster by cluster ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetUpgradeStatusResponse
+         */
         public GetUpgradeStatusResponse GetUpgradeStatusWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7122,6 +8809,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<GetUpgradeStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the GetUpgradeStatus operation to query the update progress of a cluster by cluster ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetUpgradeStatusResponse
+         */
         public async Task<GetUpgradeStatusResponse> GetUpgradeStatusWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7143,6 +8837,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<GetUpgradeStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the GetUpgradeStatus operation to query the update progress of a cluster by cluster ID.
+         *
+         * @return GetUpgradeStatusResponse
+         */
         public GetUpgradeStatusResponse GetUpgradeStatus(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7150,6 +8849,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return GetUpgradeStatusWithOptions(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the GetUpgradeStatus operation to query the update progress of a cluster by cluster ID.
+         *
+         * @return GetUpgradeStatusResponse
+         */
         public async Task<GetUpgradeStatusResponse> GetUpgradeStatusAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7158,15 +8862,17 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * ****
-          * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
-          * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
-          * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
-          *
-          * @param request GrantPermissionsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GrantPermissionsResponse
+         * @summary You can call the GrantPermissions operation to grant a Resource Access Management (RAM) user the permissions to manage Container Service for Kubernetes (ACK) clusters.
+         *
+         * @description ****
+         * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](https://help.aliyun.com/document_detail/86485.html).
+         * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](https://help.aliyun.com/document_detail/119035.html).
+         * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
+         *
+         * @param request GrantPermissionsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GrantPermissionsResponse
          */
         public GrantPermissionsResponse GrantPermissionsWithOptions(string uid, GrantPermissionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7192,15 +8898,17 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * ****
-          * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
-          * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
-          * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
-          *
-          * @param request GrantPermissionsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GrantPermissionsResponse
+         * @summary You can call the GrantPermissions operation to grant a Resource Access Management (RAM) user the permissions to manage Container Service for Kubernetes (ACK) clusters.
+         *
+         * @description ****
+         * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](https://help.aliyun.com/document_detail/86485.html).
+         * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](https://help.aliyun.com/document_detail/119035.html).
+         * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
+         *
+         * @param request GrantPermissionsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GrantPermissionsResponse
          */
         public async Task<GrantPermissionsResponse> GrantPermissionsWithOptionsAsync(string uid, GrantPermissionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7226,13 +8934,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * ****
-          * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
-          * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
-          * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
-          *
-          * @param request GrantPermissionsRequest
-          * @return GrantPermissionsResponse
+         * @summary You can call the GrantPermissions operation to grant a Resource Access Management (RAM) user the permissions to manage Container Service for Kubernetes (ACK) clusters.
+         *
+         * @description ****
+         * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](https://help.aliyun.com/document_detail/86485.html).
+         * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](https://help.aliyun.com/document_detail/119035.html).
+         * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
+         *
+         * @param request GrantPermissionsRequest
+         * @return GrantPermissionsResponse
          */
         public GrantPermissionsResponse GrantPermissions(string uid, GrantPermissionsRequest request)
         {
@@ -7242,13 +8952,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * ****
-          * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
-          * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
-          * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
-          *
-          * @param request GrantPermissionsRequest
-          * @return GrantPermissionsResponse
+         * @summary You can call the GrantPermissions operation to grant a Resource Access Management (RAM) user the permissions to manage Container Service for Kubernetes (ACK) clusters.
+         *
+         * @description ****
+         * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](https://help.aliyun.com/document_detail/86485.html).
+         * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](https://help.aliyun.com/document_detail/119035.html).
+         * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
+         *
+         * @param request GrantPermissionsRequest
+         * @return GrantPermissionsResponse
          */
         public async Task<GrantPermissionsResponse> GrantPermissionsAsync(string uid, GrantPermissionsRequest request)
         {
@@ -7257,6 +8969,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await GrantPermissionsWithOptionsAsync(uid, request, headers, runtime);
         }
 
+        /**
+         * @summary Installs a component by specifying the name and version of the component. To enhance Kubernetes capabilities, you can install a variety of components in Container Service for Kubernetes (ACK) clusters, such as fully-managed core components and application, logging and monitoring, network, storage, and security group components.
+         *
+         * @param request InstallClusterAddonsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InstallClusterAddonsResponse
+         */
         public InstallClusterAddonsResponse InstallClusterAddonsWithOptions(string ClusterId, InstallClusterAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7280,6 +9000,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<InstallClusterAddonsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Installs a component by specifying the name and version of the component. To enhance Kubernetes capabilities, you can install a variety of components in Container Service for Kubernetes (ACK) clusters, such as fully-managed core components and application, logging and monitoring, network, storage, and security group components.
+         *
+         * @param request InstallClusterAddonsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InstallClusterAddonsResponse
+         */
         public async Task<InstallClusterAddonsResponse> InstallClusterAddonsWithOptionsAsync(string ClusterId, InstallClusterAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7303,6 +9031,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<InstallClusterAddonsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Installs a component by specifying the name and version of the component. To enhance Kubernetes capabilities, you can install a variety of components in Container Service for Kubernetes (ACK) clusters, such as fully-managed core components and application, logging and monitoring, network, storage, and security group components.
+         *
+         * @param request InstallClusterAddonsRequest
+         * @return InstallClusterAddonsResponse
+         */
         public InstallClusterAddonsResponse InstallClusterAddons(string ClusterId, InstallClusterAddonsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7310,6 +9044,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return InstallClusterAddonsWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Installs a component by specifying the name and version of the component. To enhance Kubernetes capabilities, you can install a variety of components in Container Service for Kubernetes (ACK) clusters, such as fully-managed core components and application, logging and monitoring, network, storage, and security group components.
+         *
+         * @param request InstallClusterAddonsRequest
+         * @return InstallClusterAddonsResponse
+         */
         public async Task<InstallClusterAddonsResponse> InstallClusterAddonsAsync(string ClusterId, InstallClusterAddonsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7317,6 +9057,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await InstallClusterAddonsWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ListAddons operation to query all available components in a cluster. You can query all available components in a cluster by specifying the ID of the cluster. You can also specify parameters such as the region, cluster type, cluster subtype (profile), cluster specification, and cluster version to get a list of available components in clusters that meet the conditions.
+         *
+         * @param request ListAddonsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAddonsResponse
+         */
         public ListAddonsResponse ListAddonsWithOptions(ListAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7365,6 +9113,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ListAddonsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ListAddons operation to query all available components in a cluster. You can query all available components in a cluster by specifying the ID of the cluster. You can also specify parameters such as the region, cluster type, cluster subtype (profile), cluster specification, and cluster version to get a list of available components in clusters that meet the conditions.
+         *
+         * @param request ListAddonsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAddonsResponse
+         */
         public async Task<ListAddonsResponse> ListAddonsWithOptionsAsync(ListAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7413,6 +9169,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ListAddonsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ListAddons operation to query all available components in a cluster. You can query all available components in a cluster by specifying the ID of the cluster. You can also specify parameters such as the region, cluster type, cluster subtype (profile), cluster specification, and cluster version to get a list of available components in clusters that meet the conditions.
+         *
+         * @param request ListAddonsRequest
+         * @return ListAddonsResponse
+         */
         public ListAddonsResponse ListAddons(ListAddonsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7420,6 +9182,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return ListAddonsWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ListAddons operation to query all available components in a cluster. You can query all available components in a cluster by specifying the ID of the cluster. You can also specify parameters such as the region, cluster type, cluster subtype (profile), cluster specification, and cluster version to get a list of available components in clusters that meet the conditions.
+         *
+         * @param request ListAddonsRequest
+         * @return ListAddonsResponse
+         */
         public async Task<ListAddonsResponse> ListAddonsAsync(ListAddonsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7427,6 +9195,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ListAddonsWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ListClusterAddonInstances operation to query information about the components that are installed in a cluster.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListClusterAddonInstancesResponse
+         */
         public ListClusterAddonInstancesResponse ListClusterAddonInstancesWithOptions(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7448,6 +9223,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ListClusterAddonInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ListClusterAddonInstances operation to query information about the components that are installed in a cluster.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListClusterAddonInstancesResponse
+         */
         public async Task<ListClusterAddonInstancesResponse> ListClusterAddonInstancesWithOptionsAsync(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7469,6 +9251,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ListClusterAddonInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ListClusterAddonInstances operation to query information about the components that are installed in a cluster.
+         *
+         * @return ListClusterAddonInstancesResponse
+         */
         public ListClusterAddonInstancesResponse ListClusterAddonInstances(string clusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7476,6 +9263,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return ListClusterAddonInstancesWithOptions(clusterId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ListClusterAddonInstances operation to query information about the components that are installed in a cluster.
+         *
+         * @return ListClusterAddonInstancesResponse
+         */
         public async Task<ListClusterAddonInstancesResponse> ListClusterAddonInstancesAsync(string clusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7483,6 +9275,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ListClusterAddonInstancesWithOptionsAsync(clusterId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ListClusterChecks operation to query all the cluster check results of a cluster.
+         *
+         * @param request ListClusterChecksRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListClusterChecksResponse
+         */
         public ListClusterChecksResponse ListClusterChecksWithOptions(string clusterId, ListClusterChecksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7515,6 +9315,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ListClusterChecksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ListClusterChecks operation to query all the cluster check results of a cluster.
+         *
+         * @param request ListClusterChecksRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListClusterChecksResponse
+         */
         public async Task<ListClusterChecksResponse> ListClusterChecksWithOptionsAsync(string clusterId, ListClusterChecksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7547,6 +9355,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ListClusterChecksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ListClusterChecks operation to query all the cluster check results of a cluster.
+         *
+         * @param request ListClusterChecksRequest
+         * @return ListClusterChecksResponse
+         */
         public ListClusterChecksResponse ListClusterChecks(string clusterId, ListClusterChecksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7554,6 +9368,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return ListClusterChecksWithOptions(clusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ListClusterChecks operation to query all the cluster check results of a cluster.
+         *
+         * @param request ListClusterChecksRequest
+         * @return ListClusterChecksResponse
+         */
         public async Task<ListClusterChecksResponse> ListClusterChecksAsync(string clusterId, ListClusterChecksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7561,6 +9381,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ListClusterChecksWithOptionsAsync(clusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary 获取自动运维执行计划列表
+         *
+         * @param request ListOperationPlansRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListOperationPlansResponse
+         */
         public ListOperationPlansResponse ListOperationPlansWithOptions(ListOperationPlansRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7593,6 +9421,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ListOperationPlansResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取自动运维执行计划列表
+         *
+         * @param request ListOperationPlansRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListOperationPlansResponse
+         */
         public async Task<ListOperationPlansResponse> ListOperationPlansWithOptionsAsync(ListOperationPlansRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7625,6 +9461,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ListOperationPlansResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取自动运维执行计划列表
+         *
+         * @param request ListOperationPlansRequest
+         * @return ListOperationPlansResponse
+         */
         public ListOperationPlansResponse ListOperationPlans(ListOperationPlansRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7632,6 +9474,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return ListOperationPlansWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取自动运维执行计划列表
+         *
+         * @param request ListOperationPlansRequest
+         * @return ListOperationPlansResponse
+         */
         public async Task<ListOperationPlansResponse> ListOperationPlansAsync(ListOperationPlansRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7639,6 +9487,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ListOperationPlansWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary Queries resource labels and the detailed information, such as the key-value pairs of the labels and the clusters to which the labels are added. You can use labels to classify and manage Container Service for Kubernetes (ACK) clusters in order to meet monitoring, cost analysis, and tenant isolation requirements.
+         *
+         * @param tmpReq ListTagResourcesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7693,6 +9549,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries resource labels and the detailed information, such as the key-value pairs of the labels and the clusters to which the labels are added. You can use labels to classify and manage Container Service for Kubernetes (ACK) clusters in order to meet monitoring, cost analysis, and tenant isolation requirements.
+         *
+         * @param tmpReq ListTagResourcesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7747,6 +9611,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries resource labels and the detailed information, such as the key-value pairs of the labels and the clusters to which the labels are added. You can use labels to classify and manage Container Service for Kubernetes (ACK) clusters in order to meet monitoring, cost analysis, and tenant isolation requirements.
+         *
+         * @param request ListTagResourcesRequest
+         * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7754,6 +9624,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return ListTagResourcesWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Queries resource labels and the detailed information, such as the key-value pairs of the labels and the clusters to which the labels are added. You can use labels to classify and manage Container Service for Kubernetes (ACK) clusters in order to meet monitoring, cost analysis, and tenant isolation requirements.
+         *
+         * @param request ListTagResourcesRequest
+         * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7761,6 +9637,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ListTagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary Container Service for Kubernetes (ACK) Pro clusters are developed based on ACK Basic clusters. ACK Pro clusters provide all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. In addition, ACK Pro clusters provide you with enhanced reliability, security, and schedulability. ACK Pro clusters are covered by the SLA that supports compensation clauses. ACK Pro clusters are suitable for large-scale businesses that require high stability and security in production environments. We recommend that you migrate from ACK Basic clusters to ACK Pro clusters.
+         *
+         * @param request MigrateClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MigrateClusterResponse
+         */
         public MigrateClusterResponse MigrateClusterWithOptions(string clusterId, MigrateClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7793,6 +9677,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<MigrateClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Container Service for Kubernetes (ACK) Pro clusters are developed based on ACK Basic clusters. ACK Pro clusters provide all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. In addition, ACK Pro clusters provide you with enhanced reliability, security, and schedulability. ACK Pro clusters are covered by the SLA that supports compensation clauses. ACK Pro clusters are suitable for large-scale businesses that require high stability and security in production environments. We recommend that you migrate from ACK Basic clusters to ACK Pro clusters.
+         *
+         * @param request MigrateClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MigrateClusterResponse
+         */
         public async Task<MigrateClusterResponse> MigrateClusterWithOptionsAsync(string clusterId, MigrateClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7825,6 +9717,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<MigrateClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Container Service for Kubernetes (ACK) Pro clusters are developed based on ACK Basic clusters. ACK Pro clusters provide all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. In addition, ACK Pro clusters provide you with enhanced reliability, security, and schedulability. ACK Pro clusters are covered by the SLA that supports compensation clauses. ACK Pro clusters are suitable for large-scale businesses that require high stability and security in production environments. We recommend that you migrate from ACK Basic clusters to ACK Pro clusters.
+         *
+         * @param request MigrateClusterRequest
+         * @return MigrateClusterResponse
+         */
         public MigrateClusterResponse MigrateCluster(string clusterId, MigrateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7832,6 +9730,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return MigrateClusterWithOptions(clusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Container Service for Kubernetes (ACK) Pro clusters are developed based on ACK Basic clusters. ACK Pro clusters provide all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. In addition, ACK Pro clusters provide you with enhanced reliability, security, and schedulability. ACK Pro clusters are covered by the SLA that supports compensation clauses. ACK Pro clusters are suitable for large-scale businesses that require high stability and security in production environments. We recommend that you migrate from ACK Basic clusters to ACK Pro clusters.
+         *
+         * @param request MigrateClusterRequest
+         * @return MigrateClusterResponse
+         */
         public async Task<MigrateClusterResponse> MigrateClusterAsync(string clusterId, MigrateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7839,6 +9743,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await MigrateClusterWithOptionsAsync(clusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ModifyCluster operation to modify the cluster configurations by cluster ID.
+         *
+         * @param request ModifyClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterResponse
+         */
         public ModifyClusterResponse ModifyClusterWithOptions(string ClusterId, ModifyClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7919,6 +9831,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ModifyCluster operation to modify the cluster configurations by cluster ID.
+         *
+         * @param request ModifyClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterResponse
+         */
         public async Task<ModifyClusterResponse> ModifyClusterWithOptionsAsync(string ClusterId, ModifyClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7999,6 +9919,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ModifyCluster operation to modify the cluster configurations by cluster ID.
+         *
+         * @param request ModifyClusterRequest
+         * @return ModifyClusterResponse
+         */
         public ModifyClusterResponse ModifyCluster(string ClusterId, ModifyClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8006,6 +9932,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return ModifyClusterWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ModifyCluster operation to modify the cluster configurations by cluster ID.
+         *
+         * @param request ModifyClusterRequest
+         * @return ModifyClusterResponse
+         */
         public async Task<ModifyClusterResponse> ModifyClusterAsync(string ClusterId, ModifyClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8014,15 +9946,17 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
-          * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
-          * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
-          * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
-          *
-          * @param request ModifyClusterAddonRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyClusterAddonResponse
+         * @summary Modifies the configuration of a cluster component. This operation may affect your businesses. We recommend that you assess the impact, back up data, and perform the operation during off-peak hours.
+         *
+         * @description You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
+         * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
+         * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
+         * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
+         *
+         * @param request ModifyClusterAddonRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterAddonResponse
          */
         public ModifyClusterAddonResponse ModifyClusterAddonWithOptions(string clusterId, string componentId, ModifyClusterAddonRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8053,15 +9987,17 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
-          * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
-          * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
-          * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
-          *
-          * @param request ModifyClusterAddonRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyClusterAddonResponse
+         * @summary Modifies the configuration of a cluster component. This operation may affect your businesses. We recommend that you assess the impact, back up data, and perform the operation during off-peak hours.
+         *
+         * @description You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
+         * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
+         * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
+         * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
+         *
+         * @param request ModifyClusterAddonRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterAddonResponse
          */
         public async Task<ModifyClusterAddonResponse> ModifyClusterAddonWithOptionsAsync(string clusterId, string componentId, ModifyClusterAddonRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8092,13 +10028,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
-          * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
-          * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
-          * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
-          *
-          * @param request ModifyClusterAddonRequest
-          * @return ModifyClusterAddonResponse
+         * @summary Modifies the configuration of a cluster component. This operation may affect your businesses. We recommend that you assess the impact, back up data, and perform the operation during off-peak hours.
+         *
+         * @description You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
+         * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
+         * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
+         * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
+         *
+         * @param request ModifyClusterAddonRequest
+         * @return ModifyClusterAddonResponse
          */
         public ModifyClusterAddonResponse ModifyClusterAddon(string clusterId, string componentId, ModifyClusterAddonRequest request)
         {
@@ -8108,13 +10046,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
-          * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
-          * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
-          * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
-          *
-          * @param request ModifyClusterAddonRequest
-          * @return ModifyClusterAddonResponse
+         * @summary Modifies the configuration of a cluster component. This operation may affect your businesses. We recommend that you assess the impact, back up data, and perform the operation during off-peak hours.
+         *
+         * @description You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
+         * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
+         * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
+         * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
+         *
+         * @param request ModifyClusterAddonRequest
+         * @return ModifyClusterAddonResponse
          */
         public async Task<ModifyClusterAddonResponse> ModifyClusterAddonAsync(string clusterId, string componentId, ModifyClusterAddonRequest request)
         {
@@ -8123,6 +10063,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ModifyClusterAddonWithOptionsAsync(clusterId, componentId, request, headers, runtime);
         }
 
+        /**
+         * @summary This API operation applies only to Container Service for Kubernetes (ACK) managed clusters.
+         *
+         * @param request ModifyClusterConfigurationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterConfigurationResponse
+         */
         public ModifyClusterConfigurationResponse ModifyClusterConfigurationWithOptions(string ClusterId, ModifyClusterConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8151,6 +10099,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyClusterConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary This API operation applies only to Container Service for Kubernetes (ACK) managed clusters.
+         *
+         * @param request ModifyClusterConfigurationRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterConfigurationResponse
+         */
         public async Task<ModifyClusterConfigurationResponse> ModifyClusterConfigurationWithOptionsAsync(string ClusterId, ModifyClusterConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8179,6 +10135,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyClusterConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary This API operation applies only to Container Service for Kubernetes (ACK) managed clusters.
+         *
+         * @param request ModifyClusterConfigurationRequest
+         * @return ModifyClusterConfigurationResponse
+         */
         public ModifyClusterConfigurationResponse ModifyClusterConfiguration(string ClusterId, ModifyClusterConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8186,6 +10148,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return ModifyClusterConfigurationWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary This API operation applies only to Container Service for Kubernetes (ACK) managed clusters.
+         *
+         * @param request ModifyClusterConfigurationRequest
+         * @return ModifyClusterConfigurationResponse
+         */
         public async Task<ModifyClusterConfigurationResponse> ModifyClusterConfigurationAsync(string ClusterId, ModifyClusterConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8193,6 +10161,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ModifyClusterConfigurationWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ModifyClusterNodePool operation to modify the configuration of a node pool with the specified node pool ID.
+         *
+         * @param request ModifyClusterNodePoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterNodePoolResponse
+         */
         public ModifyClusterNodePoolResponse ModifyClusterNodePoolWithOptions(string ClusterId, string NodepoolId, ModifyClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8249,6 +10225,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyClusterNodePoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ModifyClusterNodePool operation to modify the configuration of a node pool with the specified node pool ID.
+         *
+         * @param request ModifyClusterNodePoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterNodePoolResponse
+         */
         public async Task<ModifyClusterNodePoolResponse> ModifyClusterNodePoolWithOptionsAsync(string ClusterId, string NodepoolId, ModifyClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8305,6 +10289,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyClusterNodePoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ModifyClusterNodePool operation to modify the configuration of a node pool with the specified node pool ID.
+         *
+         * @param request ModifyClusterNodePoolRequest
+         * @return ModifyClusterNodePoolResponse
+         */
         public ModifyClusterNodePoolResponse ModifyClusterNodePool(string ClusterId, string NodepoolId, ModifyClusterNodePoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8312,6 +10302,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return ModifyClusterNodePoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ModifyClusterNodePool operation to modify the configuration of a node pool with the specified node pool ID.
+         *
+         * @param request ModifyClusterNodePoolRequest
+         * @return ModifyClusterNodePoolResponse
+         */
         public async Task<ModifyClusterNodePoolResponse> ModifyClusterNodePoolAsync(string ClusterId, string NodepoolId, ModifyClusterNodePoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8319,6 +10315,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ModifyClusterNodePoolWithOptionsAsync(ClusterId, NodepoolId, request, headers, runtime);
         }
 
+        /**
+         * @summary Modifies the labels of a Container Service for Kubernetes (ACK) cluster. You can use labels (key-value pairs) to classify and manage ACK clusters in order to meet monitoring, cost analysis, and tenant isolation requirements.
+         *
+         * @param request ModifyClusterTagsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterTagsResponse
+         */
         public ModifyClusterTagsResponse ModifyClusterTagsWithOptions(string ClusterId, ModifyClusterTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8342,6 +10346,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyClusterTagsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the labels of a Container Service for Kubernetes (ACK) cluster. You can use labels (key-value pairs) to classify and manage ACK clusters in order to meet monitoring, cost analysis, and tenant isolation requirements.
+         *
+         * @param request ModifyClusterTagsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyClusterTagsResponse
+         */
         public async Task<ModifyClusterTagsResponse> ModifyClusterTagsWithOptionsAsync(string ClusterId, ModifyClusterTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8365,6 +10377,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyClusterTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the labels of a Container Service for Kubernetes (ACK) cluster. You can use labels (key-value pairs) to classify and manage ACK clusters in order to meet monitoring, cost analysis, and tenant isolation requirements.
+         *
+         * @param request ModifyClusterTagsRequest
+         * @return ModifyClusterTagsResponse
+         */
         public ModifyClusterTagsResponse ModifyClusterTags(string ClusterId, ModifyClusterTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8372,6 +10390,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return ModifyClusterTagsWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Modifies the labels of a Container Service for Kubernetes (ACK) cluster. You can use labels (key-value pairs) to classify and manage ACK clusters in order to meet monitoring, cost analysis, and tenant isolation requirements.
+         *
+         * @param request ModifyClusterTagsRequest
+         * @return ModifyClusterTagsResponse
+         */
         public async Task<ModifyClusterTagsResponse> ModifyClusterTagsAsync(string ClusterId, ModifyClusterTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8380,12 +10404,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
-          *
-          * @param request ModifyNodePoolNodeConfigRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyNodePoolNodeConfigResponse
+         * @summary Modifies the configuration of a node pool, such as the kubelet configuration and node rolling update configuration. After you modify the node pool configuration, nodes are batch updated and the kubelet on each node is restarted. This may adversely affect the nodes and workloads. We recommend that you perform this operation during off-peak hours.
+         *
+         * @description >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
+         *
+         * @param request ModifyNodePoolNodeConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyNodePoolNodeConfigResponse
          */
         public ModifyNodePoolNodeConfigResponse ModifyNodePoolNodeConfigWithOptions(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8424,12 +10450,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
-          *
-          * @param request ModifyNodePoolNodeConfigRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyNodePoolNodeConfigResponse
+         * @summary Modifies the configuration of a node pool, such as the kubelet configuration and node rolling update configuration. After you modify the node pool configuration, nodes are batch updated and the kubelet on each node is restarted. This may adversely affect the nodes and workloads. We recommend that you perform this operation during off-peak hours.
+         *
+         * @description >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
+         *
+         * @param request ModifyNodePoolNodeConfigRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyNodePoolNodeConfigResponse
          */
         public async Task<ModifyNodePoolNodeConfigResponse> ModifyNodePoolNodeConfigWithOptionsAsync(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8468,10 +10496,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
-          *
-          * @param request ModifyNodePoolNodeConfigRequest
-          * @return ModifyNodePoolNodeConfigResponse
+         * @summary Modifies the configuration of a node pool, such as the kubelet configuration and node rolling update configuration. After you modify the node pool configuration, nodes are batch updated and the kubelet on each node is restarted. This may adversely affect the nodes and workloads. We recommend that you perform this operation during off-peak hours.
+         *
+         * @description >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
+         *
+         * @param request ModifyNodePoolNodeConfigRequest
+         * @return ModifyNodePoolNodeConfigResponse
          */
         public ModifyNodePoolNodeConfigResponse ModifyNodePoolNodeConfig(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request)
         {
@@ -8481,10 +10511,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
-          *
-          * @param request ModifyNodePoolNodeConfigRequest
-          * @return ModifyNodePoolNodeConfigResponse
+         * @summary Modifies the configuration of a node pool, such as the kubelet configuration and node rolling update configuration. After you modify the node pool configuration, nodes are batch updated and the kubelet on each node is restarted. This may adversely affect the nodes and workloads. We recommend that you perform this operation during off-peak hours.
+         *
+         * @description >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
+         *
+         * @param request ModifyNodePoolNodeConfigRequest
+         * @return ModifyNodePoolNodeConfigResponse
          */
         public async Task<ModifyNodePoolNodeConfigResponse> ModifyNodePoolNodeConfigAsync(string ClusterId, string NodepoolId, ModifyNodePoolNodeConfigRequest request)
         {
@@ -8493,6 +10525,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ModifyNodePoolNodeConfigWithOptionsAsync(ClusterId, NodepoolId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ModifyPolicyInstance operation to update policy instances in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request ModifyPolicyInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyPolicyInstanceResponse
+         */
         public ModifyPolicyInstanceResponse ModifyPolicyInstanceWithOptions(string clusterId, string policyName, ModifyPolicyInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8533,6 +10573,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyPolicyInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ModifyPolicyInstance operation to update policy instances in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request ModifyPolicyInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyPolicyInstanceResponse
+         */
         public async Task<ModifyPolicyInstanceResponse> ModifyPolicyInstanceWithOptionsAsync(string clusterId, string policyName, ModifyPolicyInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8573,6 +10621,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyPolicyInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ModifyPolicyInstance operation to update policy instances in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request ModifyPolicyInstanceRequest
+         * @return ModifyPolicyInstanceResponse
+         */
         public ModifyPolicyInstanceResponse ModifyPolicyInstance(string clusterId, string policyName, ModifyPolicyInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8580,6 +10634,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return ModifyPolicyInstanceWithOptions(clusterId, policyName, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ModifyPolicyInstance operation to update policy instances in a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request ModifyPolicyInstanceRequest
+         * @return ModifyPolicyInstanceResponse
+         */
         public async Task<ModifyPolicyInstanceResponse> ModifyPolicyInstanceAsync(string clusterId, string policyName, ModifyPolicyInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8588,13 +10648,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * *   You can activate ACK by using Alibaba Cloud accounts.
-          * *   To activate ACK by using RAM users, you need to grant the AdministratorAccess permission to the RAM users.
-          *
-          * @param request OpenAckServiceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return OpenAckServiceResponse
+         * @summary You can call the OpenAckService operation to activate Container Service for Kubernetes (ACK).
+         *
+         * @description *   You can activate ACK by using Alibaba Cloud accounts.
+         * *   To activate ACK by using RAM users, you need to grant the AdministratorAccess permission to the RAM users.
+         *
+         * @param request OpenAckServiceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return OpenAckServiceResponse
          */
         public OpenAckServiceResponse OpenAckServiceWithOptions(OpenAckServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8625,13 +10687,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * *   You can activate ACK by using Alibaba Cloud accounts.
-          * *   To activate ACK by using RAM users, you need to grant the AdministratorAccess permission to the RAM users.
-          *
-          * @param request OpenAckServiceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return OpenAckServiceResponse
+         * @summary You can call the OpenAckService operation to activate Container Service for Kubernetes (ACK).
+         *
+         * @description *   You can activate ACK by using Alibaba Cloud accounts.
+         * *   To activate ACK by using RAM users, you need to grant the AdministratorAccess permission to the RAM users.
+         *
+         * @param request OpenAckServiceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return OpenAckServiceResponse
          */
         public async Task<OpenAckServiceResponse> OpenAckServiceWithOptionsAsync(OpenAckServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8662,11 +10726,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * *   You can activate ACK by using Alibaba Cloud accounts.
-          * *   To activate ACK by using RAM users, you need to grant the AdministratorAccess permission to the RAM users.
-          *
-          * @param request OpenAckServiceRequest
-          * @return OpenAckServiceResponse
+         * @summary You can call the OpenAckService operation to activate Container Service for Kubernetes (ACK).
+         *
+         * @description *   You can activate ACK by using Alibaba Cloud accounts.
+         * *   To activate ACK by using RAM users, you need to grant the AdministratorAccess permission to the RAM users.
+         *
+         * @param request OpenAckServiceRequest
+         * @return OpenAckServiceResponse
          */
         public OpenAckServiceResponse OpenAckService(OpenAckServiceRequest request)
         {
@@ -8676,11 +10742,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * *   You can activate ACK by using Alibaba Cloud accounts.
-          * *   To activate ACK by using RAM users, you need to grant the AdministratorAccess permission to the RAM users.
-          *
-          * @param request OpenAckServiceRequest
-          * @return OpenAckServiceResponse
+         * @summary You can call the OpenAckService operation to activate Container Service for Kubernetes (ACK).
+         *
+         * @description *   You can activate ACK by using Alibaba Cloud accounts.
+         * *   To activate ACK by using RAM users, you need to grant the AdministratorAccess permission to the RAM users.
+         *
+         * @param request OpenAckServiceRequest
+         * @return OpenAckServiceResponse
          */
         public async Task<OpenAckServiceResponse> OpenAckServiceAsync(OpenAckServiceRequest request)
         {
@@ -8690,11 +10758,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PauseClusterUpgradeResponse
+         * @deprecated OpenAPI PauseClusterUpgrade is deprecated
+         *
+         * @summary You can call the PauseClusterUpgrade operation to pause the update of a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PauseClusterUpgradeResponse
          */
         // Deprecated
         public PauseClusterUpgradeResponse PauseClusterUpgradeWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8719,11 +10789,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PauseClusterUpgradeResponse
+         * @deprecated OpenAPI PauseClusterUpgrade is deprecated
+         *
+         * @summary You can call the PauseClusterUpgrade operation to pause the update of a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PauseClusterUpgradeResponse
          */
         // Deprecated
         public async Task<PauseClusterUpgradeResponse> PauseClusterUpgradeWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8748,9 +10820,11 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @return PauseClusterUpgradeResponse
+         * @deprecated OpenAPI PauseClusterUpgrade is deprecated
+         *
+         * @summary You can call the PauseClusterUpgrade operation to pause the update of a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @return PauseClusterUpgradeResponse
          */
         // Deprecated
         public PauseClusterUpgradeResponse PauseClusterUpgrade(string ClusterId)
@@ -8761,9 +10835,11 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @return PauseClusterUpgradeResponse
+         * @deprecated OpenAPI PauseClusterUpgrade is deprecated
+         *
+         * @summary You can call the PauseClusterUpgrade operation to pause the update of a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @return PauseClusterUpgradeResponse
          */
         // Deprecated
         public async Task<PauseClusterUpgradeResponse> PauseClusterUpgradeAsync(string ClusterId)
@@ -8773,6 +10849,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await PauseClusterUpgradeWithOptionsAsync(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the PauseComponentUpgrade operation to pause the update of a component.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PauseComponentUpgradeResponse
+         */
         public PauseComponentUpgradeResponse PauseComponentUpgradeWithOptions(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8794,6 +10877,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<PauseComponentUpgradeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the PauseComponentUpgrade operation to pause the update of a component.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PauseComponentUpgradeResponse
+         */
         public async Task<PauseComponentUpgradeResponse> PauseComponentUpgradeWithOptionsAsync(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8815,6 +10905,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<PauseComponentUpgradeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the PauseComponentUpgrade operation to pause the update of a component.
+         *
+         * @return PauseComponentUpgradeResponse
+         */
         public PauseComponentUpgradeResponse PauseComponentUpgrade(string clusterid, string componentid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8822,6 +10917,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return PauseComponentUpgradeWithOptions(clusterid, componentid, headers, runtime);
         }
 
+        /**
+         * @summary You can call the PauseComponentUpgrade operation to pause the update of a component.
+         *
+         * @return PauseComponentUpgradeResponse
+         */
         public async Task<PauseComponentUpgradeResponse> PauseComponentUpgradeAsync(string clusterid, string componentid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8829,6 +10929,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await PauseComponentUpgradeWithOptionsAsync(clusterid, componentid, headers, runtime);
         }
 
+        /**
+         * @summary Pauses an on-going task.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PauseTaskResponse
+         */
         public PauseTaskResponse PauseTaskWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8850,6 +10957,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<PauseTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Pauses an on-going task.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PauseTaskResponse
+         */
         public async Task<PauseTaskResponse> PauseTaskWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8871,6 +10985,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<PauseTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Pauses an on-going task.
+         *
+         * @return PauseTaskResponse
+         */
         public PauseTaskResponse PauseTask(string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8878,6 +10997,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return PauseTaskWithOptions(taskId, headers, runtime);
         }
 
+        /**
+         * @summary Pauses an on-going task.
+         *
+         * @return PauseTaskResponse
+         */
         public async Task<PauseTaskResponse> PauseTaskAsync(string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8886,17 +11010,20 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          * ****
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
-          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
-          * *   Nodes remain in the Unschedulable state when they are being removed.
-          * *   You can remove only worker nodes. You cannot remove master nodes.
-          *
-          * @param request RemoveClusterNodesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RemoveClusterNodesResponse
+         * @deprecated OpenAPI RemoveClusterNodes is deprecated
+         *
+         * @summary You can call the RemoveClusterNodes operation to remove nodes from a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @description ****
+         * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+         * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+         * *   Nodes remain in the Unschedulable state when they are being removed.
+         * *   You can remove only worker nodes. You cannot remove master nodes.
+         *
+         * @param request RemoveClusterNodesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveClusterNodesResponse
          */
         // Deprecated
         public RemoveClusterNodesResponse RemoveClusterNodesWithOptions(string ClusterId, RemoveClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8936,17 +11063,20 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          * ****
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
-          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
-          * *   Nodes remain in the Unschedulable state when they are being removed.
-          * *   You can remove only worker nodes. You cannot remove master nodes.
-          *
-          * @param request RemoveClusterNodesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RemoveClusterNodesResponse
+         * @deprecated OpenAPI RemoveClusterNodes is deprecated
+         *
+         * @summary You can call the RemoveClusterNodes operation to remove nodes from a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @description ****
+         * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+         * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+         * *   Nodes remain in the Unschedulable state when they are being removed.
+         * *   You can remove only worker nodes. You cannot remove master nodes.
+         *
+         * @param request RemoveClusterNodesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveClusterNodesResponse
          */
         // Deprecated
         public async Task<RemoveClusterNodesResponse> RemoveClusterNodesWithOptionsAsync(string ClusterId, RemoveClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8986,15 +11116,18 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          * ****
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
-          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
-          * *   Nodes remain in the Unschedulable state when they are being removed.
-          * *   You can remove only worker nodes. You cannot remove master nodes.
-          *
-          * @param request RemoveClusterNodesRequest
-          * @return RemoveClusterNodesResponse
+         * @deprecated OpenAPI RemoveClusterNodes is deprecated
+         *
+         * @summary You can call the RemoveClusterNodes operation to remove nodes from a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @description ****
+         * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+         * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+         * *   Nodes remain in the Unschedulable state when they are being removed.
+         * *   You can remove only worker nodes. You cannot remove master nodes.
+         *
+         * @param request RemoveClusterNodesRequest
+         * @return RemoveClusterNodesResponse
          */
         // Deprecated
         public RemoveClusterNodesResponse RemoveClusterNodes(string ClusterId, RemoveClusterNodesRequest request)
@@ -9005,15 +11138,18 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          * ****
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
-          * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
-          * *   Nodes remain in the Unschedulable state when they are being removed.
-          * *   You can remove only worker nodes. You cannot remove master nodes.
-          *
-          * @param request RemoveClusterNodesRequest
-          * @return RemoveClusterNodesResponse
+         * @deprecated OpenAPI RemoveClusterNodes is deprecated
+         *
+         * @summary You can call the RemoveClusterNodes operation to remove nodes from a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @description ****
+         * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+         * *   Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.
+         * *   Nodes remain in the Unschedulable state when they are being removed.
+         * *   You can remove only worker nodes. You cannot remove master nodes.
+         *
+         * @param request RemoveClusterNodesRequest
+         * @return RemoveClusterNodesResponse
          */
         // Deprecated
         public async Task<RemoveClusterNodesResponse> RemoveClusterNodesAsync(string ClusterId, RemoveClusterNodesRequest request)
@@ -9024,14 +11160,16 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
-          *
-          * @param tmpReq RemoveNodePoolNodesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RemoveNodePoolNodesResponse
+         * @summary Removes nodes from a node pool.
+         *
+         * @description **
+         * ****
+         * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
+         *
+         * @param tmpReq RemoveNodePoolNodesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveNodePoolNodesResponse
          */
         public RemoveNodePoolNodesResponse RemoveNodePoolNodesWithOptions(string ClusterId, string NodepoolId, RemoveNodePoolNodesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9088,14 +11226,16 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
-          *
-          * @param tmpReq RemoveNodePoolNodesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RemoveNodePoolNodesResponse
+         * @summary Removes nodes from a node pool.
+         *
+         * @description **
+         * ****
+         * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
+         *
+         * @param tmpReq RemoveNodePoolNodesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveNodePoolNodesResponse
          */
         public async Task<RemoveNodePoolNodesResponse> RemoveNodePoolNodesWithOptionsAsync(string ClusterId, string NodepoolId, RemoveNodePoolNodesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9152,12 +11292,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
-          *
-          * @param request RemoveNodePoolNodesRequest
-          * @return RemoveNodePoolNodesResponse
+         * @summary Removes nodes from a node pool.
+         *
+         * @description **
+         * ****
+         * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
+         *
+         * @param request RemoveNodePoolNodesRequest
+         * @return RemoveNodePoolNodesResponse
          */
         public RemoveNodePoolNodesResponse RemoveNodePoolNodes(string ClusterId, string NodepoolId, RemoveNodePoolNodesRequest request)
         {
@@ -9167,12 +11309,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****
-          * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
-          *
-          * @param request RemoveNodePoolNodesRequest
-          * @return RemoveNodePoolNodesResponse
+         * @summary Removes nodes from a node pool.
+         *
+         * @description **
+         * ****
+         * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
+         *
+         * @param request RemoveNodePoolNodesRequest
+         * @return RemoveNodePoolNodesResponse
          */
         public async Task<RemoveNodePoolNodesResponse> RemoveNodePoolNodesAsync(string ClusterId, string NodepoolId, RemoveNodePoolNodesRequest request)
         {
@@ -9181,6 +11325,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await RemoveNodePoolNodesWithOptionsAsync(ClusterId, NodepoolId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the RemoveWorkflow operation to delete a workflow.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveWorkflowResponse
+         */
         public RemoveWorkflowResponse RemoveWorkflowWithOptions(string workflowName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9202,6 +11353,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<RemoveWorkflowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the RemoveWorkflow operation to delete a workflow.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveWorkflowResponse
+         */
         public async Task<RemoveWorkflowResponse> RemoveWorkflowWithOptionsAsync(string workflowName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9223,6 +11381,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<RemoveWorkflowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the RemoveWorkflow operation to delete a workflow.
+         *
+         * @return RemoveWorkflowResponse
+         */
         public RemoveWorkflowResponse RemoveWorkflow(string workflowName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9230,6 +11393,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return RemoveWorkflowWithOptions(workflowName, headers, runtime);
         }
 
+        /**
+         * @summary You can call the RemoveWorkflow operation to delete a workflow.
+         *
+         * @return RemoveWorkflowResponse
+         */
         public async Task<RemoveWorkflowResponse> RemoveWorkflowAsync(string workflowName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9237,6 +11405,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await RemoveWorkflowWithOptionsAsync(workflowName, headers, runtime);
         }
 
+        /**
+         * @summary You can call the RepairClusterNodePool operation to fix issues on specified nodes in a managed node pool.
+         *
+         * @param request RepairClusterNodePoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RepairClusterNodePoolResponse
+         */
         public RepairClusterNodePoolResponse RepairClusterNodePoolWithOptions(string clusterId, string nodepoolId, RepairClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9269,6 +11445,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<RepairClusterNodePoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the RepairClusterNodePool operation to fix issues on specified nodes in a managed node pool.
+         *
+         * @param request RepairClusterNodePoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RepairClusterNodePoolResponse
+         */
         public async Task<RepairClusterNodePoolResponse> RepairClusterNodePoolWithOptionsAsync(string clusterId, string nodepoolId, RepairClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9301,6 +11485,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<RepairClusterNodePoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the RepairClusterNodePool operation to fix issues on specified nodes in a managed node pool.
+         *
+         * @param request RepairClusterNodePoolRequest
+         * @return RepairClusterNodePoolResponse
+         */
         public RepairClusterNodePoolResponse RepairClusterNodePool(string clusterId, string nodepoolId, RepairClusterNodePoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9308,6 +11498,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return RepairClusterNodePoolWithOptions(clusterId, nodepoolId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the RepairClusterNodePool operation to fix issues on specified nodes in a managed node pool.
+         *
+         * @param request RepairClusterNodePoolRequest
+         * @return RepairClusterNodePoolResponse
+         */
         public async Task<RepairClusterNodePoolResponse> RepairClusterNodePoolAsync(string clusterId, string nodepoolId, RepairClusterNodePoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9315,6 +11511,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await RepairClusterNodePoolWithOptionsAsync(clusterId, nodepoolId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ResumeComponentUpgrade operation to resume the update of a component.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResumeComponentUpgradeResponse
+         */
         public ResumeComponentUpgradeResponse ResumeComponentUpgradeWithOptions(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9336,6 +11539,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ResumeComponentUpgradeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ResumeComponentUpgrade operation to resume the update of a component.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResumeComponentUpgradeResponse
+         */
         public async Task<ResumeComponentUpgradeResponse> ResumeComponentUpgradeWithOptionsAsync(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9357,6 +11567,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ResumeComponentUpgradeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ResumeComponentUpgrade operation to resume the update of a component.
+         *
+         * @return ResumeComponentUpgradeResponse
+         */
         public ResumeComponentUpgradeResponse ResumeComponentUpgrade(string clusterid, string componentid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9364,6 +11579,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return ResumeComponentUpgradeWithOptions(clusterid, componentid, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ResumeComponentUpgrade operation to resume the update of a component.
+         *
+         * @return ResumeComponentUpgradeResponse
+         */
         public async Task<ResumeComponentUpgradeResponse> ResumeComponentUpgradeAsync(string clusterid, string componentid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9371,6 +11591,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ResumeComponentUpgradeWithOptionsAsync(clusterid, componentid, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ResumeTask operation to resume a task.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResumeTaskResponse
+         */
         public ResumeTaskResponse ResumeTaskWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9392,6 +11619,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ResumeTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ResumeTask operation to resume a task.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResumeTaskResponse
+         */
         public async Task<ResumeTaskResponse> ResumeTaskWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9413,6 +11647,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ResumeTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ResumeTask operation to resume a task.
+         *
+         * @return ResumeTaskResponse
+         */
         public ResumeTaskResponse ResumeTask(string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9420,6 +11659,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return ResumeTaskWithOptions(taskId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ResumeTask operation to resume a task.
+         *
+         * @return ResumeTaskResponse
+         */
         public async Task<ResumeTaskResponse> ResumeTaskAsync(string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9428,11 +11672,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResumeUpgradeClusterResponse
+         * @deprecated OpenAPI ResumeUpgradeCluster is deprecated
+         *
+         * @summary You can call the ResumeUpgradeCluster operation to resume the update of a cluster by cluster ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResumeUpgradeClusterResponse
          */
         // Deprecated
         public ResumeUpgradeClusterResponse ResumeUpgradeClusterWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -9457,11 +11703,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResumeUpgradeClusterResponse
+         * @deprecated OpenAPI ResumeUpgradeCluster is deprecated
+         *
+         * @summary You can call the ResumeUpgradeCluster operation to resume the update of a cluster by cluster ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResumeUpgradeClusterResponse
          */
         // Deprecated
         public async Task<ResumeUpgradeClusterResponse> ResumeUpgradeClusterWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -9486,9 +11734,11 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @return ResumeUpgradeClusterResponse
+         * @deprecated OpenAPI ResumeUpgradeCluster is deprecated
+         *
+         * @summary You can call the ResumeUpgradeCluster operation to resume the update of a cluster by cluster ID.
+         *
+         * @return ResumeUpgradeClusterResponse
          */
         // Deprecated
         public ResumeUpgradeClusterResponse ResumeUpgradeCluster(string ClusterId)
@@ -9499,9 +11749,11 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @return ResumeUpgradeClusterResponse
+         * @deprecated OpenAPI ResumeUpgradeCluster is deprecated
+         *
+         * @summary You can call the ResumeUpgradeCluster operation to resume the update of a cluster by cluster ID.
+         *
+         * @return ResumeUpgradeClusterResponse
          */
         // Deprecated
         public async Task<ResumeUpgradeClusterResponse> ResumeUpgradeClusterAsync(string ClusterId)
@@ -9511,6 +11763,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ResumeUpgradeClusterWithOptionsAsync(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the RunClusterCheck operation to initiate cluster checks, such as cluster update prechecks.
+         *
+         * @param request RunClusterCheckRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunClusterCheckResponse
+         */
         public RunClusterCheckResponse RunClusterCheckWithOptions(string clusterId, RunClusterCheckRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9547,6 +11807,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<RunClusterCheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the RunClusterCheck operation to initiate cluster checks, such as cluster update prechecks.
+         *
+         * @param request RunClusterCheckRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RunClusterCheckResponse
+         */
         public async Task<RunClusterCheckResponse> RunClusterCheckWithOptionsAsync(string clusterId, RunClusterCheckRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9583,6 +11851,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<RunClusterCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the RunClusterCheck operation to initiate cluster checks, such as cluster update prechecks.
+         *
+         * @param request RunClusterCheckRequest
+         * @return RunClusterCheckResponse
+         */
         public RunClusterCheckResponse RunClusterCheck(string clusterId, RunClusterCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9590,6 +11864,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return RunClusterCheckWithOptions(clusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the RunClusterCheck operation to initiate cluster checks, such as cluster update prechecks.
+         *
+         * @param request RunClusterCheckRequest
+         * @return RunClusterCheckResponse
+         */
         public async Task<RunClusterCheckResponse> RunClusterCheckAsync(string clusterId, RunClusterCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9598,12 +11878,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request ScaleClusterRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ScaleClusterResponse
+         * @deprecated OpenAPI ScaleCluster is deprecated
+         *
+         * @summary 扩容Kubernetes集群
+         *
+         * @param request ScaleClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ScaleClusterResponse
          */
         // Deprecated
         public ScaleClusterResponse ScaleClusterWithOptions(string ClusterId, ScaleClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -9707,12 +11989,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request ScaleClusterRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ScaleClusterResponse
+         * @deprecated OpenAPI ScaleCluster is deprecated
+         *
+         * @summary 扩容Kubernetes集群
+         *
+         * @param request ScaleClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ScaleClusterResponse
          */
         // Deprecated
         public async Task<ScaleClusterResponse> ScaleClusterWithOptionsAsync(string ClusterId, ScaleClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -9816,10 +12100,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request ScaleClusterRequest
-          * @return ScaleClusterResponse
+         * @deprecated OpenAPI ScaleCluster is deprecated
+         *
+         * @summary 扩容Kubernetes集群
+         *
+         * @param request ScaleClusterRequest
+         * @return ScaleClusterResponse
          */
         // Deprecated
         public ScaleClusterResponse ScaleCluster(string ClusterId, ScaleClusterRequest request)
@@ -9830,10 +12116,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * @deprecated
-          *
-          * @param request ScaleClusterRequest
-          * @return ScaleClusterResponse
+         * @deprecated OpenAPI ScaleCluster is deprecated
+         *
+         * @summary 扩容Kubernetes集群
+         *
+         * @param request ScaleClusterRequest
+         * @return ScaleClusterResponse
          */
         // Deprecated
         public async Task<ScaleClusterResponse> ScaleClusterAsync(string ClusterId, ScaleClusterRequest request)
@@ -9843,6 +12131,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ScaleClusterWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ScaleClusterNodePool operation to scale out a node pool by node pool ID.
+         *
+         * @param request ScaleClusterNodePoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ScaleClusterNodePoolResponse
+         */
         public ScaleClusterNodePoolResponse ScaleClusterNodePoolWithOptions(string ClusterId, string NodepoolId, ScaleClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9871,6 +12167,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ScaleClusterNodePoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ScaleClusterNodePool operation to scale out a node pool by node pool ID.
+         *
+         * @param request ScaleClusterNodePoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ScaleClusterNodePoolResponse
+         */
         public async Task<ScaleClusterNodePoolResponse> ScaleClusterNodePoolWithOptionsAsync(string ClusterId, string NodepoolId, ScaleClusterNodePoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9899,6 +12203,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ScaleClusterNodePoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the ScaleClusterNodePool operation to scale out a node pool by node pool ID.
+         *
+         * @param request ScaleClusterNodePoolRequest
+         * @return ScaleClusterNodePoolResponse
+         */
         public ScaleClusterNodePoolResponse ScaleClusterNodePool(string ClusterId, string NodepoolId, ScaleClusterNodePoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9906,6 +12216,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return ScaleClusterNodePoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the ScaleClusterNodePool operation to scale out a node pool by node pool ID.
+         *
+         * @param request ScaleClusterNodePoolRequest
+         * @return ScaleClusterNodePoolResponse
+         */
         public async Task<ScaleClusterNodePoolResponse> ScaleClusterNodePoolAsync(string ClusterId, string NodepoolId, ScaleClusterNodePoolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9914,13 +12230,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
-          *
-          * @param request ScaleOutClusterRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ScaleOutClusterResponse
+         * @summary You can call the ScaleOutCluster operation to scale out a cluster by cluster ID.
+         *
+         * @description **
+         * ****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](https://help.aliyun.com/document_detail/184928.html).
+         *
+         * @param request ScaleOutClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ScaleOutClusterResponse
          */
         public ScaleOutClusterResponse ScaleOutClusterWithOptions(string ClusterId, ScaleOutClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10031,13 +12349,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
-          *
-          * @param request ScaleOutClusterRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ScaleOutClusterResponse
+         * @summary You can call the ScaleOutCluster operation to scale out a cluster by cluster ID.
+         *
+         * @description **
+         * ****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](https://help.aliyun.com/document_detail/184928.html).
+         *
+         * @param request ScaleOutClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ScaleOutClusterResponse
          */
         public async Task<ScaleOutClusterResponse> ScaleOutClusterWithOptionsAsync(string ClusterId, ScaleOutClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10148,11 +12468,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
-          *
-          * @param request ScaleOutClusterRequest
-          * @return ScaleOutClusterResponse
+         * @summary You can call the ScaleOutCluster operation to scale out a cluster by cluster ID.
+         *
+         * @description **
+         * ****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](https://help.aliyun.com/document_detail/184928.html).
+         *
+         * @param request ScaleOutClusterRequest
+         * @return ScaleOutClusterResponse
          */
         public ScaleOutClusterResponse ScaleOutCluster(string ClusterId, ScaleOutClusterRequest request)
         {
@@ -10162,11 +12484,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](~~184928~~).
-          *
-          * @param request ScaleOutClusterRequest
-          * @return ScaleOutClusterResponse
+         * @summary You can call the ScaleOutCluster operation to scale out a cluster by cluster ID.
+         *
+         * @description **
+         * ****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see [ScaleClusterNodePool](https://help.aliyun.com/document_detail/184928.html).
+         *
+         * @param request ScaleOutClusterRequest
+         * @return ScaleOutClusterResponse
          */
         public async Task<ScaleOutClusterResponse> ScaleOutClusterAsync(string ClusterId, ScaleOutClusterRequest request)
         {
@@ -10175,6 +12499,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ScaleOutClusterWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary The cluster ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ScanClusterVulsResponse
+         */
         public ScanClusterVulsResponse ScanClusterVulsWithOptions(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10196,6 +12527,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ScanClusterVulsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary The cluster ID.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ScanClusterVulsResponse
+         */
         public async Task<ScanClusterVulsResponse> ScanClusterVulsWithOptionsAsync(string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10217,6 +12555,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ScanClusterVulsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary The cluster ID.
+         *
+         * @return ScanClusterVulsResponse
+         */
         public ScanClusterVulsResponse ScanClusterVuls(string clusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10224,6 +12567,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return ScanClusterVulsWithOptions(clusterId, headers, runtime);
         }
 
+        /**
+         * @summary The cluster ID.
+         *
+         * @return ScanClusterVulsResponse
+         */
         public async Task<ScanClusterVulsResponse> ScanClusterVulsAsync(string clusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10231,6 +12579,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ScanClusterVulsWithOptionsAsync(clusterId, headers, runtime);
         }
 
+        /**
+         * @param request StartAlertRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartAlertResponse
+         */
         public StartAlertResponse StartAlertWithOptions(string ClusterId, StartAlertRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10263,6 +12617,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<StartAlertResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request StartAlertRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartAlertResponse
+         */
         public async Task<StartAlertResponse> StartAlertWithOptionsAsync(string ClusterId, StartAlertRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10295,6 +12655,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<StartAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request StartAlertRequest
+         * @return StartAlertResponse
+         */
         public StartAlertResponse StartAlert(string ClusterId, StartAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10302,6 +12666,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return StartAlertWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @param request StartAlertRequest
+         * @return StartAlertResponse
+         */
         public async Task<StartAlertResponse> StartAlertAsync(string ClusterId, StartAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10309,6 +12677,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await StartAlertWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the StartWorkflow operation to create a workflow.
+         *
+         * @param request StartWorkflowRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartWorkflowResponse
+         */
         public StartWorkflowResponse StartWorkflowWithOptions(StartWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10409,6 +12785,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<StartWorkflowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the StartWorkflow operation to create a workflow.
+         *
+         * @param request StartWorkflowRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartWorkflowResponse
+         */
         public async Task<StartWorkflowResponse> StartWorkflowWithOptionsAsync(StartWorkflowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10509,6 +12893,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<StartWorkflowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the StartWorkflow operation to create a workflow.
+         *
+         * @param request StartWorkflowRequest
+         * @return StartWorkflowResponse
+         */
         public StartWorkflowResponse StartWorkflow(StartWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10516,6 +12906,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return StartWorkflowWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the StartWorkflow operation to create a workflow.
+         *
+         * @param request StartWorkflowRequest
+         * @return StartWorkflowResponse
+         */
         public async Task<StartWorkflowResponse> StartWorkflowAsync(StartWorkflowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10523,6 +12919,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await StartWorkflowWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the StopAlert operation to disable an alert rule or an alert rule set in the alert center of Container Service for Kubernetes (ACK).
+         *
+         * @param request StopAlertRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopAlertResponse
+         */
         public StopAlertResponse StopAlertWithOptions(string ClusterId, StopAlertRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10555,6 +12959,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<StopAlertResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the StopAlert operation to disable an alert rule or an alert rule set in the alert center of Container Service for Kubernetes (ACK).
+         *
+         * @param request StopAlertRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopAlertResponse
+         */
         public async Task<StopAlertResponse> StopAlertWithOptionsAsync(string ClusterId, StopAlertRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10587,6 +12999,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<StopAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the StopAlert operation to disable an alert rule or an alert rule set in the alert center of Container Service for Kubernetes (ACK).
+         *
+         * @param request StopAlertRequest
+         * @return StopAlertResponse
+         */
         public StopAlertResponse StopAlert(string ClusterId, StopAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10594,6 +13012,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return StopAlertWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the StopAlert operation to disable an alert rule or an alert rule set in the alert center of Container Service for Kubernetes (ACK).
+         *
+         * @param request StopAlertRequest
+         * @return StopAlertResponse
+         */
         public async Task<StopAlertResponse> StopAlertAsync(string ClusterId, StopAlertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10601,6 +13025,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return await StopAlertWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Synchronizes the information about a node pool, including the metadata and node information of the node pool.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SyncClusterNodePoolResponse
+         */
         public SyncClusterNodePoolResponse SyncClusterNodePoolWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10622,6 +13053,13 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<SyncClusterNodePoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Synchronizes the information about a node pool, including the metadata and node information of the node pool.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SyncClusterNodePoolResponse
+         */
         public async Task<SyncClusterNodePoolResponse> SyncClusterNodePoolWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10643,6 +13081,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<SyncClusterNodePoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Synchronizes the information about a node pool, including the metadata and node information of the node pool.
+         *
+         * @return SyncClusterNodePoolResponse
+         */
         public SyncClusterNodePoolResponse SyncClusterNodePool(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10650,6 +13093,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return SyncClusterNodePoolWithOptions(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary Synchronizes the information about a node pool, including the metadata and node information of the node pool.
+         *
+         * @return SyncClusterNodePoolResponse
+         */
         public async Task<SyncClusterNodePoolResponse> SyncClusterNodePoolAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10657,6 +13105,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await SyncClusterNodePoolWithOptionsAsync(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary Adds labels to a Container Service for Kubernetes (ACK) cluster. You can use labels to classify and manage ACK clusters in order to meet monitoring, cost analysis, and tenant isolation requirements.
+         *
+         * @param request TagResourcesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10697,6 +13153,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Adds labels to a Container Service for Kubernetes (ACK) cluster. You can use labels to classify and manage ACK clusters in order to meet monitoring, cost analysis, and tenant isolation requirements.
+         *
+         * @param request TagResourcesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10737,6 +13201,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Adds labels to a Container Service for Kubernetes (ACK) cluster. You can use labels to classify and manage ACK clusters in order to meet monitoring, cost analysis, and tenant isolation requirements.
+         *
+         * @param request TagResourcesRequest
+         * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10744,6 +13214,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TagResourcesWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Adds labels to a Container Service for Kubernetes (ACK) cluster. You can use labels to classify and manage ACK clusters in order to meet monitoring, cost analysis, and tenant isolation requirements.
+         *
+         * @param request TagResourcesRequest
+         * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10751,6 +13227,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await TagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the UnInstallClusterAddons operation to uninstall the components in a cluster by component names.
+         *
+         * @param request UnInstallClusterAddonsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnInstallClusterAddonsResponse
+         */
         public UnInstallClusterAddonsResponse UnInstallClusterAddonsWithOptions(string ClusterId, UnInstallClusterAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10774,6 +13258,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UnInstallClusterAddonsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the UnInstallClusterAddons operation to uninstall the components in a cluster by component names.
+         *
+         * @param request UnInstallClusterAddonsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnInstallClusterAddonsResponse
+         */
         public async Task<UnInstallClusterAddonsResponse> UnInstallClusterAddonsWithOptionsAsync(string ClusterId, UnInstallClusterAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10797,6 +13289,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UnInstallClusterAddonsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the UnInstallClusterAddons operation to uninstall the components in a cluster by component names.
+         *
+         * @param request UnInstallClusterAddonsRequest
+         * @return UnInstallClusterAddonsResponse
+         */
         public UnInstallClusterAddonsResponse UnInstallClusterAddons(string ClusterId, UnInstallClusterAddonsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10804,6 +13302,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return UnInstallClusterAddonsWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the UnInstallClusterAddons operation to uninstall the components in a cluster by component names.
+         *
+         * @param request UnInstallClusterAddonsRequest
+         * @return UnInstallClusterAddonsResponse
+         */
         public async Task<UnInstallClusterAddonsResponse> UnInstallClusterAddonsAsync(string ClusterId, UnInstallClusterAddonsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10811,6 +13315,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await UnInstallClusterAddonsWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Removes labels from a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param tmpReq UntagResourcesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10865,6 +13377,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes labels from a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param tmpReq UntagResourcesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10919,6 +13439,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes labels from a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request UntagResourcesRequest
+         * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10926,6 +13452,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return UntagResourcesWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Removes labels from a Container Service for Kubernetes (ACK) cluster.
+         *
+         * @param request UntagResourcesRequest
+         * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10933,6 +13465,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return await UntagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateContactGroupForAlertResponse
+         */
         public UpdateContactGroupForAlertResponse UpdateContactGroupForAlertWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10954,6 +13491,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpdateContactGroupForAlertResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateContactGroupForAlertResponse
+         */
         public async Task<UpdateContactGroupForAlertResponse> UpdateContactGroupForAlertWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10975,6 +13517,9 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpdateContactGroupForAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @return UpdateContactGroupForAlertResponse
+         */
         public UpdateContactGroupForAlertResponse UpdateContactGroupForAlert(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10982,6 +13527,9 @@ namespace AlibabaCloud.SDK.CS20151215
             return UpdateContactGroupForAlertWithOptions(ClusterId, headers, runtime);
         }
 
+        /**
+         * @return UpdateContactGroupForAlertResponse
+         */
         public async Task<UpdateContactGroupForAlertResponse> UpdateContactGroupForAlertAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10989,6 +13537,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await UpdateContactGroupForAlertWithOptionsAsync(ClusterId, headers, runtime);
         }
 
+        /**
+         * @summary You can call the UpdateControlPlaneLog operation to modify the log collection configurations for control plane components in a Container Service for Kubernetes (ACK) managed cluster.
+         *
+         * @param request UpdateControlPlaneLogRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateControlPlaneLogResponse
+         */
         public UpdateControlPlaneLogResponse UpdateControlPlaneLogWithOptions(string ClusterId, UpdateControlPlaneLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11029,6 +13585,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpdateControlPlaneLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the UpdateControlPlaneLog operation to modify the log collection configurations for control plane components in a Container Service for Kubernetes (ACK) managed cluster.
+         *
+         * @param request UpdateControlPlaneLogRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateControlPlaneLogResponse
+         */
         public async Task<UpdateControlPlaneLogResponse> UpdateControlPlaneLogWithOptionsAsync(string ClusterId, UpdateControlPlaneLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11069,6 +13633,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpdateControlPlaneLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the UpdateControlPlaneLog operation to modify the log collection configurations for control plane components in a Container Service for Kubernetes (ACK) managed cluster.
+         *
+         * @param request UpdateControlPlaneLogRequest
+         * @return UpdateControlPlaneLogResponse
+         */
         public UpdateControlPlaneLogResponse UpdateControlPlaneLog(string ClusterId, UpdateControlPlaneLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11076,6 +13646,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return UpdateControlPlaneLogWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the UpdateControlPlaneLog operation to modify the log collection configurations for control plane components in a Container Service for Kubernetes (ACK) managed cluster.
+         *
+         * @param request UpdateControlPlaneLogRequest
+         * @return UpdateControlPlaneLogResponse
+         */
         public async Task<UpdateControlPlaneLogResponse> UpdateControlPlaneLogAsync(string ClusterId, UpdateControlPlaneLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11084,14 +13660,16 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****
-          * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
-          *
-          * @param request UpdateK8sClusterUserConfigExpireRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateK8sClusterUserConfigExpireResponse
+         * @summary Sets the validity period of a kubeconfig file used by a Resource Access Management (RAM) user or RAM role to connect to a Container Service for Kubernetes (ACK) cluster. The validity period ranges from 1 to 876,000 hours. You can call this API operation when you customize configurations by using an Alibaba Cloud account. The default validity period of a kubeconfig file is three years.
+         *
+         * @description **
+         * ****
+         * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
+         *
+         * @param request UpdateK8sClusterUserConfigExpireRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateK8sClusterUserConfigExpireResponse
          */
         public UpdateK8sClusterUserConfigExpireResponse UpdateK8sClusterUserConfigExpireWithOptions(string ClusterId, UpdateK8sClusterUserConfigExpireRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11126,14 +13704,16 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****
-          * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
-          *
-          * @param request UpdateK8sClusterUserConfigExpireRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateK8sClusterUserConfigExpireResponse
+         * @summary Sets the validity period of a kubeconfig file used by a Resource Access Management (RAM) user or RAM role to connect to a Container Service for Kubernetes (ACK) cluster. The validity period ranges from 1 to 876,000 hours. You can call this API operation when you customize configurations by using an Alibaba Cloud account. The default validity period of a kubeconfig file is three years.
+         *
+         * @description **
+         * ****
+         * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
+         *
+         * @param request UpdateK8sClusterUserConfigExpireRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateK8sClusterUserConfigExpireResponse
          */
         public async Task<UpdateK8sClusterUserConfigExpireResponse> UpdateK8sClusterUserConfigExpireWithOptionsAsync(string ClusterId, UpdateK8sClusterUserConfigExpireRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11168,12 +13748,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****
-          * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
-          *
-          * @param request UpdateK8sClusterUserConfigExpireRequest
-          * @return UpdateK8sClusterUserConfigExpireResponse
+         * @summary Sets the validity period of a kubeconfig file used by a Resource Access Management (RAM) user or RAM role to connect to a Container Service for Kubernetes (ACK) cluster. The validity period ranges from 1 to 876,000 hours. You can call this API operation when you customize configurations by using an Alibaba Cloud account. The default validity period of a kubeconfig file is three years.
+         *
+         * @description **
+         * ****
+         * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
+         *
+         * @param request UpdateK8sClusterUserConfigExpireRequest
+         * @return UpdateK8sClusterUserConfigExpireResponse
          */
         public UpdateK8sClusterUserConfigExpireResponse UpdateK8sClusterUserConfigExpire(string ClusterId, UpdateK8sClusterUserConfigExpireRequest request)
         {
@@ -11183,12 +13765,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * **
-          * ****
-          * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
-          *
-          * @param request UpdateK8sClusterUserConfigExpireRequest
-          * @return UpdateK8sClusterUserConfigExpireResponse
+         * @summary Sets the validity period of a kubeconfig file used by a Resource Access Management (RAM) user or RAM role to connect to a Container Service for Kubernetes (ACK) cluster. The validity period ranges from 1 to 876,000 hours. You can call this API operation when you customize configurations by using an Alibaba Cloud account. The default validity period of a kubeconfig file is three years.
+         *
+         * @description **
+         * ****
+         * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
+         *
+         * @param request UpdateK8sClusterUserConfigExpireRequest
+         * @return UpdateK8sClusterUserConfigExpireResponse
          */
         public async Task<UpdateK8sClusterUserConfigExpireResponse> UpdateK8sClusterUserConfigExpireAsync(string ClusterId, UpdateK8sClusterUserConfigExpireRequest request)
         {
@@ -11197,6 +13781,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await UpdateK8sClusterUserConfigExpireWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the UpdateTemplate operation to update an orchestration template by template ID.
+         *
+         * @param request UpdateTemplateRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateTemplateResponse
+         */
         public UpdateTemplateResponse UpdateTemplateWithOptions(string TemplateId, UpdateTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11241,6 +13833,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpdateTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the UpdateTemplate operation to update an orchestration template by template ID.
+         *
+         * @param request UpdateTemplateRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateTemplateResponse
+         */
         public async Task<UpdateTemplateResponse> UpdateTemplateWithOptionsAsync(string TemplateId, UpdateTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11285,6 +13885,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpdateTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the UpdateTemplate operation to update an orchestration template by template ID.
+         *
+         * @param request UpdateTemplateRequest
+         * @return UpdateTemplateResponse
+         */
         public UpdateTemplateResponse UpdateTemplate(string TemplateId, UpdateTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11292,6 +13898,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return UpdateTemplateWithOptions(TemplateId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the UpdateTemplate operation to update an orchestration template by template ID.
+         *
+         * @param request UpdateTemplateRequest
+         * @return UpdateTemplateResponse
+         */
         public async Task<UpdateTemplateResponse> UpdateTemplateAsync(string TemplateId, UpdateTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11299,6 +13911,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await UpdateTemplateWithOptionsAsync(TemplateId, request, headers, runtime);
         }
 
+        /**
+         * @summary 更新指定RAM用户/角色的RBAC权限
+         *
+         * @param request UpdateUserPermissionsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateUserPermissionsResponse
+         */
         public UpdateUserPermissionsResponse UpdateUserPermissionsWithOptions(string uid, UpdateUserPermissionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11328,6 +13948,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpdateUserPermissionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 更新指定RAM用户/角色的RBAC权限
+         *
+         * @param request UpdateUserPermissionsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateUserPermissionsResponse
+         */
         public async Task<UpdateUserPermissionsResponse> UpdateUserPermissionsWithOptionsAsync(string uid, UpdateUserPermissionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11357,6 +13985,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpdateUserPermissionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 更新指定RAM用户/角色的RBAC权限
+         *
+         * @param request UpdateUserPermissionsRequest
+         * @return UpdateUserPermissionsResponse
+         */
         public UpdateUserPermissionsResponse UpdateUserPermissions(string uid, UpdateUserPermissionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11364,6 +13998,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return UpdateUserPermissionsWithOptions(uid, request, headers, runtime);
         }
 
+        /**
+         * @summary 更新指定RAM用户/角色的RBAC权限
+         *
+         * @param request UpdateUserPermissionsRequest
+         * @return UpdateUserPermissionsResponse
+         */
         public async Task<UpdateUserPermissionsResponse> UpdateUserPermissionsAsync(string uid, UpdateUserPermissionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11371,6 +14011,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await UpdateUserPermissionsWithOptionsAsync(uid, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the UpgradeCluster operation to upgrade a cluster by cluster ID.
+         *
+         * @param request UpgradeClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpgradeClusterResponse
+         */
         public UpgradeClusterResponse UpgradeClusterWithOptions(string ClusterId, UpgradeClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11411,6 +14059,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpgradeClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the UpgradeCluster operation to upgrade a cluster by cluster ID.
+         *
+         * @param request UpgradeClusterRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpgradeClusterResponse
+         */
         public async Task<UpgradeClusterResponse> UpgradeClusterWithOptionsAsync(string ClusterId, UpgradeClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11451,6 +14107,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpgradeClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary You can call the UpgradeCluster operation to upgrade a cluster by cluster ID.
+         *
+         * @param request UpgradeClusterRequest
+         * @return UpgradeClusterResponse
+         */
         public UpgradeClusterResponse UpgradeCluster(string ClusterId, UpgradeClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11458,6 +14120,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return UpgradeClusterWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary You can call the UpgradeCluster operation to upgrade a cluster by cluster ID.
+         *
+         * @param request UpgradeClusterRequest
+         * @return UpgradeClusterResponse
+         */
         public async Task<UpgradeClusterResponse> UpgradeClusterAsync(string ClusterId, UpgradeClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11465,6 +14133,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return await UpgradeClusterWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.
+         *
+         * @param request UpgradeClusterAddonsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpgradeClusterAddonsResponse
+         */
         public UpgradeClusterAddonsResponse UpgradeClusterAddonsWithOptions(string ClusterId, UpgradeClusterAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11488,6 +14164,14 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpgradeClusterAddonsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.
+         *
+         * @param request UpgradeClusterAddonsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpgradeClusterAddonsResponse
+         */
         public async Task<UpgradeClusterAddonsResponse> UpgradeClusterAddonsWithOptionsAsync(string ClusterId, UpgradeClusterAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11511,6 +14195,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<UpgradeClusterAddonsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.
+         *
+         * @param request UpgradeClusterAddonsRequest
+         * @return UpgradeClusterAddonsResponse
+         */
         public UpgradeClusterAddonsResponse UpgradeClusterAddons(string ClusterId, UpgradeClusterAddonsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11518,6 +14208,12 @@ namespace AlibabaCloud.SDK.CS20151215
             return UpgradeClusterAddonsWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /**
+         * @summary Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.
+         *
+         * @param request UpgradeClusterAddonsRequest
+         * @return UpgradeClusterAddonsResponse
+         */
         public async Task<UpgradeClusterAddonsResponse> UpgradeClusterAddonsAsync(string ClusterId, UpgradeClusterAddonsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11526,12 +14222,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * This operation allows you to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
-          *
-          * @param request UpgradeClusterNodepoolRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpgradeClusterNodepoolResponse
+         * @summary You can call the UpgradeClusterNodepool operation to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+         *
+         * @description This operation allows you to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+         *
+         * @param request UpgradeClusterNodepoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpgradeClusterNodepoolResponse
          */
         public UpgradeClusterNodepoolResponse UpgradeClusterNodepoolWithOptions(string ClusterId, string NodepoolId, UpgradeClusterNodepoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11586,12 +14284,14 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * This operation allows you to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
-          *
-          * @param request UpgradeClusterNodepoolRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpgradeClusterNodepoolResponse
+         * @summary You can call the UpgradeClusterNodepool operation to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+         *
+         * @description This operation allows you to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+         *
+         * @param request UpgradeClusterNodepoolRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpgradeClusterNodepoolResponse
          */
         public async Task<UpgradeClusterNodepoolResponse> UpgradeClusterNodepoolWithOptionsAsync(string ClusterId, string NodepoolId, UpgradeClusterNodepoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11646,10 +14346,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * This operation allows you to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
-          *
-          * @param request UpgradeClusterNodepoolRequest
-          * @return UpgradeClusterNodepoolResponse
+         * @summary You can call the UpgradeClusterNodepool operation to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+         *
+         * @description This operation allows you to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+         *
+         * @param request UpgradeClusterNodepoolRequest
+         * @return UpgradeClusterNodepoolResponse
          */
         public UpgradeClusterNodepoolResponse UpgradeClusterNodepool(string ClusterId, string NodepoolId, UpgradeClusterNodepoolRequest request)
         {
@@ -11659,10 +14361,12 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-          * This operation allows you to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
-          *
-          * @param request UpgradeClusterNodepoolRequest
-          * @return UpgradeClusterNodepoolResponse
+         * @summary You can call the UpgradeClusterNodepool operation to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+         *
+         * @description This operation allows you to update the Kubernetes version, OS version, or container runtime version of the nodes in a node pool.
+         *
+         * @param request UpgradeClusterNodepoolRequest
+         * @return UpgradeClusterNodepoolResponse
          */
         public async Task<UpgradeClusterNodepoolResponse> UpgradeClusterNodepoolAsync(string ClusterId, string NodepoolId, UpgradeClusterNodepoolRequest request)
         {

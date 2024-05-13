@@ -52,6 +52,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The region ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("region")]
         [Validation(Required=false)]

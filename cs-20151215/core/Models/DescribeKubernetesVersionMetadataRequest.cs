@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// *   `Kubernetes`: ACK dedicated cluster.
         /// *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.
         /// *   `ExternalKubernetes`: registered cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
@@ -23,7 +25,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not set this parameter, the latest Kubernetes version is used.
         /// 
-        /// You can create ACK clusters of the latest two Kubernetes versions in the ACK console. You can call the specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
+        /// You can create ACK clusters of the latest two Kubernetes versions in the ACK console. You can call the specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).
         /// </summary>
         [NameInMap("KubernetesVersion")]
         [Validation(Required=false)]
@@ -58,6 +60,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The region ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]

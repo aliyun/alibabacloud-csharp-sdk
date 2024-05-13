@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource. For more information, see [Labels](~~110425~~).
+                /// The type of the resource. For more information, see [Labels](https://help.aliyun.com/document_detail/110425.html).
                 /// </summary>
                 [NameInMap("resource_type")]
                 [Validation(Required=false)]

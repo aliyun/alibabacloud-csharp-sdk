@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public class UpgradeClusterAddonsRequestBody : TeaModel {
             /// <summary>
             /// The name of the component.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("component_name")]
             [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// The version to which the component can be updated. You can call the `DescribeClusterAddonsVersion` operation to query the version to which the component can be updated.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("next_version")]
             [Validation(Required=false)]

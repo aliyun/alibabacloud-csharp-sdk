@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// The action that the trigger performs. Set the value to redeploy.
         /// 
         /// `redeploy`: redeploys the resources specified by `project_id`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("action")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("cluster_id")]
         [Validation(Required=false)]
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// The name consists of the namespace where the application is deployed and the name of the application. The format is `${namespace}/${name}`.
         /// 
         /// Example: `default/test-app`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("project_id")]
         [Validation(Required=false)]

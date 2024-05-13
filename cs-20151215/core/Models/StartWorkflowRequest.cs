@@ -141,6 +141,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The type of workflow. Valid values: wgs and mapping.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("workflow_type")]
         [Validation(Required=false)]

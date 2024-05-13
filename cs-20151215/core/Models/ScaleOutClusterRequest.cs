@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The number of worker nodes that you want to add.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CpuPolicy { get; set; }
 
         /// <summary>
-        /// Specifies a custom image for nodes. By default, the image provided by Container Service for Kubernetes (ACK) is used. You can select a custom image to replace the default image. For more information, see [Custom images](~~146647~~).
+        /// Specifies a custom image for nodes. By default, the image provided by Container Service for Kubernetes (ACK) is used. You can select a custom image to replace the default image. For more information, see [Custom images](https://help.aliyun.com/document_detail/146647.html).
         /// </summary>
         [NameInMap("image_id")]
         [Validation(Required=false)]
@@ -49,6 +51,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The name of the key pair. You must set this parameter or the `login_password` parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("key_pair")]
         [Validation(Required=false)]
@@ -56,6 +60,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The password for SSH logon. You must set this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("login_password")]
         [Validation(Required=false)]
@@ -93,7 +99,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<Taint> Taints { get; set; }
 
         /// <summary>
-        /// The user data of the node pool. For more information, see [Generate user-defined data](~~49121~~).
+        /// The user data of the node pool. For more information, see [Generate user-defined data](https://help.aliyun.com/document_detail/49121.html).
         /// </summary>
         [NameInMap("user_data")]
         [Validation(Required=false)]
@@ -101,6 +107,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("vswitch_ids")]
         [Validation(Required=false)]
@@ -187,6 +195,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The instance configurations of worker nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("worker_instance_types")]
         [Validation(Required=false)]
@@ -220,6 +230,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// *   `cloud_essd`: enhanced SSD (ESSD).
         /// 
         /// Default value: `cloud_ssd`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("worker_system_disk_category")]
         [Validation(Required=false)]
@@ -231,6 +243,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// Valid values: 40 to 500.
         /// 
         /// Default value: `120`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("worker_system_disk_size")]
         [Validation(Required=false)]

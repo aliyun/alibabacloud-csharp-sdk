@@ -410,6 +410,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public class CreateClusterNodePoolRequestNodepoolInfo : TeaModel {
             /// <summary>
             /// The name of the node pool.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -528,6 +530,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// *   `PostPaid`: the pay-as-you-go billing method.
             /// 
             /// Default value: `PostPaid`.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("instance_charge_type")]
             [Validation(Required=false)]
@@ -535,6 +539,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// The instance type of the nodes in the node pool.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("instance_types")]
             [Validation(Required=false)]
@@ -588,7 +594,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// 
             ///     **Note** `COST_OPTIMIZED` is valid only when multiple instance types are specified or at least one preemptible instance type is specified.
             /// 
-            /// *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call [RebalanceInstances](~~71516~~) of Auto Scaling to balance the instance distribution among zones.
+            /// *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call [RebalanceInstances](https://help.aliyun.com/document_detail/71516.html) of Auto Scaling to balance the instance distribution among zones.
             /// 
             /// Default value: `PRIORITY`.
             /// </summary>
@@ -757,7 +763,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// *   `SpotWithPriceLimit`: specifies the highest bid.
             /// *   `SpotAsPriceGo`: automatically submits bids based on the up-to-date market price.
             /// 
-            /// For more information, see [Preemptible instances](~~165053~~).
+            /// For more information, see [Preemptible instances](https://help.aliyun.com/document_detail/165053.html).
             /// </summary>
             [NameInMap("spot_strategy")]
             [Validation(Required=false)]
@@ -769,7 +775,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// *   true: enables the burst feature.
             /// *   false: disables the burst feature.
             /// 
-            /// This parameter is supported only when `SystemDiskCategory` is set to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
+            /// This parameter is supported only when `SystemDiskCategory` is set to `cloud_auto`. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).
             /// </summary>
             [NameInMap("system_disk_bursting_enabled")]
             [Validation(Required=false)]
@@ -819,7 +825,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// The predefined IOPS of a system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
             /// 
-            /// This parameter is supported only when `SystemDiskCategory` is set to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
+            /// This parameter is supported only when `SystemDiskCategory` is set to `cloud_auto`. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).
             /// </summary>
             [NameInMap("system_disk_provisioned_iops")]
             [Validation(Required=false)]
@@ -863,6 +869,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// The vSwitch IDs. Valid values: 1 to 8.
             /// 
             /// >  To ensure high availability, we recommend that you select vSwitches that reside in different zones.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("vswitch_ids")]
             [Validation(Required=false)]

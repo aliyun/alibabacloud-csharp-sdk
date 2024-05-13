@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Namespaces { get; set; }
 
         /// <summary>
-        /// The parameters of the policy instance. For more information, see [Predefined security policies of ACK](~~359819~~).
+        /// The parameters of the policy instance. For more information, see [Predefined security policies of ACK](https://help.aliyun.com/document_detail/359819.html).
         /// </summary>
         [NameInMap("parameters")]
         [Validation(Required=false)]

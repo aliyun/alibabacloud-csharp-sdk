@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// The ID of the cluster that you want to manage.
             /// 
             /// *   When the `role_type` parameter is set to `all-clusters`, this parameter is set to an empty string.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("cluster")]
             [Validation(Required=false)]
@@ -50,10 +52,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// The predefined role name. Valid values:
             /// 
             /// *   `admin`: administrator
-            /// *   `ops`: O\&M engineer
+            /// *   `ops`: O\\&M engineer
             /// *   `dev`: developer
             /// *   `restricted`: restricted user
             /// *   The custom cluster role.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("role_name")]
             [Validation(Required=false)]
@@ -65,6 +69,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// *   `cluster`: indicates that the permissions are scoped to a cluster.
             /// *   `namespace`: specifies that the permissions are scoped to a namespace of a cluster.
             /// *   `all-clusters`: specifies that the permissions are scoped to all clusters.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("role_type")]
             [Validation(Required=false)]

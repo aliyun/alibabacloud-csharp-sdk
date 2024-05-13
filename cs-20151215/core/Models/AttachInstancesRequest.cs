@@ -57,6 +57,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The ECS instances to be added.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodepoolId { get; set; }
 
         /// <summary>
-        /// The SSH logon password that is used to log on to the ECS instances. You must set login_password or `key_pair`. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. It cannot contain backslashes (\\) or double quotation marks (").
+        /// The SSH logon password that is used to log on to the ECS instances. You must set login_password or `key_pair`. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. It cannot contain backslashes (\\\\) or double quotation marks (").
         /// 
         /// For security considerations, the password is encrypted during data transfer.
         /// </summary>
@@ -142,7 +144,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<Tag> Tags { get; set; }
 
         /// <summary>
-        /// User-defined data. For more information, see [Generate user data](~~49121~~).
+        /// User-defined data. For more information, see [Generate user data](https://help.aliyun.com/document_detail/49121.html).
         /// 
         /// >  This parameter is not supported if you specify the `nodepool_id` parameter.
         /// </summary>

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     public class TagResourcesRequest : TeaModel {
         /// <summary>
         /// The region ID of the resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("region_id")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The list of resource IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resource_ids")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The type of resource that you want to label. Set the value to `CLUSTER`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resource_type")]
         [Validation(Required=false)]
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// *   Label values must not be empty strings. A label value must be 1 to 128 characters in length.
         /// *   The label value must not start with `aliyun` or `acs:`.
         /// *   The label value must not contain `http://` or `https://`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

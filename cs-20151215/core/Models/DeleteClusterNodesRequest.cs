@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The list of nodes to be removed. You need to specify the name of the nodes used in the cluster, for example, `cn-hangzhou.192.168.0.70`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]

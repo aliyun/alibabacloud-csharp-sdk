@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Obsolete]
             public string EipInternetChargeType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
@@ -32,10 +35,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Obsolete]
             public bool? IsBondEip { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("max_instances")]
             [Validation(Required=false)]
             public long? MaxInstances { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("min_instances")]
             [Validation(Required=false)]
             public long? MinInstances { get; set; }
@@ -107,10 +116,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string NodeNameMode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("runtime")]
             [Validation(Required=false)]
             public string Runtime { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("runtime_version")]
             [Validation(Required=false)]
             public string RuntimeVersion { get; set; }
@@ -222,6 +237,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public NodepoolNodepoolInfo NodepoolInfo { get; set; }
         public class NodepoolNodepoolInfo : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -272,10 +290,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string ImageType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("instance_charge_type")]
             [Validation(Required=false)]
             public string InstanceChargeType { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("instance_types")]
             [Validation(Required=false)]
             public List<string> InstanceTypes { get; set; }
@@ -431,6 +455,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("vswitch_ids")]
             [Validation(Required=false)]
             public List<string> VswitchIds { get; set; }
@@ -441,6 +468,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public NodepoolTeeConfig TeeConfig { get; set; }
         public class NodepoolTeeConfig : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("tee_enable")]
             [Validation(Required=false)]
             public bool? TeeEnable { get; set; }

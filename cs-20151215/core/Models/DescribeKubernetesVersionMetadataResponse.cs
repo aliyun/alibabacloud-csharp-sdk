@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<Runtime> Runtimes { get; set; }
 
             /// <summary>
-            /// The Kubernetes version that is supported by ACK. For more information, see [Release notes for Kubernetes versions](~~185269~~).
+            /// The Kubernetes version that is supported by ACK. For more information, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]

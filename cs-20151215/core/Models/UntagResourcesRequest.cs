@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The region ID of the resources.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("region_id")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The list of resource IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resource_ids")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The type of resource. Set the value to `CLUSTER`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resource_type")]
         [Validation(Required=false)]
@@ -42,6 +48,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The list of keys of the labels that you want to remove.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("tag_keys")]
         [Validation(Required=false)]

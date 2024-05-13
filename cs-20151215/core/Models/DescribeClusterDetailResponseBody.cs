@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Created { get; set; }
 
         /// <summary>
-        /// The current Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
+        /// The current Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).
         /// </summary>
         [NameInMap("current_version")]
         [Validation(Required=false)]
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// 
         /// The pod CIDR block cannot overlap with the CIDR block of the VPC or the CIDR blocks of the clusters in the VPC.
         /// 
-        /// For more information, see [Plan CIDR blocks for an ACK cluster](~~186964~~).
+        /// For more information, see [Plan CIDR blocks for an ACK cluster](https://help.aliyun.com/document_detail/186964.html).
         /// </summary>
         [NameInMap("subnet_cidr")]
         [Validation(Required=false)]

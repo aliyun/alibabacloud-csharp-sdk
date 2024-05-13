@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Unschedulable { get; set; }
 
             /// <summary>
-            /// The user data of the node pool. For more information, see [Generate user data](~~49121~~).
+            /// The user data of the node pool. For more information, see [Generate user data](https://help.aliyun.com/document_detail/49121.html).
             /// </summary>
             [NameInMap("user_data")]
             [Validation(Required=false)]
@@ -580,7 +580,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// 
             ///     **Note**The `COST_OPTIMIZED` setting takes effect only when multiple instance types are specified or at least one instance type is specified for preemptible instances.
             /// 
-            /// *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the RebalanceInstances operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).
+            /// *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the RebalanceInstances operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](https://help.aliyun.com/document_detail/71516.html).
             /// 
             /// Default value: `PRIORITY`.
             /// </summary>
@@ -761,7 +761,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// *   SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.
             /// *   SpotAsPriceGo: a preemptible instance for which the system automatically bids based on the current market price.
             /// 
-            /// For more information, see [Preemptible instances](~~157759~~).
+            /// For more information, see [Preemptible instances](https://help.aliyun.com/document_detail/157759.html).
             /// </summary>
             [NameInMap("spot_strategy")]
             [Validation(Required=false)]

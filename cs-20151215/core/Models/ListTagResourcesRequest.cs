@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("region_id")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The list of cluster IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resource_ids")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The resource type. Set the value to `CLUSTER`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resource_type")]
         [Validation(Required=false)]

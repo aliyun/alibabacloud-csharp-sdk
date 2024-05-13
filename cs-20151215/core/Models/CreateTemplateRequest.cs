@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// The name of the orchestration template.
         /// 
         /// The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The template content in the YAML format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("template")]
         [Validation(Required=false)]

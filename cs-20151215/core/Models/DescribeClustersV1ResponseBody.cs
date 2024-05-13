@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the versions of open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.
             /// 
-            /// You can create clusters of the latest two Kubernetes versions in the ACK console. You can call the corresponding ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
+            /// You can create clusters of the latest two Kubernetes versions in the ACK console. You can call the corresponding ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).
             /// </summary>
             [NameInMap("init_version")]
             [Validation(Required=false)]
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// 
             /// The CIDR block of pods cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after the cluster is created.
             /// 
-            /// For more information, see [Plan CIDR blocks for an ACK cluster](~~86500~~).
+            /// For more information, see [Plan CIDR blocks for an ACK cluster](https://help.aliyun.com/document_detail/86500.html).
             /// </summary>
             [NameInMap("subnet_cidr")]
             [Validation(Required=false)]

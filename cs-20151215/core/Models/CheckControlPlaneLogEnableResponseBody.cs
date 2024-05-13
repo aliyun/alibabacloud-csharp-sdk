@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// The control plane components for which log collection is enabled.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("components")]
         [Validation(Required=false)]
