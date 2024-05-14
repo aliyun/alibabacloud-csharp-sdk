@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
     public class SetDomainRuleGroupRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public string Domains { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RuleGroupId")]
         [Validation(Required=false)]
         public long? RuleGroupId { get; set; }

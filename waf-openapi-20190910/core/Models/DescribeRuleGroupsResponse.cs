@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
-    public class ModifyProtectionRuleCacheStatusResponse : TeaModel {
+    public class DescribeRuleGroupsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ModifyProtectionRuleCacheStatusResponseBody Body { get; set; }
+        public DescribeRuleGroupsResponseBody Body { get; set; }
 
     }
 

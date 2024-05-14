@@ -1,3 +1,8 @@
+2024-05-14 Version: 1.2.0
+- Support API DescribeRuleGroups.
+- Support API DescribeRules.
+
+
 2023-12-14 Version: 1.1.9
 - Generated csharp 2019-09-10 for waf-openapi.
 

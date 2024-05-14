@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [Validation(Required=false)]
         public int? ConnectionTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
@@ -57,6 +60,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [Validation(Required=false)]
         public int? HttpsRedirect { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -65,6 +71,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [Validation(Required=false)]
         public int? IpFollowStatus { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("IsAccessProduct")]
         [Validation(Required=false)]
         public int? IsAccessProduct { get; set; }

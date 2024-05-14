@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
     public class DescribeWafSourceIpSegmentRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

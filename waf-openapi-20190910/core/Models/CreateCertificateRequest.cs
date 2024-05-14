@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [Validation(Required=false)]
         public string Certificate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CertificateName")]
         [Validation(Required=false)]
         public string CertificateName { get; set; }
@@ -24,10 +27,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [Validation(Required=false)]
         public string Domain { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PrivateKey")]
         [Validation(Required=false)]
         public string PrivateKey { get; set; }

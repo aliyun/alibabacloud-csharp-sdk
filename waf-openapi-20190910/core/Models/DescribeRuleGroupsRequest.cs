@@ -8,17 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
-    public class DescribeProtectionModuleRulesRequest : TeaModel {
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("DefenseType")]
+    public class DescribeRuleGroupsRequest : TeaModel {
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string DefenseType { get; set; }
-
-        [NameInMap("Domain")]
-        [Validation(Required=false)]
-        public string Domain { get; set; }
+        public int? CurrentPage { get; set; }
 
         /// <summary>
         /// This parameter is required.
@@ -31,17 +24,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Query")]
+        [NameInMap("PolicyId")]
         [Validation(Required=false)]
-        public string Query { get; set; }
+        public long? PolicyId { get; set; }
+
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -50,6 +43,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public int? Type { get; set; }
+
+        [NameInMap("WafLang")]
+        [Validation(Required=false)]
+        public string WafLang { get; set; }
 
     }
 

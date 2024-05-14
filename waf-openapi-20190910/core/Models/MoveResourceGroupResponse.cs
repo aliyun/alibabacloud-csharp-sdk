@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
     public class MoveResourceGroupResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public MoveResourceGroupResponseBody Body { get; set; }
 
     }
