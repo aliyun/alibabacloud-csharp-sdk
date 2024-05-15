@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
-    public class ResetAccountPasswordRequest : TeaModel {
+    public class DescribeDBClusterConfigRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("AccountName")]
+        [NameInMap("ConfigKey")]
         [Validation(Required=false)]
-        public string AccountName { get; set; }
+        public string ConfigKey { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("AccountPassword")]
+        [NameInMap("DBClusterId")]
         [Validation(Required=false)]
-        public string AccountPassword { get; set; }
+        public string DBClusterId { get; set; }
 
         /// <summary>
         /// This parameter is required.
@@ -30,16 +30,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
 
     }
 

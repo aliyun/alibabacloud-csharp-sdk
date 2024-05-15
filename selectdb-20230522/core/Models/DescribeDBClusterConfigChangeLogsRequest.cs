@@ -8,7 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
-    public class ModifyDBInstanceAttributeRequest : TeaModel {
+    public class DescribeDBClusterConfigChangeLogsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ConfigKey")]
+        [Validation(Required=false)]
+        public string ConfigKey { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("DBClusterId")]
+        [Validation(Required=false)]
+        public string DBClusterId { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -19,9 +33,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("InstanceAttributeType")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string InstanceAttributeType { get; set; }
+        public string EndTime { get; set; }
 
         /// <summary>
         /// This parameter is required.
@@ -30,16 +44,12 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("Value")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string Value { get; set; }
+        public string StartTime { get; set; }
 
     }
 
