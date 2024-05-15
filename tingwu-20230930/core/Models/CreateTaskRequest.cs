@@ -40,6 +40,9 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public int? SampleRate { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("SourceLanguage")]
             [Validation(Required=false)]
             public string SourceLanguage { get; set; }
@@ -61,6 +64,44 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [NameInMap("AutoChaptersEnabled")]
             [Validation(Required=false)]
             public bool? AutoChaptersEnabled { get; set; }
+
+            [NameInMap("CustomPrompt")]
+            [Validation(Required=false)]
+            public CreateTaskRequestParametersCustomPrompt CustomPrompt { get; set; }
+            public class CreateTaskRequestParametersCustomPrompt : TeaModel {
+                [NameInMap("Contents")]
+                [Validation(Required=false)]
+                public List<CreateTaskRequestParametersCustomPromptContents> Contents { get; set; }
+                public class CreateTaskRequestParametersCustomPromptContents : TeaModel {
+                    [NameInMap("Model")]
+                    [Validation(Required=false)]
+                    public string Model { get; set; }
+
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
+                    [NameInMap("Prompt")]
+                    [Validation(Required=false)]
+                    public string Prompt { get; set; }
+
+                    [NameInMap("TransType")]
+                    [Validation(Required=false)]
+                    public string TransType { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("CustomPromptEnabled")]
+            [Validation(Required=false)]
+            public bool? CustomPromptEnabled { get; set; }
 
             [NameInMap("ExtraParams")]
             [Validation(Required=false)]
@@ -194,6 +235,9 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         [Validation(Required=false)]
         public string Operation { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }

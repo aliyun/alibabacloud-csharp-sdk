@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WordWeights")]
         [Validation(Required=false)]
         public string WordWeights { get; set; }
