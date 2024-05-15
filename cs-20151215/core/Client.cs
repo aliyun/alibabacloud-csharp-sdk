@@ -6757,6 +6757,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 query["Profile"] = request.Profile;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryUpgradableVersion))
+            {
+                query["QueryUpgradableVersion"] = request.QueryUpgradableVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
@@ -6812,6 +6816,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
             {
                 query["Profile"] = request.Profile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryUpgradableVersion))
+            {
+                query["QueryUpgradableVersion"] = request.QueryUpgradableVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {

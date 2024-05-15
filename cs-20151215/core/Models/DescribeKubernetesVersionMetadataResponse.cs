@@ -158,6 +158,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public bool? Creatable { get; set; }
 
+            [NameInMap("upgradable_versions")]
+            [Validation(Required=false)]
+            public List<string> UpgradableVersions { get; set; }
+
         }
 
     }

@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Profile { get; set; }
 
+        [NameInMap("QueryUpgradableVersion")]
+        [Validation(Required=false)]
+        public bool? QueryUpgradableVersion { get; set; }
+
         /// <summary>
         /// The region ID of the cluster.
         /// 
