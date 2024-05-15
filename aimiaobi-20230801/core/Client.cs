@@ -922,6 +922,122 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         }
 
         /**
+         * @summary 从链接中提取文档内容
+         *
+         * @param tmpReq DocumentExtractionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DocumentExtractionResponse
+         */
+        public DocumentExtractionResponse DocumentExtractionWithOptions(DocumentExtractionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DocumentExtractionShrinkRequest request = new DocumentExtractionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Urls))
+            {
+                request.UrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Urls, "Urls", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlsShrink))
+            {
+                body["Urls"] = request.UrlsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DocumentExtraction",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DocumentExtractionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 从链接中提取文档内容
+         *
+         * @param tmpReq DocumentExtractionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DocumentExtractionResponse
+         */
+        public async Task<DocumentExtractionResponse> DocumentExtractionWithOptionsAsync(DocumentExtractionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DocumentExtractionShrinkRequest request = new DocumentExtractionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Urls))
+            {
+                request.UrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Urls, "Urls", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlsShrink))
+            {
+                body["Urls"] = request.UrlsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DocumentExtraction",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DocumentExtractionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 从链接中提取文档内容
+         *
+         * @param request DocumentExtractionRequest
+         * @return DocumentExtractionResponse
+         */
+        public DocumentExtractionResponse DocumentExtraction(DocumentExtractionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DocumentExtractionWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 从链接中提取文档内容
+         *
+         * @param request DocumentExtractionRequest
+         * @return DocumentExtractionResponse
+         */
+        public async Task<DocumentExtractionResponse> DocumentExtractionAsync(DocumentExtractionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DocumentExtractionWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 文档管理-导出。
          *
          * @param request ExportGeneratedContentRequest
