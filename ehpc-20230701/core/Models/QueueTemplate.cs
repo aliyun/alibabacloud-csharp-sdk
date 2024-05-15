@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
         [Validation(Required=false)]
         public int? MinCount { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

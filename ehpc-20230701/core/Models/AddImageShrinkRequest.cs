@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("ImageVersion")]
+        [Validation(Required=false)]
+        public string ImageVersion { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -24,10 +31,6 @@ namespace AlibabaCloud.SDK.EHPC20230701.Models
         [NameInMap("VMImageSpec")]
         [Validation(Required=false)]
         public string VMImageSpecShrink { get; set; }
-
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
 
     }
 
