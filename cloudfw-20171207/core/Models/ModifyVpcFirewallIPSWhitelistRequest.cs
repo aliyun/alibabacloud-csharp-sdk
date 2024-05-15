@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **1**: user-defined
         /// *   **2**: address book
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListType")]
         [Validation(Required=false)]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The instance ID of the VPC firewall.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]
@@ -55,6 +59,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **1**: destination
         /// *   **2**: source
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WhiteType")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// The ID of the address book.
         /// 
         /// To delete the address book, you must provide the ID of the address book. You can call the DescribeAddressBook operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupUuid")]
         [Validation(Required=false)]

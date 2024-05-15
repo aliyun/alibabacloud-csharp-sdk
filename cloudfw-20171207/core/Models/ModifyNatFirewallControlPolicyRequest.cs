@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **accept**: allows the traffic.
         /// *   **drop**: denies the traffic.
         /// *   **log**: monitors the traffic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclAction")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// The UUID of the access control policy.
         /// 
         /// To modify the configurations of an access control policy, you must provide the UUID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclUuid")]
         [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// The description of the access control policy. Fuzzy match is supported.
         /// 
         /// > If you do not specify this parameter, the descriptions of all policies are queried.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -76,8 +82,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   If **DestinationType** is set to net, the value of **Destination** is a CIDR block. Example: 1.2.3.4/24
         /// *   If **DestinationType** is set to group, the value of **Destination** is an address book. Example: db_group
-        /// *   If **DestinationType** is set to domain, the value of **Destination** is a domain name. Example: \*.aliyuncs.com
-        /// *   If **DestinationType** is set to location, the value of **Destination** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"]
+        /// *   If **DestinationType** is set to domain, the value of **Destination** is a domain name. Example: \\*.aliyuncs.com
+        /// *   If **DestinationType** is set to location, the value of **Destination** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: ["BJ11", "ZB"]
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Destination")]
         [Validation(Required=false)]
@@ -89,7 +97,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **net**: CIDR block
         /// *   **group**: address book
         /// *   **domain**: domain name
-        /// *   **location**
+        /// *   **location**: destination location
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
@@ -105,7 +115,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:
+        /// The domain name resolution method of the access control policy. Valid values:
         /// 
         /// *   **0**: Fully qualified domain name (FQDN)-based resolution
         /// *   **1**: Domain Name System (DNS)-based dynamic resolution
@@ -136,6 +146,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The ID of the NAT gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
@@ -150,6 +162,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **ICMP**
         /// 
         /// > The value **ANY** indicates all types of protocols.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Proto")]
         [Validation(Required=false)]
@@ -168,12 +182,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The days of a week or of a month on which the access control policy takes effect.
         /// 
-        /// *   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: \[].
-        /// *   If RepeatType is set to Weekly, RepeatDays must be specified. Example: \[0, 6].
+        /// *   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: [].
+        /// *   If RepeatType is set to Weekly, RepeatDays must be specified. Example: [0, 6].
         /// 
         /// >  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.
         /// 
-        /// *   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: \[1, 31].
+        /// *   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: [1, 31].
         /// 
         /// >  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.
         /// </summary>
@@ -217,6 +231,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   If **SourceType** is set to `net`, the value of this parameter is a CIDR block. Example: 10.2.XX.XX/24.
         /// *   If **SourceType** is set to `group`, the value of this parameter is an address book name. Example: db_group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
@@ -227,6 +243,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **net**: CIDR block
         /// *   **group**: address book
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]

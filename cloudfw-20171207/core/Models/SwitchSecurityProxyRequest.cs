@@ -8,24 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class BatchDeleteVpcFirewallControlPolicyRequest : TeaModel {
-        /// <summary>
-        /// The UUIDs of access control policies.
-        /// 
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("AclUuidList")]
+    public class SwitchSecurityProxyRequest : TeaModel {
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public List<string> AclUuidList { get; set; }
+        public string Lang { get; set; }
 
         /// <summary>
-        /// The instance ID of the VPC firewall.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("VpcFirewallId")]
+        [NameInMap("ProxyId")]
         [Validation(Required=false)]
-        public string VpcFirewallId { get; set; }
+        public string ProxyId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("Switch")]
+        [Validation(Required=false)]
+        public string Switch { get; set; }
 
     }
 

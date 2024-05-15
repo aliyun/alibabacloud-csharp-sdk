@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
     public class AddInstanceMembersRequest : TeaModel {
         /// <summary>
         /// The members that you want to add to Cloud Firewall.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// The UID of member that you want to add to Cloud Firewall.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("MemberUid")]
             [Validation(Required=false)]

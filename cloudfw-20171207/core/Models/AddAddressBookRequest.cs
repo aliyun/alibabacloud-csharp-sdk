@@ -37,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The description of the address book.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -44,6 +46,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The name of the address book.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
@@ -56,6 +60,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **domain**: domain address book
         /// *   **port**: port address book
         /// *   **tag**: ECS tag-based address book
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupType")]
         [Validation(Required=false)]

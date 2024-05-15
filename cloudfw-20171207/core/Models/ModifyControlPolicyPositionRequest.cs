@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   in: inbound traffic
         /// *   out: outbound traffic
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
@@ -32,7 +34,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The new priority of the IPv4 access control policy. You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.
         /// 
-        /// >  The new priority cannot exceed the priority range of the IPv4 access control policy. Otherwise, an error occurs when you call this operation. Before you call this operation, we recommend that you use the [DescribePolicyPriorUsed](~~138862~~) operation to query the priority range of the IPv4 access control policy in the specified direction.
+        /// >  The new priority cannot exceed the priority range of the IPv4 access control policy. Otherwise, an error occurs when you call this operation. Before you call this operation, we recommend that you use the [DescribePolicyPriorUsed](https://help.aliyun.com/document_detail/138862.html) operation to query the priority range of the IPv4 access control policy in the specified direction.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewOrder")]
         [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The original priority of the IPv4 access control policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OldOrder")]
         [Validation(Required=false)]

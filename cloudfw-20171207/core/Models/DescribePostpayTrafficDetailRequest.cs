@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -59,6 +61,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -69,6 +73,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **EIP_TRAFFIC**: traffic for the Internet firewall
         /// *   **NatGateway_TRAFFIC**: traffic for the NAT firewall
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficType")]
         [Validation(Required=false)]

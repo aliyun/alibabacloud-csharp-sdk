@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
     public class DescribeAssetListRequest : TeaModel {
         /// <summary>
         /// The page number. Valid values: 1 to 50.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -56,6 +58,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The number of entries per page. Valid values: 1 to 50.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -64,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The region ID of your Cloud Firewall.
         /// 
-        /// > For more information about the regions, see [Supported regions](~~195657~~).
+        /// > For more information about the regions, see [Supported regions](https://help.aliyun.com/document_detail/195657.html).
         /// </summary>
         [NameInMap("RegionNo")]
         [Validation(Required=false)]

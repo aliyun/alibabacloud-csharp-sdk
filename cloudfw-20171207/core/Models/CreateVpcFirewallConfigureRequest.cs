@@ -13,7 +13,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// The status of the VPC firewall after you create the firewall. Valid values:
         /// 
         /// *   **open**: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.
-        /// *   **close**: After you create the VPC firewall, the VPC firewall is disabled. To enable the firewall, you can call the [ModifyVpcFirewallSwitchStatus](~~342935~~) operation.
+        /// *   **close**: After you create the VPC firewall, the VPC firewall is disabled. To enable the firewall, you can call the [ModifyVpcFirewallSwitchStatus](https://help.aliyun.com/document_detail/342935.html) operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FirewallSwitch")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **RouteTableId**: the ID of the route table for the local VPC.
         /// *   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the local VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the local VPC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LocalVpcCidrTableList")]
         [Validation(Required=false)]
@@ -41,6 +45,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The ID of the local VPC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LocalVpcId")]
         [Validation(Required=false)]
@@ -49,7 +55,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The region ID of the local VPC.
         /// 
-        /// >  For more information about the regions in which Cloud Firewall is available, see [Supported regions](~~195657~~).
+        /// >  For more information about the regions in which Cloud Firewall is available, see [Supported regions](https://help.aliyun.com/document_detail/195657.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LocalVpcRegion")]
         [Validation(Required=false)]
@@ -67,6 +75,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **RouteTableId**: the ID of the route table for the peer VPC.
         /// *   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the peer VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the peer VPC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PeerVpcCidrTableList")]
         [Validation(Required=false)]
@@ -74,6 +84,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The ID of the peer VPC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PeerVpcId")]
         [Validation(Required=false)]
@@ -82,7 +94,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The region ID of the peer VPC.
         /// 
-        /// >  For more information about Cloud Firewall supported regions, see [Supported regions](~~195657~~).
+        /// >  For more information about Cloud Firewall supported regions, see [Supported regions](https://help.aliyun.com/document_detail/195657.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PeerVpcRegion")]
         [Validation(Required=false)]
@@ -90,6 +104,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The instance name of the VPC firewall.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcFirewallName")]
         [Validation(Required=false)]

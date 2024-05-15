@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -75,6 +77,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// The number of entries to return on each page.
         /// 
         /// Maximum value: 50.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -132,7 +136,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   If the VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.
         /// *   If the VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.
         /// 
-        /// > You can call the [DescribeVpcFirewallAclGroupList](~~159760~~) operation to query the ID.
+        /// > You can call the [DescribeVpcFirewallAclGroupList](https://help.aliyun.com/document_detail/159760.html) operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]

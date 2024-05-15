@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **accept**: allows the traffic.
         /// *   **drop**: denies the traffic.
         /// *   **log**: monitors the traffic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclAction")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The application types supported by the access control policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationNameList")]
         [Validation(Required=false)]
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The description of the access control policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -87,11 +93,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   If DestinationType is set to domain, the value of this parameter is a domain name.
         /// 
-        ///     Example: \*.aliyuncs.com
+        ///     Example: \\*.aliyuncs.com
         /// 
         /// *   If DestinationType is set to location, the value of this parameter is a location.
         /// 
-        ///     Example: \["BJ11", "ZB"]
+        ///     Example: ["BJ11", "ZB"]
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Destination")]
         [Validation(Required=false)]
@@ -105,6 +113,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **net**: CIDR block
         /// *   **group**: address book
         /// *   **domain**: domain name
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
@@ -114,6 +124,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// The direction of the traffic to which the access control policy applies. Valid values:
         /// 
         /// *   **out**: outbound traffic
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
@@ -162,6 +174,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The ID of the NAT gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
@@ -169,6 +183,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The priority of the access control policy. The priority value starts from 1. A small priority value indicates a high priority.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewOrder")]
         [Validation(Required=false)]
@@ -183,6 +199,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   TCP
         /// *   UDP
         /// *   ICMP
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Proto")]
         [Validation(Required=false)]
@@ -201,12 +219,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The days of a week or of a month on which the access control policy takes effect.
         /// 
-        /// *   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: \[].
-        /// *   If RepeatType is set to Weekly, RepeatDays must be specified. Example: \[0, 6].
+        /// *   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: [].
+        /// *   If RepeatType is set to Weekly, RepeatDays must be specified. Example: [0, 6].
         /// 
         /// >  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.
         /// 
-        /// *   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: \[1, 31].
+        /// *   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: [1, 31].
         /// 
         /// >  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.
         /// </summary>
@@ -257,6 +275,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   If **SourceType** is set to `group`, the value of this parameter must be an address book name.
         /// 
         ///     Example: db_group
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
@@ -269,6 +289,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **net**: source CIDR block
         /// *   **group**: source address book
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]

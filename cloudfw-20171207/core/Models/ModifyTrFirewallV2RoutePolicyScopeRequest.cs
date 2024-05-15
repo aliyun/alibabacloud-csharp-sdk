@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FirewallId")]
         [Validation(Required=false)]
         public string FirewallId { get; set; }
@@ -49,6 +52,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TrFirewallRoutePolicyId")]
         [Validation(Required=false)]
         public string TrFirewallRoutePolicyId { get; set; }

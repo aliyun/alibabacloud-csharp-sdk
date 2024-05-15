@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
     public class DescribeUserAssetIPTrafficInfoRequest : TeaModel {
         /// <summary>
         /// The IP address of the asset.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AssetIP")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficTime")]
         [Validation(Required=false)]

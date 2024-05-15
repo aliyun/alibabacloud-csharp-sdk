@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
     public class ResetNatFirewallRuleHitCountRequest : TeaModel {
         /// <summary>
         /// The UUID of the access control policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclUuid")]
         [Validation(Required=false)]

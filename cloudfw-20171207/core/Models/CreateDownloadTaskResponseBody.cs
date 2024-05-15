@@ -19,11 +19,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The status of the task. Valid values:
         /// 
-        /// finish: You can query the task to obtain the download link of the file.
+        /// finish: The task finished. You can query the task to obtain the download link of the file.
         /// 
-        /// start
+        /// start: The task start.
         /// 
-        /// error
+        /// error: An error occurred.
         /// 
         /// expire: The task file is invalid and cannot be downloaded.
         /// </summary>

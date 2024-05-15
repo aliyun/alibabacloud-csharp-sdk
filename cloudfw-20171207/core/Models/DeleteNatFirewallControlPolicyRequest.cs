@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// The UUID of the access control policy.
         /// 
         /// To delete an access control policy, you must provide the ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclUuid")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// Valid values:
         /// 
         /// *   **out**: outbound traffic
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
@@ -41,6 +45,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The ID of the NAT gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]

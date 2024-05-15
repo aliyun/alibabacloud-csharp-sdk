@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **open**: yes
         /// *   **close**: no
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FirewallSwitch")]
         [Validation(Required=false)]
@@ -39,7 +41,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The instance ID of the VPC firewall.
         /// 
-        /// > You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.
+        /// > You can call the [DescribeVpcFirewallList](https://help.aliyun.com/document_detail/342932.html) operation to query the instance IDs of VPC firewalls.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]

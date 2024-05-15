@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// The ID of the access control policy. 
         /// 
         /// To delete an access control policy, you must provide the ID of the policy. You can call the **DescribeVpcFirewallControlPolicy** operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclUuid")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// - If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall.  
         /// 
         /// Example: vfw-a42bbb7b887148c9****
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]

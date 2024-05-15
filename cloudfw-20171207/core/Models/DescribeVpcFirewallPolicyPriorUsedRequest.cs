@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// - If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall instance.  
         /// 
         /// Example: vfw-a42bbb7b887148c9****
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]

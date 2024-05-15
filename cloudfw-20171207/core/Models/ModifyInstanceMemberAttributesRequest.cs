@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
     public class ModifyInstanceMemberAttributesRequest : TeaModel {
         /// <summary>
         /// The members that to be modified.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public class ModifyInstanceMemberAttributesRequestMembers : TeaModel {
             /// <summary>
             /// The remarks of the member in Cloud Firewall.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("MemberDesc")]
             [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// The UID of the member in Cloud Firewall.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("MemberUid")]
             [Validation(Required=false)]

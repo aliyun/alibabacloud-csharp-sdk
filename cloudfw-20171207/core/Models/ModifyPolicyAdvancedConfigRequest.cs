@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **on**: enables the strict mode.
         /// *   **off**: disables the strict mode.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InternetSwitch")]
         [Validation(Required=false)]

@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string AiRules { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BasicRules")]
         [Validation(Required=false)]
         public string BasicRules { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CtiRules")]
         [Validation(Required=false)]
         public string CtiRules { get; set; }
@@ -41,6 +47,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string RuleClass { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RunMode")]
         [Validation(Required=false)]
         public string RunMode { get; set; }

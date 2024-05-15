@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The region ID of the VPC.
         /// 
-        /// > For more information about the regions, see [Supported regions](~~195657~~).
+        /// > For more information about the regions, see [Supported regions](https://help.aliyun.com/document_detail/195657.html).
         /// </summary>
         [NameInMap("RegionNo")]
         [Validation(Required=false)]

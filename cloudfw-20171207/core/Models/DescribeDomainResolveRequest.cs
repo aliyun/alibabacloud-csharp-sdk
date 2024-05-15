@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
     public class DescribeDomainResolveRequest : TeaModel {
         /// <summary>
         /// The domain name whose DNS record you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]

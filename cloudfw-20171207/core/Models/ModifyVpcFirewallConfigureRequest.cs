@@ -25,7 +25,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **RouteTableId**: the ID of the route table for the local VPC.
         /// *   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the local VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the local VPC.
         /// 
-        /// > You can call the [DescribeVpcFirewallDetail](~~342892~~) operation to query the CIDR blocks of local VPCs for VPC firewalls.
+        /// > You can call the [DescribeVpcFirewallDetail](https://help.aliyun.com/document_detail/342892.html) operation to query the CIDR blocks of local VPCs for VPC firewalls.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LocalVpcCidrTableList")]
         [Validation(Required=false)]
@@ -44,7 +46,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **RouteTableId**: the ID of the route table for the peer VPC.
         /// *   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the peer VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the peer VPC.
         /// 
-        /// > You can call the [DescribeVpcFirewallDetail](~~342892~~) operation to query the CIDR blocks of peer VPCs for VPC firewalls.
+        /// > You can call the [DescribeVpcFirewallDetail](https://help.aliyun.com/document_detail/342892.html) operation to query the CIDR blocks of peer VPCs for VPC firewalls.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PeerVpcCidrTableList")]
         [Validation(Required=false)]
@@ -53,7 +57,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The instance ID of the VPC firewall.
         /// 
-        /// > You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.
+        /// > You can call the [DescribeVpcFirewallList](https://help.aliyun.com/document_detail/342932.html) operation to query the instance IDs of VPC firewalls.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]
@@ -61,6 +67,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The instance name of the VPC firewall.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcFirewallName")]
         [Validation(Required=false)]

@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// The type of the risk events.\
+        /// The type of the risk events.\\
         /// Set the value to **session**, which indicates intrusion events.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataType")]
         [Validation(Required=false)]
@@ -96,6 +98,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -210,6 +214,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

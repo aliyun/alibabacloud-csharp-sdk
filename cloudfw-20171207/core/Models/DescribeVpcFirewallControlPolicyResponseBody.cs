@@ -225,12 +225,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The days of a week or of a month on which the access control policy takes effect.
             /// 
-            /// *   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: \[].
-            /// *   If RepeatType is set to Weekly, RepeatDays must be specified. Example: \[0, 6].
+            /// *   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: [].
+            /// *   If RepeatType is set to Weekly, RepeatDays must be specified. Example: [0, 6].
             /// 
             /// >  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.
             /// 
-            /// *   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: \[1, 31].
+            /// *   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: [1, 31].
             /// 
             /// >  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.
             /// </summary>

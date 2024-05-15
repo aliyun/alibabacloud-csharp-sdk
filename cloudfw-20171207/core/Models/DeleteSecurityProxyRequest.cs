@@ -8,15 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class DeleteInstanceMembersRequest : TeaModel {
+    public class DeleteSecurityProxyRequest : TeaModel {
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         /// <summary>
-        /// The unique identifiers (UID) of members that you want to remove from Cloud Firewall.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("MemberUids")]
+        [NameInMap("ProxyId")]
         [Validation(Required=false)]
-        public List<long?> MemberUids { get; set; }
+        public string ProxyId { get; set; }
 
     }
 

@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// - **accept**: allows the traffic.
         /// - **drop**: blocks the traffic.
         /// - **log**: monitors the traffic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclAction")]
         [Validation(Required=false)]
@@ -52,6 +54,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The description of the access control policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -91,6 +95,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// - If **DestinationType** is set to `net`, the value of **Destination** must be a CIDR block.
         /// - If **DestinationType** is set to `group`, the value of **Destination** must be an address book.
         /// - If **DestinationType** is set to `domain`, the value of **Destination** must be a domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Destination")]
         [Validation(Required=false)]
@@ -102,6 +108,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// - **net**: CIDR block
         /// - **group**: address book
         /// - **domain**: domain name
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
@@ -137,6 +145,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// The priority of the access control policy. 
         /// 
         /// The priority value starts from 1. A smaller priority value indicates a higher priority.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewOrder")]
         [Validation(Required=false)]
@@ -149,6 +159,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// - **TCP**
         /// - **UDP**
         /// - **ICMP**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Proto")]
         [Validation(Required=false)]
@@ -167,12 +179,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The days of a week or of a month on which the access control policy takes effect.
         /// 
-        /// *   If you set RepeatType to `Permanent`, `None`, or `Daily`, leave this parameter empty. Example: \[].
-        /// *   If you set RepeatType to Weekly, you must specify this parameter. Example: \[0, 6].
+        /// *   If you set RepeatType to `Permanent`, `None`, or `Daily`, leave this parameter empty. Example: [].
+        /// *   If you set RepeatType to Weekly, you must specify this parameter. Example: [0, 6].
         /// 
         /// >  If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.
         /// 
-        /// *   If you set RepeatType to `Monthly`, you must specify this parameter. Example: \[1, 31].
+        /// *   If you set RepeatType to `Monthly`, you must specify this parameter. Example: [1, 31].
         /// 
         /// >  If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.
         /// </summary>
@@ -216,6 +228,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// - If SourceType is set to `net`, the value of Source must be a CIDR block.
         /// - If SourceType is set to `group`, the value of Source must be an address book.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
@@ -226,6 +240,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// - **net**: CIDR block
         /// - **group**: address book
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
@@ -247,6 +263,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// - If a VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.
         /// 
         /// >  You can call the [DescribeVpcFirewallAclGroupList](https://www.alibabacloud.com/help/en/cloud-firewall/latest/describevpcfirewallaclgrouplist) operation to query the IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]

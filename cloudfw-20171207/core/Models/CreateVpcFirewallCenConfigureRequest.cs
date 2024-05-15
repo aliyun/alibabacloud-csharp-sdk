@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
     public class CreateVpcFirewallCenConfigureRequest : TeaModel {
         /// <summary>
         /// The ID of the CEN instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -20,7 +22,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// Specifies whether to enable the VPC firewall. Valid values:
         /// 
         /// *   **open**: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.
-        /// *   **close**: After you create the VPC firewall, the VPC firewall is disabled. You can call the [ModifyVpcFirewallCenSwitchStatus](~~345780~~) operation to manually enable the VPC firewall.
+        /// *   **close**: After you create the VPC firewall, the VPC firewall is disabled. You can call the [ModifyVpcFirewallCenSwitchStatus](https://help.aliyun.com/document_detail/345780.html) operation to manually enable the VPC firewall.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FirewallSwitch")]
         [Validation(Required=false)]
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// If you do not specify a value, a zone is automatically assigned for the vSwitch.
         /// 
-        /// >  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region. For more information about zones that are supported by each region, see [Query zones](~~36064~~).
+        /// >  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region. For more information about zones that are supported by each region, see [Query zones](https://help.aliyun.com/document_detail/36064.html).
         /// </summary>
         [NameInMap("FirewallVpcZoneId")]
         [Validation(Required=false)]
@@ -78,6 +82,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The ID of the VPC for which you want to create the VPC firewall.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkInstanceId")]
         [Validation(Required=false)]
@@ -92,6 +98,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// The instance name of the VPC firewall.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcFirewallName")]
         [Validation(Required=false)]
@@ -100,7 +108,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The ID of the region to which the VPC belongs.
         /// 
-        /// > For more information about the regions, see [Supported regions](~~195657~~).
+        /// > For more information about the regions, see [Supported regions](https://help.aliyun.com/document_detail/195657.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcRegion")]
         [Validation(Required=false)]

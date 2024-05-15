@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// 
             /// *   If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.
             /// 
-            ///     Example: cen-ervw0g12b5jbw\*\*\*\*
+            ///     Example: cen-ervw0g12b5jbw\\*\\*\\*\\*
             /// 
             /// *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.
             /// 
-            ///     Example: vfw-a42bbb7b887148c9\*\*\*\*
+            ///     Example: vfw-a42bbb7b887148c9\\*\\*\\*\\*
             /// </summary>
             [NameInMap("AclGroupId")]
             [Validation(Required=false)]
