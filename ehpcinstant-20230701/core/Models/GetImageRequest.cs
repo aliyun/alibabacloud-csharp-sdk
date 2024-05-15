@@ -9,12 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class GetImageRequest : TeaModel {
+        [NameInMap("ImageCategory")]
+        [Validation(Required=false)]
+        public string ImageCategory { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
+
+        [NameInMap("ImageType")]
+        [Validation(Required=false)]
+        public string ImageType { get; set; }
 
     }
 

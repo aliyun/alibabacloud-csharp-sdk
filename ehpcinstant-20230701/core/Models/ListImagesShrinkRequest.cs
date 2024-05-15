@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListImagesShrinkRequest : TeaModel {
+        [NameInMap("ImageCategory")]
+        [Validation(Required=false)]
+        public string ImageCategory { get; set; }
+
         [NameInMap("ImageIds")]
         [Validation(Required=false)]
         public string ImageIdsShrink { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [NameInMap("ImageNames")]
         [Validation(Required=false)]
         public string ImageNamesShrink { get; set; }
+
+        [NameInMap("ImageType")]
+        [Validation(Required=false)]
+        public string ImageType { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

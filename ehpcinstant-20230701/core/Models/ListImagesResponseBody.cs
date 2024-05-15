@@ -13,6 +13,13 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public List<ListImagesResponseBodyImages> Images { get; set; }
         public class ListImagesResponseBodyImages : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("AppId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }

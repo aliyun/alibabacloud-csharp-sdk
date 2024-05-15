@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     [Validation(Required=false)]
                     public CreateJobRequestTasksTaskSpecTaskExecutorContainer Container { get; set; }
                     public class CreateJobRequestTasksTaskSpecTaskExecutorContainer : TeaModel {
+                        [NameInMap("AppId")]
+                        [Validation(Required=false)]
+                        public string AppId { get; set; }
+
                         [NameInMap("Command")]
                         [Validation(Required=false)]
                         public List<string> Command { get; set; }
@@ -157,6 +161,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     [Validation(Required=false)]
                     public CreateJobRequestTasksTaskSpecTaskExecutorVM VM { get; set; }
                     public class CreateJobRequestTasksTaskSpecTaskExecutorVM : TeaModel {
+                        [NameInMap("AppId")]
+                        [Validation(Required=false)]
+                        public string AppId { get; set; }
+
                         /// <summary>
                         /// This parameter is required.
                         /// </summary>

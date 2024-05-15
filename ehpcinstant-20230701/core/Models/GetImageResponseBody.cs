@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public GetImageResponseBodyImage Image { get; set; }
         public class GetImageResponseBodyImage : TeaModel {
+            [NameInMap("AppId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
+
             [NameInMap("ContainerImageSpec")]
             [Validation(Required=false)]
             public GetImageResponseBodyImageContainerImageSpec ContainerImageSpec { get; set; }
@@ -75,6 +79,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [NameInMap("Size")]
             [Validation(Required=false)]
             public string Size { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
             [NameInMap("VMImageSpec")]
             [Validation(Required=false)]

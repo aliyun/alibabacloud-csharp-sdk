@@ -696,9 +696,17 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCategory))
+            {
+                query["ImageCategory"] = request.ImageCategory;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                query["ImageType"] = request.ImageType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -730,9 +738,17 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCategory))
+            {
+                query["ImageCategory"] = request.ImageCategory;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                query["ImageType"] = request.ImageType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1010,6 +1026,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
                 request.ImageNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageNames, "ImageNames", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCategory))
+            {
+                query["ImageCategory"] = request.ImageCategory;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageIdsShrink))
             {
                 query["ImageIds"] = request.ImageIdsShrink;
@@ -1017,6 +1037,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageNamesShrink))
             {
                 query["ImageNames"] = request.ImageNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                query["ImageType"] = request.ImageType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -1066,6 +1090,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
                 request.ImageNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageNames, "ImageNames", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCategory))
+            {
+                query["ImageCategory"] = request.ImageCategory;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageIdsShrink))
             {
                 query["ImageIds"] = request.ImageIdsShrink;
@@ -1073,6 +1101,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageNamesShrink))
             {
                 query["ImageNames"] = request.ImageNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                query["ImageType"] = request.ImageType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
