@@ -22890,6 +22890,170 @@ namespace AlibabaCloud.SDK.Aliding20230426
         }
 
         /**
+         * @summary 查询预约会议历史会议信息
+         *
+         * @param tmpReq QueryScheduleConferenceInfoRequest
+         * @param tmpHeader QueryScheduleConferenceInfoHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryScheduleConferenceInfoResponse
+         */
+        public QueryScheduleConferenceInfoResponse QueryScheduleConferenceInfoWithOptions(QueryScheduleConferenceInfoRequest tmpReq, QueryScheduleConferenceInfoHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryScheduleConferenceInfoShrinkRequest request = new QueryScheduleConferenceInfoShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            QueryScheduleConferenceInfoShrinkHeaders headers = new QueryScheduleConferenceInfoShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleConferenceId))
+            {
+                body["ScheduleConferenceId"] = request.ScheduleConferenceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryScheduleConferenceInfo",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/queryScheduleConferenceInfo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryScheduleConferenceInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询预约会议历史会议信息
+         *
+         * @param tmpReq QueryScheduleConferenceInfoRequest
+         * @param tmpHeader QueryScheduleConferenceInfoHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryScheduleConferenceInfoResponse
+         */
+        public async Task<QueryScheduleConferenceInfoResponse> QueryScheduleConferenceInfoWithOptionsAsync(QueryScheduleConferenceInfoRequest tmpReq, QueryScheduleConferenceInfoHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryScheduleConferenceInfoShrinkRequest request = new QueryScheduleConferenceInfoShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            QueryScheduleConferenceInfoShrinkHeaders headers = new QueryScheduleConferenceInfoShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleConferenceId))
+            {
+                body["ScheduleConferenceId"] = request.ScheduleConferenceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryScheduleConferenceInfo",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/queryScheduleConferenceInfo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryScheduleConferenceInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询预约会议历史会议信息
+         *
+         * @param request QueryScheduleConferenceInfoRequest
+         * @return QueryScheduleConferenceInfoResponse
+         */
+        public QueryScheduleConferenceInfoResponse QueryScheduleConferenceInfo(QueryScheduleConferenceInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryScheduleConferenceInfoHeaders headers = new QueryScheduleConferenceInfoHeaders();
+            return QueryScheduleConferenceInfoWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 查询预约会议历史会议信息
+         *
+         * @param request QueryScheduleConferenceInfoRequest
+         * @return QueryScheduleConferenceInfoResponse
+         */
+        public async Task<QueryScheduleConferenceInfoResponse> QueryScheduleConferenceInfoAsync(QueryScheduleConferenceInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryScheduleConferenceInfoHeaders headers = new QueryScheduleConferenceInfoHeaders();
+            return await QueryScheduleConferenceInfoWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary 查询员工勋章列表
          *
          * @param tmpReq QueryUserHonorsRequest
