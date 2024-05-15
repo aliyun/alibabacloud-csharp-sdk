@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
     public class GetInstanceSqlOptimizeStatisticRequest : TeaModel {
         /// <summary>
         /// The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The database instance ID.
         /// 
         /// >  The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

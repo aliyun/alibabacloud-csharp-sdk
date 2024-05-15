@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeCloudbenchTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the stress testing task. You can call the [DescribeCloudBenchTasks](~~230670~~) operation to query the ID.
+        /// The ID of the stress testing task. You can call the [DescribeCloudBenchTasks](https://help.aliyun.com/document_detail/230670.html) operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

@@ -168,6 +168,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public string Engine { get; set; }
 
+                    [NameInMap("FragmentSize")]
+                    [Validation(Required=false)]
+                    public long? FragmentSize { get; set; }
+
                     /// <summary>
                     /// The size of storage occupied by indexes.
                     /// 

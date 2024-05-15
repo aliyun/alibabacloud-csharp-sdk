@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// 
         /// >  The end time must be later than the start time. The interval cannot exceed one day.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("End")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -80,6 +84,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The page number. Pages start from page 1. Default value: 1.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -87,6 +93,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The number of entries per page. Default value: 20.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -124,6 +132,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// 
         /// >  The start time can be up to 90 days earlier than the current time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Start")]
         [Validation(Required=false)]

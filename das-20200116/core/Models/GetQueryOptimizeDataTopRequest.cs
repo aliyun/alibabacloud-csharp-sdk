@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// *   **MySQL**
         /// *   **PolarDBMySQL**
         /// *   **PostgreSQL**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -51,6 +53,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Time")]
         [Validation(Required=false)]
@@ -61,6 +65,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// 
         /// *   **RED**: the best-performing instances
         /// *   **BLACK**: the worst-performing instances
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

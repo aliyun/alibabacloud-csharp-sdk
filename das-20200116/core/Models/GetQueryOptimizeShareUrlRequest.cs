@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// *   **MySQL**: ApsaraDB RDS for MySQL
         /// *   **PolarDBMySQL**: PolarDB for MySQL
         /// *   **PostgreSQL**: ApsaraDB RDS for PostgreSQL
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -118,14 +120,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see [Query governance](~~290038~~).
+        /// The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see [Query governance](https://help.aliyun.com/document_detail/290038.html).
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public string Rules { get; set; }
 
         /// <summary>
-        /// The SQL template IDs. You can call the [GetQueryOptimizeExecErrorStats](~~405261~~) operation to obtain the SQL template IDs.
+        /// The SQL template IDs. You can call the [GetQueryOptimizeExecErrorStats](https://help.aliyun.com/document_detail/405261.html) operation to obtain the SQL template IDs.
         /// </summary>
         [NameInMap("SqlIds")]
         [Validation(Required=false)]
@@ -140,6 +142,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The date to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Time")]
         [Validation(Required=false)]

@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// yyyy-MM-dd\"T\"HH:mm:ss.SSS\"Z\"
+                /// yyyy-MM-dd\\"T\\"HH:mm:ss.SSS\\"Z\\"
                 /// </summary>
                 [NameInMap("ExecuteTime")]
                 [Validation(Required=false)]

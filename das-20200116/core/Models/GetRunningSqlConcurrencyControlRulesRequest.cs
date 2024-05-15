@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The instance ID.
         /// 
         /// >  You must specify this parameter only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

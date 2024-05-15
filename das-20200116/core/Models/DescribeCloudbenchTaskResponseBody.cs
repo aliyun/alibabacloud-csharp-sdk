@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? ArchiveState { get; set; }
 
             /// <summary>
-            /// The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.
+            /// The ID of the backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the ID of the backup set.
             /// </summary>
             [NameInMap("BackupId")]
             [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// The type of the stress testing client. Valid values:
             /// 
-            /// *   **ECS**: indicates that you must create the [DBGateway](~~64905~~).
+            /// *   **ECS**: indicates that you must create the [DBGateway](https://help.aliyun.com/document_detail/64905.html).
             /// *   **DAS_ECS**: indicates that DAS automatically purchases and deploys an ECS instance for stress testing.
             /// </summary>
             [NameInMap("ClientType")]

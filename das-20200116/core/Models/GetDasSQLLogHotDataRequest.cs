@@ -40,13 +40,15 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// 
         /// >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("End")]
         [Validation(Required=false)]
         public long? End { get; set; }
 
         /// <summary>
-        /// The error code of SQL execution. You can call the [GetAsyncErrorRequestStatByCode](~~409804~~) operation to query MySQL error codes in SQL Explorer data.
+        /// The error code of SQL execution. You can call the [GetAsyncErrorRequestStatByCode](https://help.aliyun.com/document_detail/409804.html) operation to query MySQL error codes in SQL Explorer data.
         /// </summary>
         [NameInMap("Fail")]
         [Validation(Required=false)]
@@ -63,6 +65,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The ID of the database instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -201,6 +205,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// 
         /// >  You can query only the data that is generated after the new SQL Explorer and Audit feature is enabled. The start time can be up to seven days earlier than the current time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Start")]
         [Validation(Required=false)]

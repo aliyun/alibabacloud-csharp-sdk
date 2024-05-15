@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The database instance IDs. Separate multiple IDs with commas (,).
         /// 
         /// >  You can specify up to 50 instance IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// *   **0**: The automatic SQL optimization feature is disabled.
         /// *   **1**: **SQL diagnosis and automatic index creation** is specified.
         /// *   **3**: **SQL diagnosis only** is specified.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

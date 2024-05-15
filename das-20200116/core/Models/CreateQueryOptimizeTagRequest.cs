@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// *   **MySQL**: ApsaraDB RDS for MySQL
         /// *   **PolarDBMySQL**: PolarDB for MySQL
         /// *   **PostgreSQL**: ApsaraDB RDS for PostgreSQL
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -31,13 +33,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The SQL template IDs. You can call the [GetQueryOptimizeExecErrorStats](~~405261~~) operation to obtain the SQL template ID. Separate multiple SQL template IDs with commas (,).
+        /// The SQL template IDs. You can call the [GetQueryOptimizeExecErrorStats](https://help.aliyun.com/document_detail/405261.html) operation to obtain the SQL template ID. Separate multiple SQL template IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SqlIds")]
         [Validation(Required=false)]
@@ -48,6 +54,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// 
         /// *   **0**: removes all tags added to the SQL templates that are specified by **SqlIds** and leaves **Tags** empty.
         /// *   **1**: adds the tags specified by **Tags** to the SQL templates that are specified by **SqlIds**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -60,6 +68,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// *   **DAS_NOT_IMPORTANT**: The SQL template is unimportant.
         /// *   **USER_IGNORE**: The scheduling of the SQL template does not need to be optimized.
         /// *   **DAS_IN_PLAN**: The scheduling of the SQL template needs to be optimized.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

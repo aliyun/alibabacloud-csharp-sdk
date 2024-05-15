@@ -11,13 +11,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
     public class GetRequestDiagnosisResultRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The unique ID of the diagnostics task. You can call the [CreateRequestDiagnosis](~~341609~~) operation to query the diagnostics task ID.
+        /// The unique ID of the diagnostics task. You can call the [CreateRequestDiagnosis](https://help.aliyun.com/document_detail/341609.html) operation to query the diagnostics task ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]

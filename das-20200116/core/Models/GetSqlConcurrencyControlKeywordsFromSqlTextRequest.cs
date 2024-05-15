@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The SQL statement based on which a throttling keyword string is to be generated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SqlText")]
         [Validation(Required=false)]

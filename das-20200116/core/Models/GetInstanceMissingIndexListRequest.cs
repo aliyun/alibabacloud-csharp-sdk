@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The database instance ID.
         /// 
         /// >  Only ApsaraDB RDS for SQL Server instances are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

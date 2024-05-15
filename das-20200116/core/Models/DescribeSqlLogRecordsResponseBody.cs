@@ -124,6 +124,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public long? Scnt { get; set; }
 
+                    /// <summary>
+                    /// SQL ID。
+                    /// </summary>
                     [NameInMap("SqlId")]
                     [Validation(Required=false)]
                     public string SqlId { get; set; }

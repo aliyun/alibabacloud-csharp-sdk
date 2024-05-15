@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
     public class UpdateAutoThrottleRulesAsyncRequest : TeaModel {
         /// <summary>
         /// The duration threshold for triggering automatic SQL throttling. Set this parameter to a positive integer that is greater than or equal to 2. Unit: minutes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AbnormalDuration")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// 
         /// *   Specify an integer that is greater than or equal to 16 when the CPU utilization threshold and the maximum number of active sessions are in the **OR** relationship.
         /// *   Specify an integer that is greater than or equal to 2 when the CPU utilization threshold and the maximum number of active sessions are in the **AND** relationship.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ActiveSessions")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The end time of the throttling window. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AllowThrottleEndTime")]
         [Validation(Required=false)]
@@ -35,6 +41,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The start time of the throttling window. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AllowThrottleStartTime")]
         [Validation(Required=false)]
@@ -47,6 +55,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// 
         /// *   **true**
         /// *   **false**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AutoKillSession")]
         [Validation(Required=false)]
@@ -64,6 +74,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// 
         /// *   **AND**
         /// *   **OR**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CpuSessionRelation")]
         [Validation(Required=false)]
@@ -71,6 +83,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The CPU utilization threshold, in percentages. Valid values: 70 to 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CpuUsage")]
         [Validation(Required=false)]
@@ -79,7 +93,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// The database instance IDs.
         /// 
-        /// >  Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\"Instance ID1\", \"Instance ID2\"]`.
+        /// >  Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\\"Instance ID1\\", \\"Instance ID2\\"]`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -87,6 +103,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The maximum throttling duration. Set this parameter to a positive integer. Unit: minutes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxThrottleTime")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The duration within which the SQL throttling rule takes effect. Unit: seconds.
         /// 
         /// >  The throttling rule takes effect only within this duration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConcurrencyControlTime")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The instance ID.
         /// 
         /// >  You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The maximum number of concurrent SQL statements. Set this parameter to a positive integer.
         /// 
         /// >  When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxConcurrency")]
         [Validation(Required=false)]
@@ -47,6 +53,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The keywords that are used to identify the SQL statements that need to be throttled.
         /// 
         /// >  If you specify multiple SQL keywords, separate them with tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SqlKeywords")]
         [Validation(Required=false)]
@@ -58,6 +66,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// *   **SELECT**
         /// *   **UPDATE**
         /// *   **DELETE**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SqlType")]
         [Validation(Required=false)]

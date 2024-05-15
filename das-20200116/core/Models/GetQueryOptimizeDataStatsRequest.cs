@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// *   **MySQL**
         /// *   **PolarDBMySQL**
         /// *   **PostgreSQL**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -118,14 +120,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see [Query governance](~~290038~~).
+        /// The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see [Query governance](https://help.aliyun.com/document_detail/290038.html).
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public string Rules { get; set; }
 
         /// <summary>
-        /// The SQL template ID. You can query the ID of a template by calling the [GetQueryOptimizeExecErrorStats](~~405235~~) operation.
+        /// The SQL template ID. You can query the ID of a template by calling the [GetQueryOptimizeExecErrorStats](https://help.aliyun.com/document_detail/405235.html) operation.
         /// </summary>
         [NameInMap("SqlIds")]
         [Validation(Required=false)]
@@ -140,6 +142,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Time")]
         [Validation(Required=false)]

@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public int? ArchiveState { get; set; }
 
                     /// <summary>
-                    /// The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.
+                    /// The ID of the backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the ID of the backup set.
                     /// </summary>
                     [NameInMap("BackupId")]
                     [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// The specification of the DTS instance.
                     /// 
-                    /// > For more information about the specifications of DTS instances and the test performance of each instance, see [Specifications of data migration instances](~~26606~~).
+                    /// > For more information about the specifications of DTS instances and the test performance of each instance, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html).
                     /// </summary>
                     [NameInMap("DtsJobClass")]
                     [Validation(Required=false)]

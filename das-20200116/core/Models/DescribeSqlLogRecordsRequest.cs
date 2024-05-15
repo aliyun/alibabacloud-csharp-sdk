@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public List<DescribeSqlLogRecordsRequestFilters> Filters { get; set; }
         public class DescribeSqlLogRecordsRequestFilters : TeaModel {
+            /// <summary>
+            /// Parameter filtering
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
@@ -27,6 +30,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

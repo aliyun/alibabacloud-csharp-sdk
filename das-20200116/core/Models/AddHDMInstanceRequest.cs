@@ -48,6 +48,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// *   **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.
         /// 
         /// >  IDC refers to your data center.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceArea")]
         [Validation(Required=false)]

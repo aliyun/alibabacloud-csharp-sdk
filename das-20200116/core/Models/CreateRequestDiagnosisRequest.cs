@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
     public class CreateRequestDiagnosisRequest : TeaModel {
         /// <summary>
         /// The name of the database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Database")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The SQL statement that you want to diagnose.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Sql")]
         [Validation(Required=false)]

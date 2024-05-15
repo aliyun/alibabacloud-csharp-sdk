@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
     public class CreateKillInstanceSessionTaskRequest : TeaModel {
         /// <summary>
         /// The database account that has the permissions to terminate sessions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbUser")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The password of the database account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbUserPassword")]
         [Validation(Required=false)]
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// The account whose sessions do not need to be terminated.
         /// 
-        /// >  Set this parameter to a JSON array. Separate database accounts with commas (,). Example: \[\"Database account 1\",\"Database account 2\"].
+        /// >  Set this parameter to a JSON array. Separate database accounts with commas (,). Example: [\\"Database account 1\\",\\"Database account 2\\"].
         /// </summary>
         [NameInMap("IgnoredUsers")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -45,7 +51,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// *   **true**
         /// *   **false**
         /// 
-        /// >  If you set this parameter to **true**, sessions of the accounts that are specified by **IgnoredUsers**, sessions of internal O\&M accounts of Alibaba Cloud, and **Binlog Dump** sessions are not terminated.
+        /// >  If you set this parameter to **true**, sessions of the accounts that are specified by **IgnoredUsers**, sessions of internal O\\&M accounts of Alibaba Cloud, and **Binlog Dump** sessions are not terminated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KillAllSessions")]
         [Validation(Required=false)]
@@ -63,7 +71,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// The IDs of sessions that need to be terminated.
         /// 
-        /// >  Set this parameter to a JSON array. Separate session IDs with commas (,). Example: \[\"Session ID1\",\"Session ID2\"]. If **KillAllSessions** is set to **true**, this parameter does not take effect.
+        /// >  Set this parameter to a JSON array. Separate session IDs with commas (,). Example: [\\"Session ID1\\",\\"Session ID2\\"]. If **KillAllSessions** is set to **true**, this parameter does not take effect.
         /// </summary>
         [NameInMap("SessionIds")]
         [Validation(Required=false)]

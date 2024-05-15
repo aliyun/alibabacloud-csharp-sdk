@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeCloudbenchTaskConfigRequest : TeaModel {
         /// <summary>
-        /// The task ID. You can call the [DescribeCloudBenchTasks](~~230670~~) operation to query the task ID.
+        /// The task ID. You can call the [DescribeCloudBenchTasks](https://help.aliyun.com/document_detail/230670.html) operation to query the task ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

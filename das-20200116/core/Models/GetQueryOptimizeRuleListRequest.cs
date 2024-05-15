@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// *   **MySQL**
         /// *   **PolarDBMySQL**
         /// *   **PostgreSQL**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]

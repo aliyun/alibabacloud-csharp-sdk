@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// 
         /// >  The end time must be later than the start time, but not later than 00:00:00 (UTC+8) on the current day.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("End")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// *   **MySQL**
         /// *   **PolarDBMySQL**
         /// *   **PostgreSQL**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -55,6 +59,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// 
         /// >  You can specify a start time up to two months earlier than the current time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Start")]
         [Validation(Required=false)]

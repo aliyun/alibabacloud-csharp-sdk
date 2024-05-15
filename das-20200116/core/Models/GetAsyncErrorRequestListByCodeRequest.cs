@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? End { get; set; }
 
         /// <summary>
-        /// The error code. You can call the [GetAsyncErrorRequestStatByCode](~~409804~~) operation to query the MySQL error codes that may be generated in the SQL Explorer results of an instance.
+        /// The error code. You can call the [GetAsyncErrorRequestStatByCode](https://help.aliyun.com/document_detail/409804.html) operation to query the MySQL error codes that may be generated in the SQL Explorer results of an instance.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
