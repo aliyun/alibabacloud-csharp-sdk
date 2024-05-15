@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
         [Validation(Required=false)]
         public Job Job { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }

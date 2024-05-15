@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OpenITag20220616.Models
 {
-    public class CreateTemplateRequest : TeaModel {
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
+    public class AppendAllDataToTaskRequest : TeaModel {
         [NameInMap("body")]
         [Validation(Required=false)]
-        public TemplateDTO Body { get; set; }
+        public OpenDatasetProxyAppendDataRequest Body { get; set; }
 
     }
 

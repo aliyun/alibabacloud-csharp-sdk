@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenITag20220616.Models
 {
     public class ExportAnnotationsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OssPath")]
         [Validation(Required=false)]
         public string OssPath { get; set; }

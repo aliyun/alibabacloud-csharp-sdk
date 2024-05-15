@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SourceDatasetId")]
         [Validation(Required=false)]
         public string SourceDatasetId { get; set; }

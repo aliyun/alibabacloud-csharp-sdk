@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenITag20220616.Models
 {
     public class ViewPlugin : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BindField")]
         [Validation(Required=false)]
         public string BindField { get; set; }
@@ -17,10 +20,16 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
         [Validation(Required=false)]
         public string Convertor { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CorsProxy")]
         [Validation(Required=false)]
         public bool? CorsProxy { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DisplayOriImg")]
         [Validation(Required=false)]
         public bool? DisplayOriImg { get; set; }
@@ -41,6 +50,9 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
         [Validation(Required=false)]
         public List<string> RelationQuestionIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

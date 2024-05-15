@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
         [Validation(Required=false)]
         public string Color { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string Label { get; set; }

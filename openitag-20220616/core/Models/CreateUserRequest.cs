@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenITag20220616.Models
 {
     public class CreateUserRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccountNo")]
         [Validation(Required=false)]
         public string AccountNo { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }

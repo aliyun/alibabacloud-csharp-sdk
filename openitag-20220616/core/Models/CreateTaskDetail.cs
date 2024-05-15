@@ -26,10 +26,16 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
         [Validation(Required=false)]
         public bool? AllowAppendData { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AssignConfig")]
         [Validation(Required=false)]
         public TaskAssginConfig AssignConfig { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DatasetProxyRelations")]
         [Validation(Required=false)]
         public List<DatasetProxyConfig> DatasetProxyRelations { get; set; }
@@ -42,6 +48,9 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
         [Validation(Required=false)]
         public List<string> Tags { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
@@ -50,6 +59,9 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
         [Validation(Required=false)]
         public TaskTemplateConfig TaskTemplateConfig { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TaskWorkflow")]
         [Validation(Required=false)]
         public List<CreateTaskDetailTaskWorkflow> TaskWorkflow { get; set; }
@@ -60,10 +72,16 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("UUID")]
         [Validation(Required=false)]
         public string UUID { get; set; }

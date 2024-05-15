@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Exif { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("QuestionConfigs")]
         [Validation(Required=false)]
         public List<QuestionPlugin> QuestionConfigs { get; set; }
@@ -41,10 +44,16 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ViewConfigs")]
         [Validation(Required=false)]
         public TemplateDTOViewConfigs ViewConfigs { get; set; }

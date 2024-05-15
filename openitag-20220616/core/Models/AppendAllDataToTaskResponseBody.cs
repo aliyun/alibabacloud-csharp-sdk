@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OpenITag20220616.Models
 {
-    public class DeleteUserResponseBody : TeaModel {
+    public class AppendAllDataToTaskResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
