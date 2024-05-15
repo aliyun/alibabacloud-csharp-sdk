@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         /// <summary>
         /// The ID of the tag.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TagId")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         /// <summary>
         /// The name of the tag.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]

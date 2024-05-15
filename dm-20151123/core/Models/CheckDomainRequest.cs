@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
     public class CheckDomainRequest : TeaModel {
         /// <summary>
         /// The ID of the domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainId")]
         [Validation(Required=false)]

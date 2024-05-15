@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         /// <summary>
         /// The ID of the recipient list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReceiverId")]
         [Validation(Required=false)]

@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ReceiverId")]
         [Validation(Required=false)]
         public string ReceiverId { get; set; }

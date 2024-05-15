@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DeleteMailAddressRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MailAddressId")]
         [Validation(Required=false)]
         public int? MailAddressId { get; set; }
