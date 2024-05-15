@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string EntityObject { get; set; }
 
             /// <summary>
-            /// All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+            /// All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](https://help.aliyun.com/document_detail/118841.html).
             /// 
             /// For more information about sample requests, see the **"Examples"** section of this topic.
             /// </summary>

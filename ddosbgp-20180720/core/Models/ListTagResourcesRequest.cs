@@ -19,7 +19,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the region where the Anti-DDoS Origin instance resides.
         /// 
-        /// >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The IDs of Anti-DDoS Origin Instances to query.
         /// 
-        /// >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+        /// >  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// The type of the resource to query. Set the value to **INSTANCE**, which indicates instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

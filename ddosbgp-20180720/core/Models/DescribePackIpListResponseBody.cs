@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The HTTP status code of the request.
         /// 
-        /// For more information about status codes, see [Common parameters](~~118841~~).
+        /// For more information about status codes, see [Common parameters](https://help.aliyun.com/document_detail/118841.html).
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -38,6 +38,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [NameInMap("MemberUid")]
             [Validation(Required=false)]
             public string MemberUid { get; set; }
+
+            [NameInMap("NsmExpireAt")]
+            [Validation(Required=false)]
+            public long? NsmExpireAt { get; set; }
+
+            [NameInMap("NsmStartAt")]
+            [Validation(Required=false)]
+            public long? NsmStartAt { get; set; }
 
             [NameInMap("NsmStatus")]
             [Validation(Required=false)]

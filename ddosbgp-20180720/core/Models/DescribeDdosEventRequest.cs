@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
     public class DescribeDdosEventRequest : TeaModel {
         /// <summary>
         /// The end time of the DDoS attack event to query. This value is a UNIX timestamp. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -19,7 +21,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the Anti-DDoS Origin instance to query.
         /// 
-        /// >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+        /// >  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// The number of entries to return on each page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -49,7 +57,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the region where the Anti-DDoS Origin instance resides.
         /// 
-        /// >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -66,6 +74,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// The start time of the DDoS attack event to query. This value is a UNIX timestamp. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

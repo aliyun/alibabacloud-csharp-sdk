@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ReleaseDdosOriginInstanceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the on-demand instance.
         /// 
-        /// >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.
+        /// >  You can call the [DescribeOnDemandInstance](https://help.aliyun.com/document_detail/152120.html) operation to query the IDs of all on-demand instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -21,7 +23,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The region ID of the on-demand instance.
         /// 
-        /// >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions supported by Anti-DDoS Origin.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DeleteRdMemberListRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MemberList")]
         [Validation(Required=false)]
         public List<DeleteRdMemberListRequestMemberList> MemberList { get; set; }

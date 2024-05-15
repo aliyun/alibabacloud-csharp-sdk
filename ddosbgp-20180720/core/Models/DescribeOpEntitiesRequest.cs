@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
     public class DescribeOpEntitiesRequest : TeaModel {
         /// <summary>
         /// The operation that you want to perform. Set the value to **DescribeOpEntities**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// The details of the operation log.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the region where the Anti-DDoS Origin instance resides.
         /// 
-        /// >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("OrderDir")]
         [Validation(Required=false)]
@@ -51,6 +55,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// The type of the operation object. The value is fixed as **1**, which indicates Anti-DDoS Origin instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -101,6 +107,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// The sorting method of operation logs. Set the value to **opdate**, which indicates sorting based on the operation time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

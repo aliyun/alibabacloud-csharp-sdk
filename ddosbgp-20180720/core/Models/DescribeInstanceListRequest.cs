@@ -68,6 +68,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -75,6 +77,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// The number of entries to return on each page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -83,7 +87,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the region where the Anti-DDoS Origin instance to query resides.
         /// 
-        /// >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

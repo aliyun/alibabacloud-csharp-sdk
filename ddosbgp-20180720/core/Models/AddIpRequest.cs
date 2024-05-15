@@ -15,7 +15,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the Anti-DDoS Origin Enterprise instance.
         /// 
-        /// >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances.
+        /// >  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin Enterprise instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// *   **ip**: required. The IP address that you want to add. Data type: string.
         /// 
         ///     > The IP address must be the IP address of an asset that belongs to the current Alibaba Cloud account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpList")]
         [Validation(Required=false)]
@@ -35,7 +39,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The region ID of the Anti-DDoS Origin Enterprise instance.
         /// 
-        /// >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions supported by Anti-DDoS Origin.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -44,7 +48,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the resource group to which the Anti-DDoS Origin Enterprise instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
         /// 
-        /// For more information about resource groups, see [Create a resource group](~~94485~~).
+        /// For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

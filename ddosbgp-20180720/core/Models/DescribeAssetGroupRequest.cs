@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// The region ID of the asset.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -26,7 +28,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the region in which the instance resides.
         /// 
-        /// >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -44,6 +46,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// 
         /// *   **waf**: WAF instance
         /// *   **ga**: Global Accelerator (GA) instance
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

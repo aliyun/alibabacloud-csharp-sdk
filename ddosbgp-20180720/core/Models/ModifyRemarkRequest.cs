@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the Anti-DDoS Origin instance for which you want to add remarks.
         /// 
-        /// >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+        /// >  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -21,7 +23,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the region where the Anti-DDoS Origin instance resides.
         /// 
-        /// >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// The remarks for the Anti-DDoS Origin instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

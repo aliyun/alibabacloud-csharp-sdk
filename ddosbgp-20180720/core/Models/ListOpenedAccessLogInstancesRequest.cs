@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.
         /// 
-        /// For more information about resource groups, see [Create a resource group](~~94485~~).
+        /// For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

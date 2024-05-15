@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// The number of protected public IP addresses for which blackhole filtering is triggered.
             /// 
-            /// >  You can call the [DeleteBlackhole](~~118692~~) operation to deactivate blackhole filtering for a protected IP address.
+            /// >  You can call the [DeleteBlackhole](https://help.aliyun.com/document_detail/118692.html) operation to deactivate blackhole filtering for a protected IP address.
             /// </summary>
             [NameInMap("BlackholdingCount")]
             [Validation(Required=false)]

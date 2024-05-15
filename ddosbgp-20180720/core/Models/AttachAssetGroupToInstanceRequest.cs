@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
     public class AttachAssetGroupToInstanceRequest : TeaModel {
         /// <summary>
         /// The information about the asset to be associated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AssetGroupList")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
             /// <summary>
             /// The ID of the asset that you want to add. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
             /// <summary>
             /// The region ID of the asset.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -39,6 +45,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
             /// <summary>
             /// The type of the asset.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -49,7 +57,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the instance to query.
         /// 
-        /// >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.
+        /// >  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -58,7 +68,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// The ID of the region in which the instance resides.
         /// 
-        /// >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

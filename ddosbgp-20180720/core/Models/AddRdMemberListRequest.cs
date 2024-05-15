@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class AddRdMemberListRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MemberList")]
         [Validation(Required=false)]
         public List<AddRdMemberListRequestMemberList> MemberList { get; set; }
