@@ -2,6 +2,10 @@
 - Support API DocumentExtraction.
 
 
+2024-05-15 Version: 1.6.0
+- Support API DocumentExtraction.
+
+
 2024-05-13 Version: 1.5.0
 - Support API DeleteCustomText.
 - Support API GetCustomText.
