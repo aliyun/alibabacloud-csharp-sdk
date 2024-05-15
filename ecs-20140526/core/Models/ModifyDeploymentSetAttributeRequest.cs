@@ -11,13 +11,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class ModifyDeploymentSetAttributeRequest : TeaModel {
         /// <summary>
         /// The ID of the deployment set.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DeploymentSetId")]
         [Validation(Required=false)]
         public string DeploymentSetId { get; set; }
 
         /// <summary>
-        /// The new name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The new name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("DeploymentSetName")]
         [Validation(Required=false)]
@@ -39,7 +41,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the deployment set. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteLaunchTemplateRequest : TeaModel {
         /// <summary>
-        /// The ID of the launch template. For more information, see [DescribeLaunchTemplates](~~73759~~).
+        /// The ID of the launch template. For more information, see [DescribeLaunchTemplates](https://help.aliyun.com/document_detail/73759.html).
         /// 
         /// You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.
         /// </summary>
@@ -36,7 +36,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the launch template. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

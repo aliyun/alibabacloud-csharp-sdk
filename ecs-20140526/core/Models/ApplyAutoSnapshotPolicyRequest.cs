@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ID of the automatic snapshot policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("autoSnapshotPolicyId")]
         [Validation(Required=false)]
@@ -30,13 +32,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The IDs of disks. The value is a JSON array that consists of disk IDs. Separate the disk IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("diskIds")]
         [Validation(Required=false)]
         public string DiskIds { get; set; }
 
         /// <summary>
-        /// The region ID of the automatic snapshot policy and the disks. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the automatic snapshot policy and the disks. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]

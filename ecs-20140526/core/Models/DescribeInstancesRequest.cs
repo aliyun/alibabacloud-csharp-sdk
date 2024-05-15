@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: enabled.
         /// 
-        /// >  For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).
+        /// >  For more information about instance metadata, see [Overview of ECS instance metadata](https://help.aliyun.com/document_detail/49122.html).
         /// </summary>
         [NameInMap("HttpEndpoint")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: optional.
         /// 
-        /// >  For more information about modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).
+        /// >  For more information about modes of accessing instance metadata, see [Access mode of instance metadata](https://help.aliyun.com/document_detail/150575.html).
         /// </summary>
         [NameInMap("HttpTokens")]
         [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// The name of the instance. Fuzzy search with the asterisk (\*) wildcard characters is supported.
+        /// The name of the instance. Fuzzy search with the asterisk (\\*) wildcard characters is supported.
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -288,7 +288,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RdmaIpAddresses { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -341,7 +343,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The key of tag N of the instance. Valid values of N: 1 to 20.
             /// 
-            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

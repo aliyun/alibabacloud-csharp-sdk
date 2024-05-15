@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifySecurityGroupRuleRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Ipv6SourceCidrIp { get; set; }
 
         /// <summary>
-        /// You cannot modify this parameter when you modify a security group rule by specifying its ID.\
+        /// You cannot modify this parameter when you modify a security group rule by specifying its ID.\\
         /// You can add a new rule that meets your business requirements and delete the original rule.
         /// </summary>
         [NameInMap("NicType")]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The action of the security group rule that determines whether to allow access. Valid values:
+        /// The action of the security group rule. Valid values:
         /// 
         /// *   accept: allows access.
         /// *   drop: denies access and returns no responses.
@@ -110,14 +110,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The priority of the security group rule. Valid values: 1 to 100.
         /// 
-        /// Default value: 1.
+        /// Default value: 1
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public string Priority { get; set; }
 
         /// <summary>
-        /// The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the security group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -133,13 +135,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The security group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// The security group rule ID.\
+        /// The security group rule ID.\\
         /// This parameter is required when you modify a security group rule based on the security group rule ID.
         /// </summary>
         [NameInMap("SecurityGroupRuleId")]
@@ -198,7 +202,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SourcePortRange { get; set; }
 
         /// <summary>
-        /// The ID of the source prefix list to which you want to control access. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
+        /// The ID of the source prefix list to which you want to control access. You can call the [DescribePrefixLists](https://help.aliyun.com/document_detail/205046.html) operation to query the IDs of available prefix lists.
         /// 
         /// If you specify `SourceCidrIp`, `Ipv6SourceCidrIp`, or `SourceGroupId`, this parameter is ignored.
         /// </summary>

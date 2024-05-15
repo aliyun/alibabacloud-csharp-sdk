@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class DisableActivationRequest : TeaModel {
         /// <summary>
         /// The request ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ActivationId")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The activation code ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

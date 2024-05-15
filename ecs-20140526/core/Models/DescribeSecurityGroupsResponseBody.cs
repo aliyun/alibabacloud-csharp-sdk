@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? AvailableInstanceAmount { get; set; }
 
                 /// <summary>
-                /// The time when the security group was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+                /// The time when the security group was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]

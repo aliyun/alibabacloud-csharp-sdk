@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ID of the disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]

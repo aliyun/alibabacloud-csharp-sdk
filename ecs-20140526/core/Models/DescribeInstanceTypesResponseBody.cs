@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? EniTrunkSupported { get; set; }
 
                 /// <summary>
-                /// The number of ERIs.
+                /// The number of elastic RDMA interfaces (ERIs).
                 /// 
                 /// >  This parameter is in invitational preview and is not publicly available.
                 /// </summary>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? GPUAmount { get; set; }
 
                 /// <summary>
-                /// The amount of GPU memory per GPU. Unit: GiB
+                /// The amount of GPU memory per GPU. Unit: GiB.
                 /// </summary>
                 [NameInMap("GPUMemorySize")]
                 [Validation(Required=false)]
@@ -183,8 +183,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// The level of the instance family. Valid values:
                 /// 
                 /// *   EntryLevel: entry level (shared).
-                /// *   EnterpriseLevel: enterprise level
-                /// *   CreditEntryLevel: credit-based entry level For more information, see [Overview](~~59977~~).
+                /// *   EnterpriseLevel: enterprise level.
+                /// *   CreditEntryLevel: credit-based entry level. For more information, see [Overview](https://help.aliyun.com/document_detail/59977.html).
                 /// </summary>
                 [NameInMap("InstanceFamilyLevel")]
                 [Validation(Required=false)]
@@ -226,17 +226,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? LocalStorageAmount { get; set; }
 
                 /// <summary>
-                /// The capacity of each local disk. Unit: GiB
+                /// The capacity of each local disk attached per instance. Unit: GiB.
                 /// </summary>
                 [NameInMap("LocalStorageCapacity")]
                 [Validation(Required=false)]
                 public long? LocalStorageCapacity { get; set; }
 
                 /// <summary>
-                /// The category of local disks. For more information, see [Local disks](~~63138~~). Valid values:
+                /// The category of local disks. For more information, see [Local disks](https://help.aliyun.com/document_detail/63138.html). Valid values:
                 /// 
-                /// *   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances
-                /// *   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances
+                /// *   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances.
+                /// *   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.
                 /// </summary>
                 [NameInMap("LocalStorageCategory")]
                 [Validation(Required=false)]
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? MaximumQueueNumberPerEni { get; set; }
 
                 /// <summary>
-                /// The memory size. Unit: GiB
+                /// The memory size. Unit: GiB.
                 /// </summary>
                 [NameInMap("MemorySize")]
                 [Validation(Required=false)]
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? NetworkCardQuantity { get; set; }
 
                 /// <summary>
-                /// The information of the network cards.
+                /// The information about the network cards.
                 /// </summary>
                 [NameInMap("NetworkCards")]
                 [Validation(Required=false)]
@@ -320,7 +320,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? PrimaryEniQueueNumber { get; set; }
 
                 /// <summary>
-                /// The maximum number of QPs per ERI.
+                /// The maximum number of QP queues per ERI.
                 /// </summary>
                 [NameInMap("QueuePairNumber")]
                 [Validation(Required=false)]
@@ -333,6 +333,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? SecondaryEniQueueNumber { get; set; }
 
+                /// <summary>
+                /// 规格支持的启动模式。
+                /// </summary>
                 [NameInMap("SupportedBootModes")]
                 [Validation(Required=false)]
                 public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes SupportedBootModes { get; set; }

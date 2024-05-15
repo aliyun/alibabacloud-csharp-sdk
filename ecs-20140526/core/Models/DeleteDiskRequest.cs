@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class DeleteDiskRequest : TeaModel {
         /// <summary>
         /// The ID of the disk that you want to release.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]

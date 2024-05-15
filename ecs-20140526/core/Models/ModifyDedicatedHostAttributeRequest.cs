@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   on: adds the dedicated host to the resource pool for automatic deployment.
         /// *   off: does not add the dedicated host to the resource pool for automatic deployment.
         /// 
-        /// For information about automatic deployment, see [Features](~~118938~~).
+        /// For information about automatic deployment, see [Features](https://help.aliyun.com/document_detail/118938.html).
         /// </summary>
         [NameInMap("AutoPlacement")]
         [Validation(Required=false)]
@@ -73,13 +73,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ID of the dedicated host.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DedicatedHostId")]
         [Validation(Required=false)]
         public string DedicatedHostId { get; set; }
 
         /// <summary>
-        /// The name of the dedicated host. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the dedicated host. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("DedicatedHostName")]
         [Validation(Required=false)]
@@ -101,7 +103,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the dedicated host. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

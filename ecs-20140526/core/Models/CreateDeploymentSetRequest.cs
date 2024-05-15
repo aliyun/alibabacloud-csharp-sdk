@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The name of the deployment set. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).
         /// </summary>
         [NameInMap("DeploymentSetName")]
         [Validation(Required=false)]
@@ -36,16 +36,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// >  This parameter is deprecated.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The deployment domain. Set the value to Default.
-        /// 
-        /// Default: Instances in the deployment set are distributed only within the current zone.
+        /// >  This parameter is deprecated.
         /// </summary>
         [NameInMap("Granularity")]
         [Validation(Required=false)]
@@ -64,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? GroupCount { get; set; }
 
         /// <summary>
-        /// The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// The region ID of the deployment set. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.
         /// </summary>
         [NameInMap("OnUnableToRedeployFailedInstance")]
         [Validation(Required=false)]
@@ -80,6 +78,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// Creates a deployment set in a specific region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -94,9 +94,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The deployment granularity. Set the value to host.
+        /// The deployment strategy. Valid values:
         /// 
-        /// host: Instances in the deployment set are dispersed at the granularity of hosts.
+        /// *   Availability: high availability strategy
+        /// *   AvailabilityGroup: high availability group strategy
+        /// *   LowLatency: low latency strategy
+        /// 
+        /// Default value: Availability.
         /// </summary>
         [NameInMap("Strategy")]
         [Validation(Required=false)]

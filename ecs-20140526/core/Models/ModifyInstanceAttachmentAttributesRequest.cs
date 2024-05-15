@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// *   Open: open private pool. The system matches the instance with open private pools.
             /// *   Target: specified private pool. You must set the `PrivatePoolOptions.Id` parameter to specify the ID of a private pool.
             /// *   None: no private pool. The instance starts normally without using private pools.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("MatchCriteria")]
             [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ID of the instance for which you want to modify the attributes of the private pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -52,7 +56,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the private pool. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the private pool. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

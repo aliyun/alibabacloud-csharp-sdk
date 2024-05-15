@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// The architecture of the image. Valid values:
         /// 
         /// *   i386
-        /// *   x86\_64
+        /// *   x86_64
         /// *   arm64
         /// </summary>
         [NameInMap("Architecture")]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// This parameter is empty by default.
         /// 
-        /// >  For information about image families that are associated with Alibaba Cloud official images, see [Overview of public images](~~108393~~).
+        /// >  For information about image families that are associated with Alibaba Cloud official images, see [Overview of public images](https://help.aliyun.com/document_detail/108393.html).
         /// </summary>
         [NameInMap("ImageFamily")]
         [Validation(Required=false)]
@@ -196,7 +196,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -243,7 +245,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   Available: The image is available.
         /// *   UnAvailable: The image is unavailable.
         /// *   CreateFailed: The image fails to be created.
-        /// *   Deprecated: The image is no longer used.
+        /// *   Deprecated: The image is deprecated.
         /// 
         /// Default value: Available. You can specify multiple values for this parameter. Separate the values with commas (,).
         /// </summary>
@@ -261,7 +263,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The tag N key of the image. Valid values of N: 1 to 20.
             /// 
-            /// Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.
+            /// Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

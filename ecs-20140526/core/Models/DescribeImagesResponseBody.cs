@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// The architecture of the image. Valid values:
                 /// 
                 /// *   i386
-                /// *   x86\_64
+                /// *   x86_64
                 /// *   arm64
                 /// </summary>
                 [NameInMap("Architecture")]

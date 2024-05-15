@@ -29,14 +29,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the destination dedicated host. You can call the [DescribeDedicatedHosts](~~134242~~) operation to query the most recent list of dedicated hosts.
+        /// The ID of the destination dedicated host. You can call the [DescribeDedicatedHosts](https://help.aliyun.com/document_detail/134242.html) operation to query the most recent list of dedicated hosts.
         /// 
         /// When you migrate an instance from a shared host to a dedicated host or between dedicated hosts, take note of the following items:
         /// 
         /// *   To migrate the instance to a specific dedicated host, specify this parameter.
         /// *   To migrate the instance to a system-selected dedicated host, leave this parameter empty and set `Tenancy` to host.
         /// 
-        /// For information about the automatic deployment feature, see [Functions and features](~~118938~~).
+        /// For information about the automatic deployment feature, see [Functions and features](https://help.aliyun.com/document_detail/118938.html).
         /// </summary>
         [NameInMap("DedicatedHostId")]
         [Validation(Required=false)]
@@ -81,15 +81,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The instance type to which the instance is changed. You can call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.
+        /// The instance type to which the instance is changed. You can call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent list of instance types.
         /// 
-        /// You can change the instance type of an instance when you migrate the instance to a dedicated host. The new instance type must match the type of the specified dedicated host. For more information, see [Dedicated host types](~~68564~~).
+        /// You can change the instance type of an instance when you migrate the instance to a dedicated host. The new instance type must match the type of the specified dedicated host. For more information, see [Dedicated host types](https://help.aliyun.com/document_detail/68564.html).
         /// 
         /// *   If you specify this parameter, you must also specify `DedicatedHostId`.
         /// *   You cannot change the instance type of an instance if you use the automatic deployment feature to migrate the instance.
@@ -119,7 +121,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

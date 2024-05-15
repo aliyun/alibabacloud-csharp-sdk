@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// The time zone of the time window.
+            /// The time zone of the time windows.
             /// </summary>
             [NameInMap("TimeZone")]
             [Validation(Required=false)]
@@ -66,8 +66,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The type of items to be delivered. Valid values:
                 /// 
-                /// *   SessionManager: session records
-                /// *   Invocation: task execution records
+                /// *   SessionManager: session records.
+                /// *   Invocation: task execution records.
                 /// </summary>
                 [NameInMap("DeliveryType")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string EncryptionAlgorithm { get; set; }
 
                 /// <summary>
-                /// The ID of the customer master key (CMK) when EncryptionType is KMS.
+                /// The ID of the customer master key (CMK) when EncryptionType is set to KMS.
                 /// </summary>
                 [NameInMap("EncryptionKeyId")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// 
                 /// *   Inherit: the encryption method used by the specified bucket.
                 /// *   OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).
-                /// *   KMS: server-side encryption by using Key Management Service managed keys (SSE-KMS).
+                /// *   KMS: server-side encryption with Key Management Service (SSE-KMS).
                 /// </summary>
                 [NameInMap("EncryptionType")]
                 [Validation(Required=false)]
@@ -140,8 +140,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The type of items to be delivered. Valid values:
                 /// 
-                /// *   SessionManager: session records
-                /// *   Invocation: task execution records
+                /// *   SessionManager: session records.
+                /// *   Invocation: task execution records.
                 /// </summary>
                 [NameInMap("DeliveryType")]
                 [Validation(Required=false)]

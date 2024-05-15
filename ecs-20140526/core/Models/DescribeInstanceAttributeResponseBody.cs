@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Cpu { get; set; }
 
         /// <summary>
-        /// The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
+        /// The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).
         /// </summary>
         [NameInMap("CreationTime")]
         [Validation(Required=false)]
@@ -121,14 +121,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// - false：不开启。
         /// 
-        /// 更多信息，请参见[ECS实例MTU](~~200512~~)。
+        /// 更多信息，请参见[ECS实例MTU](https://help.aliyun.com/document_detail/200512.html)。
         /// </summary>
         [NameInMap("EnableJumboFrame")]
         [Validation(Required=false)]
         public bool? EnableJumboFrame { get; set; }
 
         /// <summary>
-        /// The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
+        /// The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).
         /// </summary>
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]

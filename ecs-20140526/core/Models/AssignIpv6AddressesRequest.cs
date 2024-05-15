@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The IPv6 addresses that you want to assign to the ENI. You can specify up to 10 IPv6 addresses.
         /// 
-        /// Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*
+        /// Example: Ipv6Address.1=2001:db8:1234:1a00::\\*\\*\\*\\*
         /// 
         /// > You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
         /// </summary>
@@ -49,6 +49,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ENI ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -63,7 +65,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the ENI. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

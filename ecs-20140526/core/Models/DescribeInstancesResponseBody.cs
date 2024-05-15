@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
+                /// The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -94,8 +94,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The performance mode of the burstable instance. Valid values:
                 /// 
-                /// *   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](~~59977~~).
-                /// *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](~~59977~~).
+                /// *   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](https://help.aliyun.com/document_detail/59977.html).
+                /// *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](https://help.aliyun.com/document_detail/59977.html).
                 /// </summary>
                 [NameInMap("CreditSpecification")]
                 [Validation(Required=false)]
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
+                /// The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
@@ -826,7 +826,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SpotStrategy { get; set; }
 
                 /// <summary>
-                /// The time when the instance was last started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
+                /// The time when the instance was last started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]

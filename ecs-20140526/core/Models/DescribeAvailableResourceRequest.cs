@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAvailableResourceRequest : TeaModel {
         /// <summary>
-        /// The number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).
+        /// The number of vCPUs of the instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
         /// 
         /// The Cores parameter takes effect only when the DestinationResource parameter is set to InstanceType.
         /// </summary>
@@ -50,13 +50,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   ddh: dedicated host.
         /// 
         /// For more information about how to configure the DestinationResource parameter, see the **Description** section of this topic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationResource")]
         [Validation(Required=false)]
         public string DestinationResource { get; set; }
 
         /// <summary>
-        /// The billing method of the resource. For more information, see [Billing overview](~~25398~~). Valid values:
+        /// The billing method of the resource. For more information, see [Billing overview](https://help.aliyun.com/document_detail/25398.html). Valid values:
         /// 
         /// *   PrePaid: subscription.
         /// *   PostPaid: pay-as-you-go.
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The instance types. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.
+        /// The instance types. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html) or call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent instance type list.
         /// 
         /// For more information about how to configure the InstanceType parameter, see the **Description** section of this topic.
         /// </summary>
@@ -89,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string IoOptimized { get; set; }
 
         /// <summary>
-        /// The memory size of the instance type. Unit: GiB. For more information, see [Instance families](~~25378~~).
+        /// The memory size of the instance type. Unit: GiB. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
         /// 
         /// The Memory parameter takes effect only when the DestinationResource parameter is set to InstanceType.
         /// </summary>
@@ -116,7 +118,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region for which to query resources. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The ID of the region for which to query resources. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

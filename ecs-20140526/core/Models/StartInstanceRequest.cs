@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
         /// 
         /// Default value: false.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

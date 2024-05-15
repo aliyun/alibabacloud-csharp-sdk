@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UnassignIpv6AddressesRequest : TeaModel {
         /// <summary>
-        /// The IPv6 addresses to unassign. You can specify up to 10 IPv6 addresses in a single request.
+        /// The IPv6 addresses to unassign. Valid values of N: 1 to 10.
         /// </summary>
         [NameInMap("Ipv6Address")]
         [Validation(Required=false)]
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// > This parameter is in invitational preview and is unavailable for general users.
+        /// The IPv6 prefixes to unassign. Valid values of N: 1 to 10.
         /// </summary>
         [NameInMap("Ipv6Prefix")]
         [Validation(Required=false)]
@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ID of the ENI.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -39,7 +41,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the ENI. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

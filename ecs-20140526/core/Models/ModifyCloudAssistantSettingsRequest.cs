@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyCloudAssistantSettingsRequestAgentUpgradeConfig AgentUpgradeConfig { get; set; }
         public class ModifyCloudAssistantSettingsRequestAgentUpgradeConfig : TeaModel {
             /// <summary>
-            /// The time windows during which Cloud Assistant Agent can be upgraded. The time windows can be accurate to minutes. The default time zone is UTC.
+            /// The time windows during which Cloud Assistant Agent can be upgraded. The time windows can be accurate to minutes. The Coordinated Universal Time (UTC) time zone is used by default.
             /// 
-            /// Make sure that the upgrade windows specified by using this parameter are not shorter than 1 hour.
+            /// Make sure that the upgrade windows specified by this parameter are not shorter than 1 hour.
             /// 
-            /// Specify each upgrade window in the following format: \<Start time> (HH:mm)-\<End time> (HH:mm).
+            /// Specify each upgrade window in the following format: \\<Start time in the HH:mm format>-\\<End time in the HH:mm format>.
             /// 
-            /// For example, \[ "02:00-03:00", "05:00-06:00" ] specifies that Cloud Assistant Agent can be upgraded from 2:00:00 to 3:00:00 and from 5:00:00 to 6:00:00 every day in the UTC time zone.
+            /// For example, [ "02:00-03:00", "05:00-06:00" ] specifies that Cloud Assistant Agent can be upgraded from 2:00:00 to 3:00:00 and from 5:00:00 to 6:00:00 every day in the UTC time zone.
             /// </summary>
             [NameInMap("AllowedUpgradeWindow")]
             [Validation(Required=false)]
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// The time zone of the time window. Default value: UTC. The following formats are supported:
+            /// The time zone of the time windows. Default value: UTC. You can specify a time zone in the following forms:
             /// 
             /// *   The time zone name. Examples: Asia/Shanghai and America/Los_Angeles.
-            /// *   The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). Do not add leading zeros to the hour value.
+            /// *   The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). You cannot add leading zeros to the hour value.
             /// </summary>
             [NameInMap("TimeZone")]
             [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// The prefix of the OSS bucket directory. The prefix must meet the following requirements:
             /// 
             /// *   The prefix can be up to 254 characters in length.
-            /// *   The prefix cannot start with a forward slash (/) or a backslash (\\).
+            /// *   The prefix cannot start with a forward slash (/) or a backslash (\\\\).
             /// 
             /// Note: If you do not need a directory prefix, specify a pair of double quotation marks ("") for this parameter to clear the directory prefix that you specified.
             /// </summary>
@@ -123,6 +123,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -141,6 +143,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// *   SessionManagerDelivery: the Session Record Delivery feature
         /// *   InvocationDelivery: the Operation Content and Result Delivery feature
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SettingType")]
         [Validation(Required=false)]

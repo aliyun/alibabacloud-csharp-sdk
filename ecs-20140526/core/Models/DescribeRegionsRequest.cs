@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:
+        /// The billing method of the instance. For more information, see [Billing overview](https://help.aliyun.com/document_detail/25398.html). Valid values:
         /// 
         /// *   PrePaid: subscription. If this parameter is set to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.
         /// *   PostPaid: pay-as-you-go.

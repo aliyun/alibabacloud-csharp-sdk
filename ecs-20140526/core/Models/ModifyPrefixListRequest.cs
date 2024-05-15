@@ -21,9 +21,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// Take note of the following items when you add the entries:
             /// 
-            /// *   The total number of entries in the prefix list cannot exceed the maximum number of entries you specified for the prefix list. You can call the [DescribePrefixListAttributes](~~205872~~) operation to query the maximum number of entries that the prefix list can contain.
+            /// *   The total number of entries in the prefix list cannot exceed the maximum number of entries you specified for the prefix list. You can call the [DescribePrefixListAttributes](https://help.aliyun.com/document_detail/205872.html) operation to query the maximum number of entries that the prefix list can contain.
             /// *   You cannot specify duplicate CIDR blocks.
             /// *   The CIDR blocks cannot be the same as the `RemoveEntry.N.Cidr` values.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Cidr")]
             [Validation(Required=false)]
@@ -55,20 +57,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ID of the prefix list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PrefixListId")]
         [Validation(Required=false)]
         public string PrefixListId { get; set; }
 
         /// <summary>
-        /// The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`.
+        /// The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`.
         /// </summary>
         [NameInMap("PrefixListName")]
         [Validation(Required=false)]
         public string PrefixListName { get; set; }
 
         /// <summary>
-        /// The region ID of the prefix list. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the prefix list. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -88,6 +94,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// *   You cannot specify duplicate CIDR blocks.
             /// *   The CIDR blocks cannot be the same as the `AddEntry.N.Cidr` values.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Cidr")]
             [Validation(Required=false)]

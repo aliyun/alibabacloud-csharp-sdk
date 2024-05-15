@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceTypeFamiliesRequest : TeaModel {
         /// <summary>
-        /// The generation of the instance family. For more information, see [Overview of instance families](~~25378~~). Valid values:
+        /// The generation of the instance family. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html). Valid values:
         /// 
         /// *   ecs-1: Generation I, which consists of the earliest and cost-effective instance types
         /// *   ecs-2: Generation II, which provides upgraded software and hardware and higher performance than Generation I
@@ -32,7 +32,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance family. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instance family. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

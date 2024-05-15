@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// *   true
                 /// *   false
                 /// 
-                /// This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
+                /// This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).
                 /// </summary>
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// *   true: The automatic snapshots of the cloud disk are deleted when the disk is released.
                 /// *   false: The automatic snapshots of the cloud disk are retained when the disk is released.
                 /// 
-                /// Snapshots that were created in the Elastic Compute Service (ECS) console or by calling the [CreateSnapshot](~~25524~~) operation are retained and not affected by this parameter.
+                /// Snapshots that were created in the Elastic Compute Service (ECS) console or by calling the [CreateSnapshot](https://help.aliyun.com/document_detail/25524.html) operation are retained and not affected by this parameter.
                 /// </summary>
                 [NameInMap("DeleteAutoSnapshot")]
                 [Validation(Required=false)]
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance> MountInstance { get; set; }
                     public class DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance : TeaModel {
                         /// <summary>
-                        /// The time when the disk was attached. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                        /// The time when the disk was attached. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                         /// </summary>
                         [NameInMap("AttachedTime")]
                         [Validation(Required=false)]
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × *Capacity, 50,000}
                 /// 
-                /// This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
+                /// This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).
                 /// </summary>
                 [NameInMap("ProvisionedIops")]
                 [Validation(Required=false)]

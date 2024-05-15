@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string DiskCategory { get; set; }
 
                         /// <summary>
-                        /// The expiration time of a privilege. This parameter is returned only when the account privilege has an expiration time. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                        /// The expiration time of a privilege. This parameter is returned only when the account privilege has an expiration time. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                         /// </summary>
                         [NameInMap("ExpiredTime")]
                         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// *   max-axt-invocation-daily
                         /// *   max-cloud-assistant-activation-count
                         /// 
-                        /// When the AttributeName parameter is set to supported-postpay-instance-types, an instance type is returned. For more information, see [Instance families](~~25378~~).
+                        /// When the AttributeName parameter is set to supported-postpay-instance-types, an instance type is returned. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
                         /// 
                         /// When the AttributeName parameter is set to real-name-authentications, one of the following values is returned:
                         /// 

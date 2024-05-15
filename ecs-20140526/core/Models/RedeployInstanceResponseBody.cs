@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The ID of the redeployment task.
         /// 
-        /// You can call the [DescribeTasks](~~25622~~) operation to query the redeployment result.
+        /// You can call the [DescribeTasks](https://help.aliyun.com/document_detail/25622.html) operation to query the redeployment result.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

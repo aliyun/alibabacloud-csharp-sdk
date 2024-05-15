@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSpotAdviceRequest : TeaModel {
         /// <summary>
-        /// The number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).
+        /// The number of vCPUs of the instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
         /// </summary>
         [NameInMap("Cores")]
         [Validation(Required=false)]
         public int? Cores { get; set; }
 
         /// <summary>
-        /// The number of GPUs that a GPU-accelerated instance has. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).
+        /// The number of GPUs that a GPU-accelerated instance has. For information about the valid values, see [GPU-accelerated compute optimized instance types](https://help.aliyun.com/document_detail/108496.html).
         /// </summary>
         [NameInMap("GpuAmount")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   NVIDIA V100
         /// *   NVIDIA A100
         /// 
-        /// This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute optimized instance types](~~108496~~).
+        /// This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute optimized instance types](https://help.aliyun.com/document_detail/108496.html).
         /// </summary>
         [NameInMap("GpuSpec")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// *   EntryLevel.
         /// *   EnterpriseLevel.
-        /// *   CreditEntryLevel. For more information, see [Overview of burstable instances](~~59977~~).
+        /// *   CreditEntryLevel. For more information, see [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).
         /// 
         /// This parameter is left empty by default, which indicates that instance families at all levels are queried.
         /// </summary>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// The instance family. For more information, see [Instance families](~~25378~~).
+        /// The instance family. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
         /// </summary>
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
@@ -66,21 +66,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceTypes { get; set; }
 
         /// <summary>
-        /// The memory size of the instance type. Unit: GiB. For more information, see [Instance families](~~25378~~).
+        /// The memory size of the instance type. Unit: GiB. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public float? Memory { get; set; }
 
         /// <summary>
-        /// The minimum number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).
+        /// The minimum number of vCPUs of the instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
         /// </summary>
         [NameInMap("MinCores")]
         [Validation(Required=false)]
         public int? MinCores { get; set; }
 
         /// <summary>
-        /// The minimum memory size of the instance type. For more information, see [Instance families](~~25378~~).
+        /// The minimum memory size of the instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
         /// </summary>
         [NameInMap("MinMemory")]
         [Validation(Required=false)]
@@ -95,7 +95,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

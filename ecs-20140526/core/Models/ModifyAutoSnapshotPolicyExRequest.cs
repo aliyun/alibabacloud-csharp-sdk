@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The retention period of the snapshot copy in the destination region. Unit: days. Valid values:
         /// 
-        /// *   \-1: The snapshot is permanently retained.
+        /// *   \\-1: The snapshot is permanently retained.
         /// *   1 to 65535: The automatic snapshot is retained for the specified number of days.
         /// 
         /// Default value: -1.
@@ -107,6 +107,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The name of the automatic snapshot policy. If this parameter is not specified, the original name of the automatic snapshot policy is retained.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("autoSnapshotPolicyId")]
         [Validation(Required=false)]
@@ -125,7 +127,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoSnapshotPolicyName { get; set; }
 
         /// <summary>
-        /// The ID of the automatic snapshot policy. You can call the [DescribeAutoSnapshotPolicyEx](~~25530~~) operation to query available automatic snapshot policies.
+        /// The ID of the automatic snapshot policy. You can call the [DescribeAutoSnapshotPolicyEx](https://help.aliyun.com/document_detail/25530.html) operation to query available automatic snapshot policies.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]
@@ -134,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The retention period of the automatic snapshot. Unit: days. Valid values:
         /// 
-        /// *   \-1: The automatic snapshot is permanently retained.
+        /// *   \\-1: The automatic snapshot is permanently retained.
         /// *   1 to 65536: The auto snapshot is retained for the specified number of days.
         /// 
         /// Default value: -1.

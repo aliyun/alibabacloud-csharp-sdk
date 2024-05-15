@@ -389,6 +389,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
+                /// Indicates how the task was stopped. Valid values:
+                /// 
+                /// *   Process: The process of the command was stopped.
+                /// *   ProcessTree: The process tree was stopped. In this case, the process of the command and all subprocesses of the process were stopped.
+                /// </summary>
+                [NameInMap("TerminationMode")]
+                [Validation(Required=false)]
+                public string TerminationMode { get; set; }
+
+                /// <summary>
                 /// Indicates whether the command is to be automatically run.
                 /// </summary>
                 [NameInMap("Timed")]

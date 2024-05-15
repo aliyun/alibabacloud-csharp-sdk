@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -33,7 +35,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The Cloud Assistant features.
+        /// The Cloud Assistant configurations.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SettingType")]
         [Validation(Required=false)]

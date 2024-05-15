@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// 
                 /// *   AutoRenewal: The dedicated host is automatically renewed.
                 /// *   Normal: The dedicated host is not automatically renewed, but renewal notifications are sent.
-                /// *   NotRenewal: The dedicated host is not automatically renewed, and no expiration notification is sent. Alibaba Cloud sends only a non-renewal notice three days before the host expires. If the renewal status of a dedicated host is NotRenewal, you can change the value to Normal and then call [RenewDedicatedHosts](~~93287~~) to manually renew the dedicated host, or directly change the value to AutoRenewal.
+                /// *   NotRenewal: The dedicated host is not automatically renewed, and no expiration notification is sent. Alibaba Cloud sends only a non-renewal notice three days before the host expires. If the renewal status of a dedicated host is NotRenewal, you can change the value to Normal and then call [RenewDedicatedHosts](https://help.aliyun.com/document_detail/93287.html) to manually renew the dedicated host, or directly change the value to AutoRenewal.
                 /// </summary>
                 [NameInMap("RenewalStatus")]
                 [Validation(Required=false)]

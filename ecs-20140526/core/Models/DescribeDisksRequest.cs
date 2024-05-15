@@ -287,7 +287,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Portable { get; set; }
 
         /// <summary>
-        /// The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the disk. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -318,7 +320,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// The state of the cloud disk. For more information, see [Disk states](~~25689~~). Valid values:
+        /// The state of the cloud disk. For more information, see [Disk states](https://help.aliyun.com/document_detail/25689.html). Valid values:
         /// 
         /// *   In_use
         /// *   Available
@@ -344,7 +346,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The disk tag key. Valid values of N: 1 to 20.
             /// 
-            /// Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.
+            /// Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

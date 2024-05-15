@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             /// 
                             /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
                             /// 
-                            /// >  This parameter is available only if the corresponding disk category parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+                            /// >  This parameter is available only if the corresponding disk category parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).
                             /// </summary>
                             [NameInMap("ProvisionedIops")]
                             [Validation(Required=false)]
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:
+                    /// Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](https://help.aliyun.com/document_detail/25507.html) operation to release the instance. Valid values:
                     /// 
                     /// - true
                     /// - false
@@ -416,7 +416,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string SecurityGroupId { get; set; }
 
                             /// <summary>
-                            /// The ID of security group *N* with which you want to associate the ECS instance. Valid values of *N* vary based on the maximum number of security groups with which the instance can be associated. For more information, see the "Security group limits" section in the [Limits](~~25412~~) topic.
+                            /// The ID of security group *N* with which you want to associate the ECS instance. Valid values of *N* vary based on the maximum number of security groups with which the instance can be associated. For more information, see the "Security group limits" section in the [Limits](https://help.aliyun.com/document_detail/25412.html) topic.
                             /// 
                             /// >  You cannot specify the **SecurityGroupId** and **SecurityGroupIds.N** parameters at the same time.
                             /// </summary>
@@ -503,7 +503,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string SecurityGroupId { get; set; }
 
                     /// <summary>
-                    /// The IDs of the security groups to which to assign the instance. The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~).
+                    /// The IDs of the security groups to which to assign the instance. The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see the "Security group limits" section in [Limits](https://help.aliyun.com/document_detail/25412.html).
                     /// 
                     /// > You cannot specify both the `SecurityGroupId` and `SecurityGroupIds.N` parameters.
                     /// </summary>

@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// This parameter is required when `Scope` is set to `Zone`.
             /// 
-            /// You can call the [DescribeZones](~~25609~~) operation to query the most recent zone list.
+            /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent zone list.
             /// </summary>
             [NameInMap("ReservedInstanceName")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The instance type that reserved instance N can match. Valid values of N: 1 to 100.
             /// 
-            /// > The supported instance types are regularly updated. For more information, see the "Attributes" section of [Overview](~~100370~~).
+            /// > The supported instance types are regularly updated. For more information, see the "Attributes" section of [Overview](https://help.aliyun.com/document_detail/100370.html).
             /// </summary>
             [NameInMap("Scope")]
             [Validation(Required=false)]
@@ -76,6 +76,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The IDs of reserved instances. Valid values of N: 1 to 20.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -83,6 +85,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The IDs of reserved instances. Valid values of N: 1 to 20.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReservedInstanceId")]
         [Validation(Required=false)]

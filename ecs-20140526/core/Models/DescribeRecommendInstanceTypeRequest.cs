@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Cores { get; set; }
 
         /// <summary>
-        /// The billing method of the ECS instance. For more information, see [Billing overview](~~25398~~). Valid values:
+        /// The billing method of the ECS instance. For more information, see [Billing overview](https://help.aliyun.com/document_detail/25398.html). Valid values:
         /// 
         /// *   PrePaid: subscription
         /// *   PostPaid: pay-as-you-go
@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// *   EntryLevel
         /// *   EnterpriseLevel
-        /// *   CreditEntryLevel For more information, see [Burstable instance families](~~59977~~).
+        /// *   CreditEntryLevel For more information, see [Burstable instance families](https://help.aliyun.com/document_detail/59977.html).
         /// </summary>
         [NameInMap("InstanceFamilyLevel")]
         [Validation(Required=false)]
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// The instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.
+        /// The instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html) or call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent instance type list.
         /// 
         /// > If you specify `InstanceType`, the `Cores` and `Memory` parameters are ignored.
         /// </summary>
@@ -96,6 +96,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   vpc
         /// 
         /// Default value: vpc.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -113,8 +115,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// The policy that is used to recommend instance types. Valid values:
         /// 
         /// *   InventoryFirst: recommends instance types in descending order of resource availability.
-        /// *   PriceFirst: recommends the most cost-effective instance type. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.
-        /// *   NewProductFirst: recommends the latest instance types first.
+        /// *   PriceFirst: recommends the most cost-effective instance types. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.
+        /// *   NewProductFirst: recommends the latest instance types.
         /// 
         /// Default value: InventoryFirst.
         /// </summary>
@@ -123,7 +125,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PriorityStrategy { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -138,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies the scenarios in which the instance type is recommended. Valid values:
+        /// Specifies the scenarios in which instance types are recommended. Valid values:
         /// 
         /// *   UPGRADE: instance type upgrade or downgrade
         /// *   CREATE: instance creation
@@ -150,13 +154,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Scene { get; set; }
 
         /// <summary>
-        /// The bidding policy of preemptible instances. Valid values:
+        /// The bidding policy of the preemptible instance. Valid values:
         /// 
-        /// *   NoSpot: The instance is a pay-as-you-go instance.
+        /// *   NoSpot: The instance is a regular pay-as-you-go instance.
         /// *   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.
         /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
         /// 
-        /// > If the `SpotStrategy` parameter is specified, the `InstanceChargeType` parameter must be set to `PostPaid`.
+        /// >  If you specify `SpotStrategy`, you must set `InstanceChargeType` to `PostPaid`.
         /// 
         /// Default value: NoSpot.
         /// </summary>
@@ -181,7 +185,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SystemDiskCategory { get; set; }
 
         /// <summary>
-        /// The zone ID. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+        /// The zone ID. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.
         /// 
         /// We recommend that you set the value of ZoneMatchMode to Include, which is the default value. This way, the system recommends instance types that are available in the zone specified by the ZoneId parameter based on priority. The system also recommends instance types that are available in other zones within the same region.
         /// </summary>

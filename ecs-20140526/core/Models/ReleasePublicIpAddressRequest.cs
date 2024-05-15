@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The public IP address of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PublicIpAddress")]
         [Validation(Required=false)]

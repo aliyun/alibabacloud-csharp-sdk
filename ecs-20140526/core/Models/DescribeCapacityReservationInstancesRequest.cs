@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeCapacityReservationInstancesRequestPrivatePoolOptions : TeaModel {
             /// <summary>
             /// The token used to start the next query.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -50,6 +52,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// Maximum value: 100.
         /// 
         /// Default value: 10.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

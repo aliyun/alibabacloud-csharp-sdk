@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
         /// *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
         /// *   SystemFailure.Stop: The instance is stopped due to a system error.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
@@ -26,15 +28,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The IDs of the instances. You can specify up to 100 instance IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// The scheduled start time of the event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// The scheduled start time of the event. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
         /// > For events that occur due to system errors or instance errors, the simulated events of such events enter the `Executing` state when the simulated events are created. The value of `NotBefore` is the time when the simulated events enter the `Executed` state.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NotBefore")]
         [Validation(Required=false)]
@@ -49,7 +55,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

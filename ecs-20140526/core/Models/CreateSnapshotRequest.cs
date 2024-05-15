@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   Standard: normal snapshot
         /// *   Flash: local snapshot
         /// 
-        /// >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
+        /// >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// Creates a snapshot for a disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: false.
         /// 
-        /// >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
+        /// >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).
         /// </summary>
         [NameInMap("InstantAccess")]
         [Validation(Required=false)]
@@ -63,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// By default, the value of this parameter is the same as that of `RetentionDays`.
         /// 
-        /// >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
+        /// >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).
         /// </summary>
         [NameInMap("InstantAccessRetentionDays")]
         [Validation(Required=false)]
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The snapshot name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The snapshot name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// 
         /// The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
         /// </summary>
@@ -107,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// 
         /// It cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
         /// </summary>
@@ -123,35 +125,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StorageLocationArn { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the instant access feature. Valid values:
-        /// 
-        /// *   true: enables the instant access feature. This feature can be enabled only for enhanced SSDs (ESSDs).
-        /// 
-        ///     **
-        /// 
-        ///     **Note**After the instant access feature is enabled, an instant access (IA) snapshot is created and can be used to roll back disks or create disks across zones even when the snapshot is being created. This feature ensures that a new ESSD snapshot is available for use as soon as possible regardless of its size.
-        /// 
-        /// *   false: does not enable the instant access feature. If InstantAccess is set to false, a normal snapshot is created.
-        /// 
-        /// Default value: false.
-        /// 
-        /// > This parameter and the `Category` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.
+        /// The tags to add to the snapshot.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateSnapshotRequestTag> Tag { get; set; }
         public class CreateSnapshotRequestTag : TeaModel {
             /// <summary>
-            /// The tags to add to the snapshot.
+            /// The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag key to add to the snapshot.
-            /// 
-            /// > This parameter will be deprecated in the future. We recommend that you use the Tag.N.key parameter to ensure future compatibility.
+            /// The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

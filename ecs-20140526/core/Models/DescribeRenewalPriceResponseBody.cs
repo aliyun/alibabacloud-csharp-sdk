@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string Resource { get; set; }
 
                         /// <summary>
-                        /// Details about the pricing rules.
+                        /// The pricing rules.
                         /// </summary>
                         [NameInMap("SubRules")]
                         [Validation(Required=false)]

@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: enabled.
         /// 
-        /// > For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).
+        /// > For more information about instance metadata, see [Overview of ECS instance metadata](https://help.aliyun.com/document_detail/49122.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HttpEndpoint")]
         [Validation(Required=false)]
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: optional.
         /// 
-        /// > For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).
+        /// > For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](https://help.aliyun.com/document_detail/150575.html).
         /// </summary>
         [NameInMap("HttpTokens")]
         [Validation(Required=false)]
@@ -63,7 +65,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

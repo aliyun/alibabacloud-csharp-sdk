@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ID of the disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to reset the password of the instance when you re-initialize its system disk. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
         /// 
-        ///     ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/
+        ///     ()`~!@#$%^&*-_+=|{}[]:;\\"<>,.?/
         /// 
         /// For Windows instances, passwords cannot start with a forward slash (/).
         /// 

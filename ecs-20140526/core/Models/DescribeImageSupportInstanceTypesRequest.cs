@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -55,6 +55,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// Details about the instance types that are supported by the image.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

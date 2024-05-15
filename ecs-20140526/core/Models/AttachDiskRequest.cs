@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// The ID of the disk. The disk specified by the `DiskId` parameter and the instance specified by the `InstanceId` parameter must reside in the same zone.
         /// 
         /// > For more information about the limits on attaching a data disk and a system disk, see the "Usage notes" section of this topic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
@@ -61,6 +63,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ID of the instance to which you want to attach the disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The password that is set when you attach the system disk. The password is applicable only to the administrator and root users. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:
         /// 
-        ///     ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/
+        ///     ()`~!@#$%^&*-_+=|{}[]:;\\"<>,.?/
         /// 
         /// For Windows instances, passwords cannot start with a forward slash (/).
         /// 

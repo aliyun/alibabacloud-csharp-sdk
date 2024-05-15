@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The disk ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
@@ -55,29 +57,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// A collection of disk performance control parameters
+        /// The disk performance specifications.
         /// </summary>
         [NameInMap("PerformanceControlOptions")]
         [Validation(Required=false)]
         public ModifyDiskSpecRequestPerformanceControlOptions PerformanceControlOptions { get; set; }
         public class ModifyDiskSpecRequestPerformanceControlOptions : TeaModel {
             /// <summary>
-            /// The new IOPS of the disk. You can modify the IOPS of only disks in dedicated block storage clusters.
+            /// The new IOPS rate of the disk. You can modify the IOPS rate of only disks in dedicated block storage clusters.
             /// 
             /// Valid values: 900 to maximum IOPS per disk (with an increment of 100).
             /// 
-            /// For more information, see [EBS performance](~~25382~~).
+            /// For more information, see [Block storage performance](https://help.aliyun.com/document_detail/25382.html).
             /// </summary>
             [NameInMap("IOPS")]
             [Validation(Required=false)]
             public int? IOPS { get; set; }
 
             /// <summary>
-            /// The new IOPS and throughput of the disk. This parameter is valid only when the disk is in a dedicated block storage cluster.
+            /// Specifies whether to reset the IOPS rate and throughput of the disk. This parameter takes effect only when the disk belongs to a dedicated block storage cluster.
             /// 
             /// After you specify this parameter, PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput do not take effect.
             /// 
-            /// Set the value to All, which indicates that the IOPS and throughput of the disk is reset to the initial values.
+            /// Set the value to All, which indicates that the IOPS rate and throughput of the disk are reset to the initial values.
             /// </summary>
             [NameInMap("Recover")]
             [Validation(Required=false)]
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// Valid values: 60 to maximum throughput per disk.
             /// 
-            /// For more information, see [EBS performance](~~25382~~).
+            /// For more information, see [Block storage performance](https://help.aliyun.com/document_detail/25382.html).
             /// </summary>
             [NameInMap("Throughput")]
             [Validation(Required=false)]
@@ -115,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
         /// 
-        /// >  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+        /// >  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).
         /// </summary>
         [NameInMap("ProvisionedIops")]
         [Validation(Required=false)]

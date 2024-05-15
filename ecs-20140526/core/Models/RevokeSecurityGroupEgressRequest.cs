@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RevokeSecurityGroupEgressRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DestGroupOwnerId { get; set; }
 
             /// <summary>
-            /// The ID of the destination prefix list that is referenced in security group rule N. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
+            /// The ID of the destination prefix list that is referenced in security group rule N. You can call the [DescribePrefixLists](https://help.aliyun.com/document_detail/205046.html) operation to query the IDs of available prefix lists.
             /// 
             /// Take note of the following items:
             /// 
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The source IPv6 CIDR block. CIDR blocks and IPv6 addresses are supported.
             /// 
-            /// This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
+            /// This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](https://help.aliyun.com/document_detail/97439.html).
             /// 
             /// Valid values of N: 1 to 100.
             /// 
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:
             /// 
-            /// *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.
+            /// *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \\<Start port number>/\\<End port number>. Example: 1/200.
             /// *   If you set IpProtocol to ICMP, the port number range is -1/-1.
             /// *   If you set IpProtocol to GRE, the port number range is -1/-1.
             /// *   If you set IpProtocol to ALL, the port number range is -1/-1.
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The source IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.
             /// 
-            /// This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
+            /// This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](https://help.aliyun.com/document_detail/97439.html).
             /// 
             /// Valid values of N: 1 to 100.
             /// </summary>
@@ -296,12 +296,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The range of source ports that correspond to the transport layer protocol for security group rule N. Valid values:
             /// 
-            /// *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.
+            /// *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \\<Start port number>/\\<End port number>. Example: 1/200.
             /// *   If you set IpProtocol to ICMP, the port number range is -1/-1.
             /// *   If you set IpProtocol to GRE, the port number range is -1/-1.
             /// *   If you set IpProtocol to ALL, the port number range is -1/-1.
             /// 
-            /// This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
+            /// This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](https://help.aliyun.com/document_detail/97439.html).
             /// 
             /// Valid values of N: 1 to 100.
             /// </summary>
@@ -336,7 +336,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the security group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -352,6 +354,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ID of the security group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   eni: ENI
         /// *   keypair: SSH key pair
         /// *   launchtemplate: launch template
+        /// *   command: Cloud Assistant command
+        /// *   activation: activation code of the Cloud Assistant managed instance
         /// 
-        /// These values are case-sensitive.
+        /// The values are case-sensitive.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

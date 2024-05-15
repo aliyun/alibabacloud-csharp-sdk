@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The instance IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -43,7 +45,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PortNumber { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TargetServer { get; set; }
 
         /// <summary>
-        /// 指定连接时的用户名称。
+        /// The username used for connection establishment.
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]

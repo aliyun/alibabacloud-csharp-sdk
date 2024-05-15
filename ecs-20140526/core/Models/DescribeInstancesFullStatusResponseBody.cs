@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 public List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk> InactiveDisk { get; set; }
                                 public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk : TeaModel {
                                     /// <summary>
-                                    /// The time when the cloud disk or local disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                                    /// The time when the cloud disk or local disk was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                                     /// </summary>
                                     [NameInMap("CreationTime")]
                                     [Validation(Required=false)]
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                     public string DeviceType { get; set; }
 
                                     /// <summary>
-                                    /// The time when the cloud disk or local disk was released. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                                    /// The time when the cloud disk or local disk was released. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                                     /// </summary>
                                     [NameInMap("ReleaseTime")]
                                     [Validation(Required=false)]
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string ImpactLevel { get; set; }
 
                         /// <summary>
-                        /// The scheduled O\&M time of the system event. The time is displayed in UTC.
+                        /// The scheduled O\\&M time of the system event. The time is displayed in UTC.
                         /// </summary>
                         [NameInMap("NotBefore")]
                         [Validation(Required=false)]

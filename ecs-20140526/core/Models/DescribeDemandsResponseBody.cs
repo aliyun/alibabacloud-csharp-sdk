@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string DemandStatus { get; set; }
 
                 /// <summary>
-                /// The time when the demand was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                /// The time when the demand was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("DemandTime")]
                 [Validation(Required=false)]
                 public string DemandTime { get; set; }
 
                 /// <summary>
-                /// The expected end time for the purchase of the filed resources. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                /// The expected end time for the purchase of the filed resources. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string PeriodUnit { get; set; }
 
                 /// <summary>
-                /// The expected start time for the purchase of the filed resources. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                /// The expected start time for the purchase of the filed resources. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
@@ -166,14 +166,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string PrivatePoolId { get; set; }
 
                         /// <summary>
-                        /// The end of the time range during which the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                        /// The end of the time range during which the filed resources are delivered and available. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                         /// </summary>
                         [NameInMap("SupplyEndTime")]
                         [Validation(Required=false)]
                         public string SupplyEndTime { get; set; }
 
                         /// <summary>
-                        /// The beginning of the time range during which the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                        /// The beginning of the time range during which the filed resources are delivered and available. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                         /// </summary>
                         [NameInMap("SupplyStartTime")]
                         [Validation(Required=false)]

@@ -13,10 +13,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// The system architecture. Valid values:
         /// 
         /// *   i386
-        /// *   x86\_64
+        /// *   x86_64
         /// *   arm64
         /// 
-        /// Default value: x86\_64.
+        /// Default value: x86_64.
         /// </summary>
         [NameInMap("Architecture")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The mode in which to check the image. If you do not specify this parameter, the image is not checked. Only the standard check mode is supported.
         /// 
-        /// >  This parameter is supported for most Linux and Windows operating system versions. For more information about image check items and operating system limits for image check, see [Overview](~~439819~~) and [Operating system limits for image check](~~475800~~).
+        /// >  This parameter is supported for most Linux and Windows operating system versions. For more information about image check items and operating system limits for image check, see [Overview](https://help.aliyun.com/document_detail/439819.html) and [Operating system limits for image check](https://help.aliyun.com/document_detail/475800.html).
         /// </summary>
         [NameInMap("DetectionStrategy")]
         [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The image name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+        /// The image name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
@@ -202,7 +202,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// The region ID of the source image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the source image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

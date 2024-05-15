@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ID of the destination region to which to copy the source snapshot.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationRegionId")]
         [Validation(Required=false)]
@@ -50,22 +52,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
         /// 
         /// This parameter is empty by default.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationSnapshotDescription")]
         [Validation(Required=false)]
         public string DestinationSnapshotDescription { get; set; }
 
         /// <summary>
-        /// The name of the new snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start http:// or https://. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the new snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start http:// or https://. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).
         /// 
         /// This parameter is empty by default.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationSnapshotName")]
         [Validation(Required=false)]
         public string DestinationSnapshotName { get; set; }
 
         /// <summary>
-        /// > This parameter is not publicly available.
+        /// >  This parameter is not publicly available.
         /// </summary>
         [NameInMap("DestinationStorageLocationArn")]
         [Validation(Required=false)]
@@ -95,7 +101,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the source snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the source snapshot. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -127,6 +135,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// The ID of the source snapshot.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]

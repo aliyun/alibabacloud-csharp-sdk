@@ -22,14 +22,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AllocationType { get; set; }
 
         /// <summary>
-        /// The instance type. For more information, see [Instance families](~~25378~~).
+        /// The instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The instance family. For more information, see [Instance families](~~25378~~).
+        /// The instance family. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).
         /// </summary>
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
@@ -83,7 +83,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instances. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -145,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
             /// 
-            /// Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.
+            /// Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -161,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+        /// The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

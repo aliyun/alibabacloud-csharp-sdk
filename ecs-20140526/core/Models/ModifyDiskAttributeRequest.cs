@@ -64,21 +64,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> DiskIds { get; set; }
 
         /// <summary>
-        /// The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).
         /// </summary>
         [NameInMap("DiskName")]
         [Validation(Required=false)]
         public string DiskName { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the automatic snapshot policy feature for the cloud disk.
+        /// Specifies whether to enable the automatic snapshot policy feature for the cloud disk. Valid values:
         /// 
-        /// *   true: enables the automatic snapshot policy feature for the cloud disk.
-        /// *   false: disables the automatic snapshot policy feature for the cloud disk.
+        /// *   true
+        /// *   false
         /// 
         /// This parameter is empty by default, which indicates that the current value remains unchanged.
         /// 
-        /// > By default, the automatic snapshot policy feature is enabled for new disks. You need to only apply an automatic snapshot policy to a disk for the policy to take effect.
+        /// >  By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to associate an automatic snapshot policy with a cloud disk before you can use the policy.
         /// </summary>
         [NameInMap("EnableAutoSnapshot")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// The region ID of the command. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

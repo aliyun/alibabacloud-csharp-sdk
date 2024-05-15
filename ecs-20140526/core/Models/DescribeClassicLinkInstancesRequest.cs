@@ -39,7 +39,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instances. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](~~65413~~).
+        /// The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](https://help.aliyun.com/document_detail/65413.html).
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
