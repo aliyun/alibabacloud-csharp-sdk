@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class TagResourcesRequest : TeaModel {
         /// <summary>
         /// The list of resource IDs. Maximum number of list elements: 50.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The type of the resource. Set this value to **DOMAIN**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The tags. Maximum number of list elements: 20.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
             /// The key of a tag.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

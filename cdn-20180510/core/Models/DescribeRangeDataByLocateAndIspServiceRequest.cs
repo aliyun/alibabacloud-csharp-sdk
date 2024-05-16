@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class DescribeRangeDataByLocateAndIspServiceRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
         /// > The end time must be later than the start time. The maximum time range that can be specified is 1 hour.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// <summary>
         /// The name of the ISP. You can specify only one ISP name in each call.
         /// 
-        /// You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs.
+        /// You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query ISPs.
         /// </summary>
         [NameInMap("IspNames")]
         [Validation(Required=false)]
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// <summary>
         /// The names of the regions. Separate multiple region names with commas (,).
         /// 
-        /// You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list.
+        /// You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("LocationNames")]
         [Validation(Required=false)]
@@ -49,6 +53,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// The beginning of the time range to query.
         /// 
         /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

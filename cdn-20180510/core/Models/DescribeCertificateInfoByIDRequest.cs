@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class DescribeCertificateInfoByIDRequest : TeaModel {
         /// <summary>
         /// The ID of the certificate. You can query only one certificate in each call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CertId")]
         [Validation(Required=false)]

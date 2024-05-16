@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class DescribeCdnDomainDetailRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name. You can specify only one domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

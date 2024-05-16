@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The type of the resource. Set the value to **DOMAIN**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

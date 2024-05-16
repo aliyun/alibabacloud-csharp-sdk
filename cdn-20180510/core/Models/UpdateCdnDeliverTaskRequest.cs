@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The ID of the tracking task that you want to update.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DeliverId")]
         [Validation(Required=false)]

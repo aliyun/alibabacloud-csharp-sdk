@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// The accelerated domain name. You can specify multiple accelerated domain names and separate them with commas (,).
         /// 
         /// > You can specify up to 100 accelerated domain names in each request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -30,14 +32,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.
+        /// The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query ISP names.
         /// </summary>
         [NameInMap("IspNameEn")]
         [Validation(Required=false)]
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions. If you do not specify a region, all regions are queried.
+        /// The name of the region. You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query regions. If you do not specify a region, all regions are queried.
         /// </summary>
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]

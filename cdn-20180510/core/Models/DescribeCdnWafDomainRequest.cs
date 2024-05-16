@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// *   **ap-southeast-1**: outside the Chinese mainland
         /// 
         /// > ap-southeast-1 includes Hong Kong (China), Macao (China), Taiwan (China), and other countries and regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

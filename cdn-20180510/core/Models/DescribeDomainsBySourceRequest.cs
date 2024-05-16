@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The origin servers. Separate multiple origin servers with commas (,). Fuzzy match is not supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]

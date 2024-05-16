@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ModifyCdnDomainOwnerResponseBody : TeaModel {
         /// <summary>
-        /// Procedure
+        /// The description of the domain name transfer.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The Common Name of the certificate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CommonName")]
         [Validation(Required=false)]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// *   condition_isp_config_en
         /// *   condition_country_config_cn
         /// *   condition_country_config_en
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]

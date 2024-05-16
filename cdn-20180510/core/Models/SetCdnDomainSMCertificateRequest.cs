@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class SetCdnDomainSMCertificateRequest : TeaModel {
         /// <summary>
         /// The ID of the SM certificate that you want to configure. The identifier of the certificate. The value is Certificate ID-cn-hangzhou. For example, if the certificate ID is 123, set the value of this parameter to 123-cn-hangzhou.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// The accelerated domain name for which you want to configure the SM certificate.
         /// 
         /// > The domain name must use HTTPS acceleration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// 
         /// *   **on**
         /// *   **off**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]

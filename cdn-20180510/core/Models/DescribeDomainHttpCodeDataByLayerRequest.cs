@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.
+        /// The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query ISP names.
         /// 
         /// If you do not specify an ISP, data of all ISPs is queried.
         /// </summary>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string Layer { get; set; }
 
         /// <summary>
-        /// The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
+        /// The name of the region. You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query regions.
         /// 
         /// If you do not specify a region, data in all regions is queried.
         /// </summary>

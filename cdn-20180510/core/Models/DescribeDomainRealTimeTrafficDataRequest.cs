@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class DescribeDomainRealTimeTrafficDataRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name. You can specify up to 100 domain names in each call. Separate multiple domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// <summary>
         /// The name of the Internet service provider (ISP).
         /// 
-        /// You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list. If you do not set this parameter, all regions are queried.
+        /// You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query the most recent region list. If you do not set this parameter, all regions are queried.
         /// </summary>
         [NameInMap("IspNameEn")]
         [Validation(Required=false)]
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// <summary>
         /// The name of the region.
         /// 
-        /// You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list. If you do not set this parameter, all regions are queried.
+        /// You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query the most recent region list. If you do not set this parameter, all regions are queried.
         /// </summary>
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]

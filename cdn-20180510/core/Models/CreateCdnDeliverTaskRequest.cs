@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class CreateCdnDeliverTaskRequest : TeaModel {
         /// <summary>
         /// The method that is used to send operations reports. Operations reports are sent to you only by email. The settings must be escaped in JSON.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Deliver")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The name of the tracking task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The operations reports that are tracked by the task. The data must be escaped in JSON.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Reports")]
         [Validation(Required=false)]
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Schedule")]
         [Validation(Required=false)]

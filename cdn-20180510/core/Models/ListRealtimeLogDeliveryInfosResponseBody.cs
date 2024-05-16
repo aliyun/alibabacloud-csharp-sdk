@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](~~144883~~).
+                /// The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](https://help.aliyun.com/document_detail/144883.html).
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]

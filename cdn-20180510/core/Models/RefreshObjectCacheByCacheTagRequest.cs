@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class RefreshObjectCacheByCacheTagRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CacheTag")]
         [Validation(Required=false)]
         public string CacheTag { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

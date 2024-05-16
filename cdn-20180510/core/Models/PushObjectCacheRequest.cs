@@ -38,7 +38,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// <summary>
         /// The URLs based on which content is prefetched. Format: **accelerated domain name/files to be prefetched**.
         /// 
-        /// > Separate URLs with line feeds (\n or \r\n). Each object path can be up to 1,024 characters in length.
+        /// > Separate URLs with line feeds (\\n or \\r\\n). Each object path can be up to 1,024 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ObjectPath")]
         [Validation(Required=false)]

@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// <summary>
         /// The name of the region. Separate multiple region names with commas (,).
         /// 
-        /// You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
+        /// You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query regions.
         /// </summary>
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]

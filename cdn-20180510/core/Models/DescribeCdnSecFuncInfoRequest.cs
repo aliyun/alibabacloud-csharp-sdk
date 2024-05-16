@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// 
         /// *   en: English
         /// *   zh: Chinese
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// 
         /// *   CipherSuiteGroupCustomize: custom cipher suite.
         /// *   CipherSuiteGroupStrict: dustom cipher suite.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecFuncType")]
         [Validation(Required=false)]

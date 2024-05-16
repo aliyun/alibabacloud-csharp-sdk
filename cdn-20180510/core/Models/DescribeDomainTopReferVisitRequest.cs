@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class DescribeDomainTopReferVisitRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

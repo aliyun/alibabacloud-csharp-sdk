@@ -52,15 +52,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](~~27272~~).
-          * *   The domain name that you want to add has a valid Internet Content Provider (ICP) number.
-          * *   You can add only one domain name to Alibaba Cloud CDN in each call. Each Alibaba Cloud account can add a maximum of 50 domain names to Alibaba Cloud CDN.
-          * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review will be completed by the end of the next business day after you submit the application.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request AddCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddCdnDomainResponse
+         * @summary Adds a domain name to accelerate.
+         *
+         * @description *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](https://help.aliyun.com/document_detail/27272.html).
+         * *   The domain name that you want to add has a valid Internet Content Provider (ICP) number.
+         * *   You can add only one domain name to Alibaba Cloud CDN in each call. Each Alibaba Cloud account can add a maximum of 50 domain names to Alibaba Cloud CDN.
+         * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review will be completed by the end of the next business day after you submit the application.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request AddCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddCdnDomainResponse
          */
         public AddCdnDomainResponse AddCdnDomainWithOptions(AddCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -130,15 +132,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](~~27272~~).
-          * *   The domain name that you want to add has a valid Internet Content Provider (ICP) number.
-          * *   You can add only one domain name to Alibaba Cloud CDN in each call. Each Alibaba Cloud account can add a maximum of 50 domain names to Alibaba Cloud CDN.
-          * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review will be completed by the end of the next business day after you submit the application.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request AddCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddCdnDomainResponse
+         * @summary Adds a domain name to accelerate.
+         *
+         * @description *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](https://help.aliyun.com/document_detail/27272.html).
+         * *   The domain name that you want to add has a valid Internet Content Provider (ICP) number.
+         * *   You can add only one domain name to Alibaba Cloud CDN in each call. Each Alibaba Cloud account can add a maximum of 50 domain names to Alibaba Cloud CDN.
+         * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review will be completed by the end of the next business day after you submit the application.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request AddCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddCdnDomainResponse
          */
         public async Task<AddCdnDomainResponse> AddCdnDomainWithOptionsAsync(AddCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -208,14 +212,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](~~27272~~).
-          * *   The domain name that you want to add has a valid Internet Content Provider (ICP) number.
-          * *   You can add only one domain name to Alibaba Cloud CDN in each call. Each Alibaba Cloud account can add a maximum of 50 domain names to Alibaba Cloud CDN.
-          * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review will be completed by the end of the next business day after you submit the application.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request AddCdnDomainRequest
-          * @return AddCdnDomainResponse
+         * @summary Adds a domain name to accelerate.
+         *
+         * @description *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](https://help.aliyun.com/document_detail/27272.html).
+         * *   The domain name that you want to add has a valid Internet Content Provider (ICP) number.
+         * *   You can add only one domain name to Alibaba Cloud CDN in each call. Each Alibaba Cloud account can add a maximum of 50 domain names to Alibaba Cloud CDN.
+         * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review will be completed by the end of the next business day after you submit the application.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request AddCdnDomainRequest
+         * @return AddCdnDomainResponse
          */
         public AddCdnDomainResponse AddCdnDomain(AddCdnDomainRequest request)
         {
@@ -224,14 +230,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](~~27272~~).
-          * *   The domain name that you want to add has a valid Internet Content Provider (ICP) number.
-          * *   You can add only one domain name to Alibaba Cloud CDN in each call. Each Alibaba Cloud account can add a maximum of 50 domain names to Alibaba Cloud CDN.
-          * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review will be completed by the end of the next business day after you submit the application.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request AddCdnDomainRequest
-          * @return AddCdnDomainResponse
+         * @summary Adds a domain name to accelerate.
+         *
+         * @description *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](https://help.aliyun.com/document_detail/27272.html).
+         * *   The domain name that you want to add has a valid Internet Content Provider (ICP) number.
+         * *   You can add only one domain name to Alibaba Cloud CDN in each call. Each Alibaba Cloud account can add a maximum of 50 domain names to Alibaba Cloud CDN.
+         * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review will be completed by the end of the next business day after you submit the application.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request AddCdnDomainRequest
+         * @return AddCdnDomainResponse
          */
         public async Task<AddCdnDomainResponse> AddCdnDomainAsync(AddCdnDomainRequest request)
         {
@@ -239,6 +247,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await AddCdnDomainWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Adds a Function Compute trigger.
+         *
+         * @param request AddFCTriggerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddFCTriggerResponse
+         */
         public AddFCTriggerResponse AddFCTriggerWithOptions(AddFCTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -292,6 +307,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<AddFCTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Adds a Function Compute trigger.
+         *
+         * @param request AddFCTriggerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddFCTriggerResponse
+         */
         public async Task<AddFCTriggerResponse> AddFCTriggerWithOptionsAsync(AddFCTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -345,12 +367,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<AddFCTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Adds a Function Compute trigger.
+         *
+         * @param request AddFCTriggerRequest
+         * @return AddFCTriggerResponse
+         */
         public AddFCTriggerResponse AddFCTrigger(AddFCTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddFCTriggerWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Adds a Function Compute trigger.
+         *
+         * @param request AddFCTriggerRequest
+         * @return AddFCTriggerResponse
+         */
         public async Task<AddFCTriggerResponse> AddFCTriggerAsync(AddFCTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -358,15 +392,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](~~27272~~).
-          * *   If the acceleration region is Chinese Mainland Only or Global, you must apply for an ICP filing for the domain name.
-          * *   You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.
-          * *   For more information, see [Add a domain name](~~122181~~).
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request BatchAddCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchAddCdnDomainResponse
+         * @summary Adds one or more domain names to Alibaba Cloud CDN. You can add a maximum of 50 domain names at a time.
+         *
+         * @description *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](https://help.aliyun.com/document_detail/27272.html).
+         * *   If the acceleration region is Chinese Mainland Only or Global, you must apply for an ICP filing for the domain name.
+         * *   You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.
+         * *   For more information, see [Add a domain name](https://help.aliyun.com/document_detail/122181.html).
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request BatchAddCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchAddCdnDomainResponse
          */
         public BatchAddCdnDomainResponse BatchAddCdnDomainWithOptions(BatchAddCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -432,15 +468,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](~~27272~~).
-          * *   If the acceleration region is Chinese Mainland Only or Global, you must apply for an ICP filing for the domain name.
-          * *   You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.
-          * *   For more information, see [Add a domain name](~~122181~~).
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request BatchAddCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchAddCdnDomainResponse
+         * @summary Adds one or more domain names to Alibaba Cloud CDN. You can add a maximum of 50 domain names at a time.
+         *
+         * @description *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](https://help.aliyun.com/document_detail/27272.html).
+         * *   If the acceleration region is Chinese Mainland Only or Global, you must apply for an ICP filing for the domain name.
+         * *   You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.
+         * *   For more information, see [Add a domain name](https://help.aliyun.com/document_detail/122181.html).
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request BatchAddCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchAddCdnDomainResponse
          */
         public async Task<BatchAddCdnDomainResponse> BatchAddCdnDomainWithOptionsAsync(BatchAddCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -506,14 +544,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](~~27272~~).
-          * *   If the acceleration region is Chinese Mainland Only or Global, you must apply for an ICP filing for the domain name.
-          * *   You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.
-          * *   For more information, see [Add a domain name](~~122181~~).
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request BatchAddCdnDomainRequest
-          * @return BatchAddCdnDomainResponse
+         * @summary Adds one or more domain names to Alibaba Cloud CDN. You can add a maximum of 50 domain names at a time.
+         *
+         * @description *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](https://help.aliyun.com/document_detail/27272.html).
+         * *   If the acceleration region is Chinese Mainland Only or Global, you must apply for an ICP filing for the domain name.
+         * *   You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.
+         * *   For more information, see [Add a domain name](https://help.aliyun.com/document_detail/122181.html).
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request BatchAddCdnDomainRequest
+         * @return BatchAddCdnDomainResponse
          */
         public BatchAddCdnDomainResponse BatchAddCdnDomain(BatchAddCdnDomainRequest request)
         {
@@ -522,14 +562,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](~~27272~~).
-          * *   If the acceleration region is Chinese Mainland Only or Global, you must apply for an ICP filing for the domain name.
-          * *   You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.
-          * *   For more information, see [Add a domain name](~~122181~~).
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request BatchAddCdnDomainRequest
-          * @return BatchAddCdnDomainResponse
+         * @summary Adds one or more domain names to Alibaba Cloud CDN. You can add a maximum of 50 domain names at a time.
+         *
+         * @description *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](https://help.aliyun.com/document_detail/27272.html).
+         * *   If the acceleration region is Chinese Mainland Only or Global, you must apply for an ICP filing for the domain name.
+         * *   You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.
+         * *   For more information, see [Add a domain name](https://help.aliyun.com/document_detail/122181.html).
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request BatchAddCdnDomainRequest
+         * @return BatchAddCdnDomainResponse
          */
         public async Task<BatchAddCdnDomainResponse> BatchAddCdnDomainAsync(BatchAddCdnDomainRequest request)
         {
@@ -538,12 +580,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can specify up to 50 domain names in each request.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request BatchDeleteCdnDomainConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchDeleteCdnDomainConfigResponse
+         * @summary Deletes configurations of multiple accelerated domain names at a time.
+         *
+         * @description *   You can specify up to 50 domain names in each request.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request BatchDeleteCdnDomainConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchDeleteCdnDomainConfigResponse
          */
         public BatchDeleteCdnDomainConfigResponse BatchDeleteCdnDomainConfigWithOptions(BatchDeleteCdnDomainConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -589,12 +633,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can specify up to 50 domain names in each request.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request BatchDeleteCdnDomainConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchDeleteCdnDomainConfigResponse
+         * @summary Deletes configurations of multiple accelerated domain names at a time.
+         *
+         * @description *   You can specify up to 50 domain names in each request.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request BatchDeleteCdnDomainConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchDeleteCdnDomainConfigResponse
          */
         public async Task<BatchDeleteCdnDomainConfigResponse> BatchDeleteCdnDomainConfigWithOptionsAsync(BatchDeleteCdnDomainConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -640,11 +686,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can specify up to 50 domain names in each request.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request BatchDeleteCdnDomainConfigRequest
-          * @return BatchDeleteCdnDomainConfigResponse
+         * @summary Deletes configurations of multiple accelerated domain names at a time.
+         *
+         * @description *   You can specify up to 50 domain names in each request.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request BatchDeleteCdnDomainConfigRequest
+         * @return BatchDeleteCdnDomainConfigResponse
          */
         public BatchDeleteCdnDomainConfigResponse BatchDeleteCdnDomainConfig(BatchDeleteCdnDomainConfigRequest request)
         {
@@ -653,11 +701,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can specify up to 50 domain names in each request.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request BatchDeleteCdnDomainConfigRequest
-          * @return BatchDeleteCdnDomainConfigResponse
+         * @summary Deletes configurations of multiple accelerated domain names at a time.
+         *
+         * @description *   You can specify up to 50 domain names in each request.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request BatchDeleteCdnDomainConfigRequest
+         * @return BatchDeleteCdnDomainConfigResponse
          */
         public async Task<BatchDeleteCdnDomainConfigResponse> BatchDeleteCdnDomainConfigAsync(BatchDeleteCdnDomainConfigRequest request)
         {
@@ -666,11 +716,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >The maximum number of times that each user can call this operation per second is 20.
-          *
-          * @param request BatchDescribeCdnIpInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchDescribeCdnIpInfoResponse
+         * @summary Queries whether one or more IP addresses are assigned to Alibaba Cloud CDN.
+         *
+         * @description >The maximum number of times that each user can call this operation per second is 20.
+         *
+         * @param request BatchDescribeCdnIpInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchDescribeCdnIpInfoResponse
          */
         public BatchDescribeCdnIpInfoResponse BatchDescribeCdnIpInfoWithOptions(BatchDescribeCdnIpInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -679,6 +731,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpAddrList))
             {
                 query["IpAddrList"] = request.IpAddrList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -700,11 +756,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >The maximum number of times that each user can call this operation per second is 20.
-          *
-          * @param request BatchDescribeCdnIpInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchDescribeCdnIpInfoResponse
+         * @summary Queries whether one or more IP addresses are assigned to Alibaba Cloud CDN.
+         *
+         * @description >The maximum number of times that each user can call this operation per second is 20.
+         *
+         * @param request BatchDescribeCdnIpInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchDescribeCdnIpInfoResponse
          */
         public async Task<BatchDescribeCdnIpInfoResponse> BatchDescribeCdnIpInfoWithOptionsAsync(BatchDescribeCdnIpInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -713,6 +771,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpAddrList))
             {
                 query["IpAddrList"] = request.IpAddrList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -734,10 +796,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >The maximum number of times that each user can call this operation per second is 20.
-          *
-          * @param request BatchDescribeCdnIpInfoRequest
-          * @return BatchDescribeCdnIpInfoResponse
+         * @summary Queries whether one or more IP addresses are assigned to Alibaba Cloud CDN.
+         *
+         * @description >The maximum number of times that each user can call this operation per second is 20.
+         *
+         * @param request BatchDescribeCdnIpInfoRequest
+         * @return BatchDescribeCdnIpInfoResponse
          */
         public BatchDescribeCdnIpInfoResponse BatchDescribeCdnIpInfo(BatchDescribeCdnIpInfoRequest request)
         {
@@ -746,10 +810,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >The maximum number of times that each user can call this operation per second is 20.
-          *
-          * @param request BatchDescribeCdnIpInfoRequest
-          * @return BatchDescribeCdnIpInfoResponse
+         * @summary Queries whether one or more IP addresses are assigned to Alibaba Cloud CDN.
+         *
+         * @description >The maximum number of times that each user can call this operation per second is 20.
+         *
+         * @param request BatchDescribeCdnIpInfoRequest
+         * @return BatchDescribeCdnIpInfoResponse
          */
         public async Task<BatchDescribeCdnIpInfoResponse> BatchDescribeCdnIpInfoAsync(BatchDescribeCdnIpInfoRequest request)
         {
@@ -758,13 +824,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.
-          * *   If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see [Usage notes on ConfigId](~~388994~~).
-          *
-          * @param request BatchSetCdnDomainConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchSetCdnDomainConfigResponse
+         * @summary Configures multiple accelerated domain names at a time.
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         * *   You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.
+         * *   If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see [Usage notes on ConfigId](https://help.aliyun.com/document_detail/388994.html).
+         *
+         * @param request BatchSetCdnDomainConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchSetCdnDomainConfigResponse
          */
         public BatchSetCdnDomainConfigResponse BatchSetCdnDomainConfigWithOptions(BatchSetCdnDomainConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -810,13 +878,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.
-          * *   If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see [Usage notes on ConfigId](~~388994~~).
-          *
-          * @param request BatchSetCdnDomainConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchSetCdnDomainConfigResponse
+         * @summary Configures multiple accelerated domain names at a time.
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         * *   You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.
+         * *   If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see [Usage notes on ConfigId](https://help.aliyun.com/document_detail/388994.html).
+         *
+         * @param request BatchSetCdnDomainConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchSetCdnDomainConfigResponse
          */
         public async Task<BatchSetCdnDomainConfigResponse> BatchSetCdnDomainConfigWithOptionsAsync(BatchSetCdnDomainConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -862,12 +932,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.
-          * *   If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see [Usage notes on ConfigId](~~388994~~).
-          *
-          * @param request BatchSetCdnDomainConfigRequest
-          * @return BatchSetCdnDomainConfigResponse
+         * @summary Configures multiple accelerated domain names at a time.
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         * *   You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.
+         * *   If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see [Usage notes on ConfigId](https://help.aliyun.com/document_detail/388994.html).
+         *
+         * @param request BatchSetCdnDomainConfigRequest
+         * @return BatchSetCdnDomainConfigResponse
          */
         public BatchSetCdnDomainConfigResponse BatchSetCdnDomainConfig(BatchSetCdnDomainConfigRequest request)
         {
@@ -876,12 +948,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.
-          * *   If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see [Usage notes on ConfigId](~~388994~~).
-          *
-          * @param request BatchSetCdnDomainConfigRequest
-          * @return BatchSetCdnDomainConfigResponse
+         * @summary Configures multiple accelerated domain names at a time.
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         * *   You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.
+         * *   If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see [Usage notes on ConfigId](https://help.aliyun.com/document_detail/388994.html).
+         *
+         * @param request BatchSetCdnDomainConfigRequest
+         * @return BatchSetCdnDomainConfigResponse
          */
         public async Task<BatchSetCdnDomainConfigResponse> BatchSetCdnDomainConfigAsync(BatchSetCdnDomainConfigRequest request)
         {
@@ -890,13 +964,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > *   You can call this operation up to 10 times per second per account.
-          * >*   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
-          * >*   If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.
-          *
-          * @param request BatchSetCdnDomainServerCertificateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchSetCdnDomainServerCertificateResponse
+         * @summary Enables, disables, or configures the SSL certificates of one or more accelerated domain names at a time.
+         *
+         * @description > *   You can call this operation up to 10 times per second per account.
+         * >*   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
+         * >*   If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.
+         *
+         * @param request BatchSetCdnDomainServerCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchSetCdnDomainServerCertificateResponse
          */
         public BatchSetCdnDomainServerCertificateResponse BatchSetCdnDomainServerCertificateWithOptions(BatchSetCdnDomainServerCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -962,13 +1038,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > *   You can call this operation up to 10 times per second per account.
-          * >*   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
-          * >*   If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.
-          *
-          * @param request BatchSetCdnDomainServerCertificateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchSetCdnDomainServerCertificateResponse
+         * @summary Enables, disables, or configures the SSL certificates of one or more accelerated domain names at a time.
+         *
+         * @description > *   You can call this operation up to 10 times per second per account.
+         * >*   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
+         * >*   If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.
+         *
+         * @param request BatchSetCdnDomainServerCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchSetCdnDomainServerCertificateResponse
          */
         public async Task<BatchSetCdnDomainServerCertificateResponse> BatchSetCdnDomainServerCertificateWithOptionsAsync(BatchSetCdnDomainServerCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1034,12 +1112,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > *   You can call this operation up to 10 times per second per account.
-          * >*   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
-          * >*   If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.
-          *
-          * @param request BatchSetCdnDomainServerCertificateRequest
-          * @return BatchSetCdnDomainServerCertificateResponse
+         * @summary Enables, disables, or configures the SSL certificates of one or more accelerated domain names at a time.
+         *
+         * @description > *   You can call this operation up to 10 times per second per account.
+         * >*   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
+         * >*   If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.
+         *
+         * @param request BatchSetCdnDomainServerCertificateRequest
+         * @return BatchSetCdnDomainServerCertificateResponse
          */
         public BatchSetCdnDomainServerCertificateResponse BatchSetCdnDomainServerCertificate(BatchSetCdnDomainServerCertificateRequest request)
         {
@@ -1048,12 +1128,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > *   You can call this operation up to 10 times per second per account.
-          * >*   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
-          * >*   If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.
-          *
-          * @param request BatchSetCdnDomainServerCertificateRequest
-          * @return BatchSetCdnDomainServerCertificateResponse
+         * @summary Enables, disables, or configures the SSL certificates of one or more accelerated domain names at a time.
+         *
+         * @description > *   You can call this operation up to 10 times per second per account.
+         * >*   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
+         * >*   If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.
+         *
+         * @param request BatchSetCdnDomainServerCertificateRequest
+         * @return BatchSetCdnDomainServerCertificateResponse
          */
         public async Task<BatchSetCdnDomainServerCertificateResponse> BatchSetCdnDomainServerCertificateAsync(BatchSetCdnDomainServerCertificateRequest request)
         {
@@ -1062,13 +1144,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If a domain name specified in the request is in an invalid state or your account has an overdue payment, the domain name cannot be enabled.
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify up to 50 domain names in each request.
-          *
-          * @param request BatchStartCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchStartCdnDomainResponse
+         * @summary Enables one or more domain names at a time. After a domain name is enabled, the value of the DomainStatus parameter is changed to Online.
+         *
+         * @description *   If a domain name specified in the request is in an invalid state or your account has an overdue payment, the domain name cannot be enabled.
+         * *   You can call this operation up to 30 times per second per account.
+         * *   You can specify up to 50 domain names in each request.
+         *
+         * @param request BatchStartCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchStartCdnDomainResponse
          */
         public BatchStartCdnDomainResponse BatchStartCdnDomainWithOptions(BatchStartCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1106,13 +1190,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If a domain name specified in the request is in an invalid state or your account has an overdue payment, the domain name cannot be enabled.
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify up to 50 domain names in each request.
-          *
-          * @param request BatchStartCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchStartCdnDomainResponse
+         * @summary Enables one or more domain names at a time. After a domain name is enabled, the value of the DomainStatus parameter is changed to Online.
+         *
+         * @description *   If a domain name specified in the request is in an invalid state or your account has an overdue payment, the domain name cannot be enabled.
+         * *   You can call this operation up to 30 times per second per account.
+         * *   You can specify up to 50 domain names in each request.
+         *
+         * @param request BatchStartCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchStartCdnDomainResponse
          */
         public async Task<BatchStartCdnDomainResponse> BatchStartCdnDomainWithOptionsAsync(BatchStartCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1150,12 +1236,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If a domain name specified in the request is in an invalid state or your account has an overdue payment, the domain name cannot be enabled.
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify up to 50 domain names in each request.
-          *
-          * @param request BatchStartCdnDomainRequest
-          * @return BatchStartCdnDomainResponse
+         * @summary Enables one or more domain names at a time. After a domain name is enabled, the value of the DomainStatus parameter is changed to Online.
+         *
+         * @description *   If a domain name specified in the request is in an invalid state or your account has an overdue payment, the domain name cannot be enabled.
+         * *   You can call this operation up to 30 times per second per account.
+         * *   You can specify up to 50 domain names in each request.
+         *
+         * @param request BatchStartCdnDomainRequest
+         * @return BatchStartCdnDomainResponse
          */
         public BatchStartCdnDomainResponse BatchStartCdnDomain(BatchStartCdnDomainRequest request)
         {
@@ -1164,12 +1252,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If a domain name specified in the request is in an invalid state or your account has an overdue payment, the domain name cannot be enabled.
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify up to 50 domain names in each request.
-          *
-          * @param request BatchStartCdnDomainRequest
-          * @return BatchStartCdnDomainResponse
+         * @summary Enables one or more domain names at a time. After a domain name is enabled, the value of the DomainStatus parameter is changed to Online.
+         *
+         * @description *   If a domain name specified in the request is in an invalid state or your account has an overdue payment, the domain name cannot be enabled.
+         * *   You can call this operation up to 30 times per second per account.
+         * *   You can specify up to 50 domain names in each request.
+         *
+         * @param request BatchStartCdnDomainRequest
+         * @return BatchStartCdnDomainResponse
          */
         public async Task<BatchStartCdnDomainResponse> BatchStartCdnDomainAsync(BatchStartCdnDomainRequest request)
         {
@@ -1178,14 +1268,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.
-          * *   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify up to 50 domain names in each request.
-          *
-          * @param request BatchStopCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchStopCdnDomainResponse
+         * @summary Disables one or more accelerated domain names at a time. After an accelerated domain name is disabled, the value of the DomainStatus parameter is changed to Offline.
+         *
+         * @description *   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.
+         * *   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
+         * *   You can call this operation up to 30 times per second per account.
+         * *   You can specify up to 50 domain names in each request.
+         *
+         * @param request BatchStopCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchStopCdnDomainResponse
          */
         public BatchStopCdnDomainResponse BatchStopCdnDomainWithOptions(BatchStopCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1223,14 +1315,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.
-          * *   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify up to 50 domain names in each request.
-          *
-          * @param request BatchStopCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchStopCdnDomainResponse
+         * @summary Disables one or more accelerated domain names at a time. After an accelerated domain name is disabled, the value of the DomainStatus parameter is changed to Offline.
+         *
+         * @description *   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.
+         * *   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
+         * *   You can call this operation up to 30 times per second per account.
+         * *   You can specify up to 50 domain names in each request.
+         *
+         * @param request BatchStopCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchStopCdnDomainResponse
          */
         public async Task<BatchStopCdnDomainResponse> BatchStopCdnDomainWithOptionsAsync(BatchStopCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1268,13 +1362,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.
-          * *   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify up to 50 domain names in each request.
-          *
-          * @param request BatchStopCdnDomainRequest
-          * @return BatchStopCdnDomainResponse
+         * @summary Disables one or more accelerated domain names at a time. After an accelerated domain name is disabled, the value of the DomainStatus parameter is changed to Offline.
+         *
+         * @description *   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.
+         * *   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
+         * *   You can call this operation up to 30 times per second per account.
+         * *   You can specify up to 50 domain names in each request.
+         *
+         * @param request BatchStopCdnDomainRequest
+         * @return BatchStopCdnDomainResponse
          */
         public BatchStopCdnDomainResponse BatchStopCdnDomain(BatchStopCdnDomainRequest request)
         {
@@ -1283,13 +1379,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.
-          * *   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify up to 50 domain names in each request.
-          *
-          * @param request BatchStopCdnDomainRequest
-          * @return BatchStopCdnDomainResponse
+         * @summary Disables one or more accelerated domain names at a time. After an accelerated domain name is disabled, the value of the DomainStatus parameter is changed to Offline.
+         *
+         * @description *   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.
+         * *   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
+         * *   You can call this operation up to 30 times per second per account.
+         * *   You can specify up to 50 domain names in each request.
+         *
+         * @param request BatchStopCdnDomainRequest
+         * @return BatchStopCdnDomainResponse
          */
         public async Task<BatchStopCdnDomainResponse> BatchStopCdnDomainAsync(BatchStopCdnDomainRequest request)
         {
@@ -1298,12 +1396,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
-          *
-          * @param request BatchUpdateCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchUpdateCdnDomainResponse
+         * @summary Updates the configurations of multiple accelerated domain names at a time.
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+         *
+         * @param request BatchUpdateCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchUpdateCdnDomainResponse
          */
         public BatchUpdateCdnDomainResponse BatchUpdateCdnDomainWithOptions(BatchUpdateCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1353,12 +1453,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
-          *
-          * @param request BatchUpdateCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return BatchUpdateCdnDomainResponse
+         * @summary Updates the configurations of multiple accelerated domain names at a time.
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+         *
+         * @param request BatchUpdateCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchUpdateCdnDomainResponse
          */
         public async Task<BatchUpdateCdnDomainResponse> BatchUpdateCdnDomainWithOptionsAsync(BatchUpdateCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1408,11 +1510,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
-          *
-          * @param request BatchUpdateCdnDomainRequest
-          * @return BatchUpdateCdnDomainResponse
+         * @summary Updates the configurations of multiple accelerated domain names at a time.
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+         *
+         * @param request BatchUpdateCdnDomainRequest
+         * @return BatchUpdateCdnDomainResponse
          */
         public BatchUpdateCdnDomainResponse BatchUpdateCdnDomain(BatchUpdateCdnDomainRequest request)
         {
@@ -1421,11 +1525,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
-          *
-          * @param request BatchUpdateCdnDomainRequest
-          * @return BatchUpdateCdnDomainResponse
+         * @summary Updates the configurations of multiple accelerated domain names at a time.
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+         *
+         * @param request BatchUpdateCdnDomainRequest
+         * @return BatchUpdateCdnDomainResponse
          */
         public async Task<BatchUpdateCdnDomainResponse> BatchUpdateCdnDomainAsync(BatchUpdateCdnDomainRequest request)
         {
@@ -1433,6 +1539,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await BatchUpdateCdnDomainWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Registers the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for an Alibaba Cloud CDN-accelerated domain name. After the registration is successful, the routing center generates the dynamic routing information and send it to DCDN points of presence (POPs). This is a prerequisite for you to transfer a domain name from Alibaba Cloud CDN to DCDN.
+         *
+         * @param request CdnMigrateRegisterRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CdnMigrateRegisterResponse
+         */
         public CdnMigrateRegisterResponse CdnMigrateRegisterWithOptions(CdnMigrateRegisterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1460,6 +1573,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<CdnMigrateRegisterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Registers the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for an Alibaba Cloud CDN-accelerated domain name. After the registration is successful, the routing center generates the dynamic routing information and send it to DCDN points of presence (POPs). This is a prerequisite for you to transfer a domain name from Alibaba Cloud CDN to DCDN.
+         *
+         * @param request CdnMigrateRegisterRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CdnMigrateRegisterResponse
+         */
         public async Task<CdnMigrateRegisterResponse> CdnMigrateRegisterWithOptionsAsync(CdnMigrateRegisterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1487,18 +1607,37 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<CdnMigrateRegisterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Registers the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for an Alibaba Cloud CDN-accelerated domain name. After the registration is successful, the routing center generates the dynamic routing information and send it to DCDN points of presence (POPs). This is a prerequisite for you to transfer a domain name from Alibaba Cloud CDN to DCDN.
+         *
+         * @param request CdnMigrateRegisterRequest
+         * @return CdnMigrateRegisterResponse
+         */
         public CdnMigrateRegisterResponse CdnMigrateRegister(CdnMigrateRegisterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CdnMigrateRegisterWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Registers the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for an Alibaba Cloud CDN-accelerated domain name. After the registration is successful, the routing center generates the dynamic routing information and send it to DCDN points of presence (POPs). This is a prerequisite for you to transfer a domain name from Alibaba Cloud CDN to DCDN.
+         *
+         * @param request CdnMigrateRegisterRequest
+         * @return CdnMigrateRegisterResponse
+         */
         public async Task<CdnMigrateRegisterResponse> CdnMigrateRegisterAsync(CdnMigrateRegisterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CdnMigrateRegisterWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Transfer a domain name from Alibaba Cloud CDN to DCDN.
+         *
+         * @param request ChangeCdnDomainToDcdnRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ChangeCdnDomainToDcdnResponse
+         */
         public ChangeCdnDomainToDcdnResponse ChangeCdnDomainToDcdnWithOptions(ChangeCdnDomainToDcdnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1542,6 +1681,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<ChangeCdnDomainToDcdnResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Transfer a domain name from Alibaba Cloud CDN to DCDN.
+         *
+         * @param request ChangeCdnDomainToDcdnRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ChangeCdnDomainToDcdnResponse
+         */
         public async Task<ChangeCdnDomainToDcdnResponse> ChangeCdnDomainToDcdnWithOptionsAsync(ChangeCdnDomainToDcdnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1585,18 +1731,37 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<ChangeCdnDomainToDcdnResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Transfer a domain name from Alibaba Cloud CDN to DCDN.
+         *
+         * @param request ChangeCdnDomainToDcdnRequest
+         * @return ChangeCdnDomainToDcdnResponse
+         */
         public ChangeCdnDomainToDcdnResponse ChangeCdnDomainToDcdn(ChangeCdnDomainToDcdnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeCdnDomainToDcdnWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Transfer a domain name from Alibaba Cloud CDN to DCDN.
+         *
+         * @param request ChangeCdnDomainToDcdnRequest
+         * @return ChangeCdnDomainToDcdnResponse
+         */
         public async Task<ChangeCdnDomainToDcdnResponse> ChangeCdnDomainToDcdnAsync(ChangeCdnDomainToDcdnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ChangeCdnDomainToDcdnWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Checks whether a domain name exists.
+         *
+         * @param request CheckCdnDomainExistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckCdnDomainExistResponse
+         */
         public CheckCdnDomainExistResponse CheckCdnDomainExistWithOptions(CheckCdnDomainExistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1636,6 +1801,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<CheckCdnDomainExistResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Checks whether a domain name exists.
+         *
+         * @param request CheckCdnDomainExistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckCdnDomainExistResponse
+         */
         public async Task<CheckCdnDomainExistResponse> CheckCdnDomainExistWithOptionsAsync(CheckCdnDomainExistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1675,18 +1847,37 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<CheckCdnDomainExistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Checks whether a domain name exists.
+         *
+         * @param request CheckCdnDomainExistRequest
+         * @return CheckCdnDomainExistResponse
+         */
         public CheckCdnDomainExistResponse CheckCdnDomainExist(CheckCdnDomainExistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckCdnDomainExistWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Checks whether a domain name exists.
+         *
+         * @param request CheckCdnDomainExistRequest
+         * @return CheckCdnDomainExistResponse
+         */
         public async Task<CheckCdnDomainExistResponse> CheckCdnDomainExistAsync(CheckCdnDomainExistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckCdnDomainExistWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Checks whether an ICP filing is obtained for the domain name.
+         *
+         * @param request CheckCdnDomainICPRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckCdnDomainICPResponse
+         */
         public CheckCdnDomainICPResponse CheckCdnDomainICPWithOptions(CheckCdnDomainICPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1726,6 +1917,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<CheckCdnDomainICPResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Checks whether an ICP filing is obtained for the domain name.
+         *
+         * @param request CheckCdnDomainICPRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckCdnDomainICPResponse
+         */
         public async Task<CheckCdnDomainICPResponse> CheckCdnDomainICPWithOptionsAsync(CheckCdnDomainICPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1765,12 +1963,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<CheckCdnDomainICPResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Checks whether an ICP filing is obtained for the domain name.
+         *
+         * @param request CheckCdnDomainICPRequest
+         * @return CheckCdnDomainICPResponse
+         */
         public CheckCdnDomainICPResponse CheckCdnDomainICP(CheckCdnDomainICPRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckCdnDomainICPWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Checks whether an ICP filing is obtained for the domain name.
+         *
+         * @param request CheckCdnDomainICPRequest
+         * @return CheckCdnDomainICPResponse
+         */
         public async Task<CheckCdnDomainICPResponse> CheckCdnDomainICPAsync(CheckCdnDomainICPRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1778,11 +1988,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request CreateCdnCertificateSigningRequestRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateCdnCertificateSigningRequestResponse
+         * @summary Creates a certificate signing request (CSR).
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request CreateCdnCertificateSigningRequestRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCdnCertificateSigningRequestResponse
          */
         public CreateCdnCertificateSigningRequestResponse CreateCdnCertificateSigningRequestWithOptions(CreateCdnCertificateSigningRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1840,11 +2052,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request CreateCdnCertificateSigningRequestRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateCdnCertificateSigningRequestResponse
+         * @summary Creates a certificate signing request (CSR).
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request CreateCdnCertificateSigningRequestRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCdnCertificateSigningRequestResponse
          */
         public async Task<CreateCdnCertificateSigningRequestResponse> CreateCdnCertificateSigningRequestWithOptionsAsync(CreateCdnCertificateSigningRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1902,10 +2116,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request CreateCdnCertificateSigningRequestRequest
-          * @return CreateCdnCertificateSigningRequestResponse
+         * @summary Creates a certificate signing request (CSR).
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request CreateCdnCertificateSigningRequestRequest
+         * @return CreateCdnCertificateSigningRequestResponse
          */
         public CreateCdnCertificateSigningRequestResponse CreateCdnCertificateSigningRequest(CreateCdnCertificateSigningRequestRequest request)
         {
@@ -1914,10 +2130,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request CreateCdnCertificateSigningRequestRequest
-          * @return CreateCdnCertificateSigningRequestResponse
+         * @summary Creates a certificate signing request (CSR).
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request CreateCdnCertificateSigningRequestRequest
+         * @return CreateCdnCertificateSigningRequestResponse
          */
         public async Task<CreateCdnCertificateSigningRequestResponse> CreateCdnCertificateSigningRequestAsync(CreateCdnCertificateSigningRequestRequest request)
         {
@@ -1926,11 +2144,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request CreateCdnDeliverTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateCdnDeliverTaskResponse
+         * @summary Creates a tracking task. After you create a tracking task, the system sends operations reports to you by email on a regular basis.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request CreateCdnDeliverTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCdnDeliverTaskResponse
          */
         public CreateCdnDeliverTaskResponse CreateCdnDeliverTaskWithOptions(CreateCdnDeliverTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1976,11 +2196,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request CreateCdnDeliverTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateCdnDeliverTaskResponse
+         * @summary Creates a tracking task. After you create a tracking task, the system sends operations reports to you by email on a regular basis.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request CreateCdnDeliverTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCdnDeliverTaskResponse
          */
         public async Task<CreateCdnDeliverTaskResponse> CreateCdnDeliverTaskWithOptionsAsync(CreateCdnDeliverTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2026,10 +2248,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request CreateCdnDeliverTaskRequest
-          * @return CreateCdnDeliverTaskResponse
+         * @summary Creates a tracking task. After you create a tracking task, the system sends operations reports to you by email on a regular basis.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request CreateCdnDeliverTaskRequest
+         * @return CreateCdnDeliverTaskResponse
          */
         public CreateCdnDeliverTaskResponse CreateCdnDeliverTask(CreateCdnDeliverTaskRequest request)
         {
@@ -2038,10 +2262,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request CreateCdnDeliverTaskRequest
-          * @return CreateCdnDeliverTaskResponse
+         * @summary Creates a tracking task. After you create a tracking task, the system sends operations reports to you by email on a regular basis.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request CreateCdnDeliverTaskRequest
+         * @return CreateCdnDeliverTaskResponse
          */
         public async Task<CreateCdnDeliverTaskResponse> CreateCdnDeliverTaskAsync(CreateCdnDeliverTaskRequest request)
         {
@@ -2050,12 +2276,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
-          * *   You can call this operation up to three times per second per account.
-          *
-          * @param request CreateCdnSubTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateCdnSubTaskResponse
+         * @summary Creates a custom operations report.
+         *
+         * @description *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
+         * *   You can call this operation up to three times per second per account.
+         *
+         * @param request CreateCdnSubTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCdnSubTaskResponse
          */
         public CreateCdnSubTaskResponse CreateCdnSubTaskWithOptions(CreateCdnSubTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2089,12 +2317,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
-          * *   You can call this operation up to three times per second per account.
-          *
-          * @param request CreateCdnSubTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateCdnSubTaskResponse
+         * @summary Creates a custom operations report.
+         *
+         * @description *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
+         * *   You can call this operation up to three times per second per account.
+         *
+         * @param request CreateCdnSubTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCdnSubTaskResponse
          */
         public async Task<CreateCdnSubTaskResponse> CreateCdnSubTaskWithOptionsAsync(CreateCdnSubTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2128,11 +2358,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
-          * *   You can call this operation up to three times per second per account.
-          *
-          * @param request CreateCdnSubTaskRequest
-          * @return CreateCdnSubTaskResponse
+         * @summary Creates a custom operations report.
+         *
+         * @description *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
+         * *   You can call this operation up to three times per second per account.
+         *
+         * @param request CreateCdnSubTaskRequest
+         * @return CreateCdnSubTaskResponse
          */
         public CreateCdnSubTaskResponse CreateCdnSubTask(CreateCdnSubTaskRequest request)
         {
@@ -2141,11 +2373,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
-          * *   You can call this operation up to three times per second per account.
-          *
-          * @param request CreateCdnSubTaskRequest
-          * @return CreateCdnSubTaskResponse
+         * @summary Creates a custom operations report.
+         *
+         * @description *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
+         * *   You can call this operation up to three times per second per account.
+         *
+         * @param request CreateCdnSubTaskRequest
+         * @return CreateCdnSubTaskResponse
          */
         public async Task<CreateCdnSubTaskResponse> CreateCdnSubTaskAsync(CreateCdnSubTaskRequest request)
         {
@@ -2154,11 +2388,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this API operation up to 100 times per second per account.
-          *
-          * @param request CreateRealTimeLogDeliveryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateRealTimeLogDeliveryResponse
+         * @summary Enables real-time log delivery for specific accelerated domain names.
+         *
+         * @description >  You can call this API operation up to 100 times per second per account.
+         *
+         * @param request CreateRealTimeLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRealTimeLogDeliveryResponse
          */
         public CreateRealTimeLogDeliveryResponse CreateRealTimeLogDeliveryWithOptions(CreateRealTimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2184,11 +2420,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this API operation up to 100 times per second per account.
-          *
-          * @param request CreateRealTimeLogDeliveryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateRealTimeLogDeliveryResponse
+         * @summary Enables real-time log delivery for specific accelerated domain names.
+         *
+         * @description >  You can call this API operation up to 100 times per second per account.
+         *
+         * @param request CreateRealTimeLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRealTimeLogDeliveryResponse
          */
         public async Task<CreateRealTimeLogDeliveryResponse> CreateRealTimeLogDeliveryWithOptionsAsync(CreateRealTimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2214,10 +2452,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this API operation up to 100 times per second per account.
-          *
-          * @param request CreateRealTimeLogDeliveryRequest
-          * @return CreateRealTimeLogDeliveryResponse
+         * @summary Enables real-time log delivery for specific accelerated domain names.
+         *
+         * @description >  You can call this API operation up to 100 times per second per account.
+         *
+         * @param request CreateRealTimeLogDeliveryRequest
+         * @return CreateRealTimeLogDeliveryResponse
          */
         public CreateRealTimeLogDeliveryResponse CreateRealTimeLogDelivery(CreateRealTimeLogDeliveryRequest request)
         {
@@ -2226,10 +2466,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this API operation up to 100 times per second per account.
-          *
-          * @param request CreateRealTimeLogDeliveryRequest
-          * @return CreateRealTimeLogDeliveryResponse
+         * @summary Enables real-time log delivery for specific accelerated domain names.
+         *
+         * @description >  You can call this API operation up to 100 times per second per account.
+         *
+         * @param request CreateRealTimeLogDeliveryRequest
+         * @return CreateRealTimeLogDeliveryResponse
          */
         public async Task<CreateRealTimeLogDeliveryResponse> CreateRealTimeLogDeliveryAsync(CreateRealTimeLogDeliveryRequest request)
         {
@@ -2238,12 +2480,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request CreateUsageDetailDataExportTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateUsageDetailDataExportTaskResponse
+         * @summary Creates a task to export resource usage details to an Excel file.
+         *
+         * @description *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request CreateUsageDetailDataExportTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateUsageDetailDataExportTaskResponse
          */
         public CreateUsageDetailDataExportTaskResponse CreateUsageDetailDataExportTaskWithOptions(CreateUsageDetailDataExportTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2297,12 +2541,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request CreateUsageDetailDataExportTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateUsageDetailDataExportTaskResponse
+         * @summary Creates a task to export resource usage details to an Excel file.
+         *
+         * @description *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request CreateUsageDetailDataExportTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateUsageDetailDataExportTaskResponse
          */
         public async Task<CreateUsageDetailDataExportTaskResponse> CreateUsageDetailDataExportTaskWithOptionsAsync(CreateUsageDetailDataExportTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2356,11 +2602,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request CreateUsageDetailDataExportTaskRequest
-          * @return CreateUsageDetailDataExportTaskResponse
+         * @summary Creates a task to export resource usage details to an Excel file.
+         *
+         * @description *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request CreateUsageDetailDataExportTaskRequest
+         * @return CreateUsageDetailDataExportTaskResponse
          */
         public CreateUsageDetailDataExportTaskResponse CreateUsageDetailDataExportTask(CreateUsageDetailDataExportTaskRequest request)
         {
@@ -2369,11 +2617,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request CreateUsageDetailDataExportTaskRequest
-          * @return CreateUsageDetailDataExportTaskResponse
+         * @summary Creates a task to export resource usage details to an Excel file.
+         *
+         * @description *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request CreateUsageDetailDataExportTaskRequest
+         * @return CreateUsageDetailDataExportTaskResponse
          */
         public async Task<CreateUsageDetailDataExportTaskResponse> CreateUsageDetailDataExportTaskAsync(CreateUsageDetailDataExportTaskRequest request)
         {
@@ -2382,12 +2632,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request CreateUserUsageDataExportTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateUserUsageDataExportTaskResponse
+         * @summary Creates a task to export your resource usage history to a PDF file.
+         *
+         * @description *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request CreateUserUsageDataExportTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateUserUsageDataExportTaskResponse
          */
         public CreateUserUsageDataExportTaskResponse CreateUserUsageDataExportTaskWithOptions(CreateUserUsageDataExportTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2429,12 +2681,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request CreateUserUsageDataExportTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateUserUsageDataExportTaskResponse
+         * @summary Creates a task to export your resource usage history to a PDF file.
+         *
+         * @description *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request CreateUserUsageDataExportTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateUserUsageDataExportTaskResponse
          */
         public async Task<CreateUserUsageDataExportTaskResponse> CreateUserUsageDataExportTaskWithOptionsAsync(CreateUserUsageDataExportTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2476,11 +2730,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request CreateUserUsageDataExportTaskRequest
-          * @return CreateUserUsageDataExportTaskResponse
+         * @summary Creates a task to export your resource usage history to a PDF file.
+         *
+         * @description *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request CreateUserUsageDataExportTaskRequest
+         * @return CreateUserUsageDataExportTaskResponse
          */
         public CreateUserUsageDataExportTaskResponse CreateUserUsageDataExportTask(CreateUserUsageDataExportTaskRequest request)
         {
@@ -2489,11 +2745,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request CreateUserUsageDataExportTaskRequest
-          * @return CreateUserUsageDataExportTaskResponse
+         * @summary Creates a task to export your resource usage history to a PDF file.
+         *
+         * @description *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request CreateUserUsageDataExportTaskRequest
+         * @return CreateUserUsageDataExportTaskResponse
          */
         public async Task<CreateUserUsageDataExportTaskResponse> CreateUserUsageDataExportTaskAsync(CreateUserUsageDataExportTaskRequest request)
         {
@@ -2502,11 +2760,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request DeleteCdnDeliverTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteCdnDeliverTaskResponse
+         * @summary Deletes tracking tasks by task ID.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request DeleteCdnDeliverTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCdnDeliverTaskResponse
          */
         public DeleteCdnDeliverTaskResponse DeleteCdnDeliverTaskWithOptions(DeleteCdnDeliverTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2536,11 +2796,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request DeleteCdnDeliverTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteCdnDeliverTaskResponse
+         * @summary Deletes tracking tasks by task ID.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request DeleteCdnDeliverTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCdnDeliverTaskResponse
          */
         public async Task<DeleteCdnDeliverTaskResponse> DeleteCdnDeliverTaskWithOptionsAsync(DeleteCdnDeliverTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2570,10 +2832,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request DeleteCdnDeliverTaskRequest
-          * @return DeleteCdnDeliverTaskResponse
+         * @summary Deletes tracking tasks by task ID.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request DeleteCdnDeliverTaskRequest
+         * @return DeleteCdnDeliverTaskResponse
          */
         public DeleteCdnDeliverTaskResponse DeleteCdnDeliverTask(DeleteCdnDeliverTaskRequest request)
         {
@@ -2582,10 +2846,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request DeleteCdnDeliverTaskRequest
-          * @return DeleteCdnDeliverTaskResponse
+         * @summary Deletes tracking tasks by task ID.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request DeleteCdnDeliverTaskRequest
+         * @return DeleteCdnDeliverTaskResponse
          */
         public async Task<DeleteCdnDeliverTaskResponse> DeleteCdnDeliverTaskAsync(DeleteCdnDeliverTaskRequest request)
         {
@@ -2594,13 +2860,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   We recommend that you add an A record for the domain name in the system of your DNS service provider before you remove the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.
-          * *   After you successfully call the DeleteCdnDomain operation, all records of the removed domain name are deleted. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DeleteCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteCdnDomainResponse
+         * @summary Removes an accelerated domain name from Alibaba Cloud CDN.
+         *
+         * @description *   We recommend that you add an A record for the domain name in the system of your DNS service provider before you remove the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.
+         * *   After you successfully call the DeleteCdnDomain operation, all records of the removed domain name are deleted. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.
+         * *   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DeleteCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCdnDomainResponse
          */
         public DeleteCdnDomainResponse DeleteCdnDomainWithOptions(DeleteCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2638,13 +2906,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   We recommend that you add an A record for the domain name in the system of your DNS service provider before you remove the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.
-          * *   After you successfully call the DeleteCdnDomain operation, all records of the removed domain name are deleted. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DeleteCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteCdnDomainResponse
+         * @summary Removes an accelerated domain name from Alibaba Cloud CDN.
+         *
+         * @description *   We recommend that you add an A record for the domain name in the system of your DNS service provider before you remove the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.
+         * *   After you successfully call the DeleteCdnDomain operation, all records of the removed domain name are deleted. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.
+         * *   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DeleteCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCdnDomainResponse
          */
         public async Task<DeleteCdnDomainResponse> DeleteCdnDomainWithOptionsAsync(DeleteCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2682,12 +2952,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   We recommend that you add an A record for the domain name in the system of your DNS service provider before you remove the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.
-          * *   After you successfully call the DeleteCdnDomain operation, all records of the removed domain name are deleted. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DeleteCdnDomainRequest
-          * @return DeleteCdnDomainResponse
+         * @summary Removes an accelerated domain name from Alibaba Cloud CDN.
+         *
+         * @description *   We recommend that you add an A record for the domain name in the system of your DNS service provider before you remove the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.
+         * *   After you successfully call the DeleteCdnDomain operation, all records of the removed domain name are deleted. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.
+         * *   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DeleteCdnDomainRequest
+         * @return DeleteCdnDomainResponse
          */
         public DeleteCdnDomainResponse DeleteCdnDomain(DeleteCdnDomainRequest request)
         {
@@ -2696,12 +2968,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   We recommend that you add an A record for the domain name in the system of your DNS service provider before you remove the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.
-          * *   After you successfully call the DeleteCdnDomain operation, all records of the removed domain name are deleted. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DeleteCdnDomainRequest
-          * @return DeleteCdnDomainResponse
+         * @summary Removes an accelerated domain name from Alibaba Cloud CDN.
+         *
+         * @description *   We recommend that you add an A record for the domain name in the system of your DNS service provider before you remove the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.
+         * *   After you successfully call the DeleteCdnDomain operation, all records of the removed domain name are deleted. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.
+         * *   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DeleteCdnDomainRequest
+         * @return DeleteCdnDomainResponse
          */
         public async Task<DeleteCdnDomainResponse> DeleteCdnDomainAsync(DeleteCdnDomainRequest request)
         {
@@ -2710,11 +2984,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this API operation up to three times per second per account.
-          *
-          * @param request DeleteCdnSubTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteCdnSubTaskResponse
+         * @summary The ID of the request.
+         *
+         * @description >  You can call this API operation up to three times per second per account.
+         *
+         * @param request DeleteCdnSubTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCdnSubTaskResponse
          */
         public DeleteCdnSubTaskResponse DeleteCdnSubTaskWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2735,11 +3011,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this API operation up to three times per second per account.
-          *
-          * @param request DeleteCdnSubTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteCdnSubTaskResponse
+         * @summary The ID of the request.
+         *
+         * @description >  You can call this API operation up to three times per second per account.
+         *
+         * @param request DeleteCdnSubTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCdnSubTaskResponse
          */
         public async Task<DeleteCdnSubTaskResponse> DeleteCdnSubTaskWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2760,9 +3038,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this API operation up to three times per second per account.
-          *
-          * @return DeleteCdnSubTaskResponse
+         * @summary The ID of the request.
+         *
+         * @description >  You can call this API operation up to three times per second per account.
+         *
+         * @return DeleteCdnSubTaskResponse
          */
         public DeleteCdnSubTaskResponse DeleteCdnSubTask()
         {
@@ -2771,9 +3051,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this API operation up to three times per second per account.
-          *
-          * @return DeleteCdnSubTaskResponse
+         * @summary The ID of the request.
+         *
+         * @description >  You can call this API operation up to three times per second per account.
+         *
+         * @return DeleteCdnSubTaskResponse
          */
         public async Task<DeleteCdnSubTaskResponse> DeleteCdnSubTaskAsync()
         {
@@ -2781,6 +3063,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DeleteCdnSubTaskWithOptionsAsync(runtime);
         }
 
+        /**
+         * @summary Deletes a specified Function Compute trigger.
+         *
+         * @param request DeleteFCTriggerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteFCTriggerResponse
+         */
         public DeleteFCTriggerResponse DeleteFCTriggerWithOptions(DeleteFCTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2808,6 +3097,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DeleteFCTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a specified Function Compute trigger.
+         *
+         * @param request DeleteFCTriggerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteFCTriggerResponse
+         */
         public async Task<DeleteFCTriggerResponse> DeleteFCTriggerWithOptionsAsync(DeleteFCTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2835,12 +3131,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DeleteFCTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a specified Function Compute trigger.
+         *
+         * @param request DeleteFCTriggerRequest
+         * @return DeleteFCTriggerResponse
+         */
         public DeleteFCTriggerResponse DeleteFCTrigger(DeleteFCTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteFCTriggerWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a specified Function Compute trigger.
+         *
+         * @param request DeleteFCTriggerRequest
+         * @return DeleteFCTriggerResponse
+         */
         public async Task<DeleteFCTriggerResponse> DeleteFCTriggerAsync(DeleteFCTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2848,11 +3156,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteRealTimeLogLogstoreRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteRealTimeLogLogstoreResponse
+         * @summary Deletes the Logstore that is used by a specified configuration record of real-time log delivery.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteRealTimeLogLogstoreRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRealTimeLogLogstoreResponse
          */
         public DeleteRealTimeLogLogstoreResponse DeleteRealTimeLogLogstoreWithOptions(DeleteRealTimeLogLogstoreRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2878,11 +3188,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteRealTimeLogLogstoreRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteRealTimeLogLogstoreResponse
+         * @summary Deletes the Logstore that is used by a specified configuration record of real-time log delivery.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteRealTimeLogLogstoreRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRealTimeLogLogstoreResponse
          */
         public async Task<DeleteRealTimeLogLogstoreResponse> DeleteRealTimeLogLogstoreWithOptionsAsync(DeleteRealTimeLogLogstoreRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2908,10 +3220,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteRealTimeLogLogstoreRequest
-          * @return DeleteRealTimeLogLogstoreResponse
+         * @summary Deletes the Logstore that is used by a specified configuration record of real-time log delivery.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteRealTimeLogLogstoreRequest
+         * @return DeleteRealTimeLogLogstoreResponse
          */
         public DeleteRealTimeLogLogstoreResponse DeleteRealTimeLogLogstore(DeleteRealTimeLogLogstoreRequest request)
         {
@@ -2920,10 +3234,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteRealTimeLogLogstoreRequest
-          * @return DeleteRealTimeLogLogstoreResponse
+         * @summary Deletes the Logstore that is used by a specified configuration record of real-time log delivery.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteRealTimeLogLogstoreRequest
+         * @return DeleteRealTimeLogLogstoreResponse
          */
         public async Task<DeleteRealTimeLogLogstoreResponse> DeleteRealTimeLogLogstoreAsync(DeleteRealTimeLogLogstoreRequest request)
         {
@@ -2932,11 +3248,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteRealtimeLogDeliveryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteRealtimeLogDeliveryResponse
+         * @summary Deletes the configurations of real-time log delivery for specific accelerated domain names.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteRealtimeLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRealtimeLogDeliveryResponse
          */
         public DeleteRealtimeLogDeliveryResponse DeleteRealtimeLogDeliveryWithOptions(DeleteRealtimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2962,11 +3280,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteRealtimeLogDeliveryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteRealtimeLogDeliveryResponse
+         * @summary Deletes the configurations of real-time log delivery for specific accelerated domain names.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteRealtimeLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRealtimeLogDeliveryResponse
          */
         public async Task<DeleteRealtimeLogDeliveryResponse> DeleteRealtimeLogDeliveryWithOptionsAsync(DeleteRealtimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2992,10 +3312,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteRealtimeLogDeliveryRequest
-          * @return DeleteRealtimeLogDeliveryResponse
+         * @summary Deletes the configurations of real-time log delivery for specific accelerated domain names.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteRealtimeLogDeliveryRequest
+         * @return DeleteRealtimeLogDeliveryResponse
          */
         public DeleteRealtimeLogDeliveryResponse DeleteRealtimeLogDelivery(DeleteRealtimeLogDeliveryRequest request)
         {
@@ -3004,10 +3326,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteRealtimeLogDeliveryRequest
-          * @return DeleteRealtimeLogDeliveryResponse
+         * @summary Deletes the configurations of real-time log delivery for specific accelerated domain names.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteRealtimeLogDeliveryRequest
+         * @return DeleteRealtimeLogDeliveryResponse
          */
         public async Task<DeleteRealtimeLogDeliveryResponse> DeleteRealtimeLogDeliveryAsync(DeleteRealtimeLogDeliveryRequest request)
         {
@@ -3016,11 +3340,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DeleteSpecificConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteSpecificConfigResponse
+         * @summary Deletes specified configurations of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DeleteSpecificConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSpecificConfigResponse
          */
         public DeleteSpecificConfigResponse DeleteSpecificConfigWithOptions(DeleteSpecificConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3062,11 +3388,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DeleteSpecificConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteSpecificConfigResponse
+         * @summary Deletes specified configurations of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DeleteSpecificConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSpecificConfigResponse
          */
         public async Task<DeleteSpecificConfigResponse> DeleteSpecificConfigWithOptionsAsync(DeleteSpecificConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3108,10 +3436,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DeleteSpecificConfigRequest
-          * @return DeleteSpecificConfigResponse
+         * @summary Deletes specified configurations of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DeleteSpecificConfigRequest
+         * @return DeleteSpecificConfigResponse
          */
         public DeleteSpecificConfigResponse DeleteSpecificConfig(DeleteSpecificConfigRequest request)
         {
@@ -3120,10 +3450,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DeleteSpecificConfigRequest
-          * @return DeleteSpecificConfigResponse
+         * @summary Deletes specified configurations of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DeleteSpecificConfigRequest
+         * @return DeleteSpecificConfigResponse
          */
         public async Task<DeleteSpecificConfigResponse> DeleteSpecificConfigAsync(DeleteSpecificConfigRequest request)
         {
@@ -3132,11 +3464,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 20 times per second per account.
-          *
-          * @param request DeleteSpecificStagingConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteSpecificStagingConfigResponse
+         * @summary Deletes a specified configuration of the staging environment.
+         *
+         * @description > You can call this operation up to 20 times per second per account.
+         *
+         * @param request DeleteSpecificStagingConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSpecificStagingConfigResponse
          */
         public DeleteSpecificStagingConfigResponse DeleteSpecificStagingConfigWithOptions(DeleteSpecificStagingConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3178,11 +3512,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 20 times per second per account.
-          *
-          * @param request DeleteSpecificStagingConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteSpecificStagingConfigResponse
+         * @summary Deletes a specified configuration of the staging environment.
+         *
+         * @description > You can call this operation up to 20 times per second per account.
+         *
+         * @param request DeleteSpecificStagingConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSpecificStagingConfigResponse
          */
         public async Task<DeleteSpecificStagingConfigResponse> DeleteSpecificStagingConfigWithOptionsAsync(DeleteSpecificStagingConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3224,10 +3560,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 20 times per second per account.
-          *
-          * @param request DeleteSpecificStagingConfigRequest
-          * @return DeleteSpecificStagingConfigResponse
+         * @summary Deletes a specified configuration of the staging environment.
+         *
+         * @description > You can call this operation up to 20 times per second per account.
+         *
+         * @param request DeleteSpecificStagingConfigRequest
+         * @return DeleteSpecificStagingConfigResponse
          */
         public DeleteSpecificStagingConfigResponse DeleteSpecificStagingConfig(DeleteSpecificStagingConfigRequest request)
         {
@@ -3236,10 +3574,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 20 times per second per account.
-          *
-          * @param request DeleteSpecificStagingConfigRequest
-          * @return DeleteSpecificStagingConfigResponse
+         * @summary Deletes a specified configuration of the staging environment.
+         *
+         * @description > You can call this operation up to 20 times per second per account.
+         *
+         * @param request DeleteSpecificStagingConfigRequest
+         * @return DeleteSpecificStagingConfigResponse
          */
         public async Task<DeleteSpecificStagingConfigResponse> DeleteSpecificStagingConfigAsync(DeleteSpecificStagingConfigRequest request)
         {
@@ -3248,11 +3588,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteUsageDetailDataExportTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteUsageDetailDataExportTaskResponse
+         * @summary Deletes a task that was used to export usage details.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteUsageDetailDataExportTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteUsageDetailDataExportTaskResponse
          */
         public DeleteUsageDetailDataExportTaskResponse DeleteUsageDetailDataExportTaskWithOptions(DeleteUsageDetailDataExportTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3282,11 +3624,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteUsageDetailDataExportTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteUsageDetailDataExportTaskResponse
+         * @summary Deletes a task that was used to export usage details.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteUsageDetailDataExportTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteUsageDetailDataExportTaskResponse
          */
         public async Task<DeleteUsageDetailDataExportTaskResponse> DeleteUsageDetailDataExportTaskWithOptionsAsync(DeleteUsageDetailDataExportTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3316,10 +3660,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteUsageDetailDataExportTaskRequest
-          * @return DeleteUsageDetailDataExportTaskResponse
+         * @summary Deletes a task that was used to export usage details.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteUsageDetailDataExportTaskRequest
+         * @return DeleteUsageDetailDataExportTaskResponse
          */
         public DeleteUsageDetailDataExportTaskResponse DeleteUsageDetailDataExportTask(DeleteUsageDetailDataExportTaskRequest request)
         {
@@ -3328,10 +3674,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteUsageDetailDataExportTaskRequest
-          * @return DeleteUsageDetailDataExportTaskResponse
+         * @summary Deletes a task that was used to export usage details.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteUsageDetailDataExportTaskRequest
+         * @return DeleteUsageDetailDataExportTaskResponse
          */
         public async Task<DeleteUsageDetailDataExportTaskResponse> DeleteUsageDetailDataExportTaskAsync(DeleteUsageDetailDataExportTaskRequest request)
         {
@@ -3340,11 +3688,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteUserUsageDataExportTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteUserUsageDataExportTaskResponse
+         * @summary Deletes a task that was used to export usage history.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteUserUsageDataExportTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteUserUsageDataExportTaskResponse
          */
         public DeleteUserUsageDataExportTaskResponse DeleteUserUsageDataExportTaskWithOptions(DeleteUserUsageDataExportTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3374,11 +3724,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteUserUsageDataExportTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteUserUsageDataExportTaskResponse
+         * @summary Deletes a task that was used to export usage history.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteUserUsageDataExportTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteUserUsageDataExportTaskResponse
          */
         public async Task<DeleteUserUsageDataExportTaskResponse> DeleteUserUsageDataExportTaskWithOptionsAsync(DeleteUserUsageDataExportTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3408,10 +3760,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteUserUsageDataExportTaskRequest
-          * @return DeleteUserUsageDataExportTaskResponse
+         * @summary Deletes a task that was used to export usage history.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteUserUsageDataExportTaskRequest
+         * @return DeleteUserUsageDataExportTaskResponse
          */
         public DeleteUserUsageDataExportTaskResponse DeleteUserUsageDataExportTask(DeleteUserUsageDataExportTaskRequest request)
         {
@@ -3420,10 +3774,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DeleteUserUsageDataExportTaskRequest
-          * @return DeleteUserUsageDataExportTaskResponse
+         * @summary Deletes a task that was used to export usage history.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DeleteUserUsageDataExportTaskRequest
+         * @return DeleteUserUsageDataExportTaskResponse
          */
         public async Task<DeleteUserUsageDataExportTaskResponse> DeleteUserUsageDataExportTaskAsync(DeleteUserUsageDataExportTaskRequest request)
         {
@@ -3432,11 +3788,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeBlockedRegionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeBlockedRegionsResponse
+         * @summary Queries countries and regions that can be added to the blacklist.
+         *
+         * @description > You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeBlockedRegionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBlockedRegionsResponse
          */
         public DescribeBlockedRegionsResponse DescribeBlockedRegionsWithOptions(DescribeBlockedRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3462,11 +3820,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeBlockedRegionsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeBlockedRegionsResponse
+         * @summary Queries countries and regions that can be added to the blacklist.
+         *
+         * @description > You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeBlockedRegionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBlockedRegionsResponse
          */
         public async Task<DescribeBlockedRegionsResponse> DescribeBlockedRegionsWithOptionsAsync(DescribeBlockedRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3492,10 +3852,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeBlockedRegionsRequest
-          * @return DescribeBlockedRegionsResponse
+         * @summary Queries countries and regions that can be added to the blacklist.
+         *
+         * @description > You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeBlockedRegionsRequest
+         * @return DescribeBlockedRegionsResponse
          */
         public DescribeBlockedRegionsResponse DescribeBlockedRegions(DescribeBlockedRegionsRequest request)
         {
@@ -3504,10 +3866,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeBlockedRegionsRequest
-          * @return DescribeBlockedRegionsResponse
+         * @summary Queries countries and regions that can be added to the blacklist.
+         *
+         * @description > You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeBlockedRegionsRequest
+         * @return DescribeBlockedRegionsResponse
          */
         public async Task<DescribeBlockedRegionsResponse> DescribeBlockedRegionsAsync(DescribeBlockedRegionsRequest request)
         {
@@ -3516,11 +3880,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeCdnCertificateDetailRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnCertificateDetailResponse
+         * @summary Queries the detailed information about an SSL certificate.
+         *
+         * @description > You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeCdnCertificateDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnCertificateDetailResponse
          */
         public DescribeCdnCertificateDetailResponse DescribeCdnCertificateDetailWithOptions(DescribeCdnCertificateDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3558,11 +3924,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeCdnCertificateDetailRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnCertificateDetailResponse
+         * @summary Queries the detailed information about an SSL certificate.
+         *
+         * @description > You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeCdnCertificateDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnCertificateDetailResponse
          */
         public async Task<DescribeCdnCertificateDetailResponse> DescribeCdnCertificateDetailWithOptionsAsync(DescribeCdnCertificateDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3600,10 +3968,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeCdnCertificateDetailRequest
-          * @return DescribeCdnCertificateDetailResponse
+         * @summary Queries the detailed information about an SSL certificate.
+         *
+         * @description > You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeCdnCertificateDetailRequest
+         * @return DescribeCdnCertificateDetailResponse
          */
         public DescribeCdnCertificateDetailResponse DescribeCdnCertificateDetail(DescribeCdnCertificateDetailRequest request)
         {
@@ -3612,10 +3982,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeCdnCertificateDetailRequest
-          * @return DescribeCdnCertificateDetailResponse
+         * @summary Queries the detailed information about an SSL certificate.
+         *
+         * @description > You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeCdnCertificateDetailRequest
+         * @return DescribeCdnCertificateDetailResponse
          */
         public async Task<DescribeCdnCertificateDetailResponse> DescribeCdnCertificateDetailAsync(DescribeCdnCertificateDetailRequest request)
         {
@@ -3623,6 +3995,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DescribeCdnCertificateDetailWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries certificate details by certificate ID.
+         *
+         * @param request DescribeCdnCertificateDetailByIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnCertificateDetailByIdResponse
+         */
         public DescribeCdnCertificateDetailByIdResponse DescribeCdnCertificateDetailByIdWithOptions(DescribeCdnCertificateDetailByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3662,6 +4041,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnCertificateDetailByIdResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries certificate details by certificate ID.
+         *
+         * @param request DescribeCdnCertificateDetailByIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnCertificateDetailByIdResponse
+         */
         public async Task<DescribeCdnCertificateDetailByIdResponse> DescribeCdnCertificateDetailByIdWithOptionsAsync(DescribeCdnCertificateDetailByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3701,12 +4087,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnCertificateDetailByIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries certificate details by certificate ID.
+         *
+         * @param request DescribeCdnCertificateDetailByIdRequest
+         * @return DescribeCdnCertificateDetailByIdResponse
+         */
         public DescribeCdnCertificateDetailByIdResponse DescribeCdnCertificateDetailById(DescribeCdnCertificateDetailByIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCdnCertificateDetailByIdWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries certificate details by certificate ID.
+         *
+         * @param request DescribeCdnCertificateDetailByIdRequest
+         * @return DescribeCdnCertificateDetailByIdResponse
+         */
         public async Task<DescribeCdnCertificateDetailByIdResponse> DescribeCdnCertificateDetailByIdAsync(DescribeCdnCertificateDetailByIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3714,12 +4112,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * @deprecated : DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnCertificateListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnCertificateListResponse
+         * @deprecated OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.
+         *
+         * @summary Queries the certificates of accelerated domain names.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnCertificateListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnCertificateListResponse
          */
         // Deprecated
         public DescribeCdnCertificateListResponse DescribeCdnCertificateListWithOptions(DescribeCdnCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3758,12 +4159,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * @deprecated : DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnCertificateListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnCertificateListResponse
+         * @deprecated OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.
+         *
+         * @summary Queries the certificates of accelerated domain names.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnCertificateListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnCertificateListResponse
          */
         // Deprecated
         public async Task<DescribeCdnCertificateListResponse> DescribeCdnCertificateListWithOptionsAsync(DescribeCdnCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3802,11 +4206,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * @deprecated : DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnCertificateListRequest
-          * @return DescribeCdnCertificateListResponse
+         * @deprecated OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.
+         *
+         * @summary Queries the certificates of accelerated domain names.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnCertificateListRequest
+         * @return DescribeCdnCertificateListResponse
          */
         // Deprecated
         public DescribeCdnCertificateListResponse DescribeCdnCertificateList(DescribeCdnCertificateListRequest request)
@@ -3816,11 +4223,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * @deprecated : DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnCertificateListRequest
-          * @return DescribeCdnCertificateListResponse
+         * @deprecated OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.
+         *
+         * @summary Queries the certificates of accelerated domain names.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnCertificateListRequest
+         * @return DescribeCdnCertificateListResponse
          */
         // Deprecated
         public async Task<DescribeCdnCertificateListResponse> DescribeCdnCertificateListAsync(DescribeCdnCertificateListRequest request)
@@ -3829,6 +4239,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DescribeCdnCertificateListWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the Internet service provider (ISP), region, and country that are required for advanced conditions.
+         *
+         * @param request DescribeCdnConditionIPBInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnConditionIPBInfoResponse
+         */
         public DescribeCdnConditionIPBInfoResponse DescribeCdnConditionIPBInfoWithOptions(DescribeCdnConditionIPBInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3856,6 +4273,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnConditionIPBInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the Internet service provider (ISP), region, and country that are required for advanced conditions.
+         *
+         * @param request DescribeCdnConditionIPBInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnConditionIPBInfoResponse
+         */
         public async Task<DescribeCdnConditionIPBInfoResponse> DescribeCdnConditionIPBInfoWithOptionsAsync(DescribeCdnConditionIPBInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3883,12 +4307,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnConditionIPBInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the Internet service provider (ISP), region, and country that are required for advanced conditions.
+         *
+         * @param request DescribeCdnConditionIPBInfoRequest
+         * @return DescribeCdnConditionIPBInfoResponse
+         */
         public DescribeCdnConditionIPBInfoResponse DescribeCdnConditionIPBInfo(DescribeCdnConditionIPBInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCdnConditionIPBInfoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the Internet service provider (ISP), region, and country that are required for advanced conditions.
+         *
+         * @param request DescribeCdnConditionIPBInfoRequest
+         * @return DescribeCdnConditionIPBInfoResponse
+         */
         public async Task<DescribeCdnConditionIPBInfoResponse> DescribeCdnConditionIPBInfoAsync(DescribeCdnConditionIPBInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3896,11 +4332,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeCdnDeletedDomainsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDeletedDomainsResponse
+         * @summary Queries the domain names that are deleted from your account.
+         *
+         * @description > You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeCdnDeletedDomainsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDeletedDomainsResponse
          */
         public DescribeCdnDeletedDomainsResponse DescribeCdnDeletedDomainsWithOptions(DescribeCdnDeletedDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3934,11 +4372,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeCdnDeletedDomainsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDeletedDomainsResponse
+         * @summary Queries the domain names that are deleted from your account.
+         *
+         * @description > You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeCdnDeletedDomainsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDeletedDomainsResponse
          */
         public async Task<DescribeCdnDeletedDomainsResponse> DescribeCdnDeletedDomainsWithOptionsAsync(DescribeCdnDeletedDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3972,10 +4412,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeCdnDeletedDomainsRequest
-          * @return DescribeCdnDeletedDomainsResponse
+         * @summary Queries the domain names that are deleted from your account.
+         *
+         * @description > You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeCdnDeletedDomainsRequest
+         * @return DescribeCdnDeletedDomainsResponse
          */
         public DescribeCdnDeletedDomainsResponse DescribeCdnDeletedDomains(DescribeCdnDeletedDomainsRequest request)
         {
@@ -3984,10 +4426,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeCdnDeletedDomainsRequest
-          * @return DescribeCdnDeletedDomainsResponse
+         * @summary Queries the domain names that are deleted from your account.
+         *
+         * @description > You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeCdnDeletedDomainsRequest
+         * @return DescribeCdnDeletedDomainsResponse
          */
         public async Task<DescribeCdnDeletedDomainsResponse> DescribeCdnDeletedDomainsAsync(DescribeCdnDeletedDomainsRequest request)
         {
@@ -3996,11 +4440,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 3 times per second per account.
-          *
-          * @param request DescribeCdnDeliverListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDeliverListResponse
+         * @summary Queries one or more tracking tasks of operations reports.
+         *
+         * @description > You can call this operation up to 3 times per second per account.
+         *
+         * @param request DescribeCdnDeliverListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDeliverListResponse
          */
         public DescribeCdnDeliverListResponse DescribeCdnDeliverListWithOptions(DescribeCdnDeliverListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4030,11 +4476,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 3 times per second per account.
-          *
-          * @param request DescribeCdnDeliverListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDeliverListResponse
+         * @summary Queries one or more tracking tasks of operations reports.
+         *
+         * @description > You can call this operation up to 3 times per second per account.
+         *
+         * @param request DescribeCdnDeliverListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDeliverListResponse
          */
         public async Task<DescribeCdnDeliverListResponse> DescribeCdnDeliverListWithOptionsAsync(DescribeCdnDeliverListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4064,10 +4512,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 3 times per second per account.
-          *
-          * @param request DescribeCdnDeliverListRequest
-          * @return DescribeCdnDeliverListResponse
+         * @summary Queries one or more tracking tasks of operations reports.
+         *
+         * @description > You can call this operation up to 3 times per second per account.
+         *
+         * @param request DescribeCdnDeliverListRequest
+         * @return DescribeCdnDeliverListResponse
          */
         public DescribeCdnDeliverListResponse DescribeCdnDeliverList(DescribeCdnDeliverListRequest request)
         {
@@ -4076,10 +4526,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 3 times per second per account.
-          *
-          * @param request DescribeCdnDeliverListRequest
-          * @return DescribeCdnDeliverListResponse
+         * @summary Queries one or more tracking tasks of operations reports.
+         *
+         * @description > You can call this operation up to 3 times per second per account.
+         *
+         * @param request DescribeCdnDeliverListRequest
+         * @return DescribeCdnDeliverListResponse
          */
         public async Task<DescribeCdnDeliverListResponse> DescribeCdnDeliverListAsync(DescribeCdnDeliverListRequest request)
         {
@@ -4087,6 +4539,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DescribeCdnDeliverListWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 天翼定制化小时日志下载接口
+         *
+         * @param request DescribeCdnDomainAtoaLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainAtoaLogsResponse
+         */
         public DescribeCdnDomainAtoaLogsResponse DescribeCdnDomainAtoaLogsWithOptions(DescribeCdnDomainAtoaLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4130,6 +4589,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnDomainAtoaLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 天翼定制化小时日志下载接口
+         *
+         * @param request DescribeCdnDomainAtoaLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainAtoaLogsResponse
+         */
         public async Task<DescribeCdnDomainAtoaLogsResponse> DescribeCdnDomainAtoaLogsWithOptionsAsync(DescribeCdnDomainAtoaLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4173,12 +4639,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnDomainAtoaLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 天翼定制化小时日志下载接口
+         *
+         * @param request DescribeCdnDomainAtoaLogsRequest
+         * @return DescribeCdnDomainAtoaLogsResponse
+         */
         public DescribeCdnDomainAtoaLogsResponse DescribeCdnDomainAtoaLogs(DescribeCdnDomainAtoaLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCdnDomainAtoaLogsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 天翼定制化小时日志下载接口
+         *
+         * @param request DescribeCdnDomainAtoaLogsRequest
+         * @return DescribeCdnDomainAtoaLogsResponse
+         */
         public async Task<DescribeCdnDomainAtoaLogsResponse> DescribeCdnDomainAtoaLogsAsync(DescribeCdnDomainAtoaLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4186,11 +4664,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnDomainByCertificateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDomainByCertificateResponse
+         * @summary Queries accelerated domain names by SSL certificate.
+         *
+         * @description >  You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnDomainByCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainByCertificateResponse
          */
         public DescribeCdnDomainByCertificateResponse DescribeCdnDomainByCertificateWithOptions(DescribeCdnDomainByCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4228,11 +4708,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnDomainByCertificateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDomainByCertificateResponse
+         * @summary Queries accelerated domain names by SSL certificate.
+         *
+         * @description >  You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnDomainByCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainByCertificateResponse
          */
         public async Task<DescribeCdnDomainByCertificateResponse> DescribeCdnDomainByCertificateWithOptionsAsync(DescribeCdnDomainByCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4270,10 +4752,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnDomainByCertificateRequest
-          * @return DescribeCdnDomainByCertificateResponse
+         * @summary Queries accelerated domain names by SSL certificate.
+         *
+         * @description >  You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnDomainByCertificateRequest
+         * @return DescribeCdnDomainByCertificateResponse
          */
         public DescribeCdnDomainByCertificateResponse DescribeCdnDomainByCertificate(DescribeCdnDomainByCertificateRequest request)
         {
@@ -4282,10 +4766,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnDomainByCertificateRequest
-          * @return DescribeCdnDomainByCertificateResponse
+         * @summary Queries accelerated domain names by SSL certificate.
+         *
+         * @description >  You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnDomainByCertificateRequest
+         * @return DescribeCdnDomainByCertificateResponse
          */
         public async Task<DescribeCdnDomainByCertificateResponse> DescribeCdnDomainByCertificateAsync(DescribeCdnDomainByCertificateRequest request)
         {
@@ -4294,11 +4780,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnDomainConfigsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDomainConfigsResponse
+         * @summary Queries the configurations of an accelerated domain name. You can query the configurations of one or more features at the same time.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnDomainConfigsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainConfigsResponse
          */
         public DescribeCdnDomainConfigsResponse DescribeCdnDomainConfigsWithOptions(DescribeCdnDomainConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4344,11 +4832,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnDomainConfigsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDomainConfigsResponse
+         * @summary Queries the configurations of an accelerated domain name. You can query the configurations of one or more features at the same time.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnDomainConfigsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainConfigsResponse
          */
         public async Task<DescribeCdnDomainConfigsResponse> DescribeCdnDomainConfigsWithOptionsAsync(DescribeCdnDomainConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4394,10 +4884,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnDomainConfigsRequest
-          * @return DescribeCdnDomainConfigsResponse
+         * @summary Queries the configurations of an accelerated domain name. You can query the configurations of one or more features at the same time.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnDomainConfigsRequest
+         * @return DescribeCdnDomainConfigsResponse
          */
         public DescribeCdnDomainConfigsResponse DescribeCdnDomainConfigs(DescribeCdnDomainConfigsRequest request)
         {
@@ -4406,10 +4898,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnDomainConfigsRequest
-          * @return DescribeCdnDomainConfigsResponse
+         * @summary Queries the configurations of an accelerated domain name. You can query the configurations of one or more features at the same time.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnDomainConfigsRequest
+         * @return DescribeCdnDomainConfigsResponse
          */
         public async Task<DescribeCdnDomainConfigsResponse> DescribeCdnDomainConfigsAsync(DescribeCdnDomainConfigsRequest request)
         {
@@ -4418,11 +4912,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnDomainDetailRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDomainDetailResponse
+         * @summary Queries the basic information about an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnDomainDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainDetailResponse
          */
         public DescribeCdnDomainDetailResponse DescribeCdnDomainDetailWithOptions(DescribeCdnDomainDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4460,11 +4956,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnDomainDetailRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDomainDetailResponse
+         * @summary Queries the basic information about an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnDomainDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainDetailResponse
          */
         public async Task<DescribeCdnDomainDetailResponse> DescribeCdnDomainDetailWithOptionsAsync(DescribeCdnDomainDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4502,10 +5000,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnDomainDetailRequest
-          * @return DescribeCdnDomainDetailResponse
+         * @summary Queries the basic information about an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnDomainDetailRequest
+         * @return DescribeCdnDomainDetailResponse
          */
         public DescribeCdnDomainDetailResponse DescribeCdnDomainDetail(DescribeCdnDomainDetailRequest request)
         {
@@ -4514,10 +5014,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnDomainDetailRequest
-          * @return DescribeCdnDomainDetailResponse
+         * @summary Queries the basic information about an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnDomainDetailRequest
+         * @return DescribeCdnDomainDetailResponse
          */
         public async Task<DescribeCdnDomainDetailResponse> DescribeCdnDomainDetailAsync(DescribeCdnDomainDetailRequest request)
         {
@@ -4526,14 +5028,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
-          * *   The log data is collected every hour.
-          * *   You can call this operation up to 100 times per second per account.
-          * *   You can query only logs in the last month. The start time and the current time cannot exceed 31 days.
-          *
-          * @param request DescribeCdnDomainLogsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDomainLogsResponse
+         * @summary Queries the address where you can download the log data of a specific domain name.
+         *
+         * @description *   If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
+         * *   The log data is collected every hour.
+         * *   You can call this operation up to 100 times per second per account.
+         * *   You can query only logs in the last month. The start time and the current time cannot exceed 31 days.
+         *
+         * @param request DescribeCdnDomainLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainLogsResponse
          */
         public DescribeCdnDomainLogsResponse DescribeCdnDomainLogsWithOptions(DescribeCdnDomainLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4579,14 +5083,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
-          * *   The log data is collected every hour.
-          * *   You can call this operation up to 100 times per second per account.
-          * *   You can query only logs in the last month. The start time and the current time cannot exceed 31 days.
-          *
-          * @param request DescribeCdnDomainLogsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDomainLogsResponse
+         * @summary Queries the address where you can download the log data of a specific domain name.
+         *
+         * @description *   If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
+         * *   The log data is collected every hour.
+         * *   You can call this operation up to 100 times per second per account.
+         * *   You can query only logs in the last month. The start time and the current time cannot exceed 31 days.
+         *
+         * @param request DescribeCdnDomainLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainLogsResponse
          */
         public async Task<DescribeCdnDomainLogsResponse> DescribeCdnDomainLogsWithOptionsAsync(DescribeCdnDomainLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4632,13 +5138,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
-          * *   The log data is collected every hour.
-          * *   You can call this operation up to 100 times per second per account.
-          * *   You can query only logs in the last month. The start time and the current time cannot exceed 31 days.
-          *
-          * @param request DescribeCdnDomainLogsRequest
-          * @return DescribeCdnDomainLogsResponse
+         * @summary Queries the address where you can download the log data of a specific domain name.
+         *
+         * @description *   If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
+         * *   The log data is collected every hour.
+         * *   You can call this operation up to 100 times per second per account.
+         * *   You can query only logs in the last month. The start time and the current time cannot exceed 31 days.
+         *
+         * @param request DescribeCdnDomainLogsRequest
+         * @return DescribeCdnDomainLogsResponse
          */
         public DescribeCdnDomainLogsResponse DescribeCdnDomainLogs(DescribeCdnDomainLogsRequest request)
         {
@@ -4647,13 +5155,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
-          * *   The log data is collected every hour.
-          * *   You can call this operation up to 100 times per second per account.
-          * *   You can query only logs in the last month. The start time and the current time cannot exceed 31 days.
-          *
-          * @param request DescribeCdnDomainLogsRequest
-          * @return DescribeCdnDomainLogsResponse
+         * @summary Queries the address where you can download the log data of a specific domain name.
+         *
+         * @description *   If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
+         * *   The log data is collected every hour.
+         * *   You can call this operation up to 100 times per second per account.
+         * *   You can query only logs in the last month. The start time and the current time cannot exceed 31 days.
+         *
+         * @param request DescribeCdnDomainLogsRequest
+         * @return DescribeCdnDomainLogsResponse
          */
         public async Task<DescribeCdnDomainLogsResponse> DescribeCdnDomainLogsAsync(DescribeCdnDomainLogsRequest request)
         {
@@ -4661,6 +5171,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DescribeCdnDomainLogsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DescribeCdnDomainLogsExTtlRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainLogsExTtlResponse
+         */
         public DescribeCdnDomainLogsExTtlResponse DescribeCdnDomainLogsExTtlWithOptions(DescribeCdnDomainLogsExTtlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4704,6 +5219,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnDomainLogsExTtlResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeCdnDomainLogsExTtlRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainLogsExTtlResponse
+         */
         public async Task<DescribeCdnDomainLogsExTtlResponse> DescribeCdnDomainLogsExTtlWithOptionsAsync(DescribeCdnDomainLogsExTtlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4747,12 +5267,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnDomainLogsExTtlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeCdnDomainLogsExTtlRequest
+         * @return DescribeCdnDomainLogsExTtlResponse
+         */
         public DescribeCdnDomainLogsExTtlResponse DescribeCdnDomainLogsExTtl(DescribeCdnDomainLogsExTtlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCdnDomainLogsExTtlWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DescribeCdnDomainLogsExTtlRequest
+         * @return DescribeCdnDomainLogsExTtlResponse
+         */
         public async Task<DescribeCdnDomainLogsExTtlResponse> DescribeCdnDomainLogsExTtlAsync(DescribeCdnDomainLogsExTtlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4760,11 +5288,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnDomainStagingConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDomainStagingConfigResponse
+         * @summary Queries the configurations of features in the staging environment.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnDomainStagingConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainStagingConfigResponse
          */
         public DescribeCdnDomainStagingConfigResponse DescribeCdnDomainStagingConfigWithOptions(DescribeCdnDomainStagingConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4798,11 +5328,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnDomainStagingConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnDomainStagingConfigResponse
+         * @summary Queries the configurations of features in the staging environment.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnDomainStagingConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnDomainStagingConfigResponse
          */
         public async Task<DescribeCdnDomainStagingConfigResponse> DescribeCdnDomainStagingConfigWithOptionsAsync(DescribeCdnDomainStagingConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4836,10 +5368,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnDomainStagingConfigRequest
-          * @return DescribeCdnDomainStagingConfigResponse
+         * @summary Queries the configurations of features in the staging environment.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnDomainStagingConfigRequest
+         * @return DescribeCdnDomainStagingConfigResponse
          */
         public DescribeCdnDomainStagingConfigResponse DescribeCdnDomainStagingConfig(DescribeCdnDomainStagingConfigRequest request)
         {
@@ -4848,10 +5382,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnDomainStagingConfigRequest
-          * @return DescribeCdnDomainStagingConfigResponse
+         * @summary Queries the configurations of features in the staging environment.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnDomainStagingConfigRequest
+         * @return DescribeCdnDomainStagingConfigResponse
          */
         public async Task<DescribeCdnDomainStagingConfigResponse> DescribeCdnDomainStagingConfigAsync(DescribeCdnDomainStagingConfigRequest request)
         {
@@ -4860,11 +5396,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnHttpsDomainListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnHttpsDomainListResponse
+         * @summary Queries the information about SSL certificates that belong to your Alibaba Cloud account.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnHttpsDomainListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnHttpsDomainListResponse
          */
         public DescribeCdnHttpsDomainListResponse DescribeCdnHttpsDomainListWithOptions(DescribeCdnHttpsDomainListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4902,11 +5440,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnHttpsDomainListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnHttpsDomainListResponse
+         * @summary Queries the information about SSL certificates that belong to your Alibaba Cloud account.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnHttpsDomainListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnHttpsDomainListResponse
          */
         public async Task<DescribeCdnHttpsDomainListResponse> DescribeCdnHttpsDomainListWithOptionsAsync(DescribeCdnHttpsDomainListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4944,10 +5484,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnHttpsDomainListRequest
-          * @return DescribeCdnHttpsDomainListResponse
+         * @summary Queries the information about SSL certificates that belong to your Alibaba Cloud account.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnHttpsDomainListRequest
+         * @return DescribeCdnHttpsDomainListResponse
          */
         public DescribeCdnHttpsDomainListResponse DescribeCdnHttpsDomainList(DescribeCdnHttpsDomainListRequest request)
         {
@@ -4956,10 +5498,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnHttpsDomainListRequest
-          * @return DescribeCdnHttpsDomainListResponse
+         * @summary Queries the information about SSL certificates that belong to your Alibaba Cloud account.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnHttpsDomainListRequest
+         * @return DescribeCdnHttpsDomainListResponse
          */
         public async Task<DescribeCdnHttpsDomainListResponse> DescribeCdnHttpsDomainListAsync(DescribeCdnHttpsDomainListRequest request)
         {
@@ -4968,11 +5512,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.
-          *
-          * @param request DescribeCdnMigrateRegisterStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnMigrateRegisterStatusResponse
+         * @summary Queries the registration status of the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for a domain name that is added to Alibaba Cloud CDN.
+         *
+         * @description >  If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.
+         *
+         * @param request DescribeCdnMigrateRegisterStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnMigrateRegisterStatusResponse
          */
         public DescribeCdnMigrateRegisterStatusResponse DescribeCdnMigrateRegisterStatusWithOptions(DescribeCdnMigrateRegisterStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5002,11 +5548,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.
-          *
-          * @param request DescribeCdnMigrateRegisterStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnMigrateRegisterStatusResponse
+         * @summary Queries the registration status of the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for a domain name that is added to Alibaba Cloud CDN.
+         *
+         * @description >  If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.
+         *
+         * @param request DescribeCdnMigrateRegisterStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnMigrateRegisterStatusResponse
          */
         public async Task<DescribeCdnMigrateRegisterStatusResponse> DescribeCdnMigrateRegisterStatusWithOptionsAsync(DescribeCdnMigrateRegisterStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5036,10 +5584,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.
-          *
-          * @param request DescribeCdnMigrateRegisterStatusRequest
-          * @return DescribeCdnMigrateRegisterStatusResponse
+         * @summary Queries the registration status of the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for a domain name that is added to Alibaba Cloud CDN.
+         *
+         * @description >  If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.
+         *
+         * @param request DescribeCdnMigrateRegisterStatusRequest
+         * @return DescribeCdnMigrateRegisterStatusResponse
          */
         public DescribeCdnMigrateRegisterStatusResponse DescribeCdnMigrateRegisterStatus(DescribeCdnMigrateRegisterStatusRequest request)
         {
@@ -5048,10 +5598,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.
-          *
-          * @param request DescribeCdnMigrateRegisterStatusRequest
-          * @return DescribeCdnMigrateRegisterStatusResponse
+         * @summary Queries the registration status of the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for a domain name that is added to Alibaba Cloud CDN.
+         *
+         * @description >  If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.
+         *
+         * @param request DescribeCdnMigrateRegisterStatusRequest
+         * @return DescribeCdnMigrateRegisterStatusResponse
          */
         public async Task<DescribeCdnMigrateRegisterStatusResponse> DescribeCdnMigrateRegisterStatusAsync(DescribeCdnMigrateRegisterStatusRequest request)
         {
@@ -5059,6 +5611,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DescribeCdnMigrateRegisterStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the code of a commodity by account UID.
+         *
+         * @param request DescribeCdnOrderCommodityCodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnOrderCommodityCodeResponse
+         */
         public DescribeCdnOrderCommodityCodeResponse DescribeCdnOrderCommodityCodeWithOptions(DescribeCdnOrderCommodityCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5094,6 +5653,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnOrderCommodityCodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the code of a commodity by account UID.
+         *
+         * @param request DescribeCdnOrderCommodityCodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnOrderCommodityCodeResponse
+         */
         public async Task<DescribeCdnOrderCommodityCodeResponse> DescribeCdnOrderCommodityCodeWithOptionsAsync(DescribeCdnOrderCommodityCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5129,12 +5695,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnOrderCommodityCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the code of a commodity by account UID.
+         *
+         * @param request DescribeCdnOrderCommodityCodeRequest
+         * @return DescribeCdnOrderCommodityCodeResponse
+         */
         public DescribeCdnOrderCommodityCodeResponse DescribeCdnOrderCommodityCode(DescribeCdnOrderCommodityCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCdnOrderCommodityCodeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the code of a commodity by account UID.
+         *
+         * @param request DescribeCdnOrderCommodityCodeRequest
+         * @return DescribeCdnOrderCommodityCodeResponse
+         */
         public async Task<DescribeCdnOrderCommodityCodeResponse> DescribeCdnOrderCommodityCodeAsync(DescribeCdnOrderCommodityCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5142,12 +5720,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   The lists of ISPs and regions that are supported by Alibaba Cloud CDN are updated and published on the Alibaba Cloud International site.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnRegionAndIspRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnRegionAndIspResponse
+         * @summary Queries Internet service providers (ISPs) and regions that are supported by Alibaba Cloud CDN.
+         *
+         * @description *   The lists of ISPs and regions that are supported by Alibaba Cloud CDN are updated and published on the Alibaba Cloud International site.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnRegionAndIspRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnRegionAndIspResponse
          */
         public DescribeCdnRegionAndIspResponse DescribeCdnRegionAndIspWithOptions(DescribeCdnRegionAndIspRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5181,12 +5761,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   The lists of ISPs and regions that are supported by Alibaba Cloud CDN are updated and published on the Alibaba Cloud International site.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnRegionAndIspRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnRegionAndIspResponse
+         * @summary Queries Internet service providers (ISPs) and regions that are supported by Alibaba Cloud CDN.
+         *
+         * @description *   The lists of ISPs and regions that are supported by Alibaba Cloud CDN are updated and published on the Alibaba Cloud International site.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnRegionAndIspRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnRegionAndIspResponse
          */
         public async Task<DescribeCdnRegionAndIspResponse> DescribeCdnRegionAndIspWithOptionsAsync(DescribeCdnRegionAndIspRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5220,11 +5802,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   The lists of ISPs and regions that are supported by Alibaba Cloud CDN are updated and published on the Alibaba Cloud International site.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnRegionAndIspRequest
-          * @return DescribeCdnRegionAndIspResponse
+         * @summary Queries Internet service providers (ISPs) and regions that are supported by Alibaba Cloud CDN.
+         *
+         * @description *   The lists of ISPs and regions that are supported by Alibaba Cloud CDN are updated and published on the Alibaba Cloud International site.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnRegionAndIspRequest
+         * @return DescribeCdnRegionAndIspResponse
          */
         public DescribeCdnRegionAndIspResponse DescribeCdnRegionAndIsp(DescribeCdnRegionAndIspRequest request)
         {
@@ -5233,11 +5817,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   The lists of ISPs and regions that are supported by Alibaba Cloud CDN are updated and published on the Alibaba Cloud International site.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnRegionAndIspRequest
-          * @return DescribeCdnRegionAndIspResponse
+         * @summary Queries Internet service providers (ISPs) and regions that are supported by Alibaba Cloud CDN.
+         *
+         * @description *   The lists of ISPs and regions that are supported by Alibaba Cloud CDN are updated and published on the Alibaba Cloud International site.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnRegionAndIspRequest
+         * @return DescribeCdnRegionAndIspResponse
          */
         public async Task<DescribeCdnRegionAndIspResponse> DescribeCdnRegionAndIspAsync(DescribeCdnRegionAndIspRequest request)
         {
@@ -5246,11 +5832,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request DescribeCdnReportRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnReportResponse
+         * @summary Queries the content of an operations report.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request DescribeCdnReportRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnReportResponse
          */
         public DescribeCdnReportResponse DescribeCdnReportWithOptions(DescribeCdnReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5304,11 +5892,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request DescribeCdnReportRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnReportResponse
+         * @summary Queries the content of an operations report.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request DescribeCdnReportRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnReportResponse
          */
         public async Task<DescribeCdnReportResponse> DescribeCdnReportWithOptionsAsync(DescribeCdnReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5362,10 +5952,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request DescribeCdnReportRequest
-          * @return DescribeCdnReportResponse
+         * @summary Queries the content of an operations report.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request DescribeCdnReportRequest
+         * @return DescribeCdnReportResponse
          */
         public DescribeCdnReportResponse DescribeCdnReport(DescribeCdnReportRequest request)
         {
@@ -5374,10 +5966,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request DescribeCdnReportRequest
-          * @return DescribeCdnReportResponse
+         * @summary Queries the content of an operations report.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request DescribeCdnReportRequest
+         * @return DescribeCdnReportResponse
          */
         public async Task<DescribeCdnReportResponse> DescribeCdnReportAsync(DescribeCdnReportRequest request)
         {
@@ -5386,12 +5980,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
-          * *   You can call this operation up to three times per second per account.
-          *
-          * @param request DescribeCdnReportListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnReportListResponse
+         * @summary Queries operations reports.
+         *
+         * @description *   This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
+         * *   You can call this operation up to three times per second per account.
+         *
+         * @param request DescribeCdnReportListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnReportListResponse
          */
         public DescribeCdnReportListResponse DescribeCdnReportListWithOptions(DescribeCdnReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5421,12 +6017,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
-          * *   You can call this operation up to three times per second per account.
-          *
-          * @param request DescribeCdnReportListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnReportListResponse
+         * @summary Queries operations reports.
+         *
+         * @description *   This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
+         * *   You can call this operation up to three times per second per account.
+         *
+         * @param request DescribeCdnReportListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnReportListResponse
          */
         public async Task<DescribeCdnReportListResponse> DescribeCdnReportListWithOptionsAsync(DescribeCdnReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5456,11 +6054,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
-          * *   You can call this operation up to three times per second per account.
-          *
-          * @param request DescribeCdnReportListRequest
-          * @return DescribeCdnReportListResponse
+         * @summary Queries operations reports.
+         *
+         * @description *   This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
+         * *   You can call this operation up to three times per second per account.
+         *
+         * @param request DescribeCdnReportListRequest
+         * @return DescribeCdnReportListResponse
          */
         public DescribeCdnReportListResponse DescribeCdnReportList(DescribeCdnReportListRequest request)
         {
@@ -5469,11 +6069,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
-          * *   You can call this operation up to three times per second per account.
-          *
-          * @param request DescribeCdnReportListRequest
-          * @return DescribeCdnReportListResponse
+         * @summary Queries operations reports.
+         *
+         * @description *   This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
+         * *   You can call this operation up to three times per second per account.
+         *
+         * @param request DescribeCdnReportListRequest
+         * @return DescribeCdnReportListResponse
          */
         public async Task<DescribeCdnReportListResponse> DescribeCdnReportListAsync(DescribeCdnReportListRequest request)
         {
@@ -5482,11 +6084,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeCdnSMCertificateDetailRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnSMCertificateDetailResponse
+         * @summary Queries the details about a ShangMi (SM) certificate.
+         *
+         * @description > You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeCdnSMCertificateDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnSMCertificateDetailResponse
          */
         public DescribeCdnSMCertificateDetailResponse DescribeCdnSMCertificateDetailWithOptions(DescribeCdnSMCertificateDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5524,11 +6128,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeCdnSMCertificateDetailRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnSMCertificateDetailResponse
+         * @summary Queries the details about a ShangMi (SM) certificate.
+         *
+         * @description > You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeCdnSMCertificateDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnSMCertificateDetailResponse
          */
         public async Task<DescribeCdnSMCertificateDetailResponse> DescribeCdnSMCertificateDetailWithOptionsAsync(DescribeCdnSMCertificateDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5566,10 +6172,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeCdnSMCertificateDetailRequest
-          * @return DescribeCdnSMCertificateDetailResponse
+         * @summary Queries the details about a ShangMi (SM) certificate.
+         *
+         * @description > You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeCdnSMCertificateDetailRequest
+         * @return DescribeCdnSMCertificateDetailResponse
          */
         public DescribeCdnSMCertificateDetailResponse DescribeCdnSMCertificateDetail(DescribeCdnSMCertificateDetailRequest request)
         {
@@ -5578,10 +6186,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeCdnSMCertificateDetailRequest
-          * @return DescribeCdnSMCertificateDetailResponse
+         * @summary Queries the details about a ShangMi (SM) certificate.
+         *
+         * @description > You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeCdnSMCertificateDetailRequest
+         * @return DescribeCdnSMCertificateDetailResponse
          */
         public async Task<DescribeCdnSMCertificateDetailResponse> DescribeCdnSMCertificateDetailAsync(DescribeCdnSMCertificateDetailRequest request)
         {
@@ -5590,11 +6200,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnSMCertificateListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnSMCertificateListResponse
+         * @summary Queries the ShangMi (SM) certificates of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnSMCertificateListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnSMCertificateListResponse
          */
         public DescribeCdnSMCertificateListResponse DescribeCdnSMCertificateListWithOptions(DescribeCdnSMCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5632,11 +6244,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnSMCertificateListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnSMCertificateListResponse
+         * @summary Queries the ShangMi (SM) certificates of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnSMCertificateListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnSMCertificateListResponse
          */
         public async Task<DescribeCdnSMCertificateListResponse> DescribeCdnSMCertificateListWithOptionsAsync(DescribeCdnSMCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5674,10 +6288,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnSMCertificateListRequest
-          * @return DescribeCdnSMCertificateListResponse
+         * @summary Queries the ShangMi (SM) certificates of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnSMCertificateListRequest
+         * @return DescribeCdnSMCertificateListResponse
          */
         public DescribeCdnSMCertificateListResponse DescribeCdnSMCertificateList(DescribeCdnSMCertificateListRequest request)
         {
@@ -5686,10 +6302,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnSMCertificateListRequest
-          * @return DescribeCdnSMCertificateListResponse
+         * @summary Queries the ShangMi (SM) certificates of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnSMCertificateListRequest
+         * @return DescribeCdnSMCertificateListResponse
          */
         public async Task<DescribeCdnSMCertificateListResponse> DescribeCdnSMCertificateListAsync(DescribeCdnSMCertificateListRequest request)
         {
@@ -5697,6 +6315,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DescribeCdnSMCertificateListWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the certificate list by domain name.
+         *
+         * @param request DescribeCdnSSLCertificateListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnSSLCertificateListResponse
+         */
         public DescribeCdnSSLCertificateListResponse DescribeCdnSSLCertificateListWithOptions(DescribeCdnSSLCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5744,6 +6369,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnSSLCertificateListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the certificate list by domain name.
+         *
+         * @param request DescribeCdnSSLCertificateListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnSSLCertificateListResponse
+         */
         public async Task<DescribeCdnSSLCertificateListResponse> DescribeCdnSSLCertificateListWithOptionsAsync(DescribeCdnSSLCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5791,18 +6423,37 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnSSLCertificateListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the certificate list by domain name.
+         *
+         * @param request DescribeCdnSSLCertificateListRequest
+         * @return DescribeCdnSSLCertificateListResponse
+         */
         public DescribeCdnSSLCertificateListResponse DescribeCdnSSLCertificateList(DescribeCdnSSLCertificateListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCdnSSLCertificateListWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the certificate list by domain name.
+         *
+         * @param request DescribeCdnSSLCertificateListRequest
+         * @return DescribeCdnSSLCertificateListResponse
+         */
         public async Task<DescribeCdnSSLCertificateListResponse> DescribeCdnSSLCertificateListAsync(DescribeCdnSSLCertificateListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCdnSSLCertificateListWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries information about security features of Alibaba Cloud CDN.
+         *
+         * @param request DescribeCdnSecFuncInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnSecFuncInfoResponse
+         */
         public DescribeCdnSecFuncInfoResponse DescribeCdnSecFuncInfoWithOptions(DescribeCdnSecFuncInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5834,6 +6485,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnSecFuncInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries information about security features of Alibaba Cloud CDN.
+         *
+         * @param request DescribeCdnSecFuncInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnSecFuncInfoResponse
+         */
         public async Task<DescribeCdnSecFuncInfoResponse> DescribeCdnSecFuncInfoWithOptionsAsync(DescribeCdnSecFuncInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5865,12 +6523,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnSecFuncInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries information about security features of Alibaba Cloud CDN.
+         *
+         * @param request DescribeCdnSecFuncInfoRequest
+         * @return DescribeCdnSecFuncInfoResponse
+         */
         public DescribeCdnSecFuncInfoResponse DescribeCdnSecFuncInfo(DescribeCdnSecFuncInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCdnSecFuncInfoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries information about security features of Alibaba Cloud CDN.
+         *
+         * @param request DescribeCdnSecFuncInfoRequest
+         * @return DescribeCdnSecFuncInfoResponse
+         */
         public async Task<DescribeCdnSecFuncInfoResponse> DescribeCdnSecFuncInfoAsync(DescribeCdnSecFuncInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5878,11 +6548,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnServiceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnServiceResponse
+         * @summary Queries the status of your Alibaba Cloud CDN service. The information includes the service activation time, the current service status, the current metering method, and the metering method for the next cycle.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnServiceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnServiceResponse
          */
         public DescribeCdnServiceResponse DescribeCdnServiceWithOptions(DescribeCdnServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5916,11 +6588,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnServiceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnServiceResponse
+         * @summary Queries the status of your Alibaba Cloud CDN service. The information includes the service activation time, the current service status, the current metering method, and the metering method for the next cycle.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnServiceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnServiceResponse
          */
         public async Task<DescribeCdnServiceResponse> DescribeCdnServiceWithOptionsAsync(DescribeCdnServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5954,10 +6628,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnServiceRequest
-          * @return DescribeCdnServiceResponse
+         * @summary Queries the status of your Alibaba Cloud CDN service. The information includes the service activation time, the current service status, the current metering method, and the metering method for the next cycle.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnServiceRequest
+         * @return DescribeCdnServiceResponse
          */
         public DescribeCdnServiceResponse DescribeCdnService(DescribeCdnServiceRequest request)
         {
@@ -5966,10 +6642,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnServiceRequest
-          * @return DescribeCdnServiceResponse
+         * @summary Queries the status of your Alibaba Cloud CDN service. The information includes the service activation time, the current service status, the current metering method, and the metering method for the next cycle.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnServiceRequest
+         * @return DescribeCdnServiceResponse
          */
         public async Task<DescribeCdnServiceResponse> DescribeCdnServiceAsync(DescribeCdnServiceRequest request)
         {
@@ -5978,12 +6656,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
-          * *   You can call this operation up to three times per second per account.
-          *
-          * @param request DescribeCdnSubListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnSubListResponse
+         * @summary Queries the tracking tasks that you have created.
+         *
+         * @description *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
+         * *   You can call this operation up to three times per second per account.
+         *
+         * @param request DescribeCdnSubListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnSubListResponse
          */
         public DescribeCdnSubListResponse DescribeCdnSubListWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6004,12 +6684,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
-          * *   You can call this operation up to three times per second per account.
-          *
-          * @param request DescribeCdnSubListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnSubListResponse
+         * @summary Queries the tracking tasks that you have created.
+         *
+         * @description *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
+         * *   You can call this operation up to three times per second per account.
+         *
+         * @param request DescribeCdnSubListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnSubListResponse
          */
         public async Task<DescribeCdnSubListResponse> DescribeCdnSubListWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6030,10 +6712,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
-          * *   You can call this operation up to three times per second per account.
-          *
-          * @return DescribeCdnSubListResponse
+         * @summary Queries the tracking tasks that you have created.
+         *
+         * @description *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
+         * *   You can call this operation up to three times per second per account.
+         *
+         * @return DescribeCdnSubListResponse
          */
         public DescribeCdnSubListResponse DescribeCdnSubList()
         {
@@ -6042,10 +6726,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
-          * *   You can call this operation up to three times per second per account.
-          *
-          * @return DescribeCdnSubListResponse
+         * @summary Queries the tracking tasks that you have created.
+         *
+         * @description *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
+         * *   You can call this operation up to three times per second per account.
+         *
+         * @return DescribeCdnSubListResponse
          */
         public async Task<DescribeCdnSubListResponse> DescribeCdnSubListAsync()
         {
@@ -6054,12 +6740,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query billing history up to the last one month.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnUserBillHistoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserBillHistoryResponse
+         * @summary Queries the billing history under your Alibaba Cloud account.
+         *
+         * @description *   You can query billing history up to the last one month.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnUserBillHistoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserBillHistoryResponse
          */
         public DescribeCdnUserBillHistoryResponse DescribeCdnUserBillHistoryWithOptions(DescribeCdnUserBillHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6093,12 +6781,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query billing history up to the last one month.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnUserBillHistoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserBillHistoryResponse
+         * @summary Queries the billing history under your Alibaba Cloud account.
+         *
+         * @description *   You can query billing history up to the last one month.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnUserBillHistoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserBillHistoryResponse
          */
         public async Task<DescribeCdnUserBillHistoryResponse> DescribeCdnUserBillHistoryWithOptionsAsync(DescribeCdnUserBillHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6132,11 +6822,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query billing history up to the last one month.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnUserBillHistoryRequest
-          * @return DescribeCdnUserBillHistoryResponse
+         * @summary Queries the billing history under your Alibaba Cloud account.
+         *
+         * @description *   You can query billing history up to the last one month.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnUserBillHistoryRequest
+         * @return DescribeCdnUserBillHistoryResponse
          */
         public DescribeCdnUserBillHistoryResponse DescribeCdnUserBillHistory(DescribeCdnUserBillHistoryRequest request)
         {
@@ -6145,11 +6837,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query billing history up to the last one month.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnUserBillHistoryRequest
-          * @return DescribeCdnUserBillHistoryResponse
+         * @summary Queries the billing history under your Alibaba Cloud account.
+         *
+         * @description *   You can query billing history up to the last one month.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnUserBillHistoryRequest
+         * @return DescribeCdnUserBillHistoryResponse
          */
         public async Task<DescribeCdnUserBillHistoryResponse> DescribeCdnUserBillHistoryAsync(DescribeCdnUserBillHistoryRequest request)
         {
@@ -6158,17 +6852,19 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * You can call this operation to estimate resource usage of the current month based on the metering method that is specified on the first day of the current month. You can call this operation to estimate resource usage only of the current month within your Alibaba Cloud account. The time range used for the estimation starts at 00:00 on the first day of the current month and ends 2 hours earlier than the current time.
-          * *   Pay by monthly 95th percentile: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
-          * *   Pay by average daily peak bandwidth per month: Estimated value = Sum of daily peak bandwidth values/Number of days. The current day is excluded.
-          * *   Pay by 4th peak bandwidth per month: The estimated value is the 4th peak bandwidth value between the start time and end time. If the time range is less than four days, the estimated value is 0.
-          * *   Pay by average daily 95th percentile bandwidth per month: Estimated value = Sum of daily 95th percentile bandwidth values/Number of days. The current day is excluded.
-          * *   Pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
-          * > You can call this operation only once per second per account.
-          *
-          * @param request DescribeCdnUserBillPredictionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserBillPredictionResponse
+         * @summary Estimates resource usage of the current month.
+         *
+         * @description You can call this operation to estimate resource usage of the current month based on the metering method that is specified on the first day of the current month. You can call this operation to estimate resource usage only of the current month within your Alibaba Cloud account. The time range used for the estimation starts at 00:00 on the first day of the current month and ends 2 hours earlier than the current time.
+         * *   Pay by monthly 95th percentile: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
+         * *   Pay by average daily peak bandwidth per month: Estimated value = Sum of daily peak bandwidth values/Number of days. The current day is excluded.
+         * *   Pay by 4th peak bandwidth per month: The estimated value is the 4th peak bandwidth value between the start time and end time. If the time range is less than four days, the estimated value is 0.
+         * *   Pay by average daily 95th percentile bandwidth per month: Estimated value = Sum of daily 95th percentile bandwidth values/Number of days. The current day is excluded.
+         * *   Pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
+         * > You can call this operation only once per second per account.
+         *
+         * @param request DescribeCdnUserBillPredictionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserBillPredictionResponse
          */
         public DescribeCdnUserBillPredictionResponse DescribeCdnUserBillPredictionWithOptions(DescribeCdnUserBillPredictionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6210,17 +6906,19 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * You can call this operation to estimate resource usage of the current month based on the metering method that is specified on the first day of the current month. You can call this operation to estimate resource usage only of the current month within your Alibaba Cloud account. The time range used for the estimation starts at 00:00 on the first day of the current month and ends 2 hours earlier than the current time.
-          * *   Pay by monthly 95th percentile: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
-          * *   Pay by average daily peak bandwidth per month: Estimated value = Sum of daily peak bandwidth values/Number of days. The current day is excluded.
-          * *   Pay by 4th peak bandwidth per month: The estimated value is the 4th peak bandwidth value between the start time and end time. If the time range is less than four days, the estimated value is 0.
-          * *   Pay by average daily 95th percentile bandwidth per month: Estimated value = Sum of daily 95th percentile bandwidth values/Number of days. The current day is excluded.
-          * *   Pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
-          * > You can call this operation only once per second per account.
-          *
-          * @param request DescribeCdnUserBillPredictionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserBillPredictionResponse
+         * @summary Estimates resource usage of the current month.
+         *
+         * @description You can call this operation to estimate resource usage of the current month based on the metering method that is specified on the first day of the current month. You can call this operation to estimate resource usage only of the current month within your Alibaba Cloud account. The time range used for the estimation starts at 00:00 on the first day of the current month and ends 2 hours earlier than the current time.
+         * *   Pay by monthly 95th percentile: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
+         * *   Pay by average daily peak bandwidth per month: Estimated value = Sum of daily peak bandwidth values/Number of days. The current day is excluded.
+         * *   Pay by 4th peak bandwidth per month: The estimated value is the 4th peak bandwidth value between the start time and end time. If the time range is less than four days, the estimated value is 0.
+         * *   Pay by average daily 95th percentile bandwidth per month: Estimated value = Sum of daily 95th percentile bandwidth values/Number of days. The current day is excluded.
+         * *   Pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
+         * > You can call this operation only once per second per account.
+         *
+         * @param request DescribeCdnUserBillPredictionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserBillPredictionResponse
          */
         public async Task<DescribeCdnUserBillPredictionResponse> DescribeCdnUserBillPredictionWithOptionsAsync(DescribeCdnUserBillPredictionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6262,16 +6960,18 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * You can call this operation to estimate resource usage of the current month based on the metering method that is specified on the first day of the current month. You can call this operation to estimate resource usage only of the current month within your Alibaba Cloud account. The time range used for the estimation starts at 00:00 on the first day of the current month and ends 2 hours earlier than the current time.
-          * *   Pay by monthly 95th percentile: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
-          * *   Pay by average daily peak bandwidth per month: Estimated value = Sum of daily peak bandwidth values/Number of days. The current day is excluded.
-          * *   Pay by 4th peak bandwidth per month: The estimated value is the 4th peak bandwidth value between the start time and end time. If the time range is less than four days, the estimated value is 0.
-          * *   Pay by average daily 95th percentile bandwidth per month: Estimated value = Sum of daily 95th percentile bandwidth values/Number of days. The current day is excluded.
-          * *   Pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
-          * > You can call this operation only once per second per account.
-          *
-          * @param request DescribeCdnUserBillPredictionRequest
-          * @return DescribeCdnUserBillPredictionResponse
+         * @summary Estimates resource usage of the current month.
+         *
+         * @description You can call this operation to estimate resource usage of the current month based on the metering method that is specified on the first day of the current month. You can call this operation to estimate resource usage only of the current month within your Alibaba Cloud account. The time range used for the estimation starts at 00:00 on the first day of the current month and ends 2 hours earlier than the current time.
+         * *   Pay by monthly 95th percentile: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
+         * *   Pay by average daily peak bandwidth per month: Estimated value = Sum of daily peak bandwidth values/Number of days. The current day is excluded.
+         * *   Pay by 4th peak bandwidth per month: The estimated value is the 4th peak bandwidth value between the start time and end time. If the time range is less than four days, the estimated value is 0.
+         * *   Pay by average daily 95th percentile bandwidth per month: Estimated value = Sum of daily 95th percentile bandwidth values/Number of days. The current day is excluded.
+         * *   Pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
+         * > You can call this operation only once per second per account.
+         *
+         * @param request DescribeCdnUserBillPredictionRequest
+         * @return DescribeCdnUserBillPredictionResponse
          */
         public DescribeCdnUserBillPredictionResponse DescribeCdnUserBillPrediction(DescribeCdnUserBillPredictionRequest request)
         {
@@ -6280,16 +6980,18 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * You can call this operation to estimate resource usage of the current month based on the metering method that is specified on the first day of the current month. You can call this operation to estimate resource usage only of the current month within your Alibaba Cloud account. The time range used for the estimation starts at 00:00 on the first day of the current month and ends 2 hours earlier than the current time.
-          * *   Pay by monthly 95th percentile: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
-          * *   Pay by average daily peak bandwidth per month: Estimated value = Sum of daily peak bandwidth values/Number of days. The current day is excluded.
-          * *   Pay by 4th peak bandwidth per month: The estimated value is the 4th peak bandwidth value between the start time and end time. If the time range is less than four days, the estimated value is 0.
-          * *   Pay by average daily 95th percentile bandwidth per month: Estimated value = Sum of daily 95th percentile bandwidth values/Number of days. The current day is excluded.
-          * *   Pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
-          * > You can call this operation only once per second per account.
-          *
-          * @param request DescribeCdnUserBillPredictionRequest
-          * @return DescribeCdnUserBillPredictionResponse
+         * @summary Estimates resource usage of the current month.
+         *
+         * @description You can call this operation to estimate resource usage of the current month based on the metering method that is specified on the first day of the current month. You can call this operation to estimate resource usage only of the current month within your Alibaba Cloud account. The time range used for the estimation starts at 00:00 on the first day of the current month and ends 2 hours earlier than the current time.
+         * *   Pay by monthly 95th percentile: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
+         * *   Pay by average daily peak bandwidth per month: Estimated value = Sum of daily peak bandwidth values/Number of days. The current day is excluded.
+         * *   Pay by 4th peak bandwidth per month: The estimated value is the 4th peak bandwidth value between the start time and end time. If the time range is less than four days, the estimated value is 0.
+         * *   Pay by average daily 95th percentile bandwidth per month: Estimated value = Sum of daily 95th percentile bandwidth values/Number of days. The current day is excluded.
+         * *   Pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
+         * > You can call this operation only once per second per account.
+         *
+         * @param request DescribeCdnUserBillPredictionRequest
+         * @return DescribeCdnUserBillPredictionResponse
          */
         public async Task<DescribeCdnUserBillPredictionResponse> DescribeCdnUserBillPredictionAsync(DescribeCdnUserBillPredictionRequest request)
         {
@@ -6298,11 +7000,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnUserBillTypeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserBillTypeResponse
+         * @summary Queries information about the metering methods of an account. The maximum time range to query is one month.
+         *
+         * @description *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnUserBillTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserBillTypeResponse
          */
         public DescribeCdnUserBillTypeResponse DescribeCdnUserBillTypeWithOptions(DescribeCdnUserBillTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6336,11 +7040,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnUserBillTypeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserBillTypeResponse
+         * @summary Queries information about the metering methods of an account. The maximum time range to query is one month.
+         *
+         * @description *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnUserBillTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserBillTypeResponse
          */
         public async Task<DescribeCdnUserBillTypeResponse> DescribeCdnUserBillTypeWithOptionsAsync(DescribeCdnUserBillTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6374,10 +7080,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnUserBillTypeRequest
-          * @return DescribeCdnUserBillTypeResponse
+         * @summary Queries information about the metering methods of an account. The maximum time range to query is one month.
+         *
+         * @description *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnUserBillTypeRequest
+         * @return DescribeCdnUserBillTypeResponse
          */
         public DescribeCdnUserBillTypeResponse DescribeCdnUserBillType(DescribeCdnUserBillTypeRequest request)
         {
@@ -6386,10 +7094,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCdnUserBillTypeRequest
-          * @return DescribeCdnUserBillTypeResponse
+         * @summary Queries information about the metering methods of an account. The maximum time range to query is one month.
+         *
+         * @description *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCdnUserBillTypeRequest
+         * @return DescribeCdnUserBillTypeResponse
          */
         public async Task<DescribeCdnUserBillTypeResponse> DescribeCdnUserBillTypeAsync(DescribeCdnUserBillTypeRequest request)
         {
@@ -6398,11 +7108,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnUserConfigsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserConfigsResponse
+         * @summary Queries configurations of security features.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnUserConfigsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserConfigsResponse
          */
         public DescribeCdnUserConfigsResponse DescribeCdnUserConfigsWithOptions(DescribeCdnUserConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6432,11 +7144,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnUserConfigsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserConfigsResponse
+         * @summary Queries configurations of security features.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnUserConfigsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserConfigsResponse
          */
         public async Task<DescribeCdnUserConfigsResponse> DescribeCdnUserConfigsWithOptionsAsync(DescribeCdnUserConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6466,10 +7180,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnUserConfigsRequest
-          * @return DescribeCdnUserConfigsResponse
+         * @summary Queries configurations of security features.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnUserConfigsRequest
+         * @return DescribeCdnUserConfigsResponse
          */
         public DescribeCdnUserConfigsResponse DescribeCdnUserConfigs(DescribeCdnUserConfigsRequest request)
         {
@@ -6478,10 +7194,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnUserConfigsRequest
-          * @return DescribeCdnUserConfigsResponse
+         * @summary Queries configurations of security features.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnUserConfigsRequest
+         * @return DescribeCdnUserConfigsResponse
          */
         public async Task<DescribeCdnUserConfigsResponse> DescribeCdnUserConfigsAsync(DescribeCdnUserConfigsRequest request)
         {
@@ -6490,11 +7208,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 100.
-          *
-          * @param request DescribeCdnUserDomainsByFuncRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserDomainsByFuncResponse
+         * @summary Queries accelerated domain names that have specified features configured and the status of the domain names.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 100.
+         *
+         * @param request DescribeCdnUserDomainsByFuncRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserDomainsByFuncResponse
          */
         public DescribeCdnUserDomainsByFuncResponse DescribeCdnUserDomainsByFuncWithOptions(DescribeCdnUserDomainsByFuncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6536,11 +7256,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 100.
-          *
-          * @param request DescribeCdnUserDomainsByFuncRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserDomainsByFuncResponse
+         * @summary Queries accelerated domain names that have specified features configured and the status of the domain names.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 100.
+         *
+         * @param request DescribeCdnUserDomainsByFuncRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserDomainsByFuncResponse
          */
         public async Task<DescribeCdnUserDomainsByFuncResponse> DescribeCdnUserDomainsByFuncWithOptionsAsync(DescribeCdnUserDomainsByFuncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6582,10 +7304,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 100.
-          *
-          * @param request DescribeCdnUserDomainsByFuncRequest
-          * @return DescribeCdnUserDomainsByFuncResponse
+         * @summary Queries accelerated domain names that have specified features configured and the status of the domain names.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 100.
+         *
+         * @param request DescribeCdnUserDomainsByFuncRequest
+         * @return DescribeCdnUserDomainsByFuncResponse
          */
         public DescribeCdnUserDomainsByFuncResponse DescribeCdnUserDomainsByFunc(DescribeCdnUserDomainsByFuncRequest request)
         {
@@ -6594,10 +7318,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 100.
-          *
-          * @param request DescribeCdnUserDomainsByFuncRequest
-          * @return DescribeCdnUserDomainsByFuncResponse
+         * @summary Queries accelerated domain names that have specified features configured and the status of the domain names.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 100.
+         *
+         * @param request DescribeCdnUserDomainsByFuncRequest
+         * @return DescribeCdnUserDomainsByFuncResponse
          */
         public async Task<DescribeCdnUserDomainsByFuncResponse> DescribeCdnUserDomainsByFuncAsync(DescribeCdnUserDomainsByFuncRequest request)
         {
@@ -6606,11 +7332,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnUserQuotaRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserQuotaResponse
+         * @summary Queries the quotas and usage of Alibaba Cloud CDN resources.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnUserQuotaRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserQuotaResponse
          */
         public DescribeCdnUserQuotaResponse DescribeCdnUserQuotaWithOptions(DescribeCdnUserQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6644,11 +7372,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnUserQuotaRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserQuotaResponse
+         * @summary Queries the quotas and usage of Alibaba Cloud CDN resources.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnUserQuotaRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserQuotaResponse
          */
         public async Task<DescribeCdnUserQuotaResponse> DescribeCdnUserQuotaWithOptionsAsync(DescribeCdnUserQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6682,10 +7412,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnUserQuotaRequest
-          * @return DescribeCdnUserQuotaResponse
+         * @summary Queries the quotas and usage of Alibaba Cloud CDN resources.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnUserQuotaRequest
+         * @return DescribeCdnUserQuotaResponse
          */
         public DescribeCdnUserQuotaResponse DescribeCdnUserQuota(DescribeCdnUserQuotaRequest request)
         {
@@ -6694,10 +7426,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnUserQuotaRequest
-          * @return DescribeCdnUserQuotaResponse
+         * @summary Queries the quotas and usage of Alibaba Cloud CDN resources.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnUserQuotaRequest
+         * @return DescribeCdnUserQuotaResponse
          */
         public async Task<DescribeCdnUserQuotaResponse> DescribeCdnUserQuotaAsync(DescribeCdnUserQuotaRequest request)
         {
@@ -6706,11 +7440,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnUserResourcePackageRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserResourcePackageResponse
+         * @summary Queries the resource plans that you have purchased for Alibaba Cloud CDN.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnUserResourcePackageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserResourcePackageResponse
          */
         public DescribeCdnUserResourcePackageResponse DescribeCdnUserResourcePackageWithOptions(DescribeCdnUserResourcePackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6748,11 +7484,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnUserResourcePackageRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnUserResourcePackageResponse
+         * @summary Queries the resource plans that you have purchased for Alibaba Cloud CDN.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnUserResourcePackageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnUserResourcePackageResponse
          */
         public async Task<DescribeCdnUserResourcePackageResponse> DescribeCdnUserResourcePackageWithOptionsAsync(DescribeCdnUserResourcePackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6790,10 +7528,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnUserResourcePackageRequest
-          * @return DescribeCdnUserResourcePackageResponse
+         * @summary Queries the resource plans that you have purchased for Alibaba Cloud CDN.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnUserResourcePackageRequest
+         * @return DescribeCdnUserResourcePackageResponse
          */
         public DescribeCdnUserResourcePackageResponse DescribeCdnUserResourcePackage(DescribeCdnUserResourcePackageRequest request)
         {
@@ -6802,10 +7542,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeCdnUserResourcePackageRequest
-          * @return DescribeCdnUserResourcePackageResponse
+         * @summary Queries the resource plans that you have purchased for Alibaba Cloud CDN.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeCdnUserResourcePackageRequest
+         * @return DescribeCdnUserResourcePackageResponse
          */
         public async Task<DescribeCdnUserResourcePackageResponse> DescribeCdnUserResourcePackageAsync(DescribeCdnUserResourcePackageRequest request)
         {
@@ -6814,11 +7556,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 150 times per second per account.
-          *
-          * @param request DescribeCdnWafDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnWafDomainResponse
+         * @summary Queries domain names that use Web Application Firewall (WAF).
+         *
+         * @description > You can call this operation up to 150 times per second per account.
+         *
+         * @param request DescribeCdnWafDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnWafDomainResponse
          */
         public DescribeCdnWafDomainResponse DescribeCdnWafDomainWithOptions(DescribeCdnWafDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6856,11 +7600,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 150 times per second per account.
-          *
-          * @param request DescribeCdnWafDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCdnWafDomainResponse
+         * @summary Queries domain names that use Web Application Firewall (WAF).
+         *
+         * @description > You can call this operation up to 150 times per second per account.
+         *
+         * @param request DescribeCdnWafDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCdnWafDomainResponse
          */
         public async Task<DescribeCdnWafDomainResponse> DescribeCdnWafDomainWithOptionsAsync(DescribeCdnWafDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6898,10 +7644,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 150 times per second per account.
-          *
-          * @param request DescribeCdnWafDomainRequest
-          * @return DescribeCdnWafDomainResponse
+         * @summary Queries domain names that use Web Application Firewall (WAF).
+         *
+         * @description > You can call this operation up to 150 times per second per account.
+         *
+         * @param request DescribeCdnWafDomainRequest
+         * @return DescribeCdnWafDomainResponse
          */
         public DescribeCdnWafDomainResponse DescribeCdnWafDomain(DescribeCdnWafDomainRequest request)
         {
@@ -6910,10 +7658,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 150 times per second per account.
-          *
-          * @param request DescribeCdnWafDomainRequest
-          * @return DescribeCdnWafDomainResponse
+         * @summary Queries domain names that use Web Application Firewall (WAF).
+         *
+         * @description > You can call this operation up to 150 times per second per account.
+         *
+         * @param request DescribeCdnWafDomainRequest
+         * @return DescribeCdnWafDomainResponse
          */
         public async Task<DescribeCdnWafDomainResponse> DescribeCdnWafDomainAsync(DescribeCdnWafDomainRequest request)
         {
@@ -6922,12 +7672,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 100 times per second per account.
-          * *   If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.
-          *
-          * @param request DescribeCertificateInfoByIDRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCertificateInfoByIDResponse
+         * @summary Queries the information about a specific certificate by certificate ID.
+         *
+         * @description *   You can call this operation up to 100 times per second per account.
+         * *   If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.
+         *
+         * @param request DescribeCertificateInfoByIDRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCertificateInfoByIDResponse
          */
         public DescribeCertificateInfoByIDResponse DescribeCertificateInfoByIDWithOptions(DescribeCertificateInfoByIDRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6953,12 +7705,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 100 times per second per account.
-          * *   If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.
-          *
-          * @param request DescribeCertificateInfoByIDRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCertificateInfoByIDResponse
+         * @summary Queries the information about a specific certificate by certificate ID.
+         *
+         * @description *   You can call this operation up to 100 times per second per account.
+         * *   If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.
+         *
+         * @param request DescribeCertificateInfoByIDRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCertificateInfoByIDResponse
          */
         public async Task<DescribeCertificateInfoByIDResponse> DescribeCertificateInfoByIDWithOptionsAsync(DescribeCertificateInfoByIDRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6984,11 +7738,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 100 times per second per account.
-          * *   If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.
-          *
-          * @param request DescribeCertificateInfoByIDRequest
-          * @return DescribeCertificateInfoByIDResponse
+         * @summary Queries the information about a specific certificate by certificate ID.
+         *
+         * @description *   You can call this operation up to 100 times per second per account.
+         * *   If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.
+         *
+         * @param request DescribeCertificateInfoByIDRequest
+         * @return DescribeCertificateInfoByIDResponse
          */
         public DescribeCertificateInfoByIDResponse DescribeCertificateInfoByID(DescribeCertificateInfoByIDRequest request)
         {
@@ -6997,11 +7753,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 100 times per second per account.
-          * *   If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.
-          *
-          * @param request DescribeCertificateInfoByIDRequest
-          * @return DescribeCertificateInfoByIDResponse
+         * @summary Queries the information about a specific certificate by certificate ID.
+         *
+         * @description *   You can call this operation up to 100 times per second per account.
+         * *   If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.
+         *
+         * @param request DescribeCertificateInfoByIDRequest
+         * @return DescribeCertificateInfoByIDResponse
          */
         public async Task<DescribeCertificateInfoByIDResponse> DescribeCertificateInfoByIDAsync(DescribeCertificateInfoByIDRequest request)
         {
@@ -7010,11 +7768,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCustomLogConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCustomLogConfigResponse
+         * @summary Queries the details about a custom logging configuration.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCustomLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCustomLogConfigResponse
          */
         public DescribeCustomLogConfigResponse DescribeCustomLogConfigWithOptions(DescribeCustomLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7040,11 +7800,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCustomLogConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCustomLogConfigResponse
+         * @summary Queries the details about a custom logging configuration.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCustomLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCustomLogConfigResponse
          */
         public async Task<DescribeCustomLogConfigResponse> DescribeCustomLogConfigWithOptionsAsync(DescribeCustomLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7070,10 +7832,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCustomLogConfigRequest
-          * @return DescribeCustomLogConfigResponse
+         * @summary Queries the details about a custom logging configuration.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCustomLogConfigRequest
+         * @return DescribeCustomLogConfigResponse
          */
         public DescribeCustomLogConfigResponse DescribeCustomLogConfig(DescribeCustomLogConfigRequest request)
         {
@@ -7082,10 +7846,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeCustomLogConfigRequest
-          * @return DescribeCustomLogConfigResponse
+         * @summary Queries the details about a custom logging configuration.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeCustomLogConfigRequest
+         * @return DescribeCustomLogConfigResponse
          */
         public async Task<DescribeCustomLogConfigResponse> DescribeCustomLogConfigAsync(DescribeCustomLogConfigRequest request)
         {
@@ -7094,14 +7860,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature to for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can call this operation up to 100 times per second per account.
-          * >*   You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).
-          *
-          * @param request DescribeDomainAverageResponseTimeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainAverageResponseTimeResponse
+         * @summary Queries the average response time of one or more accelerated domain names. You can query data collected within the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can call this operation up to 100 times per second per account.
+         * >*   You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).
+         *
+         * @param request DescribeDomainAverageResponseTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainAverageResponseTimeResponse
          */
         public DescribeDomainAverageResponseTimeResponse DescribeDomainAverageResponseTimeWithOptions(DescribeDomainAverageResponseTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7159,14 +7927,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature to for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can call this operation up to 100 times per second per account.
-          * >*   You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).
-          *
-          * @param request DescribeDomainAverageResponseTimeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainAverageResponseTimeResponse
+         * @summary Queries the average response time of one or more accelerated domain names. You can query data collected within the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can call this operation up to 100 times per second per account.
+         * >*   You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).
+         *
+         * @param request DescribeDomainAverageResponseTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainAverageResponseTimeResponse
          */
         public async Task<DescribeDomainAverageResponseTimeResponse> DescribeDomainAverageResponseTimeWithOptionsAsync(DescribeDomainAverageResponseTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7224,13 +7994,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature to for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can call this operation up to 100 times per second per account.
-          * >*   You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).
-          *
-          * @param request DescribeDomainAverageResponseTimeRequest
-          * @return DescribeDomainAverageResponseTimeResponse
+         * @summary Queries the average response time of one or more accelerated domain names. You can query data collected within the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can call this operation up to 100 times per second per account.
+         * >*   You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).
+         *
+         * @param request DescribeDomainAverageResponseTimeRequest
+         * @return DescribeDomainAverageResponseTimeResponse
          */
         public DescribeDomainAverageResponseTimeResponse DescribeDomainAverageResponseTime(DescribeDomainAverageResponseTimeRequest request)
         {
@@ -7239,13 +8011,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature to for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can call this operation up to 100 times per second per account.
-          * >*   You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).
-          *
-          * @param request DescribeDomainAverageResponseTimeRequest
-          * @return DescribeDomainAverageResponseTimeResponse
+         * @summary Queries the average response time of one or more accelerated domain names. You can query data collected within the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can call this operation up to 100 times per second per account.
+         * >*   You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).
+         *
+         * @param request DescribeDomainAverageResponseTimeRequest
+         * @return DescribeDomainAverageResponseTimeResponse
          */
         public async Task<DescribeDomainAverageResponseTimeResponse> DescribeDomainAverageResponseTimeAsync(DescribeDomainAverageResponseTimeRequest request)
         {
@@ -7254,19 +8028,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 150 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainBpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainBpsDataResponse
+         * @summary Queries bandwidth monitoring data for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 150 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainBpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainBpsDataResponse
          */
         public DescribeDomainBpsDataResponse DescribeDomainBpsDataWithOptions(DescribeDomainBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7316,19 +8092,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 150 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainBpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainBpsDataResponse
+         * @summary Queries bandwidth monitoring data for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 150 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainBpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainBpsDataResponse
          */
         public async Task<DescribeDomainBpsDataResponse> DescribeDomainBpsDataWithOptionsAsync(DescribeDomainBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7378,18 +8156,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 150 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainBpsDataRequest
-          * @return DescribeDomainBpsDataResponse
+         * @summary Queries bandwidth monitoring data for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 150 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainBpsDataRequest
+         * @return DescribeDomainBpsDataResponse
          */
         public DescribeDomainBpsDataResponse DescribeDomainBpsData(DescribeDomainBpsDataRequest request)
         {
@@ -7398,18 +8178,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 150 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainBpsDataRequest
-          * @return DescribeDomainBpsDataResponse
+         * @summary Queries bandwidth monitoring data for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 150 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainBpsDataRequest
+         * @return DescribeDomainBpsDataResponse
          */
         public async Task<DescribeDomainBpsDataResponse> DescribeDomainBpsDataAsync(DescribeDomainBpsDataRequest request)
         {
@@ -7418,19 +8200,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 20 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainBpsDataByLayerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainBpsDataByLayerResponse
+         * @summary Queries bandwidth data by protocol.
+         *
+         * @description * You can call this operation up to 20 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainBpsDataByLayerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainBpsDataByLayerResponse
          */
         public DescribeDomainBpsDataByLayerResponse DescribeDomainBpsDataByLayerWithOptions(DescribeDomainBpsDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7484,19 +8268,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 20 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainBpsDataByLayerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainBpsDataByLayerResponse
+         * @summary Queries bandwidth data by protocol.
+         *
+         * @description * You can call this operation up to 20 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainBpsDataByLayerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainBpsDataByLayerResponse
          */
         public async Task<DescribeDomainBpsDataByLayerResponse> DescribeDomainBpsDataByLayerWithOptionsAsync(DescribeDomainBpsDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7550,18 +8336,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 20 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainBpsDataByLayerRequest
-          * @return DescribeDomainBpsDataByLayerResponse
+         * @summary Queries bandwidth data by protocol.
+         *
+         * @description * You can call this operation up to 20 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainBpsDataByLayerRequest
+         * @return DescribeDomainBpsDataByLayerResponse
          */
         public DescribeDomainBpsDataByLayerResponse DescribeDomainBpsDataByLayer(DescribeDomainBpsDataByLayerRequest request)
         {
@@ -7570,18 +8358,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 20 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainBpsDataByLayerRequest
-          * @return DescribeDomainBpsDataByLayerResponse
+         * @summary Queries bandwidth data by protocol.
+         *
+         * @description * You can call this operation up to 20 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainBpsDataByLayerRequest
+         * @return DescribeDomainBpsDataByLayerResponse
          */
         public async Task<DescribeDomainBpsDataByLayerResponse> DescribeDomainBpsDataByLayerAsync(DescribeDomainBpsDataByLayerRequest request)
         {
@@ -7590,14 +8380,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   The bandwidth is measured in bit/s.
-          * *   You can specify only one accelerated domain name in each request.
-          * *   The data is collected every 5 minutes.
-          * *   You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeDomainBpsDataByTimeStampRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainBpsDataByTimeStampResponse
+         * @summary Queries the bandwidth data at a specified time for an accelerated domain.
+         *
+         * @description *   The bandwidth is measured in bit/s.
+         * *   You can specify only one accelerated domain name in each request.
+         * *   The data is collected every 5 minutes.
+         * *   You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeDomainBpsDataByTimeStampRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainBpsDataByTimeStampResponse
          */
         public DescribeDomainBpsDataByTimeStampResponse DescribeDomainBpsDataByTimeStampWithOptions(DescribeDomainBpsDataByTimeStampRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7639,14 +8431,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   The bandwidth is measured in bit/s.
-          * *   You can specify only one accelerated domain name in each request.
-          * *   The data is collected every 5 minutes.
-          * *   You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeDomainBpsDataByTimeStampRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainBpsDataByTimeStampResponse
+         * @summary Queries the bandwidth data at a specified time for an accelerated domain.
+         *
+         * @description *   The bandwidth is measured in bit/s.
+         * *   You can specify only one accelerated domain name in each request.
+         * *   The data is collected every 5 minutes.
+         * *   You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeDomainBpsDataByTimeStampRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainBpsDataByTimeStampResponse
          */
         public async Task<DescribeDomainBpsDataByTimeStampResponse> DescribeDomainBpsDataByTimeStampWithOptionsAsync(DescribeDomainBpsDataByTimeStampRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7688,13 +8482,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   The bandwidth is measured in bit/s.
-          * *   You can specify only one accelerated domain name in each request.
-          * *   The data is collected every 5 minutes.
-          * *   You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeDomainBpsDataByTimeStampRequest
-          * @return DescribeDomainBpsDataByTimeStampResponse
+         * @summary Queries the bandwidth data at a specified time for an accelerated domain.
+         *
+         * @description *   The bandwidth is measured in bit/s.
+         * *   You can specify only one accelerated domain name in each request.
+         * *   The data is collected every 5 minutes.
+         * *   You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeDomainBpsDataByTimeStampRequest
+         * @return DescribeDomainBpsDataByTimeStampResponse
          */
         public DescribeDomainBpsDataByTimeStampResponse DescribeDomainBpsDataByTimeStamp(DescribeDomainBpsDataByTimeStampRequest request)
         {
@@ -7703,13 +8499,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   The bandwidth is measured in bit/s.
-          * *   You can specify only one accelerated domain name in each request.
-          * *   The data is collected every 5 minutes.
-          * *   You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeDomainBpsDataByTimeStampRequest
-          * @return DescribeDomainBpsDataByTimeStampResponse
+         * @summary Queries the bandwidth data at a specified time for an accelerated domain.
+         *
+         * @description *   The bandwidth is measured in bit/s.
+         * *   You can specify only one accelerated domain name in each request.
+         * *   The data is collected every 5 minutes.
+         * *   You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeDomainBpsDataByTimeStampRequest
+         * @return DescribeDomainBpsDataByTimeStampResponse
          */
         public async Task<DescribeDomainBpsDataByTimeStampResponse> DescribeDomainBpsDataByTimeStampAsync(DescribeDomainBpsDataByTimeStampRequest request)
         {
@@ -7718,14 +8516,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.
-          * *   You can specify up to 20 domain names in reach request. If you specify multiple domain names, separate them with commas (,).
-          * *   You can query data collected over the last 30 days.
-          * *   You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeDomainCcActivityLogRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainCcActivityLogResponse
+         * @summary Queries log entries of rate limiting.
+         *
+         * @description *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.
+         * *   You can specify up to 20 domain names in reach request. If you specify multiple domain names, separate them with commas (,).
+         * *   You can query data collected over the last 30 days.
+         * *   You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeDomainCcActivityLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainCcActivityLogResponse
          */
         public DescribeDomainCcActivityLogResponse DescribeDomainCcActivityLogWithOptions(DescribeDomainCcActivityLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7783,14 +8583,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.
-          * *   You can specify up to 20 domain names in reach request. If you specify multiple domain names, separate them with commas (,).
-          * *   You can query data collected over the last 30 days.
-          * *   You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeDomainCcActivityLogRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainCcActivityLogResponse
+         * @summary Queries log entries of rate limiting.
+         *
+         * @description *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.
+         * *   You can specify up to 20 domain names in reach request. If you specify multiple domain names, separate them with commas (,).
+         * *   You can query data collected over the last 30 days.
+         * *   You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeDomainCcActivityLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainCcActivityLogResponse
          */
         public async Task<DescribeDomainCcActivityLogResponse> DescribeDomainCcActivityLogWithOptionsAsync(DescribeDomainCcActivityLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7848,13 +8650,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.
-          * *   You can specify up to 20 domain names in reach request. If you specify multiple domain names, separate them with commas (,).
-          * *   You can query data collected over the last 30 days.
-          * *   You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeDomainCcActivityLogRequest
-          * @return DescribeDomainCcActivityLogResponse
+         * @summary Queries log entries of rate limiting.
+         *
+         * @description *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.
+         * *   You can specify up to 20 domain names in reach request. If you specify multiple domain names, separate them with commas (,).
+         * *   You can query data collected over the last 30 days.
+         * *   You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeDomainCcActivityLogRequest
+         * @return DescribeDomainCcActivityLogResponse
          */
         public DescribeDomainCcActivityLogResponse DescribeDomainCcActivityLog(DescribeDomainCcActivityLogRequest request)
         {
@@ -7863,13 +8667,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.
-          * *   You can specify up to 20 domain names in reach request. If you specify multiple domain names, separate them with commas (,).
-          * *   You can query data collected over the last 30 days.
-          * *   You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeDomainCcActivityLogRequest
-          * @return DescribeDomainCcActivityLogResponse
+         * @summary Queries log entries of rate limiting.
+         *
+         * @description *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.
+         * *   You can specify up to 20 domain names in reach request. If you specify multiple domain names, separate them with commas (,).
+         * *   You can query data collected over the last 30 days.
+         * *   You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeDomainCcActivityLogRequest
+         * @return DescribeDomainCcActivityLogResponse
          */
         public async Task<DescribeDomainCcActivityLogResponse> DescribeDomainCcActivityLogAsync(DescribeDomainCcActivityLogRequest request)
         {
@@ -7878,11 +8684,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainCertificateInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainCertificateInfoResponse
+         * @summary Queries the certificate information of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainCertificateInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainCertificateInfoResponse
          */
         public DescribeDomainCertificateInfoResponse DescribeDomainCertificateInfoWithOptions(DescribeDomainCertificateInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7912,11 +8720,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainCertificateInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainCertificateInfoResponse
+         * @summary Queries the certificate information of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainCertificateInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainCertificateInfoResponse
          */
         public async Task<DescribeDomainCertificateInfoResponse> DescribeDomainCertificateInfoWithOptionsAsync(DescribeDomainCertificateInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7946,10 +8756,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainCertificateInfoRequest
-          * @return DescribeDomainCertificateInfoResponse
+         * @summary Queries the certificate information of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainCertificateInfoRequest
+         * @return DescribeDomainCertificateInfoResponse
          */
         public DescribeDomainCertificateInfoResponse DescribeDomainCertificateInfo(DescribeDomainCertificateInfoRequest request)
         {
@@ -7958,10 +8770,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainCertificateInfoRequest
-          * @return DescribeDomainCertificateInfoResponse
+         * @summary Queries the certificate information of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainCertificateInfoRequest
+         * @return DescribeDomainCertificateInfoResponse
          */
         public async Task<DescribeDomainCertificateInfoResponse> DescribeDomainCertificateInfoAsync(DescribeDomainCertificateInfoRequest request)
         {
@@ -7969,6 +8783,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DescribeDomainCertificateInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Detects the CNAME for an accelerated domain name. You can check the resolution result to determine whether the CNAME is configured.
+         *
+         * @param request DescribeDomainCnameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainCnameResponse
+         */
         public DescribeDomainCnameResponse DescribeDomainCnameWithOptions(DescribeDomainCnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7996,6 +8817,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeDomainCnameResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Detects the CNAME for an accelerated domain name. You can check the resolution result to determine whether the CNAME is configured.
+         *
+         * @param request DescribeDomainCnameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainCnameResponse
+         */
         public async Task<DescribeDomainCnameResponse> DescribeDomainCnameWithOptionsAsync(DescribeDomainCnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8023,12 +8851,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeDomainCnameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Detects the CNAME for an accelerated domain name. You can check the resolution result to determine whether the CNAME is configured.
+         *
+         * @param request DescribeDomainCnameRequest
+         * @return DescribeDomainCnameResponse
+         */
         public DescribeDomainCnameResponse DescribeDomainCname(DescribeDomainCnameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainCnameWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Detects the CNAME for an accelerated domain name. You can check the resolution result to determine whether the CNAME is configured.
+         *
+         * @param request DescribeDomainCnameRequest
+         * @return DescribeDomainCnameResponse
+         */
         public async Task<DescribeDomainCnameResponse> DescribeDomainCnameAsync(DescribeDomainCnameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8036,11 +8876,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainCustomLogConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainCustomLogConfigResponse
+         * @summary Queries the custom log configuration of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainCustomLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainCustomLogConfigResponse
          */
         public DescribeDomainCustomLogConfigResponse DescribeDomainCustomLogConfigWithOptions(DescribeDomainCustomLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8066,11 +8908,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainCustomLogConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainCustomLogConfigResponse
+         * @summary Queries the custom log configuration of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainCustomLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainCustomLogConfigResponse
          */
         public async Task<DescribeDomainCustomLogConfigResponse> DescribeDomainCustomLogConfigWithOptionsAsync(DescribeDomainCustomLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8096,10 +8940,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainCustomLogConfigRequest
-          * @return DescribeDomainCustomLogConfigResponse
+         * @summary Queries the custom log configuration of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainCustomLogConfigRequest
+         * @return DescribeDomainCustomLogConfigResponse
          */
         public DescribeDomainCustomLogConfigResponse DescribeDomainCustomLogConfig(DescribeDomainCustomLogConfigRequest request)
         {
@@ -8108,10 +8954,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainCustomLogConfigRequest
-          * @return DescribeDomainCustomLogConfigResponse
+         * @summary Queries the custom log configuration of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainCustomLogConfigRequest
+         * @return DescribeDomainCustomLogConfigResponse
          */
         public async Task<DescribeDomainCustomLogConfigResponse> DescribeDomainCustomLogConfigAsync(DescribeDomainCustomLogConfigRequest request)
         {
@@ -8120,11 +8968,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeDomainDetailDataByLayerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainDetailDataByLayerResponse
+         * @summary The domain name that you want to query. You can specify multiple domain names and separate them with commas (,). You can specify at most 30 domain names in each call.
+         *
+         * @description You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeDomainDetailDataByLayerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainDetailDataByLayerResponse
          */
         public DescribeDomainDetailDataByLayerResponse DescribeDomainDetailDataByLayerWithOptions(DescribeDomainDetailDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8150,11 +9000,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeDomainDetailDataByLayerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainDetailDataByLayerResponse
+         * @summary The domain name that you want to query. You can specify multiple domain names and separate them with commas (,). You can specify at most 30 domain names in each call.
+         *
+         * @description You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeDomainDetailDataByLayerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainDetailDataByLayerResponse
          */
         public async Task<DescribeDomainDetailDataByLayerResponse> DescribeDomainDetailDataByLayerWithOptionsAsync(DescribeDomainDetailDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8180,10 +9032,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeDomainDetailDataByLayerRequest
-          * @return DescribeDomainDetailDataByLayerResponse
+         * @summary The domain name that you want to query. You can specify multiple domain names and separate them with commas (,). You can specify at most 30 domain names in each call.
+         *
+         * @description You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeDomainDetailDataByLayerRequest
+         * @return DescribeDomainDetailDataByLayerResponse
          */
         public DescribeDomainDetailDataByLayerResponse DescribeDomainDetailDataByLayer(DescribeDomainDetailDataByLayerRequest request)
         {
@@ -8192,10 +9046,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeDomainDetailDataByLayerRequest
-          * @return DescribeDomainDetailDataByLayerResponse
+         * @summary The domain name that you want to query. You can specify multiple domain names and separate them with commas (,). You can specify at most 30 domain names in each call.
+         *
+         * @description You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeDomainDetailDataByLayerRequest
+         * @return DescribeDomainDetailDataByLayerResponse
          */
         public async Task<DescribeDomainDetailDataByLayerResponse> DescribeDomainDetailDataByLayerAsync(DescribeDomainDetailDataByLayerRequest request)
         {
@@ -8204,19 +9060,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainHitRateDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainHitRateDataResponse
+         * @summary Queries byte hit ratios that are measured in percentage.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainHitRateDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainHitRateDataResponse
          */
         public DescribeDomainHitRateDataResponse DescribeDomainHitRateDataWithOptions(DescribeDomainHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8258,19 +9116,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainHitRateDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainHitRateDataResponse
+         * @summary Queries byte hit ratios that are measured in percentage.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainHitRateDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainHitRateDataResponse
          */
         public async Task<DescribeDomainHitRateDataResponse> DescribeDomainHitRateDataWithOptionsAsync(DescribeDomainHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8312,18 +9172,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainHitRateDataRequest
-          * @return DescribeDomainHitRateDataResponse
+         * @summary Queries byte hit ratios that are measured in percentage.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainHitRateDataRequest
+         * @return DescribeDomainHitRateDataResponse
          */
         public DescribeDomainHitRateDataResponse DescribeDomainHitRateData(DescribeDomainHitRateDataRequest request)
         {
@@ -8332,18 +9194,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainHitRateDataRequest
-          * @return DescribeDomainHitRateDataResponse
+         * @summary Queries byte hit ratios that are measured in percentage.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainHitRateDataRequest
+         * @return DescribeDomainHitRateDataResponse
          */
         public async Task<DescribeDomainHitRateDataResponse> DescribeDomainHitRateDataAsync(DescribeDomainHitRateDataRequest request)
         {
@@ -8352,19 +9216,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainHttpCodeDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainHttpCodeDataResponse
+         * @summary Queries the total number and proportions of HTTP status codes returned from an accelerated domain name. The data is collected every 5 minutes.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainHttpCodeDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainHttpCodeDataResponse
          */
         public DescribeDomainHttpCodeDataResponse DescribeDomainHttpCodeDataWithOptions(DescribeDomainHttpCodeDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8414,19 +9280,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainHttpCodeDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainHttpCodeDataResponse
+         * @summary Queries the total number and proportions of HTTP status codes returned from an accelerated domain name. The data is collected every 5 minutes.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainHttpCodeDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainHttpCodeDataResponse
          */
         public async Task<DescribeDomainHttpCodeDataResponse> DescribeDomainHttpCodeDataWithOptionsAsync(DescribeDomainHttpCodeDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8476,18 +9344,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainHttpCodeDataRequest
-          * @return DescribeDomainHttpCodeDataResponse
+         * @summary Queries the total number and proportions of HTTP status codes returned from an accelerated domain name. The data is collected every 5 minutes.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainHttpCodeDataRequest
+         * @return DescribeDomainHttpCodeDataResponse
          */
         public DescribeDomainHttpCodeDataResponse DescribeDomainHttpCodeData(DescribeDomainHttpCodeDataRequest request)
         {
@@ -8496,18 +9366,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainHttpCodeDataRequest
-          * @return DescribeDomainHttpCodeDataResponse
+         * @summary Queries the total number and proportions of HTTP status codes returned from an accelerated domain name. The data is collected every 5 minutes.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainHttpCodeDataRequest
+         * @return DescribeDomainHttpCodeDataResponse
          */
         public async Task<DescribeDomainHttpCodeDataResponse> DescribeDomainHttpCodeDataAsync(DescribeDomainHttpCodeDataRequest request)
         {
@@ -8516,19 +9388,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 20 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * ### Time granularity
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainHttpCodeDataByLayerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainHttpCodeDataByLayerResponse
+         * @summary Queries HTTP status codes by protocol.
+         *
+         * @description * You can call this operation up to 20 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * ### Time granularity
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainHttpCodeDataByLayerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainHttpCodeDataByLayerResponse
          */
         public DescribeDomainHttpCodeDataByLayerResponse DescribeDomainHttpCodeDataByLayerWithOptions(DescribeDomainHttpCodeDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8582,19 +9456,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 20 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * ### Time granularity
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainHttpCodeDataByLayerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainHttpCodeDataByLayerResponse
+         * @summary Queries HTTP status codes by protocol.
+         *
+         * @description * You can call this operation up to 20 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * ### Time granularity
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainHttpCodeDataByLayerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainHttpCodeDataByLayerResponse
          */
         public async Task<DescribeDomainHttpCodeDataByLayerResponse> DescribeDomainHttpCodeDataByLayerWithOptionsAsync(DescribeDomainHttpCodeDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8648,18 +9524,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 20 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * ### Time granularity
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainHttpCodeDataByLayerRequest
-          * @return DescribeDomainHttpCodeDataByLayerResponse
+         * @summary Queries HTTP status codes by protocol.
+         *
+         * @description * You can call this operation up to 20 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * ### Time granularity
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainHttpCodeDataByLayerRequest
+         * @return DescribeDomainHttpCodeDataByLayerResponse
          */
         public DescribeDomainHttpCodeDataByLayerResponse DescribeDomainHttpCodeDataByLayer(DescribeDomainHttpCodeDataByLayerRequest request)
         {
@@ -8668,18 +9546,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 20 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * ### Time granularity
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainHttpCodeDataByLayerRequest
-          * @return DescribeDomainHttpCodeDataByLayerResponse
+         * @summary Queries HTTP status codes by protocol.
+         *
+         * @description * You can call this operation up to 20 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * ### Time granularity
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainHttpCodeDataByLayerRequest
+         * @return DescribeDomainHttpCodeDataByLayerResponse
          */
         public async Task<DescribeDomainHttpCodeDataByLayerResponse> DescribeDomainHttpCodeDataByLayerAsync(DescribeDomainHttpCodeDataByLayerRequest request)
         {
@@ -8688,14 +9568,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not set StartTime or EndTime, the request returns the data collected in the last 24 hours. If you set both StartTime and EndTime, the request returns the data collected within the specified time range.
-          * >*   This operation queries proportions of data usage of different ISPs for only a specific accelerated domain name, or for all accelerated domain names in your Alibaba Cloud account.
-          * >*   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainISPDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainISPDataResponse
+         * @summary Queries the proportions of data usage of different Internet service providers (ISPs). Data is collected every day. You can query data collected in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not set StartTime or EndTime, the request returns the data collected in the last 24 hours. If you set both StartTime and EndTime, the request returns the data collected within the specified time range.
+         * >*   This operation queries proportions of data usage of different ISPs for only a specific accelerated domain name, or for all accelerated domain names in your Alibaba Cloud account.
+         * >*   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainISPDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainISPDataResponse
          */
         public DescribeDomainISPDataResponse DescribeDomainISPDataWithOptions(DescribeDomainISPDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8733,14 +9615,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not set StartTime or EndTime, the request returns the data collected in the last 24 hours. If you set both StartTime and EndTime, the request returns the data collected within the specified time range.
-          * >*   This operation queries proportions of data usage of different ISPs for only a specific accelerated domain name, or for all accelerated domain names in your Alibaba Cloud account.
-          * >*   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainISPDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainISPDataResponse
+         * @summary Queries the proportions of data usage of different Internet service providers (ISPs). Data is collected every day. You can query data collected in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not set StartTime or EndTime, the request returns the data collected in the last 24 hours. If you set both StartTime and EndTime, the request returns the data collected within the specified time range.
+         * >*   This operation queries proportions of data usage of different ISPs for only a specific accelerated domain name, or for all accelerated domain names in your Alibaba Cloud account.
+         * >*   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainISPDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainISPDataResponse
          */
         public async Task<DescribeDomainISPDataResponse> DescribeDomainISPDataWithOptionsAsync(DescribeDomainISPDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8778,13 +9662,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not set StartTime or EndTime, the request returns the data collected in the last 24 hours. If you set both StartTime and EndTime, the request returns the data collected within the specified time range.
-          * >*   This operation queries proportions of data usage of different ISPs for only a specific accelerated domain name, or for all accelerated domain names in your Alibaba Cloud account.
-          * >*   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainISPDataRequest
-          * @return DescribeDomainISPDataResponse
+         * @summary Queries the proportions of data usage of different Internet service providers (ISPs). Data is collected every day. You can query data collected in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not set StartTime or EndTime, the request returns the data collected in the last 24 hours. If you set both StartTime and EndTime, the request returns the data collected within the specified time range.
+         * >*   This operation queries proportions of data usage of different ISPs for only a specific accelerated domain name, or for all accelerated domain names in your Alibaba Cloud account.
+         * >*   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainISPDataRequest
+         * @return DescribeDomainISPDataResponse
          */
         public DescribeDomainISPDataResponse DescribeDomainISPData(DescribeDomainISPDataRequest request)
         {
@@ -8793,13 +9679,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not set StartTime or EndTime, the request returns the data collected in the last 24 hours. If you set both StartTime and EndTime, the request returns the data collected within the specified time range.
-          * >*   This operation queries proportions of data usage of different ISPs for only a specific accelerated domain name, or for all accelerated domain names in your Alibaba Cloud account.
-          * >*   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainISPDataRequest
-          * @return DescribeDomainISPDataResponse
+         * @summary Queries the proportions of data usage of different Internet service providers (ISPs). Data is collected every day. You can query data collected in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not set StartTime or EndTime, the request returns the data collected in the last 24 hours. If you set both StartTime and EndTime, the request returns the data collected within the specified time range.
+         * >*   This operation queries proportions of data usage of different ISPs for only a specific accelerated domain name, or for all accelerated domain names in your Alibaba Cloud account.
+         * >*   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainISPDataRequest
+         * @return DescribeDomainISPDataResponse
          */
         public async Task<DescribeDomainISPDataResponse> DescribeDomainISPDataAsync(DescribeDomainISPDataRequest request)
         {
@@ -8808,20 +9696,22 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * **You can use one of the following methods to query data:**
-          * *   If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.
-          * *   If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
-          * *   If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
-          * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.
-          * * Maximum time range to query: 90 days 
-          * * Minimum data granularity to query: 1 day 
-          * * Historical data available: 90 days
-          * - You can call this operation up to 100 times per second per account.
-          * - The unit of the bandwidth data returned is bit/s.
-          *
-          * @param request DescribeDomainMax95BpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainMax95BpsDataResponse
+         * @summary Queries the 95th percentile bandwidth data of a domain name.
+         *
+         * @description **You can use one of the following methods to query data:**
+         * *   If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.
+         * *   If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+         * *   If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+         * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.
+         * * Maximum time range to query: 90 days 
+         * * Minimum data granularity to query: 1 day 
+         * * Historical data available: 90 days
+         * - You can call this operation up to 100 times per second per account.
+         * - The unit of the bandwidth data returned is bit/s.
+         *
+         * @param request DescribeDomainMax95BpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainMax95BpsDataResponse
          */
         public DescribeDomainMax95BpsDataResponse DescribeDomainMax95BpsDataWithOptions(DescribeDomainMax95BpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8867,20 +9757,22 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * **You can use one of the following methods to query data:**
-          * *   If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.
-          * *   If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
-          * *   If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
-          * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.
-          * * Maximum time range to query: 90 days 
-          * * Minimum data granularity to query: 1 day 
-          * * Historical data available: 90 days
-          * - You can call this operation up to 100 times per second per account.
-          * - The unit of the bandwidth data returned is bit/s.
-          *
-          * @param request DescribeDomainMax95BpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainMax95BpsDataResponse
+         * @summary Queries the 95th percentile bandwidth data of a domain name.
+         *
+         * @description **You can use one of the following methods to query data:**
+         * *   If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.
+         * *   If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+         * *   If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+         * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.
+         * * Maximum time range to query: 90 days 
+         * * Minimum data granularity to query: 1 day 
+         * * Historical data available: 90 days
+         * - You can call this operation up to 100 times per second per account.
+         * - The unit of the bandwidth data returned is bit/s.
+         *
+         * @param request DescribeDomainMax95BpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainMax95BpsDataResponse
          */
         public async Task<DescribeDomainMax95BpsDataResponse> DescribeDomainMax95BpsDataWithOptionsAsync(DescribeDomainMax95BpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8926,19 +9818,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * **You can use one of the following methods to query data:**
-          * *   If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.
-          * *   If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
-          * *   If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
-          * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.
-          * * Maximum time range to query: 90 days 
-          * * Minimum data granularity to query: 1 day 
-          * * Historical data available: 90 days
-          * - You can call this operation up to 100 times per second per account.
-          * - The unit of the bandwidth data returned is bit/s.
-          *
-          * @param request DescribeDomainMax95BpsDataRequest
-          * @return DescribeDomainMax95BpsDataResponse
+         * @summary Queries the 95th percentile bandwidth data of a domain name.
+         *
+         * @description **You can use one of the following methods to query data:**
+         * *   If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.
+         * *   If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+         * *   If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+         * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.
+         * * Maximum time range to query: 90 days 
+         * * Minimum data granularity to query: 1 day 
+         * * Historical data available: 90 days
+         * - You can call this operation up to 100 times per second per account.
+         * - The unit of the bandwidth data returned is bit/s.
+         *
+         * @param request DescribeDomainMax95BpsDataRequest
+         * @return DescribeDomainMax95BpsDataResponse
          */
         public DescribeDomainMax95BpsDataResponse DescribeDomainMax95BpsData(DescribeDomainMax95BpsDataRequest request)
         {
@@ -8947,19 +9841,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * **You can use one of the following methods to query data:**
-          * *   If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.
-          * *   If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
-          * *   If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
-          * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.
-          * * Maximum time range to query: 90 days 
-          * * Minimum data granularity to query: 1 day 
-          * * Historical data available: 90 days
-          * - You can call this operation up to 100 times per second per account.
-          * - The unit of the bandwidth data returned is bit/s.
-          *
-          * @param request DescribeDomainMax95BpsDataRequest
-          * @return DescribeDomainMax95BpsDataResponse
+         * @summary Queries the 95th percentile bandwidth data of a domain name.
+         *
+         * @description **You can use one of the following methods to query data:**
+         * *   If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.
+         * *   If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+         * *   If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+         * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.
+         * * Maximum time range to query: 90 days 
+         * * Minimum data granularity to query: 1 day 
+         * * Historical data available: 90 days
+         * - You can call this operation up to 100 times per second per account.
+         * - The unit of the bandwidth data returned is bit/s.
+         *
+         * @param request DescribeDomainMax95BpsDataRequest
+         * @return DescribeDomainMax95BpsDataResponse
          */
         public async Task<DescribeDomainMax95BpsDataResponse> DescribeDomainMax95BpsDataAsync(DescribeDomainMax95BpsDataRequest request)
         {
@@ -8968,15 +9864,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.
-          * *   The maximum interval between StartTime and EndTime is 1 hour.
-          * *   You can query data within the last 90 days.
-          * *   You can query the traffic data and the number of requests for accelerated domain names that are deleted.
-          * *   You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeDomainMultiUsageDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainMultiUsageDataResponse
+         * @summary Queries the traffic data and the number of requests for multiple accelerated domain names at a time.
+         *
+         * @description *   If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.
+         * *   The maximum interval between StartTime and EndTime is 1 hour.
+         * *   You can query data within the last 90 days.
+         * *   You can query the traffic data and the number of requests for accelerated domain names that are deleted.
+         * *   You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeDomainMultiUsageDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainMultiUsageDataResponse
          */
         public DescribeDomainMultiUsageDataResponse DescribeDomainMultiUsageDataWithOptions(DescribeDomainMultiUsageDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9014,15 +9912,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.
-          * *   The maximum interval between StartTime and EndTime is 1 hour.
-          * *   You can query data within the last 90 days.
-          * *   You can query the traffic data and the number of requests for accelerated domain names that are deleted.
-          * *   You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeDomainMultiUsageDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainMultiUsageDataResponse
+         * @summary Queries the traffic data and the number of requests for multiple accelerated domain names at a time.
+         *
+         * @description *   If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.
+         * *   The maximum interval between StartTime and EndTime is 1 hour.
+         * *   You can query data within the last 90 days.
+         * *   You can query the traffic data and the number of requests for accelerated domain names that are deleted.
+         * *   You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeDomainMultiUsageDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainMultiUsageDataResponse
          */
         public async Task<DescribeDomainMultiUsageDataResponse> DescribeDomainMultiUsageDataWithOptionsAsync(DescribeDomainMultiUsageDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9060,14 +9960,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.
-          * *   The maximum interval between StartTime and EndTime is 1 hour.
-          * *   You can query data within the last 90 days.
-          * *   You can query the traffic data and the number of requests for accelerated domain names that are deleted.
-          * *   You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeDomainMultiUsageDataRequest
-          * @return DescribeDomainMultiUsageDataResponse
+         * @summary Queries the traffic data and the number of requests for multiple accelerated domain names at a time.
+         *
+         * @description *   If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.
+         * *   The maximum interval between StartTime and EndTime is 1 hour.
+         * *   You can query data within the last 90 days.
+         * *   You can query the traffic data and the number of requests for accelerated domain names that are deleted.
+         * *   You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeDomainMultiUsageDataRequest
+         * @return DescribeDomainMultiUsageDataResponse
          */
         public DescribeDomainMultiUsageDataResponse DescribeDomainMultiUsageData(DescribeDomainMultiUsageDataRequest request)
         {
@@ -9076,14 +9978,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.
-          * *   The maximum interval between StartTime and EndTime is 1 hour.
-          * *   You can query data within the last 90 days.
-          * *   You can query the traffic data and the number of requests for accelerated domain names that are deleted.
-          * *   You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeDomainMultiUsageDataRequest
-          * @return DescribeDomainMultiUsageDataResponse
+         * @summary Queries the traffic data and the number of requests for multiple accelerated domain names at a time.
+         *
+         * @description *   If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.
+         * *   The maximum interval between StartTime and EndTime is 1 hour.
+         * *   You can query data within the last 90 days.
+         * *   You can query the traffic data and the number of requests for accelerated domain names that are deleted.
+         * *   You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeDomainMultiUsageDataRequest
+         * @return DescribeDomainMultiUsageDataResponse
          */
         public async Task<DescribeDomainMultiUsageDataResponse> DescribeDomainMultiUsageDataAsync(DescribeDomainMultiUsageDataRequest request)
         {
@@ -9092,17 +9996,19 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply to be included in the whitelist.
-          * *   You can call this API operation up to 6,000 times per second per account.
-          * *   Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.
-          * *   The average size of the files that belong to the domain name must be larger than 1 MB.
-          * *   The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.
-          * *   If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-          * *   You can query data collected within the last 30 days.
-          *
-          * @param request DescribeDomainPathDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainPathDataResponse
+         * @summary Queries monitoring data including the amount of network traffic and the number of visits by directory.
+         *
+         * @description *   This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply to be included in the whitelist.
+         * *   You can call this API operation up to 6,000 times per second per account.
+         * *   Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.
+         * *   The average size of the files that belong to the domain name must be larger than 1 MB.
+         * *   The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.
+         * *   If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
+         * *   You can query data collected within the last 30 days.
+         *
+         * @param request DescribeDomainPathDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainPathDataResponse
          */
         public DescribeDomainPathDataResponse DescribeDomainPathDataWithOptions(DescribeDomainPathDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9128,17 +10034,19 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply to be included in the whitelist.
-          * *   You can call this API operation up to 6,000 times per second per account.
-          * *   Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.
-          * *   The average size of the files that belong to the domain name must be larger than 1 MB.
-          * *   The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.
-          * *   If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-          * *   You can query data collected within the last 30 days.
-          *
-          * @param request DescribeDomainPathDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainPathDataResponse
+         * @summary Queries monitoring data including the amount of network traffic and the number of visits by directory.
+         *
+         * @description *   This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply to be included in the whitelist.
+         * *   You can call this API operation up to 6,000 times per second per account.
+         * *   Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.
+         * *   The average size of the files that belong to the domain name must be larger than 1 MB.
+         * *   The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.
+         * *   If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
+         * *   You can query data collected within the last 30 days.
+         *
+         * @param request DescribeDomainPathDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainPathDataResponse
          */
         public async Task<DescribeDomainPathDataResponse> DescribeDomainPathDataWithOptionsAsync(DescribeDomainPathDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9164,16 +10072,18 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply to be included in the whitelist.
-          * *   You can call this API operation up to 6,000 times per second per account.
-          * *   Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.
-          * *   The average size of the files that belong to the domain name must be larger than 1 MB.
-          * *   The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.
-          * *   If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-          * *   You can query data collected within the last 30 days.
-          *
-          * @param request DescribeDomainPathDataRequest
-          * @return DescribeDomainPathDataResponse
+         * @summary Queries monitoring data including the amount of network traffic and the number of visits by directory.
+         *
+         * @description *   This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply to be included in the whitelist.
+         * *   You can call this API operation up to 6,000 times per second per account.
+         * *   Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.
+         * *   The average size of the files that belong to the domain name must be larger than 1 MB.
+         * *   The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.
+         * *   If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
+         * *   You can query data collected within the last 30 days.
+         *
+         * @param request DescribeDomainPathDataRequest
+         * @return DescribeDomainPathDataResponse
          */
         public DescribeDomainPathDataResponse DescribeDomainPathData(DescribeDomainPathDataRequest request)
         {
@@ -9182,16 +10092,18 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply to be included in the whitelist.
-          * *   You can call this API operation up to 6,000 times per second per account.
-          * *   Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.
-          * *   The average size of the files that belong to the domain name must be larger than 1 MB.
-          * *   The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.
-          * *   If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-          * *   You can query data collected within the last 30 days.
-          *
-          * @param request DescribeDomainPathDataRequest
-          * @return DescribeDomainPathDataResponse
+         * @summary Queries monitoring data including the amount of network traffic and the number of visits by directory.
+         *
+         * @description *   This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply to be included in the whitelist.
+         * *   You can call this API operation up to 6,000 times per second per account.
+         * *   Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.
+         * *   The average size of the files that belong to the domain name must be larger than 1 MB.
+         * *   The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.
+         * *   If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
+         * *   You can query data collected within the last 30 days.
+         *
+         * @param request DescribeDomainPathDataRequest
+         * @return DescribeDomainPathDataResponse
          */
         public async Task<DescribeDomainPathDataResponse> DescribeDomainPathDataAsync(DescribeDomainPathDataRequest request)
         {
@@ -9200,13 +10112,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature to for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeDomainPvDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainPvDataResponse
+         * @summary Queries the page view (PV) data of an accelerated domain name. The data is collected at an interval of 1 hour. You can query data in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeDomainPvDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainPvDataResponse
          */
         public DescribeDomainPvDataResponse DescribeDomainPvDataWithOptions(DescribeDomainPvDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9244,13 +10158,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature to for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeDomainPvDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainPvDataResponse
+         * @summary Queries the page view (PV) data of an accelerated domain name. The data is collected at an interval of 1 hour. You can query data in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeDomainPvDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainPvDataResponse
          */
         public async Task<DescribeDomainPvDataResponse> DescribeDomainPvDataWithOptionsAsync(DescribeDomainPvDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9288,12 +10204,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature to for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeDomainPvDataRequest
-          * @return DescribeDomainPvDataResponse
+         * @summary Queries the page view (PV) data of an accelerated domain name. The data is collected at an interval of 1 hour. You can query data in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeDomainPvDataRequest
+         * @return DescribeDomainPvDataResponse
          */
         public DescribeDomainPvDataResponse DescribeDomainPvData(DescribeDomainPvDataRequest request)
         {
@@ -9302,12 +10220,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature to for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeDomainPvDataRequest
-          * @return DescribeDomainPvDataResponse
+         * @summary Queries the page view (PV) data of an accelerated domain name. The data is collected at an interval of 1 hour. You can query data in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeDomainPvDataRequest
+         * @return DescribeDomainPvDataResponse
          */
         public async Task<DescribeDomainPvDataResponse> DescribeDomainPvDataAsync(DescribeDomainPvDataRequest request)
         {
@@ -9316,19 +10236,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainQpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainQpsDataResponse
+         * @summary Queries the number of queries per second (QPS) for an accelerated domain name. The data is collected every 5 minutes. You can query data collected within the last 90 days.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainQpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainQpsDataResponse
          */
         public DescribeDomainQpsDataResponse DescribeDomainQpsDataWithOptions(DescribeDomainQpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9378,19 +10300,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainQpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainQpsDataResponse
+         * @summary Queries the number of queries per second (QPS) for an accelerated domain name. The data is collected every 5 minutes. You can query data collected within the last 90 days.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainQpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainQpsDataResponse
          */
         public async Task<DescribeDomainQpsDataResponse> DescribeDomainQpsDataWithOptionsAsync(DescribeDomainQpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9440,18 +10364,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainQpsDataRequest
-          * @return DescribeDomainQpsDataResponse
+         * @summary Queries the number of queries per second (QPS) for an accelerated domain name. The data is collected every 5 minutes. You can query data collected within the last 90 days.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainQpsDataRequest
+         * @return DescribeDomainQpsDataResponse
          */
         public DescribeDomainQpsDataResponse DescribeDomainQpsData(DescribeDomainQpsDataRequest request)
         {
@@ -9460,18 +10386,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainQpsDataRequest
-          * @return DescribeDomainQpsDataResponse
+         * @summary Queries the number of queries per second (QPS) for an accelerated domain name. The data is collected every 5 minutes. You can query data collected within the last 90 days.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainQpsDataRequest
+         * @return DescribeDomainQpsDataResponse
          */
         public async Task<DescribeDomainQpsDataResponse> DescribeDomainQpsDataAsync(DescribeDomainQpsDataRequest request)
         {
@@ -9480,19 +10408,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 20 times per second per user.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainQpsDataByLayerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainQpsDataByLayerResponse
+         * @summary Queries the number of queries per second (QPS) at a specific layer for one or more accelerated domain names. You can query data collected within the last 90 days.
+         *
+         * @description * You can call this operation up to 20 times per second per user.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainQpsDataByLayerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainQpsDataByLayerResponse
          */
         public DescribeDomainQpsDataByLayerResponse DescribeDomainQpsDataByLayerWithOptions(DescribeDomainQpsDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9546,19 +10476,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 20 times per second per user.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainQpsDataByLayerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainQpsDataByLayerResponse
+         * @summary Queries the number of queries per second (QPS) at a specific layer for one or more accelerated domain names. You can query data collected within the last 90 days.
+         *
+         * @description * You can call this operation up to 20 times per second per user.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainQpsDataByLayerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainQpsDataByLayerResponse
          */
         public async Task<DescribeDomainQpsDataByLayerResponse> DescribeDomainQpsDataByLayerWithOptionsAsync(DescribeDomainQpsDataByLayerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9612,18 +10544,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 20 times per second per user.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainQpsDataByLayerRequest
-          * @return DescribeDomainQpsDataByLayerResponse
+         * @summary Queries the number of queries per second (QPS) at a specific layer for one or more accelerated domain names. You can query data collected within the last 90 days.
+         *
+         * @description * You can call this operation up to 20 times per second per user.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainQpsDataByLayerRequest
+         * @return DescribeDomainQpsDataByLayerResponse
          */
         public DescribeDomainQpsDataByLayerResponse DescribeDomainQpsDataByLayer(DescribeDomainQpsDataByLayerRequest request)
         {
@@ -9632,18 +10566,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 20 times per second per user.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainQpsDataByLayerRequest
-          * @return DescribeDomainQpsDataByLayerResponse
+         * @summary Queries the number of queries per second (QPS) at a specific layer for one or more accelerated domain names. You can query data collected within the last 90 days.
+         *
+         * @description * You can call this operation up to 20 times per second per user.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainQpsDataByLayerRequest
+         * @return DescribeDomainQpsDataByLayerResponse
          */
         public async Task<DescribeDomainQpsDataByLayerResponse> DescribeDomainQpsDataByLayerAsync(DescribeDomainQpsDataByLayerRequest request)
         {
@@ -9652,18 +10588,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeBpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeBpsDataResponse
+         * @summary Queries the bandwidth data about one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeBpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeBpsDataResponse
          */
         public DescribeDomainRealTimeBpsDataResponse DescribeDomainRealTimeBpsDataWithOptions(DescribeDomainRealTimeBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9689,18 +10627,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeBpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeBpsDataResponse
+         * @summary Queries the bandwidth data about one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeBpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeBpsDataResponse
          */
         public async Task<DescribeDomainRealTimeBpsDataResponse> DescribeDomainRealTimeBpsDataWithOptionsAsync(DescribeDomainRealTimeBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9726,17 +10666,19 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeBpsDataRequest
-          * @return DescribeDomainRealTimeBpsDataResponse
+         * @summary Queries the bandwidth data about one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeBpsDataRequest
+         * @return DescribeDomainRealTimeBpsDataResponse
          */
         public DescribeDomainRealTimeBpsDataResponse DescribeDomainRealTimeBpsData(DescribeDomainRealTimeBpsDataRequest request)
         {
@@ -9745,17 +10687,19 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeBpsDataRequest
-          * @return DescribeDomainRealTimeBpsDataResponse
+         * @summary Queries the bandwidth data about one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeBpsDataRequest
+         * @return DescribeDomainRealTimeBpsDataResponse
          */
         public async Task<DescribeDomainRealTimeBpsDataResponse> DescribeDomainRealTimeBpsDataAsync(DescribeDomainRealTimeBpsDataRequest request)
         {
@@ -9764,20 +10708,22 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeByteHitRateDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeByteHitRateDataResponse
+         * @summary Queries the byte hit ratios of accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeByteHitRateDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeByteHitRateDataResponse
          */
         public DescribeDomainRealTimeByteHitRateDataResponse DescribeDomainRealTimeByteHitRateDataWithOptions(DescribeDomainRealTimeByteHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9803,20 +10749,22 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeByteHitRateDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeByteHitRateDataResponse
+         * @summary Queries the byte hit ratios of accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeByteHitRateDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeByteHitRateDataResponse
          */
         public async Task<DescribeDomainRealTimeByteHitRateDataResponse> DescribeDomainRealTimeByteHitRateDataWithOptionsAsync(DescribeDomainRealTimeByteHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9842,19 +10790,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeByteHitRateDataRequest
-          * @return DescribeDomainRealTimeByteHitRateDataResponse
+         * @summary Queries the byte hit ratios of accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeByteHitRateDataRequest
+         * @return DescribeDomainRealTimeByteHitRateDataResponse
          */
         public DescribeDomainRealTimeByteHitRateDataResponse DescribeDomainRealTimeByteHitRateData(DescribeDomainRealTimeByteHitRateDataRequest request)
         {
@@ -9863,19 +10813,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeByteHitRateDataRequest
-          * @return DescribeDomainRealTimeByteHitRateDataResponse
+         * @summary Queries the byte hit ratios of accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeByteHitRateDataRequest
+         * @return DescribeDomainRealTimeByteHitRateDataResponse
          */
         public async Task<DescribeDomainRealTimeByteHitRateDataResponse> DescribeDomainRealTimeByteHitRateDataAsync(DescribeDomainRealTimeByteHitRateDataRequest request)
         {
@@ -9884,12 +10836,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query data in the last seven days. Data is collected every minute.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainRealTimeDetailDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeDetailDataResponse
+         * @summary Queries the real-time monitoring data for a domain name.
+         *
+         * @description *   You can query data in the last seven days. Data is collected every minute.
+         * *   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainRealTimeDetailDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeDetailDataResponse
          */
         public DescribeDomainRealTimeDetailDataResponse DescribeDomainRealTimeDetailDataWithOptions(DescribeDomainRealTimeDetailDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9915,12 +10869,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query data in the last seven days. Data is collected every minute.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainRealTimeDetailDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeDetailDataResponse
+         * @summary Queries the real-time monitoring data for a domain name.
+         *
+         * @description *   You can query data in the last seven days. Data is collected every minute.
+         * *   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainRealTimeDetailDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeDetailDataResponse
          */
         public async Task<DescribeDomainRealTimeDetailDataResponse> DescribeDomainRealTimeDetailDataWithOptionsAsync(DescribeDomainRealTimeDetailDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9946,11 +10902,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query data in the last seven days. Data is collected every minute.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainRealTimeDetailDataRequest
-          * @return DescribeDomainRealTimeDetailDataResponse
+         * @summary Queries the real-time monitoring data for a domain name.
+         *
+         * @description *   You can query data in the last seven days. Data is collected every minute.
+         * *   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainRealTimeDetailDataRequest
+         * @return DescribeDomainRealTimeDetailDataResponse
          */
         public DescribeDomainRealTimeDetailDataResponse DescribeDomainRealTimeDetailData(DescribeDomainRealTimeDetailDataRequest request)
         {
@@ -9959,11 +10917,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query data in the last seven days. Data is collected every minute.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainRealTimeDetailDataRequest
-          * @return DescribeDomainRealTimeDetailDataResponse
+         * @summary Queries the real-time monitoring data for a domain name.
+         *
+         * @description *   You can query data in the last seven days. Data is collected every minute.
+         * *   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainRealTimeDetailDataRequest
+         * @return DescribeDomainRealTimeDetailDataResponse
          */
         public async Task<DescribeDomainRealTimeDetailDataResponse> DescribeDomainRealTimeDetailDataAsync(DescribeDomainRealTimeDetailDataRequest request)
         {
@@ -9972,19 +10932,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeHttpCodeDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeHttpCodeDataResponse
+         * @summary Queries the total number and proportions of HTTP status codes returned from an accelerated domain name.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeHttpCodeDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeHttpCodeDataResponse
          */
         public DescribeDomainRealTimeHttpCodeDataResponse DescribeDomainRealTimeHttpCodeDataWithOptions(DescribeDomainRealTimeHttpCodeDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10030,19 +10992,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeHttpCodeDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeHttpCodeDataResponse
+         * @summary Queries the total number and proportions of HTTP status codes returned from an accelerated domain name.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeHttpCodeDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeHttpCodeDataResponse
          */
         public async Task<DescribeDomainRealTimeHttpCodeDataResponse> DescribeDomainRealTimeHttpCodeDataWithOptionsAsync(DescribeDomainRealTimeHttpCodeDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10088,18 +11052,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeHttpCodeDataRequest
-          * @return DescribeDomainRealTimeHttpCodeDataResponse
+         * @summary Queries the total number and proportions of HTTP status codes returned from an accelerated domain name.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeHttpCodeDataRequest
+         * @return DescribeDomainRealTimeHttpCodeDataResponse
          */
         public DescribeDomainRealTimeHttpCodeDataResponse DescribeDomainRealTimeHttpCodeData(DescribeDomainRealTimeHttpCodeDataRequest request)
         {
@@ -10108,18 +11074,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeHttpCodeDataRequest
-          * @return DescribeDomainRealTimeHttpCodeDataResponse
+         * @summary Queries the total number and proportions of HTTP status codes returned from an accelerated domain name.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeHttpCodeDataRequest
+         * @return DescribeDomainRealTimeHttpCodeDataResponse
          */
         public async Task<DescribeDomainRealTimeHttpCodeDataResponse> DescribeDomainRealTimeHttpCodeDataAsync(DescribeDomainRealTimeHttpCodeDataRequest request)
         {
@@ -10128,19 +11096,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeQpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeQpsDataResponse
+         * @summary Queries the number of queries per second for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeQpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeQpsDataResponse
          */
         public DescribeDomainRealTimeQpsDataResponse DescribeDomainRealTimeQpsDataWithOptions(DescribeDomainRealTimeQpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10166,19 +11136,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeQpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeQpsDataResponse
+         * @summary Queries the number of queries per second for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeQpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeQpsDataResponse
          */
         public async Task<DescribeDomainRealTimeQpsDataResponse> DescribeDomainRealTimeQpsDataWithOptionsAsync(DescribeDomainRealTimeQpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10204,18 +11176,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeQpsDataRequest
-          * @return DescribeDomainRealTimeQpsDataResponse
+         * @summary Queries the number of queries per second for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeQpsDataRequest
+         * @return DescribeDomainRealTimeQpsDataResponse
          */
         public DescribeDomainRealTimeQpsDataResponse DescribeDomainRealTimeQpsData(DescribeDomainRealTimeQpsDataRequest request)
         {
@@ -10224,18 +11198,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeQpsDataRequest
-          * @return DescribeDomainRealTimeQpsDataResponse
+         * @summary Queries the number of queries per second for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeQpsDataRequest
+         * @return DescribeDomainRealTimeQpsDataResponse
          */
         public async Task<DescribeDomainRealTimeQpsDataResponse> DescribeDomainRealTimeQpsDataAsync(DescribeDomainRealTimeQpsDataRequest request)
         {
@@ -10244,21 +11220,23 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * * By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method="GET".
-          * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeReqHitRateDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeReqHitRateDataResponse
+         * @summary Queries the request hit ratios for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * * By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method="GET".
+         * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeReqHitRateDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeReqHitRateDataResponse
          */
         public DescribeDomainRealTimeReqHitRateDataResponse DescribeDomainRealTimeReqHitRateDataWithOptions(DescribeDomainRealTimeReqHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10284,21 +11262,23 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * * By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method="GET".
-          * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeReqHitRateDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeReqHitRateDataResponse
+         * @summary Queries the request hit ratios for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * * By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method="GET".
+         * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeReqHitRateDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeReqHitRateDataResponse
          */
         public async Task<DescribeDomainRealTimeReqHitRateDataResponse> DescribeDomainRealTimeReqHitRateDataWithOptionsAsync(DescribeDomainRealTimeReqHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10324,20 +11304,22 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * * By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method="GET".
-          * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeReqHitRateDataRequest
-          * @return DescribeDomainRealTimeReqHitRateDataResponse
+         * @summary Queries the request hit ratios for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * * By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method="GET".
+         * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeReqHitRateDataRequest
+         * @return DescribeDomainRealTimeReqHitRateDataResponse
          */
         public DescribeDomainRealTimeReqHitRateDataResponse DescribeDomainRealTimeReqHitRateData(DescribeDomainRealTimeReqHitRateDataRequest request)
         {
@@ -10346,20 +11328,22 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * * By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method="GET".
-          * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeReqHitRateDataRequest
-          * @return DescribeDomainRealTimeReqHitRateDataResponse
+         * @summary Queries the request hit ratios for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * * By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method="GET".
+         * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeReqHitRateDataRequest
+         * @return DescribeDomainRealTimeReqHitRateDataResponse
          */
         public async Task<DescribeDomainRealTimeReqHitRateDataResponse> DescribeDomainRealTimeReqHitRateDataAsync(DescribeDomainRealTimeReqHitRateDataRequest request)
         {
@@ -10368,19 +11352,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeSrcBpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeSrcBpsDataResponse
+         * @summary Queries origin bandwidth data for accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeSrcBpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeSrcBpsDataResponse
          */
         public DescribeDomainRealTimeSrcBpsDataResponse DescribeDomainRealTimeSrcBpsDataWithOptions(DescribeDomainRealTimeSrcBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10418,19 +11404,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeSrcBpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeSrcBpsDataResponse
+         * @summary Queries origin bandwidth data for accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeSrcBpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeSrcBpsDataResponse
          */
         public async Task<DescribeDomainRealTimeSrcBpsDataResponse> DescribeDomainRealTimeSrcBpsDataWithOptionsAsync(DescribeDomainRealTimeSrcBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10468,18 +11456,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeSrcBpsDataRequest
-          * @return DescribeDomainRealTimeSrcBpsDataResponse
+         * @summary Queries origin bandwidth data for accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeSrcBpsDataRequest
+         * @return DescribeDomainRealTimeSrcBpsDataResponse
          */
         public DescribeDomainRealTimeSrcBpsDataResponse DescribeDomainRealTimeSrcBpsData(DescribeDomainRealTimeSrcBpsDataRequest request)
         {
@@ -10488,18 +11478,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeSrcBpsDataRequest
-          * @return DescribeDomainRealTimeSrcBpsDataResponse
+         * @summary Queries origin bandwidth data for accelerated domain names.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeSrcBpsDataRequest
+         * @return DescribeDomainRealTimeSrcBpsDataResponse
          */
         public async Task<DescribeDomainRealTimeSrcBpsDataResponse> DescribeDomainRealTimeSrcBpsDataAsync(DescribeDomainRealTimeSrcBpsDataRequest request)
         {
@@ -10508,19 +11500,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeSrcHttpCodeDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeSrcHttpCodeDataResponse
+         * @summary Queries the total number and proportions of HTTP status codes returned during back-to-origin routing.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeSrcHttpCodeDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeSrcHttpCodeDataResponse
          */
         public DescribeDomainRealTimeSrcHttpCodeDataResponse DescribeDomainRealTimeSrcHttpCodeDataWithOptions(DescribeDomainRealTimeSrcHttpCodeDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10566,19 +11560,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeSrcHttpCodeDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeSrcHttpCodeDataResponse
+         * @summary Queries the total number and proportions of HTTP status codes returned during back-to-origin routing.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeSrcHttpCodeDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeSrcHttpCodeDataResponse
          */
         public async Task<DescribeDomainRealTimeSrcHttpCodeDataResponse> DescribeDomainRealTimeSrcHttpCodeDataWithOptionsAsync(DescribeDomainRealTimeSrcHttpCodeDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10624,18 +11620,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeSrcHttpCodeDataRequest
-          * @return DescribeDomainRealTimeSrcHttpCodeDataResponse
+         * @summary Queries the total number and proportions of HTTP status codes returned during back-to-origin routing.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeSrcHttpCodeDataRequest
+         * @return DescribeDomainRealTimeSrcHttpCodeDataResponse
          */
         public DescribeDomainRealTimeSrcHttpCodeDataResponse DescribeDomainRealTimeSrcHttpCodeData(DescribeDomainRealTimeSrcHttpCodeDataRequest request)
         {
@@ -10644,18 +11642,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeSrcHttpCodeDataRequest
-          * @return DescribeDomainRealTimeSrcHttpCodeDataResponse
+         * @summary Queries the total number and proportions of HTTP status codes returned during back-to-origin routing.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeSrcHttpCodeDataRequest
+         * @return DescribeDomainRealTimeSrcHttpCodeDataResponse
          */
         public async Task<DescribeDomainRealTimeSrcHttpCodeDataResponse> DescribeDomainRealTimeSrcHttpCodeDataAsync(DescribeDomainRealTimeSrcHttpCodeDataRequest request)
         {
@@ -10664,19 +11664,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeSrcTrafficDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeSrcTrafficDataResponse
+         * @summary Queries the monitoring data of back-to-origin traffic for one or more specified accelerated domains. The data is collected every minute.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeSrcTrafficDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeSrcTrafficDataResponse
          */
         public DescribeDomainRealTimeSrcTrafficDataResponse DescribeDomainRealTimeSrcTrafficDataWithOptions(DescribeDomainRealTimeSrcTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10714,19 +11716,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeSrcTrafficDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeSrcTrafficDataResponse
+         * @summary Queries the monitoring data of back-to-origin traffic for one or more specified accelerated domains. The data is collected every minute.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeSrcTrafficDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeSrcTrafficDataResponse
          */
         public async Task<DescribeDomainRealTimeSrcTrafficDataResponse> DescribeDomainRealTimeSrcTrafficDataWithOptionsAsync(DescribeDomainRealTimeSrcTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10764,18 +11768,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeSrcTrafficDataRequest
-          * @return DescribeDomainRealTimeSrcTrafficDataResponse
+         * @summary Queries the monitoring data of back-to-origin traffic for one or more specified accelerated domains. The data is collected every minute.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeSrcTrafficDataRequest
+         * @return DescribeDomainRealTimeSrcTrafficDataResponse
          */
         public DescribeDomainRealTimeSrcTrafficDataResponse DescribeDomainRealTimeSrcTrafficData(DescribeDomainRealTimeSrcTrafficDataRequest request)
         {
@@ -10784,18 +11790,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeSrcTrafficDataRequest
-          * @return DescribeDomainRealTimeSrcTrafficDataResponse
+         * @summary Queries the monitoring data of back-to-origin traffic for one or more specified accelerated domains. The data is collected every minute.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeSrcTrafficDataRequest
+         * @return DescribeDomainRealTimeSrcTrafficDataResponse
          */
         public async Task<DescribeDomainRealTimeSrcTrafficDataResponse> DescribeDomainRealTimeSrcTrafficDataAsync(DescribeDomainRealTimeSrcTrafficDataRequest request)
         {
@@ -10804,19 +11812,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 50 times per second per account.
-          * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeTrafficDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeTrafficDataResponse
+         * @summary Queries the monitoring data of network traffic for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 50 times per second per account.
+         * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeTrafficDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeTrafficDataResponse
          */
         public DescribeDomainRealTimeTrafficDataResponse DescribeDomainRealTimeTrafficDataWithOptions(DescribeDomainRealTimeTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10862,19 +11872,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 50 times per second per account.
-          * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeTrafficDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealTimeTrafficDataResponse
+         * @summary Queries the monitoring data of network traffic for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 50 times per second per account.
+         * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeTrafficDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealTimeTrafficDataResponse
          */
         public async Task<DescribeDomainRealTimeTrafficDataResponse> DescribeDomainRealTimeTrafficDataWithOptionsAsync(DescribeDomainRealTimeTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10920,18 +11932,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 50 times per second per account.
-          * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeTrafficDataRequest
-          * @return DescribeDomainRealTimeTrafficDataResponse
+         * @summary Queries the monitoring data of network traffic for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 50 times per second per account.
+         * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeTrafficDataRequest
+         * @return DescribeDomainRealTimeTrafficDataResponse
          */
         public DescribeDomainRealTimeTrafficDataResponse DescribeDomainRealTimeTrafficData(DescribeDomainRealTimeTrafficDataRequest request)
         {
@@ -10940,18 +11954,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 50 times per second per account.
-          * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |1 minute|1 hour|7 days|5 minutes|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          *
-          * @param request DescribeDomainRealTimeTrafficDataRequest
-          * @return DescribeDomainRealTimeTrafficDataResponse
+         * @summary Queries the monitoring data of network traffic for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 50 times per second per account.
+         * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |1 minute|1 hour|7 days|5 minutes|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         *
+         * @param request DescribeDomainRealTimeTrafficDataRequest
+         * @return DescribeDomainRealTimeTrafficDataResponse
          */
         public async Task<DescribeDomainRealTimeTrafficDataResponse> DescribeDomainRealTimeTrafficDataAsync(DescribeDomainRealTimeTrafficDataRequest request)
         {
@@ -10960,11 +11976,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainRealtimeLogDeliveryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealtimeLogDeliveryResponse
+         * @summary Queries the real-time log delivery information about an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainRealtimeLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealtimeLogDeliveryResponse
          */
         public DescribeDomainRealtimeLogDeliveryResponse DescribeDomainRealtimeLogDeliveryWithOptions(DescribeDomainRealtimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10990,11 +12008,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainRealtimeLogDeliveryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRealtimeLogDeliveryResponse
+         * @summary Queries the real-time log delivery information about an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainRealtimeLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRealtimeLogDeliveryResponse
          */
         public async Task<DescribeDomainRealtimeLogDeliveryResponse> DescribeDomainRealtimeLogDeliveryWithOptionsAsync(DescribeDomainRealtimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11020,10 +12040,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainRealtimeLogDeliveryRequest
-          * @return DescribeDomainRealtimeLogDeliveryResponse
+         * @summary Queries the real-time log delivery information about an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainRealtimeLogDeliveryRequest
+         * @return DescribeDomainRealtimeLogDeliveryResponse
          */
         public DescribeDomainRealtimeLogDeliveryResponse DescribeDomainRealtimeLogDelivery(DescribeDomainRealtimeLogDeliveryRequest request)
         {
@@ -11032,10 +12054,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainRealtimeLogDeliveryRequest
-          * @return DescribeDomainRealtimeLogDeliveryResponse
+         * @summary Queries the real-time log delivery information about an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainRealtimeLogDeliveryRequest
+         * @return DescribeDomainRealtimeLogDeliveryResponse
          */
         public async Task<DescribeDomainRealtimeLogDeliveryResponse> DescribeDomainRealtimeLogDeliveryAsync(DescribeDomainRealtimeLogDeliveryRequest request)
         {
@@ -11044,14 +12068,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you not use this operation because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not specify the **StartTime** or **EndTime** parameter, data collected within the last **24** hours is queried. If you specify both the **StartTime** and **EndTime** parameters, data collected within the specified time range is queried.
-          * >*   There is delay in data collection. If you want to query data collected within the last day, we recommend that you query the data on the next day.
-          * >*   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainRegionDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRegionDataResponse
+         * @summary Queries the geographic distribution of users for a domain name. The data is collected at an interval of one day. You can query the data in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you not use this operation because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not specify the **StartTime** or **EndTime** parameter, data collected within the last **24** hours is queried. If you specify both the **StartTime** and **EndTime** parameters, data collected within the specified time range is queried.
+         * >*   There is delay in data collection. If you want to query data collected within the last day, we recommend that you query the data on the next day.
+         * >*   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainRegionDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRegionDataResponse
          */
         public DescribeDomainRegionDataResponse DescribeDomainRegionDataWithOptions(DescribeDomainRegionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11089,14 +12115,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you not use this operation because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not specify the **StartTime** or **EndTime** parameter, data collected within the last **24** hours is queried. If you specify both the **StartTime** and **EndTime** parameters, data collected within the specified time range is queried.
-          * >*   There is delay in data collection. If you want to query data collected within the last day, we recommend that you query the data on the next day.
-          * >*   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainRegionDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainRegionDataResponse
+         * @summary Queries the geographic distribution of users for a domain name. The data is collected at an interval of one day. You can query the data in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you not use this operation because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not specify the **StartTime** or **EndTime** parameter, data collected within the last **24** hours is queried. If you specify both the **StartTime** and **EndTime** parameters, data collected within the specified time range is queried.
+         * >*   There is delay in data collection. If you want to query data collected within the last day, we recommend that you query the data on the next day.
+         * >*   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainRegionDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainRegionDataResponse
          */
         public async Task<DescribeDomainRegionDataResponse> DescribeDomainRegionDataWithOptionsAsync(DescribeDomainRegionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11134,13 +12162,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you not use this operation because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not specify the **StartTime** or **EndTime** parameter, data collected within the last **24** hours is queried. If you specify both the **StartTime** and **EndTime** parameters, data collected within the specified time range is queried.
-          * >*   There is delay in data collection. If you want to query data collected within the last day, we recommend that you query the data on the next day.
-          * >*   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainRegionDataRequest
-          * @return DescribeDomainRegionDataResponse
+         * @summary Queries the geographic distribution of users for a domain name. The data is collected at an interval of one day. You can query the data in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you not use this operation because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not specify the **StartTime** or **EndTime** parameter, data collected within the last **24** hours is queried. If you specify both the **StartTime** and **EndTime** parameters, data collected within the specified time range is queried.
+         * >*   There is delay in data collection. If you want to query data collected within the last day, we recommend that you query the data on the next day.
+         * >*   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainRegionDataRequest
+         * @return DescribeDomainRegionDataResponse
          */
         public DescribeDomainRegionDataResponse DescribeDomainRegionData(DescribeDomainRegionDataRequest request)
         {
@@ -11149,13 +12179,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you not use this operation because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not specify the **StartTime** or **EndTime** parameter, data collected within the last **24** hours is queried. If you specify both the **StartTime** and **EndTime** parameters, data collected within the specified time range is queried.
-          * >*   There is delay in data collection. If you want to query data collected within the last day, we recommend that you query the data on the next day.
-          * >*   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainRegionDataRequest
-          * @return DescribeDomainRegionDataResponse
+         * @summary Queries the geographic distribution of users for a domain name. The data is collected at an interval of one day. You can query the data in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you not use this operation because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not specify the **StartTime** or **EndTime** parameter, data collected within the last **24** hours is queried. If you specify both the **StartTime** and **EndTime** parameters, data collected within the specified time range is queried.
+         * >*   There is delay in data collection. If you want to query data collected within the last day, we recommend that you query the data on the next day.
+         * >*   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainRegionDataRequest
+         * @return DescribeDomainRegionDataResponse
          */
         public async Task<DescribeDomainRegionDataResponse> DescribeDomainRegionDataAsync(DescribeDomainRegionDataRequest request)
         {
@@ -11164,19 +12196,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainReqHitRateDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainReqHitRateDataResponse
+         * @summary Queries the request hit ratio in percentage.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainReqHitRateDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainReqHitRateDataResponse
          */
         public DescribeDomainReqHitRateDataResponse DescribeDomainReqHitRateDataWithOptions(DescribeDomainReqHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11218,19 +12252,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainReqHitRateDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainReqHitRateDataResponse
+         * @summary Queries the request hit ratio in percentage.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainReqHitRateDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainReqHitRateDataResponse
          */
         public async Task<DescribeDomainReqHitRateDataResponse> DescribeDomainReqHitRateDataWithOptionsAsync(DescribeDomainReqHitRateDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11272,18 +12308,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainReqHitRateDataRequest
-          * @return DescribeDomainReqHitRateDataResponse
+         * @summary Queries the request hit ratio in percentage.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainReqHitRateDataRequest
+         * @return DescribeDomainReqHitRateDataResponse
          */
         public DescribeDomainReqHitRateDataResponse DescribeDomainReqHitRateData(DescribeDomainReqHitRateDataRequest request)
         {
@@ -11292,18 +12330,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainReqHitRateDataRequest
-          * @return DescribeDomainReqHitRateDataResponse
+         * @summary Queries the request hit ratio in percentage.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainReqHitRateDataRequest
+         * @return DescribeDomainReqHitRateDataResponse
          */
         public async Task<DescribeDomainReqHitRateDataResponse> DescribeDomainReqHitRateDataAsync(DescribeDomainReqHitRateDataRequest request)
         {
@@ -11312,19 +12352,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcBpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainSrcBpsDataResponse
+         * @summary Queries bandwidth monitoring data of requests that are redirected to origin servers for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcBpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainSrcBpsDataResponse
          */
         public DescribeDomainSrcBpsDataResponse DescribeDomainSrcBpsDataWithOptions(DescribeDomainSrcBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11366,19 +12408,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcBpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainSrcBpsDataResponse
+         * @summary Queries bandwidth monitoring data of requests that are redirected to origin servers for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcBpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainSrcBpsDataResponse
          */
         public async Task<DescribeDomainSrcBpsDataResponse> DescribeDomainSrcBpsDataWithOptionsAsync(DescribeDomainSrcBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11420,18 +12464,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcBpsDataRequest
-          * @return DescribeDomainSrcBpsDataResponse
+         * @summary Queries bandwidth monitoring data of requests that are redirected to origin servers for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcBpsDataRequest
+         * @return DescribeDomainSrcBpsDataResponse
          */
         public DescribeDomainSrcBpsDataResponse DescribeDomainSrcBpsData(DescribeDomainSrcBpsDataRequest request)
         {
@@ -11440,18 +12486,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcBpsDataRequest
-          * @return DescribeDomainSrcBpsDataResponse
+         * @summary Queries bandwidth monitoring data of requests that are redirected to origin servers for one or more accelerated domain names.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcBpsDataRequest
+         * @return DescribeDomainSrcBpsDataResponse
          */
         public async Task<DescribeDomainSrcBpsDataResponse> DescribeDomainSrcBpsDataAsync(DescribeDomainSrcBpsDataRequest request)
         {
@@ -11460,19 +12508,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcHttpCodeDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainSrcHttpCodeDataResponse
+         * @summary Queries the proportions of HTTP status codes that are returned during back-to-origin routing.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcHttpCodeDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainSrcHttpCodeDataResponse
          */
         public DescribeDomainSrcHttpCodeDataResponse DescribeDomainSrcHttpCodeDataWithOptions(DescribeDomainSrcHttpCodeDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11514,19 +12564,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcHttpCodeDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainSrcHttpCodeDataResponse
+         * @summary Queries the proportions of HTTP status codes that are returned during back-to-origin routing.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcHttpCodeDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainSrcHttpCodeDataResponse
          */
         public async Task<DescribeDomainSrcHttpCodeDataResponse> DescribeDomainSrcHttpCodeDataWithOptionsAsync(DescribeDomainSrcHttpCodeDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11568,18 +12620,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcHttpCodeDataRequest
-          * @return DescribeDomainSrcHttpCodeDataResponse
+         * @summary Queries the proportions of HTTP status codes that are returned during back-to-origin routing.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcHttpCodeDataRequest
+         * @return DescribeDomainSrcHttpCodeDataResponse
          */
         public DescribeDomainSrcHttpCodeDataResponse DescribeDomainSrcHttpCodeData(DescribeDomainSrcHttpCodeDataRequest request)
         {
@@ -11588,18 +12642,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcHttpCodeDataRequest
-          * @return DescribeDomainSrcHttpCodeDataResponse
+         * @summary Queries the proportions of HTTP status codes that are returned during back-to-origin routing.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcHttpCodeDataRequest
+         * @return DescribeDomainSrcHttpCodeDataResponse
          */
         public async Task<DescribeDomainSrcHttpCodeDataResponse> DescribeDomainSrcHttpCodeDataAsync(DescribeDomainSrcHttpCodeDataRequest request)
         {
@@ -11608,19 +12664,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * ### Time granularity
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcQpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainSrcQpsDataResponse
+         * @summary Queries the number of queries per second (QPS) that are sent to the origin server. You can query data collected in the last 90 days.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * ### Time granularity
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcQpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainSrcQpsDataResponse
          */
         public DescribeDomainSrcQpsDataResponse DescribeDomainSrcQpsDataWithOptions(DescribeDomainSrcQpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11662,19 +12720,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * ### Time granularity
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcQpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainSrcQpsDataResponse
+         * @summary Queries the number of queries per second (QPS) that are sent to the origin server. You can query data collected in the last 90 days.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * ### Time granularity
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcQpsDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainSrcQpsDataResponse
          */
         public async Task<DescribeDomainSrcQpsDataResponse> DescribeDomainSrcQpsDataWithOptionsAsync(DescribeDomainSrcQpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11716,18 +12776,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * ### Time granularity
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcQpsDataRequest
-          * @return DescribeDomainSrcQpsDataResponse
+         * @summary Queries the number of queries per second (QPS) that are sent to the origin server. You can query data collected in the last 90 days.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * ### Time granularity
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcQpsDataRequest
+         * @return DescribeDomainSrcQpsDataResponse
          */
         public DescribeDomainSrcQpsDataResponse DescribeDomainSrcQpsData(DescribeDomainSrcQpsDataRequest request)
         {
@@ -11736,18 +12798,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * ### Time granularity
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcQpsDataRequest
-          * @return DescribeDomainSrcQpsDataResponse
+         * @summary Queries the number of queries per second (QPS) that are sent to the origin server. You can query data collected in the last 90 days.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * ### Time granularity
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcQpsDataRequest
+         * @return DescribeDomainSrcQpsDataResponse
          */
         public async Task<DescribeDomainSrcQpsDataResponse> DescribeDomainSrcQpsDataAsync(DescribeDomainSrcQpsDataRequest request)
         {
@@ -11756,13 +12820,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   The data is collected at an interval of 5 minutes.
-          * >*   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainSrcTopUrlVisitRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainSrcTopUrlVisitResponse
+         * @summary Queries frequently requested origin URLs of one or more accelerated domain names.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   The data is collected at an interval of 5 minutes.
+         * >*   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainSrcTopUrlVisitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainSrcTopUrlVisitResponse
          */
         public DescribeDomainSrcTopUrlVisitResponse DescribeDomainSrcTopUrlVisitWithOptions(DescribeDomainSrcTopUrlVisitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11804,13 +12870,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   The data is collected at an interval of 5 minutes.
-          * >*   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainSrcTopUrlVisitRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainSrcTopUrlVisitResponse
+         * @summary Queries frequently requested origin URLs of one or more accelerated domain names.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   The data is collected at an interval of 5 minutes.
+         * >*   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainSrcTopUrlVisitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainSrcTopUrlVisitResponse
          */
         public async Task<DescribeDomainSrcTopUrlVisitResponse> DescribeDomainSrcTopUrlVisitWithOptionsAsync(DescribeDomainSrcTopUrlVisitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11852,12 +12920,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   The data is collected at an interval of 5 minutes.
-          * >*   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainSrcTopUrlVisitRequest
-          * @return DescribeDomainSrcTopUrlVisitResponse
+         * @summary Queries frequently requested origin URLs of one or more accelerated domain names.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   The data is collected at an interval of 5 minutes.
+         * >*   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainSrcTopUrlVisitRequest
+         * @return DescribeDomainSrcTopUrlVisitResponse
          */
         public DescribeDomainSrcTopUrlVisitResponse DescribeDomainSrcTopUrlVisit(DescribeDomainSrcTopUrlVisitRequest request)
         {
@@ -11866,12 +12936,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   The data is collected at an interval of 5 minutes.
-          * >*   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainSrcTopUrlVisitRequest
-          * @return DescribeDomainSrcTopUrlVisitResponse
+         * @summary Queries frequently requested origin URLs of one or more accelerated domain names.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   The data is collected at an interval of 5 minutes.
+         * >*   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainSrcTopUrlVisitRequest
+         * @return DescribeDomainSrcTopUrlVisitResponse
          */
         public async Task<DescribeDomainSrcTopUrlVisitResponse> DescribeDomainSrcTopUrlVisitAsync(DescribeDomainSrcTopUrlVisitRequest request)
         {
@@ -11880,19 +12952,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcTrafficDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainSrcTrafficDataResponse
+         * @summary Queries origin traffic for one or more specified accelerated domain names.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcTrafficDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainSrcTrafficDataResponse
          */
         public DescribeDomainSrcTrafficDataResponse DescribeDomainSrcTrafficDataWithOptions(DescribeDomainSrcTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11934,19 +13008,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcTrafficDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainSrcTrafficDataResponse
+         * @summary Queries origin traffic for one or more specified accelerated domain names.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcTrafficDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainSrcTrafficDataResponse
          */
         public async Task<DescribeDomainSrcTrafficDataResponse> DescribeDomainSrcTrafficDataWithOptionsAsync(DescribeDomainSrcTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11988,18 +13064,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcTrafficDataRequest
-          * @return DescribeDomainSrcTrafficDataResponse
+         * @summary Queries origin traffic for one or more specified accelerated domain names.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcTrafficDataRequest
+         * @return DescribeDomainSrcTrafficDataResponse
          */
         public DescribeDomainSrcTrafficDataResponse DescribeDomainSrcTrafficData(DescribeDomainSrcTrafficDataRequest request)
         {
@@ -12008,18 +13086,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainSrcTrafficDataRequest
-          * @return DescribeDomainSrcTrafficDataResponse
+         * @summary Queries origin traffic for one or more specified accelerated domain names.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainSrcTrafficDataRequest
+         * @return DescribeDomainSrcTrafficDataResponse
          */
         public async Task<DescribeDomainSrcTrafficDataResponse> DescribeDomainSrcTrafficDataAsync(DescribeDomainSrcTrafficDataRequest request)
         {
@@ -12028,14 +13108,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature to for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   Data is collected every hour.
-          * >*   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainTopClientIpVisitRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainTopClientIpVisitResponse
+         * @summary Queries client IP addresses that are ranked by the number of requests or the amount of network traffic within a specific time range for one or more accelerated domain names. You can query data collected within the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   Data is collected every hour.
+         * >*   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainTopClientIpVisitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainTopClientIpVisitResponse
          */
         public DescribeDomainTopClientIpVisitResponse DescribeDomainTopClientIpVisitWithOptions(DescribeDomainTopClientIpVisitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12085,14 +13167,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature to for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   Data is collected every hour.
-          * >*   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainTopClientIpVisitRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainTopClientIpVisitResponse
+         * @summary Queries client IP addresses that are ranked by the number of requests or the amount of network traffic within a specific time range for one or more accelerated domain names. You can query data collected within the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   Data is collected every hour.
+         * >*   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainTopClientIpVisitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainTopClientIpVisitResponse
          */
         public async Task<DescribeDomainTopClientIpVisitResponse> DescribeDomainTopClientIpVisitWithOptionsAsync(DescribeDomainTopClientIpVisitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12142,13 +13226,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature to for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   Data is collected every hour.
-          * >*   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainTopClientIpVisitRequest
-          * @return DescribeDomainTopClientIpVisitResponse
+         * @summary Queries client IP addresses that are ranked by the number of requests or the amount of network traffic within a specific time range for one or more accelerated domain names. You can query data collected within the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   Data is collected every hour.
+         * >*   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainTopClientIpVisitRequest
+         * @return DescribeDomainTopClientIpVisitResponse
          */
         public DescribeDomainTopClientIpVisitResponse DescribeDomainTopClientIpVisit(DescribeDomainTopClientIpVisitRequest request)
         {
@@ -12157,13 +13243,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature to for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   Data is collected every hour.
-          * >*   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainTopClientIpVisitRequest
-          * @return DescribeDomainTopClientIpVisitResponse
+         * @summary Queries client IP addresses that are ranked by the number of requests or the amount of network traffic within a specific time range for one or more accelerated domain names. You can query data collected within the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   Data is collected every hour.
+         * >*   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainTopClientIpVisitRequest
+         * @return DescribeDomainTopClientIpVisitResponse
          */
         public async Task<DescribeDomainTopClientIpVisitResponse> DescribeDomainTopClientIpVisitAsync(DescribeDomainTopClientIpVisitRequest request)
         {
@@ -12172,15 +13260,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature or [ship real-time logs in Log Service](~~440145~~) to analyze data.
-          * > 
-          * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * *   Data is collected at an interval of five minutes.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainTopReferVisitRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainTopReferVisitResponse
+         * @summary Queries frequently requested web pages of one or more accelerated domain names on a specified day and sorts the web pages. You can query data collected within the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature or [ship real-time logs in Log Service](https://help.aliyun.com/document_detail/440145.html) to analyze data.
+         * > 
+         * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * *   Data is collected at an interval of five minutes.
+         * *   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainTopReferVisitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainTopReferVisitResponse
          */
         public DescribeDomainTopReferVisitResponse DescribeDomainTopReferVisitWithOptions(DescribeDomainTopReferVisitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12222,15 +13312,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature or [ship real-time logs in Log Service](~~440145~~) to analyze data.
-          * > 
-          * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * *   Data is collected at an interval of five minutes.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainTopReferVisitRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainTopReferVisitResponse
+         * @summary Queries frequently requested web pages of one or more accelerated domain names on a specified day and sorts the web pages. You can query data collected within the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature or [ship real-time logs in Log Service](https://help.aliyun.com/document_detail/440145.html) to analyze data.
+         * > 
+         * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * *   Data is collected at an interval of five minutes.
+         * *   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainTopReferVisitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainTopReferVisitResponse
          */
         public async Task<DescribeDomainTopReferVisitResponse> DescribeDomainTopReferVisitWithOptionsAsync(DescribeDomainTopReferVisitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12272,14 +13364,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature or [ship real-time logs in Log Service](~~440145~~) to analyze data.
-          * > 
-          * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * *   Data is collected at an interval of five minutes.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainTopReferVisitRequest
-          * @return DescribeDomainTopReferVisitResponse
+         * @summary Queries frequently requested web pages of one or more accelerated domain names on a specified day and sorts the web pages. You can query data collected within the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature or [ship real-time logs in Log Service](https://help.aliyun.com/document_detail/440145.html) to analyze data.
+         * > 
+         * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * *   Data is collected at an interval of five minutes.
+         * *   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainTopReferVisitRequest
+         * @return DescribeDomainTopReferVisitResponse
          */
         public DescribeDomainTopReferVisitResponse DescribeDomainTopReferVisit(DescribeDomainTopReferVisitRequest request)
         {
@@ -12288,14 +13382,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature or [ship real-time logs in Log Service](~~440145~~) to analyze data.
-          * > 
-          * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * *   Data is collected at an interval of five minutes.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainTopReferVisitRequest
-          * @return DescribeDomainTopReferVisitResponse
+         * @summary Queries frequently requested web pages of one or more accelerated domain names on a specified day and sorts the web pages. You can query data collected within the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature or [ship real-time logs in Log Service](https://help.aliyun.com/document_detail/440145.html) to analyze data.
+         * > 
+         * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * *   Data is collected at an interval of five minutes.
+         * *   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainTopReferVisitRequest
+         * @return DescribeDomainTopReferVisitResponse
          */
         public async Task<DescribeDomainTopReferVisitResponse> DescribeDomainTopReferVisitAsync(DescribeDomainTopReferVisitRequest request)
         {
@@ -12304,15 +13400,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can query data collected in the last 90 days.
-          * >*   You can specify only one domain name in each call.
-          * >*   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainTopUrlVisitRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainTopUrlVisitResponse
+         * @summary Queries top 100 frequently requested URLs of an accelerated domain name within a specified time range.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can query data collected in the last 90 days.
+         * >*   You can specify only one domain name in each call.
+         * >*   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainTopUrlVisitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainTopUrlVisitResponse
          */
         public DescribeDomainTopUrlVisitResponse DescribeDomainTopUrlVisitWithOptions(DescribeDomainTopUrlVisitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12354,15 +13452,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can query data collected in the last 90 days.
-          * >*   You can specify only one domain name in each call.
-          * >*   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainTopUrlVisitRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainTopUrlVisitResponse
+         * @summary Queries top 100 frequently requested URLs of an accelerated domain name within a specified time range.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can query data collected in the last 90 days.
+         * >*   You can specify only one domain name in each call.
+         * >*   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainTopUrlVisitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainTopUrlVisitResponse
          */
         public async Task<DescribeDomainTopUrlVisitResponse> DescribeDomainTopUrlVisitWithOptionsAsync(DescribeDomainTopUrlVisitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12404,14 +13504,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can query data collected in the last 90 days.
-          * >*   You can specify only one domain name in each call.
-          * >*   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainTopUrlVisitRequest
-          * @return DescribeDomainTopUrlVisitResponse
+         * @summary Queries top 100 frequently requested URLs of an accelerated domain name within a specified time range.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can query data collected in the last 90 days.
+         * >*   You can specify only one domain name in each call.
+         * >*   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainTopUrlVisitRequest
+         * @return DescribeDomainTopUrlVisitResponse
          */
         public DescribeDomainTopUrlVisitResponse DescribeDomainTopUrlVisit(DescribeDomainTopUrlVisitRequest request)
         {
@@ -12420,14 +13522,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can query data collected in the last 90 days.
-          * >*   You can specify only one domain name in each call.
-          * >*   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainTopUrlVisitRequest
-          * @return DescribeDomainTopUrlVisitResponse
+         * @summary Queries top 100 frequently requested URLs of an accelerated domain name within a specified time range.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can query data collected in the last 90 days.
+         * >*   You can specify only one domain name in each call.
+         * >*   You can call this operation up to 10 times per second per account.
+         *
+         * @param request DescribeDomainTopUrlVisitRequest
+         * @return DescribeDomainTopUrlVisitResponse
          */
         public async Task<DescribeDomainTopUrlVisitResponse> DescribeDomainTopUrlVisitAsync(DescribeDomainTopUrlVisitRequest request)
         {
@@ -12436,19 +13540,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366|04:00 on the next day|
-          *
-          * @param request DescribeDomainTrafficDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainTrafficDataResponse
+         * @summary Queries network traffic for one or more accelerated domain names. You can query data that is collected in the last 90 days.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366|04:00 on the next day|
+         *
+         * @param request DescribeDomainTrafficDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainTrafficDataResponse
          */
         public DescribeDomainTrafficDataResponse DescribeDomainTrafficDataWithOptions(DescribeDomainTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12498,19 +13604,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366|04:00 on the next day|
-          *
-          * @param request DescribeDomainTrafficDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainTrafficDataResponse
+         * @summary Queries network traffic for one or more accelerated domain names. You can query data that is collected in the last 90 days.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366|04:00 on the next day|
+         *
+         * @param request DescribeDomainTrafficDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainTrafficDataResponse
          */
         public async Task<DescribeDomainTrafficDataResponse> DescribeDomainTrafficDataWithOptionsAsync(DescribeDomainTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12560,18 +13668,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366|04:00 on the next day|
-          *
-          * @param request DescribeDomainTrafficDataRequest
-          * @return DescribeDomainTrafficDataResponse
+         * @summary Queries network traffic for one or more accelerated domain names. You can query data that is collected in the last 90 days.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366|04:00 on the next day|
+         *
+         * @param request DescribeDomainTrafficDataRequest
+         * @return DescribeDomainTrafficDataResponse
          */
         public DescribeDomainTrafficDataResponse DescribeDomainTrafficData(DescribeDomainTrafficDataRequest request)
         {
@@ -12580,18 +13690,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 100 times per second per account.
-          * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * **Time granularity**
-          * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|366 days|366|04:00 on the next day|
-          *
-          * @param request DescribeDomainTrafficDataRequest
-          * @return DescribeDomainTrafficDataResponse
+         * @summary Queries network traffic for one or more accelerated domain names. You can query data that is collected in the last 90 days.
+         *
+         * @description * You can call this operation up to 100 times per second per account.
+         * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * **Time granularity**
+         * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|366 days|366|04:00 on the next day|
+         *
+         * @param request DescribeDomainTrafficDataRequest
+         * @return DescribeDomainTrafficDataResponse
          */
         public async Task<DescribeDomainTrafficDataResponse> DescribeDomainTrafficDataAsync(DescribeDomainTrafficDataRequest request)
         {
@@ -12600,17 +13712,19 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|90 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainUsageDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainUsageDataResponse
+         * @summary Queries the resource usage data of specific domain names in a specified billable region.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|90 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainUsageDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainUsageDataResponse
          */
         public DescribeDomainUsageDataResponse DescribeDomainUsageDataWithOptions(DescribeDomainUsageDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12668,17 +13782,19 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|90 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainUsageDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainUsageDataResponse
+         * @summary Queries the resource usage data of specific domain names in a specified billable region.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|90 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainUsageDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainUsageDataResponse
          */
         public async Task<DescribeDomainUsageDataResponse> DescribeDomainUsageDataWithOptionsAsync(DescribeDomainUsageDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12736,16 +13852,18 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|90 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainUsageDataRequest
-          * @return DescribeDomainUsageDataResponse
+         * @summary Queries the resource usage data of specific domain names in a specified billable region.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|90 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainUsageDataRequest
+         * @return DescribeDomainUsageDataResponse
          */
         public DescribeDomainUsageDataResponse DescribeDomainUsageData(DescribeDomainUsageDataRequest request)
         {
@@ -12754,16 +13872,18 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * * You can call this operation up to 10 times per second per account.
-          * * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-          * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|3 days|93 days|15 minutes|
-          * |1 hour|31 days|186 days|4 hours|
-          * |1 day|90 days|366 days|04:00 on the next day|
-          *
-          * @param request DescribeDomainUsageDataRequest
-          * @return DescribeDomainUsageDataResponse
+         * @summary Queries the resource usage data of specific domain names in a specified billable region.
+         *
+         * @description * You can call this operation up to 10 times per second per account.
+         * * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+         * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+         * |---|---|---|---|
+         * |5 minutes|3 days|93 days|15 minutes|
+         * |1 hour|31 days|186 days|4 hours|
+         * |1 day|90 days|366 days|04:00 on the next day|
+         *
+         * @param request DescribeDomainUsageDataRequest
+         * @return DescribeDomainUsageDataResponse
          */
         public async Task<DescribeDomainUsageDataResponse> DescribeDomainUsageDataAsync(DescribeDomainUsageDataRequest request)
         {
@@ -12772,15 +13892,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > 
-          * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * *   You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainUvDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainUvDataResponse
+         * @summary Queries the unique visitor (UV) data of an accelerated domain name. Data is collected every hour. You can query data collected in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > 
+         * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * *   You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainUvDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainUvDataResponse
          */
         public DescribeDomainUvDataResponse DescribeDomainUvDataWithOptions(DescribeDomainUvDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12818,15 +13940,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > 
-          * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * *   You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainUvDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainUvDataResponse
+         * @summary Queries the unique visitor (UV) data of an accelerated domain name. Data is collected every hour. You can query data collected in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > 
+         * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * *   You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainUvDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainUvDataResponse
          */
         public async Task<DescribeDomainUvDataResponse> DescribeDomainUvDataWithOptionsAsync(DescribeDomainUvDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12864,14 +13988,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > 
-          * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * *   You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainUvDataRequest
-          * @return DescribeDomainUvDataResponse
+         * @summary Queries the unique visitor (UV) data of an accelerated domain name. Data is collected every hour. You can query data collected in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > 
+         * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * *   You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainUvDataRequest
+         * @return DescribeDomainUvDataResponse
          */
         public DescribeDomainUvDataResponse DescribeDomainUvData(DescribeDomainUvDataRequest request)
         {
@@ -12880,14 +14006,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > 
-          * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-          * *   You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeDomainUvDataRequest
-          * @return DescribeDomainUvDataResponse
+         * @summary Queries the unique visitor (UV) data of an accelerated domain name. Data is collected every hour. You can query data collected in the last 90 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > 
+         * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+         * *   You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeDomainUvDataRequest
+         * @return DescribeDomainUvDataResponse
          */
         public async Task<DescribeDomainUvDataResponse> DescribeDomainUvDataAsync(DescribeDomainUvDataRequest request)
         {
@@ -12896,11 +14024,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
-          *
-          * @param request DescribeDomainVerifyDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainVerifyDataResponse
+         * @summary Queries the verification content of a domain name, including the host record and record value.
+         *
+         * @description You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
+         *
+         * @param request DescribeDomainVerifyDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainVerifyDataResponse
          */
         public DescribeDomainVerifyDataResponse DescribeDomainVerifyDataWithOptions(DescribeDomainVerifyDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12934,11 +14064,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
-          *
-          * @param request DescribeDomainVerifyDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainVerifyDataResponse
+         * @summary Queries the verification content of a domain name, including the host record and record value.
+         *
+         * @description You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
+         *
+         * @param request DescribeDomainVerifyDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainVerifyDataResponse
          */
         public async Task<DescribeDomainVerifyDataResponse> DescribeDomainVerifyDataWithOptionsAsync(DescribeDomainVerifyDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12972,10 +14104,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
-          *
-          * @param request DescribeDomainVerifyDataRequest
-          * @return DescribeDomainVerifyDataResponse
+         * @summary Queries the verification content of a domain name, including the host record and record value.
+         *
+         * @description You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
+         *
+         * @param request DescribeDomainVerifyDataRequest
+         * @return DescribeDomainVerifyDataResponse
          */
         public DescribeDomainVerifyDataResponse DescribeDomainVerifyData(DescribeDomainVerifyDataRequest request)
         {
@@ -12984,10 +14118,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
-          *
-          * @param request DescribeDomainVerifyDataRequest
-          * @return DescribeDomainVerifyDataResponse
+         * @summary Queries the verification content of a domain name, including the host record and record value.
+         *
+         * @description You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
+         *
+         * @param request DescribeDomainVerifyDataRequest
+         * @return DescribeDomainVerifyDataResponse
          */
         public async Task<DescribeDomainVerifyDataResponse> DescribeDomainVerifyDataAsync(DescribeDomainVerifyDataRequest request)
         {
@@ -12996,11 +14132,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeDomainsBySourceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainsBySourceResponse
+         * @summary Queries accelerated domain names by origin server.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeDomainsBySourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainsBySourceResponse
          */
         public DescribeDomainsBySourceResponse DescribeDomainsBySourceWithOptions(DescribeDomainsBySourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13038,11 +14176,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeDomainsBySourceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainsBySourceResponse
+         * @summary Queries accelerated domain names by origin server.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeDomainsBySourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainsBySourceResponse
          */
         public async Task<DescribeDomainsBySourceResponse> DescribeDomainsBySourceWithOptionsAsync(DescribeDomainsBySourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13080,10 +14220,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeDomainsBySourceRequest
-          * @return DescribeDomainsBySourceResponse
+         * @summary Queries accelerated domain names by origin server.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeDomainsBySourceRequest
+         * @return DescribeDomainsBySourceResponse
          */
         public DescribeDomainsBySourceResponse DescribeDomainsBySource(DescribeDomainsBySourceRequest request)
         {
@@ -13092,10 +14234,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeDomainsBySourceRequest
-          * @return DescribeDomainsBySourceResponse
+         * @summary Queries accelerated domain names by origin server.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeDomainsBySourceRequest
+         * @return DescribeDomainsBySourceResponse
          */
         public async Task<DescribeDomainsBySourceResponse> DescribeDomainsBySourceAsync(DescribeDomainsBySourceRequest request)
         {
@@ -13104,13 +14248,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 10 times per second per account.
-          * *   If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-          * *   You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
-          *
-          * @param request DescribeDomainsUsageByDayRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainsUsageByDayResponse
+         * @summary Queries the monitoring data of an accelerated domain name. Data is collected every day. You can query data collected within the last 90 days.
+         *
+         * @description *   You can call this operation up to 10 times per second per account.
+         * *   If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
+         * *   You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
+         *
+         * @param request DescribeDomainsUsageByDayRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainsUsageByDayResponse
          */
         public DescribeDomainsUsageByDayResponse DescribeDomainsUsageByDayWithOptions(DescribeDomainsUsageByDayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13148,13 +14294,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 10 times per second per account.
-          * *   If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-          * *   You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
-          *
-          * @param request DescribeDomainsUsageByDayRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainsUsageByDayResponse
+         * @summary Queries the monitoring data of an accelerated domain name. Data is collected every day. You can query data collected within the last 90 days.
+         *
+         * @description *   You can call this operation up to 10 times per second per account.
+         * *   If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
+         * *   You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
+         *
+         * @param request DescribeDomainsUsageByDayRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainsUsageByDayResponse
          */
         public async Task<DescribeDomainsUsageByDayResponse> DescribeDomainsUsageByDayWithOptionsAsync(DescribeDomainsUsageByDayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13192,12 +14340,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 10 times per second per account.
-          * *   If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-          * *   You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
-          *
-          * @param request DescribeDomainsUsageByDayRequest
-          * @return DescribeDomainsUsageByDayResponse
+         * @summary Queries the monitoring data of an accelerated domain name. Data is collected every day. You can query data collected within the last 90 days.
+         *
+         * @description *   You can call this operation up to 10 times per second per account.
+         * *   If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
+         * *   You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
+         *
+         * @param request DescribeDomainsUsageByDayRequest
+         * @return DescribeDomainsUsageByDayResponse
          */
         public DescribeDomainsUsageByDayResponse DescribeDomainsUsageByDay(DescribeDomainsUsageByDayRequest request)
         {
@@ -13206,12 +14356,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 10 times per second per account.
-          * *   If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-          * *   You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
-          *
-          * @param request DescribeDomainsUsageByDayRequest
-          * @return DescribeDomainsUsageByDayResponse
+         * @summary Queries the monitoring data of an accelerated domain name. Data is collected every day. You can query data collected within the last 90 days.
+         *
+         * @description *   You can call this operation up to 10 times per second per account.
+         * *   If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
+         * *   You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
+         *
+         * @param request DescribeDomainsUsageByDayRequest
+         * @return DescribeDomainsUsageByDayResponse
          */
         public async Task<DescribeDomainsUsageByDayResponse> DescribeDomainsUsageByDayAsync(DescribeDomainsUsageByDayRequest request)
         {
@@ -13220,11 +14372,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeEsExceptionDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeEsExceptionDataResponse
+         * @summary Queries the execution errors of a script in EdgeScript (ES).
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeEsExceptionDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEsExceptionDataResponse
          */
         public DescribeEsExceptionDataResponse DescribeEsExceptionDataWithOptions(DescribeEsExceptionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13262,11 +14416,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeEsExceptionDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeEsExceptionDataResponse
+         * @summary Queries the execution errors of a script in EdgeScript (ES).
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeEsExceptionDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEsExceptionDataResponse
          */
         public async Task<DescribeEsExceptionDataResponse> DescribeEsExceptionDataWithOptionsAsync(DescribeEsExceptionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13304,10 +14460,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeEsExceptionDataRequest
-          * @return DescribeEsExceptionDataResponse
+         * @summary Queries the execution errors of a script in EdgeScript (ES).
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeEsExceptionDataRequest
+         * @return DescribeEsExceptionDataResponse
          */
         public DescribeEsExceptionDataResponse DescribeEsExceptionData(DescribeEsExceptionDataRequest request)
         {
@@ -13316,10 +14474,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeEsExceptionDataRequest
-          * @return DescribeEsExceptionDataResponse
+         * @summary Queries the execution errors of a script in EdgeScript (ES).
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeEsExceptionDataRequest
+         * @return DescribeEsExceptionDataResponse
          */
         public async Task<DescribeEsExceptionDataResponse> DescribeEsExceptionDataAsync(DescribeEsExceptionDataRequest request)
         {
@@ -13328,11 +14488,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeEsExecuteDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeEsExecuteDataResponse
+         * @summary Queries the execution status of scripts in EdgeScript (ES).
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeEsExecuteDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEsExecuteDataResponse
          */
         public DescribeEsExecuteDataResponse DescribeEsExecuteDataWithOptions(DescribeEsExecuteDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13370,11 +14532,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeEsExecuteDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeEsExecuteDataResponse
+         * @summary Queries the execution status of scripts in EdgeScript (ES).
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeEsExecuteDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEsExecuteDataResponse
          */
         public async Task<DescribeEsExecuteDataResponse> DescribeEsExecuteDataWithOptionsAsync(DescribeEsExecuteDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13412,10 +14576,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeEsExecuteDataRequest
-          * @return DescribeEsExecuteDataResponse
+         * @summary Queries the execution status of scripts in EdgeScript (ES).
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeEsExecuteDataRequest
+         * @return DescribeEsExecuteDataResponse
          */
         public DescribeEsExecuteDataResponse DescribeEsExecuteData(DescribeEsExecuteDataRequest request)
         {
@@ -13424,10 +14590,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeEsExecuteDataRequest
-          * @return DescribeEsExecuteDataResponse
+         * @summary Queries the execution status of scripts in EdgeScript (ES).
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeEsExecuteDataRequest
+         * @return DescribeEsExecuteDataResponse
          */
         public async Task<DescribeEsExecuteDataResponse> DescribeEsExecuteDataAsync(DescribeEsExecuteDataRequest request)
         {
@@ -13435,6 +14603,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DescribeEsExecuteDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a specified Function Compute trigger.
+         *
+         * @param request DescribeFCTriggerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeFCTriggerResponse
+         */
         public DescribeFCTriggerResponse DescribeFCTriggerWithOptions(DescribeFCTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13458,6 +14633,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeFCTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a specified Function Compute trigger.
+         *
+         * @param request DescribeFCTriggerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeFCTriggerResponse
+         */
         public async Task<DescribeFCTriggerResponse> DescribeFCTriggerWithOptionsAsync(DescribeFCTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13481,18 +14663,37 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeFCTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a specified Function Compute trigger.
+         *
+         * @param request DescribeFCTriggerRequest
+         * @return DescribeFCTriggerResponse
+         */
         public DescribeFCTriggerResponse DescribeFCTrigger(DescribeFCTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFCTriggerWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a specified Function Compute trigger.
+         *
+         * @param request DescribeFCTriggerRequest
+         * @return DescribeFCTriggerResponse
+         */
         public async Task<DescribeFCTriggerResponse> DescribeFCTriggerAsync(DescribeFCTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFCTriggerWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Checks whether a specified IP address is the IP address of a CDN point of presence (POP).
+         *
+         * @param request DescribeIpInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeIpInfoResponse
+         */
         public DescribeIpInfoResponse DescribeIpInfoWithOptions(DescribeIpInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13520,6 +14721,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeIpInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Checks whether a specified IP address is the IP address of a CDN point of presence (POP).
+         *
+         * @param request DescribeIpInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeIpInfoResponse
+         */
         public async Task<DescribeIpInfoResponse> DescribeIpInfoWithOptionsAsync(DescribeIpInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13547,12 +14755,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeIpInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Checks whether a specified IP address is the IP address of a CDN point of presence (POP).
+         *
+         * @param request DescribeIpInfoRequest
+         * @return DescribeIpInfoResponse
+         */
         public DescribeIpInfoResponse DescribeIpInfo(DescribeIpInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeIpInfoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Checks whether a specified IP address is the IP address of a CDN point of presence (POP).
+         *
+         * @param request DescribeIpInfoRequest
+         * @return DescribeIpInfoResponse
+         */
         public async Task<DescribeIpInfoResponse> DescribeIpInfoAsync(DescribeIpInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13560,11 +14780,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeIpStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeIpStatusResponse
+         * @summary Queries the status of IP addresses of points of presence (POPs). The status of an IP address of a POP indicates whether content delivery acceleration is supported by the POP.
+         *
+         * @description > You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeIpStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeIpStatusResponse
          */
         public DescribeIpStatusResponse DescribeIpStatusWithOptions(DescribeIpStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13590,11 +14812,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeIpStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeIpStatusResponse
+         * @summary Queries the status of IP addresses of points of presence (POPs). The status of an IP address of a POP indicates whether content delivery acceleration is supported by the POP.
+         *
+         * @description > You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeIpStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeIpStatusResponse
          */
         public async Task<DescribeIpStatusResponse> DescribeIpStatusWithOptionsAsync(DescribeIpStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13620,10 +14844,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeIpStatusRequest
-          * @return DescribeIpStatusResponse
+         * @summary Queries the status of IP addresses of points of presence (POPs). The status of an IP address of a POP indicates whether content delivery acceleration is supported by the POP.
+         *
+         * @description > You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeIpStatusRequest
+         * @return DescribeIpStatusResponse
          */
         public DescribeIpStatusResponse DescribeIpStatus(DescribeIpStatusRequest request)
         {
@@ -13632,10 +14858,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 50 times per second per account.
-          *
-          * @param request DescribeIpStatusRequest
-          * @return DescribeIpStatusResponse
+         * @summary Queries the status of IP addresses of points of presence (POPs). The status of an IP address of a POP indicates whether content delivery acceleration is supported by the POP.
+         *
+         * @description > You can call this operation up to 50 times per second per account.
+         *
+         * @param request DescribeIpStatusRequest
+         * @return DescribeIpStatusResponse
          */
         public async Task<DescribeIpStatusResponse> DescribeIpStatusAsync(DescribeIpStatusRequest request)
         {
@@ -13644,12 +14872,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply for permissions to use this operation.
-          * *   You can call this operation up to 40 times per second per account.
-          *
-          * @param request DescribeL2VipsByDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeL2VipsByDomainResponse
+         * @summary Queries the virtual IP addresses (VIPs) of L2 CDN points of presence (POPs) for a specific domain name.
+         *
+         * @description *   This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply for permissions to use this operation.
+         * *   You can call this operation up to 40 times per second per account.
+         *
+         * @param request DescribeL2VipsByDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeL2VipsByDomainResponse
          */
         public DescribeL2VipsByDomainResponse DescribeL2VipsByDomainWithOptions(DescribeL2VipsByDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13687,12 +14917,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply for permissions to use this operation.
-          * *   You can call this operation up to 40 times per second per account.
-          *
-          * @param request DescribeL2VipsByDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeL2VipsByDomainResponse
+         * @summary Queries the virtual IP addresses (VIPs) of L2 CDN points of presence (POPs) for a specific domain name.
+         *
+         * @description *   This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply for permissions to use this operation.
+         * *   You can call this operation up to 40 times per second per account.
+         *
+         * @param request DescribeL2VipsByDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeL2VipsByDomainResponse
          */
         public async Task<DescribeL2VipsByDomainResponse> DescribeL2VipsByDomainWithOptionsAsync(DescribeL2VipsByDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13730,11 +14962,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply for permissions to use this operation.
-          * *   You can call this operation up to 40 times per second per account.
-          *
-          * @param request DescribeL2VipsByDomainRequest
-          * @return DescribeL2VipsByDomainResponse
+         * @summary Queries the virtual IP addresses (VIPs) of L2 CDN points of presence (POPs) for a specific domain name.
+         *
+         * @description *   This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply for permissions to use this operation.
+         * *   You can call this operation up to 40 times per second per account.
+         *
+         * @param request DescribeL2VipsByDomainRequest
+         * @return DescribeL2VipsByDomainResponse
          */
         public DescribeL2VipsByDomainResponse DescribeL2VipsByDomain(DescribeL2VipsByDomainRequest request)
         {
@@ -13743,11 +14977,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply for permissions to use this operation.
-          * *   You can call this operation up to 40 times per second per account.
-          *
-          * @param request DescribeL2VipsByDomainRequest
-          * @return DescribeL2VipsByDomainResponse
+         * @summary Queries the virtual IP addresses (VIPs) of L2 CDN points of presence (POPs) for a specific domain name.
+         *
+         * @description *   This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply for permissions to use this operation.
+         * *   You can call this operation up to 40 times per second per account.
+         *
+         * @param request DescribeL2VipsByDomainRequest
+         * @return DescribeL2VipsByDomainResponse
          */
         public async Task<DescribeL2VipsByDomainResponse> DescribeL2VipsByDomainAsync(DescribeL2VipsByDomainRequest request)
         {
@@ -13756,12 +14992,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query data within the last 3 days.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribePreloadDetailByIdRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePreloadDetailByIdResponse
+         * @summary Queries the prefetch details of a task, including the prefetch progress of all resources in the task. Only users who are included in the whitelist can use this operation. You can contact your business manager to apply for the whitelist.
+         *
+         * @description *   You can query data within the last 3 days.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribePreloadDetailByIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePreloadDetailByIdResponse
          */
         public DescribePreloadDetailByIdResponse DescribePreloadDetailByIdWithOptions(DescribePreloadDetailByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13791,12 +15029,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query data within the last 3 days.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribePreloadDetailByIdRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePreloadDetailByIdResponse
+         * @summary Queries the prefetch details of a task, including the prefetch progress of all resources in the task. Only users who are included in the whitelist can use this operation. You can contact your business manager to apply for the whitelist.
+         *
+         * @description *   You can query data within the last 3 days.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribePreloadDetailByIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePreloadDetailByIdResponse
          */
         public async Task<DescribePreloadDetailByIdResponse> DescribePreloadDetailByIdWithOptionsAsync(DescribePreloadDetailByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13826,11 +15066,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query data within the last 3 days.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribePreloadDetailByIdRequest
-          * @return DescribePreloadDetailByIdResponse
+         * @summary Queries the prefetch details of a task, including the prefetch progress of all resources in the task. Only users who are included in the whitelist can use this operation. You can contact your business manager to apply for the whitelist.
+         *
+         * @description *   You can query data within the last 3 days.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribePreloadDetailByIdRequest
+         * @return DescribePreloadDetailByIdResponse
          */
         public DescribePreloadDetailByIdResponse DescribePreloadDetailById(DescribePreloadDetailByIdRequest request)
         {
@@ -13839,11 +15081,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query data within the last 3 days.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribePreloadDetailByIdRequest
-          * @return DescribePreloadDetailByIdResponse
+         * @summary Queries the prefetch details of a task, including the prefetch progress of all resources in the task. Only users who are included in the whitelist can use this operation. You can contact your business manager to apply for the whitelist.
+         *
+         * @description *   You can query data within the last 3 days.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribePreloadDetailByIdRequest
+         * @return DescribePreloadDetailByIdResponse
          */
         public async Task<DescribePreloadDetailByIdResponse> DescribePreloadDetailByIdAsync(DescribePreloadDetailByIdRequest request)
         {
@@ -13852,12 +15096,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   The data is collected every 5 minutes.
-          * *   You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeRangeDataByLocateAndIspServiceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRangeDataByLocateAndIspServiceResponse
+         * @summary Queries the bandwidth values by Internet service provider (ISP) and region.
+         *
+         * @description *   The data is collected every 5 minutes.
+         * *   You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeRangeDataByLocateAndIspServiceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRangeDataByLocateAndIspServiceResponse
          */
         public DescribeRangeDataByLocateAndIspServiceResponse DescribeRangeDataByLocateAndIspServiceWithOptions(DescribeRangeDataByLocateAndIspServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13903,12 +15149,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   The data is collected every 5 minutes.
-          * *   You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeRangeDataByLocateAndIspServiceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRangeDataByLocateAndIspServiceResponse
+         * @summary Queries the bandwidth values by Internet service provider (ISP) and region.
+         *
+         * @description *   The data is collected every 5 minutes.
+         * *   You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeRangeDataByLocateAndIspServiceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRangeDataByLocateAndIspServiceResponse
          */
         public async Task<DescribeRangeDataByLocateAndIspServiceResponse> DescribeRangeDataByLocateAndIspServiceWithOptionsAsync(DescribeRangeDataByLocateAndIspServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13954,11 +15202,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   The data is collected every 5 minutes.
-          * *   You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeRangeDataByLocateAndIspServiceRequest
-          * @return DescribeRangeDataByLocateAndIspServiceResponse
+         * @summary Queries the bandwidth values by Internet service provider (ISP) and region.
+         *
+         * @description *   The data is collected every 5 minutes.
+         * *   You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeRangeDataByLocateAndIspServiceRequest
+         * @return DescribeRangeDataByLocateAndIspServiceResponse
          */
         public DescribeRangeDataByLocateAndIspServiceResponse DescribeRangeDataByLocateAndIspService(DescribeRangeDataByLocateAndIspServiceRequest request)
         {
@@ -13967,11 +15217,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   The data is collected every 5 minutes.
-          * *   You can call this operation up to 20 times per second per account.
-          *
-          * @param request DescribeRangeDataByLocateAndIspServiceRequest
-          * @return DescribeRangeDataByLocateAndIspServiceResponse
+         * @summary Queries the bandwidth values by Internet service provider (ISP) and region.
+         *
+         * @description *   The data is collected every 5 minutes.
+         * *   You can call this operation up to 20 times per second per account.
+         *
+         * @param request DescribeRangeDataByLocateAndIspServiceRequest
+         * @return DescribeRangeDataByLocateAndIspServiceResponse
          */
         public async Task<DescribeRangeDataByLocateAndIspServiceResponse> DescribeRangeDataByLocateAndIspServiceAsync(DescribeRangeDataByLocateAndIspServiceRequest request)
         {
@@ -13980,11 +15232,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeRealtimeDeliveryAccRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRealtimeDeliveryAccResponse
+         * @summary Queries the number of real-time log deliveries.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeRealtimeDeliveryAccRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRealtimeDeliveryAccResponse
          */
         public DescribeRealtimeDeliveryAccResponse DescribeRealtimeDeliveryAccWithOptions(DescribeRealtimeDeliveryAccRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14030,11 +15284,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeRealtimeDeliveryAccRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRealtimeDeliveryAccResponse
+         * @summary Queries the number of real-time log deliveries.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeRealtimeDeliveryAccRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRealtimeDeliveryAccResponse
          */
         public async Task<DescribeRealtimeDeliveryAccResponse> DescribeRealtimeDeliveryAccWithOptionsAsync(DescribeRealtimeDeliveryAccRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14080,10 +15336,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeRealtimeDeliveryAccRequest
-          * @return DescribeRealtimeDeliveryAccResponse
+         * @summary Queries the number of real-time log deliveries.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeRealtimeDeliveryAccRequest
+         * @return DescribeRealtimeDeliveryAccResponse
          */
         public DescribeRealtimeDeliveryAccResponse DescribeRealtimeDeliveryAcc(DescribeRealtimeDeliveryAccRequest request)
         {
@@ -14092,10 +15350,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeRealtimeDeliveryAccRequest
-          * @return DescribeRealtimeDeliveryAccResponse
+         * @summary Queries the number of real-time log deliveries.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeRealtimeDeliveryAccRequest
+         * @return DescribeRealtimeDeliveryAccResponse
          */
         public async Task<DescribeRealtimeDeliveryAccResponse> DescribeRealtimeDeliveryAccAsync(DescribeRealtimeDeliveryAccRequest request)
         {
@@ -14104,11 +15364,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.
-          *
-          * @param request DescribeRefreshQuotaRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRefreshQuotaResponse
+         * @summary DescribeRefreshQuota
+         *
+         * @description Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.
+         *
+         * @param request DescribeRefreshQuotaRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRefreshQuotaResponse
          */
         public DescribeRefreshQuotaResponse DescribeRefreshQuotaWithOptions(DescribeRefreshQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14142,11 +15404,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.
-          *
-          * @param request DescribeRefreshQuotaRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRefreshQuotaResponse
+         * @summary DescribeRefreshQuota
+         *
+         * @description Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.
+         *
+         * @param request DescribeRefreshQuotaRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRefreshQuotaResponse
          */
         public async Task<DescribeRefreshQuotaResponse> DescribeRefreshQuotaWithOptionsAsync(DescribeRefreshQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14180,10 +15444,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.
-          *
-          * @param request DescribeRefreshQuotaRequest
-          * @return DescribeRefreshQuotaResponse
+         * @summary DescribeRefreshQuota
+         *
+         * @description Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.
+         *
+         * @param request DescribeRefreshQuotaRequest
+         * @return DescribeRefreshQuotaResponse
          */
         public DescribeRefreshQuotaResponse DescribeRefreshQuota(DescribeRefreshQuotaRequest request)
         {
@@ -14192,10 +15458,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.
-          *
-          * @param request DescribeRefreshQuotaRequest
-          * @return DescribeRefreshQuotaResponse
+         * @summary DescribeRefreshQuota
+         *
+         * @description Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.
+         *
+         * @param request DescribeRefreshQuotaRequest
+         * @return DescribeRefreshQuotaResponse
          */
         public async Task<DescribeRefreshQuotaResponse> DescribeRefreshQuotaAsync(DescribeRefreshQuotaRequest request)
         {
@@ -14204,12 +15472,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query data in the last three days.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeRefreshTaskByIdRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRefreshTaskByIdResponse
+         * @summary Queries the statuses of refresh or prefetch tasks by task ID.
+         *
+         * @description *   You can query data in the last three days.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeRefreshTaskByIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRefreshTaskByIdResponse
          */
         public DescribeRefreshTaskByIdResponse DescribeRefreshTaskByIdWithOptions(DescribeRefreshTaskByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14239,12 +15509,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query data in the last three days.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeRefreshTaskByIdRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRefreshTaskByIdResponse
+         * @summary Queries the statuses of refresh or prefetch tasks by task ID.
+         *
+         * @description *   You can query data in the last three days.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeRefreshTaskByIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRefreshTaskByIdResponse
          */
         public async Task<DescribeRefreshTaskByIdResponse> DescribeRefreshTaskByIdWithOptionsAsync(DescribeRefreshTaskByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14274,11 +15546,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query data in the last three days.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeRefreshTaskByIdRequest
-          * @return DescribeRefreshTaskByIdResponse
+         * @summary Queries the statuses of refresh or prefetch tasks by task ID.
+         *
+         * @description *   You can query data in the last three days.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeRefreshTaskByIdRequest
+         * @return DescribeRefreshTaskByIdResponse
          */
         public DescribeRefreshTaskByIdResponse DescribeRefreshTaskById(DescribeRefreshTaskByIdRequest request)
         {
@@ -14287,11 +15561,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query data in the last three days.
-          * *   You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeRefreshTaskByIdRequest
-          * @return DescribeRefreshTaskByIdResponse
+         * @summary Queries the statuses of refresh or prefetch tasks by task ID.
+         *
+         * @description *   You can query data in the last three days.
+         * *   You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeRefreshTaskByIdRequest
+         * @return DescribeRefreshTaskByIdResponse
          */
         public async Task<DescribeRefreshTaskByIdResponse> DescribeRefreshTaskByIdAsync(DescribeRefreshTaskByIdRequest request)
         {
@@ -14300,15 +15576,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query the status of tasks by task ID or URL.
-          * *   You can set both the **TaskId** and **ObjectPath** parameters. If you do not set the **TaskId** or **ObjectPath** parameter, data entries on the first page (20 entries) collected in the last 3 days are returned.
-          * *   You can query data collected in the last 3 days.
-          * *   If auto CDN cache update is enabled in the Object Storage Service (OSS) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.
-          * *   You can call this operation up to 10 times per second per account. If you want to query tasks at a higher frequency, call the [DescribeRefreshTaskById](~~187709~~) operation. This operation allows you to query tasks by task ID.
-          *
-          * @param request DescribeRefreshTasksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRefreshTasksResponse
+         * @summary Queries the status of refresh or prefetch tasks that belong to an accelerated domain name.
+         *
+         * @description *   You can query the status of tasks by task ID or URL.
+         * *   You can set both the **TaskId** and **ObjectPath** parameters. If you do not set the **TaskId** or **ObjectPath** parameter, data entries on the first page (20 entries) collected in the last 3 days are returned.
+         * *   You can query data collected in the last 3 days.
+         * *   If auto CDN cache update is enabled in the Object Storage Service (OSS) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.
+         * *   You can call this operation up to 10 times per second per account. If you want to query tasks at a higher frequency, call the [DescribeRefreshTaskById](https://help.aliyun.com/document_detail/187709.html) operation. This operation allows you to query tasks by task ID.
+         *
+         * @param request DescribeRefreshTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRefreshTasksResponse
          */
         public DescribeRefreshTasksResponse DescribeRefreshTasksWithOptions(DescribeRefreshTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14382,15 +15660,17 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query the status of tasks by task ID or URL.
-          * *   You can set both the **TaskId** and **ObjectPath** parameters. If you do not set the **TaskId** or **ObjectPath** parameter, data entries on the first page (20 entries) collected in the last 3 days are returned.
-          * *   You can query data collected in the last 3 days.
-          * *   If auto CDN cache update is enabled in the Object Storage Service (OSS) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.
-          * *   You can call this operation up to 10 times per second per account. If you want to query tasks at a higher frequency, call the [DescribeRefreshTaskById](~~187709~~) operation. This operation allows you to query tasks by task ID.
-          *
-          * @param request DescribeRefreshTasksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRefreshTasksResponse
+         * @summary Queries the status of refresh or prefetch tasks that belong to an accelerated domain name.
+         *
+         * @description *   You can query the status of tasks by task ID or URL.
+         * *   You can set both the **TaskId** and **ObjectPath** parameters. If you do not set the **TaskId** or **ObjectPath** parameter, data entries on the first page (20 entries) collected in the last 3 days are returned.
+         * *   You can query data collected in the last 3 days.
+         * *   If auto CDN cache update is enabled in the Object Storage Service (OSS) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.
+         * *   You can call this operation up to 10 times per second per account. If you want to query tasks at a higher frequency, call the [DescribeRefreshTaskById](https://help.aliyun.com/document_detail/187709.html) operation. This operation allows you to query tasks by task ID.
+         *
+         * @param request DescribeRefreshTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRefreshTasksResponse
          */
         public async Task<DescribeRefreshTasksResponse> DescribeRefreshTasksWithOptionsAsync(DescribeRefreshTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14464,14 +15744,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query the status of tasks by task ID or URL.
-          * *   You can set both the **TaskId** and **ObjectPath** parameters. If you do not set the **TaskId** or **ObjectPath** parameter, data entries on the first page (20 entries) collected in the last 3 days are returned.
-          * *   You can query data collected in the last 3 days.
-          * *   If auto CDN cache update is enabled in the Object Storage Service (OSS) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.
-          * *   You can call this operation up to 10 times per second per account. If you want to query tasks at a higher frequency, call the [DescribeRefreshTaskById](~~187709~~) operation. This operation allows you to query tasks by task ID.
-          *
-          * @param request DescribeRefreshTasksRequest
-          * @return DescribeRefreshTasksResponse
+         * @summary Queries the status of refresh or prefetch tasks that belong to an accelerated domain name.
+         *
+         * @description *   You can query the status of tasks by task ID or URL.
+         * *   You can set both the **TaskId** and **ObjectPath** parameters. If you do not set the **TaskId** or **ObjectPath** parameter, data entries on the first page (20 entries) collected in the last 3 days are returned.
+         * *   You can query data collected in the last 3 days.
+         * *   If auto CDN cache update is enabled in the Object Storage Service (OSS) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.
+         * *   You can call this operation up to 10 times per second per account. If you want to query tasks at a higher frequency, call the [DescribeRefreshTaskById](https://help.aliyun.com/document_detail/187709.html) operation. This operation allows you to query tasks by task ID.
+         *
+         * @param request DescribeRefreshTasksRequest
+         * @return DescribeRefreshTasksResponse
          */
         public DescribeRefreshTasksResponse DescribeRefreshTasks(DescribeRefreshTasksRequest request)
         {
@@ -14480,14 +15762,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can query the status of tasks by task ID or URL.
-          * *   You can set both the **TaskId** and **ObjectPath** parameters. If you do not set the **TaskId** or **ObjectPath** parameter, data entries on the first page (20 entries) collected in the last 3 days are returned.
-          * *   You can query data collected in the last 3 days.
-          * *   If auto CDN cache update is enabled in the Object Storage Service (OSS) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.
-          * *   You can call this operation up to 10 times per second per account. If you want to query tasks at a higher frequency, call the [DescribeRefreshTaskById](~~187709~~) operation. This operation allows you to query tasks by task ID.
-          *
-          * @param request DescribeRefreshTasksRequest
-          * @return DescribeRefreshTasksResponse
+         * @summary Queries the status of refresh or prefetch tasks that belong to an accelerated domain name.
+         *
+         * @description *   You can query the status of tasks by task ID or URL.
+         * *   You can set both the **TaskId** and **ObjectPath** parameters. If you do not set the **TaskId** or **ObjectPath** parameter, data entries on the first page (20 entries) collected in the last 3 days are returned.
+         * *   You can query data collected in the last 3 days.
+         * *   If auto CDN cache update is enabled in the Object Storage Service (OSS) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.
+         * *   You can call this operation up to 10 times per second per account. If you want to query tasks at a higher frequency, call the [DescribeRefreshTaskById](https://help.aliyun.com/document_detail/187709.html) operation. This operation allows you to query tasks by task ID.
+         *
+         * @param request DescribeRefreshTasksRequest
+         * @return DescribeRefreshTasksResponse
          */
         public async Task<DescribeRefreshTasksResponse> DescribeRefreshTasksAsync(DescribeRefreshTasksRequest request)
         {
@@ -14496,11 +15780,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >The maximum number of times that each user can call this operation per second is 30.
-          *
-          * @param request DescribeStagingIpRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeStagingIpResponse
+         * @summary Queries node IP addresses in the staging environment.
+         *
+         * @description >The maximum number of times that each user can call this operation per second is 30.
+         *
+         * @param request DescribeStagingIpRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeStagingIpResponse
          */
         public DescribeStagingIpResponse DescribeStagingIpWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14521,11 +15807,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >The maximum number of times that each user can call this operation per second is 30.
-          *
-          * @param request DescribeStagingIpRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeStagingIpResponse
+         * @summary Queries node IP addresses in the staging environment.
+         *
+         * @description >The maximum number of times that each user can call this operation per second is 30.
+         *
+         * @param request DescribeStagingIpRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeStagingIpResponse
          */
         public async Task<DescribeStagingIpResponse> DescribeStagingIpWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14546,9 +15834,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >The maximum number of times that each user can call this operation per second is 30.
-          *
-          * @return DescribeStagingIpResponse
+         * @summary Queries node IP addresses in the staging environment.
+         *
+         * @description >The maximum number of times that each user can call this operation per second is 30.
+         *
+         * @return DescribeStagingIpResponse
          */
         public DescribeStagingIpResponse DescribeStagingIp()
         {
@@ -14557,9 +15847,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >The maximum number of times that each user can call this operation per second is 30.
-          *
-          * @return DescribeStagingIpResponse
+         * @summary Queries node IP addresses in the staging environment.
+         *
+         * @description >The maximum number of times that each user can call this operation per second is 30.
+         *
+         * @return DescribeStagingIpResponse
          */
         public async Task<DescribeStagingIpResponse> DescribeStagingIpAsync()
         {
@@ -14568,11 +15860,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 10.
-          *
-          * @param request DescribeTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTagResourcesResponse
+         * @summary Queries tags that are added to specified resources.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 10.
+         *
+         * @param request DescribeTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTagResourcesResponse
          */
         public DescribeTagResourcesResponse DescribeTagResourcesWithOptions(DescribeTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14610,11 +15904,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 10.
-          *
-          * @param request DescribeTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTagResourcesResponse
+         * @summary Queries tags that are added to specified resources.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 10.
+         *
+         * @param request DescribeTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTagResourcesResponse
          */
         public async Task<DescribeTagResourcesResponse> DescribeTagResourcesWithOptionsAsync(DescribeTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14652,10 +15948,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 10.
-          *
-          * @param request DescribeTagResourcesRequest
-          * @return DescribeTagResourcesResponse
+         * @summary Queries tags that are added to specified resources.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 10.
+         *
+         * @param request DescribeTagResourcesRequest
+         * @return DescribeTagResourcesResponse
          */
         public DescribeTagResourcesResponse DescribeTagResources(DescribeTagResourcesRequest request)
         {
@@ -14664,10 +15962,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 10.
-          *
-          * @param request DescribeTagResourcesRequest
-          * @return DescribeTagResourcesResponse
+         * @summary Queries tags that are added to specified resources.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 10.
+         *
+         * @param request DescribeTagResourcesRequest
+         * @return DescribeTagResourcesResponse
          */
         public async Task<DescribeTagResourcesResponse> DescribeTagResourcesAsync(DescribeTagResourcesRequest request)
         {
@@ -14676,13 +15976,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the current month. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeTopDomainsByFlowRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTopDomainsByFlowResponse
+         * @summary Queries the top N domain names ranked by network traffic. You can query data collected in the last 30 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the current month. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeTopDomainsByFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTopDomainsByFlowResponse
          */
         public DescribeTopDomainsByFlowResponse DescribeTopDomainsByFlowWithOptions(DescribeTopDomainsByFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14720,13 +16022,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the current month. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeTopDomainsByFlowRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTopDomainsByFlowResponse
+         * @summary Queries the top N domain names ranked by network traffic. You can query data collected in the last 30 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the current month. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeTopDomainsByFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTopDomainsByFlowResponse
          */
         public async Task<DescribeTopDomainsByFlowResponse> DescribeTopDomainsByFlowWithOptionsAsync(DescribeTopDomainsByFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14764,12 +16068,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the current month. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeTopDomainsByFlowRequest
-          * @return DescribeTopDomainsByFlowResponse
+         * @summary Queries the top N domain names ranked by network traffic. You can query data collected in the last 30 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the current month. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeTopDomainsByFlowRequest
+         * @return DescribeTopDomainsByFlowResponse
          */
         public DescribeTopDomainsByFlowResponse DescribeTopDomainsByFlow(DescribeTopDomainsByFlowRequest request)
         {
@@ -14778,12 +16084,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](~~279577~~) feature for data analysis.
-          * > *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the current month. If you set both these parameters, the request returns the data collected within the specified time range.
-          * >*   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeTopDomainsByFlowRequest
-          * @return DescribeTopDomainsByFlowResponse
+         * @summary Queries the top N domain names ranked by network traffic. You can query data collected in the last 30 days.
+         *
+         * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
+         * > *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the current month. If you set both these parameters, the request returns the data collected within the specified time range.
+         * >*   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeTopDomainsByFlowRequest
+         * @return DescribeTopDomainsByFlowResponse
          */
         public async Task<DescribeTopDomainsByFlowResponse> DescribeTopDomainsByFlowAsync(DescribeTopDomainsByFlowRequest request)
         {
@@ -14792,11 +16100,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeUserCertificateExpireCountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserCertificateExpireCountResponse
+         * @summary Queries the number of domain names whose SSL certificates are about to expire or have already expired.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeUserCertificateExpireCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserCertificateExpireCountResponse
          */
         public DescribeUserCertificateExpireCountResponse DescribeUserCertificateExpireCountWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14817,11 +16127,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeUserCertificateExpireCountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserCertificateExpireCountResponse
+         * @summary Queries the number of domain names whose SSL certificates are about to expire or have already expired.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeUserCertificateExpireCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserCertificateExpireCountResponse
          */
         public async Task<DescribeUserCertificateExpireCountResponse> DescribeUserCertificateExpireCountWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14842,9 +16154,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @return DescribeUserCertificateExpireCountResponse
+         * @summary Queries the number of domain names whose SSL certificates are about to expire or have already expired.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @return DescribeUserCertificateExpireCountResponse
          */
         public DescribeUserCertificateExpireCountResponse DescribeUserCertificateExpireCount()
         {
@@ -14853,9 +16167,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @return DescribeUserCertificateExpireCountResponse
+         * @summary Queries the number of domain names whose SSL certificates are about to expire or have already expired.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @return DescribeUserCertificateExpireCountResponse
          */
         public async Task<DescribeUserCertificateExpireCountResponse> DescribeUserCertificateExpireCountAsync()
         {
@@ -14864,11 +16180,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeUserConfigsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserConfigsResponse
+         * @deprecated OpenAPI DescribeUserConfigs is deprecated
+         *
+         * @summary Queries configurations of security features.
+         *
+         * @param request DescribeUserConfigsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserConfigsResponse
          */
         // Deprecated
         public DescribeUserConfigsResponse DescribeUserConfigsWithOptions(DescribeUserConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -14907,11 +16225,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeUserConfigsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserConfigsResponse
+         * @deprecated OpenAPI DescribeUserConfigs is deprecated
+         *
+         * @summary Queries configurations of security features.
+         *
+         * @param request DescribeUserConfigsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserConfigsResponse
          */
         // Deprecated
         public async Task<DescribeUserConfigsResponse> DescribeUserConfigsWithOptionsAsync(DescribeUserConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -14950,10 +16270,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeUserConfigsRequest
-          * @return DescribeUserConfigsResponse
+         * @deprecated OpenAPI DescribeUserConfigs is deprecated
+         *
+         * @summary Queries configurations of security features.
+         *
+         * @param request DescribeUserConfigsRequest
+         * @return DescribeUserConfigsResponse
          */
         // Deprecated
         public DescribeUserConfigsResponse DescribeUserConfigs(DescribeUserConfigsRequest request)
@@ -14963,10 +16285,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * @deprecated
-          *
-          * @param request DescribeUserConfigsRequest
-          * @return DescribeUserConfigsResponse
+         * @deprecated OpenAPI DescribeUserConfigs is deprecated
+         *
+         * @summary Queries configurations of security features.
+         *
+         * @param request DescribeUserConfigsRequest
+         * @return DescribeUserConfigsResponse
          */
         // Deprecated
         public async Task<DescribeUserConfigsResponse> DescribeUserConfigsAsync(DescribeUserConfigsRequest request)
@@ -14976,12 +16300,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 100 times per second per account.
-          * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
-          *
-          * @param request DescribeUserDomainsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserDomainsResponse
+         * @summary Queries all accelerated domain names in your Alibaba Cloud account and the status of the accelerated domain names. You can filter domain names by name or status. Fuzzy match is supported.
+         *
+         * @description *   You can call this operation up to 100 times per second per account.
+         * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+         *
+         * @param request DescribeUserDomainsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserDomainsResponse
          */
         public DescribeUserDomainsResponse DescribeUserDomainsWithOptions(DescribeUserDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15067,12 +16393,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 100 times per second per account.
-          * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
-          *
-          * @param request DescribeUserDomainsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserDomainsResponse
+         * @summary Queries all accelerated domain names in your Alibaba Cloud account and the status of the accelerated domain names. You can filter domain names by name or status. Fuzzy match is supported.
+         *
+         * @description *   You can call this operation up to 100 times per second per account.
+         * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+         *
+         * @param request DescribeUserDomainsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserDomainsResponse
          */
         public async Task<DescribeUserDomainsResponse> DescribeUserDomainsWithOptionsAsync(DescribeUserDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15158,11 +16486,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 100 times per second per account.
-          * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
-          *
-          * @param request DescribeUserDomainsRequest
-          * @return DescribeUserDomainsResponse
+         * @summary Queries all accelerated domain names in your Alibaba Cloud account and the status of the accelerated domain names. You can filter domain names by name or status. Fuzzy match is supported.
+         *
+         * @description *   You can call this operation up to 100 times per second per account.
+         * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+         *
+         * @param request DescribeUserDomainsRequest
+         * @return DescribeUserDomainsResponse
          */
         public DescribeUserDomainsResponse DescribeUserDomains(DescribeUserDomainsRequest request)
         {
@@ -15171,11 +16501,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 100 times per second per account.
-          * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
-          *
-          * @param request DescribeUserDomainsRequest
-          * @return DescribeUserDomainsResponse
+         * @summary Queries all accelerated domain names in your Alibaba Cloud account and the status of the accelerated domain names. You can filter domain names by name or status. Fuzzy match is supported.
+         *
+         * @description *   You can call this operation up to 100 times per second per account.
+         * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+         *
+         * @param request DescribeUserDomainsRequest
+         * @return DescribeUserDomainsResponse
          */
         public async Task<DescribeUserDomainsResponse> DescribeUserDomainsAsync(DescribeUserDomainsRequest request)
         {
@@ -15184,11 +16516,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeUserTagsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserTagsResponse
+         * @summary Queries user tags.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeUserTagsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserTagsResponse
          */
         public DescribeUserTagsResponse DescribeUserTagsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15209,11 +16543,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeUserTagsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserTagsResponse
+         * @summary Queries user tags.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeUserTagsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserTagsResponse
          */
         public async Task<DescribeUserTagsResponse> DescribeUserTagsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15234,9 +16570,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @return DescribeUserTagsResponse
+         * @summary Queries user tags.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @return DescribeUserTagsResponse
          */
         public DescribeUserTagsResponse DescribeUserTags()
         {
@@ -15245,9 +16583,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @return DescribeUserTagsResponse
+         * @summary Queries user tags.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @return DescribeUserTagsResponse
          */
         public async Task<DescribeUserTagsResponse> DescribeUserTagsAsync()
         {
@@ -15256,11 +16596,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeUserUsageDataExportTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserUsageDataExportTaskResponse
+         * @summary Queries usage export tasks that were created in the last three months.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeUserUsageDataExportTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserUsageDataExportTaskResponse
          */
         public DescribeUserUsageDataExportTaskResponse DescribeUserUsageDataExportTaskWithOptions(DescribeUserUsageDataExportTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15294,11 +16636,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeUserUsageDataExportTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserUsageDataExportTaskResponse
+         * @summary Queries usage export tasks that were created in the last three months.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeUserUsageDataExportTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserUsageDataExportTaskResponse
          */
         public async Task<DescribeUserUsageDataExportTaskResponse> DescribeUserUsageDataExportTaskWithOptionsAsync(DescribeUserUsageDataExportTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15332,10 +16676,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeUserUsageDataExportTaskRequest
-          * @return DescribeUserUsageDataExportTaskResponse
+         * @summary Queries usage export tasks that were created in the last three months.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeUserUsageDataExportTaskRequest
+         * @return DescribeUserUsageDataExportTaskResponse
          */
         public DescribeUserUsageDataExportTaskResponse DescribeUserUsageDataExportTask(DescribeUserUsageDataExportTaskRequest request)
         {
@@ -15344,10 +16690,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeUserUsageDataExportTaskRequest
-          * @return DescribeUserUsageDataExportTaskResponse
+         * @summary Queries usage export tasks that were created in the last three months.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeUserUsageDataExportTaskRequest
+         * @return DescribeUserUsageDataExportTaskResponse
          */
         public async Task<DescribeUserUsageDataExportTaskResponse> DescribeUserUsageDataExportTaskAsync(DescribeUserUsageDataExportTaskRequest request)
         {
@@ -15356,12 +16704,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeUserUsageDetailDataExportTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserUsageDetailDataExportTaskResponse
+         * @summary Queries tasks that were used to export resource usage details of one or more accelerated domain names that belong to your Alibaba Cloud account. Resource usage information is collected every five minutes.
+         *
+         * @description *   This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeUserUsageDetailDataExportTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserUsageDetailDataExportTaskResponse
          */
         public DescribeUserUsageDetailDataExportTaskResponse DescribeUserUsageDetailDataExportTaskWithOptions(DescribeUserUsageDetailDataExportTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15395,12 +16745,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeUserUsageDetailDataExportTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserUsageDetailDataExportTaskResponse
+         * @summary Queries tasks that were used to export resource usage details of one or more accelerated domain names that belong to your Alibaba Cloud account. Resource usage information is collected every five minutes.
+         *
+         * @description *   This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeUserUsageDetailDataExportTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserUsageDetailDataExportTaskResponse
          */
         public async Task<DescribeUserUsageDetailDataExportTaskResponse> DescribeUserUsageDetailDataExportTaskWithOptionsAsync(DescribeUserUsageDetailDataExportTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15434,11 +16786,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeUserUsageDetailDataExportTaskRequest
-          * @return DescribeUserUsageDetailDataExportTaskResponse
+         * @summary Queries tasks that were used to export resource usage details of one or more accelerated domain names that belong to your Alibaba Cloud account. Resource usage information is collected every five minutes.
+         *
+         * @description *   This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeUserUsageDetailDataExportTaskRequest
+         * @return DescribeUserUsageDetailDataExportTaskResponse
          */
         public DescribeUserUsageDetailDataExportTaskResponse DescribeUserUsageDetailDataExportTask(DescribeUserUsageDetailDataExportTaskRequest request)
         {
@@ -15447,11 +16801,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request DescribeUserUsageDetailDataExportTaskRequest
-          * @return DescribeUserUsageDetailDataExportTaskResponse
+         * @summary Queries tasks that were used to export resource usage details of one or more accelerated domain names that belong to your Alibaba Cloud account. Resource usage information is collected every five minutes.
+         *
+         * @description *   This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request DescribeUserUsageDetailDataExportTaskRequest
+         * @return DescribeUserUsageDetailDataExportTaskResponse
          */
         public async Task<DescribeUserUsageDetailDataExportTaskResponse> DescribeUserUsageDetailDataExportTaskAsync(DescribeUserUsageDetailDataExportTaskRequest request)
         {
@@ -15460,11 +16816,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeUserVipsByDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserVipsByDomainResponse
+         * @summary Queries virtual IP addresses (VIPs) of CDN points of presence (POPs) by domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeUserVipsByDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserVipsByDomainResponse
          */
         public DescribeUserVipsByDomainResponse DescribeUserVipsByDomainWithOptions(DescribeUserVipsByDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15490,11 +16848,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeUserVipsByDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserVipsByDomainResponse
+         * @summary Queries virtual IP addresses (VIPs) of CDN points of presence (POPs) by domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeUserVipsByDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserVipsByDomainResponse
          */
         public async Task<DescribeUserVipsByDomainResponse> DescribeUserVipsByDomainWithOptionsAsync(DescribeUserVipsByDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15520,10 +16880,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeUserVipsByDomainRequest
-          * @return DescribeUserVipsByDomainResponse
+         * @summary Queries virtual IP addresses (VIPs) of CDN points of presence (POPs) by domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeUserVipsByDomainRequest
+         * @return DescribeUserVipsByDomainResponse
          */
         public DescribeUserVipsByDomainResponse DescribeUserVipsByDomain(DescribeUserVipsByDomainRequest request)
         {
@@ -15532,10 +16894,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request DescribeUserVipsByDomainRequest
-          * @return DescribeUserVipsByDomainResponse
+         * @summary Queries virtual IP addresses (VIPs) of CDN points of presence (POPs) by domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request DescribeUserVipsByDomainRequest
+         * @return DescribeUserVipsByDomainResponse
          */
         public async Task<DescribeUserVipsByDomainResponse> DescribeUserVipsByDomainAsync(DescribeUserVipsByDomainRequest request)
         {
@@ -15543,6 +16907,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DescribeUserVipsByDomainWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the ownership verification content of an accelerated domain name.
+         *
+         * @param request DescribeVerifyContentRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeVerifyContentResponse
+         */
         public DescribeVerifyContentResponse DescribeVerifyContentWithOptions(DescribeVerifyContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15570,6 +16941,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeVerifyContentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the ownership verification content of an accelerated domain name.
+         *
+         * @param request DescribeVerifyContentRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeVerifyContentResponse
+         */
         public async Task<DescribeVerifyContentResponse> DescribeVerifyContentWithOptionsAsync(DescribeVerifyContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15597,12 +16975,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeVerifyContentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the ownership verification content of an accelerated domain name.
+         *
+         * @param request DescribeVerifyContentRequest
+         * @return DescribeVerifyContentResponse
+         */
         public DescribeVerifyContentResponse DescribeVerifyContent(DescribeVerifyContentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVerifyContentWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the ownership verification content of an accelerated domain name.
+         *
+         * @param request DescribeVerifyContentRequest
+         * @return DescribeVerifyContentResponse
+         */
         public async Task<DescribeVerifyContentResponse> DescribeVerifyContentAsync(DescribeVerifyContentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15610,11 +17000,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 100.
-          *
-          * @param request DisableRealtimeLogDeliveryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DisableRealtimeLogDeliveryResponse
+         * @summary The ID of the request.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 100.
+         *
+         * @param request DisableRealtimeLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableRealtimeLogDeliveryResponse
          */
         public DisableRealtimeLogDeliveryResponse DisableRealtimeLogDeliveryWithOptions(DisableRealtimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15640,11 +17032,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 100.
-          *
-          * @param request DisableRealtimeLogDeliveryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DisableRealtimeLogDeliveryResponse
+         * @summary The ID of the request.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 100.
+         *
+         * @param request DisableRealtimeLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableRealtimeLogDeliveryResponse
          */
         public async Task<DisableRealtimeLogDeliveryResponse> DisableRealtimeLogDeliveryWithOptionsAsync(DisableRealtimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15670,10 +17064,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 100.
-          *
-          * @param request DisableRealtimeLogDeliveryRequest
-          * @return DisableRealtimeLogDeliveryResponse
+         * @summary The ID of the request.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 100.
+         *
+         * @param request DisableRealtimeLogDeliveryRequest
+         * @return DisableRealtimeLogDeliveryResponse
          */
         public DisableRealtimeLogDeliveryResponse DisableRealtimeLogDelivery(DisableRealtimeLogDeliveryRequest request)
         {
@@ -15682,10 +17078,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 100.
-          *
-          * @param request DisableRealtimeLogDeliveryRequest
-          * @return DisableRealtimeLogDeliveryResponse
+         * @summary The ID of the request.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 100.
+         *
+         * @param request DisableRealtimeLogDeliveryRequest
+         * @return DisableRealtimeLogDeliveryResponse
          */
         public async Task<DisableRealtimeLogDeliveryResponse> DisableRealtimeLogDeliveryAsync(DisableRealtimeLogDeliveryRequest request)
         {
@@ -15694,11 +17092,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 100.
-          *
-          * @param request EnableRealtimeLogDeliveryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return EnableRealtimeLogDeliveryResponse
+         * @summary The ID of the request.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 100.
+         *
+         * @param request EnableRealtimeLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableRealtimeLogDeliveryResponse
          */
         public EnableRealtimeLogDeliveryResponse EnableRealtimeLogDeliveryWithOptions(EnableRealtimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15724,11 +17124,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 100.
-          *
-          * @param request EnableRealtimeLogDeliveryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return EnableRealtimeLogDeliveryResponse
+         * @summary The ID of the request.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 100.
+         *
+         * @param request EnableRealtimeLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableRealtimeLogDeliveryResponse
          */
         public async Task<EnableRealtimeLogDeliveryResponse> EnableRealtimeLogDeliveryWithOptionsAsync(EnableRealtimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15754,10 +17156,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 100.
-          *
-          * @param request EnableRealtimeLogDeliveryRequest
-          * @return EnableRealtimeLogDeliveryResponse
+         * @summary The ID of the request.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 100.
+         *
+         * @param request EnableRealtimeLogDeliveryRequest
+         * @return EnableRealtimeLogDeliveryResponse
          */
         public EnableRealtimeLogDeliveryResponse EnableRealtimeLogDelivery(EnableRealtimeLogDeliveryRequest request)
         {
@@ -15766,10 +17170,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  The maximum number of times that each user can call this operation per second is 100.
-          *
-          * @param request EnableRealtimeLogDeliveryRequest
-          * @return EnableRealtimeLogDeliveryResponse
+         * @summary The ID of the request.
+         *
+         * @description >  The maximum number of times that each user can call this operation per second is 100.
+         *
+         * @param request EnableRealtimeLogDeliveryRequest
+         * @return EnableRealtimeLogDeliveryResponse
          */
         public async Task<EnableRealtimeLogDeliveryResponse> EnableRealtimeLogDeliveryAsync(EnableRealtimeLogDeliveryRequest request)
         {
@@ -15778,11 +17184,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListDomainsByLogConfigIdRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListDomainsByLogConfigIdResponse
+         * @summary Queries domain names by log configuration ID.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListDomainsByLogConfigIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListDomainsByLogConfigIdResponse
          */
         public ListDomainsByLogConfigIdResponse ListDomainsByLogConfigIdWithOptions(ListDomainsByLogConfigIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15808,11 +17216,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListDomainsByLogConfigIdRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListDomainsByLogConfigIdResponse
+         * @summary Queries domain names by log configuration ID.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListDomainsByLogConfigIdRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListDomainsByLogConfigIdResponse
          */
         public async Task<ListDomainsByLogConfigIdResponse> ListDomainsByLogConfigIdWithOptionsAsync(ListDomainsByLogConfigIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15838,10 +17248,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListDomainsByLogConfigIdRequest
-          * @return ListDomainsByLogConfigIdResponse
+         * @summary Queries domain names by log configuration ID.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListDomainsByLogConfigIdRequest
+         * @return ListDomainsByLogConfigIdResponse
          */
         public ListDomainsByLogConfigIdResponse ListDomainsByLogConfigId(ListDomainsByLogConfigIdRequest request)
         {
@@ -15850,10 +17262,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListDomainsByLogConfigIdRequest
-          * @return ListDomainsByLogConfigIdResponse
+         * @summary Queries domain names by log configuration ID.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListDomainsByLogConfigIdRequest
+         * @return ListDomainsByLogConfigIdResponse
          */
         public async Task<ListDomainsByLogConfigIdResponse> ListDomainsByLogConfigIdAsync(ListDomainsByLogConfigIdRequest request)
         {
@@ -15862,11 +17276,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListFCTriggerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListFCTriggerResponse
+         * @summary Queries the Function Compute trigger that is set for an Alibaba Cloud CDN event.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListFCTriggerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListFCTriggerResponse
          */
         public ListFCTriggerResponse ListFCTriggerWithOptions(ListFCTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15892,11 +17308,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListFCTriggerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListFCTriggerResponse
+         * @summary Queries the Function Compute trigger that is set for an Alibaba Cloud CDN event.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListFCTriggerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListFCTriggerResponse
          */
         public async Task<ListFCTriggerResponse> ListFCTriggerWithOptionsAsync(ListFCTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15922,10 +17340,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListFCTriggerRequest
-          * @return ListFCTriggerResponse
+         * @summary Queries the Function Compute trigger that is set for an Alibaba Cloud CDN event.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListFCTriggerRequest
+         * @return ListFCTriggerResponse
          */
         public ListFCTriggerResponse ListFCTrigger(ListFCTriggerRequest request)
         {
@@ -15934,10 +17354,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListFCTriggerRequest
-          * @return ListFCTriggerResponse
+         * @summary Queries the Function Compute trigger that is set for an Alibaba Cloud CDN event.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListFCTriggerRequest
+         * @return ListFCTriggerResponse
          */
         public async Task<ListFCTriggerResponse> ListFCTriggerAsync(ListFCTriggerRequest request)
         {
@@ -15946,11 +17368,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListRealtimeLogDeliveryDomainsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListRealtimeLogDeliveryDomainsResponse
+         * @summary Queries all domain names that are associated with a specific real-time log delivery configuration record.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListRealtimeLogDeliveryDomainsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListRealtimeLogDeliveryDomainsResponse
          */
         public ListRealtimeLogDeliveryDomainsResponse ListRealtimeLogDeliveryDomainsWithOptions(ListRealtimeLogDeliveryDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15976,11 +17400,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListRealtimeLogDeliveryDomainsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListRealtimeLogDeliveryDomainsResponse
+         * @summary Queries all domain names that are associated with a specific real-time log delivery configuration record.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListRealtimeLogDeliveryDomainsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListRealtimeLogDeliveryDomainsResponse
          */
         public async Task<ListRealtimeLogDeliveryDomainsResponse> ListRealtimeLogDeliveryDomainsWithOptionsAsync(ListRealtimeLogDeliveryDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16006,10 +17432,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListRealtimeLogDeliveryDomainsRequest
-          * @return ListRealtimeLogDeliveryDomainsResponse
+         * @summary Queries all domain names that are associated with a specific real-time log delivery configuration record.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListRealtimeLogDeliveryDomainsRequest
+         * @return ListRealtimeLogDeliveryDomainsResponse
          */
         public ListRealtimeLogDeliveryDomainsResponse ListRealtimeLogDeliveryDomains(ListRealtimeLogDeliveryDomainsRequest request)
         {
@@ -16018,10 +17446,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListRealtimeLogDeliveryDomainsRequest
-          * @return ListRealtimeLogDeliveryDomainsResponse
+         * @summary Queries all domain names that are associated with a specific real-time log delivery configuration record.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListRealtimeLogDeliveryDomainsRequest
+         * @return ListRealtimeLogDeliveryDomainsResponse
          */
         public async Task<ListRealtimeLogDeliveryDomainsResponse> ListRealtimeLogDeliveryDomainsAsync(ListRealtimeLogDeliveryDomainsRequest request)
         {
@@ -16030,11 +17460,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListRealtimeLogDeliveryInfosRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListRealtimeLogDeliveryInfosResponse
+         * @summary Queries the information about the real-time log delivery feature in a specified region.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListRealtimeLogDeliveryInfosRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListRealtimeLogDeliveryInfosResponse
          */
         public ListRealtimeLogDeliveryInfosResponse ListRealtimeLogDeliveryInfosWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16055,11 +17487,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListRealtimeLogDeliveryInfosRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListRealtimeLogDeliveryInfosResponse
+         * @summary Queries the information about the real-time log delivery feature in a specified region.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListRealtimeLogDeliveryInfosRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListRealtimeLogDeliveryInfosResponse
          */
         public async Task<ListRealtimeLogDeliveryInfosResponse> ListRealtimeLogDeliveryInfosWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16080,9 +17514,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @return ListRealtimeLogDeliveryInfosResponse
+         * @summary Queries the information about the real-time log delivery feature in a specified region.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @return ListRealtimeLogDeliveryInfosResponse
          */
         public ListRealtimeLogDeliveryInfosResponse ListRealtimeLogDeliveryInfos()
         {
@@ -16091,9 +17527,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @return ListRealtimeLogDeliveryInfosResponse
+         * @summary Queries the information about the real-time log delivery feature in a specified region.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @return ListRealtimeLogDeliveryInfosResponse
          */
         public async Task<ListRealtimeLogDeliveryInfosResponse> ListRealtimeLogDeliveryInfosAsync()
         {
@@ -16101,6 +17539,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await ListRealtimeLogDeliveryInfosWithOptionsAsync(runtime);
         }
 
+        /**
+         * @summary Queries the tags that are attached to a resource.
+         *
+         * @param request ListTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16148,6 +17593,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the tags that are attached to a resource.
+         *
+         * @param request ListTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16195,12 +17647,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the tags that are attached to a resource.
+         *
+         * @param request ListTagResourcesRequest
+         * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the tags that are attached to a resource.
+         *
+         * @param request ListTagResourcesRequest
+         * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16208,11 +17672,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListUserCustomLogConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListUserCustomLogConfigResponse
+         * @summary Queries all custom log configurations in your account.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListUserCustomLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUserCustomLogConfigResponse
          */
         public ListUserCustomLogConfigResponse ListUserCustomLogConfigWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16233,11 +17699,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ListUserCustomLogConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListUserCustomLogConfigResponse
+         * @summary Queries all custom log configurations in your account.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ListUserCustomLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUserCustomLogConfigResponse
          */
         public async Task<ListUserCustomLogConfigResponse> ListUserCustomLogConfigWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16258,9 +17726,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @return ListUserCustomLogConfigResponse
+         * @summary Queries all custom log configurations in your account.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @return ListUserCustomLogConfigResponse
          */
         public ListUserCustomLogConfigResponse ListUserCustomLogConfig()
         {
@@ -16269,9 +17739,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @return ListUserCustomLogConfigResponse
+         * @summary Queries all custom log configurations in your account.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @return ListUserCustomLogConfigResponse
          */
         public async Task<ListUserCustomLogConfigResponse> ListUserCustomLogConfigAsync()
         {
@@ -16280,11 +17752,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request ModifyCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyCdnDomainResponse
+         * @summary Modifies the configuration of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request ModifyCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCdnDomainResponse
          */
         public ModifyCdnDomainResponse ModifyCdnDomainWithOptions(ModifyCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16334,11 +17808,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request ModifyCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyCdnDomainResponse
+         * @summary Modifies the configuration of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request ModifyCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCdnDomainResponse
          */
         public async Task<ModifyCdnDomainResponse> ModifyCdnDomainWithOptionsAsync(ModifyCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16388,10 +17864,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request ModifyCdnDomainRequest
-          * @return ModifyCdnDomainResponse
+         * @summary Modifies the configuration of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request ModifyCdnDomainRequest
+         * @return ModifyCdnDomainResponse
          */
         public ModifyCdnDomainResponse ModifyCdnDomain(ModifyCdnDomainRequest request)
         {
@@ -16400,10 +17878,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request ModifyCdnDomainRequest
-          * @return ModifyCdnDomainResponse
+         * @summary Modifies the configuration of an accelerated domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request ModifyCdnDomainRequest
+         * @return ModifyCdnDomainResponse
          */
         public async Task<ModifyCdnDomainResponse> ModifyCdnDomainAsync(ModifyCdnDomainRequest request)
         {
@@ -16412,13 +17892,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * This operation is used in the following scenario:
-          * *   You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.
-          * *   You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.
-          *
-          * @param request ModifyCdnDomainOwnerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyCdnDomainOwnerResponse
+         * @summary Transfer domain names from an Alibaba Cloud account to the current account.
+         *
+         * @description This operation is used in the following scenario:
+         * *   You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.
+         * *   You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.
+         *
+         * @param request ModifyCdnDomainOwnerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCdnDomainOwnerResponse
          */
         public ModifyCdnDomainOwnerResponse ModifyCdnDomainOwnerWithOptions(ModifyCdnDomainOwnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16460,13 +17942,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * This operation is used in the following scenario:
-          * *   You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.
-          * *   You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.
-          *
-          * @param request ModifyCdnDomainOwnerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyCdnDomainOwnerResponse
+         * @summary Transfer domain names from an Alibaba Cloud account to the current account.
+         *
+         * @description This operation is used in the following scenario:
+         * *   You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.
+         * *   You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.
+         *
+         * @param request ModifyCdnDomainOwnerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCdnDomainOwnerResponse
          */
         public async Task<ModifyCdnDomainOwnerResponse> ModifyCdnDomainOwnerWithOptionsAsync(ModifyCdnDomainOwnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16508,12 +17992,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * This operation is used in the following scenario:
-          * *   You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.
-          * *   You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.
-          *
-          * @param request ModifyCdnDomainOwnerRequest
-          * @return ModifyCdnDomainOwnerResponse
+         * @summary Transfer domain names from an Alibaba Cloud account to the current account.
+         *
+         * @description This operation is used in the following scenario:
+         * *   You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.
+         * *   You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.
+         *
+         * @param request ModifyCdnDomainOwnerRequest
+         * @return ModifyCdnDomainOwnerResponse
          */
         public ModifyCdnDomainOwnerResponse ModifyCdnDomainOwner(ModifyCdnDomainOwnerRequest request)
         {
@@ -16522,12 +18008,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * This operation is used in the following scenario:
-          * *   You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.
-          * *   You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.
-          *
-          * @param request ModifyCdnDomainOwnerRequest
-          * @return ModifyCdnDomainOwnerResponse
+         * @summary Transfer domain names from an Alibaba Cloud account to the current account.
+         *
+         * @description This operation is used in the following scenario:
+         * *   You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.
+         * *   You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.
+         *
+         * @param request ModifyCdnDomainOwnerRequest
+         * @return ModifyCdnDomainOwnerResponse
          */
         public async Task<ModifyCdnDomainOwnerResponse> ModifyCdnDomainOwnerAsync(ModifyCdnDomainOwnerRequest request)
         {
@@ -16536,11 +18024,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ModifyCdnDomainSchdmByPropertyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyCdnDomainSchdmByPropertyResponse
+         * @summary Changes the acceleration region for an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ModifyCdnDomainSchdmByPropertyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCdnDomainSchdmByPropertyResponse
          */
         public ModifyCdnDomainSchdmByPropertyResponse ModifyCdnDomainSchdmByPropertyWithOptions(ModifyCdnDomainSchdmByPropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16574,11 +18064,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ModifyCdnDomainSchdmByPropertyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyCdnDomainSchdmByPropertyResponse
+         * @summary Changes the acceleration region for an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ModifyCdnDomainSchdmByPropertyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCdnDomainSchdmByPropertyResponse
          */
         public async Task<ModifyCdnDomainSchdmByPropertyResponse> ModifyCdnDomainSchdmByPropertyWithOptionsAsync(ModifyCdnDomainSchdmByPropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16612,10 +18104,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ModifyCdnDomainSchdmByPropertyRequest
-          * @return ModifyCdnDomainSchdmByPropertyResponse
+         * @summary Changes the acceleration region for an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ModifyCdnDomainSchdmByPropertyRequest
+         * @return ModifyCdnDomainSchdmByPropertyResponse
          */
         public ModifyCdnDomainSchdmByPropertyResponse ModifyCdnDomainSchdmByProperty(ModifyCdnDomainSchdmByPropertyRequest request)
         {
@@ -16624,10 +18118,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ModifyCdnDomainSchdmByPropertyRequest
-          * @return ModifyCdnDomainSchdmByPropertyResponse
+         * @summary Changes the acceleration region for an accelerated domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ModifyCdnDomainSchdmByPropertyRequest
+         * @return ModifyCdnDomainSchdmByPropertyResponse
          */
         public async Task<ModifyCdnDomainSchdmByPropertyResponse> ModifyCdnDomainSchdmByPropertyAsync(ModifyCdnDomainSchdmByPropertyRequest request)
         {
@@ -16636,11 +18132,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ModifyRealtimeLogDeliveryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyRealtimeLogDeliveryResponse
+         * @summary Modifies the configurations of real-time log delivery for a specific domain name. Each domain name supports only one Logstore.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ModifyRealtimeLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyRealtimeLogDeliveryResponse
          */
         public ModifyRealtimeLogDeliveryResponse ModifyRealtimeLogDeliveryWithOptions(ModifyRealtimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16666,11 +18164,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ModifyRealtimeLogDeliveryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyRealtimeLogDeliveryResponse
+         * @summary Modifies the configurations of real-time log delivery for a specific domain name. Each domain name supports only one Logstore.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ModifyRealtimeLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyRealtimeLogDeliveryResponse
          */
         public async Task<ModifyRealtimeLogDeliveryResponse> ModifyRealtimeLogDeliveryWithOptionsAsync(ModifyRealtimeLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16696,10 +18196,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ModifyRealtimeLogDeliveryRequest
-          * @return ModifyRealtimeLogDeliveryResponse
+         * @summary Modifies the configurations of real-time log delivery for a specific domain name. Each domain name supports only one Logstore.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ModifyRealtimeLogDeliveryRequest
+         * @return ModifyRealtimeLogDeliveryResponse
          */
         public ModifyRealtimeLogDeliveryResponse ModifyRealtimeLogDelivery(ModifyRealtimeLogDeliveryRequest request)
         {
@@ -16708,10 +18210,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request ModifyRealtimeLogDeliveryRequest
-          * @return ModifyRealtimeLogDeliveryResponse
+         * @summary Modifies the configurations of real-time log delivery for a specific domain name. Each domain name supports only one Logstore.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request ModifyRealtimeLogDeliveryRequest
+         * @return ModifyRealtimeLogDeliveryResponse
          */
         public async Task<ModifyRealtimeLogDeliveryResponse> ModifyRealtimeLogDeliveryAsync(ModifyRealtimeLogDeliveryRequest request)
         {
@@ -16720,12 +18224,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   Alibaba Cloud CDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must complete real-name verification to activate Alibaba Cloud CDN.
-          * *   You can call this operation up to five times per second per user.
-          *
-          * @param request OpenCdnServiceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return OpenCdnServiceResponse
+         * @summary Activates Alibaba Cloud CDN. You must activate Alibaba Cloud CDN before you can manage domain names in Alibaba Cloud CDN.
+         *
+         * @description *   Alibaba Cloud CDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must complete real-name verification to activate Alibaba Cloud CDN.
+         * *   You can call this operation up to five times per second per user.
+         *
+         * @param request OpenCdnServiceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return OpenCdnServiceResponse
          */
         public OpenCdnServiceResponse OpenCdnServiceWithOptions(OpenCdnServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16763,12 +18269,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   Alibaba Cloud CDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must complete real-name verification to activate Alibaba Cloud CDN.
-          * *   You can call this operation up to five times per second per user.
-          *
-          * @param request OpenCdnServiceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return OpenCdnServiceResponse
+         * @summary Activates Alibaba Cloud CDN. You must activate Alibaba Cloud CDN before you can manage domain names in Alibaba Cloud CDN.
+         *
+         * @description *   Alibaba Cloud CDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must complete real-name verification to activate Alibaba Cloud CDN.
+         * *   You can call this operation up to five times per second per user.
+         *
+         * @param request OpenCdnServiceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return OpenCdnServiceResponse
          */
         public async Task<OpenCdnServiceResponse> OpenCdnServiceWithOptionsAsync(OpenCdnServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16806,11 +18314,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   Alibaba Cloud CDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must complete real-name verification to activate Alibaba Cloud CDN.
-          * *   You can call this operation up to five times per second per user.
-          *
-          * @param request OpenCdnServiceRequest
-          * @return OpenCdnServiceResponse
+         * @summary Activates Alibaba Cloud CDN. You must activate Alibaba Cloud CDN before you can manage domain names in Alibaba Cloud CDN.
+         *
+         * @description *   Alibaba Cloud CDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must complete real-name verification to activate Alibaba Cloud CDN.
+         * *   You can call this operation up to five times per second per user.
+         *
+         * @param request OpenCdnServiceRequest
+         * @return OpenCdnServiceResponse
          */
         public OpenCdnServiceResponse OpenCdnService(OpenCdnServiceRequest request)
         {
@@ -16819,11 +18329,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   Alibaba Cloud CDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must complete real-name verification to activate Alibaba Cloud CDN.
-          * *   You can call this operation up to five times per second per user.
-          *
-          * @param request OpenCdnServiceRequest
-          * @return OpenCdnServiceResponse
+         * @summary Activates Alibaba Cloud CDN. You must activate Alibaba Cloud CDN before you can manage domain names in Alibaba Cloud CDN.
+         *
+         * @description *   Alibaba Cloud CDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must complete real-name verification to activate Alibaba Cloud CDN.
+         * *   You can call this operation up to five times per second per user.
+         *
+         * @param request OpenCdnServiceRequest
+         * @return OpenCdnServiceResponse
          */
         public async Task<OpenCdnServiceResponse> OpenCdnServiceAsync(OpenCdnServiceRequest request)
         {
@@ -16832,11 +18344,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request PublishStagingConfigToProductionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PublishStagingConfigToProductionResponse
+         * @summary Publishes the configurations of the staging environment to the production environment.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request PublishStagingConfigToProductionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PublishStagingConfigToProductionResponse
          */
         public PublishStagingConfigToProductionResponse PublishStagingConfigToProductionWithOptions(PublishStagingConfigToProductionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16866,11 +18380,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request PublishStagingConfigToProductionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PublishStagingConfigToProductionResponse
+         * @summary Publishes the configurations of the staging environment to the production environment.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request PublishStagingConfigToProductionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PublishStagingConfigToProductionResponse
          */
         public async Task<PublishStagingConfigToProductionResponse> PublishStagingConfigToProductionWithOptionsAsync(PublishStagingConfigToProductionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16900,10 +18416,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request PublishStagingConfigToProductionRequest
-          * @return PublishStagingConfigToProductionResponse
+         * @summary Publishes the configurations of the staging environment to the production environment.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request PublishStagingConfigToProductionRequest
+         * @return PublishStagingConfigToProductionResponse
          */
         public PublishStagingConfigToProductionResponse PublishStagingConfigToProduction(PublishStagingConfigToProductionRequest request)
         {
@@ -16912,10 +18430,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request PublishStagingConfigToProductionRequest
-          * @return PublishStagingConfigToProductionResponse
+         * @summary Publishes the configurations of the staging environment to the production environment.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request PublishStagingConfigToProductionRequest
+         * @return PublishStagingConfigToProductionResponse
          */
         public async Task<PublishStagingConfigToProductionResponse> PublishStagingConfigToProductionAsync(PublishStagingConfigToProductionRequest request)
         {
@@ -16924,21 +18444,23 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
-          * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
-          * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
-          * *   You can specify at most 100 URLs in each prefetch request.
-          * *   For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.
-          * *   You can call this operation up to 50 times per second per account.
-          * *   For more information about how to automate refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](~~151829~~).
-          * ## Precautions
-          * *   After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-          * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
-          * *   To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
-          *
-          * @param request PushObjectCacheRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PushObjectCacheResponse
+         * @summary Prefetches content from origin servers to points of presence (POPs). This reduces loads on origin servers because users can directly hit cache upon their first visits.
+         *
+         * @description *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
+         * *   You can call the [RefreshObjectCaches](https://help.aliyun.com/document_detail/91164.html) operation to refresh content and call the [PushObjectCache](https://help.aliyun.com/document_detail/91161.html) operation to prefetch content.
+         * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
+         * *   You can specify at most 100 URLs in each prefetch request.
+         * *   For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.
+         * *   You can call this operation up to 50 times per second per account.
+         * *   For more information about how to automate refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](https://help.aliyun.com/document_detail/151829.html).
+         * ## Precautions
+         * *   After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+         * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
+         * *   To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://help.aliyun.com/document_detail/260300.html).
+         *
+         * @param request PushObjectCacheRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PushObjectCacheResponse
          */
         public PushObjectCacheResponse PushObjectCacheWithOptions(PushObjectCacheRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16988,21 +18510,23 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
-          * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
-          * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
-          * *   You can specify at most 100 URLs in each prefetch request.
-          * *   For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.
-          * *   You can call this operation up to 50 times per second per account.
-          * *   For more information about how to automate refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](~~151829~~).
-          * ## Precautions
-          * *   After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-          * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
-          * *   To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
-          *
-          * @param request PushObjectCacheRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PushObjectCacheResponse
+         * @summary Prefetches content from origin servers to points of presence (POPs). This reduces loads on origin servers because users can directly hit cache upon their first visits.
+         *
+         * @description *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
+         * *   You can call the [RefreshObjectCaches](https://help.aliyun.com/document_detail/91164.html) operation to refresh content and call the [PushObjectCache](https://help.aliyun.com/document_detail/91161.html) operation to prefetch content.
+         * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
+         * *   You can specify at most 100 URLs in each prefetch request.
+         * *   For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.
+         * *   You can call this operation up to 50 times per second per account.
+         * *   For more information about how to automate refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](https://help.aliyun.com/document_detail/151829.html).
+         * ## Precautions
+         * *   After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+         * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
+         * *   To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://help.aliyun.com/document_detail/260300.html).
+         *
+         * @param request PushObjectCacheRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return PushObjectCacheResponse
          */
         public async Task<PushObjectCacheResponse> PushObjectCacheWithOptionsAsync(PushObjectCacheRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17052,20 +18576,22 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
-          * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
-          * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
-          * *   You can specify at most 100 URLs in each prefetch request.
-          * *   For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.
-          * *   You can call this operation up to 50 times per second per account.
-          * *   For more information about how to automate refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](~~151829~~).
-          * ## Precautions
-          * *   After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-          * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
-          * *   To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
-          *
-          * @param request PushObjectCacheRequest
-          * @return PushObjectCacheResponse
+         * @summary Prefetches content from origin servers to points of presence (POPs). This reduces loads on origin servers because users can directly hit cache upon their first visits.
+         *
+         * @description *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
+         * *   You can call the [RefreshObjectCaches](https://help.aliyun.com/document_detail/91164.html) operation to refresh content and call the [PushObjectCache](https://help.aliyun.com/document_detail/91161.html) operation to prefetch content.
+         * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
+         * *   You can specify at most 100 URLs in each prefetch request.
+         * *   For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.
+         * *   You can call this operation up to 50 times per second per account.
+         * *   For more information about how to automate refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](https://help.aliyun.com/document_detail/151829.html).
+         * ## Precautions
+         * *   After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+         * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
+         * *   To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://help.aliyun.com/document_detail/260300.html).
+         *
+         * @param request PushObjectCacheRequest
+         * @return PushObjectCacheResponse
          */
         public PushObjectCacheResponse PushObjectCache(PushObjectCacheRequest request)
         {
@@ -17074,20 +18600,22 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
-          * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
-          * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
-          * *   You can specify at most 100 URLs in each prefetch request.
-          * *   For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.
-          * *   You can call this operation up to 50 times per second per account.
-          * *   For more information about how to automate refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](~~151829~~).
-          * ## Precautions
-          * *   After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-          * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
-          * *   To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
-          *
-          * @param request PushObjectCacheRequest
-          * @return PushObjectCacheResponse
+         * @summary Prefetches content from origin servers to points of presence (POPs). This reduces loads on origin servers because users can directly hit cache upon their first visits.
+         *
+         * @description *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
+         * *   You can call the [RefreshObjectCaches](https://help.aliyun.com/document_detail/91164.html) operation to refresh content and call the [PushObjectCache](https://help.aliyun.com/document_detail/91161.html) operation to prefetch content.
+         * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
+         * *   You can specify at most 100 URLs in each prefetch request.
+         * *   For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.
+         * *   You can call this operation up to 50 times per second per account.
+         * *   For more information about how to automate refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](https://help.aliyun.com/document_detail/151829.html).
+         * ## Precautions
+         * *   After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+         * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
+         * *   To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://help.aliyun.com/document_detail/260300.html).
+         *
+         * @param request PushObjectCacheRequest
+         * @return PushObjectCacheResponse
          */
         public async Task<PushObjectCacheResponse> PushObjectCacheAsync(PushObjectCacheRequest request)
         {
@@ -17095,6 +18623,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await PushObjectCacheWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 指定缓存tag刷新节点上的文件内容
+         *
+         * @param request RefreshObjectCacheByCacheTagRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RefreshObjectCacheByCacheTagResponse
+         */
         public RefreshObjectCacheByCacheTagResponse RefreshObjectCacheByCacheTagWithOptions(RefreshObjectCacheByCacheTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17130,6 +18665,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<RefreshObjectCacheByCacheTagResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 指定缓存tag刷新节点上的文件内容
+         *
+         * @param request RefreshObjectCacheByCacheTagRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RefreshObjectCacheByCacheTagResponse
+         */
         public async Task<RefreshObjectCacheByCacheTagResponse> RefreshObjectCacheByCacheTagWithOptionsAsync(RefreshObjectCacheByCacheTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17165,12 +18707,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<RefreshObjectCacheByCacheTagResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 指定缓存tag刷新节点上的文件内容
+         *
+         * @param request RefreshObjectCacheByCacheTagRequest
+         * @return RefreshObjectCacheByCacheTagResponse
+         */
         public RefreshObjectCacheByCacheTagResponse RefreshObjectCacheByCacheTag(RefreshObjectCacheByCacheTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RefreshObjectCacheByCacheTagWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 指定缓存tag刷新节点上的文件内容
+         *
+         * @param request RefreshObjectCacheByCacheTagRequest
+         * @return RefreshObjectCacheByCacheTagResponse
+         */
         public async Task<RefreshObjectCacheByCacheTagResponse> RefreshObjectCacheByCacheTagAsync(RefreshObjectCacheByCacheTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17178,23 +18732,25 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
-          * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
-          * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
-          * *   For more information about how to automatically refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](~~151829~~).
-          * ## Precautions
-          * *   After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-          * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
-          * *   If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
-          * ### Refresh quota
-          * *   By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.
-          * *   By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
-          * *   You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
-          * *   You can refresh up to 1,000 URLs per minute for each domain name.
-          *
-          * @param request RefreshObjectCachesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RefreshObjectCachesResponse
+         * @summary Refreshes files on Alibaba Cloud CDN points of presence (POPs). After files are refreshed, the original file content immediately becomes invalid. If clients request the original file content, Alibaba Cloud CDN forwards the requests to the origin server. Then, Alibaba Cloud CDN caches the latest content to the POPs and returns the content to the clients. Alibaba Cloud CDN allows you to refresh content from multiple URLs at the same time.
+         *
+         * @description *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
+         * *   You can call the [RefreshObjectCaches](https://help.aliyun.com/document_detail/91164.html) operation to refresh content and call the [PushObjectCache](https://help.aliyun.com/document_detail/91161.html) operation to prefetch content.
+         * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
+         * *   For more information about how to automatically refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](https://help.aliyun.com/document_detail/151829.html).
+         * ## Precautions
+         * *   After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+         * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
+         * *   If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://help.aliyun.com/document_detail/260300.html).
+         * ### Refresh quota
+         * *   By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.
+         * *   By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
+         * *   You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
+         * *   You can refresh up to 1,000 URLs per minute for each domain name.
+         *
+         * @param request RefreshObjectCachesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RefreshObjectCachesResponse
          */
         public RefreshObjectCachesResponse RefreshObjectCachesWithOptions(RefreshObjectCachesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17240,23 +18796,25 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
-          * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
-          * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
-          * *   For more information about how to automatically refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](~~151829~~).
-          * ## Precautions
-          * *   After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-          * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
-          * *   If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
-          * ### Refresh quota
-          * *   By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.
-          * *   By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
-          * *   You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
-          * *   You can refresh up to 1,000 URLs per minute for each domain name.
-          *
-          * @param request RefreshObjectCachesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RefreshObjectCachesResponse
+         * @summary Refreshes files on Alibaba Cloud CDN points of presence (POPs). After files are refreshed, the original file content immediately becomes invalid. If clients request the original file content, Alibaba Cloud CDN forwards the requests to the origin server. Then, Alibaba Cloud CDN caches the latest content to the POPs and returns the content to the clients. Alibaba Cloud CDN allows you to refresh content from multiple URLs at the same time.
+         *
+         * @description *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
+         * *   You can call the [RefreshObjectCaches](https://help.aliyun.com/document_detail/91164.html) operation to refresh content and call the [PushObjectCache](https://help.aliyun.com/document_detail/91161.html) operation to prefetch content.
+         * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
+         * *   For more information about how to automatically refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](https://help.aliyun.com/document_detail/151829.html).
+         * ## Precautions
+         * *   After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+         * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
+         * *   If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://help.aliyun.com/document_detail/260300.html).
+         * ### Refresh quota
+         * *   By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.
+         * *   By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
+         * *   You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
+         * *   You can refresh up to 1,000 URLs per minute for each domain name.
+         *
+         * @param request RefreshObjectCachesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RefreshObjectCachesResponse
          */
         public async Task<RefreshObjectCachesResponse> RefreshObjectCachesWithOptionsAsync(RefreshObjectCachesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17302,22 +18860,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
-          * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
-          * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
-          * *   For more information about how to automatically refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](~~151829~~).
-          * ## Precautions
-          * *   After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-          * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
-          * *   If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
-          * ### Refresh quota
-          * *   By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.
-          * *   By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
-          * *   You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
-          * *   You can refresh up to 1,000 URLs per minute for each domain name.
-          *
-          * @param request RefreshObjectCachesRequest
-          * @return RefreshObjectCachesResponse
+         * @summary Refreshes files on Alibaba Cloud CDN points of presence (POPs). After files are refreshed, the original file content immediately becomes invalid. If clients request the original file content, Alibaba Cloud CDN forwards the requests to the origin server. Then, Alibaba Cloud CDN caches the latest content to the POPs and returns the content to the clients. Alibaba Cloud CDN allows you to refresh content from multiple URLs at the same time.
+         *
+         * @description *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
+         * *   You can call the [RefreshObjectCaches](https://help.aliyun.com/document_detail/91164.html) operation to refresh content and call the [PushObjectCache](https://help.aliyun.com/document_detail/91161.html) operation to prefetch content.
+         * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
+         * *   For more information about how to automatically refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](https://help.aliyun.com/document_detail/151829.html).
+         * ## Precautions
+         * *   After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+         * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
+         * *   If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://help.aliyun.com/document_detail/260300.html).
+         * ### Refresh quota
+         * *   By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.
+         * *   By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
+         * *   You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
+         * *   You can refresh up to 1,000 URLs per minute for each domain name.
+         *
+         * @param request RefreshObjectCachesRequest
+         * @return RefreshObjectCachesResponse
          */
         public RefreshObjectCachesResponse RefreshObjectCaches(RefreshObjectCachesRequest request)
         {
@@ -17326,22 +18886,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
-          * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
-          * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
-          * *   For more information about how to automatically refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](~~151829~~).
-          * ## Precautions
-          * *   After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-          * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
-          * *   If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~260300~~).
-          * ### Refresh quota
-          * *   By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.
-          * *   By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
-          * *   You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
-          * *   You can refresh up to 1,000 URLs per minute for each domain name.
-          *
-          * @param request RefreshObjectCachesRequest
-          * @return RefreshObjectCachesResponse
+         * @summary Refreshes files on Alibaba Cloud CDN points of presence (POPs). After files are refreshed, the original file content immediately becomes invalid. If clients request the original file content, Alibaba Cloud CDN forwards the requests to the origin server. Then, Alibaba Cloud CDN caches the latest content to the POPs and returns the content to the clients. Alibaba Cloud CDN allows you to refresh content from multiple URLs at the same time.
+         *
+         * @description *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
+         * *   You can call the [RefreshObjectCaches](https://help.aliyun.com/document_detail/91164.html) operation to refresh content and call the [PushObjectCache](https://help.aliyun.com/document_detail/91161.html) operation to prefetch content.
+         * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
+         * *   For more information about how to automatically refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](https://help.aliyun.com/document_detail/151829.html).
+         * ## Precautions
+         * *   After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+         * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
+         * *   If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://help.aliyun.com/document_detail/260300.html).
+         * ### Refresh quota
+         * *   By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.
+         * *   By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
+         * *   You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
+         * *   You can refresh up to 1,000 URLs per minute for each domain name.
+         *
+         * @param request RefreshObjectCachesRequest
+         * @return RefreshObjectCachesResponse
          */
         public async Task<RefreshObjectCachesResponse> RefreshObjectCachesAsync(RefreshObjectCachesRequest request)
         {
@@ -17350,11 +18912,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request RollbackStagingConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RollbackStagingConfigResponse
+         * @summary Rolls back configurations in the staging environment. After you call this operation, all configurations in the staging environment are cleared.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request RollbackStagingConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RollbackStagingConfigResponse
          */
         public RollbackStagingConfigResponse RollbackStagingConfigWithOptions(RollbackStagingConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17384,11 +18948,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request RollbackStagingConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RollbackStagingConfigResponse
+         * @summary Rolls back configurations in the staging environment. After you call this operation, all configurations in the staging environment are cleared.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request RollbackStagingConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RollbackStagingConfigResponse
          */
         public async Task<RollbackStagingConfigResponse> RollbackStagingConfigWithOptionsAsync(RollbackStagingConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17418,10 +18984,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request RollbackStagingConfigRequest
-          * @return RollbackStagingConfigResponse
+         * @summary Rolls back configurations in the staging environment. After you call this operation, all configurations in the staging environment are cleared.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request RollbackStagingConfigRequest
+         * @return RollbackStagingConfigResponse
          */
         public RollbackStagingConfigResponse RollbackStagingConfig(RollbackStagingConfigRequest request)
         {
@@ -17430,10 +18998,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request RollbackStagingConfigRequest
-          * @return RollbackStagingConfigResponse
+         * @summary Rolls back configurations in the staging environment. After you call this operation, all configurations in the staging environment are cleared.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request RollbackStagingConfigRequest
+         * @return RollbackStagingConfigResponse
          */
         public async Task<RollbackStagingConfigResponse> RollbackStagingConfigAsync(RollbackStagingConfigRequest request)
         {
@@ -17442,11 +19012,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request SetCdnDomainCSRCertificateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetCdnDomainCSRCertificateResponse
+         * @summary You can call this operation to configure an SSL certificate for a specific domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request SetCdnDomainCSRCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetCdnDomainCSRCertificateResponse
          */
         public SetCdnDomainCSRCertificateResponse SetCdnDomainCSRCertificateWithOptions(SetCdnDomainCSRCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17480,11 +19052,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request SetCdnDomainCSRCertificateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetCdnDomainCSRCertificateResponse
+         * @summary You can call this operation to configure an SSL certificate for a specific domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request SetCdnDomainCSRCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetCdnDomainCSRCertificateResponse
          */
         public async Task<SetCdnDomainCSRCertificateResponse> SetCdnDomainCSRCertificateWithOptionsAsync(SetCdnDomainCSRCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17518,10 +19092,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request SetCdnDomainCSRCertificateRequest
-          * @return SetCdnDomainCSRCertificateResponse
+         * @summary You can call this operation to configure an SSL certificate for a specific domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request SetCdnDomainCSRCertificateRequest
+         * @return SetCdnDomainCSRCertificateResponse
          */
         public SetCdnDomainCSRCertificateResponse SetCdnDomainCSRCertificate(SetCdnDomainCSRCertificateRequest request)
         {
@@ -17530,10 +19106,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request SetCdnDomainCSRCertificateRequest
-          * @return SetCdnDomainCSRCertificateResponse
+         * @summary You can call this operation to configure an SSL certificate for a specific domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request SetCdnDomainCSRCertificateRequest
+         * @return SetCdnDomainCSRCertificateResponse
          */
         public async Task<SetCdnDomainCSRCertificateResponse> SetCdnDomainCSRCertificateAsync(SetCdnDomainCSRCertificateRequest request)
         {
@@ -17542,11 +19120,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request SetCdnDomainSMCertificateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetCdnDomainSMCertificateResponse
+         * @summary Enables or disables a ShangMi (SM) certificate for a domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request SetCdnDomainSMCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetCdnDomainSMCertificateResponse
          */
         public SetCdnDomainSMCertificateResponse SetCdnDomainSMCertificateWithOptions(SetCdnDomainSMCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17592,11 +19172,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request SetCdnDomainSMCertificateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetCdnDomainSMCertificateResponse
+         * @summary Enables or disables a ShangMi (SM) certificate for a domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request SetCdnDomainSMCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetCdnDomainSMCertificateResponse
          */
         public async Task<SetCdnDomainSMCertificateResponse> SetCdnDomainSMCertificateWithOptionsAsync(SetCdnDomainSMCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17642,10 +19224,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request SetCdnDomainSMCertificateRequest
-          * @return SetCdnDomainSMCertificateResponse
+         * @summary Enables or disables a ShangMi (SM) certificate for a domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request SetCdnDomainSMCertificateRequest
+         * @return SetCdnDomainSMCertificateResponse
          */
         public SetCdnDomainSMCertificateResponse SetCdnDomainSMCertificate(SetCdnDomainSMCertificateRequest request)
         {
@@ -17654,10 +19238,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request SetCdnDomainSMCertificateRequest
-          * @return SetCdnDomainSMCertificateResponse
+         * @summary Enables or disables a ShangMi (SM) certificate for a domain name.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request SetCdnDomainSMCertificateRequest
+         * @return SetCdnDomainSMCertificateResponse
          */
         public async Task<SetCdnDomainSMCertificateResponse> SetCdnDomainSMCertificateAsync(SetCdnDomainSMCertificateRequest request)
         {
@@ -17666,12 +19252,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          * *   Method: POST.
-          *
-          * @param request SetCdnDomainSSLCertificateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetCdnDomainSSLCertificateResponse
+         * @summary Enables or disables the certificate for a domain name and updates the certificate information.
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         * *   Method: POST.
+         *
+         * @param request SetCdnDomainSSLCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetCdnDomainSSLCertificateResponse
          */
         public SetCdnDomainSSLCertificateResponse SetCdnDomainSSLCertificateWithOptions(SetCdnDomainSSLCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17741,12 +19329,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          * *   Method: POST.
-          *
-          * @param request SetCdnDomainSSLCertificateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetCdnDomainSSLCertificateResponse
+         * @summary Enables or disables the certificate for a domain name and updates the certificate information.
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         * *   Method: POST.
+         *
+         * @param request SetCdnDomainSSLCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetCdnDomainSSLCertificateResponse
          */
         public async Task<SetCdnDomainSSLCertificateResponse> SetCdnDomainSSLCertificateWithOptionsAsync(SetCdnDomainSSLCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17816,11 +19406,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          * *   Method: POST.
-          *
-          * @param request SetCdnDomainSSLCertificateRequest
-          * @return SetCdnDomainSSLCertificateResponse
+         * @summary Enables or disables the certificate for a domain name and updates the certificate information.
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         * *   Method: POST.
+         *
+         * @param request SetCdnDomainSSLCertificateRequest
+         * @return SetCdnDomainSSLCertificateResponse
          */
         public SetCdnDomainSSLCertificateResponse SetCdnDomainSSLCertificate(SetCdnDomainSSLCertificateRequest request)
         {
@@ -17829,11 +19421,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   You can call this operation up to 30 times per second per account.
-          * *   Method: POST.
-          *
-          * @param request SetCdnDomainSSLCertificateRequest
-          * @return SetCdnDomainSSLCertificateResponse
+         * @summary Enables or disables the certificate for a domain name and updates the certificate information.
+         *
+         * @description *   You can call this operation up to 30 times per second per account.
+         * *   Method: POST.
+         *
+         * @param request SetCdnDomainSSLCertificateRequest
+         * @return SetCdnDomainSSLCertificateResponse
          */
         public async Task<SetCdnDomainSSLCertificateResponse> SetCdnDomainSSLCertificateAsync(SetCdnDomainSSLCertificateRequest request)
         {
@@ -17842,11 +19436,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this operation up to 30 times per second per account.
-          *
-          * @param request SetCdnDomainStagingConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetCdnDomainStagingConfigResponse
+         * @summary Configures a domain name to be accelerated in the staging environment.
+         *
+         * @description >  You can call this operation up to 30 times per second per account.
+         *
+         * @param request SetCdnDomainStagingConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetCdnDomainStagingConfigResponse
          */
         public SetCdnDomainStagingConfigResponse SetCdnDomainStagingConfigWithOptions(SetCdnDomainStagingConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17880,11 +19476,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this operation up to 30 times per second per account.
-          *
-          * @param request SetCdnDomainStagingConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetCdnDomainStagingConfigResponse
+         * @summary Configures a domain name to be accelerated in the staging environment.
+         *
+         * @description >  You can call this operation up to 30 times per second per account.
+         *
+         * @param request SetCdnDomainStagingConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetCdnDomainStagingConfigResponse
          */
         public async Task<SetCdnDomainStagingConfigResponse> SetCdnDomainStagingConfigWithOptionsAsync(SetCdnDomainStagingConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17918,10 +19516,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this operation up to 30 times per second per account.
-          *
-          * @param request SetCdnDomainStagingConfigRequest
-          * @return SetCdnDomainStagingConfigResponse
+         * @summary Configures a domain name to be accelerated in the staging environment.
+         *
+         * @description >  You can call this operation up to 30 times per second per account.
+         *
+         * @param request SetCdnDomainStagingConfigRequest
+         * @return SetCdnDomainStagingConfigResponse
          */
         public SetCdnDomainStagingConfigResponse SetCdnDomainStagingConfig(SetCdnDomainStagingConfigRequest request)
         {
@@ -17930,10 +19530,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * >  You can call this operation up to 30 times per second per account.
-          *
-          * @param request SetCdnDomainStagingConfigRequest
-          * @return SetCdnDomainStagingConfigResponse
+         * @summary Configures a domain name to be accelerated in the staging environment.
+         *
+         * @description >  You can call this operation up to 30 times per second per account.
+         *
+         * @param request SetCdnDomainStagingConfigRequest
+         * @return SetCdnDomainStagingConfigResponse
          */
         public async Task<SetCdnDomainStagingConfigResponse> SetCdnDomainStagingConfigAsync(SetCdnDomainStagingConfigRequest request)
         {
@@ -17942,13 +19544,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * @deprecated : SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.
-          * *   You can call this operation up to 10 times per second per user.
-          * *   Method: POST.
-          *
-          * @param request SetDomainServerCertificateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetDomainServerCertificateResponse
+         * @deprecated OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.
+         *
+         * @summary Configures an SSL certificate for an accelerated domain name.
+         *
+         * @description *   You can call this operation up to 10 times per second per user.
+         * *   Method: POST.
+         *
+         * @param request SetDomainServerCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDomainServerCertificateResponse
          */
         // Deprecated
         public SetDomainServerCertificateResponse SetDomainServerCertificateWithOptions(SetDomainServerCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -18011,13 +19616,16 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * @deprecated : SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.
-          * *   You can call this operation up to 10 times per second per user.
-          * *   Method: POST.
-          *
-          * @param request SetDomainServerCertificateRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetDomainServerCertificateResponse
+         * @deprecated OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.
+         *
+         * @summary Configures an SSL certificate for an accelerated domain name.
+         *
+         * @description *   You can call this operation up to 10 times per second per user.
+         * *   Method: POST.
+         *
+         * @param request SetDomainServerCertificateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetDomainServerCertificateResponse
          */
         // Deprecated
         public async Task<SetDomainServerCertificateResponse> SetDomainServerCertificateWithOptionsAsync(SetDomainServerCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -18080,12 +19688,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * @deprecated : SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.
-          * *   You can call this operation up to 10 times per second per user.
-          * *   Method: POST.
-          *
-          * @param request SetDomainServerCertificateRequest
-          * @return SetDomainServerCertificateResponse
+         * @deprecated OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.
+         *
+         * @summary Configures an SSL certificate for an accelerated domain name.
+         *
+         * @description *   You can call this operation up to 10 times per second per user.
+         * *   Method: POST.
+         *
+         * @param request SetDomainServerCertificateRequest
+         * @return SetDomainServerCertificateResponse
          */
         // Deprecated
         public SetDomainServerCertificateResponse SetDomainServerCertificate(SetDomainServerCertificateRequest request)
@@ -18095,12 +19706,15 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * @deprecated : SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.
-          * *   You can call this operation up to 10 times per second per user.
-          * *   Method: POST.
-          *
-          * @param request SetDomainServerCertificateRequest
-          * @return SetDomainServerCertificateResponse
+         * @deprecated OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.
+         *
+         * @summary Configures an SSL certificate for an accelerated domain name.
+         *
+         * @description *   You can call this operation up to 10 times per second per user.
+         * *   Method: POST.
+         *
+         * @param request SetDomainServerCertificateRequest
+         * @return SetDomainServerCertificateResponse
          */
         // Deprecated
         public async Task<SetDomainServerCertificateResponse> SetDomainServerCertificateAsync(SetDomainServerCertificateRequest request)
@@ -18109,6 +19723,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await SetDomainServerCertificateWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Sets a custom origin header.
+         *
+         * @param request SetReqHeaderConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetReqHeaderConfigResponse
+         */
         public SetReqHeaderConfigResponse SetReqHeaderConfigWithOptions(SetReqHeaderConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18156,6 +19777,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<SetReqHeaderConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Sets a custom origin header.
+         *
+         * @param request SetReqHeaderConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetReqHeaderConfigResponse
+         */
         public async Task<SetReqHeaderConfigResponse> SetReqHeaderConfigWithOptionsAsync(SetReqHeaderConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18203,12 +19831,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<SetReqHeaderConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Sets a custom origin header.
+         *
+         * @param request SetReqHeaderConfigRequest
+         * @return SetReqHeaderConfigResponse
+         */
         public SetReqHeaderConfigResponse SetReqHeaderConfig(SetReqHeaderConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetReqHeaderConfigWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Sets a custom origin header.
+         *
+         * @param request SetReqHeaderConfigRequest
+         * @return SetReqHeaderConfigResponse
+         */
         public async Task<SetReqHeaderConfigResponse> SetReqHeaderConfigAsync(SetReqHeaderConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18216,11 +19856,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request SetWaitingRoomConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetWaitingRoomConfigResponse
+         * @summary Configures the virtual waiting room feature for an accelerated domain name. This operation is available only for accelerated domain names of the Dynamic CDN workload type.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request SetWaitingRoomConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetWaitingRoomConfigResponse
          */
         public SetWaitingRoomConfigResponse SetWaitingRoomConfigWithOptions(SetWaitingRoomConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18270,11 +19912,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request SetWaitingRoomConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetWaitingRoomConfigResponse
+         * @summary Configures the virtual waiting room feature for an accelerated domain name. This operation is available only for accelerated domain names of the Dynamic CDN workload type.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request SetWaitingRoomConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SetWaitingRoomConfigResponse
          */
         public async Task<SetWaitingRoomConfigResponse> SetWaitingRoomConfigWithOptionsAsync(SetWaitingRoomConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18324,10 +19968,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request SetWaitingRoomConfigRequest
-          * @return SetWaitingRoomConfigResponse
+         * @summary Configures the virtual waiting room feature for an accelerated domain name. This operation is available only for accelerated domain names of the Dynamic CDN workload type.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request SetWaitingRoomConfigRequest
+         * @return SetWaitingRoomConfigResponse
          */
         public SetWaitingRoomConfigResponse SetWaitingRoomConfig(SetWaitingRoomConfigRequest request)
         {
@@ -18336,10 +19982,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 30 times per second per account.
-          *
-          * @param request SetWaitingRoomConfigRequest
-          * @return SetWaitingRoomConfigResponse
+         * @summary Configures the virtual waiting room feature for an accelerated domain name. This operation is available only for accelerated domain names of the Dynamic CDN workload type.
+         *
+         * @description > You can call this operation up to 30 times per second per account.
+         *
+         * @param request SetWaitingRoomConfigRequest
+         * @return SetWaitingRoomConfigResponse
          */
         public async Task<SetWaitingRoomConfigResponse> SetWaitingRoomConfigAsync(SetWaitingRoomConfigRequest request)
         {
@@ -18348,12 +19996,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If the domain name is in an invalid state or you have an overdue payment in your account, the domain name cannot be enabled.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request StartCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartCdnDomainResponse
+         * @summary Enables a disabled domain name. After the domain name is enabled, the value of the DomainStatus parameter is changed to Online.
+         *
+         * @description *   If the domain name is in an invalid state or you have an overdue payment in your account, the domain name cannot be enabled.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request StartCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartCdnDomainResponse
          */
         public StartCdnDomainResponse StartCdnDomainWithOptions(StartCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18391,12 +20041,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If the domain name is in an invalid state or you have an overdue payment in your account, the domain name cannot be enabled.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request StartCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StartCdnDomainResponse
+         * @summary Enables a disabled domain name. After the domain name is enabled, the value of the DomainStatus parameter is changed to Online.
+         *
+         * @description *   If the domain name is in an invalid state or you have an overdue payment in your account, the domain name cannot be enabled.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request StartCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartCdnDomainResponse
          */
         public async Task<StartCdnDomainResponse> StartCdnDomainWithOptionsAsync(StartCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18434,11 +20086,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If the domain name is in an invalid state or you have an overdue payment in your account, the domain name cannot be enabled.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request StartCdnDomainRequest
-          * @return StartCdnDomainResponse
+         * @summary Enables a disabled domain name. After the domain name is enabled, the value of the DomainStatus parameter is changed to Online.
+         *
+         * @description *   If the domain name is in an invalid state or you have an overdue payment in your account, the domain name cannot be enabled.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request StartCdnDomainRequest
+         * @return StartCdnDomainResponse
          */
         public StartCdnDomainResponse StartCdnDomain(StartCdnDomainRequest request)
         {
@@ -18447,11 +20101,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   If the domain name is in an invalid state or you have an overdue payment in your account, the domain name cannot be enabled.
-          * *   You can call this operation up to 100 times per second per account.
-          *
-          * @param request StartCdnDomainRequest
-          * @return StartCdnDomainResponse
+         * @summary Enables a disabled domain name. After the domain name is enabled, the value of the DomainStatus parameter is changed to Online.
+         *
+         * @description *   If the domain name is in an invalid state or you have an overdue payment in your account, the domain name cannot be enabled.
+         * *   You can call this operation up to 100 times per second per account.
+         *
+         * @param request StartCdnDomainRequest
+         * @return StartCdnDomainResponse
          */
         public async Task<StartCdnDomainResponse> StartCdnDomainAsync(StartCdnDomainRequest request)
         {
@@ -18460,12 +20116,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   After an accelerated domain is disabled, Alibaba Cloud CDN retains its information and routes all the requests that are destined for the accelerated domain to the origin server.
-          * *   You can call this operation up to 40 times per second per account.
-          *
-          * @param request StopCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopCdnDomainResponse
+         * @summary Disables an accelerated domain name. After the domain name is disabled, the value of the DomainStatus parameter is changed to Offline.
+         *
+         * @description *   After an accelerated domain is disabled, Alibaba Cloud CDN retains its information and routes all the requests that are destined for the accelerated domain to the origin server.
+         * *   You can call this operation up to 40 times per second per account.
+         *
+         * @param request StopCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopCdnDomainResponse
          */
         public StopCdnDomainResponse StopCdnDomainWithOptions(StopCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18503,12 +20161,14 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   After an accelerated domain is disabled, Alibaba Cloud CDN retains its information and routes all the requests that are destined for the accelerated domain to the origin server.
-          * *   You can call this operation up to 40 times per second per account.
-          *
-          * @param request StopCdnDomainRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopCdnDomainResponse
+         * @summary Disables an accelerated domain name. After the domain name is disabled, the value of the DomainStatus parameter is changed to Offline.
+         *
+         * @description *   After an accelerated domain is disabled, Alibaba Cloud CDN retains its information and routes all the requests that are destined for the accelerated domain to the origin server.
+         * *   You can call this operation up to 40 times per second per account.
+         *
+         * @param request StopCdnDomainRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopCdnDomainResponse
          */
         public async Task<StopCdnDomainResponse> StopCdnDomainWithOptionsAsync(StopCdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18546,11 +20206,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   After an accelerated domain is disabled, Alibaba Cloud CDN retains its information and routes all the requests that are destined for the accelerated domain to the origin server.
-          * *   You can call this operation up to 40 times per second per account.
-          *
-          * @param request StopCdnDomainRequest
-          * @return StopCdnDomainResponse
+         * @summary Disables an accelerated domain name. After the domain name is disabled, the value of the DomainStatus parameter is changed to Offline.
+         *
+         * @description *   After an accelerated domain is disabled, Alibaba Cloud CDN retains its information and routes all the requests that are destined for the accelerated domain to the origin server.
+         * *   You can call this operation up to 40 times per second per account.
+         *
+         * @param request StopCdnDomainRequest
+         * @return StopCdnDomainResponse
          */
         public StopCdnDomainResponse StopCdnDomain(StopCdnDomainRequest request)
         {
@@ -18559,11 +20221,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * *   After an accelerated domain is disabled, Alibaba Cloud CDN retains its information and routes all the requests that are destined for the accelerated domain to the origin server.
-          * *   You can call this operation up to 40 times per second per account.
-          *
-          * @param request StopCdnDomainRequest
-          * @return StopCdnDomainResponse
+         * @summary Disables an accelerated domain name. After the domain name is disabled, the value of the DomainStatus parameter is changed to Offline.
+         *
+         * @description *   After an accelerated domain is disabled, Alibaba Cloud CDN retains its information and routes all the requests that are destined for the accelerated domain to the origin server.
+         * *   You can call this operation up to 40 times per second per account.
+         *
+         * @param request StopCdnDomainRequest
+         * @return StopCdnDomainResponse
          */
         public async Task<StopCdnDomainResponse> StopCdnDomainAsync(StopCdnDomainRequest request)
         {
@@ -18572,11 +20236,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request TagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TagResourcesResponse
+         * @summary Adds one or more tags to specific resources.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request TagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TagResourcesResponse
          */
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18614,11 +20280,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request TagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TagResourcesResponse
+         * @summary Adds one or more tags to specific resources.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request TagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TagResourcesResponse
          */
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18656,10 +20324,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request TagResourcesRequest
-          * @return TagResourcesResponse
+         * @summary Adds one or more tags to specific resources.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request TagResourcesRequest
+         * @return TagResourcesResponse
          */
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
@@ -18668,10 +20338,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request TagResourcesRequest
-          * @return TagResourcesResponse
+         * @summary Adds one or more tags to specific resources.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request TagResourcesRequest
+         * @return TagResourcesResponse
          */
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
@@ -18680,11 +20352,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request UntagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UntagResourcesResponse
+         * @summary Removes tags from specified resources.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request UntagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UntagResourcesResponse
          */
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18726,11 +20400,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request UntagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UntagResourcesResponse
+         * @summary Removes tags from specified resources.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request UntagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UntagResourcesResponse
          */
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18772,10 +20448,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request UntagResourcesRequest
-          * @return UntagResourcesResponse
+         * @summary Removes tags from specified resources.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request UntagResourcesRequest
+         * @return UntagResourcesResponse
          */
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
@@ -18784,10 +20462,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request UntagResourcesRequest
-          * @return UntagResourcesResponse
+         * @summary Removes tags from specified resources.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request UntagResourcesRequest
+         * @return UntagResourcesResponse
          */
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
@@ -18796,11 +20476,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request UpdateCdnDeliverTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateCdnDeliverTaskResponse
+         * @summary Updates a tracking task.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request UpdateCdnDeliverTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateCdnDeliverTaskResponse
          */
         public UpdateCdnDeliverTaskResponse UpdateCdnDeliverTaskWithOptions(UpdateCdnDeliverTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18850,11 +20532,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request UpdateCdnDeliverTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateCdnDeliverTaskResponse
+         * @summary Updates a tracking task.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request UpdateCdnDeliverTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateCdnDeliverTaskResponse
          */
         public async Task<UpdateCdnDeliverTaskResponse> UpdateCdnDeliverTaskWithOptionsAsync(UpdateCdnDeliverTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18904,10 +20588,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request UpdateCdnDeliverTaskRequest
-          * @return UpdateCdnDeliverTaskResponse
+         * @summary Updates a tracking task.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request UpdateCdnDeliverTaskRequest
+         * @return UpdateCdnDeliverTaskResponse
          */
         public UpdateCdnDeliverTaskResponse UpdateCdnDeliverTask(UpdateCdnDeliverTaskRequest request)
         {
@@ -18916,10 +20602,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request UpdateCdnDeliverTaskRequest
-          * @return UpdateCdnDeliverTaskResponse
+         * @summary Updates a tracking task.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request UpdateCdnDeliverTaskRequest
+         * @return UpdateCdnDeliverTaskResponse
          */
         public async Task<UpdateCdnDeliverTaskResponse> UpdateCdnDeliverTaskAsync(UpdateCdnDeliverTaskRequest request)
         {
@@ -18928,11 +20616,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request UpdateCdnSubTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateCdnSubTaskResponse
+         * @summary Updates one or more operations reports.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request UpdateCdnSubTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateCdnSubTaskResponse
          */
         public UpdateCdnSubTaskResponse UpdateCdnSubTaskWithOptions(UpdateCdnSubTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -18974,11 +20664,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request UpdateCdnSubTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateCdnSubTaskResponse
+         * @summary Updates one or more operations reports.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request UpdateCdnSubTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateCdnSubTaskResponse
          */
         public async Task<UpdateCdnSubTaskResponse> UpdateCdnSubTaskWithOptionsAsync(UpdateCdnSubTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19020,10 +20712,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request UpdateCdnSubTaskRequest
-          * @return UpdateCdnSubTaskResponse
+         * @summary Updates one or more operations reports.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request UpdateCdnSubTaskRequest
+         * @return UpdateCdnSubTaskResponse
          */
         public UpdateCdnSubTaskResponse UpdateCdnSubTask(UpdateCdnSubTaskRequest request)
         {
@@ -19032,10 +20726,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to three times per second per account.
-          *
-          * @param request UpdateCdnSubTaskRequest
-          * @return UpdateCdnSubTaskResponse
+         * @summary Updates one or more operations reports.
+         *
+         * @description > You can call this operation up to three times per second per account.
+         *
+         * @param request UpdateCdnSubTaskRequest
+         * @return UpdateCdnSubTaskResponse
          */
         public async Task<UpdateCdnSubTaskResponse> UpdateCdnSubTaskAsync(UpdateCdnSubTaskRequest request)
         {
@@ -19043,6 +20739,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await UpdateCdnSubTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Updates a specified Function Compute trigger.
+         *
+         * @param request UpdateFCTriggerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateFCTriggerResponse
+         */
         public UpdateFCTriggerResponse UpdateFCTriggerWithOptions(UpdateFCTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19088,6 +20791,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<UpdateFCTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates a specified Function Compute trigger.
+         *
+         * @param request UpdateFCTriggerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateFCTriggerResponse
+         */
         public async Task<UpdateFCTriggerResponse> UpdateFCTriggerWithOptionsAsync(UpdateFCTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19133,12 +20843,24 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<UpdateFCTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates a specified Function Compute trigger.
+         *
+         * @param request UpdateFCTriggerRequest
+         * @return UpdateFCTriggerResponse
+         */
         public UpdateFCTriggerResponse UpdateFCTrigger(UpdateFCTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateFCTriggerWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Updates a specified Function Compute trigger.
+         *
+         * @param request UpdateFCTriggerRequest
+         * @return UpdateFCTriggerResponse
+         */
         public async Task<UpdateFCTriggerResponse> UpdateFCTriggerAsync(UpdateFCTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19146,11 +20868,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request VerifyDomainOwnerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return VerifyDomainOwnerResponse
+         * @summary Verifies the ownership of a specified domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request VerifyDomainOwnerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VerifyDomainOwnerResponse
          */
         public VerifyDomainOwnerResponse VerifyDomainOwnerWithOptions(VerifyDomainOwnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19184,11 +20908,13 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request VerifyDomainOwnerRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return VerifyDomainOwnerResponse
+         * @summary Verifies the ownership of a specified domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request VerifyDomainOwnerRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return VerifyDomainOwnerResponse
          */
         public async Task<VerifyDomainOwnerResponse> VerifyDomainOwnerWithOptionsAsync(VerifyDomainOwnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19222,10 +20948,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request VerifyDomainOwnerRequest
-          * @return VerifyDomainOwnerResponse
+         * @summary Verifies the ownership of a specified domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request VerifyDomainOwnerRequest
+         * @return VerifyDomainOwnerResponse
          */
         public VerifyDomainOwnerResponse VerifyDomainOwner(VerifyDomainOwnerRequest request)
         {
@@ -19234,10 +20962,12 @@ namespace AlibabaCloud.SDK.Cdn20180510
         }
 
         /**
-          * > You can call this operation up to 100 times per second per account.
-          *
-          * @param request VerifyDomainOwnerRequest
-          * @return VerifyDomainOwnerResponse
+         * @summary Verifies the ownership of a specified domain name.
+         *
+         * @description > You can call this operation up to 100 times per second per account.
+         *
+         * @param request VerifyDomainOwnerRequest
+         * @return VerifyDomainOwnerResponse
          */
         public async Task<VerifyDomainOwnerResponse> VerifyDomainOwnerAsync(VerifyDomainOwnerRequest request)
         {

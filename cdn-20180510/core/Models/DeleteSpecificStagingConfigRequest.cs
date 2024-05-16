@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DeleteSpecificStagingConfigRequest : TeaModel {
         /// <summary>
-        /// The configuration IDs. Separate configuration IDs with commas (,). For more information about ConfigId, see [Usage notes on ConfigId](~~388994~~).
+        /// The configuration IDs. Separate configuration IDs with commas (,). For more information about ConfigId, see [Usage notes on ConfigId](https://help.aliyun.com/document_detail/388994.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The accelerated domain name. You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

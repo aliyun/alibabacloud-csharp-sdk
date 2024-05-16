@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class ModifyCdnDomainSchdmByPropertyRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name for which you want to change the acceleration region. You can specify only one domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// *   **domestic**: Chinese mainland
         /// *   **overseas**: global (excluding the Chinese mainland)
         /// *   **global**: global
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Property")]
         [Validation(Required=false)]

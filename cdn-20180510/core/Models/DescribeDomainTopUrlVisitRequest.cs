@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class DescribeDomainTopUrlVisitRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

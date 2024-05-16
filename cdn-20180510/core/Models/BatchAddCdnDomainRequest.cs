@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// *   **web**: images and small files
         /// *   **download**: large files
         /// *   **video**: on-demand video and audio streaming
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CdnType")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The domain names that you want to add to Alibaba Cloud CDN. Separate domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The information about the addresses of origin servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]

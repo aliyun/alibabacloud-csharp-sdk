@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class AddFCTriggerRequest : TeaModel {
         /// <summary>
         /// The name of the event.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventMetaName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The version of the event.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventMetaVersion")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The remarks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Notes")]
         [Validation(Required=false)]
@@ -39,6 +45,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The assigned Resource Access Management (RAM) role.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RoleARN")]
         [Validation(Required=false)]
@@ -46,6 +54,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The resources and filters for event listening.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceARN")]
         [Validation(Required=false)]
@@ -53,6 +63,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The trigger that corresponds to the Function Compute service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TriggerARN")]
         [Validation(Required=false)]

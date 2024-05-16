@@ -54,6 +54,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
         /// > The end time must be later than the start time. The maximum time range that can be specified is 31 days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -67,6 +69,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// *   **acc**: requests
         /// 
         /// > If you set this parameter to **acc**, the **Area** parameter is not supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Field")]
         [Validation(Required=false)]
@@ -89,6 +93,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
         /// > Data is collected every 5 minutes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

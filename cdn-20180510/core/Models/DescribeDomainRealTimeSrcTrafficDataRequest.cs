@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class DescribeDomainRealTimeSrcTrafficDataRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name. You can specify up to 100 domain names in each call. Separate multiple domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

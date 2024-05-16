@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// The public key of the SSL certificate. You must encode the public key in Base64 and then call the encodeURIComponent function to encode the public key again.
         /// 
         /// The public key must be in the PEM format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SSLPub")]
         [Validation(Required=false)]

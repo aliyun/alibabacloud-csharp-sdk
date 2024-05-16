@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class ListFCTriggerRequest : TeaModel {
         /// <summary>
         /// The name of the event. You can specify only one name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventMetaName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         /// <summary>
         /// The version number of the event. You can specify only one version number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventMetaVersion")]
         [Validation(Required=false)]

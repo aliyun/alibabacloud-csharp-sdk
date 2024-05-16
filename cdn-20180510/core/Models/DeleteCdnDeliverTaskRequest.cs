@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DeleteCdnDeliverTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the tracking task that you want to delete. You can call the [DescribeCdnDeliverList](~~270877~~) operation to query task IDs.
+        /// The ID of the tracking task that you want to delete. You can call the [DescribeCdnDeliverList](https://help.aliyun.com/document_detail/270877.html) operation to query task IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DeliverId")]
         [Validation(Required=false)]

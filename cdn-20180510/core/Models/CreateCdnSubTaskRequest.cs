@@ -33,6 +33,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// *   **19**: page views and unique visitors
         /// *   **21**: regions from which requests are initiated
         /// *   **23**: Internet service providers (ISPs)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReportIds")]
         [Validation(Required=false)]

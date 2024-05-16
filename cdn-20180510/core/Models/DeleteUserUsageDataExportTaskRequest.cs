@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class DeleteUserUsageDataExportTaskRequest : TeaModel {
         /// <summary>
         /// The ID of the task to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

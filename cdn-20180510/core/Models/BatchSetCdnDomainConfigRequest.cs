@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class BatchSetCdnDomainConfigRequest : TeaModel {
         /// <summary>
         /// The accelerated domain names. You can specify multiple accelerated domain names and separate them with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
@@ -19,12 +21,12 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// <summary>
         /// The features that you want to configure. Format:
         /// 
-        /// *   **functionName**: the name of the feature. This parameter is required. Separate multiple values with commas (,). For more information, see [Parameters for configuring features for domain names](~~388460~~).
+        /// *   **functionName**: the name of the feature. This parameter is required. Separate multiple values with commas (,). For more information, see [Parameters for configuring features for domain names](https://help.aliyun.com/document_detail/388460.html).
         /// *   **argName**: the feature parameter for **functionName**. This parameter is required. You can specify multiple feature parameters.
         /// *   **argValue**: the parameter value that is specified for **functionName**. This parameter is required.
-        /// *   **parentid**: the rule condition ID. This parameter is optional. You can use the **condition** rule engine to create a rule condition. For information, see [Parameters for configuring features for domain names](~~388460~~). A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. After you create a rule condition, a [configid](~~388994~~) is generated. A configid can be used as parentId that is referenced by other features. This way, you can combine rule conditions and features for flexible configurations.
+        /// *   **parentid**: the rule condition ID. This parameter is optional. You can use the **condition** rule engine to create a rule condition. For information, see [Parameters for configuring features for domain names](https://help.aliyun.com/document_detail/388460.html). A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. After you create a rule condition, a [configid](https://help.aliyun.com/document_detail/388994.html) is generated. A configid can be used as parentId that is referenced by other features. This way, you can combine rule conditions and features for flexible configurations.
         /// 
-        /// If the **ParentId** parameter is \*\*-1\*\*, the existing rule conditions in the configurations are deleted.
+        /// If the **ParentId** parameter is \\*\\*-1\\*\\*, the existing rule conditions in the configurations are deleted.
         /// 
         /// ```[{
         ///    "functionArgs": [{
@@ -101,6 +103,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         ///         "parentId": -1
         /// }]
         /// ```
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Functions")]
         [Validation(Required=false)]

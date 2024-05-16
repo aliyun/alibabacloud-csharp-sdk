@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// 
         /// *   **domain_business_control**: user configurations
         /// *   **waf**: Web Application Firewall (WAF) configurations
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FunctionName")]
         [Validation(Required=false)]

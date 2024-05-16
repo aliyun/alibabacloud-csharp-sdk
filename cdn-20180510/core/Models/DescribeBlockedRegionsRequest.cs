@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// *   **zh**: simplified Chinese
         /// *   **en**: English
         /// *   **jp**: Japanese
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]

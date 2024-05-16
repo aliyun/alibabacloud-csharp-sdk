@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// The ID of the feature.
         /// 
         /// For example, the ID of the origin host feature (set_req_host_header) is 18.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FuncId")]
         [Validation(Required=false)]

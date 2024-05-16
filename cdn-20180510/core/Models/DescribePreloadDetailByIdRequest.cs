@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
     public class DescribePreloadDetailByIdRequest : TeaModel {
         /// <summary>
         /// Queries the details of a preload task by task ID. You can query one task ID at a time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
