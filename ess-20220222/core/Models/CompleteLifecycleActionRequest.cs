@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class CompleteLifecycleActionRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+        /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The token of the lifecycle hook. You can obtain this token by using a Message Service (MNS) queue or an MNS topic that is specified for the lifecycle hook.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LifecycleActionToken")]
         [Validation(Required=false)]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the lifecycle hook.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LifecycleHookId")]
         [Validation(Required=false)]

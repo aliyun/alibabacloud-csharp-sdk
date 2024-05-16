@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class CreateAlarmResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the event-triggered task.
+        /// </summary>
         [NameInMap("AlarmTaskId")]
         [Validation(Required=false)]
         public string AlarmTaskId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

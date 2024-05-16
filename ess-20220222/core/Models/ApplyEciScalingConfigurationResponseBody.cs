@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ApplyEciScalingConfigurationResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the scaling configuration.
+        /// </summary>
         [NameInMap("ScalingConfigurationId")]
         [Validation(Required=false)]
         public string ScalingConfigurationId { get; set; }

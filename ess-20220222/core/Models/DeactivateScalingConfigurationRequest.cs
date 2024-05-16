@@ -21,6 +21,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// The ID of the scaling configuration.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ScalingConfigurationId")]
         [Validation(Required=false)]
         public string ScalingConfigurationId { get; set; }

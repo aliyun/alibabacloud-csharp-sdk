@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling configuration that you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingConfigurationId")]
         [Validation(Required=false)]

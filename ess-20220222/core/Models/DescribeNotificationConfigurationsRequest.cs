@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

@@ -269,13 +269,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group that you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// The name of the scaling group. The name of each scaling group must be unique in a region. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.
+        /// The name of the scaling group. The name of each scaling group must be unique in a region. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.
         /// </summary>
         [NameInMap("ScalingGroupName")]
         [Validation(Required=false)]
@@ -300,7 +302,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// 
         ///     **Note** If you set the value to `forcerecycle`, Auto Scaling forcibly shuts down instances that are in the `Running` state during scale-ins. Forced shutdown is equivalent to power outage. If an instance is forcibly shut down, ephemeral data on the instance will be cleared and cannot be recovered. Exercise caution when you select this option.
         /// 
-        /// ScalingPolicy specifies only the reclaim mode of the scaling group. RemovePolicy of the RemoveInstances operation specifies the manner how instances are removed from the scaling group. For more information, see [RemoveInstances](~~25955~~).
+        /// ScalingPolicy specifies only the reclaim mode of the scaling group. RemovePolicy of the RemoveInstances operation specifies the manner how instances are removed from the scaling group. For more information, see [RemoveInstances](https://help.aliyun.com/document_detail/25955.html).
         /// </summary>
         [NameInMap("ScalingPolicy")]
         [Validation(Required=false)]

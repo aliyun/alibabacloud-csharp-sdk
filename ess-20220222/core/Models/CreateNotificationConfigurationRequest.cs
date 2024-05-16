@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// *   account-id: the ID of the Alibaba Cloud account.
         /// *   queuename: the name of the MNS queue.
         /// *   topicname: the name of the MNS topic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NotificationArn")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// The types of the notifications that you want to create. You can create one to eight notifications. Specify multiple values in the repeated list form.
         /// 
         /// You can call the DescribeNotificationTypes operation to query the values of this parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NotificationTypes")]
         [Validation(Required=false)]
@@ -53,6 +57,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

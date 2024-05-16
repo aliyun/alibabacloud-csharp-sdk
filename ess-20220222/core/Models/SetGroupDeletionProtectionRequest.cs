@@ -12,8 +12,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// Specifies whether to enable deletion protection for the scaling group. Valid values:
         /// 
-        /// *   true: enables deletion protection for the scaling group. This way, the scaling group cannot be deleted.
-        /// *   false: disables deletion protection for the scaling group.
+        /// *   true: enables deletion protection. In this case, you cannot delete the scaling group by using the Auto Scaling console or calling an API operation. You must disable deletion protection before you can delete the scaling group.
+        /// *   false: disables deletion protection.
+        /// 
+        /// Default value: false.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupDeletionProtection")]
         [Validation(Required=false)]
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

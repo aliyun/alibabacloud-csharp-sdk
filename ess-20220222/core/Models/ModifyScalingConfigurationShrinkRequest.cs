@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http:// `or `https://`. 
+            /// The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http:// `or `https://`. 
             /// 
             /// Default value: null.
             /// </summary>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// *   PL2: An ESSD can provide up to 100,000 random read/write IOPS.
             /// *   PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.
             /// 
-            /// > For more information about how to select ESSD PLs, see [ESSD](~~122389~~).
+            /// > For more information about how to select ESSD PLs, see [ESSD](https://help.aliyun.com/document_detail/122389.html).
             /// </summary>
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
@@ -192,8 +192,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The performance mode of the burstable instance. Valid values:
         /// 
-        /// *   Standard: standard mode. For more information, see the "Standard mode" section in the [Burstable instances](~~59977~~) topic.
-        /// *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in the [Burstable instances](~~59977~~) topic.
+        /// *   Standard: standard mode. For more information, see the "Standard mode" section in the [Burstable instances](https://help.aliyun.com/document_detail/59977.html) topic.
+        /// *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in the [Burstable instances](https://help.aliyun.com/document_detail/59977.html) topic.
         /// </summary>
         [NameInMap("CreditSpecification")]
         [Validation(Required=false)]
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Device { get; set; }
 
             /// <summary>
-            /// The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+            /// The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
             /// </summary>
             [NameInMap("DiskName")]
             [Validation(Required=false)]
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// *   PL2: An ESSD can provide up to 100,000 random read/write IOPS.
             /// *   PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.
             /// 
-            /// > For more information about how to select ESSD PLs, see [ESSD](~~122389~~).
+            /// > For more information about how to select ESSD PLs, see [ESSD](https://help.aliyun.com/document_detail/122389.html).
             /// </summary>
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
@@ -486,7 +486,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string BurstablePerformance { get; set; }
 
             /// <summary>
-            /// The number of vCPUs that you want to allocate to an instance type in intelligent configuration mode. You can use this parameter to filter the available instance types that meet the specified criteria. For more information, see [Overview of instance families](~~25378~~).
+            /// The number of vCPUs that you want to allocate to an instance type in intelligent configuration mode. You can use this parameter to filter the available instance types that meet the specified criteria. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
             /// 
             /// When you specify this parameter, take note of the following items:
             /// 
@@ -499,10 +499,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? Cores { get; set; }
 
             /// <summary>
-            /// The instance types that you want to exclude. You can use wildcard characters such as an asterisk (\*) to exclude an instance type or an instance family. Examples:
+            /// The instance types that you want to exclude. You can use wildcard characters such as an asterisk (\\*) to exclude an instance type or an instance family. Examples:
             /// 
             /// *   ecs.c6.large: excludes the ecs.c6.large instance type.
-            /// *   ecs.c6.\*: excludes the c6 instance family.
+            /// *   ecs.c6.\\*: excludes the c6 instance family.
             /// </summary>
             [NameInMap("ExcludedInstanceTypes")]
             [Validation(Required=false)]
@@ -511,9 +511,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// The level of the instance family. You can use this parameter to filter instance types that meet the specified criteria. This parameter takes effect only if you set `CostOptimization` to true. Valid values:
             /// 
-            /// *   EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instance types of this level are suitable for business scenarios in which CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
-            /// *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see the [Overview of instance families](~~25378~~) topic.
-            /// *   CreditEntryLevel: credit entry level. This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instance types of this level are suitable for business scenarios in which CPU utilization is low but may fluctuate in specific scenarios. For more information, see [Overview](~~59977~~) of burstable instances.
+            /// *   EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instance types of this level are suitable for business scenarios in which CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).
+            /// *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see the [Overview of instance families](https://help.aliyun.com/document_detail/25378.html) topic.
+            /// *   CreditEntryLevel: credit entry level. This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instance types of this level are suitable for business scenarios in which CPU utilization is low but may fluctuate in specific scenarios. For more information, see [Overview](https://help.aliyun.com/document_detail/59977.html) of burstable instances.
             /// </summary>
             [NameInMap("InstanceFamilyLevel")]
             [Validation(Required=false)]
@@ -679,7 +679,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// Specifies whether to overwrite existing data. Valid values:
+        /// Specifies whether to override existing data. Valid values:
         /// 
         /// *   true
         /// *   false
@@ -723,13 +723,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling configuration that you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingConfigurationId")]
         [Validation(Required=false)]
         public string ScalingConfigurationId { get; set; }
 
         /// <summary>
-        /// The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.
+        /// The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.
         /// 
         /// The name of the scaling configuration must be unique in a region. If you do not specify this parameter, the scaling configuration ID is used.
         /// </summary>

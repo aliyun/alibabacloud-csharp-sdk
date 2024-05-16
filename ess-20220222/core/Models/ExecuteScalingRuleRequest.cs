@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public float? BreachThreshold { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -57,6 +57,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// The unique identifier of the scaling rule.
         /// 
         /// > You can call the ExecuteScalingRule operation to execute only simple scaling rules and step scaling rules. To execute a step scaling rule, you must specify the BreachThreshold and MetricValue parameters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingRuleAri")]
         [Validation(Required=false)]

@@ -10,15 +10,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DeleteScalingGroupRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to forcefully delete the VPC. Valid values:
+        /// Specifies whether to forcibly delete the scaling group and release Elastic Compute Service (ECS) instances in the scaling group when ECS instances or ongoing scaling activities exist in the scaling group. Valid values:
         /// 
-        /// - **true**: yes
-        /// - **false** (default): no
+        /// *   true: forcibly deletes the scaling group. The scaling group is disabled and new scaling requests are rejected. After all existing scaling requests are processed, the ECS instances are removed from the scaling group. Then, the scaling group is deleted. If the ECS instances are manually added to the scaling group, the ECS instances are only removed from the scaling group. If the ECS instances are automatically created and added to the scaling group, the ECS instances are removed from the scaling group and then released.
         /// 
-        /// You can forcefully delete a VPC in the following scenarios:
+        /// *   false: does not forcibly delete the scaling group. The scaling group is disabled and then deleted if the following conditions are met:
         /// 
-        /// - Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.
-        /// - Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.
+        ///     *   No scaling activities are in process in the scaling group.
+        ///     *   The Total Capacity parameter is set to 0. A value of 0 specifies that no ECS instances exist in the scaling group.
+        /// 
+        /// Default value: false.
         /// </summary>
         [NameInMap("ForceDelete")]
         [Validation(Required=false)]
@@ -33,7 +34,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID of the scaling group.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -45,6 +46,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

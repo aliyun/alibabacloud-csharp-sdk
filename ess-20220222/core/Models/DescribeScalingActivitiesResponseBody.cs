@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the scaling activities.
+        /// The information about the scaling activities.
         /// </summary>
         [NameInMap("ScalingActivities")]
         [Validation(Required=false)]
@@ -42,35 +42,35 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ActivityMetadata { get; set; }
 
             /// <summary>
-            /// The total number of instances that were manually added to the scaling group after the scaling activity was complete.
+            /// The total number of instances that are manually added to the scaling group after the scaling activity is complete.
             /// </summary>
             [NameInMap("AttachedCapacity")]
             [Validation(Required=false)]
             public string AttachedCapacity { get; set; }
 
             /// <summary>
-            /// The total number of instances that were created by Auto Scaling after the scaling activity was complete.
+            /// The total number of instances that are created by Auto Scaling after the scaling activity is complete.
             /// </summary>
             [NameInMap("AutoCreatedCapacity")]
             [Validation(Required=false)]
             public string AutoCreatedCapacity { get; set; }
 
             /// <summary>
-            /// The reason why the scaling activity was triggered.
+            /// The reason why the scaling activity is triggered.
             /// </summary>
             [NameInMap("Cause")]
             [Validation(Required=false)]
             public string Cause { get; set; }
 
             /// <summary>
-            /// The number of instances that were created during the scaling activity.
+            /// The number of instances that are created during the scale-out.
             /// </summary>
             [NameInMap("CreatedCapacity")]
             [Validation(Required=false)]
             public int? CreatedCapacity { get; set; }
 
             /// <summary>
-            /// The instances that were created during the scaling activity.
+            /// The instances that are created during the scale-out.
             /// </summary>
             [NameInMap("CreatedInstances")]
             [Validation(Required=false)]
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The number of instances that were released during the scaling activity.
+            /// The number of instances that are released during the scale-in.
             /// </summary>
             [NameInMap("DestroyedCapacity")]
             [Validation(Required=false)]
             public int? DestroyedCapacity { get; set; }
 
             /// <summary>
-            /// The instances that were released during the scaling activity.
+            /// The instances that are released during the scale-in.
             /// </summary>
             [NameInMap("DestroyedInstances")]
             [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// The time when the scaling activity was complete.
+            /// The time when the scaling activity is complete.
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
@@ -161,30 +161,30 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ScalingGroupId { get; set; }
 
             /// <summary>
-            /// If the scaling activity is a scale-out activity, the value of this parameter indicates the number of instances that were created during the scaling activity or the number of instances that were started from Economical Mode.
+            /// If you query a scale-out, the value of this parameter indicates the number of instances that are created or the number of instances that are started from the Economical Mode during the scale-out.
             /// 
-            /// If the scaling activity is a scale-in activity, the value of this parameter indicates the number of instances that were deleted during the scaling activity or the number of instances that were stopped in Economical Mode.
+            /// If you query a scale-in, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in the Economical Mode during the scale-in.
             /// </summary>
             [NameInMap("ScalingInstanceNumber")]
             [Validation(Required=false)]
             public int? ScalingInstanceNumber { get; set; }
 
             /// <summary>
-            /// The time when the scaling activity started.
+            /// The time when the scaling activity is started.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// The number of instances that were started from Economical Mode during the scaling activity.
+            /// The number of instances that are started from the Economical Mode during the scale-out.
             /// </summary>
             [NameInMap("StartedCapacity")]
             [Validation(Required=false)]
             public int? StartedCapacity { get; set; }
 
             /// <summary>
-            /// The instances that were started from Economical Mode during the scaling activity.
+            /// The instances that are started from the Economical Mode during the scale-out.
             /// </summary>
             [NameInMap("StartedInstances")]
             [Validation(Required=false)]
@@ -211,21 +211,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string StatusMessage { get; set; }
 
             /// <summary>
-            /// The number of instances that were stopped in Economical Mode during the scaling activity.
+            /// The number of instances that are stopped in the Economical Mode during the scale-in.
             /// </summary>
             [NameInMap("StoppedCapacity")]
             [Validation(Required=false)]
             public int? StoppedCapacity { get; set; }
 
             /// <summary>
-            /// The instances that were stopped in Economical Mode during the scaling activity.
+            /// The instances that are stopped in the Economical Mode during the scale-in.
             /// </summary>
             [NameInMap("StoppedInstances")]
             [Validation(Required=false)]
             public List<string> StoppedInstances { get; set; }
 
             /// <summary>
-            /// The total number of instances in the scaling group after the scaling activity was complete.
+            /// The total number of instances in the scaling group after the scaling activity is complete.
             /// </summary>
             [NameInMap("TotalCapacity")]
             [Validation(Required=false)]

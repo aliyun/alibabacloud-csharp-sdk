@@ -12,14 +12,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
         /// 
-        /// The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25965~~).
+        /// The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to add Elastic Compute Service (ECS) instances in the scaling group to the vServer group. Valid values:
+        /// Specifies whether to add Elastic Compute Service (ECS) instances in the scaling group to new vServer groups. Valid values:
         /// 
         /// *   true
         /// *   false
@@ -36,6 +36,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -47,6 +49,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]
@@ -54,6 +58,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// Details of the vServer groups.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VServerGroups")]
         [Validation(Required=false)]

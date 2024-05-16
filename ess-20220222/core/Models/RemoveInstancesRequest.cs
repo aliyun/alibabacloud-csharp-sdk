@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class RemoveInstancesRequest : TeaModel {
         /// <summary>
-        /// 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](~~25965~~)。
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The IDs of the ECS instances that you want to remove from the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -51,20 +53,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The action that you want Auto Scaling to perform after the ECS instance is removed from the scaling group. Valid values:
+        /// The action subsequent to the removal of the Elastic Compute Service (ECS) instances. Valid values:
         /// 
-        /// *   recycle: puts the ECS instance into economical mode.
+        /// *   recycle: The ECS instances enter the Economical Mode.
         /// 
-        ///     **Note** This setting takes effect only if you set the ScalingPolicy parameter to recycle.
+        ///     **
         /// 
-        /// *   release: releases the ECS instance.
+        ///     **Note** This setting is applicable only if you set `ScalingPolicy` to `recycle`.
         /// 
-        /// The ScalingPolicy parameter that you specify when you call the CreateScalingGroup operation specifies the reclaim mode of the scaling group. The RemovePolicy parameter that you specify when you call the RemoveInstances operation specifies the action to be performed on ECS instances after the ECS instances are removed. Example:
+        /// *   release: The ECS instances are released.
         /// 
-        /// *   If you set both the ScalingPolicy parameter and the RemovePolicy parameter to recycle, the ECS instances are put into economical mode after the ECS instances are removed from the scaling group.
-        /// *   If you set the ScalingPolicy parameter to recycle and the RemovePolicy parameter to release, the ECS instances are released after the ECS instances are removed from the scaling group.
-        /// *   If you set the ScalingPolicy parameter to release and the RemovePolicy parameter to recycle, the ECS instances are released after the ECS instances are removed from the scaling group.
-        /// *   If you set both the ScalingPolicy parameter and the RemovePolicy parameter to release, the ECS instances are released after the ECS instances are removed from the scaling group.
+        /// ScalingPolicy of the CreateScalingGroup operation specifies the reclaim mode of the scaling group while RemovePolicy of the RemoveInstances operation specifies the subsequent action when an ECS instance is removed from the scaling group. Examples:
+        /// 
+        /// *   If you set ScalingPolicy and RemovePolicy to recycle, the ECS instances enter the Economical Mode when they are removed.
+        /// *   If you set ScalingPolicy to recycle and RemovePolicy to release, the ECS instances are released when they are removed.
+        /// *   If you set ScalingPolicy to release and RemovePolicy to recycle, the ECS instances are released when they are removed.
+        /// *   If you set ScalingPolicy and RemovePolicy to release, the ECS instances are released when they are removed.
         /// 
         /// Default value: release.
         /// </summary>
@@ -82,6 +86,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

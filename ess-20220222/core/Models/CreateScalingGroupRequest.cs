@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? AzBalance { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -107,18 +107,39 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string DBInstanceIds { get; set; }
 
+        /// <summary>
+        /// The databases that you want to attach to the scaling group.
+        /// </summary>
         [NameInMap("DBInstances")]
         [Validation(Required=false)]
         public List<CreateScalingGroupRequestDBInstances> DBInstances { get; set; }
         public class CreateScalingGroupRequestDBInstances : TeaModel {
+            /// <summary>
+            /// The mode in which you want to attach the database to the scaling group. Valid values:
+            /// 
+            /// *   SecurityIp: the mode in which Auto Scaling automatically adds the private IP addresses of the scaled out instances to the IP address whitelist of the database. This mode is supported only if you set Type to RDS.
+            /// *   SecurityGroup: the mode in which Auto Scaling adds the security group of the applied scaling configuration in the scaling group to the security group whitelist of the database to enable secure access from instances to the database.
+            /// </summary>
             [NameInMap("AttachMode")]
             [Validation(Required=false)]
             public string AttachMode { get; set; }
 
+            /// <summary>
+            /// The database ID.
+            /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
             public string DBInstanceId { get; set; }
 
+            /// <summary>
+            /// The database type. Valid values:
+            /// 
+            /// *   RDS
+            /// *   Redis
+            /// *   MongoDB
+            /// 
+            /// Default value: RDS.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -387,6 +408,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// The value range of the MaxSize parameter varies based on the instance quota. You can go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas) to check the maximum number of instances that a scaling group can contain.
         /// 
         /// For example, if the instance quota is 2,000, the value range of the **MaxSize** parameter is 0 to 2000.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxSize")]
         [Validation(Required=false)]
@@ -396,6 +419,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// The minimum number of ECS instances that must be contained in the scaling group. If the number of ECS instances in the scaling group is less than the value of the MinSize parameter, Auto Scaling adds ECS instances to the scaling group to ensure that the number of ECS instances in the scaling group is equal to the value of the MinSize parameter.
         /// 
         /// > The value of the MinSize parameter must be less than or equal to the value of the MaxSize parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MinSize")]
         [Validation(Required=false)]
@@ -410,7 +435,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// 
         ///     **Note** The COST_OPTIMIZED setting takes effect only when multiple instance types are specified or at least one preemptible instance type is specified.
         /// 
-        /// *   BALANCE: evenly distributes ECS instances across zones that are specified for the scaling group. If ECS instances are unevenly distributed across zones due to insufficient resources, you can call the [RebalanceInstance](~~71516~~) operation to evenly redistribute the instances across the zones.
+        /// *   BALANCE: evenly distributes ECS instances across zones that are specified for the scaling group. If ECS instances are unevenly distributed across zones due to insufficient resources, you can call the [RebalanceInstance](https://help.aliyun.com/document_detail/71516.html) operation to evenly redistribute the instances across the zones.
         /// 
         /// Default value: PRIORITY.
         /// </summary>
@@ -442,6 +467,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The region ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -457,7 +484,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// 
         /// The scaling configuration source specified by the OldestScalingConfiguration setting can be a scaling configuration or a launch template. The CustomPolicy setting takes effect only if you specify it as the first step to remove instances. If you specify CustomPolicy, you must also specify the CustomPolicyARN parameter.
         /// 
-        /// > The removal of ECS instances from a scaling group is also affected by the value of the MultiAZPolicy parameter. For more information, see the [Configure a combination policy for removing instances](~~254822~~) topic.
+        /// > The removal of ECS instances from a scaling group is also affected by the value of the MultiAZPolicy parameter. For more information, see the [Configure a combination policy for removing instances](https://help.aliyun.com/document_detail/254822.html) topic.
         /// </summary>
         [NameInMap("RemovalPolicies")]
         [Validation(Required=false)]
@@ -479,7 +506,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The name of the scaling group. The name of each scaling group must be unique in a region.
         /// 
-        /// The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.
+        /// The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.
         /// 
         /// If you do not specify this parameter, the value of the ScalingGroupId parameter is used.
         /// </summary>
@@ -577,7 +604,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? SyncAlarmRuleToCms { get; set; }
 
         /// <summary>
-        /// Details of the tags that you want to add to the scaling group.
+        /// The tags that you want to add to the scaling group.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -590,6 +617,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// Specifies whether to propagate the tag that you want to add to the scaling group. Valid values:
+            /// 
+            /// *   true: propagates the tag to only instances that are newly created.
+            /// *   false: does not propagate the tag to any instances.
+            /// 
+            /// Default value: false.
+            /// </summary>
             [NameInMap("Propagate")]
             [Validation(Required=false)]
             public bool? Propagate { get; set; }

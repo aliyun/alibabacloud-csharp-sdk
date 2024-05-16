@@ -239,14 +239,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.
+            /// The container startup arguments. You can specify up to 10 arguments.
             /// </summary>
             [NameInMap("Args")]
             [Validation(Required=false)]
             public List<string> Args { get; set; }
 
             /// <summary>
-            /// The commands that you want to execute in the container when you use the command line interface (CLI) to perform probes.
+            /// The command that you want to run by using the CLI for liveness probing within the container.
             /// </summary>
             [NameInMap("Commands")]
             [Validation(Required=false)]
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? Cpu { get; set; }
 
             /// <summary>
-            /// Information about the environment variables.
+            /// The environment variables.
             /// </summary>
             [NameInMap("EnvironmentVars")]
             [Validation(Required=false)]
@@ -277,14 +277,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// The key of the environment variable. Specify the name in the `[0-9a-zA-Z]` format. The name must be 1 to 128 characters in length, and can contain underscores (\_). It cannot start with a digit.
+                /// The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. It cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the environment variable. The value must be 0 to 256 characters in length.
+                /// The value of the environment variable. The value can be up to 256 characters in length.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -309,72 +309,120 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// The image pulling policy. Valid values:
             /// 
-            /// *   Always: pulls images each time.
-            /// *   IfNotPresent: pulls images only if no on-premises images are available. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
-            /// *   Never: never pulls images. On-premises images are always used.
+            /// *   Always: Each time instances are created, image pulling is performed.
+            /// *   IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
+            /// *   Never: On-premises images are always used. Image pulling is not performed.
             /// </summary>
             [NameInMap("ImagePullPolicy")]
             [Validation(Required=false)]
             public string ImagePullPolicy { get; set; }
 
+            /// <summary>
+            /// The commands that you want to run by using the CLI for configuring the postStart callback function within the container.
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerExecs")]
             [Validation(Required=false)]
             public List<string> LifecyclePostStartHandlerExecs { get; set; }
 
+            /// <summary>
+            /// The IP address of the host to which you want to send the HTTP GET requests for configuring the postStart callback function.
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetHost")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerHttpGetHost { get; set; }
 
+            /// <summary>
+            /// The path to which you want to send the HTTP GET requests for configuring the postStart callback function.
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetPath")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerHttpGetPath { get; set; }
 
+            /// <summary>
+            /// The port over which you want to send the HTTP GET requests for configuring the postStart callback function.
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetPort")]
             [Validation(Required=false)]
             public int? LifecyclePostStartHandlerHttpGetPort { get; set; }
 
+            /// <summary>
+            /// The protocol type of the HTTP GET requests that you want to send for configuring the postStart callback function. Valid values:
+            /// 
+            /// *   HTTP
+            /// *   HTTPS
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetScheme")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerHttpGetScheme { get; set; }
 
+            /// <summary>
+            /// The IP address of the host detected by the TCP sockets that you want to use for configuring the postStart callback function.
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerTcpSocketHost")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerTcpSocketHost { get; set; }
 
+            /// <summary>
+            /// The port detected by the TCP sockets that you want to use for configuring the postStart callback function.
+            /// </summary>
             [NameInMap("LifecyclePostStartHandlerTcpSocketPort")]
             [Validation(Required=false)]
             public int? LifecyclePostStartHandlerTcpSocketPort { get; set; }
 
+            /// <summary>
+            /// The commands that you want to run by using the CLI for configuring the preStop callback function within the container.
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerExecs")]
             [Validation(Required=false)]
             public List<string> LifecyclePreStopHandlerExecs { get; set; }
 
+            /// <summary>
+            /// The IP address of the host to which you want to send the HTTP GET requests for configuring the preStop callback function.
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetHost")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerHttpGetHost { get; set; }
 
+            /// <summary>
+            /// The path to which you want to send the HTTP GET requests for configuring the preStop callback function.
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetPath")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerHttpGetPath { get; set; }
 
+            /// <summary>
+            /// The port over which you want to send the HTTP GET requests for configuring the preStop callback function.
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetPort")]
             [Validation(Required=false)]
             public int? LifecyclePreStopHandlerHttpGetPort { get; set; }
 
+            /// <summary>
+            /// The protocol type of the HTTP GET requests that you want to send for configuring the preStop callback function. Valid values:
+            /// 
+            /// *   HTTP
+            /// *   HTTPS
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetScheme")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerHttpGetScheme { get; set; }
 
+            /// <summary>
+            /// The IP address of the host detected by the TCP sockets that you want to use for configuring the preStop callback function.
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerTcpSocketHost")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerTcpSocketHost { get; set; }
 
+            /// <summary>
+            /// The port detected by the TCP sockets that you want to use for configuring the preStop callback function.
+            /// </summary>
             [NameInMap("LifecyclePreStopHandlerTcpSocketPort")]
             [Validation(Required=false)]
             public int? LifecyclePreStopHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// The memory size of the container. Unit: GiB.
+            /// The memory size that you want to allocate to the container. Unit: GiB.
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
@@ -388,7 +436,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// Information about the ports.
+            /// The ports.
             /// </summary>
             [NameInMap("Ports")]
             [Validation(Required=false)]
@@ -402,7 +450,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The type of the protocol. Valid values:
+                /// The protocol type. Valid values:
                 /// 
                 /// *   TCP
                 /// *   UDP
@@ -414,7 +462,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur.
+            /// Specifies whether the container allocates buffer resources to standard input streams during its active runtime. If you do not specify this parameter, an end-of-file (EOF) error occurs when standard input streams in the container are read.
             /// 
             /// Default value: false.
             /// </summary>
@@ -423,52 +471,52 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Stdin { get; set; }
 
             /// <summary>
-            /// Specifies whether standard input streams are disconnected after a client is disconnected.
+            /// Specifies whether standard input streams remain connected during multiple sessions when StdinOnce is set to true.
             /// 
-            /// If you set the StdinOnce parameter to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is started again.
+            /// If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is restarted.
             /// </summary>
             [NameInMap("StdinOnce")]
             [Validation(Required=false)]
             public bool? StdinOnce { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable interaction. Default value: false.
+            /// Specifies whether to enable the Interaction feature. Default value: false.
             /// 
-            /// If the command is a /bin/bash command, set the value to true.
+            /// If the command is a /bin/bash command, set this parameter to true.
             /// </summary>
             [NameInMap("Tty")]
             [Validation(Required=false)]
             public bool? Tty { get; set; }
 
             /// <summary>
-            /// Information about the volume mount of the container.
+            /// The volume mounts of the container.
             /// </summary>
             [NameInMap("VolumeMounts")]
             [Validation(Required=false)]
             public List<ModifyEciScalingConfigurationRequestContainersVolumeMounts> VolumeMounts { get; set; }
             public class ModifyEciScalingConfigurationRequestContainersVolumeMounts : TeaModel {
                 /// <summary>
-                /// The path where the container mounts the volume.
+                /// The directory within the container onto which you want to mount the volume.
                 /// 
-                /// >  Data stored in the path of the container is directly overwritten by the content of the volume.
+                /// >  The information stored within this directory will be overridden by the data present on the mounted volume. Specify this parameter with caution.
                 /// </summary>
                 [NameInMap("MountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// The mount propagation setting of the volume. Mount propagation allows the sharing of volumes that are mounted on one container with other containers in the same pod, or even with other pods on the same node. Valid values:
+                /// The mount propagation setting of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:
                 /// 
-                /// *   None: The volume mount does not receive subsequent mounts that are mounted to this volume or its subdirectories.
-                /// *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories.
-                /// *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.
+                /// *   None: Subsequent mounts executed either on the volume itself or its subdirectories do not propagate to the already established volume mount.
+                /// *   HostToCotainer: Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount.
+                /// *   Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount. In addition, any volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.
                 /// </summary>
                 [NameInMap("MountPropagation")]
                 [Validation(Required=false)]
                 public string MountPropagation { get; set; }
 
                 /// <summary>
-                /// The name of the volume. The value of this parameter is the same as the value of the Volumes.Name parameter.
+                /// The volume name. The value of this parameter is the same as the value of Volume.N.Name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -525,14 +573,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public float? Cpu { get; set; }
 
         /// <summary>
-        /// The number of physical CPU cores. This parameter is not available for all instance types. For more information, see [Specify custom CPU options](~~197781~~).
+        /// The number of physical CPU cores. This parameter is not available for all instance types. For more information, see [Specify custom CPU options](https://help.aliyun.com/document_detail/197781.html).
         /// </summary>
         [NameInMap("CpuOptionsCore")]
         [Validation(Required=false)]
         public int? CpuOptionsCore { get; set; }
 
         /// <summary>
-        /// The number of threads per core. This parameter is not available for all instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify custom CPU options](~~197781~~).
+        /// The number of threads per core. This parameter is not available for all instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify custom CPU options](https://help.aliyun.com/document_detail/197781.html).
         /// </summary>
         [NameInMap("CpuOptionsThreadsPerCore")]
         [Validation(Required=false)]
@@ -928,9 +976,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The level of the instance type, which is used to filter the instance types that meet the specified criteria. This parameter takes effect only if you set the `CostOptimization` parameter to true. Valid values:
         /// 
-        /// *   EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
-        /// *   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](~~25378~~).
-        /// *   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the [Overview](~~59977~~) topic of burstable instances.
+        /// *   EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).
+        /// *   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](https://help.aliyun.com/document_detail/25378.html).
+        /// *   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the [Overview](https://help.aliyun.com/document_detail/59977.html) topic of burstable instances.
         /// </summary>
         [NameInMap("InstanceFamilyLevel")]
         [Validation(Required=false)]
@@ -973,7 +1021,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The name of the RAM role for the instance. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use an instance RAM role by calling API operations](~~61178~~).
+        /// The name of the RAM role for the instance. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use an instance RAM role by calling API operations](https://help.aliyun.com/document_detail/61178.html).
         /// </summary>
         [NameInMap("RamRoleName")]
         [Validation(Required=false)]
@@ -1005,13 +1053,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling configuration that you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingConfigurationId")]
         [Validation(Required=false)]
         public string ScalingConfigurationId { get; set; }
 
         /// <summary>
-        /// The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.
+        /// The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.
         /// 
         /// The name of the scaling configuration must be unique within a scaling group in a region. If you do not specify this parameter, the value of the ScalingConfigurationId parameter is used.
         /// </summary>

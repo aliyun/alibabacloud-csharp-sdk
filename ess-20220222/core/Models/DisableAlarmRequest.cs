@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
     public class DisableAlarmRequest : TeaModel {
         /// <summary>
         /// The ID of the event-triggered task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlarmTaskId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

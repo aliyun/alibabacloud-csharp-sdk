@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> Keys { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the next query. If this parameter is empty, all results are returned.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

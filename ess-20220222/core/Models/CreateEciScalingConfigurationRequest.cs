@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string FieldRefFieldPath { get; set; }
 
                 /// <summary>
-                /// The name of the environment variable. The name can be 1 to 128 characters in length and can contain underscores (\_) and digits. The name cannot start with a digit. Specify the value in the \[0-9a-zA-Z] format.
+                /// The name of the environment variable. The name can be 1 to 128 characters in length and can contain underscores (_) and digits. The name cannot start with a digit. Specify the value in the [0-9a-zA-Z] format.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
@@ -526,14 +526,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public float? Cpu { get; set; }
 
         /// <summary>
-        /// Number of physical CPU cores This parameter is not available for all instance types. For more information, see [Specify custom CPU options](~~197781~~).
+        /// Number of physical CPU cores This parameter is not available for all instance types. For more information, see [Specify custom CPU options](https://help.aliyun.com/document_detail/197781.html).
         /// </summary>
         [NameInMap("CpuOptionsCore")]
         [Validation(Required=false)]
         public int? CpuOptionsCore { get; set; }
 
         /// <summary>
-        /// The number of threads per core. This parameter is not available for all instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify custom CPU options](~~197781~~).
+        /// The number of threads per core. This parameter is not available for all instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify custom CPU options](https://help.aliyun.com/document_detail/197781.html).
         /// </summary>
         [NameInMap("CpuOptionsThreadsPerCore")]
         [Validation(Required=false)]
@@ -554,7 +554,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// 
         /// Default value: false.
         /// 
-        /// >  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).
+        /// >  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).
         /// </summary>
         [NameInMap("DataCacheBurstingEnabled")]
         [Validation(Required=false)]
@@ -570,7 +570,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// 
         /// Default value: PL1.
         /// 
-        /// >  For more information about ESSDs, see [ESSDs](~~122389~~).
+        /// >  For more information about ESSDs, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).
         /// </summary>
         [NameInMap("DataCachePL")]
         [Validation(Required=false)]
@@ -579,7 +579,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The provisioned read/write IOPS of the ESSD AutoPL disk that caches data. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800+50 x *Capacity, 50,000}.
         /// 
-        /// >  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).
+        /// >  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).
         /// </summary>
         [NameInMap("DataCacheProvisionedIops")]
         [Validation(Required=false)]
@@ -829,7 +829,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string FieldRefFieldPath { get; set; }
 
                 /// <summary>
-                /// The key of the environment variable. Specify the key in the `[0-9a-zA-Z]` format. The key must be 1 to 128 characters in length. The key can contain underscores (\_) and cannot start with a digit.
+                /// The key of the environment variable. Specify the key in the `[0-9a-zA-Z]` format. The key must be 1 to 128 characters in length. The key can contain underscores (_) and cannot start with a digit.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
@@ -946,9 +946,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The level of the instance type, which is used to filter the instance types that meet the specified criteria. This parameter takes effect only if you set the `CostOptimization` parameter to true. Valid values:
         /// 
-        /// *   EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
-        /// *   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](~~25378~~).
-        /// *   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the [Overview](~~59977~~) topic of burstable instances.
+        /// *   EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).
+        /// *   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](https://help.aliyun.com/document_detail/25378.html).
+        /// *   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the [Overview](https://help.aliyun.com/document_detail/59977.html) topic of burstable instances.
         /// </summary>
         [NameInMap("InstanceFamilyLevel")]
         [Validation(Required=false)]
@@ -993,7 +993,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The name of the RAM role for the elastic container instance. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use an instance RAM role by calling API operations](~~61178~~).
+        /// The name of the RAM role for the elastic container instance. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use an instance RAM role by calling API operations](https://help.aliyun.com/document_detail/61178.html).
         /// </summary>
         [NameInMap("RamRoleName")]
         [Validation(Required=false)]
@@ -1024,7 +1024,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RestartPolicy { get; set; }
 
         /// <summary>
-        /// The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.
+        /// The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.
         /// 
         /// The name of the scaling configuration must be unique within a scaling group in a region. If you do not specify this parameter, the value of the ScalingConfigurationId parameter is used.
         /// </summary>
@@ -1034,6 +1034,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group in which you want to create the scaling configuration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

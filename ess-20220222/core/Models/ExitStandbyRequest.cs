@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ExitStandbyRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to put the ECS instance into the Standby state in an asynchronous manner. Valid values:
+        /// Specifies whether to asynchronously move the ECS instance out of the Standby state. Valid values:
         /// 
         /// *   true
         /// *   false
@@ -22,16 +22,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? Async { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
         /// 
-        /// The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
+        /// The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The IDs of the ECS instances.
+        /// The IDs of the ECS instances. The value of this parameter can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID of the scaling group.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -54,6 +56,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

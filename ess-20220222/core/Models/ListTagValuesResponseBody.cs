@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ListTagValuesResponseBody : TeaModel {
         /// <summary>
-        /// The token that is returned for the next query.
+        /// The token that determines the start point of the next query. If this parameter is empty, all results are returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the tag values.
+        /// Details of the tag values.
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]

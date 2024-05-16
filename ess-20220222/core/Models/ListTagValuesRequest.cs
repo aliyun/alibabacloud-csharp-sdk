@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ListTagValuesRequest : TeaModel {
         /// <summary>
-        /// The key of the messages that you want to query.
+        /// The key of the tag.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the QueryInstanceByTag operation was called.
+        /// The token that determines the start point of the next query. If this parameter is empty, all results are returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -28,14 +30,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10. Maximum value: 100.
+        /// The number of entries to return on each page. Maximum value: 50.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the scaling group.
+        /// The region ID of the Auto Scaling resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -46,7 +52,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The type of the Auto Scaling resource. Only scaling groups are supported. Set the value to scalinggroup.
+        /// The type of the Auto Scaling resource. Set the value to scalinggroup. This indicates that the tag is added to a scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

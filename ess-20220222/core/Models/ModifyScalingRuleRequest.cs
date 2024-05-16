@@ -185,13 +185,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling rule that you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingRuleId")]
         [Validation(Required=false)]
         public string ScalingRuleId { get; set; }
 
         /// <summary>
-        /// The name of the scaling rule. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit. The name of a scaling rule must be unique in the scaling group to which the scaling rule belongs and within an Alibaba Cloud account.
+        /// The name of the scaling rule. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit. The name of a scaling rule must be unique in the scaling group to which the scaling rule belongs and within an Alibaba Cloud account.
         /// </summary>
         [NameInMap("ScalingRuleName")]
         [Validation(Required=false)]

@@ -55,6 +55,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling activity.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingActivityId")]
         [Validation(Required=false)]

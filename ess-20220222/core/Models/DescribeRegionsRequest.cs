@@ -10,12 +10,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The language used for the returned value. Valid values:
+        /// The language that is used as a filter condition to filter returned results. For more information, see [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
         /// 
-        /// *   **zh-CN**: Chinese.
-        /// *   **en-US**: English.
+        /// *   zh-CN: Chinese
+        /// *   en-US: English
+        /// *   ja: Japanese
         /// 
-        /// >  Default value: **zh-CN**.
+        /// Default value: en-US
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]

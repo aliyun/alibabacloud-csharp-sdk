@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DetachInstancesRequest : TeaModel {
         /// <summary>
-        /// 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](~~25965~~)。
+        /// 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](https://help.aliyun.com/document_detail/25965.html)。
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The IDs of the ECS instances or elastic container instances that you want to remove from the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -74,6 +76,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

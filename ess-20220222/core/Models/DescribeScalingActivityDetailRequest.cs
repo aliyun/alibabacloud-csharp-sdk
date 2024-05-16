@@ -22,7 +22,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the scaling activity.
+        /// The ID of the scaling activity that you want to query. You can call the DescribeScalingActivities operation to query the IDs of scaling activities.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingActivityId")]
         [Validation(Required=false)]

@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// 
         /// The ECS instances must meet the following requirements:
         /// 
-        /// *   The ECS instances and the scaling group must reside in the same region.
-        /// *   The ECS instances must be in the Running state.
-        /// *   The ECS instances are not added to other scaling groups.
-        /// *   The billing method of the ECS instances must be subscription or pay-as-you-go, or the ECS instances must be preemptible instances.
-        /// *   If you specify the VswitchID parameter for the scaling group, the ECS instances must reside in the same virtual private cloud (VPC) as the specified vSwitch. You cannot add the ECS instances that reside in the classic network or other VPCs to the scaling group.
-        /// *   If you do not specify the VswitchID parameter for the scaling group, you cannot add ECS instances that reside in VPCs to the scaling group.
+        /// *   The instances and the scaling group must reside in the same region.
+        /// *   The instances must be in the Running state.
+        /// *   The instances are not added to other scaling groups.
+        /// *   The instances must use the subscription or pay-as-you-go billing method or be preemptible instances.
+        /// *   If you specify the VswitchID parameter for the scaling group, the instances must reside in the same virtual private cloud (VPC) as the specified vSwitch. You cannot add instances that reside in the classic network or other VPCs to the scaling group.
+        /// *   If you do not specify the VswitchID parameter for the scaling group, you cannot add instances that reside in VPCs to the scaling group.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -40,27 +40,27 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// Details of the instance types that you specify by using the Extended Configurations feature of the launch template.
+        /// Details of the instance types that are specified in the extended configurations of the launch template.
         /// </summary>
         [NameInMap("LaunchTemplateOverrides")]
         [Validation(Required=false)]
         public List<EnableScalingGroupRequestLaunchTemplateOverrides> LaunchTemplateOverrides { get; set; }
         public class EnableScalingGroupRequestLaunchTemplateOverrides : TeaModel {
             /// <summary>
-            /// The instance type that you want to use to override the instance type that is specified in the launch template.
+            /// The instance type. The instance type that you specify by using the InstanceType parameter overwrites the instance type that is specified in the launch template.
             /// 
-            /// If you want to scale instances based on the weighted capacities of the instances, you must specify both the InstanceType and WeightedCapacity parameters.
+            /// If you want Auto Scaling to scale instances in the scaling group based on the instance type weight, you must specify both the InstanceType parameter and the WeightedCapacity parameter.
             /// 
-            /// > This parameter is supported only if you specify the LaunchTemplateId parameter.
+            /// > This parameter takes effect only after you specify the LaunchTemplateId parameter.
             /// 
-            /// You can specify an instance type that is available for purchase as the value of the InstanceType parameter.
+            /// You can use the InstanceType parameter to specify only instance types that are available for purchase.
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// The weight of the instance type. The weight specifies the capacity of a single instance of the specified instance type in the scaling group. If you want to scale instances based on the weighted capacities of the instances, you must specify the WeightedCapacity parameter after you specify the InstanceType parameter.
+            /// The weight of the instance type. The weight specifies the capacity of a single instance of the specified instance type in the scaling group. If you want Auto Scaling to scale instances in the scaling group based on the weighted capacity of instances, you must specify the WeightedCapacity parameter after you specify the InstanceType parameter.
             /// 
             /// A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.
             /// 
@@ -88,15 +88,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// The version number of the launch template. Valid values:
         /// 
         /// *   A fixed template version number.
-        /// *   Default: the default template version.
-        /// *   Latest: the latest template version.
+        /// *   Default: The default template version is always used.
+        /// *   Latest: The latest template version is always used.
         /// </summary>
         [NameInMap("LaunchTemplateVersion")]
         [Validation(Required=false)]
         public string LaunchTemplateVersion { get; set; }
 
         /// <summary>
-        /// The weight of an ECS instance as a backend server in the backend vServer group.
+        /// The weight of an ECS instance as a backend server in the associated vServer group.
         /// 
         /// Default value: 50.
         /// </summary>
@@ -129,6 +129,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

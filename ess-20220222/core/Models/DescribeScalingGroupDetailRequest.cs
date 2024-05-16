@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingGroupDetailRequest : TeaModel {
+        /// <summary>
+        /// The output format. Set the value to yaml.
+        /// </summary>
         [NameInMap("OutputFormat")]
         [Validation(Required=false)]
         public string OutputFormat { get; set; }
@@ -17,10 +20,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the scaling group. For more information, see the "Regions and zones" topic.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]
         public string ScalingGroupId { get; set; }

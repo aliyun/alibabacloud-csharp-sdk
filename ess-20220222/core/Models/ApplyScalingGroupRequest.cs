@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ApplyScalingGroupRequest : TeaModel {
+        /// <summary>
+        /// The content of the configuration file.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }

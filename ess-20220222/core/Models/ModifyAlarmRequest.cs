@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the event-triggered task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlarmTaskId")]
         [Validation(Required=false)]
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// 
         /// This parameter follows the cron expression format. The default format is `X X X X X ?`, in which:
         /// 
-        /// *   X: a placeholder for a field, which represents seconds, minutes, hours, days, and months in sequence. X can be a definite value or a special character that has logical meaning. For information about the valid values of X, see [Cron expression](~~25907~~).
+        /// *   X: a placeholder for a field, which represents seconds, minutes, hours, days, and months in sequence. X can be a definite value or a special character that has logical meaning. For information about the valid values of X, see [Cron expression](https://help.aliyun.com/document_detail/25907.html).
         /// *   ?: No value is specified.
         /// 
         /// > By default, the value of this parameter is specified in **UTC+8**. You can specify the time zone in the `TZ=+yy` format before a cron expression. y indicates the time zone. For example, `TZ=+00 * * 1-2 * * ?` specifies that the event-triggered task is in effect between 01:00 and 02:59 (UTC+0) every day.
@@ -169,7 +171,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             ///     *   EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.
             ///     *   EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.
             /// 
-            /// For more information, see [Event-triggered task for system monitoring](~~74854~~).
+            /// For more information, see [Event-triggered task for system monitoring](https://help.aliyun.com/document_detail/74854.html).
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
@@ -259,7 +261,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         ///     *   EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.
         ///     *   EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.
         /// 
-        /// For more information, see [Event-triggered task for system monitoring](~~74854~~).
+        /// For more information, see [Event-triggered task for system monitoring](https://help.aliyun.com/document_detail/74854.html).
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -303,6 +305,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The region ID of the event-triggered task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

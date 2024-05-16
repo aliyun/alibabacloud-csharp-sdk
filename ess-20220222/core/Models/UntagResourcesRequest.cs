@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The region ID of the Auto Scaling resource. You can call the DescribeRegions operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
@@ -45,6 +49,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The type of the resource. Only scaling groups are supported. Set the value to scalinggroup.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingActivityDetailResponseBody : TeaModel {
         /// <summary>
-        /// The details about the event.
+        /// Details of the scaling activity.
         /// </summary>
         [NameInMap("Detail")]
         [Validation(Required=false)]

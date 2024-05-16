@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// *   account-id: the ID of the Alibaba Cloud account.
         /// *   queuename: the name of the MNS queue.
         /// *   topicname: the name of the MNS topic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NotificationArn")]
         [Validation(Required=false)]
@@ -44,6 +46,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

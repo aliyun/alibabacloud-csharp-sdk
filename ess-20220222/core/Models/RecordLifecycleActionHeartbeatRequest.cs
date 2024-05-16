@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The token of the lifecycle hook. You can obtain this token by using a Message Service (MNS) queue or an MNS topic that is specified for the lifecycle hook.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("lifecycleActionToken")]
         [Validation(Required=false)]
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the lifecycle hook.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("lifecycleHookId")]
         [Validation(Required=false)]

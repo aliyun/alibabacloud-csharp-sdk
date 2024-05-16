@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
         /// 
-        /// The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
+        /// The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// *   scheduledaction
         /// 
         /// You can suspend five processes of the preceding types at the same time. If you try to suspend more than five processes at the same time, Auto Scaling automatically removes duplicate processes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Processes")]
         [Validation(Required=false)]
@@ -50,6 +52,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

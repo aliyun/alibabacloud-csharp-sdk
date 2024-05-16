@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
     public class DetachAlbServerGroupsRequest : TeaModel {
         /// <summary>
         /// Details of the ALB server groups.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlbServerGroups")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public class DetachAlbServerGroupsRequestAlbServerGroups : TeaModel {
             /// <summary>
             /// The ID of the ALB server group.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("AlbServerGroupId")]
             [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
             /// <summary>
             /// The port number used by the ECS instances in the ALB server group.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
@@ -35,7 +41,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
         /// 
-        /// The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25965~~).
+        /// The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -59,6 +65,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -70,6 +78,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

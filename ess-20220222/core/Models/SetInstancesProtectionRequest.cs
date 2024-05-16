@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
     public class SetInstancesProtectionRequest : TeaModel {
         /// <summary>
         /// The IDs of the ECS instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// 
         /// *   true
         /// *   false
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProtectedFromScaleIn")]
         [Validation(Required=false)]
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]

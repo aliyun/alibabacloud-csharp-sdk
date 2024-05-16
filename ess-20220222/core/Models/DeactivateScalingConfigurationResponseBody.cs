@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DeactivateScalingConfigurationResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ScaleWithAdjustmentShrinkRequest : TeaModel {
+        /// <summary>
+        /// The metadata of the scaling activity.
+        /// </summary>
         [NameInMap("ActivityMetadata")]
         [Validation(Required=false)]
         public string ActivityMetadata { get; set; }
@@ -19,6 +22,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// *   QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.
         /// *   PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.
         /// *   TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AdjustmentType")]
         [Validation(Required=false)]
@@ -30,6 +35,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// *   Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.
         /// *   Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.
         /// *   Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AdjustmentValue")]
         [Validation(Required=false)]
@@ -42,6 +49,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The context of the lifecycle hook.
+        /// </summary>
         [NameInMap("LifecycleHookContext")]
         [Validation(Required=false)]
         public string LifecycleHookContextShrink { get; set; }
@@ -53,6 +63,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public int? MinAdjustmentMagnitude { get; set; }
 
+        /// <summary>
+        /// The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out.
+        /// </summary>
         [NameInMap("Overrides")]
         [Validation(Required=false)]
         public string OverridesShrink { get; set; }
@@ -67,6 +80,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// The ID of the scaling group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]
@@ -78,7 +93,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// *   true: triggers the scaling activity in a synchronous manner. The scaling activity is triggered at the time when the scaling rule is executed.
         /// *   false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number of instances and determines whether to trigger the scaling activity based on the check result.
         /// 
-        /// > For more information about the Expected Number of Instances feature, see [Expected number of instances](~~146231~~).
+        /// > For more information about the Expected Number of Instances feature, see [Expected number of instances](https://help.aliyun.com/document_detail/146231.html).
         /// 
         /// Default value: false.
         /// </summary>
