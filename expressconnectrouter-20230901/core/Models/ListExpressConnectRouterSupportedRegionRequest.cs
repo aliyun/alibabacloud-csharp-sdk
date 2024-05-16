@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }

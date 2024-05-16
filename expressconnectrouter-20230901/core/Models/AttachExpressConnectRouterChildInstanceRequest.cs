@@ -12,6 +12,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class AttachExpressConnectRouterChildInstanceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChildInstanceId")]
         [Validation(Required=false)]
         public string ChildInstanceId { get; set; }
@@ -20,10 +23,16 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public long? ChildInstanceOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChildInstanceRegionId")]
         [Validation(Required=false)]
         public string ChildInstanceRegionId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChildInstanceType")]
         [Validation(Required=false)]
         public string ChildInstanceType { get; set; }
@@ -36,6 +45,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EcrId")]
         [Validation(Required=false)]
         public string EcrId { get; set; }

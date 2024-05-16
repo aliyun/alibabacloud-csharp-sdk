@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class CreateExpressConnectRouterRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AlibabaSideAsn")]
         [Validation(Required=false)]
         public long? AlibabaSideAsn { get; set; }
@@ -32,6 +35,20 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateExpressConnectRouterRequestTags> Tags { get; set; }
+        public class CreateExpressConnectRouterRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

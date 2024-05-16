@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
         public string DestinationCidrBlock { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EcrId")]
         [Validation(Required=false)]
         public string EcrId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("NexthopInstanceId")]
         [Validation(Required=false)]
         public string NexthopInstanceId { get; set; }

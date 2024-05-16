@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EcrId")]
         [Validation(Required=false)]
         public string EcrId { get; set; }
