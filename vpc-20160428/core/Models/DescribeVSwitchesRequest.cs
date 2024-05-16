@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("EnableIpv6")]
+        [Validation(Required=false)]
+        public bool? EnableIpv6 { get; set; }
+
         /// <summary>
         /// Specifies whether to query the default vSwitches in the specified region. Valid values:
         /// 
