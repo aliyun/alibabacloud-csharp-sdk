@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteLineageRelationRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DestEntityQualifiedName")]
         [Validation(Required=false)]
         public string DestEntityQualifiedName { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string RelationshipGuid { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SrcEntityQualifiedName")]
         [Validation(Required=false)]
         public string SrcEntityQualifiedName { get; set; }

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetOpSensitiveDataRequest : TeaModel {
         /// <summary>
         /// The date on which access records were generated. Specify the value in the yyyyMMdd format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Date")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// {"dbType":"hologres","instanceName":"ABC","databaseName":"abc"}
         /// 
         /// You must specify the parameters based on the compute engine that you use in your business.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -47,6 +51,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of the page to return. Minimum value:1. Maximum value: 1000.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of entries to return on each page. Minimum value: 1. Maximum value: 1000.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

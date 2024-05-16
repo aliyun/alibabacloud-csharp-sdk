@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class DeleteFromMetaCategoryRequest : TeaModel {
         /// <summary>
         /// The ID of the category.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The GUID of the metatable.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]

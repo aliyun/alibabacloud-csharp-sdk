@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// 
         /// *   true: The request is successful.
         /// *   false: The request fails.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The type of the node. A value of DI_REALTIME indicates that the node is a real-time synchronization node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the real-time synchronization node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

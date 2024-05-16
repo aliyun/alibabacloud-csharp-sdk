@@ -12,6 +12,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// *   If you set the TaskType parameter to DI_REALTIME, the StartParam parameter specifies the startup parameters for the real-time synchronization node. The startup parameters include failover-related parameters, the parameter that specifies the number of dirty data records allowed, and the parameters in the data definition language (DDL) statements.
         /// *   If you set the TaskType parameter to DI_SOLUTION, the StartParam parameter does not take effect.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// 
         /// *   DI_REALTIME: real-time synchronization node
         /// *   DI_SOLUTION: data synchronization solution
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// *   If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to start.
         /// *   If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to start.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

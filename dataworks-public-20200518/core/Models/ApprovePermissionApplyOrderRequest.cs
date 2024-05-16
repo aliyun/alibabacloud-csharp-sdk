@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// 
         /// *   1: Approve the permission request order.
         /// *   2: Reject the permission request order.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApproveAction")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The comment on the approval.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApproveComment")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FlowId")]
         [Validation(Required=false)]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the collection creator.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CollectionType")]
         [Validation(Required=false)]

@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteQualityFollowerRequest : TeaModel {
         /// <summary>
-        /// The ID of the subscription relationship between the partition filter expression and the subscriber. You can call the [GetQualityFollower](~~174000~~) operation to obtain the ID of the subscription relationship.
+        /// The ID of the subscription relationship between the partition filter expression and the subscriber. You can call the [GetQualityFollower](https://help.aliyun.com/document_detail/174000.html) operation to obtain the ID of the subscription relationship.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FollowerId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the compute engine or data source for which the partition filter expression is configured. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Monitoring Rules page of Data Quality to obtain the name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]

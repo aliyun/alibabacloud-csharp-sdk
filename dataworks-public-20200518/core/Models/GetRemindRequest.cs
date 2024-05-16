@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetRemindRequest : TeaModel {
         /// <summary>
         /// The ID of the custom alert rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RemindId")]
         [Validation(Required=false)]

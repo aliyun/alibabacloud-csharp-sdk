@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
         /// 
         /// You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The keyword based on which metatables are queried. During the query, the system tokenizes the names of metatables and matches the names with the keyword. If no name is matched, an empty result is returned. By default, the system uses underscores (\_) to tokenize the names.
+        /// The keyword based on which metatables are queried. During the query, the system tokenizes the names of metatables and matches the names with the keyword. If no name is matched, an empty result is returned. By default, the system uses underscores (_) to tokenize the names.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class RemoveProjectMemberFromRoleRequest : TeaModel {
         /// <summary>
         /// The ID of the DataWorks workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -24,12 +26,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// *   role_project_owner: workspace owner
         /// *   role_project_admin: workspace administrator
         /// *   role_project_dev: developer
-        /// *   role_project_pe: O\&M engineer
+        /// *   role_project_pe: O\\&M engineer
         /// *   role_project_deploy: deployment expert
         /// *   role_project_guest: visitor
         /// *   role_project_security: security administrator
         /// *   role_project_tester: experiencer
         /// *   role_project_erd: model designer
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RoleCode")]
         [Validation(Required=false)]
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

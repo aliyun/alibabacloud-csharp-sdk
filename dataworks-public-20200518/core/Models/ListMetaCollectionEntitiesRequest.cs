@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// The type of the entities.
         /// 
         /// For example, if this parameter is set to maxcompute-table, the entity is a MaxCompute table.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CollectionQualifiedName")]
         [Validation(Required=false)]

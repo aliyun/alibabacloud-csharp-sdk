@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ImportDataSourcesRequest : TeaModel {
         /// <summary>
-        /// The configurations of the data sources to be imported. The Name, DataSourceType, SubType, Description, Content, and EnvType fields are required. For more information about the fields, see [CreateDataSource](~~211429~~).
+        /// The configurations of the data sources to be imported. The Name, DataSourceType, SubType, Description, Content, and EnvType fields are required. For more information about the fields, see [CreateDataSource](https://help.aliyun.com/document_detail/211429.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataSources")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

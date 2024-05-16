@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public QueryDISyncTaskConfigProcessResultResponseBodyData Data { get; set; }
         public class QueryDISyncTaskConfigProcessResultResponseBodyData : TeaModel {
             /// <summary>
-            /// The parameters that are obtained. The parameters are used as the request parameters of the [CreateDISyncTask](~~278725~~) or [UpdateDISyncTask](~~289109~~) operation to create or update a real-time synchronization node or a synchronization solution in Data Integration.
+            /// The parameters that are obtained. The parameters are used as the request parameters of the [CreateDISyncTask](https://help.aliyun.com/document_detail/278725.html) or [UpdateDISyncTask](https://help.aliyun.com/document_detail/289109.html) operation to create or update a real-time synchronization node or a synchronization solution in Data Integration.
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

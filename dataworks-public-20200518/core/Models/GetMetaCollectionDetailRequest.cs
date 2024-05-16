@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetMetaCollectionDetailRequest : TeaModel {
         /// <summary>
         /// The unique identifier of the collection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("QualifiedName")]
         [Validation(Required=false)]

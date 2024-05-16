@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Partition")]
         [Validation(Required=false)]

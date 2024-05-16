@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class QueryRecognizeRuleDetailRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SensitiveName")]
         [Validation(Required=false)]
         public string SensitiveName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }

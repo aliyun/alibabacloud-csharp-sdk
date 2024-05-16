@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class CreateDataServiceGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the API group that is associated with the business process in the API Gateway console. You can log on to the API Gateway console and go to the Group Details page to view the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiGatewayGroupId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the business process.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

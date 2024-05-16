@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class UpdateQualityFollowerRequest : TeaModel {
         /// <summary>
         /// The notification method. Valid values: 1, 2, 4, and 5. 1 indicates that the notification is sent by email. 2 indicates that the notification is sent by email and text message. 4 indicates that the notification is sent by a DingTalk chatbot. 5 indicates that the notification is sent by a DingTalk chatbot to all members in a DingTalk group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AlarmMode")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the subscriber.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Follower")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the subscription relationship.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FollowerId")]
         [Validation(Required=false)]
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the computing engine instance or data source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]

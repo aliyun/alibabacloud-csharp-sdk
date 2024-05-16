@@ -95,6 +95,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The time when the node was last modified.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]
@@ -102,6 +104,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the baseline.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

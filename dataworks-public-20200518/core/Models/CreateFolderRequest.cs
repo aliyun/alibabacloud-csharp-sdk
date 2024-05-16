@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class CreateFolderRequest : TeaModel {
         /// <summary>
         /// The HTTP status code returned.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FolderPath")]
         [Validation(Required=false)]

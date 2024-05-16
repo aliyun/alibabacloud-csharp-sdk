@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class CreateQualityRelativeNodeRequest : TeaModel {
         /// <summary>
         /// The type of the compute engine instance or data source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The partition filter expression.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MatchExpression")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -39,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the compute engine instance or data source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -46,6 +56,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the table.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]
@@ -53,6 +65,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the workspace to which the node to be associated with the partition filter expression belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetNodeProjectId")]
         [Validation(Required=false)]
@@ -60,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the workspace to which the node to be associated with the partition filter expression belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetNodeProjectName")]
         [Validation(Required=false)]

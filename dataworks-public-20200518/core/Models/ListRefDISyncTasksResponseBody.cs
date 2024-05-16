@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// The destination data source of the sync node.
                 /// 
-                /// If the sync node has multiple destination data sources, the return value is a JSON array, such as \\"odps_writer\\", \\"mysql\\".
+                /// If the sync node has multiple destination data sources, the return value is a JSON array, such as \\\\"odps_writer\\\\", \\\\"mysql\\\\".
                 /// 
                 /// If the RefType parameter is set to to, the sync nodes that use the specified data source as the destination data source are returned. In this case, the value of this parameter indicates the specified data source.
                 /// </summary>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// The source data source of the sync node.
                 /// 
-                /// If the sync node has multiple source data sources, the return value is a JSON array, such as \\"odps_writer\\", \\"mysql\\".
+                /// If the sync node has multiple source data sources, the return value is a JSON array, such as \\\\"odps_writer\\\\", \\\\"mysql\\\\".
                 /// 
                 /// If the RefType parameter is set to from, the sync nodes that use the specified data source as the source data source are returned. In this case, the value of this parameter indicates the specified data source.
                 /// </summary>

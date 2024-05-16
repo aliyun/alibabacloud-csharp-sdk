@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListEntitiesByTagsShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }

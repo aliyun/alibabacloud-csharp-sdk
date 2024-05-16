@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// The name of the role.
                     /// 
-                    /// DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).
+                    /// DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](https://help.aliyun.com/document_detail/295463.html).
                     /// </summary>
                     [NameInMap("ProjectRoleId")]
                     [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// The code of the role.
                     /// 
-                    /// DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).
+                    /// DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](https://help.aliyun.com/document_detail/295463.html).
                     /// </summary>
                     [NameInMap("ProjectRoleType")]
                     [Validation(Required=false)]

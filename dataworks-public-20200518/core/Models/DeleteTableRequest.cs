@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the MaxCompute table.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]

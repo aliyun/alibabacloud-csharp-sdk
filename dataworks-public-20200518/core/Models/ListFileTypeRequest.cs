@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -36,6 +38,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of entries to return on each page. Maximum value: 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -9,17 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreatePermissionApplyOrderRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ApplyObject")]
         [Validation(Required=false)]
         public List<CreatePermissionApplyOrderRequestApplyObject> ApplyObject { get; set; }
         public class CreatePermissionApplyOrderRequestApplyObject : TeaModel {
             /// <summary>
             /// The permission that you want to request. If you want to request multiple permissions at the same time, separate them with commas (,). You can request only the following permissions: Select, Describe, Drop, Alter, Update, and Download.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Actions")]
             [Validation(Required=false)]
             public string Actions { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("ColumnMetaList")]
             [Validation(Required=false)]
             public List<CreatePermissionApplyOrderRequestApplyObjectColumnMetaList> ColumnMetaList { get; set; }
@@ -28,6 +36,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// The name of the field on which you want to request permissions. If you want to request permissions on an entire table, enter the names of all fields in the table.
                 /// 
                 /// You can request permissions on specific fields of a table in a MaxCompute project only after LabelSecurity is enabled for this project. If LabelSecurity is disabled, you can request permissions only on an entire table.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -37,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// The name of the object on which you want to request permissions. You can request permissions only on MaxCompute tables. Set this parameter to the name of the table on which you want to request permissions.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -46,6 +58,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The reason for your request. The administrator determines whether to approve the request based on the reason.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplyReason")]
         [Validation(Required=false)]
@@ -53,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the Alibaba Cloud account for which you want to request permissions. If you want to request permissions for multiple Alibaba Cloud accounts, separate the IDs of the accounts with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplyUserIds")]
         [Validation(Required=false)]
@@ -80,6 +96,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the MaxCompute project in which you request permissions on the fields of a table.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxComputeProjectName")]
         [Validation(Required=false)]
@@ -94,6 +112,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the DataWorks workspace that is associated with the MaxCompute project in which you want to request permissions on the fields of a table. You can go to the Workspace Management page in the DataWorks console to view the workspace ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

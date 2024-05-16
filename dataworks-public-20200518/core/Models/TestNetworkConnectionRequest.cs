@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class TestNetworkConnectionRequest : TeaModel {
         /// <summary>
         /// The name of the data source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatasourceName")]
         [Validation(Required=false)]
@@ -21,20 +23,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// 
         /// *   0: development environment
         /// *   1: production environment
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public string EnvType { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.
+        /// The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to query the ID of the workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The identifier of the resource group. You can call the [ListResourceGroups](~~173913~~) operation to query the identifier of the resource group.
+        /// The identifier of the resource group. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/173913.html) operation to query the identifier of the resource group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]

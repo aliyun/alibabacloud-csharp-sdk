@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class ListShiftPersonnelsRequest : TeaModel {
         /// <summary>
         /// The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the request. You can use the ID to troubleshoot issues.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The type of on-duty engineers that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ShiftScheduleIdentifier")]
         [Validation(Required=false)]

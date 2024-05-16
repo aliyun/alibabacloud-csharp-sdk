@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public class UpdateTableRequestColumns : TeaModel {
             /// <summary>
             /// The comment of the field.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ColumnName")]
             [Validation(Required=false)]
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// The sequence number of the field. If the field is a partition field, this parameter is not supported.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ColumnType")]
             [Validation(Required=false)]
@@ -182,6 +186,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The endpoint of MaxCompute. If this parameter is left empty, the endpoint of the MaxCompute project is used.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]

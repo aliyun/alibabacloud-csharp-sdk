@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The engine or data source type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The partition expression.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MatchExpression")]
         [Validation(Required=false)]
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the maxcompute project or data source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -43,6 +49,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the table.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]

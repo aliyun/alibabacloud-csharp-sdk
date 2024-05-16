@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetBusinessRequest : TeaModel {
         /// <summary>
-        /// The ID of the workflow. You can call the [ListBusiness](~~173945~~) operation to query the ID.
+        /// The ID of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BusinessId")]
         [Validation(Required=false)]

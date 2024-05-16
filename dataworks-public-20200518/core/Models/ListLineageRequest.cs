@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListLineageRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
         public string Direction { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EntityQualifiedName")]
         [Validation(Required=false)]
         public string EntityQualifiedName { get; set; }

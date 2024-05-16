@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ModifyUser { get; set; }
 
             /// <summary>
-            /// The parameter settings of the extension. For more information, see [Configure extension parameters](~~405354~~).
+            /// The parameter settings of the extension. For more information, see [Configure extension parameters](https://help.aliyun.com/document_detail/405354.html).
             /// </summary>
             [NameInMap("Owner")]
             [Validation(Required=false)]

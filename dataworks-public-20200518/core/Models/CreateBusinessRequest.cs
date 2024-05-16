@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateBusinessRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BusinessName")]
         [Validation(Required=false)]
         public string BusinessName { get; set; }

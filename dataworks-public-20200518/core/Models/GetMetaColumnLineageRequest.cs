@@ -46,6 +46,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// Specifies whether to query the ancestor or descendant lineage of the field. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]

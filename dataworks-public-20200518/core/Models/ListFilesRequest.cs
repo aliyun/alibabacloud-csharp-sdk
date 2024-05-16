@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? NeedContent { get; set; }
 
         /// <summary>
-        /// The ID of the node that is scheduled. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.
+        /// The ID of the node that is scheduled. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID of the node.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

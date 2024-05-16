@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the workspace based on which you want to query the basic information of applications. You can specify multiple IDs. Separate them with commas (,). You must specify at least one workspace ID. You can specify a maximum of 50 workspace IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectIdList")]
         [Validation(Required=false)]

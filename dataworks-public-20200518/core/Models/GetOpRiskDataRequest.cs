@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetOpRiskDataRequest : TeaModel {
         /// <summary>
         /// The date on which the access records were queried. Specify the value in the yyyyMMdd format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Date")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of the page to return. Minimum value: 1.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of entries to return on each page. Maximum value: 1000.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

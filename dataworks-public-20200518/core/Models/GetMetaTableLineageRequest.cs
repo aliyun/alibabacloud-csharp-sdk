@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of entries to return on each page. Default value: 10. Maximum value: 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]

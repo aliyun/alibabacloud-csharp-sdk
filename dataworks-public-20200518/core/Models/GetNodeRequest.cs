@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetNodeRequest : TeaModel {
         /// <summary>
         /// The interval at which the node is rerun after the node fails to run.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The priority of the node. Valid values: 1, 3, 5, 7, and 8.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]

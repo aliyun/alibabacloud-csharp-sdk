@@ -30,12 +30,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
         public List<CreateTableRequestColumns> Columns { get; set; }
         public class CreateTableRequestColumns : TeaModel {
             /// <summary>
             /// The comment of the field.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ColumnName")]
             [Validation(Required=false)]
@@ -54,6 +59,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// The sequence number of the field. You can use this parameter to specify how fields are sorted in a table. By default, fields are sorted in the order in which requests are created.
             /// 
             /// If the field is a partition field, this parameter is not supported.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ColumnType")]
             [Validation(Required=false)]
@@ -141,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? IsView { get; set; }
 
         /// <summary>
-        /// The ID of the associated category. You can call the [GetMetaCategory](~~173932~~) operation to query the ID of the category that can be associated.
+        /// The ID of the associated category. You can call the [GetMetaCategory](https://help.aliyun.com/document_detail/173932.html) operation to query the ID of the category that can be associated.
         /// </summary>
         [NameInMap("LifeCycle")]
         [Validation(Required=false)]
@@ -193,6 +200,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The endpoint of MaxCompute.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]

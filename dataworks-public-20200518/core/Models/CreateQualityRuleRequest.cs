@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class CreateQualityRuleRequest : TeaModel {
         /// <summary>
         /// The strength of the monitoring rule. Valid values: 0 and 1. 0 indicates that the monitoring rule is a weak rule. 1 indicates that the monitoring rule is a strong rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BlockType")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the partition filter expression.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EntityId")]
         [Validation(Required=false)]
@@ -67,6 +71,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// Specifies whether the monitoring rule is a dynamic threshold rule. Valid values: 0 and 2. 0 indicates that the monitoring rule is not a dynamic threshold rule. 2 indicates that the monitoring rule is a dynamic threshold rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PredictType")]
         [Validation(Required=false)]
@@ -78,6 +84,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the compute engine instance or data source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -99,6 +107,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the monitoring rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
@@ -106,6 +116,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The type of the monitoring rule. Valid values: 0, 1, and 2. 0 indicates that the monitoring rule is created by the system. 1 indicates that the monitoring rule is created by a user. 2 indicates that the monitoring rule is a workspace-level rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]

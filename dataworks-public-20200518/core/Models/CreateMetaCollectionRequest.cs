@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class CreateMetaCollectionRequest : TeaModel {
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CollectionType")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// The comment of the collection.
         /// 
         /// The comment must be 1 to 64 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

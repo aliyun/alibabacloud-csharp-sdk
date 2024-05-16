@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// The name of the metadatabase of the EMR cluster. You can call the [ListMetaDB](~~185662~~) operation to query the name of the metadatabase.
+        /// The name of the metadatabase of the EMR cluster. You can call the [ListMetaDB](https://help.aliyun.com/document_detail/185662.html) operation to query the name of the metadatabase.
         /// </summary>
         [NameInMap("DatabaseName")]
         [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The GUID of the metatable. You can call the [GetMetaDBTableList](~~173916~~) operation to query the GUID of the metatable.
+        /// The GUID of the metatable. You can call the [GetMetaDBTableList](https://help.aliyun.com/document_detail/173916.html) operation to query the GUID of the metatable.
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]
         public string TableGuid { get; set; }
 
         /// <summary>
-        /// The name of the metatable in the EMR cluster. You can call the [GetMetaDBTableList](~~173916~~) operation to query the name of the metatable.
+        /// The name of the metatable in the EMR cluster. You can call the [GetMetaDBTableList](https://help.aliyun.com/document_detail/173916.html) operation to query the name of the metatable.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]

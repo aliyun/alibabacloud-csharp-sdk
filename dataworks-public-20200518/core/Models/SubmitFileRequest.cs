@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The description of the commit operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The ID of the file. You can call the [ListFiles](~~173942~~) operation to query the ID.
+        /// The ID of the file. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID.
         /// </summary>
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]

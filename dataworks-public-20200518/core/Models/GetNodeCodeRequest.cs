@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetNodeCodeRequest : TeaModel {
         /// <summary>
         /// The ID of the node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The environment of the workspace. Valid values: PROD and DEV.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]

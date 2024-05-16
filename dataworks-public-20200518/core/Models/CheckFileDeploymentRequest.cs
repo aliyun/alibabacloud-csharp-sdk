@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the instance to which the file checker belongs. You can obtain the ID from the CheckerInstanceId parameter in the check event logs returned by DataWorks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CheckerInstanceId")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// *   OK: The file passes the check.
         /// *   WARN: The file passes the check, but an alert is reported.
         /// *   FAIL: The file fails the check.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

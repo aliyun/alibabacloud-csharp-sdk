@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDeploymentRequest : TeaModel {
         /// <summary>
-        /// The ID of the deployment task. A deployment task ID is generated when you call the [SubmitFile](~~173944~~) or [DeployFile](~~173956~~) operation.
+        /// The ID of the deployment task. A deployment task ID is generated when you call the [SubmitFile](https://help.aliyun.com/document_detail/173944.html) or [DeployFile](https://help.aliyun.com/document_detail/173956.html) operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DeploymentId")]
         [Validation(Required=false)]

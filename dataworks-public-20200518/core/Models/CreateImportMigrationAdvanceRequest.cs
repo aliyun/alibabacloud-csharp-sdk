@@ -44,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the import task. The name must be unique within the workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -53,6 +55,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// The path of the import package.
         /// 
         /// **The import package must be uploaded. Example of the upload method:**`  Config config = new Config(); config.setAccessKeyId(accessId); config.setAccessKeySecret(accessKey); config.setEndpoint(popEndpoint); config.setRegionId(regionId); Client client = new Client(config); CreateImportMigrationAdvanceRequest request = new CreateImportMigrationAdvanceRequest(); request.setName("test_migration_api_" + System.currentTimeMillis()); request.setProjectId(123456L); request.setPackageType("DATAWORKS_MODEL"); request.setPackageFileObject(new FileInputStream("/home/admin/Downloads/test.zip")); RuntimeOptions runtime = new RuntimeOptions(); CreateImportMigrationResponse response = client.createImportMigrationAdvance(request, runtime); ... `
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PackageFile")]
         [Validation(Required=false)]
@@ -64,6 +68,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// *   DATAWORKS_MODEL (standard format)
         /// *   DATAWORKS_V2 (Apsara Stack DataWorks V3.6.1 to V3.11)
         /// *   DATAWORKS_V3 (Apsara Stack DataWorks V3.12 and later)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PackageType")]
         [Validation(Required=false)]
@@ -71,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

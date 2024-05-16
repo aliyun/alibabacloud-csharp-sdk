@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of entries to return on each page. Default value: 10. Maximum value: 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateDataSourceRequest : TeaModel {
         /// <summary>
-        /// The ID of the data source that you want to update. You can call the [ListDataSources](~~211431~~) operation to obtain the ID.
+        /// The ID of the data source that you want to update. You can call the [ListDataSources](https://help.aliyun.com/document_detail/211431.html) operation to obtain the ID.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// Indicates whether the data source is updated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
@@ -138,7 +140,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// ```
         /// 
         /// {
-        ///   "address": "[\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\"]",
+        ///   "address": "[\\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\\"]",
         ///   "database": "admin",
         ///   "password": "sadsda@",
         ///   "tag": "public",

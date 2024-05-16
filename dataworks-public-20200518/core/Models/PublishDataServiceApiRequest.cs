@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class PublishDataServiceApiRequest : TeaModel {
         /// <summary>
-        /// The ID of the API. You can call the [ListDataServiceApis](~~174009~~) operation to obtain the ID.
+        /// The ID of the API. You can call the [ListDataServiceApis](https://help.aliyun.com/document_detail/174009.html) operation to obtain the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

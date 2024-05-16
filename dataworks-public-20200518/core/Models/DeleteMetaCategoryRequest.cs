@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class DeleteMetaCategoryRequest : TeaModel {
         /// <summary>
         /// The ID of the category.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CategoryId")]
         [Validation(Required=false)]

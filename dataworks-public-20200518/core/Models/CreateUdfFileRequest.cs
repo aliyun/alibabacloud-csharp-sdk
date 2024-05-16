@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class CreateUdfFileRequest : TeaModel {
         /// <summary>
         /// The name of the class in which the function is defined. This parameter corresponds to the Class Name parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClassName")]
         [Validation(Required=false)]
@@ -43,6 +45,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the file for the function.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The type of the function. Valid values: MATH, AGGREGATE, STRING, DATE, ANALYTIC, and OTHER. This parameter corresponds to the Function Type parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FunctionType")]
         [Validation(Required=false)]
@@ -80,6 +86,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The names of the resources that are referenced by the function. This parameter corresponds to the Resources parameter in the Register Function section of the configuration tab of the function in the DataWorks console. Multiple resource names are separated by commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

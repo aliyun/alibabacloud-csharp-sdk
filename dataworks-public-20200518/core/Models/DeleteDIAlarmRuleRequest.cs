@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteDIAlarmRuleRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DIAlarmRuleId")]
         [Validation(Required=false)]
         public long? DIAlarmRuleId { get; set; }

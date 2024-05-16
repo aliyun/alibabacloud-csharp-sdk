@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetExtensionRequest : TeaModel {
         /// <summary>
         /// The unique code of the extension.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExtensionCode")]
         [Validation(Required=false)]

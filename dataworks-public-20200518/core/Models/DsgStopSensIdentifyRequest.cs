@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgStopSensIdentifyRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public long? JobId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }

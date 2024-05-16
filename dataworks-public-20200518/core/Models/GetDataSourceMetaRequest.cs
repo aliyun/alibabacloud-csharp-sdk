@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetDataSourceMetaRequest : TeaModel {
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatasourceName")]
         [Validation(Required=false)]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the data source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

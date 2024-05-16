@@ -64,7 +64,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace to which the data sources belong. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.
+        /// The ID of the DataWorks workspace to which the data sources belong. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to query the ID of the workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

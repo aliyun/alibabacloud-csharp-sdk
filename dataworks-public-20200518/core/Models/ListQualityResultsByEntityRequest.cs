@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class ListQualityResultsByEntityRequest : TeaModel {
         /// <summary>
         /// The name of the compute engine instance or data source. You can obtain the name from data source configurations.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of entries to return on each page. Default value: 10. Maximum value: 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EntityId")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The error message returned.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The HTTP status code returned.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -43,6 +51,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

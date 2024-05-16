@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetFileRequest : TeaModel {
         /// <summary>
-        /// The ID of the file. You can call the [ListFiles](~~173942~~) operation to obtain the ID.
+        /// The ID of the file. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to obtain the ID.
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
         public long? FileId { get; set; }
 
         /// <summary>
-        /// The ID of the node that is scheduled. You can call the [ListFiles](~~173942~~) operation to obtain the node ID.
+        /// The ID of the node that is scheduled. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to obtain the node ID.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

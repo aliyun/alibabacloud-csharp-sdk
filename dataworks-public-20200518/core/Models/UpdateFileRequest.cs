@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? AutoRerunTimes { get; set; }
 
         /// <summary>
-        /// The name of the connected data source that is used to run the node. You can call the [ListDataSources](~~211431~~) operation to query the available data sources of the workspace.
+        /// The name of the connected data source that is used to run the node. You can call the [ListDataSources](https://help.aliyun.com/document_detail/211431.html) operation to query the available data sources of the workspace.
         /// </summary>
         [NameInMap("ConnectionName")]
         [Validation(Required=false)]
@@ -140,7 +140,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FileFolderPath { get; set; }
 
         /// <summary>
-        /// The ID of the file. You can call the [ListFiles](~~173942~~) operation to obtain the ID.
+        /// The ID of the file. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to obtain the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
@@ -149,7 +151,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// The name of the file. You can set the FileName parameter to a new value to change the file name.
         /// 
-        /// You can call the [ListFiles](~~173942~~) operation to query the ID of the file whose name you want to change. Then, you can set the FileId parameter to the ID and set the FileName parameter to a new value when you call the [UpdateFile](~~173951~~) operation.
+        /// You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID of the file whose name you want to change. Then, you can set the FileId parameter to the ID and set the FileName parameter to a new value when you call the [UpdateFile](https://help.aliyun.com/document_detail/173951.html) operation.
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
@@ -169,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string InputList { get; set; }
 
         /// <summary>
-        /// The input parameters of the node. This parameter is configured in the JSON format. For more information about the input parameters, refer to the InputContextParameterList parameter in the Response parameters section of the [GetFile](~~173954~~) operation.
+        /// The input parameters of the node. This parameter is configured in the JSON format. For more information about the input parameters, refer to the InputContextParameterList parameter in the Response parameters section of the [GetFile](https://help.aliyun.com/document_detail/173954.html) operation.
         /// 
         /// This parameter corresponds to the Input Parameters table in the Input and Output Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
         /// </summary>
@@ -187,7 +189,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string OutputList { get; set; }
 
         /// <summary>
-        /// The output parameters of the node. This parameter is configured in the JSON format. For more information about the output parameters, refer to the OutputContextParameterList parameter in the Response parameters section of the [GetFile](~~173954~~) operation.
+        /// The output parameters of the node. This parameter is configured in the JSON format. For more information about the output parameters, refer to the OutputContextParameterList parameter in the Response parameters section of the [GetFile](https://help.aliyun.com/document_detail/173954.html) operation.
         /// 
         /// This parameter corresponds to the Output Parameters table in the Input and Output Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
         /// </summary>
@@ -205,7 +207,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// The scheduling parameters of the node.
         /// 
-        /// This parameter corresponds to the Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information, see [Configure scheduling parameters](~~137548~~).
+        /// This parameter corresponds to the Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information, see [Configure scheduling parameters](https://help.aliyun.com/document_detail/137548.html).
         /// </summary>
         [NameInMap("ParaValue")]
         [Validation(Required=false)]
@@ -241,7 +243,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RerunMode { get; set; }
 
         /// <summary>
-        /// The identifier of the resource group that is used to run the node. You can call the [ListResourceGroups](~~173913~~) operation to query the available resource groups in the workspace.
+        /// The identifier of the resource group that is used to run the node. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/173913.html) operation to query the available resource groups in the workspace.
         /// </summary>
         [NameInMap("ResourceGroupIdentifier")]
         [Validation(Required=false)]

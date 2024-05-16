@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RegisterLineageRelationShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("LineageRelationRegisterVO")]
         [Validation(Required=false)]
         public string LineageRelationRegisterVOShrink { get; set; }

@@ -65,6 +65,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// *   analyticdb_for_mysql
         /// *   hybriddb_for_postgresql
         /// *   holo
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

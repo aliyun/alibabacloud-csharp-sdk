@@ -17,18 +17,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string FileDescription { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FileFolderPath")]
         [Validation(Required=false)]
         public string FileFolderPath { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FileType")]
         [Validation(Required=false)]
         public int? FileType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OriginResourceName")]
         [Validation(Required=false)]
         public string OriginResourceName { get; set; }
@@ -37,10 +49,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string Owner { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegisterToCalcEngine")]
         [Validation(Required=false)]
         public bool? RegisterToCalcEngine { get; set; }

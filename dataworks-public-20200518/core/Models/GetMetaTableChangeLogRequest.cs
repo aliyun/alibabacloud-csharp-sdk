@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.projectName.tableName. You can call the [GetMetaDBTableList](~~173916~~) operation to query the GUID of the table.
+        /// The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.projectName.tableName. You can call the [GetMetaDBTableList](https://help.aliyun.com/document_detail/173916.html) operation to query the GUID of the table.
         /// 
-        /// >  To query the change logs of a MaxCompute table, you must call the [GetMetaTableChangeLog](~~173925~~) operation.
+        /// >  To query the change logs of a MaxCompute table, you must call the [GetMetaTableChangeLog](https://help.aliyun.com/document_detail/173925.html) operation.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -61,6 +61,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The entity on which the change is made. Valid values: TABLE and PARTITION.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]

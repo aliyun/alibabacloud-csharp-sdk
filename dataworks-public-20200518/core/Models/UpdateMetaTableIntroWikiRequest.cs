@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class UpdateMetaTableIntroWikiRequest : TeaModel {
         /// <summary>
         /// The details of the instructions on how to use the metatable.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The GUID of the metatable. Specify the GUID in the format of odps.{projectName}.{tableName}.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]

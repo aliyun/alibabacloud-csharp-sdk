@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// The permissions that you want to revoke. Separate multiple permissions with commas (,).
         /// 
         /// You can revoke only the SELECT, DESCRIBE, and DOWNLOAD permissions on MaxCompute tables.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Actions")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the MaxCompute project to which the table belongs. You can log on to the DataWorks console and go to the Workspace Management page to obtain the MaxCompute project name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxComputeProjectName")]
         [Validation(Required=false)]
@@ -47,7 +51,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RevokeUserName { get; set; }
 
         /// <summary>
-        /// The name of the MaxCompute table. You can call the [SearchMetaTables](~~173919~~) operation to query the table name.
+        /// The name of the MaxCompute table. You can call the [SearchMetaTables](https://help.aliyun.com/document_detail/173919.html) operation to query the table name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]
@@ -55,6 +61,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the DataWorks workspace with which the MaxCompute project is associated. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

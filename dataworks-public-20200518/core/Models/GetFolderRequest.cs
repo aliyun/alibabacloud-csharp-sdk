@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetFolderRequest : TeaModel {
         /// <summary>
-        /// The ID of the folder. You can call the [ListFolders](~~173955~~) operation to query the ID.
+        /// The ID of the folder. You can call the [ListFolders](https://help.aliyun.com/document_detail/173955.html) operation to query the ID.
         /// 
         /// You must specify either this parameter or the FolderPath parameter.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FolderId { get; set; }
 
         /// <summary>
-        /// The path of the folder. You can call the [ListFolders](~~173955~~) operation to query the path.
+        /// The path of the folder. You can call the [ListFolders](https://help.aliyun.com/document_detail/173955.html) operation to query the path.
         /// 
         /// You must specify either this parameter or the FolderId parameter.
         /// </summary>

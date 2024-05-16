@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetTopicRequest : TeaModel {
         /// <summary>
         /// The ID of the request. You can troubleshoot issues based on the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TopicId")]
         [Validation(Required=false)]

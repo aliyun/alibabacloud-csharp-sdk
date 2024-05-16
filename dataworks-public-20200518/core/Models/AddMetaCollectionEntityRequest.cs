@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// The unique identifier of the entity.
         /// 
         /// Example: maxcompute-table.projectA.tableA.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CollectionQualifiedName")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the request. You can use the ID to query logs and troubleshoot issues.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EntityQualifiedName")]
         [Validation(Required=false)]

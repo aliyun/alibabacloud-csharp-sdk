@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// Valid values: oracle, mysql, polardb, datahub, drds, and analyticdb_for_mysql.
         /// 
         /// If you do not configure this parameter, DataWorks applies the default global configuration to all sources.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// 
         /// *   true: The request was successful.
         /// *   false: The request failed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectConfig")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// The type of the destinations of the synchronization solutions. This parameter cannot be left empty.
         /// 
         /// Valid values: analyticdb_for_mysql, odps, elasticsearch, holo, mysql, and polardb.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

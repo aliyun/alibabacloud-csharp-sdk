@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// *   DI_SOLUTION: synchronization solution
         /// 
         /// DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskParam")]
         [Validation(Required=false)]
@@ -62,13 +66,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// 
         /// "setting": {
         /// 
-        /// "resourceGroup": "S_res_group\_280749521950784\_1623033752022",
+        /// "resourceGroup": "S_res_group_280749521950784_1623033752022",
         /// 
         /// "taskType": "oneclick_to_odps"
         /// 
         /// },
         /// 
-        /// "steps": { "stepType": "mysql", "parameter": { "connection": \[ { "datasourceType": "mysql", "datasource": "mysql_pub1", "selectedTables": \[ { "dbName": "mysql_db", "schema": \[ { "tableInfos": \[ { "table": "molin_di_test_in_pk_v4" }
+        /// "steps": { "stepType": "mysql", "parameter": { "connection": [ { "datasourceType": "mysql", "datasource": "mysql_pub1", "selectedTables": [ { "dbName": "mysql_db", "schema": [ { "tableInfos": [ { "table": "molin_di_test_in_pk_v4" }
         /// 
         /// }
         /// 
@@ -120,13 +124,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// 
         /// "setting": {
         /// 
-        /// "resourceGroup": "S_res_group\_280749521950784\_1623033752022",
+        /// "resourceGroup": "S_res_group_280749521950784_1623033752022",
         /// 
         /// "taskType": "oneclick_to_kafka"
         /// 
         /// },
         /// 
-        /// "steps": { "stepType": "mysql", "parameter": { "connection": \[ { "datasourceType": "mysql", "datasource": "pkset_test", "selectedTables": \[ { "dbName": "mysql_db", "schema": \[ { "tableInfos": \[ { "table": "molin_di_test_in_pk_v4" }
+        /// "steps": { "stepType": "mysql", "parameter": { "connection": [ { "datasourceType": "mysql", "datasource": "pkset_test", "selectedTables": [ { "dbName": "mysql_db", "schema": [ { "tableInfos": [ { "table": "molin_di_test_in_pk_v4" }
         /// 
         /// }
         /// 
@@ -178,13 +182,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// 
         /// "setting": {
         /// 
-        /// "resourceGroup": "S_res_group\_280749521950784\_1623033752022",
+        /// "resourceGroup": "S_res_group_280749521950784_1623033752022",
         /// 
         /// "taskType": "oneclick_to_holo"
         /// 
         /// },
         /// 
-        /// "steps": { "stepType": "mysql", "parameter": { "connection": \[ { "datasourceType": "mysql", "datasource": "mysql_pub", "selectedTables": \[ { "dbName": "mysql_db", "schema": \[ { "tableInfos": \[ { "table": "molin_di_test_in2\_pk_v3" }
+        /// "steps": { "stepType": "mysql", "parameter": { "connection": [ { "datasourceType": "mysql", "datasource": "mysql_pub", "selectedTables": [ { "dbName": "mysql_db", "schema": [ { "tableInfos": [ { "table": "molin_di_test_in2_pk_v3" }
         /// 
         /// }
         /// 
@@ -225,6 +229,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// ]
         /// 
         /// }
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

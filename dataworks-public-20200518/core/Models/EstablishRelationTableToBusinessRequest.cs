@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class EstablishRelationTableToBusinessRequest : TeaModel {
         /// <summary>
-        /// The ID of the workflow. You can call the [ListBusiness](~~173945~~) operation to query the ID.
+        /// The ID of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BusinessId")]
         [Validation(Required=false)]
         public string BusinessId { get; set; }
 
         /// <summary>
-        /// The ID of the folder. You can call the [GetFolder](~~173952~~) or [ListFolders](~~173955~~) operation to query the ID.
+        /// The ID of the folder. You can call the [GetFolder](https://help.aliyun.com/document_detail/173952.html) or [ListFolders](https://help.aliyun.com/document_detail/173955.html) operation to query the ID.
         /// </summary>
         [NameInMap("FolderId")]
         [Validation(Required=false)]
@@ -40,7 +42,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         /// <summary>
-        /// The universally unique identifier (UUID) of the table. You can call the [SearchMetaTables](~~173919~~) operation to query the UUID.
+        /// The universally unique identifier (UUID) of the table. You can call the [SearchMetaTables](https://help.aliyun.com/document_detail/173919.html) operation to query the UUID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]

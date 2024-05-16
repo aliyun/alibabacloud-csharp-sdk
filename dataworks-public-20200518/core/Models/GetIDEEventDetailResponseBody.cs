@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string DataSourceName { get; set; }
 
                     /// <summary>
-                    /// The ID of the folder to which the file belongs. You can call the [GetFolder](~~173952~~) operation to query the details of the file based on the folder ID.
+                    /// The ID of the folder to which the file belongs. You can call the [GetFolder](https://help.aliyun.com/document_detail/173952.html) operation to query the details of the file based on the folder ID.
                     /// </summary>
                     [NameInMap("FolderId")]
                     [Validation(Required=false)]
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// The scheduling parameters.
                     /// 
-                    /// This parameter is equivalent to the configuration of the scheduling parameters in the Parameters section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information, see [Configure scheduling parameters](~~137548~~).
+                    /// This parameter is equivalent to the configuration of the scheduling parameters in the Parameters section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information, see [Configure scheduling parameters](https://help.aliyun.com/document_detail/137548.html).
                     /// </summary>
                     [NameInMap("ParaValue")]
                     [Validation(Required=false)]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string RerunMode { get; set; }
 
                     /// <summary>
-                    /// The ID of the resource group that is used to run the node that corresponds to the file. You can call the [ListResourceGroups](~~173913~~) operation to query the available resource groups in the workspace.
+                    /// The ID of the resource group that is used to run the node that corresponds to the file. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/173913.html) operation to query the available resource groups in the workspace.
                     /// </summary>
                     [NameInMap("ResourceGroupId")]
                     [Validation(Required=false)]
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FileType { get; set; }
 
                 /// <summary>
-                /// The ID of the folder to which the file belongs. You can call the [GetFolder](~~173952~~) operation to query the details of the file based on the folder ID.
+                /// The ID of the folder to which the file belongs. You can call the [GetFolder](https://help.aliyun.com/document_detail/173952.html) operation to query the details of the file based on the folder ID.
                 /// </summary>
                 [NameInMap("FolderId")]
                 [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class SetDataSourceShareRequest : TeaModel {
         /// <summary>
         /// The name of the data source to be shared.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatasourceName")]
         [Validation(Required=false)]
@@ -27,7 +29,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.
+        /// The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to query the ID of the workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectPermissions { get; set; }
 
         /// <summary>
-        /// The user to whom the data source is to be shared. If you set this parameter, the specified user can view or use the data source. The value must be a JSON array. Example: {"projectId":10000,"users":\[{"userId":"276184575345452131","permission":"WRITE"},"sharedName":"PX_DATAHUB1.shared_name"}].
+        /// The user to whom the data source is to be shared. If you set this parameter, the specified user can view or use the data source. The value must be a JSON array. Example: {"projectId":10000,"users":[{"userId":"276184575345452131","permission":"WRITE"},"sharedName":"PX_DATAHUB1.shared_name"}].
         /// 
         /// Field description:
         /// 

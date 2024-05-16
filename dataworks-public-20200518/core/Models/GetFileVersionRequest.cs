@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetFileVersionRequest : TeaModel {
         /// <summary>
-        /// The ID of the file. You can call the [ListFiles](~~173942~~) operation to query the ID.
+        /// The ID of the file. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The file version whose details you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileVersion")]
         [Validation(Required=false)]

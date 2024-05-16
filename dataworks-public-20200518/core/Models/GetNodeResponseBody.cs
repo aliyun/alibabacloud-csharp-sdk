@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.
+            /// The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the node ID.
             /// </summary>
             [NameInMap("DqcDescription")]
             [Validation(Required=false)]
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.
+        /// The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the node ID.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

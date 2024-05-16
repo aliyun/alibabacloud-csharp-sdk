@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetMetaTableOutputRequest : TeaModel {
         /// <summary>
         /// The HTTP status code returned.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The end date of the time range to query. The end date must be within the previous 30 days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]

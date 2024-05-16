@@ -16,13 +16,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// *   If you want to revoke permissions from a Resource Access Management (RAM) user, specify this parameter in the RAM$+RAM user format.
         /// 
         /// You must specify either this parameter or RevokeUserId. If you specify both this parameter and RevokeUserId, the value of RevokeUserId prevails.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
         public string Columns { get; set; }
 
         /// <summary>
-        /// The name of the MaxCompute table to which the destination fields belong. You can call the [SearchMetaTables](~~173919~~) operation to query the name.
+        /// The name of the MaxCompute table to which the destination fields belong. You can call the [SearchMetaTables](https://help.aliyun.com/document_detail/173919.html) operation to query the name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxComputeProjectName")]
         [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// The fields for which you want to revoke permissions from a user. Separate multiple fields with commas (,).
         /// 
         /// You can revoke the permissions on the fields only in MaxCompute tables.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]
@@ -55,6 +61,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the MaxCompute project to which the destination fields belong. You can log on to the DataWorks console and go to the Workspace Management page to obtain the name of the MaxCompute project that is associated with the workspace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class ListMigrationsRequest : TeaModel {
         /// <summary>
         /// The ID of the owner.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MigrationType")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The type of the migration task. Valid values: IMPORT and EXPORT.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

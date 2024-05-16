@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteFolderRequest : TeaModel {
         /// <summary>
-        /// The ID of the folder. You can call the [ListFolders](~~173955~~) operation to query the ID.
+        /// The ID of the folder. You can call the [ListFolders](https://help.aliyun.com/document_detail/173955.html) operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FolderId")]
         [Validation(Required=false)]

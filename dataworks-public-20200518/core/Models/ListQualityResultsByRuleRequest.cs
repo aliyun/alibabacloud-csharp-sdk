@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
         /// 
         /// This parameter is used together with the StartDate parameter. The interval between the time specified by this parameter and the time specified by the StartDate parameter cannot exceed 7 days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The number of entries to return on each page. Default value: 10. Maximum value: 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the compute engine instance or data source for which data quality is monitored.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -45,6 +53,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the monitoring rule. You can use the ID and information such as a partition filter expression to perform a joint query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
@@ -54,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
         /// 
         /// This parameter is used together with the EndDate parameter. The interval between the time specified by this parameter and the time specified by the EndDate parameter cannot exceed 7 days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

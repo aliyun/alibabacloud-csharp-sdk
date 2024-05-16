@@ -81,6 +81,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BaselineId")]
         [Validation(Required=false)]
         public long? BaselineId { get; set; }
@@ -123,6 +126,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? Priority { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }

@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteDataSourceRequest : TeaModel {
         /// <summary>
-        /// The ID of the data source. You can call the [ListDataSources](~~211431~~) operation to obtain the ID.
+        /// The ID of the data source. You can call the [ListDataSources](https://help.aliyun.com/document_detail/211431.html) operation to obtain the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]

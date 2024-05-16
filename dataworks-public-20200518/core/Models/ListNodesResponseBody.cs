@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? FileType { get; set; }
 
                 /// <summary>
-                /// The types of the nodes. You can call the [ListNodes](~~173979~~) operation to query the type of the node.
+                /// The types of the nodes. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the type of the node.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ResGroupName { get; set; }
 
                 /// <summary>
-                /// The types of the nodes. You can call the [ListNodes](~~173979~~) operation to query the type of the node.
+                /// The types of the nodes. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the type of the node.
                 /// </summary>
                 [NameInMap("SchedulerType")]
                 [Validation(Required=false)]

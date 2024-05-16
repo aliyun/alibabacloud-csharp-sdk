@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class UpdateConnectionRequest : TeaModel {
         /// <summary>
         /// The ID of the data source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectionId")]
         [Validation(Required=false)]

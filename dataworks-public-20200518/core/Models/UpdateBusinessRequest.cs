@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateBusinessRequest : TeaModel {
         /// <summary>
-        /// The ID of the workflow. You can call the [ListBusiness](~~173945~~) operation to obtain the workflow ID.
+        /// The ID of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to obtain the workflow ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BusinessId")]
         [Validation(Required=false)]
         public long? BusinessId { get; set; }
 
         /// <summary>
-        /// The name of the workflow. You can call the [ListBusiness](~~173945~~) operation to obtain the workflow name.
+        /// The name of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to obtain the workflow name.
         /// </summary>
         [NameInMap("BusinessName")]
         [Validation(Required=false)]
@@ -31,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The owner of the workflow. You can call the [ListBusiness](~~173945~~) operation to obtain the workflow owner.
+        /// The owner of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to obtain the workflow owner.
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]

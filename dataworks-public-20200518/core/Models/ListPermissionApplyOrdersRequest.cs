@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The type of the compute engine with which the permission request order is associated. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in MaxCompute compute engine instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineType")]
         [Validation(Required=false)]
@@ -44,6 +46,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -68,6 +72,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// 
         /// *   0: The permission request orders you submitted.
         /// *   1: The permission request orders you approved.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("QueryType")]
         [Validation(Required=false)]

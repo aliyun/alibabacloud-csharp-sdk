@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class ListNodesByBaselineRequest : TeaModel {
         /// <summary>
         /// The ID of the request. You can use the ID to troubleshoot issues.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BaselineId")]
         [Validation(Required=false)]

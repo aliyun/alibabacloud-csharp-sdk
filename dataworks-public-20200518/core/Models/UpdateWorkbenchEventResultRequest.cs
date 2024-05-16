@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class UpdateWorkbenchEventResultRequest : TeaModel {
         /// <summary>
         /// The check status of the extension point event. Valid values: OK and Fail. A value of OK indicates that the event passes the check. A value of FAIL indicates that the event fails to pass the check.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CheckResult")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The code of the extension.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExtensionCode")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the message received when the related extension point event is triggered after you enable message subscription by using the OpenEvent module.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]

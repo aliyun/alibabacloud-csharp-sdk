@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetIDEEventDetailRequest : TeaModel {
         /// <summary>
         /// The ID of the message. You can obtain the ID from the received message when the extension point event is triggered.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the workspace. You can obtain the ID from the message.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

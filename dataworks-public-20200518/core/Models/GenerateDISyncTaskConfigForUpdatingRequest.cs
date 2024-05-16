@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// *   DI_SOLUTION: synchronization solution
         /// 
         ///     DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// 
         /// *   true: The request is successful.
         /// *   false: The request fails.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskParam")]
         [Validation(Required=false)]
@@ -62,6 +68,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// 
         /// *   If the script contains the SelectedTables parameter, the system synchronizes the tables that you specify in the SelectedTables parameter.
         /// *   If the script contains the Tables parameter, the system synchronizes the tables that you specify in the Tables parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

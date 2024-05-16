@@ -23,7 +23,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? BlockType { get; set; }
 
         /// <summary>
-        /// The ID of the checker. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the checker.
+        /// The ID of the checker. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the checker.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Checker")]
         [Validation(Required=false)]
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CriticalThreshold { get; set; }
 
         /// <summary>
-        /// The ID of the partition filter expression. You can call the [GetQualityEntity](~~173995~~) operation to obtain the ID of the partition filter expression.
+        /// The ID of the partition filter expression. You can call the [GetQualityEntity](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the partition filter expression.
         /// </summary>
         [NameInMap("EntityId")]
         [Validation(Required=false)]
@@ -58,7 +60,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ExpectValue { get; set; }
 
         /// <summary>
-        /// The ID of the monitoring rule. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the monitoring rule.
+        /// The ID of the monitoring rule. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the monitoring rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MethodName")]
         [Validation(Required=false)]
@@ -104,6 +110,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the compute engine instance or data source. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -111,6 +119,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The name of the field to be monitored.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Property")]
         [Validation(Required=false)]
@@ -146,7 +156,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TaskSetting { get; set; }
 
         /// <summary>
-        /// The ID of the monitoring template. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the monitoring template that is used to create the monitoring rule.
+        /// The ID of the monitoring template. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the monitoring template that is used to create the monitoring rule.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

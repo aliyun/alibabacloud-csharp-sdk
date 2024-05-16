@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class CreateDataSourceRequest : TeaModel {
         /// <summary>
         /// The ID of the data source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The environment in which the data source is used. Valid values: 0 and 1. 0 indicates the development environment. 1 indicates the production environment.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The HTTP status code returned.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
@@ -56,6 +62,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// *   analyticdb_for_mysql
         /// *   hybriddb_for_postgresql
         /// *   holo
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -63,6 +71,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The description of the data source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -172,7 +182,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// ```
         /// 
         /// {
-        ///   "address": "[\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\"]",
+        ///   "address": "[\\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\\"]",
         ///   "database": "admin",
         ///   "password": "sadsda@",
         ///   "tag": "public",

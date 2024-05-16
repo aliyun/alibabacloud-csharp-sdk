@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The ID of the request. You can use the ID to query logs and troubleshoot issues.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OuterNodeId")]
         [Validation(Required=false)]
@@ -53,6 +55,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// The environment in which the node is run. Valid values: DEV and PROD. Default value: PROD.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

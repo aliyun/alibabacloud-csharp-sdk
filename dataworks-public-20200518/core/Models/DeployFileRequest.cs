@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// The ID of the file. You can call the [ListFiles](~~173942~~) operation to query the ID.
+        /// The ID of the file. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID.
         /// 
         /// You must configure either the FileId parameter or the NodeId parameter.
         /// </summary>

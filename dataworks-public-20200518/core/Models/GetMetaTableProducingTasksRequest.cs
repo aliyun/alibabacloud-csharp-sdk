@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string SchemaName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]
         public string TableGuid { get; set; }

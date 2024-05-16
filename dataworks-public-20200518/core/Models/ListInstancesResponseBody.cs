@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.
+        /// The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID of the node.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListInstancesResponseBodyData Data { get; set; }
         public class ListInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// The name of the node. You can call the [ListNodes](~~173979~~) operation to query the name of the node.
+            /// The name of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the name of the node.
             /// </summary>
             [NameInMap("Instances")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.
+                /// The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID of the node.
                 /// </summary>
                 [NameInMap("CreateUser")]
                 [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the workflow. You can call the [ListBusiness](~~173945~~) operation to query the name of the workflow.
+                /// The name of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to query the name of the workflow.
                 /// </summary>
                 [NameInMap("ModifyTime")]
                 [Validation(Required=false)]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// The type of the node. You can call the [ListNodes](~~173979~~) operation to query the type of the node.
+                /// The type of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the type of the node.
                 /// </summary>
                 [NameInMap("RelatedFlowId")]
                 [Validation(Required=false)]
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The ID of the workspace. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.
+                /// The ID of the workspace. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to query the ID of the workspace.
                 /// </summary>
                 [NameInMap("TaskRerunTime")]
                 [Validation(Required=false)]
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// The error message that is returned for the instance.
         /// 
-        /// This parameter is deprecated. You can call the [GetInstanceLog](~~173983~~) operation to query the error information related to the node.
+        /// This parameter is deprecated. You can call the [GetInstanceLog](https://help.aliyun.com/document_detail/173983.html) operation to query the error information related to the node.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
