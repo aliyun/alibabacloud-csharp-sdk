@@ -16,6 +16,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// *   ApsaraMQ for Kafka V3 instances allow you to modify configurations for all topics.
         /// *   The following keys are supported by `local topic` of ApsaraMQ for Kafka V2 instances: retention.ms, retention.bytes, and replications.
         /// *   The following keys are supported by ApsaraMQ for Kafka V3 instances: retention.hours and max.message.bytes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The ID of the region where the instance resides.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,16 +43,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The topic name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Topic")]
         [Validation(Required=false)]
         public string Topic { get; set; }
 
         /// <summary>
-        /// The value of the topic configuration.
+        /// The configuration item that you want to update for the topic. The following configuration items are supported by ApsaraMQ for Kafka V3 instances:
         /// 
         /// *   `retention.hours` specifies the message retention period. Value type: string. Valid values: 24 to 8760.
         /// *   `max.message.bytes` specifies the maximum size of a sent message. Value type: string. Valid values: 1048576 to 10485760.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

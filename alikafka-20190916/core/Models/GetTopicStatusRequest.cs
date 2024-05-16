@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
     public class GetTopicStatusRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The name of the topic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Topic")]
         [Validation(Required=false)]

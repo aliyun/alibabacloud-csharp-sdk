@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetTopicListRequest : TeaModel {
         /// <summary>
-        /// The page number of the page to return. Default value: 1.
+        /// The page number. Default value: 1
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -18,13 +18,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10
+        /// The number of entries to return on each page. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

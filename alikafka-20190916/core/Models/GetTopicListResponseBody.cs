@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The information about the topic.
+        /// The topics.
         /// </summary>
         [NameInMap("TopicList")]
         [Validation(Required=false)]
@@ -62,15 +62,18 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<GetTopicListResponseBodyTopicListTopicVO> TopicVO { get; set; }
             public class GetTopicListResponseBodyTopicListTopicVO : TeaModel {
+                /// <summary>
+                /// Indicates whether the topic was automatically created.
+                /// </summary>
                 [NameInMap("AutoCreate")]
                 [Validation(Required=false)]
                 public bool? AutoCreate { get; set; }
 
                 /// <summary>
-                /// The log cleanup policy that is used for the topic. This parameter is returned when the **LocalTopic** parameter is set to **true**. Valid values:
+                /// The log cleanup policy for the topic. This parameter is returned only if **LocalTopic** is set to **true**. Valid values:
                 /// 
-                /// *   false: The topic uses the default log cleanup policy.
-                /// *   true: The topic uses the log compaction policy.
+                /// *   false: the default log cleanup policy.
+                /// *   true: the Apache Kafka log compaction policy.
                 /// </summary>
                 [NameInMap("CompactTopic")]
                 [Validation(Required=false)]
@@ -84,17 +87,17 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The ID of the instance
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The type of storage used by the topic. Valid values:
+                /// The storage type that is used for the topic. Valid values:
                 /// 
-                /// *   false: The topic uses cloud storage.
-                /// *   true: The topic uses local storage.
+                /// *   false: cloud storage
+                /// *   true: local storage
                 /// </summary>
                 [NameInMap("LocalTopic")]
                 [Validation(Required=false)]
@@ -108,26 +111,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? PartitionNum { get; set; }
 
                 /// <summary>
-                /// The region ID of the instance to which the topics that you want to query belong.
+                /// The ID of the region where the instance resides.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The description of the topic. Valid values:
+                /// The topic description. Valid values:
                 /// 
-                /// *   The description contains only letters, digits, hyphens (-), and underscores (\_).
-                /// *   The description is 3 to 64 characters in length.
+                /// *   The description can contain only letters, digits, hyphens (-), and underscores (_).
+                /// *   The description must be 3 to 64 characters in length.
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// The status of the topic. Valid values:
+                /// The topic status. Valid value:
                 /// 
-                /// **0:** indicates that the topic is running.
+                /// **0**: running.
                 /// 
                 /// If the topic is deleted, this parameter is not returned.
                 /// </summary>
@@ -136,9 +139,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// The status of the topic. Valid values:
+                /// The topic status. Valid value:
                 /// 
-                /// **Running**
+                /// **Running**.
                 /// 
                 /// If the topic is deleted, this parameter is not returned.
                 /// </summary>
@@ -176,14 +179,18 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 }
 
                 /// <summary>
-                /// The name of the topic. Valid values:
+                /// The topic name. Valid values:
                 /// 
-                /// *   The name contains only letters, digits, hyphens (-), and underscores (\_).
-                /// *   The name is 3 to 64 characters in length. If the name that you specified contains more than 64 characters, the returned name is automatically truncated.
+                /// *   The name can contain only letters, digits, hyphens (-), and underscores (_).
+                /// *   The name must be 3 to 64 characters in length. If the name contains more than 64 characters, the system automatically truncates the name.
                 /// </summary>
                 [NameInMap("Topic")]
                 [Validation(Required=false)]
                 public string Topic { get; set; }
+
+                [NameInMap("TopicConfig")]
+                [Validation(Required=false)]
+                public string TopicConfig { get; set; }
 
             }
 

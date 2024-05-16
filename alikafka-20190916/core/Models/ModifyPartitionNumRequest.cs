@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// *   The value must be an integer that is greater than 0.
         /// *   To reduce the risk of data skew, we recommend that you set the value to a multiple of 6.
         /// *   The number of total partitions ranges from 1 to 360.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddPartitionNum")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The topic name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Topic")]
         [Validation(Required=false)]

@@ -11,17 +11,29 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
     public class DeleteSaslUserRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The encryption method. Valid values:
+        /// 
+        /// *   SCRAM-SHA-512. This is the default value.
+        /// *   SCRAM-SHA-256
+        /// 
+        /// >  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
+        /// </summary>
         [NameInMap("Mechanism")]
         [Validation(Required=false)]
         public string Mechanism { get; set; }
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -41,6 +53,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The name of the user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]

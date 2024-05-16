@@ -21,7 +21,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// The name or ID of the resource.
         /// 
         /// *   The value can be the name of a topic or a consumer group.
-        /// *   You can use an asterisk (\*) to represent the names of all topics or consumer groups.
+        /// *   You can use an asterisk (\\*) to represent the names of all topics or consumer groups.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclResourceName")]
         [Validation(Required=false)]
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// 
         /// *   **Topic**
         /// *   **Group**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclResourceType")]
         [Validation(Required=false)]
@@ -53,6 +57,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -60,6 +66,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -67,6 +75,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The name of the user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]

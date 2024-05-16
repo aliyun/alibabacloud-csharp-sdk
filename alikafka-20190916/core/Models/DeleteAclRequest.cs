@@ -16,6 +16,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// *   **Read**: data reads
         /// *   **Describe**: reads of transactional IDs
         /// *   **IdempotentWrite**: idempotent data writes to clusters
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclOperationType")]
         [Validation(Required=false)]
@@ -53,7 +55,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// The name of the resource.
         /// 
         /// *   The value can be the name of a topic or consumer group.
-        /// *   You can use an asterisk (\*) to indicate the names of all topics or consumer groups.
+        /// *   You can use an asterisk (\\*) to indicate the names of all topics or consumer groups.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclResourceName")]
         [Validation(Required=false)]
@@ -64,6 +68,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// 
         /// *   **LITERAL:** full match
         /// *   **PREFIXED**: prefix match
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclResourcePatternType")]
         [Validation(Required=false)]
@@ -76,6 +82,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// *   **Group**: consumer group
         /// *   **Cluster**: cluster
         /// *   **TransactionalId**: transactional ID
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclResourceType")]
         [Validation(Required=false)]
@@ -90,6 +98,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -97,6 +107,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -104,6 +116,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The name of the user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]

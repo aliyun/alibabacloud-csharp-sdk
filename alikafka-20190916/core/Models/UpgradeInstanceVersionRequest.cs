@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
     public class UpgradeInstanceVersionRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The ID of the region where the instance resides.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// *   **2.2.0**
         /// 
         /// If you set this parameter to the current major version, the system upgrades the instance to the latest minor version.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetVersion")]
         [Validation(Required=false)]

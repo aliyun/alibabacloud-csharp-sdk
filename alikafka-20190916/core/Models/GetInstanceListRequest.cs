@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the order. You can obtain the order ID on the [Orders](https://usercenter2-intl.aliyun.com/order/list?pageIndex=1\&pageSize=20\&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa) page in Alibaba Cloud User Center.
+        /// The ID of the order. You can obtain the order ID on the [Orders](https://usercenter2-intl.aliyun.com/order/list?pageIndex=1\\&pageSize=20\\&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa) page in Alibaba Cloud User Center.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The ID of the region where the instance resides.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,6 +39,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// 实例系列标识，可根据系列号来过滤不同系列的实例。取值如下：
+        /// - v2
+        /// - v3
+        /// - confluent
+        /// </summary>
         [NameInMap("Series")]
         [Validation(Required=false)]
         public string Series { get; set; }

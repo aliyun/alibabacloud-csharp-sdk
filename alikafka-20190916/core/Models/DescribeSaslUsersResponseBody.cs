@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The SASL users.
+        /// The Simple Authentication and Security Layer (SASL) users.
         /// </summary>
         [NameInMap("SaslUserList")]
         [Validation(Required=false)]
@@ -41,22 +41,27 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<DescribeSaslUsersResponseBodySaslUserListSaslUserVO> SaslUserVO { get; set; }
             public class DescribeSaslUsersResponseBodySaslUserListSaslUserVO : TeaModel {
+                /// <summary>
+                /// The encryption method.
+                /// 
+                /// >  This field is available only for ApsaraMQ for Kafka V3 Serverless instances.
+                /// </summary>
                 [NameInMap("Mechanism")]
                 [Validation(Required=false)]
                 public string Mechanism { get; set; }
 
                 /// <summary>
-                /// The password that is used to access the Elasticsearch cluster.
+                /// The password.
                 /// </summary>
                 [NameInMap("Password")]
                 [Validation(Required=false)]
                 public string Password { get; set; }
 
                 /// <summary>
-                /// The request type. Valid values:
+                /// The type. Valid values:
                 /// 
-                /// *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. Message Queue for Apache Kafka provides an optimized PLAIN mechanism that allows you to dynamically create SASL users for an instance without the need to restart the instance.
-                /// *   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.
+                /// *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.
+                /// *   **SCRAM**: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.
                 /// 
                 /// Default value: **plain**.
                 /// </summary>
@@ -65,7 +70,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The name of the user.
+                /// The username.
                 /// </summary>
                 [NameInMap("Username")]
                 [Validation(Required=false)]

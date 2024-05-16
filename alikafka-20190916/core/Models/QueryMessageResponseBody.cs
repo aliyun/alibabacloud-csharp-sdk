@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// The truncated size of the message key. Unit: bytes.
             /// 
-            /// *   A message is truncated only if the message exceeds 10 MB in size.
+            /// >  A maximum of 1 KB content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see [Query messages](https://help.aliyun.com/zh/apsaramq-for-kafka/query-messages).
             /// </summary>
             [NameInMap("TruncatedKeySize")]
             [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// The truncated size of the message value. Unit: bytes.
             /// 
-            /// *   A message is truncated only if the message exceeds 10 MB in size.
+            /// >  A maximum of 1 KB content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see [Query messages](https://help.aliyun.com/zh/apsaramq-for-kafka/query-messages).
             /// </summary>
             [NameInMap("TruncatedValueSize")]
             [Validation(Required=false)]

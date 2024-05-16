@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// *   If the **UpdateType** parameter is set to **add**, specify one or more IP addresses for this parameter. Separate multiple IP addresses with commas (,).
         /// *   If the **UpdateType** parameter is set to **delete**, specify only one IP address.
         /// *   Exercise caution when you delete IP addresses.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AllowedListIp")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// 
         /// *   **vpc**: a whitelist for access from a VPC.
         /// *   **internet**: a whitelist for access from the Internet.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AllowedListType")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -53,6 +59,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// *   **9095/9095**: the port range for access from VPCs by using the Secure Sockets Layer (SSL) endpoint.
         /// 
         /// This parameter must correspond to **AllowdedListType**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PortRange")]
         [Validation(Required=false)]
@@ -60,6 +68,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The ID of the region where the instance resides.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -70,6 +80,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// 
         /// *   **add**
         /// *   **delete**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UpdateType")]
         [Validation(Required=false)]

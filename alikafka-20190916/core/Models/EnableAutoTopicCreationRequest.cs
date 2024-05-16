@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
     public class EnableAutoTopicCreationRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// *   enable: enables the automatic topic creation feature.
         /// *   disable: disables the automatic topic creation feature.
         /// *   updatePartition: changes the number of partitions in topics that are automatically created.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Operate")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

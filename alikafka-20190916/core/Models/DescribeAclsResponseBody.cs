@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The ACLs.
+        /// The access control lists (ACLs).
         /// </summary>
         [NameInMap("KafkaAclList")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public List<DescribeAclsResponseBodyKafkaAclListKafkaAclVO> KafkaAclVO { get; set; }
             public class DescribeAclsResponseBodyKafkaAclListKafkaAclVO : TeaModel {
                 /// <summary>
-                /// The type of the operation. Valid values:
+                /// The operation type. Valid values:
                 /// 
                 /// *   **Write**
                 /// *   **Read**
@@ -42,19 +42,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string AclPermissionType { get; set; }
 
                 /// <summary>
-                /// The name of the resource.
+                /// The resource name.
                 /// 
-                /// *   The value can be the name of a topic or a consumer group.
-                /// *   An asterisk (\*) represents the names of all topics or consumer groups.
+                /// *   The value can be the name of a topic or consumer group.
+                /// *   You can use the asterisk (\\*) wildcard character to specify the names of all topics or consumer groups.
                 /// </summary>
                 [NameInMap("AclResourceName")]
                 [Validation(Required=false)]
                 public string AclResourceName { get; set; }
 
                 /// <summary>
-                /// The match mode. Valid values:
+                /// The matching mode. Valid values:
                 /// 
-                /// *   **LITERAL**: full-name match
+                /// *   **LITERAL:** full-name match
                 /// *   **PREFIXED**: prefix match
                 /// </summary>
                 [NameInMap("AclResourcePatternType")]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string AclResourcePatternType { get; set; }
 
                 /// <summary>
-                /// The type of the resources to which you want to attach tags. Valid values:
+                /// The resource type. Valid values:
                 /// 
                 /// *   **Topic**
                 /// *   **Group**
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string Host { get; set; }
 
                 /// <summary>
-                /// The name of the user.
+                /// The username.
                 /// </summary>
                 [NameInMap("Username")]
                 [Validation(Required=false)]

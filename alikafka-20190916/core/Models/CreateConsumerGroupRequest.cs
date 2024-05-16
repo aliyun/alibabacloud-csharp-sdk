@@ -12,9 +12,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The name of the consumer group.
         /// 
-        /// *   The value can contain only letters, digits, hyphens (-), and underscores (\_), and the value must contain at least one letter or digit.
+        /// *   The value can contain only letters, digits, hyphens (-), and underscores (_), and the value must contain at least one letter or digit.
         /// *   The value must be 3 to 128 characters in length. If the value that you specify contains more than 128 characters, the system automatically truncates the value to 128 characters.
         /// *   After a consumer group is created, you cannot change the name of the consumer group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConsumerId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -53,6 +59,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// 
             /// *   You must specify this parameter.
             /// *   The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

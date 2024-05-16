@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
     public class ModifyInstanceNameRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -19,8 +21,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// The instance name. Valid values:
         /// 
-        /// *   The name can contain only letters, digits, hyphens (-), and underscores (\_).
+        /// *   The name can contain only letters, digits, hyphens (-), and underscores (_).
         /// *   The name must be 3 to 64 characters in length. A name that contains more than 64 characters is automatically truncated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// The region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

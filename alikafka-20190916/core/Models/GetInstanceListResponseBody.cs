@@ -34,78 +34,135 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string AllConfig { get; set; }
 
+                /// <summary>
+                /// The parameters that are returned for the ApsaraMQ for Confluent instance.
+                /// </summary>
                 [NameInMap("ConfluentConfig")]
                 [Validation(Required=false)]
                 public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig ConfluentConfig { get; set; }
                 public class GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig : TeaModel {
+                    /// <summary>
+                    /// The number of CPU cores of Connect.
+                    /// </summary>
                     [NameInMap("ConnectCU")]
                     [Validation(Required=false)]
                     public int? ConnectCU { get; set; }
 
+                    /// <summary>
+                    /// The number of replicas of Connect.
+                    /// </summary>
                     [NameInMap("ConnectReplica")]
                     [Validation(Required=false)]
                     public int? ConnectReplica { get; set; }
 
+                    /// <summary>
+                    /// The number of CPU cores of Control Center.
+                    /// </summary>
                     [NameInMap("ControlCenterCU")]
                     [Validation(Required=false)]
                     public int? ControlCenterCU { get; set; }
 
+                    /// <summary>
+                    /// The number of replicas of Control Center.
+                    /// </summary>
                     [NameInMap("ControlCenterReplica")]
                     [Validation(Required=false)]
                     public int? ControlCenterReplica { get; set; }
 
+                    /// <summary>
+                    /// The disk capacity of Control Center. Unit: GB.
+                    /// </summary>
                     [NameInMap("ControlCenterStorage")]
                     [Validation(Required=false)]
                     public int? ControlCenterStorage { get; set; }
 
+                    /// <summary>
+                    /// The number of CPU cores of the Kafka broker.
+                    /// </summary>
                     [NameInMap("KafkaCU")]
                     [Validation(Required=false)]
                     public int? KafkaCU { get; set; }
 
+                    /// <summary>
+                    /// The number of replicas of the Kafka broker.
+                    /// </summary>
                     [NameInMap("KafkaReplica")]
                     [Validation(Required=false)]
                     public int? KafkaReplica { get; set; }
 
+                    /// <summary>
+                    /// The number of CPU cores of Kafka Rest Proxy.
+                    /// </summary>
                     [NameInMap("KafkaRestProxyCU")]
                     [Validation(Required=false)]
                     public int? KafkaRestProxyCU { get; set; }
 
+                    /// <summary>
+                    /// The number of replicas of Kafka Rest Proxy.
+                    /// </summary>
                     [NameInMap("KafkaRestProxyReplica")]
                     [Validation(Required=false)]
                     public int? KafkaRestProxyReplica { get; set; }
 
+                    /// <summary>
+                    /// The disk capacity of the Kafka broker. Unit: GB.
+                    /// </summary>
                     [NameInMap("KafkaStorage")]
                     [Validation(Required=false)]
                     public int? KafkaStorage { get; set; }
 
+                    /// <summary>
+                    /// The number of CPU cores of ksqlDB.
+                    /// </summary>
                     [NameInMap("KsqlCU")]
                     [Validation(Required=false)]
                     public int? KsqlCU { get; set; }
 
+                    /// <summary>
+                    /// The number of replicas of ksqlDB.
+                    /// </summary>
                     [NameInMap("KsqlReplica")]
                     [Validation(Required=false)]
                     public int? KsqlReplica { get; set; }
 
+                    /// <summary>
+                    /// The disk capacity of ksqlDB. Unit: GB.
+                    /// </summary>
                     [NameInMap("KsqlStorage")]
                     [Validation(Required=false)]
                     public int? KsqlStorage { get; set; }
 
+                    /// <summary>
+                    /// The number of CPU cores of Schema Registry.
+                    /// </summary>
                     [NameInMap("SchemaRegistryCU")]
                     [Validation(Required=false)]
                     public int? SchemaRegistryCU { get; set; }
 
+                    /// <summary>
+                    /// The number of replicas of Schema Registry.
+                    /// </summary>
                     [NameInMap("SchemaRegistryReplica")]
                     [Validation(Required=false)]
                     public int? SchemaRegistryReplica { get; set; }
 
+                    /// <summary>
+                    /// The number of CPU cores of ZooKeeper.
+                    /// </summary>
                     [NameInMap("ZooKeeperCU")]
                     [Validation(Required=false)]
                     public int? ZooKeeperCU { get; set; }
 
+                    /// <summary>
+                    /// The number of replicas of ZooKeeper.
+                    /// </summary>
                     [NameInMap("ZooKeeperReplica")]
                     [Validation(Required=false)]
                     public int? ZooKeeperReplica { get; set; }
 
+                    /// <summary>
+                    /// The disk capacity of ZooKeeper. Unit: GB.
+                    /// </summary>
                     [NameInMap("ZooKeeperStorage")]
                     [Validation(Required=false)]
                     public int? ZooKeeperStorage { get; set; }
@@ -130,7 +187,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? DeployType { get; set; }
 
                 /// <summary>
-                /// The disk size. Unit: GB.
+                /// The disk size. Unit: GB
                 /// </summary>
                 [NameInMap("DiskSize")]
                 [Validation(Required=false)]
@@ -157,7 +214,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string DomainEndpoint { get; set; }
 
                 /// <summary>
-                /// The peak Internet traffic allowed for the instance.
+                /// The maximum Internet traffic in the instance.
                 /// </summary>
                 [NameInMap("EipMax")]
                 [Validation(Required=false)]
@@ -188,12 +245,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The peak traffic allowed for the instance.
+                /// The maximum traffic in the instance.
                 /// </summary>
                 [NameInMap("IoMax")]
                 [Validation(Required=false)]
                 public int? IoMax { get; set; }
 
+                /// <summary>
+                /// The maximum read traffic in the instance. Unit: Mbit/s.
+                /// </summary>
                 [NameInMap("IoMaxRead")]
                 [Validation(Required=false)]
                 public int? IoMaxRead { get; set; }
@@ -205,6 +265,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string IoMaxSpec { get; set; }
 
+                /// <summary>
+                /// The maximum write traffic. Unit: Mbit/s.
+                /// </summary>
                 [NameInMap("IoMaxWrite")]
                 [Validation(Required=false)]
                 public int? IoMaxWrite { get; set; }
@@ -233,8 +296,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 /// <summary>
                 /// The billing method of the instance. Valid values:
                 /// 
-                /// *   **0**: subscription
-                /// *   **1**: pay-as-you-go
+                /// *   **0**: the subscription billing method
+                /// *   **1**: the pay-as-you-go billing method
+                /// *   **3**: the pay-as-you-go billing method for serverless ApsaraMQ for Kafka V3 instances
+                /// *   **4**: the pay-as-you-go billing method for ApsaraMQ for Confluent instances
                 /// </summary>
                 [NameInMap("PaidType")]
                 [Validation(Required=false)]
@@ -247,10 +312,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// The traffic reserved for message publishing. Unit: MB/s.
+                /// 
+                /// >  This parameter is returned only if the instance is a serverless ApsaraMQ for Kafka V3 instance.
+                /// </summary>
                 [NameInMap("ReservedPublishCapacity")]
                 [Validation(Required=false)]
                 public int? ReservedPublishCapacity { get; set; }
 
+                /// <summary>
+                /// The traffic reserved for message subscription. Unit: MB/s.
+                /// 
+                /// >  This parameter is returned only if the instance is a serverless ApsaraMQ for Kafka V3 instance.
+                /// </summary>
                 [NameInMap("ReservedSubscribeCapacity")]
                 [Validation(Required=false)]
                 public int? ReservedSubscribeCapacity { get; set; }
@@ -273,20 +348,25 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string SaslDomainEndpoint { get; set; }
 
                 /// <summary>
-                /// The security group of the instance.
+                /// The security group to which the instance belongs.
                 /// 
-                /// *   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, no value is returned.
-                /// *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the returned value is the configured security group.
+                /// *   If the instance is deployed in the ApsaraMQ for Kafka console or by calling the [StartInstance](https://help.aliyun.com/document_detail/157786.html) operation without a security group configured, no value is returned.
+                /// *   If the instance is deployed by calling the [StartInstance](https://help.aliyun.com/document_detail/157786.html) operation with a security group configured, the returned value is the configured security group.
                 /// </summary>
                 [NameInMap("SecurityGroup")]
                 [Validation(Required=false)]
                 public string SecurityGroup { get; set; }
 
+                /// <summary>
+                /// 实例系列标识。返回值有 v2 ，v3，confluent。
+                /// </summary>
                 [NameInMap("Series")]
                 [Validation(Required=false)]
                 public string Series { get; set; }
 
                 /// <summary>
+                /// >  This parameter is out of date. We recommend that you refer to the ViewInstanceStatusCode parameter.
+                /// 
                 /// The instance status. Valid values:
                 /// 
                 /// *   **0**: pending
@@ -297,10 +377,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 /// *   **6**: migrating
                 /// *   **7**: ready for upgrade
                 /// *   **8**: upgrading
-                /// *   **9**: ready for changes
+                /// *   **9**: ready for change
                 /// *   **10**: released
                 /// *   **11**: changing
                 /// *   **15**: expired
+                /// *   **30**: scaling
                 /// </summary>
                 [NameInMap("ServiceStatus")]
                 [Validation(Required=false)]
@@ -381,7 +462,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? TopicNumLimit { get; set; }
 
                 /// <summary>
-                /// The upgrade information of the instance.
+                /// The upgrade information about the instance.
                 /// </summary>
                 [NameInMap("UpgradeServiceDetailInfo")]
                 [Validation(Required=false)]
@@ -418,12 +499,34 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public int? UsedTopicCount { get; set; }
 
                 /// <summary>
-                /// The vSwitch ID of the instance.
+                /// The ID of the vSwitch to which the instance belongs.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
+                /// <summary>
+                /// The instance status. The valid values are consistent with the values displayed in the ApsaraMQ for Kafka console. This parameter is used in the new version of ApsaraMQ for Kafka.
+                /// 
+                /// Valid values:
+                /// 
+                /// *   **0**: pending
+                /// *   **1**: deploying
+                /// *   **2**: running
+                /// *   **3**: stopped
+                /// *   **4**: expiring
+                /// *   **5**: expired
+                /// *   **6**: released
+                /// *   **7**: upgrading
+                /// *   **8**: migrating
+                /// *   **21**: stopping
+                /// *   **22**: starting
+                /// *   **23**: releasing
+                /// *   **30**: auto scaling
+                /// *   **101**: deployment failed
+                /// *   **102**: upgrade failed
+                /// *   **103**: migration failed
+                /// </summary>
                 [NameInMap("ViewInstanceStatusCode")]
                 [Validation(Required=false)]
                 public int? ViewInstanceStatusCode { get; set; }
