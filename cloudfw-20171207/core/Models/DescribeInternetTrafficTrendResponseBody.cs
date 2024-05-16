@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? MaxBandwidthTime { get; set; }
 
+        [NameInMap("MaxDayExceedBytes")]
+        [Validation(Required=false)]
+        public long? MaxDayExceedBytes { get; set; }
+
         /// <summary>
         /// The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.
         /// </summary>
@@ -164,6 +168,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("TotalBytes")]
         [Validation(Required=false)]
         public long? TotalBytes { get; set; }
+
+        [NameInMap("TotalExceedBytes")]
+        [Validation(Required=false)]
+        public long? TotalExceedBytes { get; set; }
 
         /// <summary>
         /// The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.
