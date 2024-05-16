@@ -1983,6 +1983,214 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
+         * @summary 创建新的AppCode
+         *
+         * @param request CreateAppCodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAppCodeResponse
+         */
+        public CreateAppCodeResponse CreateAppCodeWithOptions(CreateAppCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCode))
+            {
+                query["AppCode"] = request.AppCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAppCode",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAppCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建新的AppCode
+         *
+         * @param request CreateAppCodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAppCodeResponse
+         */
+        public async Task<CreateAppCodeResponse> CreateAppCodeWithOptionsAsync(CreateAppCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCode))
+            {
+                query["AppCode"] = request.AppCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAppCode",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAppCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建新的AppCode
+         *
+         * @param request CreateAppCodeRequest
+         * @return CreateAppCodeResponse
+         */
+        public CreateAppCodeResponse CreateAppCode(CreateAppCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAppCodeWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建新的AppCode
+         *
+         * @param request CreateAppCodeRequest
+         * @return CreateAppCodeResponse
+         */
+        public async Task<CreateAppCodeResponse> CreateAppCodeAsync(CreateAppCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAppCodeWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 创建新的AK、SK
+         *
+         * @param request CreateAppKeyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAppKeyResponse
+         */
+        public CreateAppKeyResponse CreateAppKeyWithOptions(CreateAppKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
+            {
+                query["AppKey"] = request.AppKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSecret))
+            {
+                query["AppSecret"] = request.AppSecret;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAppKey",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAppKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建新的AK、SK
+         *
+         * @param request CreateAppKeyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAppKeyResponse
+         */
+        public async Task<CreateAppKeyResponse> CreateAppKeyWithOptionsAsync(CreateAppKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
+            {
+                query["AppKey"] = request.AppKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSecret))
+            {
+                query["AppSecret"] = request.AppSecret;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAppKey",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAppKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建新的AK、SK
+         *
+         * @param request CreateAppKeyRequest
+         * @return CreateAppKeyResponse
+         */
+        public CreateAppKeyResponse CreateAppKey(CreateAppKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAppKeyWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建新的AK、SK
+         *
+         * @param request CreateAppKeyRequest
+         * @return CreateAppKeyResponse
+         */
+        public async Task<CreateAppKeyResponse> CreateAppKeyAsync(CreateAppKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAppKeyWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 创建后端服务
          *
          * @param request CreateBackendRequest
@@ -4540,6 +4748,206 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAppWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 删除新的AppCode
+         *
+         * @param request DeleteAppCodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAppCodeResponse
+         */
+        public DeleteAppCodeResponse DeleteAppCodeWithOptions(DeleteAppCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCode))
+            {
+                query["AppCode"] = request.AppCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAppCode",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAppCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除新的AppCode
+         *
+         * @param request DeleteAppCodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAppCodeResponse
+         */
+        public async Task<DeleteAppCodeResponse> DeleteAppCodeWithOptionsAsync(DeleteAppCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCode))
+            {
+                query["AppCode"] = request.AppCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAppCode",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAppCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除新的AppCode
+         *
+         * @param request DeleteAppCodeRequest
+         * @return DeleteAppCodeResponse
+         */
+        public DeleteAppCodeResponse DeleteAppCode(DeleteAppCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAppCodeWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 删除新的AppCode
+         *
+         * @param request DeleteAppCodeRequest
+         * @return DeleteAppCodeResponse
+         */
+        public async Task<DeleteAppCodeResponse> DeleteAppCodeAsync(DeleteAppCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAppCodeWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 删除新的AppKey
+         *
+         * @param request DeleteAppKeyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAppKeyResponse
+         */
+        public DeleteAppKeyResponse DeleteAppKeyWithOptions(DeleteAppKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
+            {
+                query["AppKey"] = request.AppKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAppKey",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAppKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除新的AppKey
+         *
+         * @param request DeleteAppKeyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAppKeyResponse
+         */
+        public async Task<DeleteAppKeyResponse> DeleteAppKeyWithOptionsAsync(DeleteAppKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
+            {
+                query["AppKey"] = request.AppKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAppKey",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAppKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除新的AppKey
+         *
+         * @param request DeleteAppKeyRequest
+         * @return DeleteAppKeyResponse
+         */
+        public DeleteAppKeyResponse DeleteAppKey(DeleteAppKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAppKeyWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 删除新的AppKey
+         *
+         * @param request DeleteAppKeyRequest
+         * @return DeleteAppKeyResponse
+         */
+        public async Task<DeleteAppKeyResponse> DeleteAppKeyAsync(DeleteAppKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAppKeyWithOptionsAsync(request, runtime);
         }
 
         /**
