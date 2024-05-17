@@ -1,0 +1,58 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Gpdb20160503.Models
+{
+    public class DescribeJDBCDataSourceResponseBody : TeaModel {
+        [NameInMap("CreateTime")]
+        [Validation(Required=false)]
+        public string CreateTime { get; set; }
+
+        [NameInMap("DataSourceDescription")]
+        [Validation(Required=false)]
+        public string DataSourceDescription { get; set; }
+
+        [NameInMap("DataSourceId")]
+        [Validation(Required=false)]
+        public string DataSourceId { get; set; }
+
+        [NameInMap("DataSourceName")]
+        [Validation(Required=false)]
+        public string DataSourceName { get; set; }
+
+        [NameInMap("DataSourceStatus")]
+        [Validation(Required=false)]
+        public string DataSourceStatus { get; set; }
+
+        [NameInMap("DataSourceType")]
+        [Validation(Required=false)]
+        public string DataSourceType { get; set; }
+
+        [NameInMap("JDBCConnectionString")]
+        [Validation(Required=false)]
+        public string JDBCConnectionString { get; set; }
+
+        [NameInMap("JDBCPassword")]
+        [Validation(Required=false)]
+        public string JDBCPassword { get; set; }
+
+        [NameInMap("JDBCUserName")]
+        [Validation(Required=false)]
+        public string JDBCUserName { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StatusMessage")]
+        [Validation(Required=false)]
+        public string StatusMessage { get; set; }
+
+    }
+
+}
