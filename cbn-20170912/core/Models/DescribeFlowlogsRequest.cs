@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The name of the flow log.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("FlowLogName")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The name of the Logstore where the flow log is stored.
         /// 
-        /// The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, underscores (\_), and hyphens (-). It must start or end with a lowercase letter or a digit.
+        /// The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, underscores (_), and hyphens (-). It must start or end with a lowercase letter or a digit.
         /// </summary>
         [NameInMap("LogStoreName")]
         [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the region where the flow log is deployed.
         /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

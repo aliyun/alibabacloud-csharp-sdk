@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DescribeCenAttachedChildInstanceAttributeRequest : TeaModel {
         /// <summary>
         /// The ID of the CEN instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the network instance that is attached to the CEN instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChildInstanceId")]
         [Validation(Required=false)]
@@ -26,7 +30,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The region ID of the network instance.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChildInstanceRegionId")]
         [Validation(Required=false)]
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// *   **VPC**: virtual private cloud (VPC)
         /// *   **VBR**: virtual border router (VBR)
         /// *   **CCN**: Cloud Connect Network (CCN) instance
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChildInstanceType")]
         [Validation(Required=false)]

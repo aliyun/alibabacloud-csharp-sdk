@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterMulticastDomainVSwitchesRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
@@ -41,6 +44,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

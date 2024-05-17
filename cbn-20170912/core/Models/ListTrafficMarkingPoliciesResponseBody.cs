@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The list of traffic marking policies.
+        /// The information about the traffic marking policy.
         /// </summary>
         [NameInMap("TrafficMarkingPolicies")]
         [Validation(Required=false)]
         public List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies> TrafficMarkingPolicies { get; set; }
         public class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies : TeaModel {
             /// <summary>
-            /// The differentiated services code point (DSCP) value of the traffic marking policy.
+            /// The Differentiated Service Code Point (DSCP) value of the traffic marking policy.
             /// </summary>
             [NameInMap("MarkingDscp")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The priority of the traffic marking policy.
             /// 
-            /// A smaller value indicates a higher priority.
+            /// A lower value indicates a higher priority.
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
@@ -89,23 +89,22 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// 
             /// *   **Creating**: The policy is being created.
             /// *   **Active**: The policy is available.
-            /// *   **Modifying**: The policy is being modified
+            /// *   **Modifying**: The policy is being modified.
             /// *   **Deleting**: The policy is being deleted.
-            /// *   **Deleted**: The policy is deleted.
             /// </summary>
             [NameInMap("TrafficMarkingPolicyStatus")]
             [Validation(Required=false)]
             public string TrafficMarkingPolicyStatus { get; set; }
 
             /// <summary>
-            /// The list of traffic classification rules.
+            /// The traffic classification rules.
             /// </summary>
             [NameInMap("TrafficMatchRules")]
             [Validation(Required=false)]
             public List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules> TrafficMatchRules { get; set; }
             public class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules : TeaModel {
                 /// <summary>
-                /// The destination CIDR block used to match data packets.
+                /// The destination CIDR block that is used to match packets.
                 /// </summary>
                 [NameInMap("DstCidr")]
                 [Validation(Required=false)]
@@ -120,22 +119,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
                 /// <summary>
                 /// The DSCP value used to match data packets.
+                /// 
+                /// >  If the value of the **MatchDscp** parameter is -1, data packets are considered a match regardless of the DSCP value.
                 /// </summary>
                 [NameInMap("MatchDscp")]
                 [Validation(Required=false)]
                 public int? MatchDscp { get; set; }
 
                 /// <summary>
-                /// The protocol used to match data packets.
+                /// The protocol that is used to match packets.
                 /// 
-                /// > Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.
+                /// >  Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.
                 /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// The source CIDR block used to match data packets.
+                /// The source CIDR block that is used to match packets.
                 /// </summary>
                 [NameInMap("SrcCidr")]
                 [Validation(Required=false)]
@@ -175,7 +176,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// *   **Creating**: The rule is being created.
                 /// *   **Active**: The rule is available.
                 /// *   **Deleting**: The rule is being deleted.
-                /// *   **Deleted**: The rule is deleted.
                 /// </summary>
                 [NameInMap("TrafficMatchRuleStatus")]
                 [Validation(Required=false)]

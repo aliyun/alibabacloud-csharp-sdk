@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The description of the QoS policy.
         /// 
-        /// The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
+        /// This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.
         /// </summary>
         [NameInMap("TrafficQosPolicyDescription")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The name of the QoS policy.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+        /// The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
         /// </summary>
         [NameInMap("TrafficQosPolicyName")]
         [Validation(Required=false)]
@@ -65,16 +65,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The information about the QoS queue.
         /// 
-        /// You can call this operation to create at most three QoS queues. To create more queues, you must call the CreateCenInterRegionTrafficQosQueue operation.
+        /// You can add at most three QoS queues in a QoS policy by calling this operation. To add more QoS queues, call the CreateCenInterRegionTrafficQosQueue operation.
         /// </summary>
         [NameInMap("TrafficQosQueues")]
         [Validation(Required=false)]
         public List<CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues> TrafficQosQueues { get; set; }
         public class CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues : TeaModel {
             /// <summary>
-            /// The DSCP value that matches the current queue.
+            /// The Differentiated Services Code Point (DSCP) value that matches the current queue.
             /// 
-            /// Each QoS policy supports up to three queues. You can specify at most 60 DSCP values for each queue. Separate DSCP values with commas (,).
+            /// Each QoS policy supports at most three queues. You can specify at most 60 DSCP values for each queue. Separate multiple DCSP values with commas (,).
             /// </summary>
             [NameInMap("Dscps")]
             [Validation(Required=false)]
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The description of the current queue.
             /// 
-            /// Each QoS policy supports up to three queues. You can add a description to each queue.
+            /// Each QoS policy supports at most three queues. You can specify a description for each queue.
             /// 
-            /// The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
+            /// This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.
             /// </summary>
             [NameInMap("QosQueueDescription")]
             [Validation(Required=false)]
@@ -94,20 +94,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The name of the current queue.
             /// 
-            /// Each QoS policy supports up to three queues. You can specify a name for each queue.
+            /// Each QoS policy supports at most three queues. You can specify a name for each queue.
             /// 
-            /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+            /// The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
             /// </summary>
             [NameInMap("QosQueueName")]
             [Validation(Required=false)]
             public string QosQueueName { get; set; }
 
             /// <summary>
-            /// The percentage of bandwidth resources that can be allocated to the current queue.
+            /// The percentage of the inter-region bandwidth that can be used by the queue.
             /// 
-            /// Each QoS policy supports up to three queues. You can specify a percentage of bandwidth resources for each queue.
+            /// Each QoS policy supports at most three queues. You can specify a valid percentage for each queue.
             /// 
-            /// If you enter **1**, it indicates that the current queue can consume at most \*\*1%\*\* of the bandwidth resources.
+            /// For example, a value of **1** specifies that the queue can consume 1% of the inter-region bandwidth.
             /// 
             /// >  The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.
             /// </summary>
@@ -119,6 +119,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the inter-region connection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]
@@ -126,6 +128,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the transit router.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]

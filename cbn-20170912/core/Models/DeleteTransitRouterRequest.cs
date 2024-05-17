@@ -48,6 +48,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the transit router.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]

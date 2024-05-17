@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class ResolveAndRouteServiceInCenRequest : TeaModel {
         /// <summary>
         /// The IDs of the regions where the cloud service is accessed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccessRegionIds")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the CEN instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -47,6 +51,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// The IP addresses or CIDR blocks of the cloud service.
         /// 
         /// > In most cases, multiple IP addresses or CIDR blocks are assigned to a cloud service. We recommend that you call this operation multiple times to add all IP addresses and CIDR blocks of the cloud service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the region in which the cloud service is deployed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HostRegionId")]
         [Validation(Required=false)]
@@ -61,6 +69,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the VPC that is associated with the cloud service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HostVpcId")]
         [Validation(Required=false)]

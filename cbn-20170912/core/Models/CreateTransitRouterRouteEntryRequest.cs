@@ -57,6 +57,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The destination CIDR block of the route.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouterRouteEntryDestinationCidrBlock")]
         [Validation(Required=false)]
@@ -83,6 +85,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// 
         /// *   **BlackHole**: routes network traffic to a black hole. All packets that match this route are dropped. If you select this option, you do not need to specify the next hop information.
         /// *   **Attachment**: routes network traffic to a network instance connection. If you select this option, you must specify the ID of the network instance connection. All packets that match this route are routed to the specified network instance connection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouterRouteEntryNextHopType")]
         [Validation(Required=false)]
@@ -90,6 +94,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the route table of the Enterprise Edition transit router.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouterRouteTableId")]
         [Validation(Required=false)]

@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// Specified whether to query the multicast members. Valid values:
         /// 
-        /// *   **false**: no
-        /// *   **true**: yes
+        /// *   **false**
+        /// *   **true**
         /// 
-        /// >- This parameter can be set together with the IsGroupMember parameter.
+        /// >- This parameter must be specified together with the IsGroupMember parameter.
         /// >- If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.
         /// >- If you set only one of them or both of them, the specified values prevail.
         /// </summary>
@@ -44,12 +44,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// Specifies whether to query the multicast sources. Valid values:
         /// 
-        /// *   **false**: no
-        /// *   **true**: yes
+        /// *   **false**
+        /// *   **true**
         /// 
-        /// >- This parameter can be set together with the IsGroupMember parameter.
-        /// >- If you do not set IsGroupSource or IsGroupMember, both the multicast sources and members are queried.
-        /// >- If you set only one of them or both of them, the specified values prevail.
+        /// > - This parameter must be specified together with the IsGroupMember parameter.
+        /// > *   If you do not specify IsGroupMember or IsGroupSource, both the multicast sources and members are queried.
+        /// > *   If you specify only one of them or both of them, the specified values prevail.
         /// </summary>
         [NameInMap("IsGroupSource")]
         [Validation(Required=false)]
@@ -120,7 +120,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The ID of the network instance connection.
+        /// The ID of the network instance connection
+        /// 
+        /// You must configure one of the TransitRouterMulticastDomainId and TransitRouterAttachmentId parameters.
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]
@@ -128,6 +130,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the multicast domain.
+        /// 
+        /// You must configure one of the TransitRouterMulticastDomainId and TransitRouterAttachmentId parameters.
         /// </summary>
         [NameInMap("TransitRouterMulticastDomainId")]
         [Validation(Required=false)]

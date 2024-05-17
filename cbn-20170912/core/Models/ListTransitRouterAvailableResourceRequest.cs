@@ -20,7 +20,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The region ID of the Enterprise Edition transit router.
         /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

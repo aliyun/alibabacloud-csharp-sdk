@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The protocol that is used to match packets.
             /// 
-            /// You can call the [ListTrafficMarkingPolicies](~~468322~~) operation to query the details about a traffic classification rule.
+            /// You can call the [ListTrafficMarkingPolicies](https://help.aliyun.com/document_detail/468322.html) operation to query the details about a traffic classification rule.
             /// </summary>
             [NameInMap("Protocol")]
             [Validation(Required=false)]
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The new description of the traffic marking policy.
         /// 
-        /// The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
+        /// The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The description must start with a letter.
         /// </summary>
         [NameInMap("TrafficMarkingPolicyDescription")]
         [Validation(Required=false)]
@@ -254,6 +254,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the traffic marking policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficMarkingPolicyId")]
         [Validation(Required=false)]
@@ -262,7 +264,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The new name of the traffic marking policy.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.
         /// </summary>
         [NameInMap("TrafficMarkingPolicyName")]
         [Validation(Required=false)]

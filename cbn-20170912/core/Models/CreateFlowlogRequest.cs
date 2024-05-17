@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class CreateFlowlogRequest : TeaModel {
         /// <summary>
         /// The ID of the CEN instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The name of the flow log.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("FlowLogName")]
         [Validation(Required=false)]
@@ -60,9 +62,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// *   If no Logstores are created in the selected region, enter a name and the system automatically creates a Logstore. The name of the Logstore. The name must meet the following requirements:
         /// 
         ///     *   The name must be unique in a project.
-        ///     *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).
+        ///     *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).
         ///     *   The name must start and end with a lowercase letter or a digit.
         ///     *   The name must be 3 to 63 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LogStoreName")]
         [Validation(Required=false)]
@@ -89,6 +93,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         ///     *   The name can contain only lowercase letters, digits, and hyphens (-).
         ///     *   The name must start and end with a lowercase letter or a digit.
         ///     *   The name must be 3 to 63 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -97,7 +103,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the region where the flow log is deployed.
         /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

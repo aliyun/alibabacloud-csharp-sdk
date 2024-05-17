@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// Specifies whether to forcibly delete the VBR connection. Valid values:
         /// 
-        /// *   **false** (default): checks for dependency resources, such as associated forwarding correlations and route learning policies before the VBR connection is deleted. If such resources exist, the VBR connection is not deleted and an error message is returned.
-        /// *   **true**: deletes all dependency resources along with the VBR connection.
+        /// *   **false** (default): checks for resources related to the VBR connection, such as associated forwarding and route learning policies. If such resources exist, the VBR connection is not deleted and an error message is returned.
+        /// *   **true**: deletes the VBR connection and related resources.
         /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
@@ -58,6 +58,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the VBR connection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]

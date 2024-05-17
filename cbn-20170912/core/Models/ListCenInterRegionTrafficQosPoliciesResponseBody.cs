@@ -69,13 +69,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficQosPolicyName { get; set; }
 
             /// <summary>
-            /// The status of the QoS policy. Valid values:
+            /// The status of the QoS policy.
             /// 
             /// *   **Creating**: The QoS policy is being created.
             /// *   **Active**: The QoS policy is available.
-            /// *   **Modifying**: The QoS policy is being modified
+            /// *   **Modifying**: The policy is being modified.
             /// *   **Deleting**: The QoS policy is being deleted.
-            /// *   **Deleted**: The QoS policy is deleted.
             /// </summary>
             [NameInMap("TrafficQosPolicyStatus")]
             [Validation(Required=false)]
@@ -89,7 +88,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues> TrafficQosQueues { get; set; }
             public class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues : TeaModel {
                 /// <summary>
-                /// The differentiated services code point (DSCP) value used to match packets in the queue.
+                /// The differentiated services code point (DSCP) value that is used to match packets.
                 /// </summary>
                 [NameInMap("Dscps")]
                 [Validation(Required=false)]
@@ -103,7 +102,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string QosQueueDescription { get; set; }
 
                 /// <summary>
-                /// The ID of the queue.
+                /// The queue ID.
                 /// </summary>
                 [NameInMap("QosQueueId")]
                 [Validation(Required=false)]

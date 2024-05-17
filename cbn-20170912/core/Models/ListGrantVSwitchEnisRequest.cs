@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class ListGrantVSwitchEnisRequest : TeaModel {
         /// <summary>
         /// The ID of the CEN instance to which the VPC is attached.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -74,6 +76,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of a vSwitch in the VPC. You can specify only one vSwitch in each call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
@@ -81,6 +85,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the VPC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

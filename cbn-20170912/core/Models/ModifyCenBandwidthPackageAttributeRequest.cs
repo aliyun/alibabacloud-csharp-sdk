@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class ModifyCenBandwidthPackageAttributeRequest : TeaModel {
         /// <summary>
         /// The ID of the bandwidth plan.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]

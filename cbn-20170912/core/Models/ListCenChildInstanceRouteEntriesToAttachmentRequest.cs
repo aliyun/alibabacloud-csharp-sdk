@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the route table configured on the network instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChildInstanceRouteTableId")]
         [Validation(Required=false)]
@@ -90,6 +92,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the network instance connection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]

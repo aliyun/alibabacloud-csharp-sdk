@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the region where the transit router is deployed.
         /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The name of the VPN attachment.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.
         /// </summary>
         [NameInMap("TransitRouterAttachmentName")]
         [Validation(Required=false)]
@@ -141,6 +141,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the IPsec-VPN attachment.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpnId")]
         [Validation(Required=false)]
@@ -160,6 +162,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// The ID of the zone in the current region.
         /// 
         /// Resources are deployed in the specified zone.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Zone")]
         [Validation(Required=false)]
@@ -168,7 +172,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The zone ID of the read-only instance.
             /// 
-            /// You can call the [ListTransitRouterAvailableResource](~~261356~~) operation to query the most recent zone list.
+            /// You can call the [ListTransitRouterAvailableResource](https://help.aliyun.com/document_detail/261356.html) operation to query the most recent zone list.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The maximum bandwidth value of the bandwidth plan. Unit: Mbit/s. Valid values: **2** to **10000**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -78,6 +80,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// *   **Asia-Pacific**: Asia Pacific
         /// *   **Europe**: Europe
         /// *   **Australia**: Australia
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GeographicRegionAId")]
         [Validation(Required=false)]
@@ -91,6 +95,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// *   **Asia-Pacific**: Asia Pacific
         /// *   **Europe**: Europe
         /// *   **Australia**: Australia
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GeographicRegionBId")]
         [Validation(Required=false)]
@@ -99,7 +105,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The name of the bandwidth plan.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

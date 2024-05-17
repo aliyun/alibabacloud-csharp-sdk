@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DescribeCenGeographicSpanRemainingBandwidthRequest : TeaModel {
         /// <summary>
         /// The ID of the Cloud Enterprise Network (CEN) instance to which the bandwidth plan is associated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// *   **Asia-Pacific**: Asia Pacific
         /// *   **Europe**: Europe
         /// *   **Australia**: Australia
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GeographicRegionAId")]
         [Validation(Required=false)]
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// *   **Asia-Pacific**: Asia Pacific
         /// *   **Europe**: Europe
         /// *   **Australia**: Australia
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GeographicRegionBId")]
         [Validation(Required=false)]

@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the queue.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("QosQueueId")]
         [Validation(Required=false)]

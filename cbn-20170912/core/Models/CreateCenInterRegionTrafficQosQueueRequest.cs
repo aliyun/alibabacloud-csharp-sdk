@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Dscps")]
         [Validation(Required=false)]
         public List<int?> Dscps { get; set; }
@@ -37,6 +40,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string QosQueueName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RemainBandwidthPercent")]
         [Validation(Required=false)]
         public string RemainBandwidthPercent { get; set; }
@@ -49,6 +55,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TrafficQosPolicyId")]
         [Validation(Required=false)]
         public string TrafficQosPolicyId { get; set; }

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class CreateTransitRouterCidrRequest : TeaModel {
         /// <summary>
         /// The CIDR block of the transit router.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Cidr")]
         [Validation(Required=false)]
@@ -19,9 +21,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+        /// >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -65,12 +67,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.
-        /// - **true** (default): yes
         /// 
-        ///   A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached. 
+        /// *   **true** (default)
         /// 
-        ///   The blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router. 
-        /// - **false**: no
+        ///     If you set the value to true, after you create a VPN attachment on a private VPN gateway and enable route learning for the VPN attachment, the system automatically adds the following route to the route table of the transit router that is in route learning relationship with the VPN attachment:
+        /// 
+        ///     A blackhole route whose destination CIDR block is the transit router CIDR block, which refers to the CIDR block from which gateway IP addresses are allocated to the IPsec-VPN connection. The blackhole route is advertised only to the route tables of virtual border routers (VBRs) connected to the transit router.
+        /// 
+        /// *   **false**
         /// </summary>
         [NameInMap("PublishCidrRoute")]
         [Validation(Required=false)]
@@ -79,7 +83,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The region ID of the transit router.
         /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -95,6 +101,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the transit router.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]

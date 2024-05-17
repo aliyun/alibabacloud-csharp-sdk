@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
             /// <summary>
-            /// Indicates whether the Enterprise Edition transit router automatically advertises routes to VPCs. Valid values:
+            /// Indicates whether the Enterprise Edition transit router can automatically advertise routes to the VPC. Valid values:
             /// 
-            /// *   **false:** (default)
+            /// *   **false**
             /// *   **true**
             /// </summary>
             [NameInMap("AutoPublishRouteEnabled")]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public bool? AutoPublishRouteEnabled { get; set; }
 
             /// <summary>
-            /// The CEN instance ID.
+            /// The ID of the CEN instance.
             /// </summary>
             [NameInMap("CenId")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The billing method of the VPC connection.
             /// 
-            /// Only **POSTPAY** may be returned, which is the default value and specifies the pay-as-you-go billing method.
+            /// Only **POSTPAY** may be returned, which indicates the default pay-as-you-go billing method.
             /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The time when the VPC connection was created.
             /// 
-            /// The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+            /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -107,14 +107,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// *   **Attached**
             /// *   **Attaching**
             /// *   **Detaching**
-            /// *   **Detached**
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The information about the tags.
+            /// The tag key.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -144,7 +143,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentDescription { get; set; }
 
             /// <summary>
-            /// The ID of the VPC connection.
+            /// The VPC connection ID.
             /// </summary>
             [NameInMap("TransitRouterAttachmentId")]
             [Validation(Required=false)]
@@ -158,7 +157,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentName { get; set; }
 
             /// <summary>
-            /// The ID of the Enterprise Edition transit router.
+            /// The description of the Enterprise Edition transit router.
             /// </summary>
             [NameInMap("TransitRouterId")]
             [Validation(Required=false)]
@@ -186,14 +185,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VpcRegionId { get; set; }
 
             /// <summary>
-            /// The primary and secondary zones of the VPC connection and the vSwitches and elastic network interfaces (ENIs) of the VPC.
+            /// The primary and secondary zones, vSwitches, and ENIs of the VPC.
             /// </summary>
             [NameInMap("ZoneMappings")]
             [Validation(Required=false)]
             public List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings> ZoneMappings { get; set; }
             public class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings : TeaModel {
                 /// <summary>
-                /// The ID of the ENI that is associated with the vSwitch of the Enterprise Edition transit router.
+                /// The ID of the ENI created by the Enterprise Edition transit router in the vSwitch.
                 /// </summary>
                 [NameInMap("NetworkInterfaceId")]
                 [Validation(Required=false)]

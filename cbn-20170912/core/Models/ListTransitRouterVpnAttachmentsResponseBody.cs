@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
             /// <summary>
-            /// Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN connection. Valid values:
+            /// Indicates the transit router can automatically advertise routes to the IPsec connection. Valid values:
             /// 
             /// *   **true**: yes
             /// *   **false**: no
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public bool? AutoPublishRouteEnabled { get; set; }
 
             /// <summary>
-            /// The ID of the CEN instance.
+            /// The ID of the Cloud Enterprise Network (CEN) instance.
             /// </summary>
             [NameInMap("CenId")]
             [Validation(Required=false)]
@@ -67,37 +67,36 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The billing method of the VPN attachment.
             /// 
-            /// The value is POSTPAY, which is the default value and specifies the pay-as-you-go billing method.
+            /// Only POSTPAY may be returned, which is the default pay-as-you-go billing method.
             /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The time when the VPN attachment was created.
+            /// The time when the VPN connection was created.
             /// 
-            /// The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+            /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The type of resource to which the transit router is connected.
+            /// The type of resource attached to the transit router.
             /// 
-            /// Valid value: **VPN**, which indicates that an IPsec-VPN connection is attached to the transit router.
+            /// Only **VPN** may be returned, which indicates that an IPsec-VPN connection is attached to the transit router.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The status of the VPN attachment. Valid values:
+            /// The status of the VPN connection. Valid values:
             /// 
-            /// *   **Attached**: The VPC attachment has been created on the transit router.
-            /// *   **Attaching**: The VPN attachment is being created on the transit router.
-            /// *   **Detaching**: The VPN attachment is being deleted from the transit router.
-            /// *   **Detached**: The VPN attachment is deleted from the transit router.
+            /// *   **Attached**
+            /// *   **Attaching**
+            /// *   **Detaching**
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -127,7 +126,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// The description of the VPN attachment.
+            /// The description of the IPsec-VPN connection.
             /// </summary>
             [NameInMap("TransitRouterAttachmentDescription")]
             [Validation(Required=false)]
@@ -169,25 +168,25 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? VpnOwnerId { get; set; }
 
             /// <summary>
-            /// The ID of the region to which the IPsec-VPN connection belongs.
+            /// The region ID of the IPsec-VPN connection.
             /// 
-            /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+            /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
             /// </summary>
             [NameInMap("VpnRegionId")]
             [Validation(Required=false)]
             public string VpnRegionId { get; set; }
 
             /// <summary>
-            /// The zones where the VPN attachment is deployed.
+            /// The zones in which the VPN attachment is deployed.
             /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
             public List<ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsZones> Zones { get; set; }
             public class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsZones : TeaModel {
                 /// <summary>
-                /// The ID of the zone.
+                /// The zone ID.
                 /// 
-                /// You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+                /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

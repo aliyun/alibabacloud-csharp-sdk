@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class AssociateCenBandwidthPackageRequest : TeaModel {
         /// <summary>
         /// The ID of the bandwidth plan.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the CEN instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]

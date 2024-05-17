@@ -55,6 +55,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the QoS policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficQosPolicyId")]
         [Validation(Required=false)]

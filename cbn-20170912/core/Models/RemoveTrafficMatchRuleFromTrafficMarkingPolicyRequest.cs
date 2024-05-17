@@ -48,8 +48,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the traffic classification rule.
-        /// 
-        /// You can specify at most 20 traffic classification rules.
         /// </summary>
         [NameInMap("TrafficMarkRuleIds")]
         [Validation(Required=false)]
@@ -57,6 +55,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the traffic marking policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TrafficMarkingPolicyId")]
         [Validation(Required=false)]

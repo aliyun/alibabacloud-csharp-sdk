@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The region ID of the transit router.
         /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -70,29 +70,29 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The tags.
         /// 
-        /// You can specify at most 20 tags in each call.
+        /// You can specify up to 20 tags in each call.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTransitRouterMulticastDomainsRequestTag> Tag { get; set; }
         public class ListTransitRouterMulticastDomainsRequestTag : TeaModel {
             /// <summary>
-            /// The tag keys.
+            /// The tag key.
             /// 
-            /// The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The tag key cannot be an empty string. The key can be up to 64 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
             /// 
-            /// You can specify at most 20 tag keys.
+            /// You can specify at most 20 tag keys in each call.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values.
+            /// The tag value.
             /// 
-            /// The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// 
-            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+            /// Each key-value pair must be unique. You can specify up to 20 tag values in each call.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

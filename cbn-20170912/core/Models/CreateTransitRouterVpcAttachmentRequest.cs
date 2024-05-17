@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+        /// >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the region where the VPC is deployed.
         /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -139,6 +139,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The VPC ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
@@ -157,6 +159,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// A zone that supports Enterprise Edition transit routers.
         /// 
         /// You can specify at most 10 zones.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
@@ -166,6 +170,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.
             /// 
             /// You can specify vSwitches for at most 10 zones in each call.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
@@ -174,9 +180,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The ID of the zone that supports Enterprise Edition transit routers.
             /// 
-            /// You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+            /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.
             /// 
             /// You can specify at most 10 zones in each call.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

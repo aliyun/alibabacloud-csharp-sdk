@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class ListGrantVSwitchesToCenRequest : TeaModel {
         /// <summary>
         /// The CEN instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -41,7 +43,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The region ID of the VPC.
         /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -57,6 +61,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The VPC ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
@@ -68,7 +74,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// *   If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.
         /// *   If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.
         /// 
-        /// You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+        /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

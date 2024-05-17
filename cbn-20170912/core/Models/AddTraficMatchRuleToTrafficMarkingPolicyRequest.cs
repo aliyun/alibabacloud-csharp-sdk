@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TrafficMarkingPolicyId")]
         [Validation(Required=false)]
         public string TrafficMarkingPolicyId { get; set; }

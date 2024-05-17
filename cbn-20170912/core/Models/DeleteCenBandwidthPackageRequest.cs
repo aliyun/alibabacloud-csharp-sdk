@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteCenBandwidthPackageRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]
         public string CenBandwidthPackageId { get; set; }

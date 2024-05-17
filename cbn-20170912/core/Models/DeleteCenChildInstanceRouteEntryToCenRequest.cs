@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeleteCenChildInstanceRouteEntryToCenRequest : TeaModel {
         /// <summary>
         /// The ID of the CEN instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the network instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChildInstanceId")]
         [Validation(Required=false)]
@@ -35,7 +39,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the region where the network instance is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChildInstanceRegionId")]
         [Validation(Required=false)]
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// 
         /// *   **VPC**: a virtual private cloud (VPC)
         /// *   **VBR**: a virtual border router (VBR)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChildInstanceType")]
         [Validation(Required=false)]
@@ -55,6 +63,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// The destination CIDR block of the route.
         /// 
         /// Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
@@ -78,6 +88,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the route table configured on the network instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]

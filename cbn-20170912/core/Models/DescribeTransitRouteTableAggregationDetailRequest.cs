@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The destination CIDR block of the aggregate route.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouteTableAggregationCidr")]
         [Validation(Required=false)]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the route table of the Enterprise Edition transit router.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouteTableId")]
         [Validation(Required=false)]

@@ -52,6 +52,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// >  The following CIDR blocks are not supported:
         /// >*   CIDR blocks that start with 0 or 100.64.
         /// >*   Multicast CIDR blocks, including 224.0.0.1 to 239.255.255.254.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouteTableAggregationCidr")]
         [Validation(Required=false)]
@@ -59,6 +61,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the route table of the Enterprise Edition transit router.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouteTableId")]
         [Validation(Required=false)]

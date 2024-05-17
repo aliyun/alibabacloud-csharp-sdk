@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// The IP address of the multicast group to which the multicast source belongs. Valid values: **224.0.0.1** to **239.255.255.254**.
         /// 
         /// If the multicast group does not exist in the multicast domain, the system automatically creates the multicast group in the multicast domain.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupIpAddress")]
         [Validation(Required=false)]
@@ -64,6 +66,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the multicast domain to which the multicast source belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouterMulticastDomainId")]
         [Validation(Required=false)]

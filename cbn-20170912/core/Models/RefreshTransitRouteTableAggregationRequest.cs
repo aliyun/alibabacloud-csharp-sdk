@@ -29,10 +29,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TransitRouteTableAggregationCidr")]
         [Validation(Required=false)]
         public string TransitRouteTableAggregationCidr { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TransitRouteTableId")]
         [Validation(Required=false)]
         public string TransitRouteTableId { get; set; }

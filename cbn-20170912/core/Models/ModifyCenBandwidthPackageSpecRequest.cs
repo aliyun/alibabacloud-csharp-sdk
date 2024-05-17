@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the bandwidth plan.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]

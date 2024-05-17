@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeleteRouteServiceInCenRequest : TeaModel {
         /// <summary>
         /// The ID of the region where the cloud service is accessed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccessRegionId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the CEN instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The IP addresses or CIDR blocks of the cloud service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
@@ -33,7 +39,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The region ID of the cloud service.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HostRegionId")]
         [Validation(Required=false)]

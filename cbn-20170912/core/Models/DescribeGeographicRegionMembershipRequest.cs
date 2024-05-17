@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGeographicRegionMembershipRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("GeographicRegionId")]
         [Validation(Required=false)]
         public string GeographicRegionId { get; set; }

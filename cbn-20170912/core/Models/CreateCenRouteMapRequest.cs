@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the CEN instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -29,7 +31,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the region in which the routing policy is applied.
         /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CenRegionId")]
         [Validation(Required=false)]
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The description of the routing policy.
         /// 
-        /// The description must be 2 to 256 characters in length, and can contain letters, digits, hyphens (-), periods (.), and underscores (\_). It must start with a letter and cannot start with `http://` or `https://`.
+        /// The description must be 2 to 256 characters in length, and can contain letters, digits, hyphens (-), periods (.), and underscores (_). It must start with a letter and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -152,6 +156,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// 
         /// *   **Permit**: the route is permitted.
         /// *   **Deny**: the route is denied.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MapResult")]
         [Validation(Required=false)]
@@ -254,6 +260,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// The priority of the routing policy. Valid values: **1** to **100**. A smaller value indicates a higher priority.
         /// 
         /// > You cannot specify the same priority for routing policies that apply in the same region and direction. The system matches routes against the match conditions of routing policies in descending order of priority. A smaller value indicates a higher priority. You must set the priorities to proper values.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
@@ -328,7 +336,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The IDs of the source regions from which routes are evaluated. You can enter at most 32 region IDs.
         /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("SourceRegionIds")]
         [Validation(Required=false)]
@@ -360,6 +368,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// *   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.
         /// 
         /// For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the same region, or to gateways deployed in other regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransmitDirection")]
         [Validation(Required=false)]

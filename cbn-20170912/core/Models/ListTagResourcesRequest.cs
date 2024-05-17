@@ -82,6 +82,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// **Flowlog**: flow log
         /// 
         /// **TransitRouterMulticastDomain**: multicast domain
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

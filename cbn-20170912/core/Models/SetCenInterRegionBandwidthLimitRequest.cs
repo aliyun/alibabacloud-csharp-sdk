@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class SetCenInterRegionBandwidthLimitRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BandwidthLimit")]
         [Validation(Required=false)]
         public long? BandwidthLimit { get; set; }
 
+        [NameInMap("BandwidthType")]
+        [Validation(Required=false)]
+        public string BandwidthType { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("LocalRegionId")]
         [Validation(Required=false)]
         public string LocalRegionId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OppositeRegionId")]
         [Validation(Required=false)]
         public string OppositeRegionId { get; set; }

@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// The differentiated services code point (DSCP) value to be added to packets that match the traffic classification rule. Valid values: **0** to **63**.
         /// 
         /// The DSCP value of each traffic marking policy on a transit router must be unique.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MarkingDscp")]
         [Validation(Required=false)]
@@ -51,6 +53,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// The priority value of the traffic marking policy. Valid values: **1** to **100**.
         /// 
         /// The priority value of each traffic marking policy on a transit router must be unique. A smaller value specifies a higher priority.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
@@ -214,6 +218,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// The ID of the transit router.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]
