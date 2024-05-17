@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string ActivityEvent { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -29,10 +32,16 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string Classification { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DeliveryType")]
         [Validation(Required=false)]
         public long? DeliveryType { get; set; }
@@ -41,6 +50,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public long? DismissalDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ExpiredSeconds")]
         [Validation(Required=false)]
         public long? ExpiredSeconds { get; set; }
@@ -101,6 +113,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public int? StrategyType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TargetMsgkey")]
         [Validation(Required=false)]
         public string TargetMsgkey { get; set; }
@@ -113,6 +128,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string ThirdChannelCategoryShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
@@ -121,6 +139,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string Uri { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

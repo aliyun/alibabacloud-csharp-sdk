@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string ActivityEvent { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string Classification { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DeliveryType")]
         [Validation(Required=false)]
         public long? DeliveryType { get; set; }
@@ -37,6 +43,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public long? DismissalDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ExpiredSeconds")]
         [Validation(Required=false)]
         public long? ExpiredSeconds { get; set; }
@@ -69,6 +78,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public int? StrategyType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TargetMsg")]
         [Validation(Required=false)]
         public List<PushMultipleShrinkRequestTargetMsg> TargetMsg { get; set; }
@@ -77,10 +89,16 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
             [Validation(Required=false)]
             public string ExtendedParams { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("MsgKey")]
             [Validation(Required=false)]
             public string MsgKey { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Target")]
             [Validation(Required=false)]
             public string Target { get; set; }
@@ -95,6 +113,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
@@ -103,6 +124,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string ThirdChannelCategoryShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

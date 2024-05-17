@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
-    public class UpdateMcubeWhitelistRequest : TeaModel {
+    public class CreateLinkRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -16,34 +16,24 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("Id")]
+        [NameInMap("Cors")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public string Cors { get; set; }
 
-        [NameInMap("KeyIds")]
+        [NameInMap("Domain")]
         [Validation(Required=false)]
-        public string KeyIds { get; set; }
+        public string Domain { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("OnexFlag")]
+        [NameInMap("Dynamicfield")]
         [Validation(Required=false)]
-        public bool? OnexFlag { get; set; }
-
-        [NameInMap("OssUrl")]
-        [Validation(Required=false)]
-        public string OssUrl { get; set; }
+        public string Dynamicfield { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("TenantId")]
+        [NameInMap("TargetUrl")]
         [Validation(Required=false)]
-        public string TenantId { get; set; }
+        public string TargetUrl { get; set; }
 
         /// <summary>
         /// This parameter is required.

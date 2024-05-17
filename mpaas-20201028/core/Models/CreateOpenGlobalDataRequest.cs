@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
     public class CreateOpenGlobalDataRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string AppMinVersion { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
@@ -41,10 +47,16 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string OsType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
         public string Payload { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ThirdMsgId")]
         [Validation(Required=false)]
         public string ThirdMsgId { get; set; }
@@ -61,6 +73,9 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public long? ValidTimeStart { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

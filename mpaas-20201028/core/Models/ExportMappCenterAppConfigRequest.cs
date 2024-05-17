@@ -21,14 +21,23 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string CertRsaBase64 { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Identifier")]
         [Validation(Required=false)]
         public string Identifier { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OnexFlag")]
         [Validation(Required=false)]
         public bool? OnexFlag { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SystemType")]
         [Validation(Required=false)]
         public string SystemType { get; set; }
