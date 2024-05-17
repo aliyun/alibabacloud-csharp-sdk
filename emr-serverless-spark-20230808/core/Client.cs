@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * @summary 取消jobRun作业
+         *
+         * @param request CancelJobRunRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelJobRunResponse
+         */
         public CancelJobRunResponse CancelJobRunWithOptions(string workspaceId, string jobRunId, CancelJobRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -65,6 +73,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<CancelJobRunResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 取消jobRun作业
+         *
+         * @param request CancelJobRunRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CancelJobRunResponse
+         */
         public async Task<CancelJobRunResponse> CancelJobRunWithOptionsAsync(string workspaceId, string jobRunId, CancelJobRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -93,6 +109,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<CancelJobRunResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 取消jobRun作业
+         *
+         * @param request CancelJobRunRequest
+         * @return CancelJobRunResponse
+         */
         public CancelJobRunResponse CancelJobRun(string workspaceId, string jobRunId, CancelJobRunRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -100,6 +122,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return CancelJobRunWithOptions(workspaceId, jobRunId, request, headers, runtime);
         }
 
+        /**
+         * @summary 取消jobRun作业
+         *
+         * @param request CancelJobRunRequest
+         * @return CancelJobRunResponse
+         */
         public async Task<CancelJobRunResponse> CancelJobRunAsync(string workspaceId, string jobRunId, CancelJobRunRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -107,6 +135,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await CancelJobRunWithOptionsAsync(workspaceId, jobRunId, request, headers, runtime);
         }
 
+        /**
+         * @summary 获取任务
+         *
+         * @param request GetJobRunRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetJobRunResponse
+         */
         public GetJobRunResponse GetJobRunWithOptions(string workspaceId, string jobRunId, GetJobRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -135,6 +171,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<GetJobRunResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取任务
+         *
+         * @param request GetJobRunRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetJobRunResponse
+         */
         public async Task<GetJobRunResponse> GetJobRunWithOptionsAsync(string workspaceId, string jobRunId, GetJobRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -163,6 +207,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<GetJobRunResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取任务
+         *
+         * @param request GetJobRunRequest
+         * @return GetJobRunResponse
+         */
         public GetJobRunResponse GetJobRun(string workspaceId, string jobRunId, GetJobRunRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -170,6 +220,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return GetJobRunWithOptions(workspaceId, jobRunId, request, headers, runtime);
         }
 
+        /**
+         * @summary 获取任务
+         *
+         * @param request GetJobRunRequest
+         * @return GetJobRunResponse
+         */
         public async Task<GetJobRunResponse> GetJobRunAsync(string workspaceId, string jobRunId, GetJobRunRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -177,6 +233,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await GetJobRunWithOptionsAsync(workspaceId, jobRunId, request, headers, runtime);
         }
 
+        /**
+         * @summary 查询run列表
+         *
+         * @param tmpReq ListJobRunsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListJobRunsResponse
+         */
         public ListJobRunsResponse ListJobRunsWithOptions(string workspaceId, ListJobRunsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -263,6 +327,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<ListJobRunsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询run列表
+         *
+         * @param tmpReq ListJobRunsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListJobRunsResponse
+         */
         public async Task<ListJobRunsResponse> ListJobRunsWithOptionsAsync(string workspaceId, ListJobRunsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -349,6 +421,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<ListJobRunsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询run列表
+         *
+         * @param request ListJobRunsRequest
+         * @return ListJobRunsResponse
+         */
         public ListJobRunsResponse ListJobRuns(string workspaceId, ListJobRunsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -356,6 +434,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return ListJobRunsWithOptions(workspaceId, request, headers, runtime);
         }
 
+        /**
+         * @summary 查询run列表
+         *
+         * @param request ListJobRunsRequest
+         * @return ListJobRunsResponse
+         */
         public async Task<ListJobRunsResponse> ListJobRunsAsync(string workspaceId, ListJobRunsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -363,6 +447,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await ListJobRunsWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
+        /**
+         * @summary 启动作业
+         *
+         * @param request StartJobRunRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartJobRunResponse
+         */
         public StartJobRunResponse StartJobRunWithOptions(string workspaceId, StartJobRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -433,6 +525,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<StartJobRunResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 启动作业
+         *
+         * @param request StartJobRunRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartJobRunResponse
+         */
         public async Task<StartJobRunResponse> StartJobRunWithOptionsAsync(string workspaceId, StartJobRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -503,6 +603,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return TeaModel.ToObject<StartJobRunResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 启动作业
+         *
+         * @param request StartJobRunRequest
+         * @return StartJobRunResponse
+         */
         public StartJobRunResponse StartJobRun(string workspaceId, StartJobRunRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -510,6 +616,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return StartJobRunWithOptions(workspaceId, request, headers, runtime);
         }
 
+        /**
+         * @summary 启动作业
+         *
+         * @param request StartJobRunRequest
+         * @return StartJobRunResponse
+         */
         public async Task<StartJobRunResponse> StartJobRunAsync(string workspaceId, StartJobRunRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

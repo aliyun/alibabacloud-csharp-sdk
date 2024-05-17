@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class RunLog : TeaModel {
+        [NameInMap("driverStartup")]
+        [Validation(Required=false)]
+        public string DriverStartup { get; set; }
+
         [NameInMap("driverStdError")]
         [Validation(Required=false)]
         public string DriverStdError { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [NameInMap("driverStdOut")]
         [Validation(Required=false)]
         public string DriverStdOut { get; set; }
+
+        [NameInMap("driverSyslog")]
+        [Validation(Required=false)]
+        public string DriverSyslog { get; set; }
 
     }
 
