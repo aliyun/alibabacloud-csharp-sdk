@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationDescription { get; set; }
 
         /// <summary>
-        /// The name of the image copy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).
+        /// The name of the new image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot contain `http://` or `https://`. The name cannot start with `acs:` or `aliyun`. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("DestinationImageName")]
         [Validation(Required=false)]
@@ -38,7 +38,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EncryptAlgorithm { get; set; }
 
         /// <summary>
-        /// Specifies whether to encrypt the image copy.
+        /// Specifies whether to encrypt the new image.
+        /// 
+        /// *   true
+        /// *   false
         /// 
         /// Default value: false.
         /// </summary>
@@ -80,9 +83,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the image copy belongs. If you do not specify this parameter, the image copy belongs to the default resource group.
+        /// The ID of the resource group to which to assign the new image. If you do not specify this parameter, the new image is assigned to the default resource group.
         /// 
-        /// > If you call the CopyImage operation as a Resource Access Management (RAM) user who is not authorized to manage the default resource group and do not specify the `ResourceGroupId` parameter, the `Forbidden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group before you call the CreateImage operation again.
+        /// >  If you call the CopyImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify `ResourceGroupId`, the `Forbidden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CopyImage operation again.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

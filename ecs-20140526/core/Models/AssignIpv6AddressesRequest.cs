@@ -9,39 +9,46 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssignIpv6AddressesRequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The IPv6 addresses that you want to assign to the ENI. You can specify up to 10 IPv6 addresses.
+        /// The IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.
         /// 
         /// Example: Ipv6Address.1=2001:db8:1234:1a00::\\*\\*\\*\\*
         /// 
-        /// > You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
+        /// >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount`, but not both.
         /// </summary>
         [NameInMap("Ipv6Address")]
         [Validation(Required=false)]
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// The number of IPv6 addresses that you want to generate at random for the ENI. Valid values: 1 to 10.
+        /// The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.
         /// 
-        /// > You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
+        /// >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount`, but not both.
         /// </summary>
         [NameInMap("Ipv6AddressCount")]
         [Validation(Required=false)]
         public int? Ipv6AddressCount { get; set; }
 
         /// <summary>
-        /// > This parameter is in invitational preview and is unavailable for general users.
+        /// The IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.
+        /// 
+        /// >  To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.
         /// </summary>
         [NameInMap("Ipv6Prefix")]
         [Validation(Required=false)]
         public List<string> Ipv6Prefix { get; set; }
 
         /// <summary>
-        /// > This parameter is in invitational preview and is unavailable for general users.
+        /// The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.
+        /// 
+        /// >  To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.
         /// </summary>
         [NameInMap("Ipv6PrefixCount")]
         [Validation(Required=false)]

@@ -60,7 +60,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   keypair: SSH key pair
         /// *   launchtemplate: launch template
         /// *   command: Cloud Assistant command
-        /// *   activation: activation code of the Cloud Assistant managed instance
+        /// *   activation: activation code for a Cloud Assistant managed instance
+        /// *   managedinstance: Cloud Assistant managed instance
         /// 
         /// The values are case-sensitive.
         /// </summary>

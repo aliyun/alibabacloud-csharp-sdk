@@ -232,6 +232,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RoleName { get; set; }
 
+        /// <summary>
+        /// The Alibaba Cloud Resource Name (ARN) of the cloud box, which is used to uniquely identify a storage location in the cloud.
+        /// 
+        /// >  Specify this parameter only when you import an image file from OSS on CloudBox. Otherwise, you do not need to specify this parameter. For more information, see [What is OSS on CloudBox?](https://help.aliyun.com/document_detail/430190.html)
+        /// 
+        /// The ARN must be in the `arn:acs:cloudbox:{RegionId}:{AliUid}:cloudbox/{CloudBoxId}` format. Replace the `{RegionId}` variable with the region ID of the cloud box, the `{AliUid}` variable with the ID of the Alibaba Cloud account to which the cloud box belongs, and the `{CloudBoxId}` variable with the ID of the cloud box.
+        /// </summary>
         [NameInMap("StorageLocationArn")]
         [Validation(Required=false)]
         public string StorageLocationArn { get; set; }

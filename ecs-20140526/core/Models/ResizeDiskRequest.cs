@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The method that you want to use to resize the disk. Valid values:
         /// 
-        /// *   offline (default): resizes the disk offline. After you resize a disk offline, you must restart its associated instance by using the ECS console or by calling the [RebootInstance](https://help.aliyun.com/document_detail/25502.html) operation to make the resizing operation take effect. For information about how to restart an ECS instance in the ECS console, see [Restart an instance](https://help.aliyun.com/document_detail/25440.html).
+        /// *   offline (default): resizes the disk offline. After you resize a disk offline, you must restart its associated instance in the ECS console or by calling the [RebootInstance](https://help.aliyun.com/document_detail/25502.html) operation to make the resizing operation take effect. For information about how to restart an ECS instance in the ECS console, see [Restart an instance](https://help.aliyun.com/document_detail/25440.html).
         /// *   online: resizes the disk online. After you resize a disk online, the resizing operation takes effect immediately and you do not need to restart the instance. You can resize ultra disks, standard SSDs, and ESSDs online.
         /// </summary>
         [NameInMap("Type")]

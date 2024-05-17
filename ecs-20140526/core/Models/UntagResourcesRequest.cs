@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags from the resource. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:
+        /// Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:
         /// 
         /// *   true
         /// *   false
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource IDs.
+        /// The resource IDs. Valid values of N: 1 to 50.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -73,6 +73,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   snapshotpolicy: automatic snapshot policy
         /// *   elasticityassurance: elasticity assurance
         /// *   capacityreservation: capacity reservation
+        /// *   command: Cloud Assistant command
+        /// *   invocation: Cloud Assistant command execution result
         /// 
         /// This parameter is required.
         /// </summary>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag keys of the resource.
+        /// The tag keys. Valid values of N: 1 to 20.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

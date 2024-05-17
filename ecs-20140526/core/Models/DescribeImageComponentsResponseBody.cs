@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The ID of the resource group to which the image component belongs.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The operating system type supported by the image component.
+                /// The type of the operating system supported by the image component.
                 /// </summary>
                 [NameInMap("SystemType")]
                 [Validation(Required=false)]
@@ -98,14 +98,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeImageComponentsResponseBodyImageComponentImageComponentSetTagsTag> Tag { get; set; }
                     public class DescribeImageComponentsResponseBodyImageComponentImageComponentSetTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the image component.
+                        /// The key of the tag.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value of the image component.
+                        /// The value of the tag.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -120,21 +120,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The maximum number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the returned value, see the "Usage notes" section of this topic.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -14,11 +14,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ReplaceSystemDiskRequestSystemDisk SystemDisk { get; set; }
         public class ReplaceSystemDiskRequestSystemDisk : TeaModel {
             /// <summary>
-            /// The capacity of the new system disk. Unit: GiB. Valid values: Max{20, Size of the image specified by ImageId} to 500.
+            /// The capacity of the new system disk. Unit: GiB. Valid values:
             /// 
-            /// Default value: Max{40, Size of the image specified by ImageId}.
+            /// *   Basic disk: Max{20, Size of the image corresponding to ImageId} to 500.
+            /// *   Other disks: Max{20, Size of the image corresponding to ImageId} to 2,048.
             /// 
-            /// > If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for the excess capacity.
+            /// Default value: 40 or the size of the image corresponding to ImageId, whichever is greater.
+            /// 
+            /// >  If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for excess capacity.
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
@@ -27,10 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The system architecture. Valid values:
-        /// 
-        /// *   i386
-        /// *   x86_64
+        /// >  This parameter is deprecated.
         /// </summary>
         [NameInMap("Architecture")]
         [Validation(Required=false)]
@@ -74,13 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The disk ID.
-        /// 
-        /// If the `ImageId` parameter is not specified, this parameter is required.
-        /// 
-        /// If the DiskId parameter is specified, the `Platform` and `Architecture` parameters are required. The specified values of `Platform` and `Architecture` must be consistent with those of `Platform` and `Architecture` parameters of the instance.
-        /// 
-        /// > This feature is available to select users. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).
+        /// >  This parameter is deprecated. To improve compatibility, we recommend that you use `ImageId`.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
@@ -174,10 +168,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? PasswordInherit { get; set; }
 
         /// <summary>
-        /// The operating system distribution. Valid values:
-        /// 
-        /// *   CentOS
-        /// *   Ubuntu
+        /// >  This parameter is deprecated.
         /// </summary>
         [NameInMap("Platform")]
         [Validation(Required=false)]

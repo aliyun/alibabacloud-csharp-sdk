@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssignIpv6AddressesResponseBody : TeaModel {
         /// <summary>
-        /// > This parameter is in invitational preview and is unavailable for general users.
+        /// The IPv6 prefixes of the ENI.
         /// </summary>
         [NameInMap("Ipv6PrefixSets")]
         [Validation(Required=false)]

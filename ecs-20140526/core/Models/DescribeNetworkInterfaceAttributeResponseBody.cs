@@ -275,6 +275,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string NetworkInterfaceName { get; set; }
 
+        [NameInMap("NetworkInterfaceTrafficConfig")]
+        [Validation(Required=false)]
+        public DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig NetworkInterfaceTrafficConfig { get; set; }
+        public class DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig : TeaModel {
+            [NameInMap("NetworkInterfaceTrafficMode")]
+            [Validation(Required=false)]
+            public string NetworkInterfaceTrafficMode { get; set; }
+
+            [NameInMap("QueueNumber")]
+            [Validation(Required=false)]
+            public int? QueueNumber { get; set; }
+
+            [NameInMap("QueuePairNumber")]
+            [Validation(Required=false)]
+            public int? QueuePairNumber { get; set; }
+
+        }
+
         /// <summary>
         /// The communication model of the ENI. Valid values:
         /// 
@@ -313,7 +331,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
             public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet : TeaModel {
                 /// <summary>
-                /// The elastic IP address (EIP) that is associated with the secondary private IP address of the ENI.
+                /// The EIP that is associated with the secondary private IP address of the ENI.
                 /// </summary>
                 [NameInMap("AssociatedPublicIp")]
                 [Validation(Required=false)]
@@ -484,14 +502,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeNetworkInterfaceAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeNetworkInterfaceAttributeResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// The key of the tag.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
@@ -502,7 +520,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// >  This parameter is in invitational preview and unavailable for general users.
+        /// >  This parameter is in invitational preview and is not publicly available.
         /// </summary>
         [NameInMap("TcpOptionAddressEnabled")]
         [Validation(Required=false)]

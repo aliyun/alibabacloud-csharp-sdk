@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Accepts the default operation for a system event in the Inquiring state and authorizes the system to perform the default operation.
+         * @summary in the Inquiring state and authorizes the system to perform the default operations.
          *
          * @param request AcceptInquiredSystemEventRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Accepts the default operation for a system event in the Inquiring state and authorizes the system to perform the default operation.
+         * @summary in the Inquiring state and authorizes the system to perform the default operations.
          *
          * @param request AcceptInquiredSystemEventRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Accepts the default operation for a system event in the Inquiring state and authorizes the system to perform the default operation.
+         * @summary in the Inquiring state and authorizes the system to perform the default operations.
          *
          * @param request AcceptInquiredSystemEventRequest
          * @return AcceptInquiredSystemEventResponse
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Accepts the default operation for a system event in the Inquiring state and authorizes the system to perform the default operation.
+         * @summary in the Inquiring state and authorizes the system to perform the default operations.
          *
          * @param request AcceptInquiredSystemEventRequest
          * @return AcceptInquiredSystemEventResponse
@@ -1470,14 +1470,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Assigns one or more IPv6 addresses to an elastic network interface (ENI).
          *
-         * @description You can specify IPv6 addresses within the CIDR block of the vSwitch that is connected to the ENI, or specify the number of IPv6 addresses that are automatically generated for the ENI. When you call this operation, take note of the following items:
-         * *   IPv6 must be enabled for the vSwitch with which the ENI is associated. For more information, see [Enable IPv6 for a vSwitch](https://help.aliyun.com/document_detail/98923.html).
+         * @description ## [](#)Usage notes
+         * You can specify IPv6 addresses in the CIDR block of the vSwitch to which the ENI is connected. You can also specify the number of IPv6 addresses that the system assigns to the ENI. Take note of the following items:
+         * *   IPv6 must be enabled on the vSwitch to which the ENI is connected. For more information, see [Enable IPv6 for a vSwitch](https://help.aliyun.com/document_detail/98923.html).
          * *   The ENI must be in the Available (Available) or InUse (InUse) state.
-         * *   If you want to assign IPv6 addresses to a primary ENI, make sure that the instance to which the ENI is attached is in the Running (Running) or Stopped (Stopped) state.
-         * *   The maximum number of IPv6 addresses that can be assigned to an ENI varies based on the instance type.
-         *     *   If the ENI is in the Available (Available) state, it can be assigned a maximum of 10 IPv6 addresses.
-         *     *   If the ENI is already attached to an Elastic Compute Service (ECS) instance, the maximum number of IPv6 addresses that can be assigned to the ENI varies based on the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
-         * *   After the operation is called, the IPv6 addresses that are assigned to the ENI can be obtained from the response.
+         * *   If you want to assign IPv6 addresses to a primary ENI, make sure that the Elastic Compute Service (ECS) instance to which the ENI is attached is in the Running (Running) or Stopped (Stopped) state.
+         * *   The maximum number of IPv6 addresses that can be assigned to an ENI varies based on the instance type of the instance to which the ENI is attached.
+         *     *   If the ENI is in the Available (Available) state, up to 10 IPv6 addresses can be assigned to the ENI.
+         *     *   If the ENI is attached to an ECS instance, the maximum number of IPv6 addresses that can be assigned to the ENI varies based on the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
+         * *   After the operation is called, you can obtain the IPv6 addresses that are assigned to the ENI from the response.
          *
          * @param request AssignIpv6AddressesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1557,14 +1558,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Assigns one or more IPv6 addresses to an elastic network interface (ENI).
          *
-         * @description You can specify IPv6 addresses within the CIDR block of the vSwitch that is connected to the ENI, or specify the number of IPv6 addresses that are automatically generated for the ENI. When you call this operation, take note of the following items:
-         * *   IPv6 must be enabled for the vSwitch with which the ENI is associated. For more information, see [Enable IPv6 for a vSwitch](https://help.aliyun.com/document_detail/98923.html).
+         * @description ## [](#)Usage notes
+         * You can specify IPv6 addresses in the CIDR block of the vSwitch to which the ENI is connected. You can also specify the number of IPv6 addresses that the system assigns to the ENI. Take note of the following items:
+         * *   IPv6 must be enabled on the vSwitch to which the ENI is connected. For more information, see [Enable IPv6 for a vSwitch](https://help.aliyun.com/document_detail/98923.html).
          * *   The ENI must be in the Available (Available) or InUse (InUse) state.
-         * *   If you want to assign IPv6 addresses to a primary ENI, make sure that the instance to which the ENI is attached is in the Running (Running) or Stopped (Stopped) state.
-         * *   The maximum number of IPv6 addresses that can be assigned to an ENI varies based on the instance type.
-         *     *   If the ENI is in the Available (Available) state, it can be assigned a maximum of 10 IPv6 addresses.
-         *     *   If the ENI is already attached to an Elastic Compute Service (ECS) instance, the maximum number of IPv6 addresses that can be assigned to the ENI varies based on the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
-         * *   After the operation is called, the IPv6 addresses that are assigned to the ENI can be obtained from the response.
+         * *   If you want to assign IPv6 addresses to a primary ENI, make sure that the Elastic Compute Service (ECS) instance to which the ENI is attached is in the Running (Running) or Stopped (Stopped) state.
+         * *   The maximum number of IPv6 addresses that can be assigned to an ENI varies based on the instance type of the instance to which the ENI is attached.
+         *     *   If the ENI is in the Available (Available) state, up to 10 IPv6 addresses can be assigned to the ENI.
+         *     *   If the ENI is attached to an ECS instance, the maximum number of IPv6 addresses that can be assigned to the ENI varies based on the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
+         * *   After the operation is called, you can obtain the IPv6 addresses that are assigned to the ENI from the response.
          *
          * @param request AssignIpv6AddressesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1644,14 +1646,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Assigns one or more IPv6 addresses to an elastic network interface (ENI).
          *
-         * @description You can specify IPv6 addresses within the CIDR block of the vSwitch that is connected to the ENI, or specify the number of IPv6 addresses that are automatically generated for the ENI. When you call this operation, take note of the following items:
-         * *   IPv6 must be enabled for the vSwitch with which the ENI is associated. For more information, see [Enable IPv6 for a vSwitch](https://help.aliyun.com/document_detail/98923.html).
+         * @description ## [](#)Usage notes
+         * You can specify IPv6 addresses in the CIDR block of the vSwitch to which the ENI is connected. You can also specify the number of IPv6 addresses that the system assigns to the ENI. Take note of the following items:
+         * *   IPv6 must be enabled on the vSwitch to which the ENI is connected. For more information, see [Enable IPv6 for a vSwitch](https://help.aliyun.com/document_detail/98923.html).
          * *   The ENI must be in the Available (Available) or InUse (InUse) state.
-         * *   If you want to assign IPv6 addresses to a primary ENI, make sure that the instance to which the ENI is attached is in the Running (Running) or Stopped (Stopped) state.
-         * *   The maximum number of IPv6 addresses that can be assigned to an ENI varies based on the instance type.
-         *     *   If the ENI is in the Available (Available) state, it can be assigned a maximum of 10 IPv6 addresses.
-         *     *   If the ENI is already attached to an Elastic Compute Service (ECS) instance, the maximum number of IPv6 addresses that can be assigned to the ENI varies based on the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
-         * *   After the operation is called, the IPv6 addresses that are assigned to the ENI can be obtained from the response.
+         * *   If you want to assign IPv6 addresses to a primary ENI, make sure that the Elastic Compute Service (ECS) instance to which the ENI is attached is in the Running (Running) or Stopped (Stopped) state.
+         * *   The maximum number of IPv6 addresses that can be assigned to an ENI varies based on the instance type of the instance to which the ENI is attached.
+         *     *   If the ENI is in the Available (Available) state, up to 10 IPv6 addresses can be assigned to the ENI.
+         *     *   If the ENI is attached to an ECS instance, the maximum number of IPv6 addresses that can be assigned to the ENI varies based on the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
+         * *   After the operation is called, you can obtain the IPv6 addresses that are assigned to the ENI from the response.
          *
          * @param request AssignIpv6AddressesRequest
          * @return AssignIpv6AddressesResponse
@@ -1665,14 +1668,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Assigns one or more IPv6 addresses to an elastic network interface (ENI).
          *
-         * @description You can specify IPv6 addresses within the CIDR block of the vSwitch that is connected to the ENI, or specify the number of IPv6 addresses that are automatically generated for the ENI. When you call this operation, take note of the following items:
-         * *   IPv6 must be enabled for the vSwitch with which the ENI is associated. For more information, see [Enable IPv6 for a vSwitch](https://help.aliyun.com/document_detail/98923.html).
+         * @description ## [](#)Usage notes
+         * You can specify IPv6 addresses in the CIDR block of the vSwitch to which the ENI is connected. You can also specify the number of IPv6 addresses that the system assigns to the ENI. Take note of the following items:
+         * *   IPv6 must be enabled on the vSwitch to which the ENI is connected. For more information, see [Enable IPv6 for a vSwitch](https://help.aliyun.com/document_detail/98923.html).
          * *   The ENI must be in the Available (Available) or InUse (InUse) state.
-         * *   If you want to assign IPv6 addresses to a primary ENI, make sure that the instance to which the ENI is attached is in the Running (Running) or Stopped (Stopped) state.
-         * *   The maximum number of IPv6 addresses that can be assigned to an ENI varies based on the instance type.
-         *     *   If the ENI is in the Available (Available) state, it can be assigned a maximum of 10 IPv6 addresses.
-         *     *   If the ENI is already attached to an Elastic Compute Service (ECS) instance, the maximum number of IPv6 addresses that can be assigned to the ENI varies based on the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
-         * *   After the operation is called, the IPv6 addresses that are assigned to the ENI can be obtained from the response.
+         * *   If you want to assign IPv6 addresses to a primary ENI, make sure that the Elastic Compute Service (ECS) instance to which the ENI is attached is in the Running (Running) or Stopped (Stopped) state.
+         * *   The maximum number of IPv6 addresses that can be assigned to an ENI varies based on the instance type of the instance to which the ENI is attached.
+         *     *   If the ENI is in the Available (Available) state, up to 10 IPv6 addresses can be assigned to the ENI.
+         *     *   If the ENI is attached to an ECS instance, the maximum number of IPv6 addresses that can be assigned to the ENI varies based on the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
+         * *   After the operation is called, you can obtain the IPv6 addresses that are assigned to the ENI from the response.
          *
          * @param request AssignIpv6AddressesRequest
          * @return AssignIpv6AddressesResponse
@@ -1684,13 +1688,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Assigns one or more secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that hosts the ENI. Alternatively, you can specify the number of private IP addresses for Elastic Compute Service (ECS) to automatically assign them.
+         * @summary Assigns secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that is connected to the ENI. Alternatively, you can specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.
          *
-         * @description ## Usage notes
+         * @description ## [](#)Usage notes
          * *   The ENI to which you want to assign secondary private IP addresses must be in the Available (Available) or InUse (InUse) state.
-         * *   When you assign secondary private IP addresses to a primary ENI, the instance to which the ENI is attached must be in the Running (Running) or Stopped (Stopped) state.
-         * *   When an ENI is in the Available state, you can assign up to 50 secondary private IP addresses to it. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI is subject to the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
-         * *   After you call this operation for an ENI, you can obtain the secondary private IP addresses that are assigned to the ENI from the response.
+         * *   When you assign private IP addresses to a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the Running (Running) or Stopped (Stopped) state.
+         * *   When an ENI is in the Available state, you can assign up to 49 secondary private IP addresses to the ENI. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI varies based on the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
+         * *   After the operation is called, you can obtain the assigned secondary private IP addresses from the response.
          *
          * @param request AssignPrivateIpAddressesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1768,13 +1772,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Assigns one or more secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that hosts the ENI. Alternatively, you can specify the number of private IP addresses for Elastic Compute Service (ECS) to automatically assign them.
+         * @summary Assigns secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that is connected to the ENI. Alternatively, you can specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.
          *
-         * @description ## Usage notes
+         * @description ## [](#)Usage notes
          * *   The ENI to which you want to assign secondary private IP addresses must be in the Available (Available) or InUse (InUse) state.
-         * *   When you assign secondary private IP addresses to a primary ENI, the instance to which the ENI is attached must be in the Running (Running) or Stopped (Stopped) state.
-         * *   When an ENI is in the Available state, you can assign up to 50 secondary private IP addresses to it. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI is subject to the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
-         * *   After you call this operation for an ENI, you can obtain the secondary private IP addresses that are assigned to the ENI from the response.
+         * *   When you assign private IP addresses to a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the Running (Running) or Stopped (Stopped) state.
+         * *   When an ENI is in the Available state, you can assign up to 49 secondary private IP addresses to the ENI. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI varies based on the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
+         * *   After the operation is called, you can obtain the assigned secondary private IP addresses from the response.
          *
          * @param request AssignPrivateIpAddressesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1852,13 +1856,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Assigns one or more secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that hosts the ENI. Alternatively, you can specify the number of private IP addresses for Elastic Compute Service (ECS) to automatically assign them.
+         * @summary Assigns secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that is connected to the ENI. Alternatively, you can specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.
          *
-         * @description ## Usage notes
+         * @description ## [](#)Usage notes
          * *   The ENI to which you want to assign secondary private IP addresses must be in the Available (Available) or InUse (InUse) state.
-         * *   When you assign secondary private IP addresses to a primary ENI, the instance to which the ENI is attached must be in the Running (Running) or Stopped (Stopped) state.
-         * *   When an ENI is in the Available state, you can assign up to 50 secondary private IP addresses to it. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI is subject to the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
-         * *   After you call this operation for an ENI, you can obtain the secondary private IP addresses that are assigned to the ENI from the response.
+         * *   When you assign private IP addresses to a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the Running (Running) or Stopped (Stopped) state.
+         * *   When an ENI is in the Available state, you can assign up to 49 secondary private IP addresses to the ENI. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI varies based on the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
+         * *   After the operation is called, you can obtain the assigned secondary private IP addresses from the response.
          *
          * @param request AssignPrivateIpAddressesRequest
          * @return AssignPrivateIpAddressesResponse
@@ -1870,13 +1874,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Assigns one or more secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that hosts the ENI. Alternatively, you can specify the number of private IP addresses for Elastic Compute Service (ECS) to automatically assign them.
+         * @summary Assigns secondary private IP addresses to an elastic network interface (ENI). You can specify available private IP addresses within the CIDR block of the vSwitch that is connected to the ENI. Alternatively, you can specify a number of private IP addresses to automatically assign from the CIDR block of the vSwitch to the ENI.
          *
-         * @description ## Usage notes
+         * @description ## [](#)Usage notes
          * *   The ENI to which you want to assign secondary private IP addresses must be in the Available (Available) or InUse (InUse) state.
-         * *   When you assign secondary private IP addresses to a primary ENI, the instance to which the ENI is attached must be in the Running (Running) or Stopped (Stopped) state.
-         * *   When an ENI is in the Available state, you can assign up to 50 secondary private IP addresses to it. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI is subject to the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
-         * *   After you call this operation for an ENI, you can obtain the secondary private IP addresses that are assigned to the ENI from the response.
+         * *   When you assign private IP addresses to a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the Running (Running) or Stopped (Stopped) state.
+         * *   When an ENI is in the Available state, you can assign up to 49 secondary private IP addresses to the ENI. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI varies based on the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
+         * *   After the operation is called, you can obtain the assigned secondary private IP addresses from the response.
          *
          * @param request AssignPrivateIpAddressesRequest
          * @return AssignPrivateIpAddressesResponse
@@ -5158,13 +5162,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Copies a custom image from one region to another. You can deploy or copy Elastic Compute Service (ECS) instances across regions by copying custom images.
          *
-         * @description After you copy a custom image (source image) to the destination region, you can use the image copy to create ECS instances by calling the RunInstances operation or replace the system disks of the ECS instances by calling the ReplaceSystemDisk operation in the destination region.
-         * When you call this operation, take note of the following items:
-         * *   You can copy only custom images that are in the `Available` state.
+         * @description ## [](#)Usage notes
+         * After you copy a custom image to the destination region, you can use the image copy (new image) to create ECS instances by calling the RunInstances operation or replace the system disks of instances by calling the ReplaceSystemDisk operation in the destination region.
+         * Take note of the following items:
+         * *   Only custom images that are in the `Available` state can be copied.
          * *   Custom images that you want to copy must belong to your Alibaba Cloud account or be shared to you by others, and cannot be copied across accounts.
-         * *   When an image is being copied, the image copy cannot be deleted by calling the [DeleteImage](https://help.aliyun.com/document_detail/25537.html) operation. However, you can cancel the copying task that is running by calling the [CancelCopyImage](https://help.aliyun.com/document_detail/25539.html) operation.
-         * *   A region can have only one image copying task running at a time. Other image copying tasks queue up for the current task to complete before the tasks can run in sequence.
-         * *   You can configure the `ResourceGroupId` parameter to specify the resource group to which the image copy belongs. If you do not configure the `ResourceGroupId` parameter, the image copy belongs to the default resource group.
+         * *   When an image is being copied, the image cannot be deleted by calling the [DeleteImage](https://help.aliyun.com/document_detail/25537.html) operation. However, you can cancel the ongoing image copy task by calling the [CancelCopyImage](https://help.aliyun.com/document_detail/25539.html) operation.
+         * *   A region can have only one ongoing image copy task at a time. Other image copy tasks queue up to run in sequence after the ongoing task is completed.
+         * *   You can configure `ResourceGroupId` to specify the resource group to which to assign the new image. If you do not configure `ResourceGroupId`, the new image is assigned to the default resource group.
          *
          * @param request CopyImageRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5252,13 +5257,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Copies a custom image from one region to another. You can deploy or copy Elastic Compute Service (ECS) instances across regions by copying custom images.
          *
-         * @description After you copy a custom image (source image) to the destination region, you can use the image copy to create ECS instances by calling the RunInstances operation or replace the system disks of the ECS instances by calling the ReplaceSystemDisk operation in the destination region.
-         * When you call this operation, take note of the following items:
-         * *   You can copy only custom images that are in the `Available` state.
+         * @description ## [](#)Usage notes
+         * After you copy a custom image to the destination region, you can use the image copy (new image) to create ECS instances by calling the RunInstances operation or replace the system disks of instances by calling the ReplaceSystemDisk operation in the destination region.
+         * Take note of the following items:
+         * *   Only custom images that are in the `Available` state can be copied.
          * *   Custom images that you want to copy must belong to your Alibaba Cloud account or be shared to you by others, and cannot be copied across accounts.
-         * *   When an image is being copied, the image copy cannot be deleted by calling the [DeleteImage](https://help.aliyun.com/document_detail/25537.html) operation. However, you can cancel the copying task that is running by calling the [CancelCopyImage](https://help.aliyun.com/document_detail/25539.html) operation.
-         * *   A region can have only one image copying task running at a time. Other image copying tasks queue up for the current task to complete before the tasks can run in sequence.
-         * *   You can configure the `ResourceGroupId` parameter to specify the resource group to which the image copy belongs. If you do not configure the `ResourceGroupId` parameter, the image copy belongs to the default resource group.
+         * *   When an image is being copied, the image cannot be deleted by calling the [DeleteImage](https://help.aliyun.com/document_detail/25537.html) operation. However, you can cancel the ongoing image copy task by calling the [CancelCopyImage](https://help.aliyun.com/document_detail/25539.html) operation.
+         * *   A region can have only one ongoing image copy task at a time. Other image copy tasks queue up to run in sequence after the ongoing task is completed.
+         * *   You can configure `ResourceGroupId` to specify the resource group to which to assign the new image. If you do not configure `ResourceGroupId`, the new image is assigned to the default resource group.
          *
          * @param request CopyImageRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5346,13 +5352,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Copies a custom image from one region to another. You can deploy or copy Elastic Compute Service (ECS) instances across regions by copying custom images.
          *
-         * @description After you copy a custom image (source image) to the destination region, you can use the image copy to create ECS instances by calling the RunInstances operation or replace the system disks of the ECS instances by calling the ReplaceSystemDisk operation in the destination region.
-         * When you call this operation, take note of the following items:
-         * *   You can copy only custom images that are in the `Available` state.
+         * @description ## [](#)Usage notes
+         * After you copy a custom image to the destination region, you can use the image copy (new image) to create ECS instances by calling the RunInstances operation or replace the system disks of instances by calling the ReplaceSystemDisk operation in the destination region.
+         * Take note of the following items:
+         * *   Only custom images that are in the `Available` state can be copied.
          * *   Custom images that you want to copy must belong to your Alibaba Cloud account or be shared to you by others, and cannot be copied across accounts.
-         * *   When an image is being copied, the image copy cannot be deleted by calling the [DeleteImage](https://help.aliyun.com/document_detail/25537.html) operation. However, you can cancel the copying task that is running by calling the [CancelCopyImage](https://help.aliyun.com/document_detail/25539.html) operation.
-         * *   A region can have only one image copying task running at a time. Other image copying tasks queue up for the current task to complete before the tasks can run in sequence.
-         * *   You can configure the `ResourceGroupId` parameter to specify the resource group to which the image copy belongs. If you do not configure the `ResourceGroupId` parameter, the image copy belongs to the default resource group.
+         * *   When an image is being copied, the image cannot be deleted by calling the [DeleteImage](https://help.aliyun.com/document_detail/25537.html) operation. However, you can cancel the ongoing image copy task by calling the [CancelCopyImage](https://help.aliyun.com/document_detail/25539.html) operation.
+         * *   A region can have only one ongoing image copy task at a time. Other image copy tasks queue up to run in sequence after the ongoing task is completed.
+         * *   You can configure `ResourceGroupId` to specify the resource group to which to assign the new image. If you do not configure `ResourceGroupId`, the new image is assigned to the default resource group.
          *
          * @param request CopyImageRequest
          * @return CopyImageResponse
@@ -5366,13 +5373,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Copies a custom image from one region to another. You can deploy or copy Elastic Compute Service (ECS) instances across regions by copying custom images.
          *
-         * @description After you copy a custom image (source image) to the destination region, you can use the image copy to create ECS instances by calling the RunInstances operation or replace the system disks of the ECS instances by calling the ReplaceSystemDisk operation in the destination region.
-         * When you call this operation, take note of the following items:
-         * *   You can copy only custom images that are in the `Available` state.
+         * @description ## [](#)Usage notes
+         * After you copy a custom image to the destination region, you can use the image copy (new image) to create ECS instances by calling the RunInstances operation or replace the system disks of instances by calling the ReplaceSystemDisk operation in the destination region.
+         * Take note of the following items:
+         * *   Only custom images that are in the `Available` state can be copied.
          * *   Custom images that you want to copy must belong to your Alibaba Cloud account or be shared to you by others, and cannot be copied across accounts.
-         * *   When an image is being copied, the image copy cannot be deleted by calling the [DeleteImage](https://help.aliyun.com/document_detail/25537.html) operation. However, you can cancel the copying task that is running by calling the [CancelCopyImage](https://help.aliyun.com/document_detail/25539.html) operation.
-         * *   A region can have only one image copying task running at a time. Other image copying tasks queue up for the current task to complete before the tasks can run in sequence.
-         * *   You can configure the `ResourceGroupId` parameter to specify the resource group to which the image copy belongs. If you do not configure the `ResourceGroupId` parameter, the image copy belongs to the default resource group.
+         * *   When an image is being copied, the image cannot be deleted by calling the [DeleteImage](https://help.aliyun.com/document_detail/25537.html) operation. However, you can cancel the ongoing image copy task by calling the [CancelCopyImage](https://help.aliyun.com/document_detail/25539.html) operation.
+         * *   A region can have only one ongoing image copy task at a time. Other image copy tasks queue up to run in sequence after the ongoing task is completed.
+         * *   You can configure `ResourceGroupId` to specify the resource group to which to assign the new image. If you do not configure `ResourceGroupId`, the new image is assigned to the default resource group.
          *
          * @param request CopyImageRequest
          * @return CopyImageResponse
@@ -11825,6 +11833,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["NetworkInterfaceName"] = request.NetworkInterfaceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceTrafficConfig))
+            {
+                query["NetworkInterfaceTrafficConfig"] = request.NetworkInterfaceTrafficConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceTrafficMode))
             {
                 query["NetworkInterfaceTrafficMode"] = request.NetworkInterfaceTrafficMode;
@@ -11997,6 +12009,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceName))
             {
                 query["NetworkInterfaceName"] = request.NetworkInterfaceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceTrafficConfig))
+            {
+                query["NetworkInterfaceTrafficConfig"] = request.NetworkInterfaceTrafficConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceTrafficMode))
             {
@@ -24072,12 +24088,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the information about dedicated hosts, including the physical performance specifications, machine codes, and service status of the dedicated hosts, and Elastic Compute Service (ECS) instances that are created on the dedicated hosts.
+         * @summary Queries the information about dedicated hosts, including the physical performance specifications, machine codes, and status of the dedicated hosts, and Elastic Compute Service (ECS) instances that are created on the dedicated hosts.
          *
          * @description ## [](#)Usage notes
          * You can use one of the following methods to query the information about dedicated hosts:
-         * *   Specify `DedicatedHostIds` to query the information about dedicated hosts.
-         * *   Specify `DedicatedHostClusterId` to query the information about the dedicated hosts in a dedicated host cluster.
+         * *   Specify `DedicatedHostIds` to query the details of specified dedicated hosts.
+         * *   Specify `DedicatedHostClusterId` to query the details of dedicated hosts in a dedicated host cluster.
          *
          * @param request DescribeDedicatedHostsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24183,12 +24199,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the information about dedicated hosts, including the physical performance specifications, machine codes, and service status of the dedicated hosts, and Elastic Compute Service (ECS) instances that are created on the dedicated hosts.
+         * @summary Queries the information about dedicated hosts, including the physical performance specifications, machine codes, and status of the dedicated hosts, and Elastic Compute Service (ECS) instances that are created on the dedicated hosts.
          *
          * @description ## [](#)Usage notes
          * You can use one of the following methods to query the information about dedicated hosts:
-         * *   Specify `DedicatedHostIds` to query the information about dedicated hosts.
-         * *   Specify `DedicatedHostClusterId` to query the information about the dedicated hosts in a dedicated host cluster.
+         * *   Specify `DedicatedHostIds` to query the details of specified dedicated hosts.
+         * *   Specify `DedicatedHostClusterId` to query the details of dedicated hosts in a dedicated host cluster.
          *
          * @param request DescribeDedicatedHostsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24294,12 +24310,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the information about dedicated hosts, including the physical performance specifications, machine codes, and service status of the dedicated hosts, and Elastic Compute Service (ECS) instances that are created on the dedicated hosts.
+         * @summary Queries the information about dedicated hosts, including the physical performance specifications, machine codes, and status of the dedicated hosts, and Elastic Compute Service (ECS) instances that are created on the dedicated hosts.
          *
          * @description ## [](#)Usage notes
          * You can use one of the following methods to query the information about dedicated hosts:
-         * *   Specify `DedicatedHostIds` to query the information about dedicated hosts.
-         * *   Specify `DedicatedHostClusterId` to query the information about the dedicated hosts in a dedicated host cluster.
+         * *   Specify `DedicatedHostIds` to query the details of specified dedicated hosts.
+         * *   Specify `DedicatedHostClusterId` to query the details of dedicated hosts in a dedicated host cluster.
          *
          * @param request DescribeDedicatedHostsRequest
          * @return DescribeDedicatedHostsResponse
@@ -24311,12 +24327,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the information about dedicated hosts, including the physical performance specifications, machine codes, and service status of the dedicated hosts, and Elastic Compute Service (ECS) instances that are created on the dedicated hosts.
+         * @summary Queries the information about dedicated hosts, including the physical performance specifications, machine codes, and status of the dedicated hosts, and Elastic Compute Service (ECS) instances that are created on the dedicated hosts.
          *
          * @description ## [](#)Usage notes
          * You can use one of the following methods to query the information about dedicated hosts:
-         * *   Specify `DedicatedHostIds` to query the information about dedicated hosts.
-         * *   Specify `DedicatedHostClusterId` to query the information about the dedicated hosts in a dedicated host cluster.
+         * *   Specify `DedicatedHostIds` to query the details of specified dedicated hosts.
+         * *   Specify `DedicatedHostClusterId` to query the details of dedicated hosts in a dedicated host cluster.
          *
          * @param request DescribeDedicatedHostsRequest
          * @return DescribeDedicatedHostsResponse
@@ -27604,9 +27620,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the details of one or more image components.
+         * @summary Queries the information about one or more image components.
          *
-         * @description You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the DescribeImageComponents operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
+         * @description You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the previous call to the DescribeImageComponents operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
          *
          * @param request DescribeImageComponentsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -27692,9 +27708,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the details of one or more image components.
+         * @summary Queries the information about one or more image components.
          *
-         * @description You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the DescribeImageComponents operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
+         * @description You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the previous call to the DescribeImageComponents operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
          *
          * @param request DescribeImageComponentsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -27780,9 +27796,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the details of one or more image components.
+         * @summary Queries the information about one or more image components.
          *
-         * @description You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the DescribeImageComponents operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
+         * @description You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the previous call to the DescribeImageComponents operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
          *
          * @param request DescribeImageComponentsRequest
          * @return DescribeImageComponentsResponse
@@ -27794,9 +27810,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Queries the details of one or more image components.
+         * @summary Queries the information about one or more image components.
          *
-         * @description You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the DescribeImageComponents operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
+         * @description You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the previous call to the DescribeImageComponents operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
          *
          * @param request DescribeImageComponentsRequest
          * @return DescribeImageComponentsResponse
@@ -28344,7 +28360,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary You can call this operation to query the accounts to which a custom image is shared. The response can be displayed by page. By default, ten entries are displayed on each page.
+         * @summary Queries the accounts with which a custom image is shared. The response can be displayed by page. By default, 10 entries are displayed per page.
          *
          * @param request DescribeImageSharePermissionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -28406,7 +28422,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary You can call this operation to query the accounts to which a custom image is shared. The response can be displayed by page. By default, ten entries are displayed on each page.
+         * @summary Queries the accounts with which a custom image is shared. The response can be displayed by page. By default, 10 entries are displayed per page.
          *
          * @param request DescribeImageSharePermissionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -28468,7 +28484,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary You can call this operation to query the accounts to which a custom image is shared. The response can be displayed by page. By default, ten entries are displayed on each page.
+         * @summary Queries the accounts with which a custom image is shared. The response can be displayed by page. By default, 10 entries are displayed per page.
          *
          * @param request DescribeImageSharePermissionRequest
          * @return DescribeImageSharePermissionResponse
@@ -28480,7 +28496,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary You can call this operation to query the accounts to which a custom image is shared. The response can be displayed by page. By default, ten entries are displayed on each page.
+         * @summary Queries the accounts with which a custom image is shared. The response can be displayed by page. By default, 10 entries are displayed per page.
          *
          * @param request DescribeImageSharePermissionRequest
          * @return DescribeImageSharePermissionResponse
@@ -44609,40 +44625,74 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @description ### [](#)Usage notes
          * Take note of the following items:
          * *   Before you import an image, you must upload the image to an Object Storage Service (OSS) bucket. For more information, see [Upload objects](https://help.aliyun.com/document_detail/31886.html).
-         * *   In some scenarios, you may want to create a custom image based on the operating system data of a source server, import the image to Alibaba Cloud, and then create an ECS instance from the image. The source server can be a physical server, a virtual machine, or a cloud host. If the virtio driver is not installed on the source server, the created ECS instance may be unable to start. To prevent this issue, verify that the virtio driver is installed on the source server before you import the image to Alibaba Cloud. For more information, see [Install the virtio driver](https://help.aliyun.com/document_detail/62423.html).
-         * *   Before you import images for the first time, you must use Resource Access Management (RAM) to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the `NoSetRoletoECSServiceAcount` error code is returned when you call the ImportImage operation. You can complete the authorization with one click on the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101image.0.0.2ffa4df57kSoHX#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageImportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSImportRole%22%7D%2C%20%22request2%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageExportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSExportRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//ecs.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22ECS%22%7D) page of the RAM console. You can also complete the authorization by using a RAM role and RAM policies. The following examples show the policies and permissions required for some steps in the authorization procedure. For more information, see [Control access to resources by using RAM users](https://help.aliyun.com/document_detail/25481.html).
-         *     1.  Create a RAM role named `AliyunECSImageImportDefaultRole`. You must use this exact role name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+         * *   In specific scenarios, you may want to create a custom image based on the operating system data of a source server, import the image to Alibaba Cloud, and then create an ECS instance from the image. The source server can be a physical server, a virtual machine, or a cloud host. If the virtio driver is not installed on the source server, the created ECS instance may be unable to start. To prevent this issue, verify that the virtio driver is installed on the source server before you import the image to Alibaba Cloud. For more information, see [Install the virtio driver](https://help.aliyun.com/document_detail/62423.html).
+         * *   Before you import images for the first time, you must use Resource Access Management (RAM) to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the `NoSetRoletoECSServiceAccount` or `InvalidOperation.CloudBoxImageImportRoleRequired` error code is returned when you call the ImportImage operation. The authorization configuration varies based on whether the image files are imported from a cloud box.
+         *     *   **If the image files are not imported from a cloud box**, you can complete the authorization on the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101image.0.0.2ffa4df57kSoHX#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageImportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSImportRole%22%7D%2C%20%22request2%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageExportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSExportRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//ecs.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22ECS%22%7D) page of the RAM console. You can also complete the authorization by using a RAM role and RAM policies. The following example shows the policies and permissions required for specific steps in the authorization procedure. For more information, see [Control access to ECS resources by using RAM users](https://help.aliyun.com/document_detail/25481.html).
+         *         1.  Create a RAM role named `AliyunECSImageImportDefaultRole`. You must use this exact role name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+         *                 {
+         *                 	"Statement": [
+         *                 	{
+         *                 		"Action": "sts:AssumeRole",
+         *                 		"Effect": "Allow",
+         *                 		"Principal": {
+         *                 		"Service": [
+         *                 			"ecs.aliyuncs.com"
+         *                 		]
+         *                 		}
+         *                 	}
+         *                 ],
+         *                 	"Version": "1"
+         *                 }
+         *         2.  Attach the `AliyunECSImageImportRolePolicy` system policy to the RAM role. You can also create a custom policy that contains the following content and attach the policy to the role:
+         *             ```
          *             {
+         *             	"Version": "1",
          *             	"Statement": [
          *             	{
-         *             		"Action": "sts:AssumeRole",
-         *             		"Effect": "Allow",
-         *             		"Principal": {
-         *             		"Service": [
-         *             			"ecs.aliyuncs.com"
-         *             		]
-         *             		}
-         *             	}
-         *             ],
-         *             	"Version": "1"
+         *             		"Action": [
+         *             				"oss:GetObject",
+         *             				"oss:GetBucketLocation",
+         *             				"oss:GetBucketInfo"
+         *             	],
+         *             			"Resource": "*",
+         *             			"Effect": "Allow"
+         *             			}
+         *             	]
          *             }
-         *     2.  Attach the `AliyunECSImageImportRolePolicy` system policy to the RAM role. You can also create a custom policy that contains the following content and attach the policy to the role:
-         *         ```
-         *         {
-         *         	"Version": "1",
-         *         	"Statement": [
-         *         	{
-         *         		"Action": [
-         *         				"oss:GetObject",
-         *         				"oss:GetBucketLocation",
-         *         				"oss:GetBucketInfo"
-         *         	],
-         *         			"Resource": "*",
-         *         			"Effect": "Allow"
-         *         			}
-         *         	]
-         *         }
-         *         ```
+         *             ```
+         *     *   **If the image files are imported from a cloud box**, you can complete the authorization on the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/role/authorize?request=%7B%22ReturnUrl%22%3A%22https%3A%2F%2Fecs.console.aliyun.com%2F%22%2C%22Services%22%3A%5B%7B%22Roles%22%3A%5B%7B%22RoleName%22%3A%22AliyunECSCloudBoxImageImportDefaultRole%22%2C%22TemplateId%22%3A%22AliyunECSCloudBoxImageImportDefaultRole%22%7D%5D%2C%22Service%22%3A%22ECS%22%7D%5D%7D) page of the RAM console. You can also complete the authorization by using a RAM role and RAM policies. The following example shows the policies and permissions required for specific steps in the authorization procedure. For more information, see [Control access to ECS resources by using RAM users](https://help.aliyun.com/document_detail/25481.html).
+         *         1.  Create a RAM role named `AliyunECSCloudBoxImageImportDefaultRole`. You must use this exact role name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+         *                 {
+         *                 	"Statement": [
+         *                 	{
+         *                 		"Action": "sts:AssumeRole",
+         *                 		"Effect": "Allow",
+         *                 		"Principal": {
+         *                 		"Service": [
+         *                 			"ecs.aliyuncs.com"
+         *                 		]
+         *                 		}
+         *                 	}
+         *                 ],
+         *                 	"Version": "1"
+         *                 }
+         *         2.  Attach the `AliyunECSCloudBoxImageImportRolePolicy` system policy to the RAM role. You can also create a custom policy that contains the following content and attach the policy to the role:
+         *             ```
+         *             {
+         *             	"Version": "1",
+         *             	"Statement": [
+         *             	{
+         *             		"Action": [
+         *             				"oss-cloudbox:GetObject",
+         *             				"oss-cloudbox:GetBucketLocation",
+         *             				"oss-cloudbox:GetBucketInfo"
+         *             	],
+         *             			"Resource": "*",
+         *             			"Effect": "Allow"
+         *             			}
+         *             	]
+         *             }
+         *             ```
          * *   You cannot delete an image that is being imported. However, you can call the [CancelTask](https://help.aliyun.com/document_detail/25624.html) operation to cancel the image import task.
          * *   You can import an image only to the same region as the OSS bucket to which the image file is uploaded.
          * *   The valid values of N in `DiskDeviceMapping.N` range from 1 to 17. When N is set to 1, the disk is a system disk. When N is set to a value from 2 to 17, the disk is a data disk. When N is set to a value greater than 17, parameters prefixed with DiskDeviceMapping.N are ignored.
@@ -44657,7 +44707,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
          *         *   The image supports the resize2fs command. To support this command, you must install the `e2fsprogs` package. By default, the package is installed on the operating system. If the package is not installed, install it.
          *         *   Alibaba Cloud cloud-init of the latest version is installed on the operating system. If the version of cloud-init is 19.1, the minor version must be 19.1.3 or later. If the version of cloud-init is 0.7.6a in some early versions of operating systems, the minor version must be 0.7.6a15 or later. For more information, see [Install cloud-init](https://help.aliyun.com/document_detail/57803.html).
          * *   If the image that you want to import uses the Arm64 architecture, configure the real-time clock (RTC) to use the Coordinated Universal Time (UTC) time standard. For more information, see [Linux time and time zones](https://help.aliyun.com/document_detail/405080.html).
-         * *   When you import images, we recommend that you specify DetectionStrategy. This way, you can optimize the images based on the image check results. For more information, see [Overview](https://help.aliyun.com/document_detail/439819.html).
+         * *   When you import images, we recommend that you specify DetectionStrategy. This way, you can optimize the images based on the image check results. For more information, see [Overview of image check](https://help.aliyun.com/document_detail/439819.html).
          *
          * @param request ImportImageRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -44760,40 +44810,74 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @description ### [](#)Usage notes
          * Take note of the following items:
          * *   Before you import an image, you must upload the image to an Object Storage Service (OSS) bucket. For more information, see [Upload objects](https://help.aliyun.com/document_detail/31886.html).
-         * *   In some scenarios, you may want to create a custom image based on the operating system data of a source server, import the image to Alibaba Cloud, and then create an ECS instance from the image. The source server can be a physical server, a virtual machine, or a cloud host. If the virtio driver is not installed on the source server, the created ECS instance may be unable to start. To prevent this issue, verify that the virtio driver is installed on the source server before you import the image to Alibaba Cloud. For more information, see [Install the virtio driver](https://help.aliyun.com/document_detail/62423.html).
-         * *   Before you import images for the first time, you must use Resource Access Management (RAM) to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the `NoSetRoletoECSServiceAcount` error code is returned when you call the ImportImage operation. You can complete the authorization with one click on the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101image.0.0.2ffa4df57kSoHX#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageImportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSImportRole%22%7D%2C%20%22request2%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageExportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSExportRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//ecs.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22ECS%22%7D) page of the RAM console. You can also complete the authorization by using a RAM role and RAM policies. The following examples show the policies and permissions required for some steps in the authorization procedure. For more information, see [Control access to resources by using RAM users](https://help.aliyun.com/document_detail/25481.html).
-         *     1.  Create a RAM role named `AliyunECSImageImportDefaultRole`. You must use this exact role name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+         * *   In specific scenarios, you may want to create a custom image based on the operating system data of a source server, import the image to Alibaba Cloud, and then create an ECS instance from the image. The source server can be a physical server, a virtual machine, or a cloud host. If the virtio driver is not installed on the source server, the created ECS instance may be unable to start. To prevent this issue, verify that the virtio driver is installed on the source server before you import the image to Alibaba Cloud. For more information, see [Install the virtio driver](https://help.aliyun.com/document_detail/62423.html).
+         * *   Before you import images for the first time, you must use Resource Access Management (RAM) to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the `NoSetRoletoECSServiceAccount` or `InvalidOperation.CloudBoxImageImportRoleRequired` error code is returned when you call the ImportImage operation. The authorization configuration varies based on whether the image files are imported from a cloud box.
+         *     *   **If the image files are not imported from a cloud box**, you can complete the authorization on the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101image.0.0.2ffa4df57kSoHX#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageImportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSImportRole%22%7D%2C%20%22request2%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageExportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSExportRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//ecs.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22ECS%22%7D) page of the RAM console. You can also complete the authorization by using a RAM role and RAM policies. The following example shows the policies and permissions required for specific steps in the authorization procedure. For more information, see [Control access to ECS resources by using RAM users](https://help.aliyun.com/document_detail/25481.html).
+         *         1.  Create a RAM role named `AliyunECSImageImportDefaultRole`. You must use this exact role name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+         *                 {
+         *                 	"Statement": [
+         *                 	{
+         *                 		"Action": "sts:AssumeRole",
+         *                 		"Effect": "Allow",
+         *                 		"Principal": {
+         *                 		"Service": [
+         *                 			"ecs.aliyuncs.com"
+         *                 		]
+         *                 		}
+         *                 	}
+         *                 ],
+         *                 	"Version": "1"
+         *                 }
+         *         2.  Attach the `AliyunECSImageImportRolePolicy` system policy to the RAM role. You can also create a custom policy that contains the following content and attach the policy to the role:
+         *             ```
          *             {
+         *             	"Version": "1",
          *             	"Statement": [
          *             	{
-         *             		"Action": "sts:AssumeRole",
-         *             		"Effect": "Allow",
-         *             		"Principal": {
-         *             		"Service": [
-         *             			"ecs.aliyuncs.com"
-         *             		]
-         *             		}
-         *             	}
-         *             ],
-         *             	"Version": "1"
+         *             		"Action": [
+         *             				"oss:GetObject",
+         *             				"oss:GetBucketLocation",
+         *             				"oss:GetBucketInfo"
+         *             	],
+         *             			"Resource": "*",
+         *             			"Effect": "Allow"
+         *             			}
+         *             	]
          *             }
-         *     2.  Attach the `AliyunECSImageImportRolePolicy` system policy to the RAM role. You can also create a custom policy that contains the following content and attach the policy to the role:
-         *         ```
-         *         {
-         *         	"Version": "1",
-         *         	"Statement": [
-         *         	{
-         *         		"Action": [
-         *         				"oss:GetObject",
-         *         				"oss:GetBucketLocation",
-         *         				"oss:GetBucketInfo"
-         *         	],
-         *         			"Resource": "*",
-         *         			"Effect": "Allow"
-         *         			}
-         *         	]
-         *         }
-         *         ```
+         *             ```
+         *     *   **If the image files are imported from a cloud box**, you can complete the authorization on the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/role/authorize?request=%7B%22ReturnUrl%22%3A%22https%3A%2F%2Fecs.console.aliyun.com%2F%22%2C%22Services%22%3A%5B%7B%22Roles%22%3A%5B%7B%22RoleName%22%3A%22AliyunECSCloudBoxImageImportDefaultRole%22%2C%22TemplateId%22%3A%22AliyunECSCloudBoxImageImportDefaultRole%22%7D%5D%2C%22Service%22%3A%22ECS%22%7D%5D%7D) page of the RAM console. You can also complete the authorization by using a RAM role and RAM policies. The following example shows the policies and permissions required for specific steps in the authorization procedure. For more information, see [Control access to ECS resources by using RAM users](https://help.aliyun.com/document_detail/25481.html).
+         *         1.  Create a RAM role named `AliyunECSCloudBoxImageImportDefaultRole`. You must use this exact role name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+         *                 {
+         *                 	"Statement": [
+         *                 	{
+         *                 		"Action": "sts:AssumeRole",
+         *                 		"Effect": "Allow",
+         *                 		"Principal": {
+         *                 		"Service": [
+         *                 			"ecs.aliyuncs.com"
+         *                 		]
+         *                 		}
+         *                 	}
+         *                 ],
+         *                 	"Version": "1"
+         *                 }
+         *         2.  Attach the `AliyunECSCloudBoxImageImportRolePolicy` system policy to the RAM role. You can also create a custom policy that contains the following content and attach the policy to the role:
+         *             ```
+         *             {
+         *             	"Version": "1",
+         *             	"Statement": [
+         *             	{
+         *             		"Action": [
+         *             				"oss-cloudbox:GetObject",
+         *             				"oss-cloudbox:GetBucketLocation",
+         *             				"oss-cloudbox:GetBucketInfo"
+         *             	],
+         *             			"Resource": "*",
+         *             			"Effect": "Allow"
+         *             			}
+         *             	]
+         *             }
+         *             ```
          * *   You cannot delete an image that is being imported. However, you can call the [CancelTask](https://help.aliyun.com/document_detail/25624.html) operation to cancel the image import task.
          * *   You can import an image only to the same region as the OSS bucket to which the image file is uploaded.
          * *   The valid values of N in `DiskDeviceMapping.N` range from 1 to 17. When N is set to 1, the disk is a system disk. When N is set to a value from 2 to 17, the disk is a data disk. When N is set to a value greater than 17, parameters prefixed with DiskDeviceMapping.N are ignored.
@@ -44808,7 +44892,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
          *         *   The image supports the resize2fs command. To support this command, you must install the `e2fsprogs` package. By default, the package is installed on the operating system. If the package is not installed, install it.
          *         *   Alibaba Cloud cloud-init of the latest version is installed on the operating system. If the version of cloud-init is 19.1, the minor version must be 19.1.3 or later. If the version of cloud-init is 0.7.6a in some early versions of operating systems, the minor version must be 0.7.6a15 or later. For more information, see [Install cloud-init](https://help.aliyun.com/document_detail/57803.html).
          * *   If the image that you want to import uses the Arm64 architecture, configure the real-time clock (RTC) to use the Coordinated Universal Time (UTC) time standard. For more information, see [Linux time and time zones](https://help.aliyun.com/document_detail/405080.html).
-         * *   When you import images, we recommend that you specify DetectionStrategy. This way, you can optimize the images based on the image check results. For more information, see [Overview](https://help.aliyun.com/document_detail/439819.html).
+         * *   When you import images, we recommend that you specify DetectionStrategy. This way, you can optimize the images based on the image check results. For more information, see [Overview of image check](https://help.aliyun.com/document_detail/439819.html).
          *
          * @param request ImportImageRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -44911,40 +44995,74 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @description ### [](#)Usage notes
          * Take note of the following items:
          * *   Before you import an image, you must upload the image to an Object Storage Service (OSS) bucket. For more information, see [Upload objects](https://help.aliyun.com/document_detail/31886.html).
-         * *   In some scenarios, you may want to create a custom image based on the operating system data of a source server, import the image to Alibaba Cloud, and then create an ECS instance from the image. The source server can be a physical server, a virtual machine, or a cloud host. If the virtio driver is not installed on the source server, the created ECS instance may be unable to start. To prevent this issue, verify that the virtio driver is installed on the source server before you import the image to Alibaba Cloud. For more information, see [Install the virtio driver](https://help.aliyun.com/document_detail/62423.html).
-         * *   Before you import images for the first time, you must use Resource Access Management (RAM) to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the `NoSetRoletoECSServiceAcount` error code is returned when you call the ImportImage operation. You can complete the authorization with one click on the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101image.0.0.2ffa4df57kSoHX#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageImportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSImportRole%22%7D%2C%20%22request2%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageExportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSExportRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//ecs.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22ECS%22%7D) page of the RAM console. You can also complete the authorization by using a RAM role and RAM policies. The following examples show the policies and permissions required for some steps in the authorization procedure. For more information, see [Control access to resources by using RAM users](https://help.aliyun.com/document_detail/25481.html).
-         *     1.  Create a RAM role named `AliyunECSImageImportDefaultRole`. You must use this exact role name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+         * *   In specific scenarios, you may want to create a custom image based on the operating system data of a source server, import the image to Alibaba Cloud, and then create an ECS instance from the image. The source server can be a physical server, a virtual machine, or a cloud host. If the virtio driver is not installed on the source server, the created ECS instance may be unable to start. To prevent this issue, verify that the virtio driver is installed on the source server before you import the image to Alibaba Cloud. For more information, see [Install the virtio driver](https://help.aliyun.com/document_detail/62423.html).
+         * *   Before you import images for the first time, you must use Resource Access Management (RAM) to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the `NoSetRoletoECSServiceAccount` or `InvalidOperation.CloudBoxImageImportRoleRequired` error code is returned when you call the ImportImage operation. The authorization configuration varies based on whether the image files are imported from a cloud box.
+         *     *   **If the image files are not imported from a cloud box**, you can complete the authorization on the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101image.0.0.2ffa4df57kSoHX#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageImportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSImportRole%22%7D%2C%20%22request2%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageExportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSExportRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//ecs.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22ECS%22%7D) page of the RAM console. You can also complete the authorization by using a RAM role and RAM policies. The following example shows the policies and permissions required for specific steps in the authorization procedure. For more information, see [Control access to ECS resources by using RAM users](https://help.aliyun.com/document_detail/25481.html).
+         *         1.  Create a RAM role named `AliyunECSImageImportDefaultRole`. You must use this exact role name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+         *                 {
+         *                 	"Statement": [
+         *                 	{
+         *                 		"Action": "sts:AssumeRole",
+         *                 		"Effect": "Allow",
+         *                 		"Principal": {
+         *                 		"Service": [
+         *                 			"ecs.aliyuncs.com"
+         *                 		]
+         *                 		}
+         *                 	}
+         *                 ],
+         *                 	"Version": "1"
+         *                 }
+         *         2.  Attach the `AliyunECSImageImportRolePolicy` system policy to the RAM role. You can also create a custom policy that contains the following content and attach the policy to the role:
+         *             ```
          *             {
+         *             	"Version": "1",
          *             	"Statement": [
          *             	{
-         *             		"Action": "sts:AssumeRole",
-         *             		"Effect": "Allow",
-         *             		"Principal": {
-         *             		"Service": [
-         *             			"ecs.aliyuncs.com"
-         *             		]
-         *             		}
-         *             	}
-         *             ],
-         *             	"Version": "1"
+         *             		"Action": [
+         *             				"oss:GetObject",
+         *             				"oss:GetBucketLocation",
+         *             				"oss:GetBucketInfo"
+         *             	],
+         *             			"Resource": "*",
+         *             			"Effect": "Allow"
+         *             			}
+         *             	]
          *             }
-         *     2.  Attach the `AliyunECSImageImportRolePolicy` system policy to the RAM role. You can also create a custom policy that contains the following content and attach the policy to the role:
-         *         ```
-         *         {
-         *         	"Version": "1",
-         *         	"Statement": [
-         *         	{
-         *         		"Action": [
-         *         				"oss:GetObject",
-         *         				"oss:GetBucketLocation",
-         *         				"oss:GetBucketInfo"
-         *         	],
-         *         			"Resource": "*",
-         *         			"Effect": "Allow"
-         *         			}
-         *         	]
-         *         }
-         *         ```
+         *             ```
+         *     *   **If the image files are imported from a cloud box**, you can complete the authorization on the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/role/authorize?request=%7B%22ReturnUrl%22%3A%22https%3A%2F%2Fecs.console.aliyun.com%2F%22%2C%22Services%22%3A%5B%7B%22Roles%22%3A%5B%7B%22RoleName%22%3A%22AliyunECSCloudBoxImageImportDefaultRole%22%2C%22TemplateId%22%3A%22AliyunECSCloudBoxImageImportDefaultRole%22%7D%5D%2C%22Service%22%3A%22ECS%22%7D%5D%7D) page of the RAM console. You can also complete the authorization by using a RAM role and RAM policies. The following example shows the policies and permissions required for specific steps in the authorization procedure. For more information, see [Control access to ECS resources by using RAM users](https://help.aliyun.com/document_detail/25481.html).
+         *         1.  Create a RAM role named `AliyunECSCloudBoxImageImportDefaultRole`. You must use this exact role name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+         *                 {
+         *                 	"Statement": [
+         *                 	{
+         *                 		"Action": "sts:AssumeRole",
+         *                 		"Effect": "Allow",
+         *                 		"Principal": {
+         *                 		"Service": [
+         *                 			"ecs.aliyuncs.com"
+         *                 		]
+         *                 		}
+         *                 	}
+         *                 ],
+         *                 	"Version": "1"
+         *                 }
+         *         2.  Attach the `AliyunECSCloudBoxImageImportRolePolicy` system policy to the RAM role. You can also create a custom policy that contains the following content and attach the policy to the role:
+         *             ```
+         *             {
+         *             	"Version": "1",
+         *             	"Statement": [
+         *             	{
+         *             		"Action": [
+         *             				"oss-cloudbox:GetObject",
+         *             				"oss-cloudbox:GetBucketLocation",
+         *             				"oss-cloudbox:GetBucketInfo"
+         *             	],
+         *             			"Resource": "*",
+         *             			"Effect": "Allow"
+         *             			}
+         *             	]
+         *             }
+         *             ```
          * *   You cannot delete an image that is being imported. However, you can call the [CancelTask](https://help.aliyun.com/document_detail/25624.html) operation to cancel the image import task.
          * *   You can import an image only to the same region as the OSS bucket to which the image file is uploaded.
          * *   The valid values of N in `DiskDeviceMapping.N` range from 1 to 17. When N is set to 1, the disk is a system disk. When N is set to a value from 2 to 17, the disk is a data disk. When N is set to a value greater than 17, parameters prefixed with DiskDeviceMapping.N are ignored.
@@ -44959,7 +45077,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
          *         *   The image supports the resize2fs command. To support this command, you must install the `e2fsprogs` package. By default, the package is installed on the operating system. If the package is not installed, install it.
          *         *   Alibaba Cloud cloud-init of the latest version is installed on the operating system. If the version of cloud-init is 19.1, the minor version must be 19.1.3 or later. If the version of cloud-init is 0.7.6a in some early versions of operating systems, the minor version must be 0.7.6a15 or later. For more information, see [Install cloud-init](https://help.aliyun.com/document_detail/57803.html).
          * *   If the image that you want to import uses the Arm64 architecture, configure the real-time clock (RTC) to use the Coordinated Universal Time (UTC) time standard. For more information, see [Linux time and time zones](https://help.aliyun.com/document_detail/405080.html).
-         * *   When you import images, we recommend that you specify DetectionStrategy. This way, you can optimize the images based on the image check results. For more information, see [Overview](https://help.aliyun.com/document_detail/439819.html).
+         * *   When you import images, we recommend that you specify DetectionStrategy. This way, you can optimize the images based on the image check results. For more information, see [Overview of image check](https://help.aliyun.com/document_detail/439819.html).
          *
          * @param request ImportImageRequest
          * @return ImportImageResponse
@@ -44976,40 +45094,74 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @description ### [](#)Usage notes
          * Take note of the following items:
          * *   Before you import an image, you must upload the image to an Object Storage Service (OSS) bucket. For more information, see [Upload objects](https://help.aliyun.com/document_detail/31886.html).
-         * *   In some scenarios, you may want to create a custom image based on the operating system data of a source server, import the image to Alibaba Cloud, and then create an ECS instance from the image. The source server can be a physical server, a virtual machine, or a cloud host. If the virtio driver is not installed on the source server, the created ECS instance may be unable to start. To prevent this issue, verify that the virtio driver is installed on the source server before you import the image to Alibaba Cloud. For more information, see [Install the virtio driver](https://help.aliyun.com/document_detail/62423.html).
-         * *   Before you import images for the first time, you must use Resource Access Management (RAM) to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the `NoSetRoletoECSServiceAcount` error code is returned when you call the ImportImage operation. You can complete the authorization with one click on the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101image.0.0.2ffa4df57kSoHX#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageImportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSImportRole%22%7D%2C%20%22request2%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageExportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSExportRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//ecs.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22ECS%22%7D) page of the RAM console. You can also complete the authorization by using a RAM role and RAM policies. The following examples show the policies and permissions required for some steps in the authorization procedure. For more information, see [Control access to resources by using RAM users](https://help.aliyun.com/document_detail/25481.html).
-         *     1.  Create a RAM role named `AliyunECSImageImportDefaultRole`. You must use this exact role name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+         * *   In specific scenarios, you may want to create a custom image based on the operating system data of a source server, import the image to Alibaba Cloud, and then create an ECS instance from the image. The source server can be a physical server, a virtual machine, or a cloud host. If the virtio driver is not installed on the source server, the created ECS instance may be unable to start. To prevent this issue, verify that the virtio driver is installed on the source server before you import the image to Alibaba Cloud. For more information, see [Install the virtio driver](https://help.aliyun.com/document_detail/62423.html).
+         * *   Before you import images for the first time, you must use Resource Access Management (RAM) to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the `NoSetRoletoECSServiceAccount` or `InvalidOperation.CloudBoxImageImportRoleRequired` error code is returned when you call the ImportImage operation. The authorization configuration varies based on whether the image files are imported from a cloud box.
+         *     *   **If the image files are not imported from a cloud box**, you can complete the authorization on the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101image.0.0.2ffa4df57kSoHX#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageImportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSImportRole%22%7D%2C%20%22request2%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageExportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSExportRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//ecs.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22ECS%22%7D) page of the RAM console. You can also complete the authorization by using a RAM role and RAM policies. The following example shows the policies and permissions required for specific steps in the authorization procedure. For more information, see [Control access to ECS resources by using RAM users](https://help.aliyun.com/document_detail/25481.html).
+         *         1.  Create a RAM role named `AliyunECSImageImportDefaultRole`. You must use this exact role name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+         *                 {
+         *                 	"Statement": [
+         *                 	{
+         *                 		"Action": "sts:AssumeRole",
+         *                 		"Effect": "Allow",
+         *                 		"Principal": {
+         *                 		"Service": [
+         *                 			"ecs.aliyuncs.com"
+         *                 		]
+         *                 		}
+         *                 	}
+         *                 ],
+         *                 	"Version": "1"
+         *                 }
+         *         2.  Attach the `AliyunECSImageImportRolePolicy` system policy to the RAM role. You can also create a custom policy that contains the following content and attach the policy to the role:
+         *             ```
          *             {
+         *             	"Version": "1",
          *             	"Statement": [
          *             	{
-         *             		"Action": "sts:AssumeRole",
-         *             		"Effect": "Allow",
-         *             		"Principal": {
-         *             		"Service": [
-         *             			"ecs.aliyuncs.com"
-         *             		]
-         *             		}
-         *             	}
-         *             ],
-         *             	"Version": "1"
+         *             		"Action": [
+         *             				"oss:GetObject",
+         *             				"oss:GetBucketLocation",
+         *             				"oss:GetBucketInfo"
+         *             	],
+         *             			"Resource": "*",
+         *             			"Effect": "Allow"
+         *             			}
+         *             	]
          *             }
-         *     2.  Attach the `AliyunECSImageImportRolePolicy` system policy to the RAM role. You can also create a custom policy that contains the following content and attach the policy to the role:
-         *         ```
-         *         {
-         *         	"Version": "1",
-         *         	"Statement": [
-         *         	{
-         *         		"Action": [
-         *         				"oss:GetObject",
-         *         				"oss:GetBucketLocation",
-         *         				"oss:GetBucketInfo"
-         *         	],
-         *         			"Resource": "*",
-         *         			"Effect": "Allow"
-         *         			}
-         *         	]
-         *         }
-         *         ```
+         *             ```
+         *     *   **If the image files are imported from a cloud box**, you can complete the authorization on the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/role/authorize?request=%7B%22ReturnUrl%22%3A%22https%3A%2F%2Fecs.console.aliyun.com%2F%22%2C%22Services%22%3A%5B%7B%22Roles%22%3A%5B%7B%22RoleName%22%3A%22AliyunECSCloudBoxImageImportDefaultRole%22%2C%22TemplateId%22%3A%22AliyunECSCloudBoxImageImportDefaultRole%22%7D%5D%2C%22Service%22%3A%22ECS%22%7D%5D%7D) page of the RAM console. You can also complete the authorization by using a RAM role and RAM policies. The following example shows the policies and permissions required for specific steps in the authorization procedure. For more information, see [Control access to ECS resources by using RAM users](https://help.aliyun.com/document_detail/25481.html).
+         *         1.  Create a RAM role named `AliyunECSCloudBoxImageImportDefaultRole`. You must use this exact role name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+         *                 {
+         *                 	"Statement": [
+         *                 	{
+         *                 		"Action": "sts:AssumeRole",
+         *                 		"Effect": "Allow",
+         *                 		"Principal": {
+         *                 		"Service": [
+         *                 			"ecs.aliyuncs.com"
+         *                 		]
+         *                 		}
+         *                 	}
+         *                 ],
+         *                 	"Version": "1"
+         *                 }
+         *         2.  Attach the `AliyunECSCloudBoxImageImportRolePolicy` system policy to the RAM role. You can also create a custom policy that contains the following content and attach the policy to the role:
+         *             ```
+         *             {
+         *             	"Version": "1",
+         *             	"Statement": [
+         *             	{
+         *             		"Action": [
+         *             				"oss-cloudbox:GetObject",
+         *             				"oss-cloudbox:GetBucketLocation",
+         *             				"oss-cloudbox:GetBucketInfo"
+         *             	],
+         *             			"Resource": "*",
+         *             			"Effect": "Allow"
+         *             			}
+         *             	]
+         *             }
+         *             ```
          * *   You cannot delete an image that is being imported. However, you can call the [CancelTask](https://help.aliyun.com/document_detail/25624.html) operation to cancel the image import task.
          * *   You can import an image only to the same region as the OSS bucket to which the image file is uploaded.
          * *   The valid values of N in `DiskDeviceMapping.N` range from 1 to 17. When N is set to 1, the disk is a system disk. When N is set to a value from 2 to 17, the disk is a data disk. When N is set to a value greater than 17, parameters prefixed with DiskDeviceMapping.N are ignored.
@@ -45024,7 +45176,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
          *         *   The image supports the resize2fs command. To support this command, you must install the `e2fsprogs` package. By default, the package is installed on the operating system. If the package is not installed, install it.
          *         *   Alibaba Cloud cloud-init of the latest version is installed on the operating system. If the version of cloud-init is 19.1, the minor version must be 19.1.3 or later. If the version of cloud-init is 0.7.6a in some early versions of operating systems, the minor version must be 0.7.6a15 or later. For more information, see [Install cloud-init](https://help.aliyun.com/document_detail/57803.html).
          * *   If the image that you want to import uses the Arm64 architecture, configure the real-time clock (RTC) to use the Coordinated Universal Time (UTC) time standard. For more information, see [Linux time and time zones](https://help.aliyun.com/document_detail/405080.html).
-         * *   When you import images, we recommend that you specify DetectionStrategy. This way, you can optimize the images based on the image check results. For more information, see [Overview](https://help.aliyun.com/document_detail/439819.html).
+         * *   When you import images, we recommend that you specify DetectionStrategy. This way, you can optimize the images based on the image check results. For more information, see [Overview of image check](https://help.aliyun.com/document_detail/439819.html).
          *
          * @param request ImportImageRequest
          * @return ImportImageResponse
@@ -49564,15 +49716,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Changes the billing method of disks that are attached to an Elastic Compute Service (ECS) instance. The billing method of up to 16 disks that are attached to the instance can be changed by calling this operation.
+         * @summary Changes the billing method of data disks that are attached to a subscription Elastic Compute Service (ECS) instance.
          *
-         * @description After you change the billing method, any outstanding payments are automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-         * When you call this operation, take note of the following items:
-         * *   You can change the billing method from subscription to pay-as-you-go for disks that are attached to a subscription instance.
-         * *   You can change the billing method from pay-as-you-go to subscription for data disks that are attached to a subscription or pay-as-you-go instance.
-         * *   The instance cannot be in the Stopped state due to overdue payments.
-         * *   You can change the billing method of each disk up to three times. Up to three refunds can be made for the price differences for each disk.
-         * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
+         * @description # [](#)Usage notes
+         * After you change the billing method, the payment (if any) is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can go to the [Orders page](https://usercenter2-intl.aliyun.com/order/list) in the Expenses and Costs console and pay for the order.
+         * Take note of the following items:
+         * *   Only pay-as-you-go disks can be attached to pay-as-you-go instances, and the billing methods of the disks cannot be changed.
+         * *   The instance cannot be in the Stopped state due to expiration.
+         * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are nonrefundable.
          * *   You cannot change the billing method again within 5 minutes of a successful change.
          *
          * @param request ModifyDiskChargeTypeRequest
@@ -49643,15 +49794,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Changes the billing method of disks that are attached to an Elastic Compute Service (ECS) instance. The billing method of up to 16 disks that are attached to the instance can be changed by calling this operation.
+         * @summary Changes the billing method of data disks that are attached to a subscription Elastic Compute Service (ECS) instance.
          *
-         * @description After you change the billing method, any outstanding payments are automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-         * When you call this operation, take note of the following items:
-         * *   You can change the billing method from subscription to pay-as-you-go for disks that are attached to a subscription instance.
-         * *   You can change the billing method from pay-as-you-go to subscription for data disks that are attached to a subscription or pay-as-you-go instance.
-         * *   The instance cannot be in the Stopped state due to overdue payments.
-         * *   You can change the billing method of each disk up to three times. Up to three refunds can be made for the price differences for each disk.
-         * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
+         * @description # [](#)Usage notes
+         * After you change the billing method, the payment (if any) is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can go to the [Orders page](https://usercenter2-intl.aliyun.com/order/list) in the Expenses and Costs console and pay for the order.
+         * Take note of the following items:
+         * *   Only pay-as-you-go disks can be attached to pay-as-you-go instances, and the billing methods of the disks cannot be changed.
+         * *   The instance cannot be in the Stopped state due to expiration.
+         * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are nonrefundable.
          * *   You cannot change the billing method again within 5 minutes of a successful change.
          *
          * @param request ModifyDiskChargeTypeRequest
@@ -49722,15 +49872,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Changes the billing method of disks that are attached to an Elastic Compute Service (ECS) instance. The billing method of up to 16 disks that are attached to the instance can be changed by calling this operation.
+         * @summary Changes the billing method of data disks that are attached to a subscription Elastic Compute Service (ECS) instance.
          *
-         * @description After you change the billing method, any outstanding payments are automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-         * When you call this operation, take note of the following items:
-         * *   You can change the billing method from subscription to pay-as-you-go for disks that are attached to a subscription instance.
-         * *   You can change the billing method from pay-as-you-go to subscription for data disks that are attached to a subscription or pay-as-you-go instance.
-         * *   The instance cannot be in the Stopped state due to overdue payments.
-         * *   You can change the billing method of each disk up to three times. Up to three refunds can be made for the price differences for each disk.
-         * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
+         * @description # [](#)Usage notes
+         * After you change the billing method, the payment (if any) is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can go to the [Orders page](https://usercenter2-intl.aliyun.com/order/list) in the Expenses and Costs console and pay for the order.
+         * Take note of the following items:
+         * *   Only pay-as-you-go disks can be attached to pay-as-you-go instances, and the billing methods of the disks cannot be changed.
+         * *   The instance cannot be in the Stopped state due to expiration.
+         * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are nonrefundable.
          * *   You cannot change the billing method again within 5 minutes of a successful change.
          *
          * @param request ModifyDiskChargeTypeRequest
@@ -49743,15 +49892,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Changes the billing method of disks that are attached to an Elastic Compute Service (ECS) instance. The billing method of up to 16 disks that are attached to the instance can be changed by calling this operation.
+         * @summary Changes the billing method of data disks that are attached to a subscription Elastic Compute Service (ECS) instance.
          *
-         * @description After you change the billing method, any outstanding payments are automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-         * When you call this operation, take note of the following items:
-         * *   You can change the billing method from subscription to pay-as-you-go for disks that are attached to a subscription instance.
-         * *   You can change the billing method from pay-as-you-go to subscription for data disks that are attached to a subscription or pay-as-you-go instance.
-         * *   The instance cannot be in the Stopped state due to overdue payments.
-         * *   You can change the billing method of each disk up to three times. Up to three refunds can be made for the price differences for each disk.
-         * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
+         * @description # [](#)Usage notes
+         * After you change the billing method, the payment (if any) is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can go to the [Orders page](https://usercenter2-intl.aliyun.com/order/list) in the Expenses and Costs console and pay for the order.
+         * Take note of the following items:
+         * *   Only pay-as-you-go disks can be attached to pay-as-you-go instances, and the billing methods of the disks cannot be changed.
+         * *   The instance cannot be in the Stopped state due to expiration.
+         * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are nonrefundable.
          * *   You cannot change the billing method again within 5 minutes of a successful change.
          *
          * @param request ModifyDiskChargeTypeRequest
@@ -54694,6 +54842,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["NetworkInterfaceName"] = request.NetworkInterfaceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceTrafficConfig))
+            {
+                query["NetworkInterfaceTrafficConfig"] = request.NetworkInterfaceTrafficConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -54783,6 +54935,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceName))
             {
                 query["NetworkInterfaceName"] = request.NetworkInterfaceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceTrafficConfig))
+            {
+                query["NetworkInterfaceTrafficConfig"] = request.NetworkInterfaceTrafficConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -56844,7 +57000,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Modifies the internal access control policy of a basic security group. The internal access control policies of advanced security groups cannot be modified.
+         * @summary Modifies the internal access control policy of instances in a basic security group. The internal access control policy of instances in an advanced security group cannot be modified.
          *
          * @description Take note of the following items:
          * *   When InnerAccessPolicy is set to Accept for a security group, the instances in the security group can communicate with each other. In this case, the Accept internal access control policy takes precedence over user-created security group rules to keep instances in the security group accessible to each other.
@@ -56911,7 +57067,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Modifies the internal access control policy of a basic security group. The internal access control policies of advanced security groups cannot be modified.
+         * @summary Modifies the internal access control policy of instances in a basic security group. The internal access control policy of instances in an advanced security group cannot be modified.
          *
          * @description Take note of the following items:
          * *   When InnerAccessPolicy is set to Accept for a security group, the instances in the security group can communicate with each other. In this case, the Accept internal access control policy takes precedence over user-created security group rules to keep instances in the security group accessible to each other.
@@ -56978,7 +57134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Modifies the internal access control policy of a basic security group. The internal access control policies of advanced security groups cannot be modified.
+         * @summary Modifies the internal access control policy of instances in a basic security group. The internal access control policy of instances in an advanced security group cannot be modified.
          *
          * @description Take note of the following items:
          * *   When InnerAccessPolicy is set to Accept for a security group, the instances in the security group can communicate with each other. In this case, the Accept internal access control policy takes precedence over user-created security group rules to keep instances in the security group accessible to each other.
@@ -56995,7 +57151,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Modifies the internal access control policy of a basic security group. The internal access control policies of advanced security groups cannot be modified.
+         * @summary Modifies the internal access control policy of instances in a basic security group. The internal access control policy of instances in an advanced security group cannot be modified.
          *
          * @description Take note of the following items:
          * *   When InnerAccessPolicy is set to Accept for a security group, the instances in the security group can communicate with each other. In this case, the Accept internal access control policy takes precedence over user-created security group rules to keep instances in the security group accessible to each other.
@@ -58754,7 +58910,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Purchases a reserved instance. Reserved instances can be automatically matched to pay-as-you-go instances to offset the fees of the pay-as-you-go instances.
          *
-         * @description *   Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see [Reserved instances](https://help.aliyun.com/document_detail/100371.html).
+         * @description ## [](#)Usage notes
+         * *   Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see [Reserved instances](https://help.aliyun.com/document_detail/100371.html).
          * *   Before you purchase a reserved instance, you can call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/66186.html) operation to query available instance resources.
          *
          * @param request PurchaseReservedInstancesOfferingRequest
@@ -58867,7 +59024,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Purchases a reserved instance. Reserved instances can be automatically matched to pay-as-you-go instances to offset the fees of the pay-as-you-go instances.
          *
-         * @description *   Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see [Reserved instances](https://help.aliyun.com/document_detail/100371.html).
+         * @description ## [](#)Usage notes
+         * *   Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see [Reserved instances](https://help.aliyun.com/document_detail/100371.html).
          * *   Before you purchase a reserved instance, you can call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/66186.html) operation to query available instance resources.
          *
          * @param request PurchaseReservedInstancesOfferingRequest
@@ -58980,7 +59138,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Purchases a reserved instance. Reserved instances can be automatically matched to pay-as-you-go instances to offset the fees of the pay-as-you-go instances.
          *
-         * @description *   Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see [Reserved instances](https://help.aliyun.com/document_detail/100371.html).
+         * @description ## [](#)Usage notes
+         * *   Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see [Reserved instances](https://help.aliyun.com/document_detail/100371.html).
          * *   Before you purchase a reserved instance, you can call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/66186.html) operation to query available instance resources.
          *
          * @param request PurchaseReservedInstancesOfferingRequest
@@ -58995,7 +59154,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Purchases a reserved instance. Reserved instances can be automatically matched to pay-as-you-go instances to offset the fees of the pay-as-you-go instances.
          *
-         * @description *   Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see [Reserved instances](https://help.aliyun.com/document_detail/100371.html).
+         * @description ## [](#)Usage notes
+         * *   Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see [Reserved instances](https://help.aliyun.com/document_detail/100371.html).
          * *   Before you purchase a reserved instance, you can call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/66186.html) operation to query available instance resources.
          *
          * @param request PurchaseReservedInstancesOfferingRequest
@@ -61776,23 +61936,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Replaces the system disk or the operating system of an Elastic Compute Service (ECS) instance. After the system disk is replaced, the ID of the system disk changes and the original disk is released.
+         * @summary Replaces the operating system of an Elastic Compute Service (ECS) instance. After you perform an operating system replacement operation, the original disk is released and a new system disk is created. This causes the ID of the system disk to change.
          *
-         * @description ## Description
-         * When you call this operation, take note of the following items:
-         * *   You must specify the ImageId parameter or the DiskId parameter. You cannot specify both of these parameters at the same time. Otherwise, the call fails and an error message is returned.
-         * > You can use the `DiskId` parameter to replace the operating system of an instance. This feature is available to select users. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).
+         * @description ## [](#)Usage notes
+         * Take note of the following items:
          * *   The category of the system disk cannot be changed.
          * *   The billing method of the system disk cannot be changed.
          * *   The instance must be in the `Stopped` state.
          *     **
-         *     **Note**This item is applicable only to instances in virtual private clouds (VPCs). If the instance is a pay-as-you-go instance and economical mode is enabled by default for the instance, you must switch from stop mode to standard mode when you stop the instance. This prevents instance restart failures caused by insufficient resources after the system disk is replaced. For more information, see [StopInstance](https://help.aliyun.com/document_detail/25501.html).
-         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons and no operations are allowed on the instance.`` For more information, see [API behavior when an instance is locked for security reasons](https://help.aliyun.com/document_detail/25695.html).
-         * *   You cannot have outstanding payment orders associated with the instance.
-         * *   You can configure the `SystemDisk.Size` parameter to specify the capacity of the new system disk.
-         * After you call this operation, you can use one of the following methods to check whether the system disk is replaced:
-         * *   Call the [DescribeDisks](https://help.aliyun.com/document_detail/25514.html) operation to query the state of the new system disk. If the new system disk is in the In_use state, the system disk is replaced.
-         * *   Call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the state of the instance whose system disk is replaced. If `OperationLocks` in the response is empty, the system disk is replaced.
+         *     **Note** The operation is applicable only to instances of the Virtual Private Cloud (VPC) type. If the instance is a pay-as-you-go instance and economical mode is enabled by default for the instance, you must disable economical mode and enable standard mode when you stop the instance. This prevents the instance from being unable to restart due to insufficient ECS resources after the system disk is replaced. For more information, see [StopInstance](https://help.aliyun.com/document_detail/25501.html).
+         * *   The ECS instance cannot be locked for security reasons. If the value of `OperationLocks` in the DescribeInstances response contains `"LockReason": "security"` for an instance, the instance is locked for security reasons. For more information, see [API behavior when an instance is locked for security reasons](https://help.aliyun.com/document_detail/25695.html).
+         * *   No unpaid orders are associated with the instance.
+         * *   You can configure `SystemDisk.Size` to specify the capacity of the new system disk.
+         * After you call the ReplaceSystemDisk operation, you can use one of the following methods to check whether the system disk is replaced:
+         * *   Call the [DescribeDisks](https://help.aliyun.com/document_detail/25514.html) operation to query the status of the new system disk. If the new system disk is in the In Use state, the system disk is replaced.
+         * *   Call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the status of the instance whose system disk is replaced. If the `OperationLocks` parameter is empty, the system disk is replaced.
          *
          * @param request ReplaceSystemDiskRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -61902,23 +62060,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Replaces the system disk or the operating system of an Elastic Compute Service (ECS) instance. After the system disk is replaced, the ID of the system disk changes and the original disk is released.
+         * @summary Replaces the operating system of an Elastic Compute Service (ECS) instance. After you perform an operating system replacement operation, the original disk is released and a new system disk is created. This causes the ID of the system disk to change.
          *
-         * @description ## Description
-         * When you call this operation, take note of the following items:
-         * *   You must specify the ImageId parameter or the DiskId parameter. You cannot specify both of these parameters at the same time. Otherwise, the call fails and an error message is returned.
-         * > You can use the `DiskId` parameter to replace the operating system of an instance. This feature is available to select users. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).
+         * @description ## [](#)Usage notes
+         * Take note of the following items:
          * *   The category of the system disk cannot be changed.
          * *   The billing method of the system disk cannot be changed.
          * *   The instance must be in the `Stopped` state.
          *     **
-         *     **Note**This item is applicable only to instances in virtual private clouds (VPCs). If the instance is a pay-as-you-go instance and economical mode is enabled by default for the instance, you must switch from stop mode to standard mode when you stop the instance. This prevents instance restart failures caused by insufficient resources after the system disk is replaced. For more information, see [StopInstance](https://help.aliyun.com/document_detail/25501.html).
-         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons and no operations are allowed on the instance.`` For more information, see [API behavior when an instance is locked for security reasons](https://help.aliyun.com/document_detail/25695.html).
-         * *   You cannot have outstanding payment orders associated with the instance.
-         * *   You can configure the `SystemDisk.Size` parameter to specify the capacity of the new system disk.
-         * After you call this operation, you can use one of the following methods to check whether the system disk is replaced:
-         * *   Call the [DescribeDisks](https://help.aliyun.com/document_detail/25514.html) operation to query the state of the new system disk. If the new system disk is in the In_use state, the system disk is replaced.
-         * *   Call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the state of the instance whose system disk is replaced. If `OperationLocks` in the response is empty, the system disk is replaced.
+         *     **Note** The operation is applicable only to instances of the Virtual Private Cloud (VPC) type. If the instance is a pay-as-you-go instance and economical mode is enabled by default for the instance, you must disable economical mode and enable standard mode when you stop the instance. This prevents the instance from being unable to restart due to insufficient ECS resources after the system disk is replaced. For more information, see [StopInstance](https://help.aliyun.com/document_detail/25501.html).
+         * *   The ECS instance cannot be locked for security reasons. If the value of `OperationLocks` in the DescribeInstances response contains `"LockReason": "security"` for an instance, the instance is locked for security reasons. For more information, see [API behavior when an instance is locked for security reasons](https://help.aliyun.com/document_detail/25695.html).
+         * *   No unpaid orders are associated with the instance.
+         * *   You can configure `SystemDisk.Size` to specify the capacity of the new system disk.
+         * After you call the ReplaceSystemDisk operation, you can use one of the following methods to check whether the system disk is replaced:
+         * *   Call the [DescribeDisks](https://help.aliyun.com/document_detail/25514.html) operation to query the status of the new system disk. If the new system disk is in the In Use state, the system disk is replaced.
+         * *   Call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the status of the instance whose system disk is replaced. If the `OperationLocks` parameter is empty, the system disk is replaced.
          *
          * @param request ReplaceSystemDiskRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -62028,23 +62184,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Replaces the system disk or the operating system of an Elastic Compute Service (ECS) instance. After the system disk is replaced, the ID of the system disk changes and the original disk is released.
+         * @summary Replaces the operating system of an Elastic Compute Service (ECS) instance. After you perform an operating system replacement operation, the original disk is released and a new system disk is created. This causes the ID of the system disk to change.
          *
-         * @description ## Description
-         * When you call this operation, take note of the following items:
-         * *   You must specify the ImageId parameter or the DiskId parameter. You cannot specify both of these parameters at the same time. Otherwise, the call fails and an error message is returned.
-         * > You can use the `DiskId` parameter to replace the operating system of an instance. This feature is available to select users. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).
+         * @description ## [](#)Usage notes
+         * Take note of the following items:
          * *   The category of the system disk cannot be changed.
          * *   The billing method of the system disk cannot be changed.
          * *   The instance must be in the `Stopped` state.
          *     **
-         *     **Note**This item is applicable only to instances in virtual private clouds (VPCs). If the instance is a pay-as-you-go instance and economical mode is enabled by default for the instance, you must switch from stop mode to standard mode when you stop the instance. This prevents instance restart failures caused by insufficient resources after the system disk is replaced. For more information, see [StopInstance](https://help.aliyun.com/document_detail/25501.html).
-         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons and no operations are allowed on the instance.`` For more information, see [API behavior when an instance is locked for security reasons](https://help.aliyun.com/document_detail/25695.html).
-         * *   You cannot have outstanding payment orders associated with the instance.
-         * *   You can configure the `SystemDisk.Size` parameter to specify the capacity of the new system disk.
-         * After you call this operation, you can use one of the following methods to check whether the system disk is replaced:
-         * *   Call the [DescribeDisks](https://help.aliyun.com/document_detail/25514.html) operation to query the state of the new system disk. If the new system disk is in the In_use state, the system disk is replaced.
-         * *   Call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the state of the instance whose system disk is replaced. If `OperationLocks` in the response is empty, the system disk is replaced.
+         *     **Note** The operation is applicable only to instances of the Virtual Private Cloud (VPC) type. If the instance is a pay-as-you-go instance and economical mode is enabled by default for the instance, you must disable economical mode and enable standard mode when you stop the instance. This prevents the instance from being unable to restart due to insufficient ECS resources after the system disk is replaced. For more information, see [StopInstance](https://help.aliyun.com/document_detail/25501.html).
+         * *   The ECS instance cannot be locked for security reasons. If the value of `OperationLocks` in the DescribeInstances response contains `"LockReason": "security"` for an instance, the instance is locked for security reasons. For more information, see [API behavior when an instance is locked for security reasons](https://help.aliyun.com/document_detail/25695.html).
+         * *   No unpaid orders are associated with the instance.
+         * *   You can configure `SystemDisk.Size` to specify the capacity of the new system disk.
+         * After you call the ReplaceSystemDisk operation, you can use one of the following methods to check whether the system disk is replaced:
+         * *   Call the [DescribeDisks](https://help.aliyun.com/document_detail/25514.html) operation to query the status of the new system disk. If the new system disk is in the In Use state, the system disk is replaced.
+         * *   Call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the status of the instance whose system disk is replaced. If the `OperationLocks` parameter is empty, the system disk is replaced.
          *
          * @param request ReplaceSystemDiskRequest
          * @return ReplaceSystemDiskResponse
@@ -62056,23 +62210,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Replaces the system disk or the operating system of an Elastic Compute Service (ECS) instance. After the system disk is replaced, the ID of the system disk changes and the original disk is released.
+         * @summary Replaces the operating system of an Elastic Compute Service (ECS) instance. After you perform an operating system replacement operation, the original disk is released and a new system disk is created. This causes the ID of the system disk to change.
          *
-         * @description ## Description
-         * When you call this operation, take note of the following items:
-         * *   You must specify the ImageId parameter or the DiskId parameter. You cannot specify both of these parameters at the same time. Otherwise, the call fails and an error message is returned.
-         * > You can use the `DiskId` parameter to replace the operating system of an instance. This feature is available to select users. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).
+         * @description ## [](#)Usage notes
+         * Take note of the following items:
          * *   The category of the system disk cannot be changed.
          * *   The billing method of the system disk cannot be changed.
          * *   The instance must be in the `Stopped` state.
          *     **
-         *     **Note**This item is applicable only to instances in virtual private clouds (VPCs). If the instance is a pay-as-you-go instance and economical mode is enabled by default for the instance, you must switch from stop mode to standard mode when you stop the instance. This prevents instance restart failures caused by insufficient resources after the system disk is replaced. For more information, see [StopInstance](https://help.aliyun.com/document_detail/25501.html).
-         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons and no operations are allowed on the instance.`` For more information, see [API behavior when an instance is locked for security reasons](https://help.aliyun.com/document_detail/25695.html).
-         * *   You cannot have outstanding payment orders associated with the instance.
-         * *   You can configure the `SystemDisk.Size` parameter to specify the capacity of the new system disk.
-         * After you call this operation, you can use one of the following methods to check whether the system disk is replaced:
-         * *   Call the [DescribeDisks](https://help.aliyun.com/document_detail/25514.html) operation to query the state of the new system disk. If the new system disk is in the In_use state, the system disk is replaced.
-         * *   Call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the state of the instance whose system disk is replaced. If `OperationLocks` in the response is empty, the system disk is replaced.
+         *     **Note** The operation is applicable only to instances of the Virtual Private Cloud (VPC) type. If the instance is a pay-as-you-go instance and economical mode is enabled by default for the instance, you must disable economical mode and enable standard mode when you stop the instance. This prevents the instance from being unable to restart due to insufficient ECS resources after the system disk is replaced. For more information, see [StopInstance](https://help.aliyun.com/document_detail/25501.html).
+         * *   The ECS instance cannot be locked for security reasons. If the value of `OperationLocks` in the DescribeInstances response contains `"LockReason": "security"` for an instance, the instance is locked for security reasons. For more information, see [API behavior when an instance is locked for security reasons](https://help.aliyun.com/document_detail/25695.html).
+         * *   No unpaid orders are associated with the instance.
+         * *   You can configure `SystemDisk.Size` to specify the capacity of the new system disk.
+         * After you call the ReplaceSystemDisk operation, you can use one of the following methods to check whether the system disk is replaced:
+         * *   Call the [DescribeDisks](https://help.aliyun.com/document_detail/25514.html) operation to query the status of the new system disk. If the new system disk is in the In Use state, the system disk is replaced.
+         * *   Call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the status of the instance whose system disk is replaced. If the `OperationLocks` parameter is empty, the system disk is replaced.
          *
          * @param request ReplaceSystemDiskRequest
          * @return ReplaceSystemDiskResponse
@@ -62280,7 +62432,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Rolls back a disk to a specific point in time based on a snapshot of the disk.
+         * @summary Rolls back a disk to the state at a specific point in time based on a snapshot of the disk.
          *
          * @description When you call this operation, take note of the following items:
          * *   The disk must be in the In Use (In_Use) or Unattached (Available) state.
@@ -62344,7 +62496,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Rolls back a disk to a specific point in time based on a snapshot of the disk.
+         * @summary Rolls back a disk to the state at a specific point in time based on a snapshot of the disk.
          *
          * @description When you call this operation, take note of the following items:
          * *   The disk must be in the In Use (In_Use) or Unattached (Available) state.
@@ -62408,7 +62560,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Rolls back a disk to a specific point in time based on a snapshot of the disk.
+         * @summary Rolls back a disk to the state at a specific point in time based on a snapshot of the disk.
          *
          * @description When you call this operation, take note of the following items:
          * *   The disk must be in the In Use (In_Use) or Unattached (Available) state.
@@ -62426,7 +62578,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Rolls back a disk to a specific point in time based on a snapshot of the disk.
+         * @summary Rolls back a disk to the state at a specific point in time based on a snapshot of the disk.
          *
          * @description When you call this operation, take note of the following items:
          * *   The disk must be in the In Use (In_Use) or Unattached (Available) state.
@@ -62774,30 +62926,45 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Deletes one or more inbound security group rules.
          *
-         * @description In the security group-related API documents, inbound traffic is sent by the source and received by the destination.
+         * @description In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.
          * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
-         * *   The parameter used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the ID of a specified security group rule does not exist, an error is reported. - You cannot specify the parameters that are no longer available and the Permissions.N-prefixed counterparts of the parameters at the same time. - Sample request:
+         * *   Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and their Permissions.N-prefixed counterparts at the same time. - Sample request:
          *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
          *         &SecurityGroupId=sg-bp67acfmxazb4p****
          *         &SecurityGroupRuleId.1=sgr-bpdfmk****
          *         &SecurityGroupRuleId.2=sgr-bpdfmg****
          *         &<Common request parameters>
-         * *   Parameters prefixed with Permissions.N.
-         *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rule is deleted.
-         *     *   You cannot specify the SecurityGroupRuleId parameter or parameters that are not prefixed with Permissions.N.
-         *     *   You can delete a specific inbound security group rule by specifying one of the following groups of parameters. However, you cannot delete the security group rule if you specify only one of the parameters in a group.
-         *     *   Parameters used to delete an inbound security group rule that controls access from a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceCidrIp.
-         *         ```
-         *         ```
-         *     http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p\\*\\*\\*\\* \\&Permissions.1.SourceCidrIp=10.0.0.0/8 \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=80/80 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
-         *     *   Parameters used to delete an inbound security group rule that controls access from a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceGroupId.
-         *         ```
-         *         ```
-         *     http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p\\*\\*\\*\\* \\&Permissions.1.SourceGroupId=sg-bp67acfmxa123b\\*\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=80/80 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
-         *     *   Parameters used to delete an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourcePrefixListId.
-         *         ```
-         *         ```
-         *     http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p\\*\\*\\*\\* \\&Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy\\*\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=80/80 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         * *   Parameters that are prefixed with Permissions.N.
+         *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rules are deleted.
+         *     *   You cannot specify SecurityGroupRuleId.N or the parameters that are not prefixed with Permissions.N.
+         *     *   You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine an inbound security group rule by specifying only one parameter.
+         *     *   Parameters used to determine an inbound security group rule that controls access from a CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceCidrIp. Sample request:
+         *             http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+         *             &SecurityGroupId=sg-bp67acfmxazb4p****
+         *             &Permissions.1.SourceCidrIp=10.0.0.0/8
+         *             &Permissions.1.IpProtocol=TCP
+         *             &Permissions.1.PortRange=80/80
+         *             &Permissions.1.NicType=intranet
+         *             &Permissions.1.Policy=accept
+         *             &<Common request parameters>
+         *     *   Parameters used to determine an inbound security group rule that controls access from another security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceGroupId. Sample request:
+         *             http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+         *             &SecurityGroupId=sg-bp67acfmxazb4p****
+         *             &Permissions.1.SourceGroupId=sg-bp67acfmxa123b****
+         *             &Permissions.1.IpProtocol=TCP
+         *             &Permissions.1.PortRange=80/80
+         *             &Permissions.1.NicType=intranet
+         *             &Permissions.1.Policy=accept
+         *             &<Common request parameters>
+         *     *   Parameters used to determine an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourcePrefixListId. Sample request:
+         *             http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+         *             &SecurityGroupId=sg-bp67acfmxazb4p****
+         *             &Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy****
+         *             &Permissions.1.IpProtocol=TCP
+         *             &Permissions.1.PortRange=80/80
+         *             &Permissions.1.NicType=intranet
+         *             &Permissions.1.Policy=accept
+         *             &<Common request parameters>
          *
          * @param request RevokeSecurityGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -62937,30 +63104,45 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Deletes one or more inbound security group rules.
          *
-         * @description In the security group-related API documents, inbound traffic is sent by the source and received by the destination.
+         * @description In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.
          * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
-         * *   The parameter used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the ID of a specified security group rule does not exist, an error is reported. - You cannot specify the parameters that are no longer available and the Permissions.N-prefixed counterparts of the parameters at the same time. - Sample request:
+         * *   Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and their Permissions.N-prefixed counterparts at the same time. - Sample request:
          *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
          *         &SecurityGroupId=sg-bp67acfmxazb4p****
          *         &SecurityGroupRuleId.1=sgr-bpdfmk****
          *         &SecurityGroupRuleId.2=sgr-bpdfmg****
          *         &<Common request parameters>
-         * *   Parameters prefixed with Permissions.N.
-         *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rule is deleted.
-         *     *   You cannot specify the SecurityGroupRuleId parameter or parameters that are not prefixed with Permissions.N.
-         *     *   You can delete a specific inbound security group rule by specifying one of the following groups of parameters. However, you cannot delete the security group rule if you specify only one of the parameters in a group.
-         *     *   Parameters used to delete an inbound security group rule that controls access from a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceCidrIp.
-         *         ```
-         *         ```
-         *     http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p\\*\\*\\*\\* \\&Permissions.1.SourceCidrIp=10.0.0.0/8 \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=80/80 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
-         *     *   Parameters used to delete an inbound security group rule that controls access from a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceGroupId.
-         *         ```
-         *         ```
-         *     http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p\\*\\*\\*\\* \\&Permissions.1.SourceGroupId=sg-bp67acfmxa123b\\*\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=80/80 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
-         *     *   Parameters used to delete an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourcePrefixListId.
-         *         ```
-         *         ```
-         *     http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p\\*\\*\\*\\* \\&Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy\\*\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=80/80 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         * *   Parameters that are prefixed with Permissions.N.
+         *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rules are deleted.
+         *     *   You cannot specify SecurityGroupRuleId.N or the parameters that are not prefixed with Permissions.N.
+         *     *   You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine an inbound security group rule by specifying only one parameter.
+         *     *   Parameters used to determine an inbound security group rule that controls access from a CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceCidrIp. Sample request:
+         *             http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+         *             &SecurityGroupId=sg-bp67acfmxazb4p****
+         *             &Permissions.1.SourceCidrIp=10.0.0.0/8
+         *             &Permissions.1.IpProtocol=TCP
+         *             &Permissions.1.PortRange=80/80
+         *             &Permissions.1.NicType=intranet
+         *             &Permissions.1.Policy=accept
+         *             &<Common request parameters>
+         *     *   Parameters used to determine an inbound security group rule that controls access from another security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceGroupId. Sample request:
+         *             http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+         *             &SecurityGroupId=sg-bp67acfmxazb4p****
+         *             &Permissions.1.SourceGroupId=sg-bp67acfmxa123b****
+         *             &Permissions.1.IpProtocol=TCP
+         *             &Permissions.1.PortRange=80/80
+         *             &Permissions.1.NicType=intranet
+         *             &Permissions.1.Policy=accept
+         *             &<Common request parameters>
+         *     *   Parameters used to determine an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourcePrefixListId. Sample request:
+         *             http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+         *             &SecurityGroupId=sg-bp67acfmxazb4p****
+         *             &Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy****
+         *             &Permissions.1.IpProtocol=TCP
+         *             &Permissions.1.PortRange=80/80
+         *             &Permissions.1.NicType=intranet
+         *             &Permissions.1.Policy=accept
+         *             &<Common request parameters>
          *
          * @param request RevokeSecurityGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -63100,30 +63282,45 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Deletes one or more inbound security group rules.
          *
-         * @description In the security group-related API documents, inbound traffic is sent by the source and received by the destination.
+         * @description In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.
          * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
-         * *   The parameter used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the ID of a specified security group rule does not exist, an error is reported. - You cannot specify the parameters that are no longer available and the Permissions.N-prefixed counterparts of the parameters at the same time. - Sample request:
+         * *   Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and their Permissions.N-prefixed counterparts at the same time. - Sample request:
          *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
          *         &SecurityGroupId=sg-bp67acfmxazb4p****
          *         &SecurityGroupRuleId.1=sgr-bpdfmk****
          *         &SecurityGroupRuleId.2=sgr-bpdfmg****
          *         &<Common request parameters>
-         * *   Parameters prefixed with Permissions.N.
-         *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rule is deleted.
-         *     *   You cannot specify the SecurityGroupRuleId parameter or parameters that are not prefixed with Permissions.N.
-         *     *   You can delete a specific inbound security group rule by specifying one of the following groups of parameters. However, you cannot delete the security group rule if you specify only one of the parameters in a group.
-         *     *   Parameters used to delete an inbound security group rule that controls access from a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceCidrIp.
-         *         ```
-         *         ```
-         *     http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p\\*\\*\\*\\* \\&Permissions.1.SourceCidrIp=10.0.0.0/8 \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=80/80 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
-         *     *   Parameters used to delete an inbound security group rule that controls access from a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceGroupId.
-         *         ```
-         *         ```
-         *     http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p\\*\\*\\*\\* \\&Permissions.1.SourceGroupId=sg-bp67acfmxa123b\\*\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=80/80 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
-         *     *   Parameters used to delete an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourcePrefixListId.
-         *         ```
-         *         ```
-         *     http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p\\*\\*\\*\\* \\&Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy\\*\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=80/80 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         * *   Parameters that are prefixed with Permissions.N.
+         *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rules are deleted.
+         *     *   You cannot specify SecurityGroupRuleId.N or the parameters that are not prefixed with Permissions.N.
+         *     *   You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine an inbound security group rule by specifying only one parameter.
+         *     *   Parameters used to determine an inbound security group rule that controls access from a CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceCidrIp. Sample request:
+         *             http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+         *             &SecurityGroupId=sg-bp67acfmxazb4p****
+         *             &Permissions.1.SourceCidrIp=10.0.0.0/8
+         *             &Permissions.1.IpProtocol=TCP
+         *             &Permissions.1.PortRange=80/80
+         *             &Permissions.1.NicType=intranet
+         *             &Permissions.1.Policy=accept
+         *             &<Common request parameters>
+         *     *   Parameters used to determine an inbound security group rule that controls access from another security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceGroupId. Sample request:
+         *             http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+         *             &SecurityGroupId=sg-bp67acfmxazb4p****
+         *             &Permissions.1.SourceGroupId=sg-bp67acfmxa123b****
+         *             &Permissions.1.IpProtocol=TCP
+         *             &Permissions.1.PortRange=80/80
+         *             &Permissions.1.NicType=intranet
+         *             &Permissions.1.Policy=accept
+         *             &<Common request parameters>
+         *     *   Parameters used to determine an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourcePrefixListId. Sample request:
+         *             http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+         *             &SecurityGroupId=sg-bp67acfmxazb4p****
+         *             &Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy****
+         *             &Permissions.1.IpProtocol=TCP
+         *             &Permissions.1.PortRange=80/80
+         *             &Permissions.1.NicType=intranet
+         *             &Permissions.1.Policy=accept
+         *             &<Common request parameters>
          *
          * @param request RevokeSecurityGroupRequest
          * @return RevokeSecurityGroupResponse
@@ -63137,30 +63334,45 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Deletes one or more inbound security group rules.
          *
-         * @description In the security group-related API documents, inbound traffic is sent by the source and received by the destination.
+         * @description In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.
          * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
-         * *   The parameter used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the ID of a specified security group rule does not exist, an error is reported. - You cannot specify the parameters that are no longer available and the Permissions.N-prefixed counterparts of the parameters at the same time. - Sample request:
+         * *   Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and their Permissions.N-prefixed counterparts at the same time. - Sample request:
          *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
          *         &SecurityGroupId=sg-bp67acfmxazb4p****
          *         &SecurityGroupRuleId.1=sgr-bpdfmk****
          *         &SecurityGroupRuleId.2=sgr-bpdfmg****
          *         &<Common request parameters>
-         * *   Parameters prefixed with Permissions.N.
-         *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rule is deleted.
-         *     *   You cannot specify the SecurityGroupRuleId parameter or parameters that are not prefixed with Permissions.N.
-         *     *   You can delete a specific inbound security group rule by specifying one of the following groups of parameters. However, you cannot delete the security group rule if you specify only one of the parameters in a group.
-         *     *   Parameters used to delete an inbound security group rule that controls access from a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceCidrIp.
-         *         ```
-         *         ```
-         *     http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p\\*\\*\\*\\* \\&Permissions.1.SourceCidrIp=10.0.0.0/8 \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=80/80 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
-         *     *   Parameters used to delete an inbound security group rule that controls access from a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceGroupId.
-         *         ```
-         *         ```
-         *     http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p\\*\\*\\*\\* \\&Permissions.1.SourceGroupId=sg-bp67acfmxa123b\\*\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=80/80 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
-         *     *   Parameters used to delete an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourcePrefixListId.
-         *         ```
-         *         ```
-         *     http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p\\*\\*\\*\\* \\&Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy\\*\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=80/80 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         * *   Parameters that are prefixed with Permissions.N.
+         *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rules are deleted.
+         *     *   You cannot specify SecurityGroupRuleId.N or the parameters that are not prefixed with Permissions.N.
+         *     *   You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine an inbound security group rule by specifying only one parameter.
+         *     *   Parameters used to determine an inbound security group rule that controls access from a CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceCidrIp. Sample request:
+         *             http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+         *             &SecurityGroupId=sg-bp67acfmxazb4p****
+         *             &Permissions.1.SourceCidrIp=10.0.0.0/8
+         *             &Permissions.1.IpProtocol=TCP
+         *             &Permissions.1.PortRange=80/80
+         *             &Permissions.1.NicType=intranet
+         *             &Permissions.1.Policy=accept
+         *             &<Common request parameters>
+         *     *   Parameters used to determine an inbound security group rule that controls access from another security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourceGroupId. Sample request:
+         *             http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+         *             &SecurityGroupId=sg-bp67acfmxazb4p****
+         *             &Permissions.1.SourceGroupId=sg-bp67acfmxa123b****
+         *             &Permissions.1.IpProtocol=TCP
+         *             &Permissions.1.PortRange=80/80
+         *             &Permissions.1.NicType=intranet
+         *             &Permissions.1.Policy=accept
+         *             &<Common request parameters>
+         *     *   Parameters used to determine an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp (optional), and SourcePrefixListId. Sample request:
+         *             http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+         *             &SecurityGroupId=sg-bp67acfmxazb4p****
+         *             &Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy****
+         *             &Permissions.1.IpProtocol=TCP
+         *             &Permissions.1.PortRange=80/80
+         *             &Permissions.1.NicType=intranet
+         *             &Permissions.1.Policy=accept
+         *             &<Common request parameters>
          *
          * @param request RevokeSecurityGroupRequest
          * @return RevokeSecurityGroupResponse
@@ -63174,8 +63386,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Deletes outbound security group rules.
          *
-         * @description When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
-         * *   Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and the Permissions.N-prefixed counterparts of the parameters at the same time. - Sample request:
+         * @description In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.
+         * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
+         * *   Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and their Permissions.N-prefixed counterparts at the same time. - Sample request:
          *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
          *         &SecurityGroupId=sg-bp67acfmxazb4p****
          *         &SecurityGroupRuleId.1=sgr-bpdfmk****
@@ -63183,20 +63396,35 @@ namespace AlibabaCloud.SDK.Ecs20140526
          *         &<Common request parameters>
          * *   Parameters that are prefixed with Permissions.N.
          *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroupEgress is successful but no security group rules are deleted.
-         *     *   The SecurityGroupRuleId.N parameter and parameters that are not prefixed with Permissions.N cannot be specified.
+         *     *   You cannot specify SecurityGroupRuleId.N or the parameters that are not prefixed with Permissions.N.
          *     *   You can determine a security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.
-         *         *   Parameters used to determine an outbound security group rule that controls access to a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp, and SourceCidrIp (optional). Sample request:
-         *             ```
-         *             ```
-         *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress \\&SecurityGroupId=sg-bp67acfmxazb4ph\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.DestCidrIp=10.0.0.0/8 \\&Permissions.1.PortRange=-22/22 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         *         *   Parameters used to determine an outbound security group rule that controls access to a CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestCidrIp. Sample request:
+         *                 http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
+         *                 &SecurityGroupId=sg-bp67acfmxazb4ph***
+         *                 &Permissions.1.IpProtocol=TCP
+         *                 &Permissions.1.DestCidrIp=10.0.0.0/8
+         *                 &Permissions.1.PortRange=-22/22
+         *                 &Permissions.1.NicType=intranet
+         *                 &Permissions.1.Policy=accept
+         *                 &<Common request parameters>
          *         *   Parameters used to determine an outbound security group rule that controls access to another security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestGroupId. Sample request:
-         *             ```
-         *             ```
-         *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress \\&SecurityGroupId=sg-bp67acfmxazb4ph\\*\\*\\* \\&Permissions.1.DestGroupId=sg-bp67acfmxa123b\\*\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=22/22 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         *                 http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
+         *                 &SecurityGroupId=sg-bp67acfmxazb4ph***
+         *                 &Permissions.1.DestGroupId=sg-bp67acfmxa123b****
+         *                 &Permissions.1.IpProtocol=TCP
+         *                 &Permissions.1.PortRange=22/22
+         *                 &Permissions.1.NicType=intranet
+         *                 &Permissions.1.Policy=accept
+         *                 &<Common request parameters>
          *         *   Parameters used to determine an outbound security group rule that controls access to a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestPrefixListId. Sample request:
-         *             ```
-         *             ```
-         *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress \\&SecurityGroupId=sg-bp67acfmxazb4ph\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy\\*\\*\\*\\* \\&Permissions.1.PortRange=-22/22 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         *                 http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
+         *                 &SecurityGroupId=sg-bp67acfmxazb4ph***
+         *                 &Permissions.1.IpProtocol=TCP
+         *                 &Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy****
+         *                 &Permissions.1.PortRange=-22/22
+         *                 &Permissions.1.NicType=intranet
+         *                 &Permissions.1.Policy=accept
+         *                 &<Common request parameters>
          *
          * @param request RevokeSecurityGroupEgressRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -63340,8 +63568,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Deletes outbound security group rules.
          *
-         * @description When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
-         * *   Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and the Permissions.N-prefixed counterparts of the parameters at the same time. - Sample request:
+         * @description In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.
+         * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
+         * *   Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and their Permissions.N-prefixed counterparts at the same time. - Sample request:
          *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
          *         &SecurityGroupId=sg-bp67acfmxazb4p****
          *         &SecurityGroupRuleId.1=sgr-bpdfmk****
@@ -63349,20 +63578,35 @@ namespace AlibabaCloud.SDK.Ecs20140526
          *         &<Common request parameters>
          * *   Parameters that are prefixed with Permissions.N.
          *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroupEgress is successful but no security group rules are deleted.
-         *     *   The SecurityGroupRuleId.N parameter and parameters that are not prefixed with Permissions.N cannot be specified.
+         *     *   You cannot specify SecurityGroupRuleId.N or the parameters that are not prefixed with Permissions.N.
          *     *   You can determine a security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.
-         *         *   Parameters used to determine an outbound security group rule that controls access to a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp, and SourceCidrIp (optional). Sample request:
-         *             ```
-         *             ```
-         *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress \\&SecurityGroupId=sg-bp67acfmxazb4ph\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.DestCidrIp=10.0.0.0/8 \\&Permissions.1.PortRange=-22/22 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         *         *   Parameters used to determine an outbound security group rule that controls access to a CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestCidrIp. Sample request:
+         *                 http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
+         *                 &SecurityGroupId=sg-bp67acfmxazb4ph***
+         *                 &Permissions.1.IpProtocol=TCP
+         *                 &Permissions.1.DestCidrIp=10.0.0.0/8
+         *                 &Permissions.1.PortRange=-22/22
+         *                 &Permissions.1.NicType=intranet
+         *                 &Permissions.1.Policy=accept
+         *                 &<Common request parameters>
          *         *   Parameters used to determine an outbound security group rule that controls access to another security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestGroupId. Sample request:
-         *             ```
-         *             ```
-         *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress \\&SecurityGroupId=sg-bp67acfmxazb4ph\\*\\*\\* \\&Permissions.1.DestGroupId=sg-bp67acfmxa123b\\*\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=22/22 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         *                 http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
+         *                 &SecurityGroupId=sg-bp67acfmxazb4ph***
+         *                 &Permissions.1.DestGroupId=sg-bp67acfmxa123b****
+         *                 &Permissions.1.IpProtocol=TCP
+         *                 &Permissions.1.PortRange=22/22
+         *                 &Permissions.1.NicType=intranet
+         *                 &Permissions.1.Policy=accept
+         *                 &<Common request parameters>
          *         *   Parameters used to determine an outbound security group rule that controls access to a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestPrefixListId. Sample request:
-         *             ```
-         *             ```
-         *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress \\&SecurityGroupId=sg-bp67acfmxazb4ph\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy\\*\\*\\*\\* \\&Permissions.1.PortRange=-22/22 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         *                 http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
+         *                 &SecurityGroupId=sg-bp67acfmxazb4ph***
+         *                 &Permissions.1.IpProtocol=TCP
+         *                 &Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy****
+         *                 &Permissions.1.PortRange=-22/22
+         *                 &Permissions.1.NicType=intranet
+         *                 &Permissions.1.Policy=accept
+         *                 &<Common request parameters>
          *
          * @param request RevokeSecurityGroupEgressRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -63506,8 +63750,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Deletes outbound security group rules.
          *
-         * @description When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
-         * *   Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and the Permissions.N-prefixed counterparts of the parameters at the same time. - Sample request:
+         * @description In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.
+         * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
+         * *   Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and their Permissions.N-prefixed counterparts at the same time. - Sample request:
          *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
          *         &SecurityGroupId=sg-bp67acfmxazb4p****
          *         &SecurityGroupRuleId.1=sgr-bpdfmk****
@@ -63515,20 +63760,35 @@ namespace AlibabaCloud.SDK.Ecs20140526
          *         &<Common request parameters>
          * *   Parameters that are prefixed with Permissions.N.
          *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroupEgress is successful but no security group rules are deleted.
-         *     *   The SecurityGroupRuleId.N parameter and parameters that are not prefixed with Permissions.N cannot be specified.
+         *     *   You cannot specify SecurityGroupRuleId.N or the parameters that are not prefixed with Permissions.N.
          *     *   You can determine a security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.
-         *         *   Parameters used to determine an outbound security group rule that controls access to a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp, and SourceCidrIp (optional). Sample request:
-         *             ```
-         *             ```
-         *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress \\&SecurityGroupId=sg-bp67acfmxazb4ph\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.DestCidrIp=10.0.0.0/8 \\&Permissions.1.PortRange=-22/22 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         *         *   Parameters used to determine an outbound security group rule that controls access to a CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestCidrIp. Sample request:
+         *                 http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
+         *                 &SecurityGroupId=sg-bp67acfmxazb4ph***
+         *                 &Permissions.1.IpProtocol=TCP
+         *                 &Permissions.1.DestCidrIp=10.0.0.0/8
+         *                 &Permissions.1.PortRange=-22/22
+         *                 &Permissions.1.NicType=intranet
+         *                 &Permissions.1.Policy=accept
+         *                 &<Common request parameters>
          *         *   Parameters used to determine an outbound security group rule that controls access to another security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestGroupId. Sample request:
-         *             ```
-         *             ```
-         *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress \\&SecurityGroupId=sg-bp67acfmxazb4ph\\*\\*\\* \\&Permissions.1.DestGroupId=sg-bp67acfmxa123b\\*\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=22/22 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         *                 http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
+         *                 &SecurityGroupId=sg-bp67acfmxazb4ph***
+         *                 &Permissions.1.DestGroupId=sg-bp67acfmxa123b****
+         *                 &Permissions.1.IpProtocol=TCP
+         *                 &Permissions.1.PortRange=22/22
+         *                 &Permissions.1.NicType=intranet
+         *                 &Permissions.1.Policy=accept
+         *                 &<Common request parameters>
          *         *   Parameters used to determine an outbound security group rule that controls access to a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestPrefixListId. Sample request:
-         *             ```
-         *             ```
-         *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress \\&SecurityGroupId=sg-bp67acfmxazb4ph\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy\\*\\*\\*\\* \\&Permissions.1.PortRange=-22/22 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         *                 http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
+         *                 &SecurityGroupId=sg-bp67acfmxazb4ph***
+         *                 &Permissions.1.IpProtocol=TCP
+         *                 &Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy****
+         *                 &Permissions.1.PortRange=-22/22
+         *                 &Permissions.1.NicType=intranet
+         *                 &Permissions.1.Policy=accept
+         *                 &<Common request parameters>
          *
          * @param request RevokeSecurityGroupEgressRequest
          * @return RevokeSecurityGroupEgressResponse
@@ -63542,8 +63802,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /**
          * @summary Deletes outbound security group rules.
          *
-         * @description When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
-         * *   Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and the Permissions.N-prefixed counterparts of the parameters at the same time. - Sample request:
+         * @description In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.
+         * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
+         * *   Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the security group rule ID that you specify does not exist, an error is reported. - You cannot specify the parameters that are no longer available and their Permissions.N-prefixed counterparts at the same time. - Sample request:
          *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
          *         &SecurityGroupId=sg-bp67acfmxazb4p****
          *         &SecurityGroupRuleId.1=sgr-bpdfmk****
@@ -63551,20 +63812,35 @@ namespace AlibabaCloud.SDK.Ecs20140526
          *         &<Common request parameters>
          * *   Parameters that are prefixed with Permissions.N.
          *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroupEgress is successful but no security group rules are deleted.
-         *     *   The SecurityGroupRuleId.N parameter and parameters that are not prefixed with Permissions.N cannot be specified.
+         *     *   You cannot specify SecurityGroupRuleId.N or the parameters that are not prefixed with Permissions.N.
          *     *   You can determine a security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.
-         *         *   Parameters used to determine an outbound security group rule that controls access to a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestCidrIp, and SourceCidrIp (optional). Sample request:
-         *             ```
-         *             ```
-         *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress \\&SecurityGroupId=sg-bp67acfmxazb4ph\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.DestCidrIp=10.0.0.0/8 \\&Permissions.1.PortRange=-22/22 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         *         *   Parameters used to determine an outbound security group rule that controls access to a CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestCidrIp. Sample request:
+         *                 http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
+         *                 &SecurityGroupId=sg-bp67acfmxazb4ph***
+         *                 &Permissions.1.IpProtocol=TCP
+         *                 &Permissions.1.DestCidrIp=10.0.0.0/8
+         *                 &Permissions.1.PortRange=-22/22
+         *                 &Permissions.1.NicType=intranet
+         *                 &Permissions.1.Policy=accept
+         *                 &<Common request parameters>
          *         *   Parameters used to determine an outbound security group rule that controls access to another security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestGroupId. Sample request:
-         *             ```
-         *             ```
-         *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress \\&SecurityGroupId=sg-bp67acfmxazb4ph\\*\\*\\* \\&Permissions.1.DestGroupId=sg-bp67acfmxa123b\\*\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.PortRange=22/22 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         *                 http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
+         *                 &SecurityGroupId=sg-bp67acfmxazb4ph***
+         *                 &Permissions.1.DestGroupId=sg-bp67acfmxa123b****
+         *                 &Permissions.1.IpProtocol=TCP
+         *                 &Permissions.1.PortRange=22/22
+         *                 &Permissions.1.NicType=intranet
+         *                 &Permissions.1.Policy=accept
+         *                 &<Common request parameters>
          *         *   Parameters used to determine an outbound security group rule that controls access to a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceCidrIp (optional), and DestPrefixListId. Sample request:
-         *             ```
-         *             ```
-         *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress \\&SecurityGroupId=sg-bp67acfmxazb4ph\\*\\*\\* \\&Permissions.1.IpProtocol=TCP \\&Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy\\*\\*\\*\\* \\&Permissions.1.PortRange=-22/22 \\&Permissions.1.NicType=intranet \\&Permissions.1.Policy=accept &\\<Common request parameters> \\`\\`\\`
+         *                 http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroupEgress
+         *                 &SecurityGroupId=sg-bp67acfmxazb4ph***
+         *                 &Permissions.1.IpProtocol=TCP
+         *                 &Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy****
+         *                 &Permissions.1.PortRange=-22/22
+         *                 &Permissions.1.NicType=intranet
+         *                 &Permissions.1.Policy=accept
+         *                 &<Common request parameters>
          *
          * @param request RevokeSecurityGroupEgressRequest
          * @return RevokeSecurityGroupEgressResponse
@@ -63579,21 +63855,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @summary Runs a shell, PowerShell, or batch command on Elastic Compute Service (ECS) instances.
          *
          * @description ## [](#)Usage notes
-         * Unlike the [CreateCommand](https://help.aliyun.com/document_detail/64844.html) and [InvokeCommand](https://help.aliyun.com/document_detail/64841.html) operations, RunCommand can be used to create and run a command in a single request.
+         * Unlike the [CreateCommand](https://help.aliyun.com/document_detail/64844.html) and [InvokeCommand](https://help.aliyun.com/document_detail/64841.html) operations, the RunCommand operation can be used to create and run a command in a single request.
          * Take note of the following items:
          * *   The instances on which you want to run a command must be in the Running (`Running`) state. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the status of instances.
          * *   [Cloud Assistant Agent](https://help.aliyun.com/document_detail/64921.html) must be installed on the instances.
          * *   Before you run a PowerShell command on a Windows instance, make sure that the PowerShell module is installed on the instance.
-         * *   When you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instances meets your business requirements. For information about time zones, see [Configure the NTP service for a CentOS 6 instance](https://help.aliyun.com/document_detail/92803.html) or [Configure the NTP service for a Windows instance](https://help.aliyun.com/document_detail/51890.html).
+         * *   When you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instances. Make sure that the time or time zone of the instances meets your business requirements. For information about time zones, see [Configure the NTP service for ECS instances that run CentOS 6](https://help.aliyun.com/document_detail/92803.html) or [Configure the NTP service for Windows instances](https://help.aliyun.com/document_detail/51890.html).
          * *   You can set `Timeout` to specify the timeout period for executions of the command on ECS instances. If an execution times out, Cloud Assistant Agent forcefully terminates the command process.
          *     *   When the one-time execution of the command times out, the execution state ([InvokeRecordStatus](https://help.aliyun.com/document_detail/64845.html)) of the command becomes Failed.
          *     *   For a scheduled task, the timeout period takes effect on each execution of the command. When a command execution times out, the subsequent executions of the command are not affected. When a scheduled execution of the command times out, the execution state ([InvokeRecordStatus](https://help.aliyun.com/document_detail/64845.html)) of the command becomes Failed.
-         *     To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. A scheduled task can run a command at a specified interval, only once at a specified time, or at designated times based on a cron expression in a specified year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update Cloud Assistant Agent to the latest version. For more information, see [Upgrade or disable upgrades for Cloud Assistant Agent](https://help.aliyun.com/document_detail/134383.html).
-         *           - Linux: 2.2.3.282
-         *           - Windows: 2.1.3.282
-         * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command execution fails, no execution information is generated. For more information, see [Check execution results and troubleshoot common issues](https://help.aliyun.com/document_detail/87029.html).
-         * *   If you set the `EnableParameter` parameter to true, the custom parameter feature is enabled. When you configure the `CommandContent` parameter, you can define custom parameters in the `{{parameter}}` format. Then, when the command is run, the key-value pairs of the custom parameters are passed in.
-         * *   You can retain up to 500 to 10,000 Cloud Assistant commands in each region based on your usage. You can perform operations that are described in the [View and increase resource quotas](https://help.aliyun.com/document_detail/184115.html) topic or call the [DescribeAccountAttribute](https://help.aliyun.com/document_detail/73772.html) operation to query resource quotas.
+         *     To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. A scheduled task can run a command at a specified interval, only once at a specified time, or at designated times based on a cron expression in a specified year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update Cloud Assistant Agent to the latest version. For more information, see [Upgrade or disable upgrades of Cloud Assistant Agent](https://help.aliyun.com/document_detail/134383.html).
+         *         - Linux: 2.2.3.282.
+         *         - Windows: 2.1.3.282.
+         * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command execution fails, no execution information is generated. For more information, see the [Command errors and solutions](https://help.aliyun.com/document_detail/87029.html) section in the "Check execution results and troubleshoot common issues" topic.
+         * *   If you set `EnableParameter` to true, the custom parameter feature is enabled. When you configure `CommandContent`, you can define custom parameters in the `{{parameter}}` format. Then, when the command is run, the key-value pairs of the custom parameters are passed in.
+         * *   You can retain up to 500 to 50,000 Cloud Assistant commands in each region. You can also apply for a quota increase. For information about how to query and increase quotas, see [Manage quotas](https://help.aliyun.com/document_detail/184116.html).
          * *   Before you run a command on instances, especially new instances, we recommend that you call the [DescribeCloudAssistantStatus](https://help.aliyun.com/document_detail/87346.html) operation to query the status of Cloud Assistant Agent on the instances and run the command when the value of CloudAssistantStatus in the response is true for the instances.
          *
          * @param tmpReq RunCommandRequest
@@ -63749,21 +64025,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @summary Runs a shell, PowerShell, or batch command on Elastic Compute Service (ECS) instances.
          *
          * @description ## [](#)Usage notes
-         * Unlike the [CreateCommand](https://help.aliyun.com/document_detail/64844.html) and [InvokeCommand](https://help.aliyun.com/document_detail/64841.html) operations, RunCommand can be used to create and run a command in a single request.
+         * Unlike the [CreateCommand](https://help.aliyun.com/document_detail/64844.html) and [InvokeCommand](https://help.aliyun.com/document_detail/64841.html) operations, the RunCommand operation can be used to create and run a command in a single request.
          * Take note of the following items:
          * *   The instances on which you want to run a command must be in the Running (`Running`) state. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the status of instances.
          * *   [Cloud Assistant Agent](https://help.aliyun.com/document_detail/64921.html) must be installed on the instances.
          * *   Before you run a PowerShell command on a Windows instance, make sure that the PowerShell module is installed on the instance.
-         * *   When you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instances meets your business requirements. For information about time zones, see [Configure the NTP service for a CentOS 6 instance](https://help.aliyun.com/document_detail/92803.html) or [Configure the NTP service for a Windows instance](https://help.aliyun.com/document_detail/51890.html).
+         * *   When you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instances. Make sure that the time or time zone of the instances meets your business requirements. For information about time zones, see [Configure the NTP service for ECS instances that run CentOS 6](https://help.aliyun.com/document_detail/92803.html) or [Configure the NTP service for Windows instances](https://help.aliyun.com/document_detail/51890.html).
          * *   You can set `Timeout` to specify the timeout period for executions of the command on ECS instances. If an execution times out, Cloud Assistant Agent forcefully terminates the command process.
          *     *   When the one-time execution of the command times out, the execution state ([InvokeRecordStatus](https://help.aliyun.com/document_detail/64845.html)) of the command becomes Failed.
          *     *   For a scheduled task, the timeout period takes effect on each execution of the command. When a command execution times out, the subsequent executions of the command are not affected. When a scheduled execution of the command times out, the execution state ([InvokeRecordStatus](https://help.aliyun.com/document_detail/64845.html)) of the command becomes Failed.
-         *     To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. A scheduled task can run a command at a specified interval, only once at a specified time, or at designated times based on a cron expression in a specified year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update Cloud Assistant Agent to the latest version. For more information, see [Upgrade or disable upgrades for Cloud Assistant Agent](https://help.aliyun.com/document_detail/134383.html).
-         *           - Linux: 2.2.3.282
-         *           - Windows: 2.1.3.282
-         * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command execution fails, no execution information is generated. For more information, see [Check execution results and troubleshoot common issues](https://help.aliyun.com/document_detail/87029.html).
-         * *   If you set the `EnableParameter` parameter to true, the custom parameter feature is enabled. When you configure the `CommandContent` parameter, you can define custom parameters in the `{{parameter}}` format. Then, when the command is run, the key-value pairs of the custom parameters are passed in.
-         * *   You can retain up to 500 to 10,000 Cloud Assistant commands in each region based on your usage. You can perform operations that are described in the [View and increase resource quotas](https://help.aliyun.com/document_detail/184115.html) topic or call the [DescribeAccountAttribute](https://help.aliyun.com/document_detail/73772.html) operation to query resource quotas.
+         *     To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. A scheduled task can run a command at a specified interval, only once at a specified time, or at designated times based on a cron expression in a specified year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update Cloud Assistant Agent to the latest version. For more information, see [Upgrade or disable upgrades of Cloud Assistant Agent](https://help.aliyun.com/document_detail/134383.html).
+         *         - Linux: 2.2.3.282.
+         *         - Windows: 2.1.3.282.
+         * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command execution fails, no execution information is generated. For more information, see the [Command errors and solutions](https://help.aliyun.com/document_detail/87029.html) section in the "Check execution results and troubleshoot common issues" topic.
+         * *   If you set `EnableParameter` to true, the custom parameter feature is enabled. When you configure `CommandContent`, you can define custom parameters in the `{{parameter}}` format. Then, when the command is run, the key-value pairs of the custom parameters are passed in.
+         * *   You can retain up to 500 to 50,000 Cloud Assistant commands in each region. You can also apply for a quota increase. For information about how to query and increase quotas, see [Manage quotas](https://help.aliyun.com/document_detail/184116.html).
          * *   Before you run a command on instances, especially new instances, we recommend that you call the [DescribeCloudAssistantStatus](https://help.aliyun.com/document_detail/87346.html) operation to query the status of Cloud Assistant Agent on the instances and run the command when the value of CloudAssistantStatus in the response is true for the instances.
          *
          * @param tmpReq RunCommandRequest
@@ -63919,21 +64195,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @summary Runs a shell, PowerShell, or batch command on Elastic Compute Service (ECS) instances.
          *
          * @description ## [](#)Usage notes
-         * Unlike the [CreateCommand](https://help.aliyun.com/document_detail/64844.html) and [InvokeCommand](https://help.aliyun.com/document_detail/64841.html) operations, RunCommand can be used to create and run a command in a single request.
+         * Unlike the [CreateCommand](https://help.aliyun.com/document_detail/64844.html) and [InvokeCommand](https://help.aliyun.com/document_detail/64841.html) operations, the RunCommand operation can be used to create and run a command in a single request.
          * Take note of the following items:
          * *   The instances on which you want to run a command must be in the Running (`Running`) state. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the status of instances.
          * *   [Cloud Assistant Agent](https://help.aliyun.com/document_detail/64921.html) must be installed on the instances.
          * *   Before you run a PowerShell command on a Windows instance, make sure that the PowerShell module is installed on the instance.
-         * *   When you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instances meets your business requirements. For information about time zones, see [Configure the NTP service for a CentOS 6 instance](https://help.aliyun.com/document_detail/92803.html) or [Configure the NTP service for a Windows instance](https://help.aliyun.com/document_detail/51890.html).
+         * *   When you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instances. Make sure that the time or time zone of the instances meets your business requirements. For information about time zones, see [Configure the NTP service for ECS instances that run CentOS 6](https://help.aliyun.com/document_detail/92803.html) or [Configure the NTP service for Windows instances](https://help.aliyun.com/document_detail/51890.html).
          * *   You can set `Timeout` to specify the timeout period for executions of the command on ECS instances. If an execution times out, Cloud Assistant Agent forcefully terminates the command process.
          *     *   When the one-time execution of the command times out, the execution state ([InvokeRecordStatus](https://help.aliyun.com/document_detail/64845.html)) of the command becomes Failed.
          *     *   For a scheduled task, the timeout period takes effect on each execution of the command. When a command execution times out, the subsequent executions of the command are not affected. When a scheduled execution of the command times out, the execution state ([InvokeRecordStatus](https://help.aliyun.com/document_detail/64845.html)) of the command becomes Failed.
-         *     To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. A scheduled task can run a command at a specified interval, only once at a specified time, or at designated times based on a cron expression in a specified year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update Cloud Assistant Agent to the latest version. For more information, see [Upgrade or disable upgrades for Cloud Assistant Agent](https://help.aliyun.com/document_detail/134383.html).
-         *           - Linux: 2.2.3.282
-         *           - Windows: 2.1.3.282
-         * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command execution fails, no execution information is generated. For more information, see [Check execution results and troubleshoot common issues](https://help.aliyun.com/document_detail/87029.html).
-         * *   If you set the `EnableParameter` parameter to true, the custom parameter feature is enabled. When you configure the `CommandContent` parameter, you can define custom parameters in the `{{parameter}}` format. Then, when the command is run, the key-value pairs of the custom parameters are passed in.
-         * *   You can retain up to 500 to 10,000 Cloud Assistant commands in each region based on your usage. You can perform operations that are described in the [View and increase resource quotas](https://help.aliyun.com/document_detail/184115.html) topic or call the [DescribeAccountAttribute](https://help.aliyun.com/document_detail/73772.html) operation to query resource quotas.
+         *     To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. A scheduled task can run a command at a specified interval, only once at a specified time, or at designated times based on a cron expression in a specified year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update Cloud Assistant Agent to the latest version. For more information, see [Upgrade or disable upgrades of Cloud Assistant Agent](https://help.aliyun.com/document_detail/134383.html).
+         *         - Linux: 2.2.3.282.
+         *         - Windows: 2.1.3.282.
+         * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command execution fails, no execution information is generated. For more information, see the [Command errors and solutions](https://help.aliyun.com/document_detail/87029.html) section in the "Check execution results and troubleshoot common issues" topic.
+         * *   If you set `EnableParameter` to true, the custom parameter feature is enabled. When you configure `CommandContent`, you can define custom parameters in the `{{parameter}}` format. Then, when the command is run, the key-value pairs of the custom parameters are passed in.
+         * *   You can retain up to 500 to 50,000 Cloud Assistant commands in each region. You can also apply for a quota increase. For information about how to query and increase quotas, see [Manage quotas](https://help.aliyun.com/document_detail/184116.html).
          * *   Before you run a command on instances, especially new instances, we recommend that you call the [DescribeCloudAssistantStatus](https://help.aliyun.com/document_detail/87346.html) operation to query the status of Cloud Assistant Agent on the instances and run the command when the value of CloudAssistantStatus in the response is true for the instances.
          *
          * @param request RunCommandRequest
@@ -63949,21 +64225,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @summary Runs a shell, PowerShell, or batch command on Elastic Compute Service (ECS) instances.
          *
          * @description ## [](#)Usage notes
-         * Unlike the [CreateCommand](https://help.aliyun.com/document_detail/64844.html) and [InvokeCommand](https://help.aliyun.com/document_detail/64841.html) operations, RunCommand can be used to create and run a command in a single request.
+         * Unlike the [CreateCommand](https://help.aliyun.com/document_detail/64844.html) and [InvokeCommand](https://help.aliyun.com/document_detail/64841.html) operations, the RunCommand operation can be used to create and run a command in a single request.
          * Take note of the following items:
          * *   The instances on which you want to run a command must be in the Running (`Running`) state. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the status of instances.
          * *   [Cloud Assistant Agent](https://help.aliyun.com/document_detail/64921.html) must be installed on the instances.
          * *   Before you run a PowerShell command on a Windows instance, make sure that the PowerShell module is installed on the instance.
-         * *   When you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instances meets your business requirements. For information about time zones, see [Configure the NTP service for a CentOS 6 instance](https://help.aliyun.com/document_detail/92803.html) or [Configure the NTP service for a Windows instance](https://help.aliyun.com/document_detail/51890.html).
+         * *   When you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instances. Make sure that the time or time zone of the instances meets your business requirements. For information about time zones, see [Configure the NTP service for ECS instances that run CentOS 6](https://help.aliyun.com/document_detail/92803.html) or [Configure the NTP service for Windows instances](https://help.aliyun.com/document_detail/51890.html).
          * *   You can set `Timeout` to specify the timeout period for executions of the command on ECS instances. If an execution times out, Cloud Assistant Agent forcefully terminates the command process.
          *     *   When the one-time execution of the command times out, the execution state ([InvokeRecordStatus](https://help.aliyun.com/document_detail/64845.html)) of the command becomes Failed.
          *     *   For a scheduled task, the timeout period takes effect on each execution of the command. When a command execution times out, the subsequent executions of the command are not affected. When a scheduled execution of the command times out, the execution state ([InvokeRecordStatus](https://help.aliyun.com/document_detail/64845.html)) of the command becomes Failed.
-         *     To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. A scheduled task can run a command at a specified interval, only once at a specified time, or at designated times based on a cron expression in a specified year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update Cloud Assistant Agent to the latest version. For more information, see [Upgrade or disable upgrades for Cloud Assistant Agent](https://help.aliyun.com/document_detail/134383.html).
-         *           - Linux: 2.2.3.282
-         *           - Windows: 2.1.3.282
-         * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command execution fails, no execution information is generated. For more information, see [Check execution results and troubleshoot common issues](https://help.aliyun.com/document_detail/87029.html).
-         * *   If you set the `EnableParameter` parameter to true, the custom parameter feature is enabled. When you configure the `CommandContent` parameter, you can define custom parameters in the `{{parameter}}` format. Then, when the command is run, the key-value pairs of the custom parameters are passed in.
-         * *   You can retain up to 500 to 10,000 Cloud Assistant commands in each region based on your usage. You can perform operations that are described in the [View and increase resource quotas](https://help.aliyun.com/document_detail/184115.html) topic or call the [DescribeAccountAttribute](https://help.aliyun.com/document_detail/73772.html) operation to query resource quotas.
+         *     To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. A scheduled task can run a command at a specified interval, only once at a specified time, or at designated times based on a cron expression in a specified year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update Cloud Assistant Agent to the latest version. For more information, see [Upgrade or disable upgrades of Cloud Assistant Agent](https://help.aliyun.com/document_detail/134383.html).
+         *         - Linux: 2.2.3.282.
+         *         - Windows: 2.1.3.282.
+         * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command execution fails, no execution information is generated. For more information, see the [Command errors and solutions](https://help.aliyun.com/document_detail/87029.html) section in the "Check execution results and troubleshoot common issues" topic.
+         * *   If you set `EnableParameter` to true, the custom parameter feature is enabled. When you configure `CommandContent`, you can define custom parameters in the `{{parameter}}` format. Then, when the command is run, the key-value pairs of the custom parameters are passed in.
+         * *   You can retain up to 500 to 50,000 Cloud Assistant commands in each region. You can also apply for a quota increase. For information about how to query and increase quotas, see [Manage quotas](https://help.aliyun.com/document_detail/184116.html).
          * *   Before you run a command on instances, especially new instances, we recommend that you call the [DescribeCloudAssistantStatus](https://help.aliyun.com/document_detail/87346.html) operation to query the status of Cloud Assistant Agent on the instances and run the command when the value of CloudAssistantStatus in the response is true for the instances.
          *
          * @param request RunCommandRequest
@@ -65852,16 +66128,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary When you call this operation, take note of the following items:
-         * *   The ECS instances that you want to start must be in the **Stopped** state.``
-         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the ECS instance is locked to ensure security. No operations are allowed on the ECS instance.
-         * *   You can start multiple ECS instances at the same time and use the `BatchOptimization` parameter to specify the batch operation mode.
+         * @summary Starts Elastic Compute Service (ECS) instances that are in the Stopped state. After the operation is called, the instances enter the Starting state.
          *
-         * @description Specifies whether to perform a dry run. Valid values:
-         * *   true: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
-         * > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
-         * Default value: false.
+         * @description ## [](#)Usage notes
+         * Take note of the following items:
+         * *   The instances to be started must be in the **Stopped** (`Stopped`) state.
+         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.
+         * *   You can use `BatchOptimization` to specify the batch operation mode and restart multiple instances at a time.
          *
          * @param request StartInstancesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -65923,16 +66196,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary When you call this operation, take note of the following items:
-         * *   The ECS instances that you want to start must be in the **Stopped** state.``
-         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the ECS instance is locked to ensure security. No operations are allowed on the ECS instance.
-         * *   You can start multiple ECS instances at the same time and use the `BatchOptimization` parameter to specify the batch operation mode.
+         * @summary Starts Elastic Compute Service (ECS) instances that are in the Stopped state. After the operation is called, the instances enter the Starting state.
          *
-         * @description Specifies whether to perform a dry run. Valid values:
-         * *   true: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
-         * > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
-         * Default value: false.
+         * @description ## [](#)Usage notes
+         * Take note of the following items:
+         * *   The instances to be started must be in the **Stopped** (`Stopped`) state.
+         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.
+         * *   You can use `BatchOptimization` to specify the batch operation mode and restart multiple instances at a time.
          *
          * @param request StartInstancesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -65994,16 +66264,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary When you call this operation, take note of the following items:
-         * *   The ECS instances that you want to start must be in the **Stopped** state.``
-         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the ECS instance is locked to ensure security. No operations are allowed on the ECS instance.
-         * *   You can start multiple ECS instances at the same time and use the `BatchOptimization` parameter to specify the batch operation mode.
+         * @summary Starts Elastic Compute Service (ECS) instances that are in the Stopped state. After the operation is called, the instances enter the Starting state.
          *
-         * @description Specifies whether to perform a dry run. Valid values:
-         * *   true: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
-         * > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
-         * Default value: false.
+         * @description ## [](#)Usage notes
+         * Take note of the following items:
+         * *   The instances to be started must be in the **Stopped** (`Stopped`) state.
+         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.
+         * *   You can use `BatchOptimization` to specify the batch operation mode and restart multiple instances at a time.
          *
          * @param request StartInstancesRequest
          * @return StartInstancesResponse
@@ -66015,16 +66282,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary When you call this operation, take note of the following items:
-         * *   The ECS instances that you want to start must be in the **Stopped** state.``
-         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the ECS instance is locked to ensure security. No operations are allowed on the ECS instance.
-         * *   You can start multiple ECS instances at the same time and use the `BatchOptimization` parameter to specify the batch operation mode.
+         * @summary Starts Elastic Compute Service (ECS) instances that are in the Stopped state. After the operation is called, the instances enter the Starting state.
          *
-         * @description Specifies whether to perform a dry run. Valid values:
-         * *   true: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
-         * > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
-         * Default value: false.
+         * @description ## [](#)Usage notes
+         * Take note of the following items:
+         * *   The instances to be started must be in the **Stopped** (`Stopped`) state.
+         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.
+         * *   You can use `BatchOptimization` to specify the batch operation mode and restart multiple instances at a time.
          *
          * @param request StartInstancesRequest
          * @return StartInstancesResponse
@@ -66252,7 +66516,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Stops an Elastic Compute Service (ECS) instance in the Running state. After the operation is called, the state of the instance changes to Stopping and then to Stopped.
+         * @summary Stops an Elastic Compute Service (ECS) instance in the Running state. After you call this operation, the state of the instance changes to Stopping and then to Stopped.
          *
          * @description *   If you call the DescribeInstances operation to query the details of an instance and `OperationLocks` in the response contains `"LockReason": "security"`, the instance is locked for security reasons and cannot be stopped. For more information, see [API behavior when an instance is locked for security reasons](https://help.aliyun.com/document_detail/25695.html).
          * *   If the economical mode is enabled, you can set `StoppedMode` to KeepCharging to switch to the standard mode. This allows an instance that is stopped in standard mode to retain its instance type resources and public IP address. However, you continue to be charged for the instance.
@@ -66325,7 +66589,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Stops an Elastic Compute Service (ECS) instance in the Running state. After the operation is called, the state of the instance changes to Stopping and then to Stopped.
+         * @summary Stops an Elastic Compute Service (ECS) instance in the Running state. After you call this operation, the state of the instance changes to Stopping and then to Stopped.
          *
          * @description *   If you call the DescribeInstances operation to query the details of an instance and `OperationLocks` in the response contains `"LockReason": "security"`, the instance is locked for security reasons and cannot be stopped. For more information, see [API behavior when an instance is locked for security reasons](https://help.aliyun.com/document_detail/25695.html).
          * *   If the economical mode is enabled, you can set `StoppedMode` to KeepCharging to switch to the standard mode. This allows an instance that is stopped in standard mode to retain its instance type resources and public IP address. However, you continue to be charged for the instance.
@@ -66398,7 +66662,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Stops an Elastic Compute Service (ECS) instance in the Running state. After the operation is called, the state of the instance changes to Stopping and then to Stopped.
+         * @summary Stops an Elastic Compute Service (ECS) instance in the Running state. After you call this operation, the state of the instance changes to Stopping and then to Stopped.
          *
          * @description *   If you call the DescribeInstances operation to query the details of an instance and `OperationLocks` in the response contains `"LockReason": "security"`, the instance is locked for security reasons and cannot be stopped. For more information, see [API behavior when an instance is locked for security reasons](https://help.aliyun.com/document_detail/25695.html).
          * *   If the economical mode is enabled, you can set `StoppedMode` to KeepCharging to switch to the standard mode. This allows an instance that is stopped in standard mode to retain its instance type resources and public IP address. However, you continue to be charged for the instance.
@@ -66413,7 +66677,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Stops an Elastic Compute Service (ECS) instance in the Running state. After the operation is called, the state of the instance changes to Stopping and then to Stopped.
+         * @summary Stops an Elastic Compute Service (ECS) instance in the Running state. After you call this operation, the state of the instance changes to Stopping and then to Stopped.
          *
          * @description *   If you call the DescribeInstances operation to query the details of an instance and `OperationLocks` in the response contains `"LockReason": "security"`, the instance is locked for security reasons and cannot be stopped. For more information, see [API behavior when an instance is locked for security reasons](https://help.aliyun.com/document_detail/25695.html).
          * *   If the economical mode is enabled, you can set `StoppedMode` to KeepCharging to switch to the standard mode. This allows an instance that is stopped in standard mode to retain its instance type resources and public IP address. However, you continue to be charged for the instance.
@@ -66428,10 +66692,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Stops Elastic Compute Service (ECS) instances. After the operation is called, the state of the instances changes to Stopping and then to Stopped.
+         * @summary Stops one or more Elastic Compute Service (ECS) instances that are in the Running state. After the operation is called, the state of the instances changes to Stopping and then to Stopped.
          *
-         * @description *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` for an instance, the instance is locked for security reasons. No operations are allowed on the instance.
-         * *   After you enable the economical mode for a pay-as-you-go instance that resided in a virtual private cloud (VPC), you can set `StoppedMode` to KeepCharging. Then, the pay-as-you-go instance continues to be billed after it is stopped. The instance type resources and public IP address are reserved for the instance.
+         * @description ## [](#)Usage notes
+         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.
+         * *   After you enable economical mode for a pay-as-you-go instance that resides in a virtual private cloud (VPC), you can set `StoppedMode` to KeepCharging. This way, the pay-as-you-go instance continues to be billed after the instance is stopped. The instance type resources and public IP address of the instance are retained.
          * *   Batch operations are supported. You can use `BatchOptimization` to specify the batch operation mode.
          *
          * @param request StopInstancesRequest
@@ -66502,10 +66767,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Stops Elastic Compute Service (ECS) instances. After the operation is called, the state of the instances changes to Stopping and then to Stopped.
+         * @summary Stops one or more Elastic Compute Service (ECS) instances that are in the Running state. After the operation is called, the state of the instances changes to Stopping and then to Stopped.
          *
-         * @description *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` for an instance, the instance is locked for security reasons. No operations are allowed on the instance.
-         * *   After you enable the economical mode for a pay-as-you-go instance that resided in a virtual private cloud (VPC), you can set `StoppedMode` to KeepCharging. Then, the pay-as-you-go instance continues to be billed after it is stopped. The instance type resources and public IP address are reserved for the instance.
+         * @description ## [](#)Usage notes
+         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.
+         * *   After you enable economical mode for a pay-as-you-go instance that resides in a virtual private cloud (VPC), you can set `StoppedMode` to KeepCharging. This way, the pay-as-you-go instance continues to be billed after the instance is stopped. The instance type resources and public IP address of the instance are retained.
          * *   Batch operations are supported. You can use `BatchOptimization` to specify the batch operation mode.
          *
          * @param request StopInstancesRequest
@@ -66576,10 +66842,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Stops Elastic Compute Service (ECS) instances. After the operation is called, the state of the instances changes to Stopping and then to Stopped.
+         * @summary Stops one or more Elastic Compute Service (ECS) instances that are in the Running state. After the operation is called, the state of the instances changes to Stopping and then to Stopped.
          *
-         * @description *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` for an instance, the instance is locked for security reasons. No operations are allowed on the instance.
-         * *   After you enable the economical mode for a pay-as-you-go instance that resided in a virtual private cloud (VPC), you can set `StoppedMode` to KeepCharging. Then, the pay-as-you-go instance continues to be billed after it is stopped. The instance type resources and public IP address are reserved for the instance.
+         * @description ## [](#)Usage notes
+         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.
+         * *   After you enable economical mode for a pay-as-you-go instance that resides in a virtual private cloud (VPC), you can set `StoppedMode` to KeepCharging. This way, the pay-as-you-go instance continues to be billed after the instance is stopped. The instance type resources and public IP address of the instance are retained.
          * *   Batch operations are supported. You can use `BatchOptimization` to specify the batch operation mode.
          *
          * @param request StopInstancesRequest
@@ -66592,10 +66859,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
-         * @summary Stops Elastic Compute Service (ECS) instances. After the operation is called, the state of the instances changes to Stopping and then to Stopped.
+         * @summary Stops one or more Elastic Compute Service (ECS) instances that are in the Running state. After the operation is called, the state of the instances changes to Stopping and then to Stopped.
          *
-         * @description *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` for an instance, the instance is locked for security reasons. No operations are allowed on the instance.
-         * *   After you enable the economical mode for a pay-as-you-go instance that resided in a virtual private cloud (VPC), you can set `StoppedMode` to KeepCharging. Then, the pay-as-you-go instance continues to be billed after it is stopped. The instance type resources and public IP address are reserved for the instance.
+         * @description ## [](#)Usage notes
+         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.
+         * *   After you enable economical mode for a pay-as-you-go instance that resides in a virtual private cloud (VPC), you can set `StoppedMode` to KeepCharging. This way, the pay-as-you-go instance continues to be billed after the instance is stopped. The instance type resources and public IP address of the instance are retained.
          * *   Batch operations are supported. You can use `BatchOptimization` to specify the batch operation mode.
          *
          * @param request StopInstancesRequest
@@ -66611,7 +66879,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @summary *   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
          * *   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.
          *
-         * @description The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+         * @description ## [](#)Usage notes
+         * *   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
+         * *   If you stop the process of a command that runs on a schedule, the executions that have started are not interrupted. Subsequent executions are not scheduled.
          *
          * @param request StopInvocationRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -66676,7 +66946,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @summary *   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
          * *   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.
          *
-         * @description The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+         * @description ## [](#)Usage notes
+         * *   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
+         * *   If you stop the process of a command that runs on a schedule, the executions that have started are not interrupted. Subsequent executions are not scheduled.
          *
          * @param request StopInvocationRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -66741,7 +67013,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @summary *   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
          * *   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.
          *
-         * @description The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+         * @description ## [](#)Usage notes
+         * *   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
+         * *   If you stop the process of a command that runs on a schedule, the executions that have started are not interrupted. Subsequent executions are not scheduled.
          *
          * @param request StopInvocationRequest
          * @return StopInvocationResponse
@@ -66756,7 +67030,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
          * @summary *   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
          * *   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.
          *
-         * @description The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+         * @description ## [](#)Usage notes
+         * *   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
+         * *   If you stop the process of a command that runs on a schedule, the executions that have started are not interrupted. Subsequent executions are not scheduled.
          *
          * @param request StopInvocationRequest
          * @return StopInvocationResponse
@@ -67888,6 +68164,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
+         * @summary Removes tags from Elastic Compute Service (ECS) resources. After a tag is removed from a resource, the tag is automatically deleted if it is not added to other resources.
+         *
          * @param request UntagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UntagResourcesResponse
@@ -67956,6 +68234,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
+         * @summary Removes tags from Elastic Compute Service (ECS) resources. After a tag is removed from a resource, the tag is automatically deleted if it is not added to other resources.
+         *
          * @param request UntagResourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UntagResourcesResponse
@@ -68024,6 +68304,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
+         * @summary Removes tags from Elastic Compute Service (ECS) resources. After a tag is removed from a resource, the tag is automatically deleted if it is not added to other resources.
+         *
          * @param request UntagResourcesRequest
          * @return UntagResourcesResponse
          */
@@ -68034,6 +68316,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         }
 
         /**
+         * @summary Removes tags from Elastic Compute Service (ECS) resources. After a tag is removed from a resource, the tag is automatically deleted if it is not added to other resources.
+         *
          * @param request UntagResourcesRequest
          * @return UntagResourcesResponse
          */

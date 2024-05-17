@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   false
         /// 
         /// Default value: false.
+        /// 
+        /// >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).
         /// </summary>
         [NameInMap("DisableInstantAccess")]
         [Validation(Required=false)]

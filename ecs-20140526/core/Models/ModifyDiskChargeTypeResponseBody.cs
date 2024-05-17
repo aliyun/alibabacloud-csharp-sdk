@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// The order ID.
+        /// The ID of the order.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

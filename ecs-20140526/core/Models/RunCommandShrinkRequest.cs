@@ -150,9 +150,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Frequency { get; set; }
 
         /// <summary>
-        /// The IDs of instances on which to run the command. Valid values of N: 1 to 50.
+        /// The IDs of instances on which to run the command. N indicates that you can specify multiple instance IDs at the same time. Valid values of N: 1 to 100.
         /// 
         /// If one of the specified instances does not meet the conditions for running the command, the call fails. To ensure that the call is successful, specify only the IDs of instances that meet the conditions.
+        /// 
+        /// You can apply for a quota increase in the Quota Center console. The quota name is Maximum number of instances supported for command execution.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

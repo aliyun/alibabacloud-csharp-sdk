@@ -17,14 +17,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// > 该参数正在邀测中，暂未开放使用。
+        /// The IPv4 prefixes to assign to the ENI. Valid values of N: 1 to 10.
+        /// 
+        /// >  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.
         /// </summary>
         [NameInMap("Ipv4Prefix")]
         [Validation(Required=false)]
         public List<string> Ipv4Prefix { get; set; }
 
         /// <summary>
-        /// > 该参数正在邀测中，暂未开放使用。
+        /// The number of IPv4 prefixes to be randomly generated for the ENI. Valid values: 1 to 10.
+        /// 
+        /// >  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.
         /// </summary>
         [NameInMap("Ipv4PrefixCount")]
         [Validation(Required=false)]

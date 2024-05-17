@@ -19,11 +19,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The auto-renewal duration of the reserved instance. Unit: months. This parameter takes effect only when AutoRenew is set to true.
+        /// The auto-renewal term of the reserved instance. Unit: months. This parameter takes effect only when AutoRenew is set to true.
         /// 
-        /// Valid values: 1, 12, 36, and 60.
-        /// 
-        /// Default value when PeriodUnit is set to Month: 1.
+        /// Valid values: 12 and 36.
         /// 
         /// Default value when PeriodUnit is set to Year: 12.
         /// </summary>

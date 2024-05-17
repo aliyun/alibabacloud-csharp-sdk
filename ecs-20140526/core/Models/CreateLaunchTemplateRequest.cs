@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// *   cloud: basic disk.
             /// *   cloud_efficiency: ultra disk.
             /// *   cloud_ssd: standard SSD.
-            /// *   cloud_essd: enhanced SSD (ESSD). You can use `SystemDisk.PerformanceLevel` to set the performance level of the ESSD to use as the system disk.
+            /// *   cloud_essd: Enterprise SSD (ESSD). You can use `SystemDisk.PerformanceLevel` to set the performance level of the ESSD to use as the system disk.
             /// *   cloud_auto: ESSD AutoPL disk.
             /// *   cloud_essd_entry: ESSD Entry disk.
             /// 
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Device { get; set; }
 
             /// <summary>
-            /// The name of data disk N. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
+            /// The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
             /// </summary>
             [NameInMap("DiskName")]
             [Validation(Required=false)]
@@ -528,7 +528,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
             /// *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `SecurityGroupId`. You cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupIds.N`.
-            /// *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which the instance belongs.
+            /// *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the instance.
             /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
@@ -543,7 +543,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// Take note of the following items:
             /// 
             /// *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must specify this parameter or `NetworkInterface.N.SecurityGroupId`. In this case, this parameter is equivalent to `SecurityGroupIds.N`. You cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupId`.
-            /// *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which the instance belongs.
+            /// *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the instance.
             /// </summary>
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
@@ -674,7 +674,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.
         /// 
-        /// >  This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.
+        /// >  This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.
         /// </summary>
         [NameInMap("SpotDuration")]
         [Validation(Required=false)]
@@ -752,7 +752,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 16 KB.
+        /// The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 32 KB.
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

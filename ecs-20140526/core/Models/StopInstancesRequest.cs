@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
         /// 
-        /// *   true: performs a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request passes the dry run, `DRYRUN.SUCCESS` is returned. Otherwise, an error message is returned.
+        /// *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
         /// 
-        /// > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
+        /// >  If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned, regardless of whether the request passes the dry run.
         /// 
-        /// *   false: performs a dry run and performs the actual request.
+        /// *   false: performs a dry run and performs the actual request. If the request passes the dry run, instances are stopped.
         /// 
         /// Default value: false.
         /// </summary>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// Specifies whether to stop the instance in a forceful manner. Valid values:
+        /// Specifies whether to forcefully stop instances. Valid values:
         /// 
-        /// *   true: stops the instance in a forceful manner. This operation is equivalent to the power-off operation in common scenarios. Cache data that is not written to storage in the instance will be lost.
-        /// *   false: stops the instance in a normal manner.
+        /// *   true. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on instances is lost.
+        /// *   false.
         /// 
         /// Default value: false.
         /// </summary>

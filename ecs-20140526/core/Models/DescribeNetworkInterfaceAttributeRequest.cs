@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfaceAttributeRequest : TeaModel {
         /// <summary>
-        /// The attribute of the ENI. Valid values:
+        /// The attribute of the ENI. Valid value:
         /// 
-        /// attachment: attachment information about the ENI 
+        /// attachment: attachment information about the ENI
         /// 
-        /// >This parameter is in invitational preview and is not publicly available.
+        /// >  This parameter is in invitational preview and is not publicly available.
         /// </summary>
         [NameInMap("Attribute")]
         [Validation(Required=false)]

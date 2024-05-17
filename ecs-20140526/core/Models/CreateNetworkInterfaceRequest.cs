@@ -137,6 +137,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string NetworkInterfaceName { get; set; }
 
+        [NameInMap("NetworkInterfaceTrafficConfig")]
+        [Validation(Required=false)]
+        public CreateNetworkInterfaceRequestNetworkInterfaceTrafficConfig NetworkInterfaceTrafficConfig { get; set; }
+        public class CreateNetworkInterfaceRequestNetworkInterfaceTrafficConfig : TeaModel {
+            [NameInMap("NetworkInterfaceTrafficMode")]
+            [Validation(Required=false)]
+            public string NetworkInterfaceTrafficMode { get; set; }
+
+            [NameInMap("QueueNumber")]
+            [Validation(Required=false)]
+            public int? QueueNumber { get; set; }
+
+            [NameInMap("QueuePairNumber")]
+            [Validation(Required=false)]
+            public int? QueuePairNumber { get; set; }
+
+            [NameInMap("RxQueueSize")]
+            [Validation(Required=false)]
+            public int? RxQueueSize { get; set; }
+
+            [NameInMap("TxQueueSize")]
+            [Validation(Required=false)]
+            public int? TxQueueSize { get; set; }
+
+        }
+
         /// <summary>
         /// The communication mode of the ENI. Valid values:
         /// 
