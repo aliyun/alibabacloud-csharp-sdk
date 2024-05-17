@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
     public class ListJobsRequest : TeaModel {
         /// <summary>
         /// The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 
         /// <summary>
         /// The ID of the namespace. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -38,7 +42,9 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the job resides.
+        /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

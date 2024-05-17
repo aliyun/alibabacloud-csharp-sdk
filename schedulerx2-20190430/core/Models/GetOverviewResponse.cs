@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
-    public class UpdateWorkflowDagResponse : TeaModel {
+    public class GetOverviewResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public UpdateWorkflowDagResponseBody Body { get; set; }
+        public GetOverviewResponseBody Body { get; set; }
 
     }
 

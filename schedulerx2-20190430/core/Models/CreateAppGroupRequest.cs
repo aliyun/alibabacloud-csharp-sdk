@@ -18,11 +18,19 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 
         /// <summary>
         /// The name of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        /// <summary>
+        /// 应用类型。
+        /// 
+        /// - 1、普通应用。
+        /// - 2、k8s应用。
+        /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]
         public int? AppType { get; set; }
@@ -34,12 +42,21 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// 是否开启日志。
+        /// 
+        /// - true：开启
+        /// 
+        /// - false：关闭
+        /// </summary>
         [NameInMap("EnableLog")]
         [Validation(Required=false)]
         public bool? EnableLog { get; set; }
 
         /// <summary>
-        /// The ID of the application. You can obtain the application ID on the Application Management page in Distributed Task Scheduling Platform.
+        /// The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -67,7 +84,9 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string MonitorContactsJson { get; set; }
 
         /// <summary>
-        /// The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in Distributed Task Scheduling Platform.
+        /// The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -88,7 +107,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class BatchDisableJobsResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The additional information returned.
+        /// The additional information that was returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   **true**: The call is successful.
-        /// *   **false**: The call fails.
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

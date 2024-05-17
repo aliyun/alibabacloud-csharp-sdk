@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetWorkFlowResponseBody : TeaModel {
         /// <summary>
-        /// The error code that is returned.
+        /// Error codes
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public long? Source { get; set; }
 
                     /// <summary>
-                    /// The ID of the target job.
+                    /// The ID of the object job.
                     /// </summary>
                     [NameInMap("Target")]
                     [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// The error message that is returned.
+        /// Error message
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ListNamespacesResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The list of namespaces.
+        /// The information about the namespaces.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListNamespacesResponseBodyData Data { get; set; }
         public class ListNamespacesResponseBodyData : TeaModel {
             /// <summary>
-            /// The list and details of the namespaces.
+            /// The namespaces and their details.
             /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The ID of the namespace.
+                /// The namespace ID.
                 /// </summary>
                 [NameInMap("UId")]
                 [Validation(Required=false)]
@@ -56,24 +56,24 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// The additional information that is returned.
+        /// The returned message.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   **true**: The call is successful.
-        /// *   **false**: The call fails.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

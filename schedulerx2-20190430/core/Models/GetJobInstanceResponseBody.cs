@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetJobInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public GetJobInstanceResponseBodyDataJobInstanceDetail JobInstanceDetail { get; set; }
             public class GetJobInstanceResponseBodyDataJobInstanceDetail : TeaModel {
                 /// <summary>
-                /// The data time.
+                /// The data timestamp of the job instance.
                 /// </summary>
                 [NameInMap("DataTime")]
                 [Validation(Required=false)]
@@ -52,18 +52,26 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string Executor { get; set; }
 
                 /// <summary>
-                /// The ID of the job instance.
+                /// The job instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public long? InstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the job.
+                /// The job ID.
                 /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public long? JobId { get; set; }
+
+                [NameInMap("JobName")]
+                [Validation(Required=false)]
+                public string JobName { get; set; }
+
+                [NameInMap("Parameters")]
+                [Validation(Required=false)]
+                public string Parameters { get; set; }
 
                 /// <summary>
                 /// The progress of the job instance.
@@ -80,7 +88,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string Result { get; set; }
 
                 /// <summary>
-                /// The scheduled time of the job.
+                /// The time when the job was scheduled to run.
                 /// </summary>
                 [NameInMap("ScheduleTime")]
                 [Validation(Required=false)]
@@ -94,12 +102,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The status of the job instance. Valid values:
+                /// The state of the job instance. Valid values:
                 /// 
                 /// *   **1**: The job instance is waiting for execution.
                 /// *   **3**: The job instance is running.
                 /// *   **4**: The job instance is successful.
-                /// *   **5**: The job instance fails.
+                /// *   **5**: The job instance failed.
                 /// *   **9**: The job instance is rejected.
                 /// 
                 /// Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus
@@ -122,14 +130,18 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [Validation(Required=false)]
                 public int? TimeType { get; set; }
 
+                [NameInMap("TraceId")]
+                [Validation(Required=false)]
+                public string TraceId { get; set; }
+
                 /// <summary>
                 /// The trigger type of the job instance. Valid values:
                 /// 
-                /// *   **1**: The job instance is triggered at the scheduled time.
-                /// *   **2**: The job instance is triggered due to data update.
-                /// *   **3**: The job instance is triggered by an API call.
-                /// *   **4**: The job instance is triggered because it is manually rerun.
-                /// *   **5**: The job instance is triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.
+                /// *   **1**: The job instance was triggered at the scheduled time.
+                /// *   **2**: The job instance was triggered due to data update.
+                /// *   **3**: The job instance was triggered by an API call.
+                /// *   **4**: The job instance was triggered because it is manually rerun.
+                /// *   **5**: The job instance was triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.
                 /// 
                 /// Enumeration class: com.alibaba.schedulerx.common.domain.TriggerType
                 /// </summary>
@@ -149,24 +161,24 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// The error message that is returned if an error occurs.
+        /// The error message that is returned only if the corresponding error occurs.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   **true**: The call is successful.
-        /// *   **false**: The call fails.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ExecuteWorkflowResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// If the call is successful, the ID of the workflow instance is returned.
+        /// If the request is successful, the ID of the workflow instance is returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ExecuteWorkflowResponseBodyData Data { get; set; }
         public class ExecuteWorkflowResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the workflow instance.
+            /// The workflow instance ID.
             /// </summary>
             [NameInMap("WfInstanceId")]
             [Validation(Required=false)]
@@ -33,21 +33,21 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// The error message that is returned only if the error occurs.
+        /// The error message that is returned only if the corresponding error occurs.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the API call is successful.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

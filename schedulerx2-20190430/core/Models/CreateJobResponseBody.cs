@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class CreateJobResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public CreateJobResponseBodyData Data { get; set; }
         public class CreateJobResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the job.
+            /// The job ID.
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
@@ -33,24 +33,24 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// The additional information that is returned.
+        /// The additional information returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the job is created. Valid values:
+        /// If you set JobType to k8s, this parameter is required. Valid values:
         /// 
-        /// *   **true**: The job is created.
-        /// *   **false**: Failed to create the job.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

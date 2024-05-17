@@ -24,21 +24,25 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? DesignateType { get; set; }
 
         /// <summary>
-        /// The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.
+        /// The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The parameters that are passed to trigger the job to run. The input value can be any string. The parameters that are passed are obtained by calling the `context.getInstanceParameters()` class in the `processor` code. The parameters are different from custom parameters for creating jobs.
+        /// The parameters that are passed to trigger the job to run. The input value can be a random string. The parameters that are passed are obtained by calling the `context.getInstanceParameters()` class in the `processor` code. The parameters are different from custom parameters for creating jobs.
         /// </summary>
         [NameInMap("InstanceParameters")]
         [Validation(Required=false)]
         public string InstanceParameters { get; set; }
 
         /// <summary>
-        /// The ID of the job. You can obtain the job ID on the Task Management page in the SchedulerX console.
+        /// The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
@@ -52,7 +56,9 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+        /// The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -66,7 +72,9 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

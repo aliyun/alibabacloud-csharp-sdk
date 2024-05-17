@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ListGroupsRequest : TeaModel {
         /// <summary>
-        /// The namespace. You can obtain the namespace on the **Namespace** page in Distributed Task Scheduling Platform.
+        /// The name of the application group.
+        /// </summary>
+        [NameInMap("AppGroupName")]
+        [Validation(Required=false)]
+        public string AppGroupName { get; set; }
+
+        /// <summary>
+        /// The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// Required only for a special third party.
+        /// The source of the namespace. This parameter is required only for a special third party.
         /// </summary>
         [NameInMap("NamespaceSource")]
         [Validation(Required=false)]
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the application is located.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

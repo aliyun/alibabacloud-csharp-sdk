@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class CreateNamespaceResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The information of the namespace.
+        /// The information about the namespace.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateNamespaceResponseBodyData Data { get; set; }
         public class CreateNamespaceResponseBodyData : TeaModel {
             /// <summary>
-            /// The unique identifier of the namespace.
+            /// The UID of the namespace.
             /// </summary>
             [NameInMap("NamespaceUid")]
             [Validation(Required=false)]
@@ -33,24 +33,24 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// The error message that is returned only if the error occurs.
+        /// The error message that is returned only if the corresponding error occurs.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether an application is created. Valid values:
+        /// Indicates whether the application was created. Valid values:
         /// 
-        /// *   **true**: The application is created.
-        /// *   **false**: Failed to create the application.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

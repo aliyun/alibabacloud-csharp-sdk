@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ListWorkflowInstanceResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ListWorkflowInstanceResponseBody Body { get; set; }
 
     }

@@ -10,31 +10,31 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class DeleteWorkflowResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The error message that is returned only if the error occurs.
+        /// The error message that is returned only if the corresponding error occurs.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The unique ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the workflow is deleted. Valid values:
+        /// Indicates whether the workflow was deleted. Valid values:
         /// 
-        /// *   **true**: The workflow is deleted.
-        /// *   **false**: Failed to delete the workflow.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

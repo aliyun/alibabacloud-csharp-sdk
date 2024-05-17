@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                         public string UserMail { get; set; }
 
                         /// <summary>
-                        /// The name of the user.
+                        /// The username.
                         /// </summary>
                         [NameInMap("UserName")]
                         [Validation(Required=false)]
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string Parameters { get; set; }
 
                 /// <summary>
-                /// The status of the job. Valid values:
+                /// Indicates whether the job is enabled. Valid values:
                 /// 
                 /// *   **1**: The job is enabled and can be triggered.
                 /// *   **0**: The job is disabled and cannot be triggered.

@@ -9,50 +9,92 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetLogRequest : TeaModel {
+        /// <summary>
+        /// The time when the job stops running. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// </summary>
         [NameInMap("EndTimestamp")]
         [Validation(Required=false)]
         public long? EndTimestamp { get; set; }
 
+        /// <summary>
+        /// The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// The job ID.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// The job instance ID.
+        /// </summary>
         [NameInMap("JobInstanceId")]
         [Validation(Required=false)]
         public string JobInstanceId { get; set; }
 
+        /// <summary>
+        /// The keyword.
+        /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
+        /// <summary>
+        /// The number of rows to return. The maximum number is 200.
+        /// </summary>
         [NameInMap("Line")]
         [Validation(Required=false)]
         public int? Line { get; set; }
 
+        /// <summary>
+        /// The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        /// <summary>
+        /// The source of the namespace. This parameter is required only for a special third party.
+        /// </summary>
         [NameInMap("NamespaceSource")]
         [Validation(Required=false)]
         public string NamespaceSource { get; set; }
 
+        /// <summary>
+        /// The number of offset rows. This parameter can be used for a paged query.
+        /// </summary>
         [NameInMap("Offset")]
         [Validation(Required=false)]
         public int? Offset { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to reverse the order. By default, the order is reversed.
+        /// </summary>
         [NameInMap("Reverse")]
         [Validation(Required=false)]
         public bool? Reverse { get; set; }
 
+        /// <summary>
+        /// The time when the job starts to run. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// </summary>
         [NameInMap("StartTimestamp")]
         [Validation(Required=false)]
         public long? StartTimestamp { get; set; }

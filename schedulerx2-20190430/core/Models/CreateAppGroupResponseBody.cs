@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class CreateAppGroupResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public CreateAppGroupResponseBodyData Data { get; set; }
         public class CreateAppGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the job group.
+            /// The job group ID.
             /// </summary>
             [NameInMap("AppGroupId")]
             [Validation(Required=false)]
@@ -40,24 +40,24 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// The error message that is returned only if an error occurs.
+        /// The error message that is returned only if the corresponding error occurs.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the application is created. Valid values:
+        /// Indicates whether the application was created. Valid values:
         /// 
-        /// *   **true**: The application is created.
-        /// *   **false**: Failed to create the application.
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

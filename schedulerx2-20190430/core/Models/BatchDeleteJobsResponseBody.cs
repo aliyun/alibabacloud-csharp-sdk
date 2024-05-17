@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class BatchDeleteJobsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The additional information that is returned.
+        /// The additional information returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether jobs are deleted in batches. Valid values:
+        /// Indicates whether multiple jobs were deleted at a time. Valid values:
         /// 
-        /// *   **true**: Jobs are deleted in batches.
-        /// *   **false**: Failed to delete jobs in batches.
+        /// *   **true**: Multiple jobs were deleted at a time.
+        /// *   **false**: Multiple jobs were not deleted at a time.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

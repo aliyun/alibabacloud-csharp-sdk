@@ -18,20 +18,24 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 
         /// <summary>
         /// The name of the namespace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The UID of the namespace, which is globally unique. We recommend that you use the UUID to generate the UID.
+        /// The unique identifier (UID) of the namespace. We recommend that you use the universally unique identifier (UUID) to generate the UID.
         /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]

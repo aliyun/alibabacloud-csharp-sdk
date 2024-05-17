@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The error message that is returned if an error occurs.
+        /// The error message that is returned only if an error occurs.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

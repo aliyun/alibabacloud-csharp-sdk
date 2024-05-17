@@ -9,8 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ListNamespacesRequest : TeaModel {
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
+        [NameInMap("NamespaceName")]
+        [Validation(Required=false)]
+        public string NamespaceName { get; set; }
+
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
