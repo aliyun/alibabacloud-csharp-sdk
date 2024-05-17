@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListProjectRequest : TeaModel {
+        [NameInMap("fetchQuota")]
+        [Validation(Required=false)]
+        public bool? FetchQuota { get; set; }
+
         /// <summary>
         /// The line from which the query starts. Default value: 0.
         /// </summary>

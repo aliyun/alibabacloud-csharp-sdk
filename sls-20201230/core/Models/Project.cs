@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        [NameInMap("dataRedundancyType")]
+        [Validation(Required=false)]
+        public string DataRedundancyType { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -34,6 +38,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("projectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
+
+        [NameInMap("quota")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Quota { get; set; }
 
         [NameInMap("region")]
         [Validation(Required=false)]

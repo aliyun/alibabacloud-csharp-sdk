@@ -1,3 +1,7 @@
+2024-05-17 Version: 5.3.1
+- Update API ListProject: add param fetchQuota.
+
+
 2024-05-10 Version: 5.3.0
 - Support API EnableScheduledSQL.
 - Update API DisableScheduledSQL: update response param.

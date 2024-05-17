@@ -12749,6 +12749,10 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FetchQuota))
+            {
+                query["fetchQuota"] = request.FetchQuota;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
                 query["offset"] = request.Offset;
@@ -12800,6 +12804,10 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FetchQuota))
+            {
+                query["fetchQuota"] = request.FetchQuota;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
                 query["offset"] = request.Offset;
