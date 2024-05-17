@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public long? CallsOffered { get; set; }
 
+                    [NameInMap("CallsQueuingTimeout")]
+                    [Validation(Required=false)]
+                    public long? CallsQueuingTimeout { get; set; }
+
                     [NameInMap("CallsServiceLevel10")]
                     [Validation(Required=false)]
                     public long? CallsServiceLevel10 { get; set; }
@@ -88,6 +92,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [NameInMap("CallsServiceLevel30")]
                     [Validation(Required=false)]
                     public long? CallsServiceLevel30 { get; set; }
+
+                    [NameInMap("CallsTimeout")]
+                    [Validation(Required=false)]
+                    public long? CallsTimeout { get; set; }
 
                     [NameInMap("GiveUpByAgentOfQueueCount")]
                     [Validation(Required=false)]
