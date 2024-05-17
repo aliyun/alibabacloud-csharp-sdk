@@ -9,12 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DetachApplication2ConnectorRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
         /// ConnectorID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectorId")]
         [Validation(Required=false)]

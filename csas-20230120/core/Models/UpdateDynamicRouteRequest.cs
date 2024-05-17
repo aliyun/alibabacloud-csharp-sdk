@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DynamicRouteId")]
         [Validation(Required=false)]
         public string DynamicRouteId { get; set; }

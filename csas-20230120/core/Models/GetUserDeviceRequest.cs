@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetUserDeviceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DeviceTag")]
         [Validation(Required=false)]
         public string DeviceTag { get; set; }

@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CompanyLimitType")]
         [Validation(Required=false)]
         public string CompanyLimitType { get; set; }
@@ -35,10 +38,16 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MatchMode")]
         [Validation(Required=false)]
         public string MatchMode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -61,6 +70,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PersonalLimitType")]
         [Validation(Required=false)]
         public string PersonalLimitType { get; set; }
@@ -69,6 +81,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public long? Priority { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

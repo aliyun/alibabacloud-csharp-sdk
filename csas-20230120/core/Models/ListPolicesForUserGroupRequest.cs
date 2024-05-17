@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListPolicesForUserGroupRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("UserGroupIds")]
         [Validation(Required=false)]
         public List<string> UserGroupIds { get; set; }

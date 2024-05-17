@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public long? CurrentPage { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("IdpConfigId")]
         [Validation(Required=false)]
         public string IdpConfigId { get; set; }

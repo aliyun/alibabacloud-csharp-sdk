@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetIdpConfigRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }

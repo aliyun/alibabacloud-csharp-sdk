@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<string> AppStatuses { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public long? CurrentPage { get; set; }
@@ -49,6 +52,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<string> IaStatuses { get; set; }
 
+        [NameInMap("InnerIp")]
+        [Validation(Required=false)]
+        public string InnerIp { get; set; }
+
         [NameInMap("Mac")]
         [Validation(Required=false)]
         public string Mac { get; set; }
@@ -61,6 +68,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<string> PaStatuses { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }

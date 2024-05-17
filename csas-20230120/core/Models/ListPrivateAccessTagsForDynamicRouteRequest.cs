@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListPrivateAccessTagsForDynamicRouteRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DynamicRouteIds")]
         [Validation(Required=false)]
         public List<string> DynamicRouteIds { get; set; }

@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<string> ApplicationIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ApplicationType")]
         [Validation(Required=false)]
         public string ApplicationType { get; set; }
@@ -47,18 +50,30 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string DeviceAttributeId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PolicyAction")]
         [Validation(Required=false)]
         public string PolicyAction { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
@@ -78,6 +93,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// 内网访问策略的用户组类型。取值：
         /// - **Normal**：普通用户组。
         /// - **Custom**：自定义用户组。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserGroupMode")]
         [Validation(Required=false)]

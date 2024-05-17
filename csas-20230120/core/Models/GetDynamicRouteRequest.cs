@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetDynamicRouteRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DynamicRouteId")]
         [Validation(Required=false)]
         public string DynamicRouteId { get; set; }
