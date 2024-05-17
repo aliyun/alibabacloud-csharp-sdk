@@ -23,9 +23,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The specifications of the node. For information about node specifications, see the following topics:
         /// 
-        /// *   PolarDB for MySQL: [Specifications of compute nodes](~~102542~~)
-        /// *   PolarDB for Oracle: [Specifications of compute nodes](~~207921~~)
-        /// *   PolarDB for PostgreSQL: [Specifications of compute nodes](~~209380~~)
+        /// *   PolarDB for MySQL: [Specifications of compute nodes](https://help.aliyun.com/document_detail/102542.html)
+        /// *   PolarDB for Oracle: [Specifications of compute nodes](https://help.aliyun.com/document_detail/207921.html)
+        /// *   PolarDB for PostgreSQL: [Specifications of compute nodes](https://help.aliyun.com/document_detail/209380.html)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNodeClass")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   **MySQL**
         /// *   **PostgreSQL**
         /// *   **Oracle**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBType")]
         [Validation(Required=false)]
@@ -57,6 +61,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         ///     *   **14**
         /// 
         /// *   Valid value for the Oracle database engine: **11**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBVersion")]
         [Validation(Required=false)]
@@ -77,6 +83,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   **true**
         /// *   **false**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NeedMaxScaleLink")]
         [Validation(Required=false)]
@@ -93,7 +101,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The region ID.
         /// 
-        /// > You can call the [DescribeRegions](~~98041~~) operation to query available regions.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -124,7 +134,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The zone ID.
         /// 
-        /// > You can call the [DescribeRegions](~~98041~~) operation to query available zones.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available zones.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

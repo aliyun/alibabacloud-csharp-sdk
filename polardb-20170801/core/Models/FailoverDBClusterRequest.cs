@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? RollBackForDisaster { get; set; }
 
         /// <summary>
-        /// The ID of the read-only node that you want to promote to the primary node. You can call the [DescribeDBClusters](~~98094~~) operation to query node information, such as node IDs.
+        /// The ID of the read-only node that you want to promote to the primary node. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query node information, such as node IDs.
         /// 
         /// > *   If you leave this parameter empty, the system selects one or more available read-only nodes that have the highest failover priority as candidate primary nodes. If the failover to the first read-only node fails due to network issues, abnormal replication status, or other reasons, the system attempts to fail over your applications to the next read-only node until the failover is successful.
         /// >*  This parameter is required for PolarDB for Oracle and PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.

@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   **4/24H**: frequent backup. The system backs up data every 4 hours.
         /// 
         /// >- This parameter is not supported for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.
-        /// >- This parameter is unavailable if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about regions that support the cross-region backup feature, see [Overview](~~72672~~).
+        /// >- This parameter is unavailable if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).
         /// </summary>
         [NameInMap("DataLevel1BackupFrequency")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// >- You need to specify at least two values. Separate multiple values with commas (,).
         /// >- This parameter is not supported for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.
-        /// >- This parameter is unavailable if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about regions that support the cross-region backup feature, see [Overview](~~72672~~).
+        /// >- This parameter is unavailable if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).
         /// </summary>
         [NameInMap("DataLevel1BackupPeriod")]
         [Validation(Required=false)]
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The period of time during which automatic backup is performed. The value must be in the `hh:mmZ-hh:mmZ` format. The time must be in UTC. The start time and the end time must be on the hour and must have an interval of 1 hour. Example: `14:00Z-15:00Z`.
         /// 
         /// >- This parameter is not supported for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.
-        /// >- This parameter is unavailable if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about regions that support the cross-region backup feature, see [Overview](~~72672~~).
+        /// >- This parameter is unavailable if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).
         /// </summary>
         [NameInMap("DataLevel1BackupTime")]
         [Validation(Required=false)]
         public string DataLevel1BackupTime { get; set; }
 
         /// <summary>
-        /// The region where the cross-region level-2 backup is stored. For information about regions that support the cross-region backup feature, see [Overview](~~72672~~).
+        /// The region where the cross-region level-2 backup is stored. For information about regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).
         /// </summary>
         [NameInMap("DataLevel2BackupAnotherRegionRegion")]
         [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// >- You need to specify at least two values. Separate multiple values with commas (,).
         /// >- This parameter is not supported for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.
-        /// >- This parameter is unavailable if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about regions that support the cross-region backup feature, see [Overview](~~72672~~).
+        /// >- This parameter is unavailable if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).
         /// </summary>
         [NameInMap("DataLevel2BackupPeriod")]
         [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   0: The level-2 backup feature is disabled.
         /// *   30 to 7300: Level-2 backups are retained for 30 to 7,300 days.
-        /// *   \-1: Level-2 backups are permanently retained.
+        /// *   \\-1: Level-2 backups are permanently retained.
         /// 
         /// > The default value is **0**. By default, the level-2 backup feature is disabled when you create a cluster.
         /// </summary>

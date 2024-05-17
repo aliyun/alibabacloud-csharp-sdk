@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the serverless cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -119,6 +121,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("SecondsUntilAutoPause")]
         [Validation(Required=false)]
         public string SecondsUntilAutoPause { get; set; }
+
+        [NameInMap("ServerlessRuleCpuEnlargeThreshold")]
+        [Validation(Required=false)]
+        public string ServerlessRuleCpuEnlargeThreshold { get; set; }
+
+        [NameInMap("ServerlessRuleCpuShrinkThreshold")]
+        [Validation(Required=false)]
+        public string ServerlessRuleCpuShrinkThreshold { get; set; }
+
+        [NameInMap("ServerlessRuleMode")]
+        [Validation(Required=false)]
+        public string ServerlessRuleMode { get; set; }
 
     }
 

@@ -15,7 +15,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The cluster ID.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~98094~~) operation to query the information of all clusters that are deployed in a specified region, such as the cluster IDs.
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the information of all clusters that are deployed in a specified region, such as the cluster IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -47,8 +49,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the scheduled task that you want to cancel.
         /// 
-        /// > *   You can call the [DescribeScheduleTasks](~~199648~~) operation to query the details of all scheduled tasks that belong to the current account, such as the task IDs.
+        /// > *   You can call the [DescribeScheduleTasks](https://help.aliyun.com/document_detail/199648.html) operation to query the details of all scheduled tasks that belong to the current account, such as the task IDs.
         /// >*   You can cancel only the tasks whose status is `pending`.``
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

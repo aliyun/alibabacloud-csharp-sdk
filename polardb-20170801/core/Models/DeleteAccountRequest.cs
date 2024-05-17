@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class DeleteAccountRequest : TeaModel {
         /// <summary>
         /// The username of the account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

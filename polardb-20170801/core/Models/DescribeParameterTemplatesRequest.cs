@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class DescribeParameterTemplatesRequest : TeaModel {
         /// <summary>
         /// The type of the database engine. Only **MySQL** is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBType")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   **5.6**
         /// *   **5.7**
         /// *   **8.0**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBVersion")]
         [Validation(Required=false)]
@@ -38,7 +42,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The region ID.
         /// 
-        /// >  You can call the [DescribeRegions](~~98041~~) operation to query all regions that are available within your account, such as the region IDs.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query all regions that are available within your account, such as the region IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

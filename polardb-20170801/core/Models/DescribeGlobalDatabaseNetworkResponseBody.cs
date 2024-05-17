@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// The status of the cluster in the GDN. For more information, see [Cluster status table](~~99286~~).
+            /// The status of the cluster in the GDN. For more information, see [Cluster status table](https://help.aliyun.com/document_detail/99286.html).
             /// </summary>
             [NameInMap("DBClusterStatus")]
             [Validation(Required=false)]
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   It cannot start with `http://` or `https://`.
         /// *   It must start with a letter.
-        /// *   It can contain letters, digits, underscores (\_), and hyphens (-).
+        /// *   It can contain letters, digits, underscores (_), and hyphens (-).
         /// *   It must be 2 to 126 characters in length.
         /// </summary>
         [NameInMap("GDNDescription")]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The information of the added node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNode")]
         [Validation(Required=false)]
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// The instance type of the added node. The instance type of the added node must be the same as the instance type of the original node.
             /// 
-            /// >  You can call the [DescribeDBClusters](~~98094~~) operation to view the instance types of original nodes.
+            /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to view the instance types of original nodes.
             /// </summary>
             [NameInMap("TargetClass")]
             [Validation(Required=false)]
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The type of configuration change. Set the value to **TempUpgrade**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ModifyType")]
         [Validation(Required=false)]
@@ -59,6 +65,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The type of operation performed on the cluster. Valid values:
         /// 
         /// *   **Modify**: temporarily upgrade the configuration of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OperationType")]
         [Validation(Required=false)]
@@ -84,6 +92,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The rollback time of the configuration for the temporary upgrade. Specify the time in the ISO 8601 standard in the YYYY-MM-DD hh:mm:ss format.
         /// 
         /// >  The rollback time cannot be 1 hour earlier than the current time and cannot be later than one day before the time when the cluster expires.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -26,7 +28,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The IDs of the nodes.
         /// 
-        /// > You can call the [DescribeDBClusters](~~185342~~) operation to query the details of all clusters that belong to your Alibaba Cloud account, such as the cluster ID.
+        /// > You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/185342.html) operation to query the details of all clusters that belong to your Alibaba Cloud account, such as the cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNodeId")]
         [Validation(Required=false)]

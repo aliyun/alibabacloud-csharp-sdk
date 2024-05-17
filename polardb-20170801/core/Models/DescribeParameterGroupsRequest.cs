@@ -38,7 +38,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The region ID of the cluster.
         /// 
-        /// > You can call the [DescribeRegions](~~98041~~) operation to query all regions that are available for your account, such as the region ID.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query all regions that are available for your account, such as the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

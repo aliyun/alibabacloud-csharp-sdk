@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class ModifyPendingMaintenanceActionRequest : TeaModel {
         /// <summary>
         /// The ID of the task. You can specify multiple task IDs at a time to modify the switching time of the tasks in a unified manner. The task IDs must be separated with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
@@ -27,7 +29,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The region ID of the cluster.
         /// 
-        /// >  You can call the [DescribeRegions](~~98041~~) operation to query the region ID details.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the region ID details.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -54,6 +58,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The time that you specify for the background to perform the action that corresponds to the pending event. Specify the time in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SwitchTime")]
         [Validation(Required=false)]

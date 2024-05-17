@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class ModifyAutoRenewAttributeRequest : TeaModel {
         /// <summary>
         /// The cluster ID. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterIds")]
         [Validation(Required=false)]
@@ -53,7 +55,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The ID of the region. The region ID can be up to 50 characters in length.
         /// cn-hangzhou
         ///  
-        /// >  You can call the [DescribeRegions](~~98041~~) operation to query the available regions.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

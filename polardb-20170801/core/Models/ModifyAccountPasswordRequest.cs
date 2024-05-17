@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class ModifyAccountPasswordRequest : TeaModel {
         /// <summary>
         /// The username of the account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
         /// *   It must be 8 to 32 characters in length.
         /// *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewAccountPassword")]
         [Validation(Required=false)]

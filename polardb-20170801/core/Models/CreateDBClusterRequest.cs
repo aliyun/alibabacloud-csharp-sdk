@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   Only when the **DBType** parameter is set to **MySQL** and the **DBVersion** parameter is set to **8.0**, you can set this parameter to **ArchiveNormal** or **NormalMultimaster**.
         /// 
-        /// For more information, see [Product editions](~~183258~~).
+        /// For more information, see [Product editions](https://help.aliyun.com/document_detail/183258.html).
         /// </summary>
         [NameInMap("CreationCategory")]
         [Validation(Required=false)]
@@ -112,21 +112,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   **Normal**: creates a PolarDB cluster. For more information about how to perform this operation in the console, see the following topics:
         /// 
-        ///     *   [Create a PolarDB for MySQL cluster](~~58769~~)
-        ///     *   [Create a PolarDB for PostgreSQL cluster](~~118063~~)
-        ///     *   [Create a PolarDB for Oracle cluster](~~118182~~)
+        ///     *   [Create a PolarDB for MySQL cluster](https://help.aliyun.com/document_detail/58769.html)
+        ///     *   [Create a PolarDB for PostgreSQL cluster](https://help.aliyun.com/document_detail/118063.html)
+        ///     *   [Create a PolarDB for Oracle cluster](https://help.aliyun.com/document_detail/118182.html)
         /// 
         /// *   **CloneFromPolarDB**: clones data from an existing PolarDB cluster to a new PolarDB cluster. For more information about how to perform this operation in the console, see the following topics:
         /// 
-        ///     *   [Clone a PolarDB for MySQL cluster](~~87966~~)
-        ///     *   [Clone a PolarDB for PostgreSQL cluster](~~118108~~)
-        ///     *   [Clone a PolarDB for Oracle cluster](~~118221~~)
+        ///     *   [Clone a PolarDB for MySQL cluster](https://help.aliyun.com/document_detail/87966.html)
+        ///     *   [Clone a PolarDB for PostgreSQL cluster](https://help.aliyun.com/document_detail/118108.html)
+        ///     *   [Clone a PolarDB for Oracle cluster](https://help.aliyun.com/document_detail/118221.html)
         /// 
-        /// *   **CloneFromRDS**: clones data from an existing ApsaraDB RDS for MySQL instance to a new PolarDB for MySQL cluster. For more information about how to perform this operation in the console, see [Create a PolarDB for MySQL cluster by cloning an ApsaraDB RDS for MySQL instance](~~121812~~).
+        /// *   **CloneFromRDS**: clones data from an existing ApsaraDB RDS for MySQL instance to a new PolarDB for MySQL cluster. For more information about how to perform this operation in the console, see [Create a PolarDB for MySQL cluster by cloning an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/121812.html).
         /// 
-        /// *   **MigrationFromRDS**: migrates data from an existing ApsaraDB RDS for MySQL instance to a new PolarDB for MySQL cluster. By default, the created PolarDB cluster is in read-only mode, and the binary logging feature is enabled. For more information about how to perform this operation in the console, see [Create a PolarDB for MySQL cluster from an ApsaraDB RDS for MySQL instance](~~121582~~).
+        /// *   **MigrationFromRDS**: migrates data from an existing ApsaraDB RDS for MySQL instance to a new PolarDB for MySQL cluster. By default, the created PolarDB cluster is in read-only mode, and the binary logging feature is enabled. For more information about how to perform this operation in the console, see [Create a PolarDB for MySQL cluster from an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/121582.html).
         /// 
-        /// *   **CreateGdnStandby**: creates a secondary cluster. For more information about how to perform this operation in the console, see [Add a secondary cluster](~~160381~~).
+        /// *   **CreateGdnStandby**: creates a secondary cluster. For more information about how to perform this operation in the console, see [Add a secondary cluster](https://help.aliyun.com/document_detail/160381.html).
         /// 
         /// Default value: **Normal**.
         /// 
@@ -165,9 +165,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The specifications of the node.
         /// 
-        /// *   For more information about specifications supported by PolarDB for MySQL, see [Specifications of compute nodes](~~102542~~).
-        /// *   For information about node specifications supported by the Oracle database engine, see [Specifications of compute nodes](~~207921~~).
-        /// *   For information about node specifications supported by the PostgreSQL database engine, see [Specifications of compute nodes](~~209380~~).
+        /// *   For more information about specifications supported by PolarDB for MySQL, see [Specifications of compute nodes](https://help.aliyun.com/document_detail/102542.html).
+        /// *   For information about node specifications supported by the Oracle database engine, see [Specifications of compute nodes](https://help.aliyun.com/document_detail/207921.html).
+        /// *   For information about node specifications supported by the PostgreSQL database engine, see [Specifications of compute nodes](https://help.aliyun.com/document_detail/209380.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNodeClass")]
         [Validation(Required=false)]
@@ -186,6 +188,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   **MySQL**
         /// *   **PostgreSQL**
         /// *   **Oracle**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBType")]
         [Validation(Required=false)]
@@ -206,6 +210,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         ///     *   **14**
         /// 
         /// *   Valid value for the Oracle database engine: **11**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBVersion")]
         [Validation(Required=false)]
@@ -288,7 +294,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the parameter template.
         /// 
-        /// > You can call the [DescribeParameterGroups](~~207178~~) operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.
+        /// > You can call the [DescribeParameterGroups](https://help.aliyun.com/document_detail/207178.html) operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.
         /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]
@@ -299,6 +305,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   **Postpaid**: pay-as-you-go
         /// *   **Prepaid**: subscription
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -338,7 +346,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The region ID of the cluster.
         /// 
-        /// > You can call the [DescribeRegions](~~98041~~) operation to query available regions.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -490,7 +500,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   This parameter is valid only when the **DBType** parameter is set to **PostgreSQL** or **Oracle**.
         /// 
-        /// *   You can call the [ModifyDBClusterTDE](~~167982~~) operation to enable TDE for a PolarDB for MySQL cluster.
+        /// *   You can call the [ModifyDBClusterTDE](https://help.aliyun.com/document_detail/167982.html) operation to enable TDE for a PolarDB for MySQL cluster.
         /// *   TDE cannot be disabled after it is enabled.
         /// </summary>
         [NameInMap("TDEStatus")]
@@ -551,7 +561,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The zone ID of the cluster.
         /// 
-        /// > You can call the [DescribeRegions](~~98041~~) operation to query available zones.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available zones.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

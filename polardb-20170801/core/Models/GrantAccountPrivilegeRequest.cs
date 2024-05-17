@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class GrantAccountPrivilegeRequest : TeaModel {
         /// <summary>
         /// The username of the account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -25,7 +27,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   **DDLOnly**: The account is granted the permissions to execute only DDL statements on the database.
         /// *   **ReadIndex**: The account has the read and index permissions on the database.
         /// 
-        /// > The number of **AccountPrivilege** values must be the consistent with the number of **DBName** values. Each account permission must correspond to a database name in sequence. For example, you can set **DBName** to `testdb_1,testdb_2` and set **AccountPrivilege** to `ReadWrite,ReadOnly`. In this case, the specified standard account is granted the **read and write** permissions on the **testdb\_1** database and the **read** permission on the **testdb\_2** database.
+        /// > The number of **AccountPrivilege** values must be the consistent with the number of **DBName** values. Each account permission must correspond to a database name in sequence. For example, you can set **DBName** to `testdb_1,testdb_2` and set **AccountPrivilege** to `ReadWrite,ReadOnly`. In this case, the specified standard account is granted the **read and write** permissions on the **testdb_1** database and the **read** permission on the **testdb_2** database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountPrivilege")]
         [Validation(Required=false)]
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -40,6 +46,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The names of the databases that the account can access. You can grant the access permissions on one or more databases to the specified standard account. If you need to specify multiple database names, separate the database names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]

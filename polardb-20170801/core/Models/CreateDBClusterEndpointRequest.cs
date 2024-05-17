@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -79,6 +81,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The type of the cluster endpoint. Set the value to **Custom**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointType")]
         [Validation(Required=false)]

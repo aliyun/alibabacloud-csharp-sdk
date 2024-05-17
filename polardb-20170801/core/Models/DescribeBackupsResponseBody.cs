@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// The size of the backup set. Unit: bytes.
                 /// 
-                /// > After you delete the target snapshot backups, the storage space that is consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share specific data blocks. For more information, see [FAQ about backup](~~164881~~).
+                /// > After you delete the target snapshot backups, the storage space that is consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share specific data blocks. For more information, see [FAQ about backup](https://help.aliyun.com/document_detail/164881.html).
                 /// </summary>
                 [NameInMap("BackupSetSize")]
                 [Validation(Required=false)]

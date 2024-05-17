@@ -18,13 +18,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The specifications of all nodes. For more information, see [Specifications of computing nodes](~~102542~~).
+        /// The specifications of all nodes. For more information, see [Specifications of computing nodes](https://help.aliyun.com/document_detail/102542.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNodeTargetClass")]
         [Validation(Required=false)]
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   **Upgrade**
         /// *   **Downgrade**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ModifyType")]
         [Validation(Required=false)]

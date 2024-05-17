@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   **Month**
         /// *   **Year**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -44,6 +46,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The capacity of the storage plan. Unit: GB. Valid values: 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000, 15000, 20000, 25000, 30000, 50000, 100000, and 200000
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StorageClass")]
         [Validation(Required=false)]
@@ -54,6 +58,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   **Mainland**: The storage plan is used inside the Chinese mainland.
         /// *   **Overseas**: The storage plan is used outside the Chinese mainland.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]
@@ -64,6 +70,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   If **Period** is set to **Month**, the value ranges from 1 to 9.
         /// *   If **Period** is set to **Year**, the value can be 1, 2, 3, or 5.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]

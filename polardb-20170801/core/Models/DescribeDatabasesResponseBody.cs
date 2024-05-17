@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 }
 
                 /// <summary>
-                /// The character set that the database uses. For more information, see [Character set tables](~~99716~~).
+                /// The character set that the database uses. For more information, see [Character set tables](https://help.aliyun.com/document_detail/99716.html).
                 /// </summary>
                 [NameInMap("CharacterSetName")]
                 [Validation(Required=false)]

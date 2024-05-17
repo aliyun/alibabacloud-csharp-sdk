@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The code of the commodity. Valid values:
         /// 
         /// *   polardb_sub: the subscription cluster in regions in the Chinese mainland
-        /// *   polardb_sub \_intl: the subscription cluster in regions outside the Chinese mainland
+        /// *   polardb_sub _intl: the subscription cluster in regions outside the Chinese mainland
         /// *   polardb_payg: the pay-as-you-go cluster in regions in the Chinese mainland
         /// *   polardb_payg_intl: the pay-as-you-go cluster in regions outside the Chinese mainland
         /// *   polardb_sub_jushita: the subscription cluster for CloudTmall
@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// >*   If you are using an Alibaba Cloud international account, you can view only the codes of the commodities that are available outside the Chinese mainland.
         /// >*   If you use a CloudTmall account, you can view only the codes of the commodities that are available in CloudTmall.
         /// >*   If you use a Cainiao account, you can view only the codes of the commodities that are available in Cainiao.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]

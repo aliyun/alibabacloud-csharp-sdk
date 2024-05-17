@@ -19,7 +19,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the source cluster that the database link connects.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/173433.html) operation to query PolarDB clusters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -28,9 +30,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The name of the database link.
         /// 
-        /// *   The name must contain lowercase letters and can also contain digits and underscores (\_).
+        /// *   The name must contain lowercase letters and can also contain digits and underscores (_).
         /// *   The name must start with a letter and end with a letter or digit.
         /// *   The name must be 1 to 64 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBLinkName")]
         [Validation(Required=false)]
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the region.
         /// 
-        /// >  You can call the [DescribeRegions](~~98041~~) operation to query information about regions.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query information about regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -71,7 +75,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The name of the source database.
         /// 
-        /// >  You can call the [DescribeDatabases](~~173558~~) operation to query information about databases in a PolarDB cluster.
+        /// >  You can call the [DescribeDatabases](https://help.aliyun.com/document_detail/173558.html) operation to query information about databases in a PolarDB cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceDBName")]
         [Validation(Required=false)]
@@ -80,7 +86,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The account of the destination database.
         /// 
-        /// >  You can call the [DescribeAccounts](~~173549~~) operation to query the account of a PolarDB cluster.
+        /// >  You can call the [DescribeAccounts](https://help.aliyun.com/document_detail/173549.html) operation to query the account of a PolarDB cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetDBAccount")]
         [Validation(Required=false)]
@@ -90,7 +98,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The ID of the destination cluster that the database link connects.
         /// 
         /// > *   If the destination cluster is a user-created Oracle database on an ECS instance, set the value to `null`.
-        /// > *   You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.
+        /// > *   You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/173433.html) operation to query PolarDB clusters.
         /// </summary>
         [NameInMap("TargetDBInstanceName")]
         [Validation(Required=false)]
@@ -99,7 +107,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The name of the destination database.
         /// 
-        /// >  You can call the [DescribeDatabases](~~173558~~) operation to query information about databases in a PolarDB cluster.
+        /// >  You can call the [DescribeDatabases](https://help.aliyun.com/document_detail/173558.html) operation to query information about databases in a PolarDB cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetDBName")]
         [Validation(Required=false)]
@@ -107,6 +117,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The account password of the destination database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetDBPasswd")]
         [Validation(Required=false)]
@@ -129,7 +141,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the virtual private cloud (VPC).
         /// 
-        /// >  You can call the [DescribeVpcs](~~35739~~) operation to query information about VPCs.
+        /// >  You can call the [DescribeVpcs](https://help.aliyun.com/document_detail/35739.html) operation to query information about VPCs.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

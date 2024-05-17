@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// *   **Primary**: the primary cluster
                 /// *   **standby**: the secondary cluster
                 /// 
-                /// > A GDN consists of one primary cluster and up to four secondary clusters. For more information, see [GDN](~~160381~~).
+                /// > A GDN consists of one primary cluster and up to four secondary clusters. For more information, see [GDN](https://help.aliyun.com/document_detail/160381.html).
                 /// </summary>
                 [NameInMap("Role")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// 
             /// *   It cannot start with `http://` or `https://`.
             /// *   It must start with a letter.
-            /// *   It can contain letters, digits, underscores (\_), and hyphens (-).
+            /// *   It can contain letters, digits, underscores (_), and hyphens (-).
             /// *   It must be 2 to 126 characters in length.
             /// </summary>
             [NameInMap("GDNDescription")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterAvailableResourcesRequest : TeaModel {
         /// <summary>
-        /// The specifications of the node. For more information, see [Specifications of compute nodes](~~102542~~).
+        /// The specifications of the node. For more information, see [Specifications of compute nodes](https://help.aliyun.com/document_detail/102542.html).
         /// </summary>
         [NameInMap("DBNodeClass")]
         [Validation(Required=false)]
@@ -60,6 +60,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   **Postpaid**: pay-as-you-go
         /// *   **Prepaid**: subscription
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The region ID of the cluster. Default value: **cn-hangzhou**.
         /// 
-        /// > You can call the [DescribeRegions](~~98041~~) operation to query the available regions.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The zone ID of the cluster.
         /// 
-        /// > You can call the [DescribeRegions](~~98041~~) operation to query the available zones.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available zones.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class ModifyDBClusterMonitorRequest : TeaModel {
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The interval at which monitoring data is collected. Valid values: **5** and **60**. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]

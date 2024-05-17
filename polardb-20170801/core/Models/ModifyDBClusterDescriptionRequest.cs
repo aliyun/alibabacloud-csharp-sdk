@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   The name cannot start with `http://` or `https://`.
         /// *   The name must be 2 to 256 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterDescription")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the PolarDB cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

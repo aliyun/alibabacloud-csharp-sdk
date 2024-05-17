@@ -23,7 +23,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of cluster.
         /// 
-        /// > You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.
+        /// > You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -32,7 +34,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the endpoint.
         /// 
-        /// > You can call the [DescribeDBClusterEndpoints](~~98205~~) operation to query endpoint IDs.
+        /// > You can call the [DescribeDBClusterEndpoints](https://help.aliyun.com/document_detail/98205.html) operation to query endpoint IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBEndpointId")]
         [Validation(Required=false)]
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   **Public**
         /// *   **Private**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetType")]
         [Validation(Required=false)]
@@ -72,7 +78,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   The prefix must start with a letter and end with a digit or a letter.
         /// *   The prefix must be 6 to 30 characters in length.
         /// 
-        /// >- You can bind each internal endpoint of PolarDB to a private domain name. The private domain name takes effect only in the specified virtual private clouds (VPCs) in the current region. Private domain names are managed by using PrivateZone. You can use the CNAME record of PrivateZone to map domain names to PolarDB. You are charged a small fee for this feature. For more information, see [Pricing](~~71338~~).
+        /// >- You can bind each internal endpoint of PolarDB to a private domain name. The private domain name takes effect only in the specified virtual private clouds (VPCs) in the current region. Private domain names are managed by using PrivateZone. You can use the CNAME record of PrivateZone to map domain names to PolarDB. You are charged a small fee for this feature. For more information, see [Pricing](https://help.aliyun.com/document_detail/71338.html).
         /// >- This parameter takes effect only if you set **NetType** to Private.
         /// </summary>
         [NameInMap("PrivateZoneAddressPrefix")]

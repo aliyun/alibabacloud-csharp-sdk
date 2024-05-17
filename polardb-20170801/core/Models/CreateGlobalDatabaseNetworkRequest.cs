@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class CreateGlobalDatabaseNetworkRequest : TeaModel {
         /// <summary>
         /// The ID of the primary cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -21,7 +23,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   It cannot start with [http:// or https://.](http://https://。)
         /// *   It must start with a letter.
-        /// *   It can contain letters, digits, underscores (\_), and hyphens (-).
+        /// *   It can contain letters, digits, underscores (_), and hyphens (-).
         /// *   It must be 2 to 126 characters in length.
         /// </summary>
         [NameInMap("GDNDescription")]

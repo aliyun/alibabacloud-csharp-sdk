@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the cluster.
         /// 
-        /// > You can call the [DescribeDBClusters](~~173433~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.
+        /// > You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/173433.html) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -100,7 +102,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the destination primary zone.
         /// 
-        /// > You can call the [DescribeRegions](~~98041~~) operation to query available zones.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available zones.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

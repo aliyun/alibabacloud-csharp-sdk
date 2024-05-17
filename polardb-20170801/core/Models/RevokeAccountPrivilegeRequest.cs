@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The name of the account.
         /// 
         /// >  You can specify only a standard account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the PolarDB cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The names of the databases. If you need to specify multiple database names, separate the names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]

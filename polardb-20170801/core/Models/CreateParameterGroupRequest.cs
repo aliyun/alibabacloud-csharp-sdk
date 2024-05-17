@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class CreateParameterGroupRequest : TeaModel {
         /// <summary>
         /// The type of the database engine. Only **MySQL** is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBType")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   **5.6**
         /// *   **5.7**
         /// *   **8.0**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBVersion")]
         [Validation(Required=false)]
@@ -45,8 +49,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The name of the parameter template. The name must meet the following requirements:
         /// 
-        /// *   It can contain letters, digits, and underscores (\_). It must start with a letter and cannot end with an underscore.**
+        /// *   It can contain letters, digits, and underscores (_). It must start with a letter and cannot end with an underscore.**
         /// *   It must be 8 to 64 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ParameterGroupName")]
         [Validation(Required=false)]
@@ -55,7 +61,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The JSON string that consists of parameters and values. The parameter values are strings. Example: `{"wait_timeout":"86400","innodb_old_blocks_time":"1000"}`.
         /// 
-        /// > You can call the [DescribeParameterTemplates](~~207428~~) operation to query the details of all parameters in the cluster of a specified engine version, such as the parameter name and valid values.
+        /// > You can call the [DescribeParameterTemplates](https://help.aliyun.com/document_detail/207428.html) operation to query the details of all parameters in the cluster of a specified engine version, such as the parameter name and valid values.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -64,7 +72,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The region ID.
         /// 
-        /// > You can call the [DescribeRegions](~~98041~~) operation to query available regions.
+        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

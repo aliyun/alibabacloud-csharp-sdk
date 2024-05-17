@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the cluster in the GDN.
         /// 
-        /// >  You can call the [DescribeGlobalDatabaseNetwork](~~264580~~) operation to view the ID of the cluster in the GDN.
+        /// >  You can call the [DescribeGlobalDatabaseNetwork](https://help.aliyun.com/document_detail/264580.html) operation to view the ID of the cluster in the GDN.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the GDN.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GDNId")]
         [Validation(Required=false)]

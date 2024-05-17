@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The username of the account.
         /// 
         /// > You can reset only the permissions of a privileged account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

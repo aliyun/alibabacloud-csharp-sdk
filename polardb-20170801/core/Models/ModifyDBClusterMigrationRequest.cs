@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   To perform a data migration, enter the ID of the PolarDB cluster.
         /// *   To perform a migration rollback, enter the ID of the ApsaraDB for RDS instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewMasterInstanceId")]
         [Validation(Required=false)]
@@ -57,6 +61,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the source ApsaraDB RDS instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceRDSDBInstanceId")]
         [Validation(Required=false)]

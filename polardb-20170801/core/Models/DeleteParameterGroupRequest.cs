@@ -21,7 +21,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The parameter template ID.
         /// 
         ///  
-        /// >  You can call the [DescribeParameterGroups](~~207178~~) operation to query the parameter template ID.
+        /// >  You can call the [DescribeParameterGroups](https://help.aliyun.com/document_detail/207178.html) operation to query the parameter template ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]
@@ -30,7 +32,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The region ID.
         ///  
-        /// >  You can call the [DescribeRegions](~~98041~~) operation to query available regions.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

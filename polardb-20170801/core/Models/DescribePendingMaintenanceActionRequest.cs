@@ -46,9 +46,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the pending event. You can call the [DescribeRegions](~~98041~~) operation to query the regions and zones that are supported by PolarDB.
+        /// The region ID of the pending event. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the regions and zones that are supported by PolarDB.
         /// >- You can set this parameter to **all** to view all pending events within your account.
         /// >- If you set `Region` to **all**, you must set `TaskType` to **all**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -83,6 +85,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   **all**: queries the details of the pending events of all preceding types.
         /// 
         /// > If the `Region` parameter is set to **all**, the `TaskType` parameter must be set to **all**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

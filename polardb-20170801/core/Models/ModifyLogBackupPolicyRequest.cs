@@ -12,14 +12,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The cluster ID.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~98094~~) operation to query the information of all clusters that are deployed in a specific region, such as the cluster IDs.
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the information of all clusters that are deployed in a specific region, such as the cluster IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The region in which you want to store cross-region log backups. For information about regions that support the cross-region backup feature, see [Overview](~~72672~~).
+        /// The region in which you want to store cross-region log backups. For information about regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).
         /// </summary>
         [NameInMap("LogBackupAnotherRegionRegion")]
         [Validation(Required=false)]
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The retention period of the log backups. Valid values:
         /// 
         /// *   3 to 7300: The log backups are retained for 3 to 7,300 days.
-        /// *   \-1: The log backups are permanently retained.
+        /// *   \\-1: The log backups are permanently retained.
         /// </summary>
         [NameInMap("LogBackupRetentionPeriod")]
         [Validation(Required=false)]

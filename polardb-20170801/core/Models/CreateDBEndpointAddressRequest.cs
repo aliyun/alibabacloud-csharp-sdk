@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -30,7 +32,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the endpoint.
         /// 
-        /// >  You can call the [DescribeDBClusterEndpoints](~~98205~~) operation to query endpoint details.
+        /// >  You can call the [DescribeDBClusterEndpoints](https://help.aliyun.com/document_detail/98205.html) operation to query endpoint details.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBEndpointId")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The network type of the endpoint. Set the value to **Public**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetType")]
         [Validation(Required=false)]

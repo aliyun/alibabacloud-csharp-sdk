@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The details of the nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNode")]
         [Validation(Required=false)]
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeId { get; set; }
 
             /// <summary>
-            /// The specifications of the node that you want to change. For more information, see [Specifications of compute nodes](~~102542~~).
+            /// The specifications of the node that you want to change. For more information, see [Specifications of compute nodes](https://help.aliyun.com/document_detail/102542.html).
             /// 
             /// >  If you specify this parameter, DBNode.N.DBNodeId is required. N is an integer that starts from 1. The maximum value of N is calculated by using the following formula:16 - The number of current nodes.
             /// </summary>
@@ -55,6 +59,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   **Upgrade**
         /// *   **Downgrade**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ModifyType")]
         [Validation(Required=false)]

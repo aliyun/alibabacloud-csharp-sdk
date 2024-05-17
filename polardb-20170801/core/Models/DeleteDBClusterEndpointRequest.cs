@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class DeleteDBClusterEndpointRequest : TeaModel {
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the custom cluster endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBEndpointId")]
         [Validation(Required=false)]

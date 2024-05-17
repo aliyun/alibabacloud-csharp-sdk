@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeBackupLogsResponseBodyItemsBackupLog> BackupLog { get; set; }
             public class DescribeBackupLogsResponseBodyItemsBackupLog : TeaModel {
                 /// <summary>
-                /// The time when the backup task ended. The time follows the ISO 8601 standard in the `YYYY-MM-DD\"T\"HH:mm:ssZ` format. The time is displayed in UTC.
+                /// The time when the backup task ended. The time follows the ISO 8601 standard in the `YYYY-MM-DD\\"T\\"HH:mm:ssZ` format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("BackupLogEndTime")]
                 [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string BackupLogSize { get; set; }
 
                 /// <summary>
-                /// The time when the backup task started. The time follows the ISO 8601 standard in the `YYYY-MM-DD\"T\"HH:mm:ssZ` format. The time is displayed in UTC.
+                /// The time when the backup task started. The time follows the ISO 8601 standard in the `YYYY-MM-DD\\"T\\"HH:mm:ssZ` format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("BackupLogStartTime")]
                 [Validation(Required=false)]

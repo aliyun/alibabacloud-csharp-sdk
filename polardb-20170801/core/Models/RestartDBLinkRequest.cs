@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RestartDBLinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }

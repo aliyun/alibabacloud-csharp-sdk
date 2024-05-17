@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the cluster.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~98094~~) operation to query all the information about the available clusters in the target region, including the cluster ID.
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query all the information about the available clusters in the target region, including the cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

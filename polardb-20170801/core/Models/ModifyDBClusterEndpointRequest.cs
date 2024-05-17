@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of the endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBEndpointId")]
         [Validation(Required=false)]
@@ -43,44 +47,44 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The advanced configurations of the cluster endpoint, which are in the JSON format. You can specify the configurations of the following attributes: consistency level, transaction splitting, connection pool, and primary node accepts read requests.
         /// 
-        /// *   Specifies the load balancing policy in the format of `{\"LoadBalancePolicy\":\"Selected value\"}`. Default value: 0. Valid values:
+        /// *   Specifies the load balancing policy in the format of `{\\"LoadBalancePolicy\\":\\"Selected value\\"}`. Default value: 0. Valid values:
         /// 
         ///     *   **0**: connections-based load balancing
         ///     *   **1**: active requests-based load balancing
         /// 
-        /// *   Specifies whether to enable the primary node accepts read requests feature in the format of `{\"MasterAcceptReads\":\"Selected value\"}`. Default value: on. Valid values:
+        /// *   Specifies whether to enable the primary node accepts read requests feature in the format of `{\\"MasterAcceptReads\\":\\"Selected value\\"}`. Default value: on. Valid values:
         /// 
         ///     *   **on**
         ///     *   **off**
         /// 
-        /// *   Specifies whether to enable the transaction splitting feature in the format of `{\"DistributedTransaction\":\"Selected value\"}`. Default value: on. Valid values:
+        /// *   Specifies whether to enable the transaction splitting feature in the format of `{\\"DistributedTransaction\\":\\"Selected value\\"}`. Default value: on. Valid values:
         /// 
         ///     *   **on**
         ///     *   **off**
         /// 
-        /// *   Specifies the consistency level in the format of `{\"ConsistLevel\":\"Selected value\"}`. Default value: 1. Valid values:
+        /// *   Specifies the consistency level in the format of `{\\"ConsistLevel\\":\\"Selected value\\"}`. Default value: 1. Valid values:
         /// 
         ///     *   **0**: eventual consistency (weak)
         ///     *   **1**: session consistency (medium)
         ///     *   **2**: global consistency (strong)
         /// 
-        /// *   Specifies the connection pool in the format of `{\"ConnectionPersist\":\"Selected value\"}`. Default value: off. Valid values:
+        /// *   Specifies the connection pool in the format of `{\\"ConnectionPersist\\":\\"Selected value\\"}`. Default value: off. Valid values:
         /// 
         ///     *   **off**: disables the connection pool.
         ///     *   **Session**: enables the session-level connection pool.
         ///     *   **Transaction**: enables the transaction-level connection pool.
         /// 
-        /// *   Specifies whether to enable the parallel query feature in the format of `{\"MaxParallelDegree\":\"Selected value\"}`. Default value: off. Valid values:
+        /// *   Specifies whether to enable the parallel query feature in the format of `{\\"MaxParallelDegree\\":\\"Selected value\\"}`. Default value: off. Valid values:
         /// 
         ///     *   **on**
         ///     *   **off**
         /// 
-        /// *   Specifies whether to enable the automatic request distribution between row store and column store nodes feature in the format of `{\"EnableHtapImci\":\"Selected value\"}`. Default value: off. Valid values:
+        /// *   Specifies whether to enable the automatic request distribution between row store and column store nodes feature in the format of `{\\"EnableHtapImci\\":\\"Selected value\\"}`. Default value: off. Valid values:
         /// 
         ///     *   **on**
         ///     *   **off**
         /// 
-        /// *   Specifies whether to enable the overload protection feature in the format of `{\"EnableOverloadThrottle\":\"Selected value\"}`. Default value: off. Valid values:
+        /// *   Specifies whether to enable the overload protection feature in the format of `{\\"EnableOverloadThrottle\\":\\"Selected value\\"}`. Default value: off. Valid values:
         /// 
         ///     *   **on**
         ///     *   **off**
@@ -93,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   If ReadWriteMode is set to **ReadWrite** for the cluster endpoint of a PolarDB for MySQL cluster or if ReadWriteMode is set to **ReadOnly** and the load balancing policy is set to **active requests-based load balancing**, the automatic request distribution between row store and column store nodes feature is supported.
         /// *   Only PolarDB for MySQL supports global consistency.
         /// *   If the **ReadWriteMode** parameter is set to **ReadOnly**, the consistency level must be **0**.
-        /// *   You can specify the consistency level, transaction splitting, connection pool, and primary node accepts read requests features at a time, such as `{\"ConsistLevel\":\"1\",\"DistributedTransaction\":\"on\",\"ConnectionPersist\":\"Session\",\"MasterAcceptReads\":\"on\"}`.
+        /// *   You can specify the consistency level, transaction splitting, connection pool, and primary node accepts read requests features at a time, such as `{\\"ConsistLevel\\":\\"1\\",\\"DistributedTransaction\\":\\"on\\",\\"ConnectionPersist\\":\\"Session\\",\\"MasterAcceptReads\\":\\"on\\"}`.
         /// *   The transaction splitting settings are restricted by the consistency level settings. For example, if you set the consistency level to **0**, transaction splitting cannot be enabled. If you set the consistency level to **1** or **2**, transaction splitting can be enabled.
         /// </summary>
         [NameInMap("EndpointConfig")]

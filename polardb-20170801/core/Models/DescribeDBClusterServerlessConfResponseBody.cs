@@ -76,6 +76,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SecondsUntilAutoPause { get; set; }
 
+        [NameInMap("ServerlessRuleCpuEnlargeThreshold")]
+        [Validation(Required=false)]
+        public string ServerlessRuleCpuEnlargeThreshold { get; set; }
+
+        [NameInMap("ServerlessRuleCpuShrinkThreshold")]
+        [Validation(Required=false)]
+        public string ServerlessRuleCpuShrinkThreshold { get; set; }
+
+        [NameInMap("ServerlessRuleMode")]
+        [Validation(Required=false)]
+        public string ServerlessRuleMode { get; set; }
+
         [NameInMap("Switchs")]
         [Validation(Required=false)]
         public string Switchs { get; set; }

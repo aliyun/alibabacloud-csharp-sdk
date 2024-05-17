@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class ModifyDBClusterSSLRequest : TeaModel {
         /// <summary>
         /// The ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   This parameter is required for a PolarDB for MySQL cluster.
         /// 
         /// *   This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.
-        /// *   You can call the [DescribeDBClusterSSL](~~153414~~) operation to view the details of the endpoint.
+        /// *   You can call the [DescribeDBClusterSSL](https://help.aliyun.com/document_detail/153414.html) operation to view the details of the endpoint.
         /// </summary>
         [NameInMap("DBEndpointId")]
         [Validation(Required=false)]
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   **Enable**: SSL encryption is enabled.
         /// *   **Update**: The SSL certificate is updated.
         /// 
-        /// > After you enable SSL encryption or update the SSL certificate, you must download and configure the certificate. For more information, see [Configure SSL encryption](~~153182~~).
+        /// > After you enable SSL encryption or update the SSL certificate, you must download and configure the certificate. For more information, see [Configure SSL encryption](https://help.aliyun.com/document_detail/153182.html).
         /// </summary>
         [NameInMap("SSLEnabled")]
         [Validation(Required=false)]

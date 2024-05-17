@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The ID of the source cluster where a database link is to be deleted.
         /// 
-        /// >  You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/173433.html) operation to query PolarDB clusters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The name of the database link to be deleted.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBLinkName")]
         [Validation(Required=false)]

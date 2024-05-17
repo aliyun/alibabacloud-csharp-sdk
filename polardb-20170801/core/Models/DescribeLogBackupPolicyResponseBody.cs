@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? EnableBackupLog { get; set; }
 
         /// <summary>
-        /// The region in which you want to store cross-region log backups. For more information about regions that support the cross-region backup feature, see [Overview](~~72672~~).
+        /// The region in which you want to store cross-region log backups. For more information about regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).
         /// </summary>
         [NameInMap("LogBackupAnotherRegionRegion")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The retention period of the log backups. Valid values:
         /// 
         /// *   3 to 7300: The log backups are retained for 3 to 7,300 days.
-        /// *   \-1: The log backups are permanently retained.
+        /// *   \\-1: The log backups are permanently retained.
         /// </summary>
         [NameInMap("LogBackupRetentionPeriod")]
         [Validation(Required=false)]

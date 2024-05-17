@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -62,6 +64,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The storage capacity that you can select when you change the cluster. Unit: GB.
         /// 
         /// >  You can set this parameter for PolarDB for MySQL clusters of Standard Edition to a value that ranges from 20 to 32000.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StorageSpace")]
         [Validation(Required=false)]

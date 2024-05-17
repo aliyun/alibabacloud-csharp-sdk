@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// The cluster ID.
         /// 
         /// >  You can call the DescribeDBClusters operation to query information about all PolarDB clusters that are deployed in a specified region, such as cluster IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

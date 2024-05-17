@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class ModifyDBDescriptionRequest : TeaModel {
         /// <summary>
         /// The ID of cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// *   It cannot start with `http://` or `https://`.
         /// *   It must be 2 to 256 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBDescription")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The name of the database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]

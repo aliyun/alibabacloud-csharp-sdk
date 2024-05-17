@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The backup ID. If you need to specify multiple backup IDs, separate the backup IDs with commas (,).
         /// 
-        /// >  You can call the [DescribeBackups](~~98102~~) operation to query the backup IDs.
+        /// >  You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the backup IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

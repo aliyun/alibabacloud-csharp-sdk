@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDatabaseRequest : TeaModel {
         /// <summary>
-        /// The name of the account that is authorized to access the database. You can call the [DescribeAccounts](~~98107~~) operation to query account information.
+        /// The name of the account that is authorized to access the database. You can call the [DescribeAccounts](https://help.aliyun.com/document_detail/98107.html) operation to query account information.
         /// >- You can specify only a standard account. By default, privileged accounts have all permissions on all databases. You do not need to grant privileged accounts the permissions to access the database.
         /// >- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.
         /// </summary>
@@ -38,7 +38,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// The character set that is used by the cluster. For more information, see [Character set tables](~~99716~~).
+        /// The character set that is used by the cluster. For more information, see [Character set tables](https://help.aliyun.com/document_detail/99716.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CharacterSetName")]
         [Validation(Required=false)]
@@ -71,6 +73,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The ID of cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -91,10 +95,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The name of the database. The name must meet the following requirements:
         /// 
-        /// *   The name can contain lowercase letters, digits, hyphens (-), and underscores (\_).
+        /// *   The name can contain lowercase letters, digits, hyphens (-), and underscores (_).
         /// *   The name must start with a lowercase letter and end with a lowercase letter or a digit. The name must be 1 to 64 characters in length.
         /// 
         /// > Do not use reserved words as database names, such as `test` or `mysql`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
