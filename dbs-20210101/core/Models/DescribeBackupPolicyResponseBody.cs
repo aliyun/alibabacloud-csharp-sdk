@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
                 [Validation(Required=false)]
                 public string FilterValue { get; set; }
 
+                [NameInMap("PolicyId")]
+                [Validation(Required=false)]
+                public string PolicyId { get; set; }
+
                 [NameInMap("RetentionType")]
                 [Validation(Required=false)]
                 public string RetentionType { get; set; }

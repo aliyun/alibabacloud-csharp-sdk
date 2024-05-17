@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
     public class DescribeDownloadTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set generated when you create a download task. You can call the [DescribeBackups](~~26273~~) operation to query the ID.
+        /// The ID of the backup set generated when you create a download task. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the ID.
         /// </summary>
         [NameInMap("BackupSetId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// The ID of the Database Backup (DBS) data source. Specify the parameter in the format of *ds-${Instance ID}\_${regionId}*.
+        /// The ID of the Database Backup (DBS) data source. Specify the parameter in the format of *ds-${Instance ID}_${regionId}*.
         /// </summary>
         [NameInMap("DatasourceId")]
         [Validation(Required=false)]
@@ -71,7 +71,9 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
+        /// The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/26231.html) operation to query the region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionCode")]
         [Validation(Required=false)]

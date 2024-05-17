@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
     public class DescribeSandboxInstancesRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule.
+        /// The ID of the backup schedule. You can call the [DescribeBackupPlanList](https://help.aliyun.com/document_detail/437215.html) operation to obtain the ID of the backup schedule.
         /// 
-        /// > If your instance is an ApsaraDB RDS for MySQL instance, you can [configure automatic access to a data source](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
+        /// > If your instance is an ApsaraDB RDS for MySQL instance, you can [configure automatic access to a data source](https://help.aliyun.com/document_detail/193091.html) to automatically add the instance to DBS and obtain the ID of the backup schedule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// The ID of the sandbox instance. You can call the [CreateSandboxInstance](~~437252~~) operation to obtain the ID of the sandbox instance.
+        /// The ID of the sandbox instance. You can call the [CreateSandboxInstance](https://help.aliyun.com/document_detail/437252.html) operation to obtain the ID of the sandbox instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         /// <summary>
         /// The number of entries to return on each page. Valid values:
         /// 
-        /// *   30\. This is the default value.
+        /// *   30\\. This is the default value.
         /// *   50
         /// *   100
         /// </summary>

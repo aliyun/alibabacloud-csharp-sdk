@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 
         /// <summary>
         /// The ID of the resource group to which you want to move the resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 
         /// <summary>
         /// The ID of the resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 
         /// <summary>
         /// The type of the resource. Set the value to backupplan.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

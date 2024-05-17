@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
     public class CreateDownloadRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.
+        /// The ID of the backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the ID of the backup set.
         /// 
         /// > This parameter is required if the BakSetType parameter is set to full.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string BakSetId { get; set; }
 
         /// <summary>
-        /// The size of the full backup set. Unit: bytes. You can call the [DescribeBackups](~~26273~~) operation to query the size of the full backup set.
+        /// The size of the full backup set. Unit: bytes. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the size of the full backup set.
         /// </summary>
         [NameInMap("BakSetSize")]
         [Validation(Required=false)]
@@ -59,13 +59,17 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
+        /// The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/26231.html) operation to query the region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionCode")]
         [Validation(Required=false)]
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         /// The name of the OSS bucket that is used to store the backup set.
         /// 
         /// *   This parameter is required if the TargetType parameter is set to OSS.
-        /// *   Make sure that your account is granted the **AliyunDBSDefaultRole** permission. For more information, see [Use RAM for resource authorization](~~26307~~). You can also grant permissions based on the operation instructions in the Resource Access Management (RAM) console.
+        /// *   Make sure that your account is granted the **AliyunDBSDefaultRole** permission. For more information, see [Use RAM for resource authorization](https://help.aliyun.com/document_detail/26307.html). You can also grant permissions based on the operation instructions in the Resource Access Management (RAM) console.
         /// </summary>
         [NameInMap("TargetBucket")]
         [Validation(Required=false)]
