@@ -8,14 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
-    public class CreateDocRequest : TeaModel {
+    public class UpdateDocShrinkRequest : TeaModel {
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
         public long? CategoryId { get; set; }
@@ -28,9 +25,20 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        [NameInMap("DocName")]
+        [Validation(Required=false)]
+        public string DocName { get; set; }
+
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("KnowledgeId")]
+        [Validation(Required=false)]
+        public long? KnowledgeId { get; set; }
 
         [NameInMap("Meta")]
         [Validation(Required=false)]
@@ -42,18 +50,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 
         [NameInMap("TagIds")]
         [Validation(Required=false)]
-        public List<long?> TagIds { get; set; }
+        public string TagIdsShrink { get; set; }
 
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
-
-        [NameInMap("Url")]
-        [Validation(Required=false)]
-        public string Url { get; set; }
 
     }
 

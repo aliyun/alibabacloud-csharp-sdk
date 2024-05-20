@@ -1372,13 +1372,19 @@ namespace AlibabaCloud.SDK.Chatbot20220408
         /**
          * @summary 创建文档
          *
-         * @param request CreateDocRequest
+         * @param tmpReq CreateDocRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateDocResponse
          */
-        public CreateDocResponse CreateDocWithOptions(CreateDocRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateDocResponse CreateDocWithOptions(CreateDocRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDocShrinkRequest request = new CreateDocShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
+            {
+                request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
             {
@@ -1408,9 +1414,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             {
                 query["StartDate"] = request.StartDate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIdsShrink))
+            {
+                query["TagIds"] = request.TagIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {
                 query["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1434,13 +1448,19 @@ namespace AlibabaCloud.SDK.Chatbot20220408
         /**
          * @summary 创建文档
          *
-         * @param request CreateDocRequest
+         * @param tmpReq CreateDocRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateDocResponse
          */
-        public async Task<CreateDocResponse> CreateDocWithOptionsAsync(CreateDocRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateDocResponse> CreateDocWithOptionsAsync(CreateDocRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDocShrinkRequest request = new CreateDocShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
+            {
+                request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
             {
@@ -1470,9 +1490,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             {
                 query["StartDate"] = request.StartDate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIdsShrink))
+            {
+                query["TagIds"] = request.TagIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {
                 query["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5748,10 +5776,6 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             {
                 query["PageSize"] = request.PageSize;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
-            {
-                query["ProductCode"] = request.ProductCode;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5797,10 +5821,6 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
-            {
-                query["ProductCode"] = request.ProductCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7697,6 +7717,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             {
                 request.CategoryIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CategoryIds, "CategoryIds", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
+            {
+                request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
             {
@@ -7769,6 +7793,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIdsShrink))
+            {
+                query["TagIds"] = request.TagIdsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7805,6 +7833,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             {
                 request.CategoryIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CategoryIds, "CategoryIds", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
+            {
+                request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
             {
@@ -7877,6 +7909,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIdsShrink))
+            {
+                query["TagIds"] = request.TagIdsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8664,13 +8700,19 @@ namespace AlibabaCloud.SDK.Chatbot20220408
         /**
          * @summary 文档变更
          *
-         * @param request UpdateDocRequest
+         * @param tmpReq UpdateDocRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateDocResponse
          */
-        public UpdateDocResponse UpdateDocWithOptions(UpdateDocRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateDocResponse UpdateDocWithOptions(UpdateDocRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDocShrinkRequest request = new UpdateDocShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
+            {
+                request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
             {
@@ -8707,6 +8749,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
             {
                 query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIdsShrink))
+            {
+                query["TagIds"] = request.TagIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {
@@ -8734,13 +8780,19 @@ namespace AlibabaCloud.SDK.Chatbot20220408
         /**
          * @summary 文档变更
          *
-         * @param request UpdateDocRequest
+         * @param tmpReq UpdateDocRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateDocResponse
          */
-        public async Task<UpdateDocResponse> UpdateDocWithOptionsAsync(UpdateDocRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateDocResponse> UpdateDocWithOptionsAsync(UpdateDocRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDocShrinkRequest request = new UpdateDocShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
+            {
+                request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
             {
@@ -8777,6 +8829,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
             {
                 query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIdsShrink))
+            {
+                query["TagIds"] = request.TagIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {

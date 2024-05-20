@@ -65,6 +65,32 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string DocName { get; set; }
 
+        [NameInMap("DocTags")]
+        [Validation(Required=false)]
+        public List<DescribeDocResponseBodyDocTags> DocTags { get; set; }
+        public class DescribeDocResponseBodyDocTags : TeaModel {
+            [NameInMap("DefaultTag")]
+            [Validation(Required=false)]
+            public bool? DefaultTag { get; set; }
+
+            [NameInMap("GroupId")]
+            [Validation(Required=false)]
+            public long? GroupId { get; set; }
+
+            [NameInMap("GroupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
+
+            [NameInMap("TagId")]
+            [Validation(Required=false)]
+            public long? TagId { get; set; }
+
+            [NameInMap("TagName")]
+            [Validation(Required=false)]
+            public string TagName { get; set; }
+
+        }
+
         [NameInMap("EffectStatus")]
         [Validation(Required=false)]
         public int? EffectStatus { get; set; }

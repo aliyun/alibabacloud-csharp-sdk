@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
-    public class CreateDocRequest : TeaModel {
+    public class CreateDocShrinkRequest : TeaModel {
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 
         [NameInMap("TagIds")]
         [Validation(Required=false)]
-        public List<long?> TagIds { get; set; }
+        public string TagIdsShrink { get; set; }
 
         /// <summary>
         /// This parameter is required.

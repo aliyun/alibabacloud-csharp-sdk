@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        [NameInMap("TagIds")]
+        [Validation(Required=false)]
+        public List<long?> TagIds { get; set; }
+
     }
 
 }
