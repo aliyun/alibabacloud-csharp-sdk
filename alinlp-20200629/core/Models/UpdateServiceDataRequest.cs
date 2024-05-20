@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alinlp20200629.Models
 {
     public class UpdateServiceDataRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
         public Dictionary<string, object> Conditions { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public long? ServiceId { get; set; }

@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Alinlp20200629.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Input { get; set; }
 
+        [NameInMap("Model")]
+        [Validation(Required=false)]
+        public string Model { get; set; }
+
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public Dictionary<string, object> Parameters { get; set; }
-
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
 
     }
 

@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Alinlp20200629.Models
         [Validation(Required=false)]
         public string Operation { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]
         public string ServiceCode { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.Alinlp20200629.Models
         [Validation(Required=false)]
         public string Size { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TokenizerId")]
         [Validation(Required=false)]
         public string TokenizerId { get; set; }

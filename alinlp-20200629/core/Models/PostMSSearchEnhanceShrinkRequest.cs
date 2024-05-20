@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Alinlp20200629.Models
         [Validation(Required=false)]
         public string Uq { get; set; }
 
+        [NameInMap("X-DashScope-OpenAPISource")]
+        [Validation(Required=false)]
+        public string XDashScopeOpenAPISource { get; set; }
+
     }
 
 }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alinlp20200629.Models
 {
     public class GetServiceDataImportStatusShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DataImportIds")]
         [Validation(Required=false)]
         public string DataImportIdsShrink { get; set; }

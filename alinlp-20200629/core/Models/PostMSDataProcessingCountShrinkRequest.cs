@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Alinlp20200629.Models
         [Validation(Required=false)]
         public long? ServiceId { get; set; }
 
+        [NameInMap("X-DashScope-OpenAPISource")]
+        [Validation(Required=false)]
+        public string XDashScopeOpenAPISource { get; set; }
+
     }
 
 }
