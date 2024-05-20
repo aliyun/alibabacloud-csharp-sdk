@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Opt20210730.Models
 {
     public class GetOrderUsageRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("LicenseKey")]
         [Validation(Required=false)]
         public string LicenseKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RelService")]
         [Validation(Required=false)]
         public string RelService { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public int? ResourceType { get; set; }
