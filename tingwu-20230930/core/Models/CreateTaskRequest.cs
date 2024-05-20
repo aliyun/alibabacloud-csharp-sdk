@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public bool? MultipleStreamsEnabled { get; set; }
 
+            [NameInMap("OutputPath")]
+            [Validation(Required=false)]
+            public string OutputPath { get; set; }
+
             [NameInMap("ProgressiveCallbacksEnabled")]
             [Validation(Required=false)]
             public bool? ProgressiveCallbacksEnabled { get; set; }
@@ -107,6 +111,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public CreateTaskRequestParametersExtraParams ExtraParams { get; set; }
             public class CreateTaskRequestParametersExtraParams : TeaModel {
+                [NameInMap("MaxKeywords")]
+                [Validation(Required=false)]
+                public int? MaxKeywords { get; set; }
+
                 [NameInMap("NfixEnabled")]
                 [Validation(Required=false)]
                 public bool? NfixEnabled { get; set; }
