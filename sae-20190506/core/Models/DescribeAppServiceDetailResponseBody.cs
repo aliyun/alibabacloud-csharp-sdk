@@ -170,6 +170,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
+            [NameInMap("ServicePorts")]
+            [Validation(Required=false)]
+            public List<long?> ServicePorts { get; set; }
+
+            [NameInMap("ServiceProtocol")]
+            [Validation(Required=false)]
+            public string ServiceProtocol { get; set; }
+
+            [NameInMap("ServiceTags")]
+            [Validation(Required=false)]
+            public List<string> ServiceTags { get; set; }
+
             /// <summary>
             /// The type of the service. Valid values:
             /// 

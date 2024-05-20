@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class RescaleApplicationRequest : TeaModel {
         /// <summary>
         /// The ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// The minimum number of available instances. Special values:
         /// 
         /// *   If you set the value to **0**, business interruptions occur when the application is updated.
-        /// *   If you set the value to \*\*-1\*\*, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.
+        /// *   If you set the value to \\*\\*-1\\*\\*, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.
         /// 
         /// > Make sure that at least one instance is available during application deployment and rollback to prevent business interruptions.
         /// </summary>
@@ -52,6 +54,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The expected number of instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Replicas")]
         [Validation(Required=false)]

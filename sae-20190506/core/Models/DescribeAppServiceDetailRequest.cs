@@ -10,11 +10,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeAppServiceDetailRequest : TeaModel {
         /// <summary>
-        /// 6dcc8c9e-d3da-478a-a066-86dcf820\*\*\*\*
+        /// 6dcc8c9e-d3da-478a-a066-86dcf820\\*\\*\\*\\*
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
+
+        [NameInMap("NacosInstanceId")]
+        [Validation(Required=false)]
+        public string NacosInstanceId { get; set; }
+
+        [NameInMap("NacosNamespaceId")]
+        [Validation(Required=false)]
+        public string NacosNamespaceId { get; set; }
 
         /// <summary>
         /// springCloud

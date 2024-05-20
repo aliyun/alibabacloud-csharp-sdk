@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeployApplicationRequest : TeaModel {
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) required for a RAM role to obtain images across accounts. For more information, see [Grant permissions across Alibaba Cloud accounts by using a RAM role](~~223585~~).
+        /// The Alibaba Cloud Resource Name (ARN) required for a RAM role to obtain images across accounts. For more information, see [Grant permissions across Alibaba Cloud accounts by using a RAM role](https://help.aliyun.com/document_detail/223585.html).
         /// </summary>
         [NameInMap("AcrAssumeRoleArn")]
         [Validation(Required=false)]
@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// The description of the **ConfigMap** instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following table describes the parameters that are used in the preceding statements.
         /// 
-        /// *   **congfigMapId**: the ID of the ConfigMap instance. You can call the [ListNamespacedConfigMaps](~~176917~~) operation to obtain the ID.
+        /// *   **congfigMapId**: the ID of the ConfigMap instance. You can call the [ListNamespacedConfigMaps](https://help.aliyun.com/document_detail/176917.html) operation to obtain the ID.
         /// *   **key**: the key.
         /// 
         /// > You can use `sae-sys-configmap-all` to mount all keys.
@@ -156,7 +158,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableGreyTagRoute { get; set; }
 
         /// <summary>
-        /// The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](~~176914~~). Take note of the following rules:
+        /// The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](https://help.aliyun.com/document_detail/176914.html). Take note of the following rules:
         /// 
         /// *   Customize
         /// 
@@ -232,7 +234,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// The details of the availability check that was performed on the container. If the container fails this health check multiple times, the system disables and restarts the container. You can use one of the following methods to perform the health check:
         /// 
-        /// *   Example of **exec**: `{"exec":{"command":\["sh","-c","cat/home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}`
+        /// *   Example of **exec**: `{"exec":{"command":["sh","-c","cat/home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}`
         /// *   Sample code of the **httpGet** method: `{"httpGet":{"path":"/","port":18091,"scheme":"HTTP","isContainKeyWord":true,"keyWord":"SAE"},"initialDelaySeconds":11,"periodSeconds":10,"timeoutSeconds":1}`
         /// *   Sample code of the **tcpSocket** method: `{"tcpSocket":{"port":18091},"initialDelaySeconds":11,"periodSeconds":10,"timeoutSeconds":1}`
         /// 
@@ -285,7 +287,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// The minimum number of available instances. Special values:
         /// 
         /// *   If you set the value to **0**, business interruptions occur when the application is updated.
-        /// *   If you set the value to \*\*-1\*\*, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.
+        /// *   If you set the value to \\*\\*-1\\*\\*, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.
         /// 
         /// > Make sure that at least one instance is available during application deployment and rollback to prevent business interruptions.
         /// </summary>
@@ -313,7 +315,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// *   **mountPath**: the mount path of the container.
         /// *   **readOnly**: If you set the value to **false**, the application has the read and write permissions.
         /// *   **nasId**: the ID of the NAS file system.
-        /// *   **mountDomain**: the domain name of the mount target. For more information, see [DescribeMountTargets](~~62626~~).
+        /// *   **mountDomain**: the domain name of the mount target. For more information, see [DescribeMountTargets](https://help.aliyun.com/document_detail/62626.html).
         /// *   **nasPath**: the directory in the NAS file system.
         /// </summary>
         [NameInMap("NasConfigs")]
@@ -403,14 +405,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PhpConfigLocation { get; set; }
 
         /// <summary>
-        /// The script that is run immediately after the container is started. Example: `{"exec":{"command":\["sh","-c","echo hello"\]}}`
+        /// The script that is run immediately after the container is started. Example: `{"exec":{"command":["sh","-c","echo hello"\\]}}`
         /// </summary>
         [NameInMap("PostStart")]
         [Validation(Required=false)]
         public string PostStart { get; set; }
 
         /// <summary>
-        /// The script that is run before the container is stopped. Example: `{"exec":{"command":\["sh","-c","echo hello"\]}}`
+        /// The script that is run before the container is stopped. Example: `{"exec":{"command":["sh","-c","echo hello"\\]}}`
         /// </summary>
         [NameInMap("PreStop")]
         [Validation(Required=false)]
@@ -536,7 +538,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The startup command of the WAR package. For information about how to configure the startup command, see [Configure startup commands](~~96677~~).
+        /// The startup command of the WAR package. For information about how to configure the startup command, see [Configure startup commands](https://help.aliyun.com/document_detail/96677.html).
         /// </summary>
         [NameInMap("WarStartOptions")]
         [Validation(Required=false)]

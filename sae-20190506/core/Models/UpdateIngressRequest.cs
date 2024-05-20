@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("IngressId")]
         [Validation(Required=false)]
         public long? IngressId { get; set; }

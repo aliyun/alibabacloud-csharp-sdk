@@ -18,13 +18,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// cn-beijing
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// \["d42921c4-5433-4abd-8075-0e536f8b\*\*\*\*"]
+        /// ["d42921c4-5433-4abd-8075-0e536f8b\\*\\*\\*\\*"]
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
@@ -32,13 +36,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// application
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// \["k1","k2"]
+        /// ["k1","k2"]
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]

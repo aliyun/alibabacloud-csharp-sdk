@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class PriceEstimateFeature : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]
         public string AppType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CpuCore")]
         [Validation(Required=false)]
         public float? CpuCore { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CpuStrategy")]
         [Validation(Required=false)]
         public string CpuStrategy { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public string EnvType { get; set; }
@@ -61,6 +73,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public long? MaxInstanceCount { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MemoryGiB")]
         [Validation(Required=false)]
         public float? MemoryGiB { get; set; }
@@ -77,6 +92,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public long? NoneLoadSeconds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class DescribeNamespacesRequest : TeaModel {
         /// <summary>
         /// 1
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// 10
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

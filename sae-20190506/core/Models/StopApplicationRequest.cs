@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// 
         /// *   **success** is returned when the request succeeds.
         /// *   An error code is returned when the request fails.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class BuildPipeline : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BuildConfig")]
         [Validation(Required=false)]
         public BuildPipelineBuildConfig BuildConfig { get; set; }
@@ -25,6 +34,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string BeforeBuildCommand { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("BuildType")]
             [Validation(Required=false)]
             public string BuildType { get; set; }
@@ -55,14 +67,23 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CodeConfig")]
         [Validation(Required=false)]
         public BuildPipelineCodeConfig CodeConfig { get; set; }
         public class BuildPipelineCodeConfig : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("BranchName")]
             [Validation(Required=false)]
             public string BranchName { get; set; }
@@ -79,14 +100,23 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string OrganizationId { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Provider")]
             [Validation(Required=false)]
             public string Provider { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("RepoFullName")]
             [Validation(Required=false)]
             public string RepoFullName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("RepoId")]
             [Validation(Required=false)]
             public string RepoId { get; set; }
@@ -159,6 +189,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TriggerConfig")]
         [Validation(Required=false)]
         public BuildPipelineTriggerConfig TriggerConfig { get; set; }
@@ -171,6 +204,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string TagName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }

@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// cn-beijing:test
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NamespaceName")]
         [Validation(Required=false)]

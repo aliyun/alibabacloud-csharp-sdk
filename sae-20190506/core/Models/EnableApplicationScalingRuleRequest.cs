@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class EnableApplicationScalingRuleRequest : TeaModel {
         /// <summary>
         /// The application ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The name of the auto scaling policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingRuleName")]
         [Validation(Required=false)]

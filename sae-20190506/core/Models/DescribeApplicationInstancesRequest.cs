@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeApplicationInstancesRequest : TeaModel {
         /// <summary>
-        /// d700e680-aa4d-4ec1-afc2-6566b5ff\*\*\*\*
+        /// d700e680-aa4d-4ec1-afc2-6566b5ff\\*\\*\\*\\*
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -24,7 +26,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// b2a8a925-477a-4ed7-b825-d5e22500\*\*\*\*
+        /// b2a8a925-477a-4ed7-b825-d5e22500\\*\\*\\*\\*
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

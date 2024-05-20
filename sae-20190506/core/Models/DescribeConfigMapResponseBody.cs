@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// 
             /// {"k1":"v1", "k2":"v2"}
             /// 
-            /// k specifies a key and v specifies a value. For more information, see [Manage and use configurations](~~171326~~).
+            /// k specifies a key and v specifies a value. For more information, see [Manage and use configurations](https://help.aliyun.com/document_detail/171326.html).
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]

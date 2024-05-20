@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateApplicationRequest : TeaModel {
         /// <summary>
-        /// acs:ram::123456789012\*\*\*\*:role/adminrole
+        /// acs:ram::123456789012\\*\\*\\*\\*:role/adminrole
         /// </summary>
         [NameInMap("AcrAssumeRoleArn")]
         [Validation(Required=false)]
@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// test
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string CommandArgs { get; set; }
 
         /// <summary>
-        /// \[{"configMapId":16,"key":"test","mountPath":"/tmp"}]
+        /// [{"configMapId":16,"key":"test","mountPath":"/tmp"}]
         /// </summary>
         [NameInMap("ConfigMapMountDesc")]
         [Validation(Required=false)]
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? Cpu { get; set; }
 
         /// <summary>
-        /// \[{"hostName":"samplehost","ip":"127.0.0.1"}]
+        /// [{"hostName":"samplehost","ip":"127.0.0.1"}]
         /// </summary>
         [NameInMap("CustomHostAlias")]
         [Validation(Required=false)]
@@ -109,7 +111,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string EnableEbpf { get; set; }
 
         /// <summary>
-        /// \[{"name":"envtmp","value":"0"}]
+        /// [{"name":"envtmp","value":"0"}]
         /// </summary>
         [NameInMap("Envs")]
         [Validation(Required=false)]
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string JarStartArgs { get; set; }
 
         /// <summary>
-        /// \-Xms4G -Xmx4G
+        /// \\-Xms4G -Xmx4G
         /// </summary>
         [NameInMap("JarStartOptions")]
         [Validation(Required=false)]
@@ -152,7 +154,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string KafkaConfigs { get; set; }
 
         /// <summary>
-        /// {"exec":{"command":\["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}
+        /// {"exec":{"command":["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}
         /// </summary>
         [NameInMap("Liveness")]
         [Validation(Required=false)]
@@ -170,7 +172,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string MicroRegistration { get; set; }
 
         /// <summary>
-        /// \[{mountPath: "/tmp", nasPath: "/"}]
+        /// [{mountPath: "/tmp", nasPath: "/"}]
         /// </summary>
         [NameInMap("MountDesc")]
         [Validation(Required=false)]
@@ -195,7 +197,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NasConfigs { get; set; }
 
         /// <summary>
-        /// KSAK\*\*\*\*
+        /// KSAK\\*\\*\\*\\*
         /// </summary>
         [NameInMap("NasId")]
         [Validation(Required=false)]
@@ -216,7 +218,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string OssAkSecret { get; set; }
 
         /// <summary>
-        /// \[{"bucketName": "oss-bucket", "bucketPath": "data/user.data", "mountPath": "/usr/data/user.data", "readOnly": true}]
+        /// [{"bucketName": "oss-bucket", "bucketPath": "data/user.data", "mountPath": "/usr/data/user.data", "readOnly": true}]
         /// </summary>
         [NameInMap("OssMountDescs")]
         [Validation(Required=false)]
@@ -224,13 +226,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// FatJar
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PackageType")]
         [Validation(Required=false)]
         public string PackageType { get; set; }
 
         /// <summary>
-        /// http://myoss.oss-cn-\*\*\*\*.aliyuncs.com/my-buc/2019-06-30/\*\*\*\*.jar
+        /// http://myoss.oss-cn-\\*\\*\\*\\*.aliyuncs.com/my-buc/2019-06-30/\\*\\*\\*\\*.jar
         /// </summary>
         [NameInMap("PackageUrl")]
         [Validation(Required=false)]
@@ -269,14 +273,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PhpConfigLocation { get; set; }
 
         /// <summary>
-        /// {"exec":{"command":\["cat","/etc/group"]}}
+        /// {"exec":{"command":["cat","/etc/group"]}}
         /// </summary>
         [NameInMap("PostStart")]
         [Validation(Required=false)]
         public string PostStart { get; set; }
 
         /// <summary>
-        /// {"exec":{"command":\["cat","/etc/group"]}}
+        /// {"exec":{"command":["cat","/etc/group"]}}
         /// </summary>
         [NameInMap("PreStop")]
         [Validation(Required=false)]
@@ -299,7 +303,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PythonModules { get; set; }
 
         /// <summary>
-        /// {"exec":{"command":\["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}
+        /// {"exec":{"command":["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}
         /// </summary>
         [NameInMap("Readiness")]
         [Validation(Required=false)]
@@ -307,6 +311,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// 1
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Replicas")]
         [Validation(Required=false)]
@@ -317,14 +323,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string SaeVersion { get; set; }
 
         /// <summary>
-        /// sg-wz969ngg2e49q5i4\*\*\*\*
+        /// sg-wz969ngg2e49q5i4\\*\\*\\*\\*
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// \[{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]
+        /// [{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]
         /// </summary>
         [NameInMap("SlsConfigs")]
         [Validation(Required=false)]
@@ -352,21 +358,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string TomcatConfig { get; set; }
 
         /// <summary>
-        /// vsw-bp12mw1f8k3jgygk9\*\*\*\*
+        /// vsw-bp12mw1f8k3jgygk9\\*\\*\\*\\*
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// vpc-bp1aevy8sofi8mh1q\*\*\*\*
+        /// vpc-bp1aevy8sofi8mh1q\\*\\*\\*\\*
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// CATALINA_OPTS=\\"$CATALINA_OPTS $Options\\" catalina.sh run
+        /// CATALINA_OPTS=\\\\"$CATALINA_OPTS $Options\\\\" catalina.sh run
         /// </summary>
         [NameInMap("WarStartOptions")]
         [Validation(Required=false)]

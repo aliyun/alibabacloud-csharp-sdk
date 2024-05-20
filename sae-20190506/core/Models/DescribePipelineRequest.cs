@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribePipelineRequest : TeaModel {
         /// <summary>
-        /// The ID of the batch. You can call the [DescribeChangeOrder](~~126617~~) operation to obtain the ID.
+        /// The ID of the batch. You can call the [DescribeChangeOrder](https://help.aliyun.com/document_detail/126617.html) operation to obtain the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PipelineId")]
         [Validation(Required=false)]

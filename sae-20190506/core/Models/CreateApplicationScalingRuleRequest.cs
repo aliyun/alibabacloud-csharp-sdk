@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateApplicationScalingRuleRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ScalingRuleMetric { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ScalingRuleName")]
         [Validation(Required=false)]
         public string ScalingRuleName { get; set; }
@@ -37,6 +43,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ScalingRuleTimer { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ScalingRuleType")]
         [Validation(Required=false)]
         public string ScalingRuleType { get; set; }

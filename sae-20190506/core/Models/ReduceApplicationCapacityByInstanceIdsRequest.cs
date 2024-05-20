@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class ReduceApplicationCapacityByInstanceIdsRequest : TeaModel {
         /// <summary>
         /// The ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The ID of the instance. Separate multiple instances with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

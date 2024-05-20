@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class ListSecretsRequest : TeaModel {
         /// <summary>
         /// The ID of the namespace in which the Secrets reside. By default, the namespace ID is the same as the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

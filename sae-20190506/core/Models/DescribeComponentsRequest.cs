@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

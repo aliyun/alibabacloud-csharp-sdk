@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string BeforeBuildCommand { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("BuildType")]
             [Validation(Required=false)]
             public string BuildType { get; set; }
@@ -41,6 +44,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public TomcatConfig TomcatConfig { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Trigger")]
             [Validation(Required=false)]
             public BuildPipelineRunBuildConfigTrigger Trigger { get; set; }
@@ -53,6 +59,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string TagName { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -73,10 +82,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public BuildPipelineRunCodeConfig CodeConfig { get; set; }
         public class BuildPipelineRunCodeConfig : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("BranchName")]
             [Validation(Required=false)]
             public string BranchName { get; set; }
@@ -93,14 +108,23 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string OrganizationId { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Provider")]
             [Validation(Required=false)]
             public string Provider { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("RepoFullName")]
             [Validation(Required=false)]
             public string RepoFullName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("RepoId")]
             [Validation(Required=false)]
             public string RepoId { get; set; }

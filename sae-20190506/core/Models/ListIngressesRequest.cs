@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The returned data.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

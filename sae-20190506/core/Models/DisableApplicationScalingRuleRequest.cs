@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class DisableApplicationScalingRuleRequest : TeaModel {
         /// <summary>
         /// timer-0800-2100
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingRuleName")]
         [Validation(Required=false)]

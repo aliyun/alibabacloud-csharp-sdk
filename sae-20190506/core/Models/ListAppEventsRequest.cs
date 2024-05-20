@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The namespace ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

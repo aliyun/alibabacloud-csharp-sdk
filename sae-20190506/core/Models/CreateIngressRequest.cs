@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string CertIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DefaultRule")]
         [Validation(Required=false)]
         public string DefaultRule { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
@@ -37,14 +43,23 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string LoadBalanceType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public string Rules { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SlbId")]
         [Validation(Required=false)]
         public string SlbId { get; set; }

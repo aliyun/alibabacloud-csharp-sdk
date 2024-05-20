@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class ListLogConfigsRequest : TeaModel {
         /// <summary>
         /// 10
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// 1
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

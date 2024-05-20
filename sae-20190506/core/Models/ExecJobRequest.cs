@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ExecJobRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }

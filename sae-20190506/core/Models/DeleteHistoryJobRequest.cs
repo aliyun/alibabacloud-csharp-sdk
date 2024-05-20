@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class DeleteHistoryJobRequest : TeaModel {
         /// <summary>
         /// The ID of the job template to which the job that you want to delete belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The ID of the job.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

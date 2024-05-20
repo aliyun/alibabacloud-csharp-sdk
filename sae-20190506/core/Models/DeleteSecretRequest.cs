@@ -11,13 +11,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class DeleteSecretRequest : TeaModel {
         /// <summary>
         /// The ID of the namespace in which the Secret resides. By default, the namespace ID is the same as the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// The ID of the Secret to be deleted. You can call the [ListSecrets](~~466929~~) operation to view the Secret IDs.
+        /// The ID of the Secret to be deleted. You can call the [ListSecrets](https://help.aliyun.com/document_detail/466929.html) operation to view the Secret IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecretId")]
         [Validation(Required=false)]

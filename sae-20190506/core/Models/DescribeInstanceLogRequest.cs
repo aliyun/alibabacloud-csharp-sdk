@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class DescribeInstanceLogRequest : TeaModel {
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -78,20 +78,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// *   When you use a PHP package, the following values are valid:
             /// 
             ///     *   **PhpZip**
-            ///     *   **IMAGE_PHP\_5\_4**
-            ///     *   **IMAGE_PHP\_5\_4\_ALPINE**
-            ///     *   **IMAGE_PHP\_5\_5**
-            ///     *   **IMAGE_PHP\_5\_5\_ALPINE**
-            ///     *   **IMAGE_PHP\_5\_6**
-            ///     *   **IMAGE_PHP\_5\_6\_ALPINE**
-            ///     *   **IMAGE_PHP\_7\_0**
-            ///     *   **IMAGE_PHP\_7\_0\_ALPINE**
-            ///     *   **IMAGE_PHP\_7\_1**
-            ///     *   **IMAGE_PHP\_7\_1\_ALPINE**
-            ///     *   **IMAGE_PHP\_7\_2**
-            ///     *   **IMAGE_PHP\_7\_2\_ALPINE**
-            ///     *   **IMAGE_PHP\_7\_3**
-            ///     *   **IMAGE_PHP\_7\_3\_ALPINE**
+            ///     *   **IMAGE_PHP_5_4**
+            ///     *   **IMAGE_PHP_5_4_ALPINE**
+            ///     *   **IMAGE_PHP_5_5**
+            ///     *   **IMAGE_PHP_5_5_ALPINE**
+            ///     *   **IMAGE_PHP_5_6**
+            ///     *   **IMAGE_PHP_5_6_ALPINE**
+            ///     *   **IMAGE_PHP_7_0**
+            ///     *   **IMAGE_PHP_7_0_ALPINE**
+            ///     *   **IMAGE_PHP_7_1**
+            ///     *   **IMAGE_PHP_7_1_ALPINE**
+            ///     *   **IMAGE_PHP_7_2**
+            ///     *   **IMAGE_PHP_7_2_ALPINE**
+            ///     *   **IMAGE_PHP_7_3**
+            ///     *   **IMAGE_PHP_7_3_ALPINE**
             /// </summary>
             [NameInMap("PackageType")]
             [Validation(Required=false)]

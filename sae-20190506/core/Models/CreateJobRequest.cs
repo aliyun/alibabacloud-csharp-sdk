@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateJobRequest : TeaModel {
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) required for a RAM role to obtain images across accounts. For more information, see [Grant permissions across Alibaba Cloud accounts by using a RAM role](~~223585~~).
+        /// The Alibaba Cloud Resource Name (ARN) required for a RAM role to obtain images across accounts. For more information, see [Grant permissions across Alibaba Cloud accounts by using a RAM role](https://help.aliyun.com/document_detail/223585.html).
         /// </summary>
         [NameInMap("AcrAssumeRoleArn")]
         [Validation(Required=false)]
@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The name of the job template. The name can contain digits, letters, and hyphens (-). The name must start with a letter and cannot exceed 36 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// The description of the **ConfigMap** instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following table describes the parameters that are used in the preceding statements.
         /// 
-        /// *   **congfigMapId**: the ID of the ConfigMap instance. You can call the [ListNamespacedConfigMaps](~~176917~~) operation to obtain the ID.
+        /// *   **congfigMapId**: the ID of the ConfigMap instance. You can call the [ListNamespacedConfigMaps](https://help.aliyun.com/document_detail/176917.html) operation to obtain the ID.
         /// *   **key**: the key.
         /// 
         /// > You can use the `sae-sys-configmap-all` key to mount all keys.
@@ -142,7 +144,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableImageAccl { get; set; }
 
         /// <summary>
-        /// The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](~~176914~~). Take note of the following rules:
+        /// The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](https://help.aliyun.com/document_detail/176914.html). Take note of the following rules:
         /// 
         /// *   Customize
         /// 
@@ -288,9 +290,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// *   If you deploy the application by using a Java Archive (JAR) package, you can set this parameter to **FatJar**, **War**, or **Image**.
         /// *   If you deploy the application by using a PHP package, you can set this parameter to one of the following values:
         /// 
-        /// **PhpZip** **IMAGE_PHP\_5\_4** **IMAGE_PHP\_5\_4\_ALPINE** **IMAGE_PHP\_5\_5** **IMAGE_PHP\_5\_5\_ALPINE** **IMAGE_PHP\_5\_6** **IMAGE_PHP\_5\_6\_ALPINE** **IMAGE_PHP\_7\_0** **IMAGE_PHP\_7\_0\_ALPINE** **IMAGE_PHP\_7\_1** **IMAGE_PHP\_7\_1\_ALPINE** **IMAGE_PHP\_7\_2** **IMAGE_PHP\_7\_2\_ALPINE** **IMAGE_PHP\_7\_3** **IMAGE_PHP\_7\_3\_ALPINE**
+        /// **PhpZip** **IMAGE_PHP_5_4** **IMAGE_PHP_5_4_ALPINE** **IMAGE_PHP_5_5** **IMAGE_PHP_5_5_ALPINE** **IMAGE_PHP_5_6** **IMAGE_PHP_5_6_ALPINE** **IMAGE_PHP_7_0** **IMAGE_PHP_7_0_ALPINE** **IMAGE_PHP_7_1** **IMAGE_PHP_7_1_ALPINE** **IMAGE_PHP_7_2** **IMAGE_PHP_7_2_ALPINE** **IMAGE_PHP_7_3** **IMAGE_PHP_7_3_ALPINE**
         /// 
         /// *   If you deploy the application by using a **Python** package, you can set this parameter to **PythonZip** or **Image**:
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PackageType")]
         [Validation(Required=false)]
@@ -325,14 +329,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PhpConfigLocation { get; set; }
 
         /// <summary>
-        /// The script that is run immediately after the container is started. Example: `{"exec":{"command":\["sh","-c","echo hello"\]}}`
+        /// The script that is run immediately after the container is started. Example: `{"exec":{"command":["sh","-c","echo hello"\\]}}`
         /// </summary>
         [NameInMap("PostStart")]
         [Validation(Required=false)]
         public string PostStart { get; set; }
 
         /// <summary>
-        /// The script that is run before the container is stopped. Example: `{"exec":{"command":\["sh","-c","echo hello"\]}}`
+        /// The script that is run before the container is stopped. Example: `{"exec":{"command":["sh","-c","echo hello"\\]}}`
         /// </summary>
         [NameInMap("PreStop")]
         [Validation(Required=false)]
@@ -368,6 +372,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The number of concurrent instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Replicas")]
         [Validation(Required=false)]
@@ -469,7 +475,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The startup command of the WAR package. For information about how to configure the startup command, see [Configure startup commands](~~96677~~).
+        /// The startup command of the WAR package. For information about how to configure the startup command, see [Configure startup commands](https://help.aliyun.com/document_detail/96677.html).
         /// </summary>
         [NameInMap("WarStartOptions")]
         [Validation(Required=false)]
@@ -489,6 +495,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// Set the value to `job`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Workload")]
         [Validation(Required=false)]

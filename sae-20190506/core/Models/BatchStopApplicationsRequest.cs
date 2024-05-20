@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppIds { get; set; }
 
         /// <summary>
-        /// ebf491f0-c1a5-45e2-b2c4-710dbe2a\*\*\*\*,ebf491f0-c1a5-45e2-b2c4-71025e2a\*\*\*\*
+        /// ebf491f0-c1a5-45e2-b2c4-710dbe2a\\*\\*\\*\\*,ebf491f0-c1a5-45e2-b2c4-71025e2a\\*\\*\\*\\*
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

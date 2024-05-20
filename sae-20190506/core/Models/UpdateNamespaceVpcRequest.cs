@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NameSpaceShortId { get; set; }
 
         /// <summary>
-        /// vpc-2ze0i263cnn311nvj\*\*\*\*
+        /// vpc-2ze0i263cnn311nvj\\*\\*\\*\\*
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

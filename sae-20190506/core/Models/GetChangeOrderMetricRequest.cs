@@ -17,14 +17,23 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string CpuStrategy { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public long? Limit { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }

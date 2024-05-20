@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class DescribeIngressRequest : TeaModel {
         /// <summary>
         /// The returned data.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IngressId")]
         [Validation(Required=false)]

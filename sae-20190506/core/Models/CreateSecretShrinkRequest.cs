@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateSecretShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SecretData")]
         [Validation(Required=false)]
         public string SecretDataShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SecretType")]
         [Validation(Required=false)]
         public string SecretType { get; set; }

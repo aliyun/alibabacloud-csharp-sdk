@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class GetPerRequestLogsInput : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
@@ -29,10 +32,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public bool? IsColdStart { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("requestID")]
         [Validation(Required=false)]
         public string RequestID { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("startTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }

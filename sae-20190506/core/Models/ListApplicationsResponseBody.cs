@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public bool? AppDeletingStatus { get; set; }
 
                 /// <summary>
-                /// \[{"key":"key","value":"value"}]
+                /// [{"key":"key","value":"value"}]
                 /// </summary>
                 [NameInMap("AppDescription")]
                 [Validation(Required=false)]

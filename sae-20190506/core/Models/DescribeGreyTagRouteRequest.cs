@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class DescribeGreyTagRouteRequest : TeaModel {
         /// <summary>
         /// 1
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GreyTagRouteId")]
         [Validation(Required=false)]

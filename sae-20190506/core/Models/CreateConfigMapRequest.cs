@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateConfigMapRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
@@ -19,6 +22,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// cn-hangzhou
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

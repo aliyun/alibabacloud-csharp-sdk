@@ -18,20 +18,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public string ResourceIds { get; set; }
 
         /// <summary>
-        /// \[{"key":"k1","value":"v1"}]
+        /// [{"key":"k1","value":"v1"}]
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// \["d42921c4-5433-4abd-8075-0e536f8b\*\*\*\*"]
+        /// ["d42921c4-5433-4abd-8075-0e536f8b\\*\\*\\*\\*"]
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

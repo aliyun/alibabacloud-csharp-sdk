@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class AbortAndRollbackChangeOrderRequest : TeaModel {
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChangeOrderId")]
         [Validation(Required=false)]

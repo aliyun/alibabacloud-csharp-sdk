@@ -385,9 +385,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     /// <summary>
                     /// The days on which the scheduled auto scaling policy takes effect. Valid values:
                     /// 
-                    /// *   **\* \* \***: The scheduled auto scaling policy takes effect at a specified time every day.
+                    /// *   **\\* \\* \\***: The scheduled auto scaling policy takes effect at a specified time every day.
                     /// 
-                    /// *   **\* \* Fri,Mon**: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a week. The specified time is in the GMT+8 time zone. Valid values:
+                    /// *   **\\* \\* Fri,Mon**: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a week. The specified time is in the GMT+8 time zone. Valid values:
                     /// 
                     ///     *   **Sun**: Sunday
                     ///     *   **Mon**: Monday
@@ -397,7 +397,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     ///     *   **Fri**: Friday
                     ///     *   **Sat**: Saturday
                     /// 
-                    /// *   **1,2,3,28,31 \* \***: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a month. Valid values: 1 to 31. If the month does not have a 31st day, the auto scaling policy takes effect on the specified days other than the 31st day.
+                    /// *   **1,2,3,28,31 \\* \\***: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a month. Valid values: 1 to 31. If the month does not have a 31st day, the auto scaling policy takes effect on the specified days other than the 31st day.
                     /// </summary>
                     [NameInMap("Period")]
                     [Validation(Required=false)]

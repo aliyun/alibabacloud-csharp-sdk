@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class ListAppServicesPageRequest : TeaModel {
         /// <summary>
         /// 1
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// 9999
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceType")]
         [Validation(Required=false)]

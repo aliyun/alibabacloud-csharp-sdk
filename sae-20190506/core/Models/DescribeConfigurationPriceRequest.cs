@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeConfigurationPriceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]
         public int? Cpu { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }

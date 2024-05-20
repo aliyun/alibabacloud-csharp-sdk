@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeApplicationScalingRulesRequest : TeaModel {
         /// <summary>
-        /// 7171a6ca-d1cd-4928-8642-7d5cfe69\*\*\*\*
+        /// 7171a6ca-d1cd-4928-8642-7d5cfe69\\*\\*\\*\\*
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
