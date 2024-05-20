@@ -188,6 +188,106 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
+         * @summary 开启高级备份策略
+         *
+         * @param request CreateAdvancedPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAdvancedPolicyResponse
+         */
+        public CreateAdvancedPolicyResponse CreateAdvancedPolicyWithOptions(CreateAdvancedPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
+            {
+                query["RegionCode"] = request.RegionCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAdvancedPolicy",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAdvancedPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 开启高级备份策略
+         *
+         * @param request CreateAdvancedPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAdvancedPolicyResponse
+         */
+        public async Task<CreateAdvancedPolicyResponse> CreateAdvancedPolicyWithOptionsAsync(CreateAdvancedPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
+            {
+                query["RegionCode"] = request.RegionCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAdvancedPolicy",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAdvancedPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 开启高级备份策略
+         *
+         * @param request CreateAdvancedPolicyRequest
+         * @return CreateAdvancedPolicyResponse
+         */
+        public CreateAdvancedPolicyResponse CreateAdvancedPolicy(CreateAdvancedPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAdvancedPolicyWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 开启高级备份策略
+         *
+         * @param request CreateAdvancedPolicyRequest
+         * @return CreateAdvancedPolicyResponse
+         */
+        public async Task<CreateAdvancedPolicyResponse> CreateAdvancedPolicyAsync(CreateAdvancedPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAdvancedPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Creates an advanced download task for an ApsaraDB RDS for MySQL instance, an ApsaraDB RDS for PostgreSQL instance, or a PolarDB for MySQL cluster.
          *
          * @description ### [](#)Supported database engines
@@ -1965,6 +2065,122 @@ namespace AlibabaCloud.SDK.Dbs20210101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSandboxRecoveryTimeWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 修改备份策略
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBackupPolicyResponse
+         */
+        public ModifyBackupPolicyResponse ModifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvanceDataPolicies))
+            {
+                query["AdvanceDataPolicies"] = request.AdvanceDataPolicies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreferredBackupWindowBegin))
+            {
+                query["PreferredBackupWindowBegin"] = request.PreferredBackupWindowBegin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
+            {
+                query["RegionCode"] = request.RegionCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyBackupPolicy",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyBackupPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改备份策略
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBackupPolicyResponse
+         */
+        public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyWithOptionsAsync(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvanceDataPolicies))
+            {
+                query["AdvanceDataPolicies"] = request.AdvanceDataPolicies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreferredBackupWindowBegin))
+            {
+                query["PreferredBackupWindowBegin"] = request.PreferredBackupWindowBegin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
+            {
+                query["RegionCode"] = request.RegionCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyBackupPolicy",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改备份策略
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @return ModifyBackupPolicyResponse
+         */
+        public ModifyBackupPolicyResponse ModifyBackupPolicy(ModifyBackupPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyBackupPolicyWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 修改备份策略
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @return ModifyBackupPolicyResponse
+         */
+        public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyAsync(ModifyBackupPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyBackupPolicyWithOptionsAsync(request, runtime);
         }
 
         /**
