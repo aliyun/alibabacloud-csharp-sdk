@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// 
         /// *   **1**: Created.
         /// *   **0**: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the **RepeatedDbs** parameter.
-        /// *   **1**: Creation failed. The cause why the creation failed is returned for the **ErrorMsg** parameter.
+        /// *   **-1**: Creation failed. The cause why the creation failed is returned for the **ErrorMsg** parameter.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

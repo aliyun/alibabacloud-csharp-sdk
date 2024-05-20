@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// *   **Friday**
         /// *   **Saturday**
         /// *   **Sunday**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PreferredBackupPeriod")]
         [Validation(Required=false)]
@@ -50,13 +54,15 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// The backup window. Specify the time in the ISO 8601 standard in the HH:mmZ-HH:mmZ format. The time must be in Coordinated Universal Time (UTC).
         /// 
         /// For example, if you set the backup window to 00:00Z-01:00Z, the data of the cluster can be backed up from 08:00 (UTC+8) to 09:00 (UTC+8).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PreferredBackupTime")]
         [Validation(Required=false)]
         public string PreferredBackupTime { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

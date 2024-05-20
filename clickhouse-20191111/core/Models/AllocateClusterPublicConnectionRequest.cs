@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

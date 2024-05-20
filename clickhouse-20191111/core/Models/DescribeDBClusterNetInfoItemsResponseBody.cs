@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// 
         /// *   true
         /// *   false
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnableSLB")]
         [Validation(Required=false)]

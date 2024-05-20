@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
     public class ModifyAccountAuthorityRequest : TeaModel {
         /// <summary>
         /// The name of the database account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The databases to which you want to grant permissions. Separate databases with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AllowDatabases")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AllowDictionaries")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// 
         /// *   **true**: grants DDL permissions to the database account.
         /// *   **false**: does not grant DDL permissions to the database account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DdlAuthority")]
         [Validation(Required=false)]
@@ -52,6 +62,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// 
         /// *   **all**
         /// *   **readonly,modify**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DmlAuthority")]
         [Validation(Required=false)]
@@ -66,7 +78,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
     public class CheckClickhouseToRDSRequest : TeaModel {
         /// <summary>
         /// The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CkPassword")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CkUserName")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The ID of the ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbClusterId")]
         [Validation(Required=false)]
@@ -47,6 +53,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The ID of the ApsaraDB RDS for MySQL instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RdsId")]
         [Validation(Required=false)]
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RdsPassword")]
         [Validation(Required=false)]
@@ -68,6 +78,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RdsUserName")]
         [Validation(Required=false)]
@@ -75,6 +87,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The ID of the VPC in which the ApsaraDB RDS for MySQL instance is deployed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RdsVpcId")]
         [Validation(Required=false)]
@@ -82,6 +96,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The internal endpoint of the ApsaraDB RDS for MySQL instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RdsVpcUrl")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
     public class CreateRDSToClickhouseDbRequest : TeaModel {
         /// <summary>
         /// The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CkPassword")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CkUserName")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The ID of the ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbClusterId")]
         [Validation(Required=false)]
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The ID of the ApsaraDB RDS for MySQL instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RdsId")]
         [Validation(Required=false)]
@@ -61,6 +69,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The password of the account that is used to log on to the ApsaraDB RDS for MySQL instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RdsPassword")]
         [Validation(Required=false)]
@@ -75,6 +85,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RdsUserName")]
         [Validation(Required=false)]
@@ -107,6 +119,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// 
         /// *   **true**
         /// *   **false**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SkipUnsupported")]
         [Validation(Required=false)]
@@ -114,6 +128,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The tables whose data you want to synchronize.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SynDbTables")]
         [Validation(Required=false)]

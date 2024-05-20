@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public string AppointmentRestartTime { get; set; }
 
+            [NameInMap("AvailableUpgradeMajorVersion")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> AvailableUpgradeMajorVersion { get; set; }
+
             /// <summary>
             /// The site ID. Valid values:
             /// 

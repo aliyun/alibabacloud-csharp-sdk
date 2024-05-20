@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
     public class DescribeSynDbsRequest : TeaModel {
         /// <summary>
         /// The ID of the ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbClusterId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
     public class ResetAccountPasswordRequest : TeaModel {
         /// <summary>
         /// The name of the database account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -23,8 +25,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// 
         /// *   The password must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.
         /// 
-        /// *   The password can contain the following special characters: ! @ # $ % ^ & \* ( ) \_ + - =
+        /// *   The password can contain the following special characters: ! @ # $ % ^ & \\* ( ) _ + - =
         /// *   The password must be 8 to 32 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

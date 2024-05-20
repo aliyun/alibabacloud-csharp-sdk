@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeProcessListRequest : TeaModel {
         /// <summary>
-        /// The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.
+        /// The cluster ID. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/170879.html) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -83,7 +85,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? QueryDurationMs { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

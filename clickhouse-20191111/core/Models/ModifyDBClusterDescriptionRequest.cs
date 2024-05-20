@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// 
         /// *   The cluster name cannot start with http:// or https://.
         /// *   The cluster name must be 2 to 256 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterDescription")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

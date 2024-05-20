@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         ///     *   **C32**
         ///     *   **C64**
         ///     *   **C104**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterClass")]
         [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// 
         /// *   If the cluster is of Single-replica Edition, the value must be an integer that ranges from 1 to 48.
         /// *   If the cluster is of Double-replica Edition, the value must be an integer that ranges from 1 to 24.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNodeGroupCount")]
         [Validation(Required=false)]
@@ -57,6 +61,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// Valid values: 100 to 32000.
         /// 
         /// >  This value is a multiple of 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNodeStorage")]
         [Validation(Required=false)]
@@ -75,7 +81,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

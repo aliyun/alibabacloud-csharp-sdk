@@ -9,12 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CreateDBInstanceRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to enable auto-renewal.
+        /// 
+        /// >  This parameter is valid only if the value of PayType is set to Prepaid.
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The ID of the backup set. You can call the [DescribeBackups](~~360339~~) operation to query the backup sets.
+        /// The ID of the backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/360339.html) operation to query the backup sets.
         /// 
         /// >  If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.
         /// </summary>
@@ -34,6 +39,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// 
         /// *   **Basic**: Single-replica Edition
         /// *   **HighAvailability**: Double-replica Edition
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterCategory")]
         [Validation(Required=false)]
@@ -42,13 +49,25 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// The specifications of the cluster.
         /// 
-        /// *   Valid values when the cluster is of Single-replica Edition: -**S4**: 4 CPU cores and 16 GB of memory -**S8**: 8 CPU cores and 32 GB of memory -**S16**: 16 CPU cores and 64 GB of memory
+        /// *   Valid values when the cluster is of Single-replica Edition: 
         /// 
+        ///     - **S4**: 4 CPU cores and 16 GB of memory 
+        ///     - **S8**: 8 CPU cores and 32 GB of memory
+        ///     -  **S16**: 16 CPU cores and 64 GB of memory
         ///     *   **S32**: 32 CPU cores and 128 GB of memory
         ///     *   **S64**: 64 CPU cores and 256 GB of memory
         ///     *   **S104**: 104 CPU cores and 384 GB of memory
         /// 
-        /// *   Valid values when the cluster is of Double-replica Edition: -**C4**: 4 CPU cores and 16 GB of memory -**C8**: 8 CPU cores and 32 GB of memory -**C16**: 16 CPU cores and 64 GB of memory -**C32**: 32 CPU cores and 128 GB of memory -**C64**: 64 CPU cores and 256 GB of memory -**C104**: 104 CPU cores and 384 GB of memory
+        /// *   Valid values when the cluster is of Double-replica Edition: 
+        /// 
+        ///     - **C4**: 4 CPU cores and 16 GB of memory 
+        ///     - **C8**: 8 CPU cores and 32 GB of memory 
+        ///     - **C16**: 16 CPU cores and 64 GB of memory 
+        ///     - **C32**: 32 CPU cores and 128 GB of memory 
+        ///     - **C64**: 64 CPU cores and 256 GB of memory 
+        ///     - **C104**: 104 CPU cores and 384 GB of memory
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterClass")]
         [Validation(Required=false)]
@@ -63,6 +82,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The network type of the cluster. Only Virtual Private Cloud (VPC) is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterNetworkType")]
         [Validation(Required=false)]
@@ -73,6 +94,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// 
         /// *   **21.8.10.19**
         /// *   **22.8.5.29**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterVersion")]
         [Validation(Required=false)]
@@ -83,6 +106,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// 
         /// *   Valid values when the cluster is of Single-replica Edition: 1 to 48.
         /// *   Valid values when the cluster is of Double-replica Edition: 1 to 24.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNodeGroupCount")]
         [Validation(Required=false)]
@@ -92,6 +117,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// The storage capacity of a single node. Valid values: 100 to 32000. Unit: GB.
         /// 
         /// >  This value is a multiple of 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNodeStorage")]
         [Validation(Required=false)]
@@ -100,10 +127,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// The storage type of the cluster. Valid values:
         /// 
-        /// *   **CloudESSD_PL1**: The cluster uses an enhanced SSD (ESSD) of performance level (PL) 1.
+        /// *   **CloudESSD**: The cluster uses an enhanced SSD (ESSD) of performance level 1 (PL1).
         /// *   **CloudESSD_PL2**: The cluster uses an ESSD of PL2.
         /// *   **CloudESSD_PL3**: The cluster uses an ESSD of PL3.
         /// *   **CloudEfficiency**: The cluster uses an ultra disk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbNodeStorageType")]
         [Validation(Required=false)]
@@ -142,6 +171,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// 
         /// *   **Postpaid**: The cluster uses the pay-as-you-go billing method.
         /// *   **Prepaid**: The cluster uses the subscription billing method.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -160,7 +191,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -182,7 +215,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the source cluster. You can call the [DescribeDBClusters](~~170879~~) operation to query backup set IDs.
+        /// The ID of the source cluster. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/170879.html) operation to query backup set IDs.
         /// 
         /// >  If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.
         /// </summary>
@@ -204,20 +237,22 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The VPC ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
         /// <summary>
-        /// 备专有网络交换机
+        /// The vSwitch in the secondary zone for the VPC.
         /// </summary>
         [NameInMap("VSwitchBak")]
         [Validation(Required=false)]
         public string VSwitchBak { get; set; }
 
         /// <summary>
-        /// 备专有网络交换机2
+        /// The vSwitch in secondary zone 2 for the VPC.
         /// </summary>
         [NameInMap("VSwitchBak2")]
         [Validation(Required=false)]
@@ -225,22 +260,30 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The vSwitch ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        /// <summary>
+        /// Secondary zone 2.
+        /// </summary>
         [NameInMap("ZondIdBak2")]
         [Validation(Required=false)]
         public string ZondIdBak2 { get; set; }
 
         /// <summary>
-        /// The zone ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent zone list.
+        /// The zone ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
+        /// <summary>
+        /// The secondary zone.
+        /// </summary>
         [NameInMap("ZoneIdBak")]
         [Validation(Required=false)]
         public string ZoneIdBak { get; set; }

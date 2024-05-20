@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
     public class TransferVersionRequest : TeaModel {
         /// <summary>
         /// The ID of the source ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -43,7 +45,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -59,6 +63,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The database account that is used to log on to the database in the source ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceAccount")]
         [Validation(Required=false)]
@@ -66,6 +72,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The password that corresponds to the database account for logging on to the database in the source ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourcePassword")]
         [Validation(Required=false)]
@@ -73,6 +81,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The database account that is used to log on to the database in the destination ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetAccount")]
         [Validation(Required=false)]
@@ -80,6 +90,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The ID of the destination ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetDbClusterId")]
         [Validation(Required=false)]
@@ -87,6 +99,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// The password that corresponds to the database account for logging on to the database in the destination ApsaraDB for ClickHouse cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetPassword")]
         [Validation(Required=false)]
