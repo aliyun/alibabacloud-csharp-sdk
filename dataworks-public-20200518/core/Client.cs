@@ -9901,6 +9901,110 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary 新增或编辑脱敏规则
+         *
+         * @param tmpReq DsgDesensPlanAddOrUpdateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DsgDesensPlanAddOrUpdateResponse
+         */
+        public DsgDesensPlanAddOrUpdateResponse DsgDesensPlanAddOrUpdateWithOptions(DsgDesensPlanAddOrUpdateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DsgDesensPlanAddOrUpdateShrinkRequest request = new DsgDesensPlanAddOrUpdateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DesensRules))
+            {
+                request.DesensRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DesensRules, "DesensRules", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesensRulesShrink))
+            {
+                query["DesensRules"] = request.DesensRulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgDesensPlanAddOrUpdate",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgDesensPlanAddOrUpdateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 新增或编辑脱敏规则
+         *
+         * @param tmpReq DsgDesensPlanAddOrUpdateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DsgDesensPlanAddOrUpdateResponse
+         */
+        public async Task<DsgDesensPlanAddOrUpdateResponse> DsgDesensPlanAddOrUpdateWithOptionsAsync(DsgDesensPlanAddOrUpdateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DsgDesensPlanAddOrUpdateShrinkRequest request = new DsgDesensPlanAddOrUpdateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DesensRules))
+            {
+                request.DesensRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DesensRules, "DesensRules", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesensRulesShrink))
+            {
+                query["DesensRules"] = request.DesensRulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgDesensPlanAddOrUpdate",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgDesensPlanAddOrUpdateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 新增或编辑脱敏规则
+         *
+         * @param request DsgDesensPlanAddOrUpdateRequest
+         * @return DsgDesensPlanAddOrUpdateResponse
+         */
+        public DsgDesensPlanAddOrUpdateResponse DsgDesensPlanAddOrUpdate(DsgDesensPlanAddOrUpdateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DsgDesensPlanAddOrUpdateWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 新增或编辑脱敏规则
+         *
+         * @param request DsgDesensPlanAddOrUpdateRequest
+         * @return DsgDesensPlanAddOrUpdateResponse
+         */
+        public async Task<DsgDesensPlanAddOrUpdateResponse> DsgDesensPlanAddOrUpdateAsync(DsgDesensPlanAddOrUpdateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DsgDesensPlanAddOrUpdateWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 删除脱敏规则
          *
          * @param tmpReq DsgDesensPlanDeleteRequest
@@ -10797,6 +10901,194 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary 查询场景列表
+         *
+         * @param request DsgSceneQuerySceneListByNameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DsgSceneQuerySceneListByNameResponse
+         */
+        public DsgSceneQuerySceneListByNameResponse DsgSceneQuerySceneListByNameWithOptions(DsgSceneQuerySceneListByNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgSceneQuerySceneListByName",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgSceneQuerySceneListByNameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询场景列表
+         *
+         * @param request DsgSceneQuerySceneListByNameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DsgSceneQuerySceneListByNameResponse
+         */
+        public async Task<DsgSceneQuerySceneListByNameResponse> DsgSceneQuerySceneListByNameWithOptionsAsync(DsgSceneQuerySceneListByNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgSceneQuerySceneListByName",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgSceneQuerySceneListByNameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询场景列表
+         *
+         * @param request DsgSceneQuerySceneListByNameRequest
+         * @return DsgSceneQuerySceneListByNameResponse
+         */
+        public DsgSceneQuerySceneListByNameResponse DsgSceneQuerySceneListByName(DsgSceneQuerySceneListByNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DsgSceneQuerySceneListByNameWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询场景列表
+         *
+         * @param request DsgSceneQuerySceneListByNameRequest
+         * @return DsgSceneQuerySceneListByNameResponse
+         */
+        public async Task<DsgSceneQuerySceneListByNameResponse> DsgSceneQuerySceneListByNameAsync(DsgSceneQuerySceneListByNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DsgSceneQuerySceneListByNameWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 删除二级场景
+         *
+         * @param tmpReq DsgScenedDeleteSceneRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DsgScenedDeleteSceneResponse
+         */
+        public DsgScenedDeleteSceneResponse DsgScenedDeleteSceneWithOptions(DsgScenedDeleteSceneRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DsgScenedDeleteSceneShrinkRequest request = new DsgScenedDeleteSceneShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                query["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgScenedDeleteScene",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgScenedDeleteSceneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除二级场景
+         *
+         * @param tmpReq DsgScenedDeleteSceneRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DsgScenedDeleteSceneResponse
+         */
+        public async Task<DsgScenedDeleteSceneResponse> DsgScenedDeleteSceneWithOptionsAsync(DsgScenedDeleteSceneRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DsgScenedDeleteSceneShrinkRequest request = new DsgScenedDeleteSceneShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                query["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgScenedDeleteScene",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgScenedDeleteSceneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除二级场景
+         *
+         * @param request DsgScenedDeleteSceneRequest
+         * @return DsgScenedDeleteSceneResponse
+         */
+        public DsgScenedDeleteSceneResponse DsgScenedDeleteScene(DsgScenedDeleteSceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DsgScenedDeleteSceneWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 删除二级场景
+         *
+         * @param request DsgScenedDeleteSceneRequest
+         * @return DsgScenedDeleteSceneResponse
+         */
+        public async Task<DsgScenedDeleteSceneResponse> DsgScenedDeleteSceneAsync(DsgScenedDeleteSceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DsgScenedDeleteSceneWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 识别任务停止
          *
          * @param request DsgStopSensIdentifyRequest
@@ -11334,6 +11626,214 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DsgUserGroupQueryUserListWithOptionsAsync(runtime);
+        }
+
+        /**
+         * @summary 新增或编辑脱敏白名单
+         *
+         * @param tmpReq DsgWhiteListAddOrUpdateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DsgWhiteListAddOrUpdateResponse
+         */
+        public DsgWhiteListAddOrUpdateResponse DsgWhiteListAddOrUpdateWithOptions(DsgWhiteListAddOrUpdateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DsgWhiteListAddOrUpdateShrinkRequest request = new DsgWhiteListAddOrUpdateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WhiteLists))
+            {
+                request.WhiteListsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WhiteLists, "WhiteLists", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListsShrink))
+            {
+                query["WhiteLists"] = request.WhiteListsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgWhiteListAddOrUpdate",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgWhiteListAddOrUpdateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 新增或编辑脱敏白名单
+         *
+         * @param tmpReq DsgWhiteListAddOrUpdateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DsgWhiteListAddOrUpdateResponse
+         */
+        public async Task<DsgWhiteListAddOrUpdateResponse> DsgWhiteListAddOrUpdateWithOptionsAsync(DsgWhiteListAddOrUpdateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DsgWhiteListAddOrUpdateShrinkRequest request = new DsgWhiteListAddOrUpdateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WhiteLists))
+            {
+                request.WhiteListsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WhiteLists, "WhiteLists", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListsShrink))
+            {
+                query["WhiteLists"] = request.WhiteListsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgWhiteListAddOrUpdate",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgWhiteListAddOrUpdateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 新增或编辑脱敏白名单
+         *
+         * @param request DsgWhiteListAddOrUpdateRequest
+         * @return DsgWhiteListAddOrUpdateResponse
+         */
+        public DsgWhiteListAddOrUpdateResponse DsgWhiteListAddOrUpdate(DsgWhiteListAddOrUpdateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DsgWhiteListAddOrUpdateWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 新增或编辑脱敏白名单
+         *
+         * @param request DsgWhiteListAddOrUpdateRequest
+         * @return DsgWhiteListAddOrUpdateResponse
+         */
+        public async Task<DsgWhiteListAddOrUpdateResponse> DsgWhiteListAddOrUpdateAsync(DsgWhiteListAddOrUpdateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DsgWhiteListAddOrUpdateWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 删除脱敏白名单
+         *
+         * @param tmpReq DsgWhiteListDeleteListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DsgWhiteListDeleteListResponse
+         */
+        public DsgWhiteListDeleteListResponse DsgWhiteListDeleteListWithOptions(DsgWhiteListDeleteListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DsgWhiteListDeleteListShrinkRequest request = new DsgWhiteListDeleteListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                query["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgWhiteListDeleteList",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgWhiteListDeleteListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除脱敏白名单
+         *
+         * @param tmpReq DsgWhiteListDeleteListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DsgWhiteListDeleteListResponse
+         */
+        public async Task<DsgWhiteListDeleteListResponse> DsgWhiteListDeleteListWithOptionsAsync(DsgWhiteListDeleteListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DsgWhiteListDeleteListShrinkRequest request = new DsgWhiteListDeleteListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                query["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgWhiteListDeleteList",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgWhiteListDeleteListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除脱敏白名单
+         *
+         * @param request DsgWhiteListDeleteListRequest
+         * @return DsgWhiteListDeleteListResponse
+         */
+        public DsgWhiteListDeleteListResponse DsgWhiteListDeleteList(DsgWhiteListDeleteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DsgWhiteListDeleteListWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 删除脱敏白名单
+         *
+         * @param request DsgWhiteListDeleteListRequest
+         * @return DsgWhiteListDeleteListResponse
+         */
+        public async Task<DsgWhiteListDeleteListResponse> DsgWhiteListDeleteListAsync(DsgWhiteListDeleteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DsgWhiteListDeleteListWithOptionsAsync(request, runtime);
         }
 
         /**
