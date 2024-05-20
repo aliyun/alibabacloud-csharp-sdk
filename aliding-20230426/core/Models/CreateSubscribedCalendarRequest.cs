@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public CreateSubscribedCalendarRequestSubscribeScope SubscribeScope { get; set; }
         public class CreateSubscribedCalendarRequestSubscribeScope : TeaModel {
+            [NameInMap("CorpIds")]
+            [Validation(Required=false)]
+            public List<string> CorpIds { get; set; }
+
+            [NameInMap("OpenConversationIds")]
+            [Validation(Required=false)]
+            public List<string> OpenConversationIds { get; set; }
+
             [NameInMap("UserIds")]
             [Validation(Required=false)]
             public List<string> UserIds { get; set; }
