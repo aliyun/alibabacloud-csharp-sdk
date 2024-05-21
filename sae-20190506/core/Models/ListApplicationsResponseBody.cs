@@ -65,6 +65,90 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
+                [NameInMap("BaseAppId")]
+                [Validation(Required=false)]
+                public string BaseAppId { get; set; }
+
+                [NameInMap("Children")]
+                [Validation(Required=false)]
+                public List<ListApplicationsResponseBodyDataApplicationsChildren> Children { get; set; }
+                public class ListApplicationsResponseBodyDataApplicationsChildren : TeaModel {
+                    [NameInMap("AppDeletingStatus")]
+                    [Validation(Required=false)]
+                    public bool? AppDeletingStatus { get; set; }
+
+                    [NameInMap("AppDescription")]
+                    [Validation(Required=false)]
+                    public string AppDescription { get; set; }
+
+                    [NameInMap("AppId")]
+                    [Validation(Required=false)]
+                    public string AppId { get; set; }
+
+                    [NameInMap("AppName")]
+                    [Validation(Required=false)]
+                    public string AppName { get; set; }
+
+                    [NameInMap("BaseAppId")]
+                    [Validation(Required=false)]
+                    public string BaseAppId { get; set; }
+
+                    [NameInMap("Cpu")]
+                    [Validation(Required=false)]
+                    public int? Cpu { get; set; }
+
+                    [NameInMap("Instances")]
+                    [Validation(Required=false)]
+                    public int? Instances { get; set; }
+
+                    [NameInMap("Mem")]
+                    [Validation(Required=false)]
+                    public int? Mem { get; set; }
+
+                    [NameInMap("MseEnabled")]
+                    [Validation(Required=false)]
+                    public bool? MseEnabled { get; set; }
+
+                    [NameInMap("NamespaceId")]
+                    [Validation(Required=false)]
+                    public string NamespaceId { get; set; }
+
+                    [NameInMap("ProgrammingLanguage")]
+                    [Validation(Required=false)]
+                    public string ProgrammingLanguage { get; set; }
+
+                    [NameInMap("RegionId")]
+                    [Validation(Required=false)]
+                    public string RegionId { get; set; }
+
+                    [NameInMap("RunningInstances")]
+                    [Validation(Required=false)]
+                    public int? RunningInstances { get; set; }
+
+                    [NameInMap("ScaleRuleEnabled")]
+                    [Validation(Required=false)]
+                    public bool? ScaleRuleEnabled { get; set; }
+
+                    [NameInMap("ScaleRuleType")]
+                    [Validation(Required=false)]
+                    public string ScaleRuleType { get; set; }
+
+                    [NameInMap("Tags")]
+                    [Validation(Required=false)]
+                    public List<ListApplicationsResponseBodyDataApplicationsChildrenTags> Tags { get; set; }
+                    public class ListApplicationsResponseBodyDataApplicationsChildrenTags : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
                 public int? Cpu { get; set; }
@@ -80,12 +164,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public int? Mem { get; set; }
 
+                [NameInMap("MseEnabled")]
+                [Validation(Required=false)]
+                public bool? MseEnabled { get; set; }
+
                 /// <summary>
                 /// demo-app
                 /// </summary>
                 [NameInMap("NamespaceId")]
                 [Validation(Required=false)]
                 public string NamespaceId { get; set; }
+
+                [NameInMap("ProgrammingLanguage")]
+                [Validation(Required=false)]
+                public string ProgrammingLanguage { get; set; }
 
                 /// <summary>
                 /// The number of running instances.

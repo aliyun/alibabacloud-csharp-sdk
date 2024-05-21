@@ -598,6 +598,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
+            [NameInMap("ServiceTags")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> ServiceTags { get; set; }
+
             /// <summary>
             /// The logging configurations of Log Service.
             /// 

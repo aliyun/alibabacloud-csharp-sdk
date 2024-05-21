@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public bool? AutoConfig { get; set; }
 
+        [NameInMap("BaseAppId")]
+        [Validation(Required=false)]
+        public string BaseAppId { get; set; }
+
         /// <summary>
         /// sleep
         /// </summary>
@@ -170,6 +174,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("MicroRegistration")]
         [Validation(Required=false)]
         public string MicroRegistration { get; set; }
+
+        [NameInMap("MicroRegistrationConfig")]
+        [Validation(Required=false)]
+        public string MicroRegistrationConfig { get; set; }
 
         /// <summary>
         /// [{mountPath: "/tmp", nasPath: "/"}]
@@ -328,6 +336,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
+
+        [NameInMap("ServiceTags")]
+        [Validation(Required=false)]
+        public string ServiceTags { get; set; }
 
         /// <summary>
         /// [{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]

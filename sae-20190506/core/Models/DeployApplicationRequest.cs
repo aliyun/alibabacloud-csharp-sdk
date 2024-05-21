@@ -271,6 +271,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string MicroRegistration { get; set; }
 
+        [NameInMap("MicroRegistrationConfig")]
+        [Validation(Required=false)]
+        public string MicroRegistrationConfig { get; set; }
+
         /// <summary>
         /// The percentage of the minimum number of available instances. Take note of the following rules:
         /// 
@@ -460,6 +464,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
+
+        [NameInMap("ServiceTags")]
+        [Validation(Required=false)]
+        public string ServiceTags { get; set; }
 
         /// <summary>
         /// The logging configurations of Log Service.

@@ -884,9 +884,17 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 body["AssociateEip"] = request.AssociateEip;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseAppId))
+            {
+                body["BaseAppId"] = request.BaseAppId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMapMountDesc))
             {
                 body["ConfigMapMountDesc"] = request.ConfigMapMountDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MicroRegistrationConfig))
+            {
+                body["MicroRegistrationConfig"] = request.MicroRegistrationConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAkId))
             {
@@ -907,6 +915,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhpConfig))
             {
                 body["PhpConfig"] = request.PhpConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceTags))
+            {
+                body["ServiceTags"] = request.ServiceTags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1148,9 +1160,17 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 body["AssociateEip"] = request.AssociateEip;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseAppId))
+            {
+                body["BaseAppId"] = request.BaseAppId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMapMountDesc))
             {
                 body["ConfigMapMountDesc"] = request.ConfigMapMountDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MicroRegistrationConfig))
+            {
+                body["MicroRegistrationConfig"] = request.MicroRegistrationConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAkId))
             {
@@ -1171,6 +1191,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhpConfig))
             {
                 body["PhpConfig"] = request.PhpConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceTags))
+            {
+                body["ServiceTags"] = request.ServiceTags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3736,6 +3760,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 body["ConfigMapMountDesc"] = request.ConfigMapMountDesc;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MicroRegistrationConfig))
+            {
+                body["MicroRegistrationConfig"] = request.MicroRegistrationConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAkId))
             {
                 body["OssAkId"] = request.OssAkId;
@@ -3755,6 +3783,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhpConfig))
             {
                 body["PhpConfig"] = request.PhpConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceTags))
+            {
+                body["ServiceTags"] = request.ServiceTags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4002,6 +4034,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 body["ConfigMapMountDesc"] = request.ConfigMapMountDesc;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MicroRegistrationConfig))
+            {
+                body["MicroRegistrationConfig"] = request.MicroRegistrationConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAkId))
             {
                 body["OssAkId"] = request.OssAkId;
@@ -4021,6 +4057,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhpConfig))
             {
                 body["PhpConfig"] = request.PhpConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceTags))
+            {
+                body["ServiceTags"] = request.ServiceTags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
