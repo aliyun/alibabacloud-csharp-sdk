@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstancesFullStatusResponseBody : TeaModel {
         /// <summary>
-        /// The full status information of the instances.
+        /// The queried instances.
+        /// 
+        /// >  If no instances exist, this parameter is empty.
         /// </summary>
         [NameInMap("InstanceFullStatusSet")]
         [Validation(Required=false)]
@@ -44,14 +46,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// Details about the scheduled system events.
+                /// The system events that are in the Scheduled or Inquiring state.
                 /// </summary>
                 [NameInMap("ScheduledSystemEventSet")]
                 [Validation(Required=false)]
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// The ID of the system event.
+                        /// The system event ID.
                         /// </summary>
                         [NameInMap("EventId")]
                         [Validation(Required=false)]
@@ -123,6 +125,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                         /// <summary>
                         /// The extended attributes of system events generated for instances that have local disks attached.
+                        /// 
+                        /// The return values vary based on the system event type.
+                        /// 
+                        /// If the system event type is not one of the following types, this parameter is empty:
+                        /// 
+                        /// *   SystemMaintenance.StopAndRepair
+                        /// *   SystemMaintenance.CleanInactiveDisks
+                        /// *   SecurityPunish.Locked
+                        /// *   SecurityPunish.WebsiteBanned
+                        /// *   SystemUpgrade.Migrate
+                        /// *   SystemMaintenance.RebootAndIsolateErrorDisk
+                        /// *   SystemMaintenance.RebootAndReInitErrorDisk
+                        /// *   SystemMaintenance.ReInitErrorDisk
+                        /// *   SystemMaintenance.IsolateErrorDisk
                         /// </summary>
                         [NameInMap("ExtendedAttribute")]
                         [Validation(Required=false)]
@@ -143,7 +159,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string DiskId { get; set; }
 
                             /// <summary>
-                            /// The inactive cloud disks or local disks that have been released and must be cleared.
+                            /// The inactive disks that have been released and must be cleared.
                             /// </summary>
                             [NameInMap("InactiveDisks")]
                             [Validation(Required=false)]
@@ -154,47 +170,47 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 public List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk> InactiveDisk { get; set; }
                                 public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk : TeaModel {
                                     /// <summary>
-                                    /// The time when the cloud disk or local disk was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                                    /// The time when the disk was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                                     /// </summary>
                                     [NameInMap("CreationTime")]
                                     [Validation(Required=false)]
                                     public string CreationTime { get; set; }
 
                                     /// <summary>
-                                    /// The category of the cloud disk or local disk. Valid values:
+                                    /// The category of the disk. Valid values:
                                     /// 
-                                    /// *   cloud: basic disk.
-                                    /// *   cloud_efficiency: ultra disk.
-                                    /// *   cloud_ssd: standard SSD.
-                                    /// *   cloud_essd: enhanced SSD (ESSD).
-                                    /// *   local_ssd_pro: I/O-intensive local disk.
-                                    /// *   local_hdd_pro: throughput-intensive local disk.
-                                    /// *   ephemeral: retired local disk.
-                                    /// *   ephemeral_ssd: retired local SSD.
+                                    /// *   cloud: basic disk
+                                    /// *   cloud_efficiency: ultra disk
+                                    /// *   cloud_ssd: standard SSD
+                                    /// *   cloud_essd: Enterprise SSD (ESSD)
+                                    /// *   local_ssd_pro: I/O-intensive local disk
+                                    /// *   local_hdd_pro: throughput-intensive local disk
+                                    /// *   ephemeral: retired local disk
+                                    /// *   ephemeral_ssd: retired local SSD
                                     /// </summary>
                                     [NameInMap("DeviceCategory")]
                                     [Validation(Required=false)]
                                     public string DeviceCategory { get; set; }
 
                                     /// <summary>
-                                    /// The size of the cloud disk or local disk. Unit: GiB.
+                                    /// The size of the disk. Unit: GiB.
                                     /// </summary>
                                     [NameInMap("DeviceSize")]
                                     [Validation(Required=false)]
                                     public string DeviceSize { get; set; }
 
                                     /// <summary>
-                                    /// The type of the cloud disk or local disk. Valid values:
+                                    /// The type of the disk. Valid values:
                                     /// 
-                                    /// *   system: system disk.
-                                    /// *   data: data disk.
+                                    /// *   system
+                                    /// *   data
                                     /// </summary>
                                     [NameInMap("DeviceType")]
                                     [Validation(Required=false)]
                                     public string DeviceType { get; set; }
 
                                     /// <summary>
-                                    /// The time when the cloud disk or local disk was released. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                                    /// The time when the disk was released. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                                     /// </summary>
                                     [NameInMap("ReleaseTime")]
                                     [Validation(Required=false)]
@@ -208,13 +224,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                         /// <summary>
                         /// The impact level of the system event.
+                        /// 
+                        /// >  If the user is not in a whitelist, this parameter is empty.
                         /// </summary>
                         [NameInMap("ImpactLevel")]
                         [Validation(Required=false)]
                         public string ImpactLevel { get; set; }
 
                         /// <summary>
-                        /// The scheduled O\\&M time of the system event. The time is displayed in UTC.
+                        /// The scheduled time at which to execute the O\\&M task related to the system event. The time is displayed in UTC.
                         /// </summary>
                         [NameInMap("NotBefore")]
                         [Validation(Required=false)]
@@ -222,6 +240,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                         /// <summary>
                         /// The reason why the system event was scheduled.
+                        /// 
+                        /// >  If the exception cause is not detected, this parameter is empty.
                         /// </summary>
                         [NameInMap("Reason")]
                         [Validation(Required=false)]

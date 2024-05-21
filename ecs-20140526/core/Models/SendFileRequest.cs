@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class SendFileRequest : TeaModel {
         /// <summary>
-        /// The content of the remote file. The content must not exceed 32 KB in size after it is encoded in Base64.
+        /// The content of the file. The file must not exceed 32 KB in size after it is encoded in Base64.
         /// 
-        /// *   If `ContentType` is set to `PlainText`, the Content value is in plaintext.
-        /// *   If `ContentType` is set to `Base64`, the Content value is Base64-encoded.
+        /// *   If `ContentType` is set to `PlainText`, the value of Content is in plaintext.
+        /// *   If `ContentType` is set to `Base64`, the value of Content is Base64-encoded.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// The content type of the file. Valid values:
         /// 
         /// *   PlainText: The file content is not encoded.
-        /// *   Base64: The file content is Base64-encoded.
+        /// *   Base64: The file content is encoded in Base64.
         /// 
         /// Default value: PlainText.
         /// </summary>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// The description of the file. The description supports all character sets and can be up to 512 characters in length.
+        /// The description of the file. The description can be up to 512 characters in length and can contain any characters.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The user group of the file. This parameter takes effect only for Linux instances. Default value: root. The user group name can be up to 64 characters in length.
+        /// The group of the file. This parameter takes effect only on Linux instances. Default value: root. The value can be up to 64 characters in length.
         /// 
         /// >  If you want to use a non-root user group, make sure that the user group exists in the instances.
         /// </summary>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string FileGroup { get; set; }
 
         /// <summary>
-        /// The permissions on the file. This parameter takes effect only for Linux instances. You can configure this parameter in the same way as you configure the chmod command.
+        /// The permissions on the file. This parameter takes effect only on Linux instances. You can configure this parameter in the same way as you configure the chmod command.
         /// 
         /// Default value: 0644, which indicates that the owner of the file has the read and write permissions on the file and that the user group of the file and other users have the read-only permissions on the file.
         /// </summary>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string FileMode { get; set; }
 
         /// <summary>
-        /// The owner of the file. This parameter takes effect only for Linux instances. Default value: root. The value can be up to 64 characters in length.
+        /// The owner of the file. This parameter takes effect only on Linux instances. Default value: root. The value can be up to 64 characters in length.
         /// 
         /// >  If you want to use a non-root user, make sure that the user exists in the instances.
         /// </summary>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string FileOwner { get; set; }
 
         /// <summary>
-        /// The ID of instance N to which to send the file. Up to 50 instance IDs can be specified in each request. Valid values of N: 1 to 50.
+        /// The IDs of instances to which to send the file. You can specify up to 50 instance IDs in each request. Valid values of N: 1 to 50.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the file. The name supports all character sets and can be up to 255 characters in length.
+        /// The name of the file. The name can be up to 255 characters in length and can contain any characters.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -88,8 +88,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to overwrite a file in the destination directory if the file has the same name as the sent file.
         /// 
-        /// *   true: overwrites the file.
-        /// *   false: does not overwrite the file.
+        /// *   true
+        /// *   false
         /// 
         /// Default value: false.
         /// </summary>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The ID of the resource group. When you specify this parameter, take note of the following items:
         /// 
-        /// *   The ECS instance specified by the InstanceId parameter must belong to this resource group.
+        /// *   The instance specified by the InstanceId parameter must belong to the specified resource group.
         /// *   If you specify this parameter, you can call the [DescribeSendFileResults](https://help.aliyun.com/document_detail/184117.html) operation to query file sending results in the specified resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
@@ -133,18 +133,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// The tags to add to the file sending task.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<SendFileRequestTag> Tag { get; set; }
         public class SendFileRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+            /// The key of tag N of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
             /// 
-            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.
+            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all the tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.
             /// 
-            /// The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The destination directory on the instance to which to send the file. If the specified directory does not exist, the system creates the directory on the instance. The value supports all character sets and cannot exceed 255 characters in length.
+        /// The destination directory on the instance to which to send the file. If the specified directory does not exist, the system creates the directory on the instance. The value cannot exceed 255 characters in length.
         /// 
         /// This parameter is required.
         /// </summary>

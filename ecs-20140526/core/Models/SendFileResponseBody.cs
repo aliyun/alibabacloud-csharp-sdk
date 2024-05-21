@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class SendFileResponseBody : TeaModel {
         /// <summary>
-        /// The file sending task ID.
+        /// The ID of the command task.
         /// </summary>
         [NameInMap("InvokeId")]
         [Validation(Required=false)]

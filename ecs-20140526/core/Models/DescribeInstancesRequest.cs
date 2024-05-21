@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeInstancesRequestFilter> Filter { get; set; }
         public class DescribeInstancesRequestFilter : TeaModel {
             /// <summary>
-            /// The key of filter 1 used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.
+            /// The key of filter 1 used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the specified time.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+            /// The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify `Filter.1.Key`. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -30,24 +30,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The value of attribute N. Valid values of N: 1 to 20.
+        /// The additional attributes. Valid values of N: 1 to 20. Valid values:
+        /// 
+        /// *   META_OPTIONS: instance metadata
+        /// *   DDH_CLUSTER: dedicated host cluster
+        /// *   NETWORK_PRIMARY_ENI_IP: secondary IP address associated with the primary ENI
+        /// *   CPU_OPTIONS_TOPOLOGY_TYPE: CPU topology type of the instance
         /// </summary>
         [NameInMap("AdditionalAttributes")]
         [Validation(Required=false)]
         public List<string> AdditionalAttributes { get; set; }
 
         /// <summary>
-        /// >  This parameter is currently in invitational preview and unavailable for general users.
+        /// >  This parameter is in invitational preview and is not publicly available.
         /// </summary>
         [NameInMap("DeviceAvailable")]
         [Validation(Required=false)]
         public bool? DeviceAvailable { get; set; }
 
         /// <summary>
-        /// Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:
+        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
         /// 
-        /// *   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.
-        /// *   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned and the request is made.
+        /// *   true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
+        /// *   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// 
+        /// Default value: false.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -61,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EipAddresses { get; set; }
 
         /// <summary>
-        /// The ID of the High Performance Computing (HPC) cluster to which the instance belongs.
+        /// The ID of the high-performance computing (HPC) cluster to which the instance belongs.
         /// </summary>
         [NameInMap("HpcClusterId")]
         [Validation(Required=false)]
@@ -75,14 +82,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: enabled.
         /// 
-        /// >  For more information about instance metadata, see [Overview of ECS instance metadata](https://help.aliyun.com/document_detail/49122.html).
+        /// >  For information about instance metadata, see [Access instance metadata](https://help.aliyun.com/document_detail/49122.html).
         /// </summary>
         [NameInMap("HttpEndpoint")]
         [Validation(Required=false)]
         public string HttpEndpoint { get; set; }
 
         /// <summary>
-        /// >  This parameter is currently in invitational preview and unavailable for general users.
+        /// >  This parameter is in invitational preview and is not publicly available.
         /// </summary>
         [NameInMap("HttpPutResponseHopLimit")]
         [Validation(Required=false)]
@@ -96,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: optional.
         /// 
-        /// >  For more information about modes of accessing instance metadata, see [Access mode of instance metadata](https://help.aliyun.com/document_detail/150575.html).
+        /// >  For information about modes of accessing instance metadata, see [Access instance metadata](https://help.aliyun.com/document_detail/150575.html).
         /// </summary>
         [NameInMap("HttpTokens")]
         [Validation(Required=false)]
@@ -127,14 +134,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The IDs of instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).
+        /// The ID of the instance. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// The name of the instance. Fuzzy search with the asterisk (\\*) wildcard characters is supported.
+        /// The name of the instance. Fuzzy search with asterisk (\\*) wildcard characters is supported.
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -143,8 +150,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The network type of the instance. Valid values:
         /// 
-        /// *   classic: classic network
-        /// *   vpc: VPC
+        /// *   classic
+        /// *   vpc
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
@@ -167,24 +174,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The billing method for network usage. Valid values:
         /// 
-        /// *   PayByBandwidth: pay-by-bandwidth
-        /// *   PayByTraffic: pay-by-traffic
+        /// *   PayByBandwidth
+        /// *   PayByTraffic
         /// 
-        /// >  When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instances, use the **pay-by-bandwidth** billing method for network usage.
+        /// >  When the **pay-by-traffic** billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// Specifies whether the instance is I/O optimized.
+        /// Specifies whether the instance is an I/O optimized instance. Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("IoOptimized")]
         [Validation(Required=false)]
         public bool? IoOptimized { get; set; }
 
         /// <summary>
-        /// IPv6 address N of the elastic network interface (ENI). You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.
+        /// The IPv6 addresses assigned to elastic network interfaces (ENIs).
         /// </summary>
         [NameInMap("Ipv6Address")]
         [Validation(Required=false)]
@@ -211,26 +221,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LockReason { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page. Maximum value: 100.
+        /// The maximum number of entries per page. Valid values: 1 to 100.
         /// 
         /// Default value:
         /// 
-        /// *   If this parameter is not specified or is set to a value smaller than 10, the default value is 10.
-        /// *   If this parameter is set to a value greater than 100, the default value is 100.
+        /// *   If you do not specify this parameter or if you set this parameter to a value that is smaller than 10, the default value is 10.
+        /// *   If you set this parameter to a value that is greater than 100, the default value is 100.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// >  This parameter is currently in invitational preview and unavailable for general users.
+        /// >  This parameter is in invitational preview and is not publicly available.
         /// </summary>
         [NameInMap("NeedSaleCycle")]
         [Validation(Required=false)]
         public bool? NeedSaleCycle { get; set; }
 
         /// <summary>
-        /// The query token. Set the value to the `NextToken` value returned in the last call to the DescribeInstances operation.
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -245,7 +255,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// Pages start from page 1.
         /// 
@@ -256,9 +266,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// 
-        /// Maximum value: 100.
+        /// Valid values: 1 to 100.
         /// 
         /// Default value: 10.
         /// </summary>
@@ -267,7 +277,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The private IP addresses of instances located in VPCs. This parameter is valid when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
+        /// The private IP addresses of instances located in a VPC. This parameter is valid when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
         /// </summary>
         [NameInMap("PrivateIpAddresses")]
         [Validation(Required=false)]
@@ -281,7 +291,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PublicIpAddresses { get; set; }
 
         /// <summary>
-        /// The Remote Direct Memory Access (RDMA) IP address of the HPC instance.
+        /// The remote direct memory access (RDMA) IP addresses of the instance in the HPC cluster.
         /// </summary>
         [NameInMap("RdmaIpAddresses")]
         [Validation(Required=false)]
@@ -321,7 +331,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// The state of the instance. Valid values:
+        /// The status of the instance. Valid values:
         /// 
         /// *   Pending: The instance is being created.
         /// *   Running: The instance is running.
@@ -334,7 +344,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tags of the instance.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -343,7 +353,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The key of tag N of the instance. Valid values of N: 1 to 20.
             /// 
-            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.
+            /// If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -359,14 +369,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the vSwitch to which the instance is connected.
+        /// The ID of the vSwitch.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) to which the instance belongs.
+        /// The ID of the virtual private cloud (VPC).
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

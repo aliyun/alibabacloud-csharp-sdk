@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource> AvailableResource { get; set; }
                     public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource : TeaModel {
                         /// <summary>
-                        /// The resource types that resources can be changed to after the resources meet specified conditions.
+                        /// The resource types that resources can be changed to after the resources meet specified conditions. If the conditions are met, you can change the current resource to a resource in the list.
                         /// </summary>
                         [NameInMap("ConditionSupportedResources")]
                         [Validation(Required=false)]
@@ -67,42 +67,48 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 }
 
                                 /// <summary>
-                                /// The maximum resource specification value. This parameter is not returned if it has no value.
+                                /// The maximum disk capacity.
+                                /// 
+                                /// This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
                                 /// </summary>
                                 [NameInMap("Max")]
                                 [Validation(Required=false)]
                                 public int? Max { get; set; }
 
                                 /// <summary>
-                                /// The minimum resource specification value. This parameter is not returned if it has no value.
+                                /// The minimum disk capacity.
+                                /// 
+                                /// This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
                                 /// </summary>
                                 [NameInMap("Min")]
                                 [Validation(Required=false)]
                                 public int? Min { get; set; }
 
                                 /// <summary>
-                                /// The stock status of the resource. Valid values:
+                                /// The stock state of the resource. Valid values:
                                 /// 
-                                /// - Available
-                                /// - SoldOut
+                                /// *   Available
+                                /// *   SoldOut
                                 /// </summary>
                                 [NameInMap("Status")]
                                 [Validation(Required=false)]
                                 public string Status { get; set; }
 
                                 /// <summary>
-                                /// The category of resource based on stock status. Valid values:
+                                /// The category of the resource based on stock status. Valid values:
                                 /// 
-                                /// - WithStock: resources that are in sufficient stock
-                                /// - ClosedWithStock: resources that are in insufficient stock
-                                /// - WithoutStock: resources that are out of stock
+                                /// *   WithStock: resources that are in sufficient stock
+                                /// *   ClosedWithStock: resources that are in insufficient stock
+                                /// *   WithoutStock: resources that are out of stock
                                 /// </summary>
                                 [NameInMap("StatusCategory")]
                                 [Validation(Required=false)]
                                 public string StatusCategory { get; set; }
 
                                 /// <summary>
-                                /// The resource specification unit. This parameter is not returned if it has no value.
+                                /// The unit of the disk capacity.
+                                /// 
+                                /// This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
                                 /// </summary>
                                 [NameInMap("Unit")]
                                 [Validation(Required=false)]
@@ -131,21 +137,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource> SupportedResource { get; set; }
                             public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource : TeaModel {
                                 /// <summary>
-                                /// The maximum resource specification value. This parameter is not returned if it has no value.
+                                /// The maximum disk capacity.
+                                /// 
+                                /// This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
                                 /// </summary>
                                 [NameInMap("Max")]
                                 [Validation(Required=false)]
                                 public int? Max { get; set; }
 
                                 /// <summary>
-                                /// The minimum resource specification value. This parameter is not returned if it has no value.
+                                /// The minimum disk capacity.
+                                /// 
+                                /// This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
                                 /// </summary>
                                 [NameInMap("Min")]
                                 [Validation(Required=false)]
                                 public int? Min { get; set; }
 
                                 /// <summary>
-                                /// The status of the resource. Valid values:
+                                /// The state of the resource. Valid values:
                                 /// 
                                 /// *   Available
                                 /// *   SoldOut
@@ -155,7 +165,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 public string Status { get; set; }
 
                                 /// <summary>
-                                /// The category of resource based on stock status. Valid values:
+                                /// The category of the resource based on stock status. Valid values:
                                 /// 
                                 /// *   WithStock: resources that are in sufficient stock
                                 /// *   ClosedWithStock: resources that are in insufficient stock
@@ -166,7 +176,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 public string StatusCategory { get; set; }
 
                                 /// <summary>
-                                /// The resource specification unit. This parameter is not returned if it has no value.
+                                /// The unit of the disk capacity. This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
                                 /// </summary>
                                 [NameInMap("Unit")]
                                 [Validation(Required=false)]
@@ -184,7 +194,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// The type of resource. Valid values:
+                        /// The type of the resources. Valid values:
                         /// 
                         /// *   Zone
                         /// *   IoOptimized
@@ -202,14 +212,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The status of the resource. Valid values:
+                /// The state of the resource. Valid values:
                 /// 
                 /// *   Available
                 /// *   SoldOut
@@ -219,7 +229,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The category of resource based on stock status. Valid values:
+                /// The category of the resource based on stock status. Valid values:
                 /// 
                 /// *   WithStock: resources that are in sufficient stock
                 /// *   ClosedWithStock: resources that are in insufficient stock
@@ -230,7 +240,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string StatusCategory { get; set; }
 
                 /// <summary>
-                /// The ID of the zone.
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

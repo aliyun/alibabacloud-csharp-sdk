@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelinesResponseBody : TeaModel {
         /// <summary>
-        /// Details of the image templates.
+        /// Details about the image templates.
         /// </summary>
         [NameInMap("ImagePipeline")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet> ImagePipelineSet { get; set; }
             public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet : TeaModel {
                 /// <summary>
-                /// The IDs of Alibaba Cloud accounts to which to share the created image.
+                /// The IDs of Alibaba Cloud accounts to which to share the image that will be created based on the image template.
                 /// </summary>
                 [NameInMap("AddAccounts")]
                 [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name prefix of the created image.
+                /// The name prefix of the image to be created based on the image template.
                 /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ImagePipelineId { get; set; }
 
                 /// <summary>
-                /// The instance type of the intermediate instance.
+                /// The instance type.
                 /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The system disk size of the intermediate instance. Unit: GiB.
+                /// The system disk size of the intermediate instance. Unit: GiB
                 /// </summary>
                 [NameInMap("SystemDiskSize")]
                 [Validation(Required=false)]
@@ -142,14 +142,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag> Tag { get; set; }
                     public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the image template.
+                        /// The key of the tag.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value of the image template.
+                        /// The value of the tag.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The IDs of regions to which to distribute the created image.
+                /// The IDs of regions to which to distribute the image that will be created based on the image template.
                 /// </summary>
                 [NameInMap("ToRegionIds")]
                 [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// The ID of the vSwitch in the virtual private cloud (VPC).
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
@@ -184,21 +184,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The maximum number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the return value, see the "Usage notes" section of this topic.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

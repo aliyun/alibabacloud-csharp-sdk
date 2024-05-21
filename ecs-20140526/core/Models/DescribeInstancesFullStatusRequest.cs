@@ -72,16 +72,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// The health state of the instance. Valid values:
+        /// The health status of the instance. Valid values:
         /// 
-        /// *   Impaired: The instance is impaired.
-        /// *   Warning: The performance of the instance is degraded.
-        /// *   Maintaining: The instance is being maintained.
-        /// *   Initializing: The instance is being initialized.
-        /// *   InsufficientData: The state cannot be determined due to insufficient data.
-        /// *   NotApplicable: The state is not applicable.
+        /// *   OK
+        /// *   Impaired
+        /// *   Initializing
+        /// *   InsufficientData
+        /// *   NotApplicable
         /// 
-        /// All these values are case-sensitive.
+        /// All the values are case-sensitive.
         /// </summary>
         [NameInMap("HealthStatus")]
         [Validation(Required=false)]
@@ -145,11 +144,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The lifecycle state of the instance. Valid values:
+        /// The lifecycle status of the instance. Valid values:
         /// 
-        /// *   Starting: The instance is being started.
-        /// *   Running: The instance is running.
-        /// *   Stopped: The instance is stopped.
+        /// *   Starting
+        /// *   Running
+        /// *   Stopped
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

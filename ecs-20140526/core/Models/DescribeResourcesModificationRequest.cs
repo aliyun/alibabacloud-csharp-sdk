@@ -10,23 +10,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeResourcesModificationRequest : TeaModel {
         /// <summary>
-        /// The condition. If you specify this parameter, the system queries the resource types that the resource can be changed to after the resource meets the specified condition.
-        /// 
-        /// Set the value to DiskCategory, which indicates a disk category change. When you set this parameter to DiskCategory, the system queries the instance types that the instance can be changed to after a disk category change.
+        /// The conditions.
         /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
         public List<string> Conditions { get; set; }
 
         /// <summary>
-        /// The number of vCPU cores of the instance type. For information about the values, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html). This parameter takes effect only when DestinationResource is set to InstanceType.
+        /// The number of vCPUs of the instance type. For information about the values, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html). This parameter takes effect only when DestinationResource is set to InstanceType.
         /// </summary>
         [NameInMap("Cores")]
         [Validation(Required=false)]
         public int? Cores { get; set; }
 
         /// <summary>
-        /// The target resource type. Valid values:
+        /// The type of the resource. Valid values:
         /// 
         /// *   InstanceType
         /// *   SystemDisk
@@ -38,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationResource { get; set; }
 
         /// <summary>
-        /// The instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html) or call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent instance type list. This parameter is required when DestinationResource is set to SystemDisk.
+        /// The instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html). You can also call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent instance type list. This parameter must be specified when DestinationResource is set to SystemDisk.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -59,14 +57,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: false.
         /// 
-        /// When MigrateAcrossZone is set to true and you upgrade the instance type of an Elastic Compute Service (ECS) instance based on the returned information, take note of the following items:
+        /// When MigrateAcrossZone is set to true and you upgrade the instance type of an instance based on the returned information, take note of the following items:
         /// 
-        /// *   Instances that reside in the classic network:
+        /// *   Instance that resides in the classic network:
         /// 
-        ///     *   For [retired instance types](https://help.aliyun.com/document_detail/55263.html), when a non-I/O-optimized instance is upgraded to an I/O-optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For Linux instances, basic disks (cloud) are identified as xvd\\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\\* such as vda and vdb.
+        ///     *   For [retired instance types](https://help.aliyun.com/document_detail/55263.html), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\\* such as vda and vdb.
         ///     *   For [instance families available for purchase](https://help.aliyun.com/document_detail/25378.html), when the instance type of an instance is changed, the private IP address of the instance changes.
         /// 
-        /// *   Instances that reside in virtual private clouds (VPCs): For [retired instance types](https://help.aliyun.com/document_detail/55263.html), when a non-I/O-optimized instance is upgraded to an I/O-optimized instance, the disk device names and software authorization codes of the instance change. For Linux instances, basic disks (cloud) are identified as xvd\\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\\* such as vda and vdb.
+        /// *   Instance that resides in a virtual private cloud (VPC): For [retired instance types](https://help.aliyun.com/document_detail/55263.html), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\\* such as vda and vdb.
         /// </summary>
         [NameInMap("MigrateAcrossZone")]
         [Validation(Required=false)]
@@ -77,12 +75,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// *   Valid values for subscription resources:
         /// 
-        ///     *   Upgrade
-        ///     *   Downgrade
-        ///     *   RenewDowngrade
-        ///     *   RenewModify
+        ///     *   Upgrade: upgrades resources.
+        ///     *   Downgrade: downgrades resources.
+        ///     *   RenewDowngrade: renews and downgrades resources.
+        ///     *   RenewModify: renews an expired instance and changes its configurations.
         /// 
-        /// *   Valid values for pay-as-you-go resources: Upgrade
+        /// *   Set the value to Upgrade for pay-as-you-go resources.
         /// 
         /// Default value: Upgrade.
         /// </summary>
@@ -99,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -125,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the zone.
+        /// The zone ID.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

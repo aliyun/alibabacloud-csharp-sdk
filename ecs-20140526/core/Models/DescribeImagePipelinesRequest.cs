@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelinesRequest : TeaModel {
         /// <summary>
-        /// The ID of image template N. Valid values of N: 1 to 20.
+        /// The IDs of image templates. Valid values of N: 1 to 20.
         /// </summary>
         [NameInMap("ImagePipelineId")]
         [Validation(Required=false)]
         public List<string> ImagePipelineId { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page. Valid values: 1 to 500.
+        /// The number of entries per page. Valid values: 1 to 500.
         /// 
         /// Default value: 50.
         /// </summary>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The query token. Set the value to the `NextToken` value returned in the last call to the DescribeImagePipelines operation. Leave this parameter empty the first time you call this operation.
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -74,21 +74,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The key of tag N of the image template. Valid values of N: 1 to 20.
+        /// The tags of the image template.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeImagePipelinesRequestTag> Tag { get; set; }
         public class DescribeImagePipelinesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N of the image template. Valid values of N: 1 to 20.
+            /// The key of tag N. Valid values of N: 1 to 20.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N of the image template. Valid values of N: 1 to 20.
+            /// The value of tag N. Valid values of N: 1 to 20.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

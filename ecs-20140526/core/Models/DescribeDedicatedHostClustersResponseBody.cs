@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The size of available memory. Unit: GiB.
+                    /// The size of available memory. Unit: GiB
                     /// </summary>
                     [NameInMap("AvailableMemory")]
                     [Validation(Required=false)]
@@ -82,27 +82,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacitiesLocalStorageCapacity> LocalStorageCapacity { get; set; }
                         public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacitiesLocalStorageCapacity : TeaModel {
                             /// <summary>
-                            /// The available capacity of the local disk. Unit: GiB.
+                            /// The available capacity of the local disk. Unit: GiB
                             /// </summary>
                             [NameInMap("AvailableDisk")]
                             [Validation(Required=false)]
                             public int? AvailableDisk { get; set; }
 
                             /// <summary>
-                            /// The category of the data disk. Valid values:
+                            /// The category of data disks. Valid values:
                             /// 
-                            /// - cloud: basic disk
-                            /// - cloud_efficiency: ultra disk
-                            /// - cloud_ssd: standard SSD
-                            /// - ephemeral_ssd: local SSD
-                            /// - cloud_essd: enhanced SSD (ESSD)
+                            /// *   cloud: basic disk
+                            /// *   cloud_efficiency: ultra disk
+                            /// *   cloud_ssd: standard SSD
+                            /// *   ephemeral_ssd: local SSD
+                            /// *   cloud_essd: Enterprise SSD (ESSD)
                             /// </summary>
                             [NameInMap("DataDiskCategory")]
                             [Validation(Required=false)]
                             public string DataDiskCategory { get; set; }
 
                             /// <summary>
-                            /// The total capacity of the local disk. Unit: GiB.
+                            /// The total capacity of the local disk. Unit: GiB
                             /// </summary>
                             [NameInMap("TotalDisk")]
                             [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The total memory size. Unit: GiB.
+                    /// The total memory size. Unit: GiB
                     /// </summary>
                     [NameInMap("TotalMemory")]
                     [Validation(Required=false)]
@@ -217,21 +217,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

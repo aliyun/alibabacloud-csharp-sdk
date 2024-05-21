@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UnassignPrivateIpAddressesRequest : TeaModel {
         /// <summary>
-        /// IPv4 prefix N. Valid values of N: 1 to 10.
+        /// The IPv4 prefixes to unassign.
         /// </summary>
         [NameInMap("Ipv4Prefix")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Secondary private IP address N to unassign. Valid values of N: 1 to 32.
+        /// The secondary private IP addresses to unassign.
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

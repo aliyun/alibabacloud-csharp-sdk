@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstancesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the instances.
+        /// Details about the queried instances.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeInstancesResponseBodyInstancesInstance : TeaModel {
                 /// <summary>
-                /// The time when to automatically release the pay-as-you-go instance.
+                /// The automatic release time of the pay-as-you-go instance.
                 /// </summary>
                 [NameInMap("AutoReleaseTime")]
                 [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The ID of the cluster to which the instance belongs.
                 /// 
-                /// >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+                /// >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
                 /// </summary>
                 [NameInMap("ClusterId")]
                 [Validation(Required=false)]
@@ -74,9 +74,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The CPU topology type of the instance. Valid values:
                     /// 
-                    /// - ContinuousCoreToHTMapping: Hyper-Threading (HT) continuous mode
-                    /// 
-                    /// - DiscreteCoreToHTMapping: HT discrete mode
+                    /// *   ContinuousCoreToHTMapping: Hyper-Threading (HT) continuous mode
+                    /// *   DiscreteCoreToHTMapping: HT discrete mode
                     /// </summary>
                     [NameInMap("TopologyType")]
                     [Validation(Required=false)]
@@ -94,15 +93,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The performance mode of the burstable instance. Valid values:
                 /// 
-                /// *   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](https://help.aliyun.com/document_detail/59977.html).
-                /// *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](https://help.aliyun.com/document_detail/59977.html).
+                /// *   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).
+                /// *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).
                 /// </summary>
                 [NameInMap("CreditSpecification")]
                 [Validation(Required=false)]
                 public string CreditSpecification { get; set; }
 
                 /// <summary>
-                /// Details about the dedicated host. It is an array that consists of the DedicatedHostClusterId, DedicatedHostId, and DedicatedHostName parameters.
+                /// The information about the dedicated host. The value is an array that consists of DedicatedHostClusterId, DedicatedHostId, and DedicatedHostName.
                 /// </summary>
                 [NameInMap("DedicatedHostAttribute")]
                 [Validation(Required=false)]
@@ -139,10 +138,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute DedicatedInstanceAttribute { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute : TeaModel {
                     /// <summary>
-                    /// Indicates whether the instance on the dedicated host is associated with the dedicated host. Valid values: 
+                    /// Indicates whether the instance on the dedicated host is associated with the dedicated host. Valid values:
                     /// 
-                    /// - default: The instance is not associated with the dedicated host. When the instance is started from economical mode, the instance may be automatically deployed on another dedicated host in the automatic deployment resource pool.
-                    /// - host: The instance is associated with the dedicated host. When the instance is started from economical mode, the instance is still deployed on the original dedicated host.
+                    /// *   default: The instance is not associated with the dedicated host. When the instance is restarted from economical mode, the instance may be automatically deployed on another dedicated host in the automatic deployment resource pool.
+                    /// *   host: The instance is associated with the dedicated host. When the instance is restarted from economical mode, the instance is still deployed on the original dedicated host.
                     /// </summary>
                     [NameInMap("Affinity")]
                     [Validation(Required=false)]
@@ -151,8 +150,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// Indicates whether the instance is hosted on a dedicated host. Valid values:
                     /// 
-                    /// - default: The instance is not hosted on a dedicated host.
-                    /// - host: The instance is hosted on a dedicated host.
+                    /// *   default: The instance is not hosted on a dedicated host.
+                    /// *   host: The instance is hosted on a dedicated host.
                     /// </summary>
                     [NameInMap("Tenancy")]
                     [Validation(Required=false)]
@@ -161,12 +160,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The release protection attribute of the instance. This parameter indicates whether you can use the ECS console or call the DeleteInstance operation to release the instance.
+                /// Indicates whether release protection was enabled for the instance. This parameter determines whether you can use the ECS console or call the DeleteInstance operation to release the instance.
                 /// 
-                /// *   true: Release protection is enabled for the instance.
-                /// *   false: Release protection is disabled for the instance.
+                /// *   true: Release protection was enabled for the instance.
+                /// *   false: Release protection was disabled for the instance.
                 /// 
-                /// >  This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
+                /// >  This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.
                 /// </summary>
                 [NameInMap("DeletionProtection")]
                 [Validation(Required=false)]
@@ -180,7 +179,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? DeploymentSetGroupNo { get; set; }
 
                 /// <summary>
-                /// The ID of the deployment set in which the instance is deployed.
+                /// The ID of the deployment set.
                 /// </summary>
                 [NameInMap("DeploymentSetId")]
                 [Validation(Required=false)]
@@ -194,14 +193,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Indicates whether data disks can be attached to the instance.
+                /// Indicates whether data disks can be attached to the instance. Valid values:
+                /// 
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("DeviceAvailable")]
                 [Validation(Required=false)]
                 public bool? DeviceAvailable { get; set; }
 
                 /// <summary>
-                /// Details about the capacity reservation related to the instance.
+                /// Details about the capacity reservation associated with the instance.
                 /// </summary>
                 [NameInMap("EcsCapacityReservationAttr")]
                 [Validation(Required=false)]
@@ -245,10 +247,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public int? Bandwidth { get; set; }
 
                     /// <summary>
-                    /// The billing method of the EIP. Valid values: 
+                    /// The billing method of the EIP. Valid values:
                     /// 
-                    /// - PayByBandwidth
-                    /// - PayByTraffic
+                    /// *   PayByBandwidth
+                    /// *   PayByTraffic
                     /// </summary>
                     [NameInMap("InternetChargeType")]
                     [Validation(Required=false)]
@@ -271,7 +273,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).
+                /// The expiration time of the instance. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
@@ -292,14 +294,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string GPUSpec { get; set; }
 
                 /// <summary>
-                /// >  This parameter is in invitational preview and is unavailable for general users.
+                /// >  This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("HibernationOptions")]
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceHibernationOptions HibernationOptions { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstanceHibernationOptions : TeaModel {
                     /// <summary>
-                    /// >  This parameter is in invitational preview and is unavailable for general users.
+                    /// >  This parameter is in invitational preview and is not publicly available.
                     /// </summary>
                     [NameInMap("Configured")]
                     [Validation(Required=false)]
@@ -322,14 +324,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string HpcClusterId { get; set; }
 
                 /// <summary>
-                /// >  This parameter is in invitational preview and is unavailable for general users.
+                /// >  This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("ISP")]
                 [Validation(Required=false)]
                 public string ISP { get; set; }
 
                 /// <summary>
-                /// The ID of the image that the instance is running.
+                /// The image ID of the instance.
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
@@ -343,10 +345,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public DescribeInstancesResponseBodyInstancesInstanceImageOptions ImageOptions { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstanceImageOptions : TeaModel {
                     /// <summary>
-                    /// Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid values: 
+                    /// Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid values:
                     /// 
-                    /// - true: The instance that uses the image supports logons of the ecs-user user.
-                    /// - false: The instance that uses the image does not support logons of the ecs-user user.
+                    /// *   true
+                    /// *   false
                     /// </summary>
                     [NameInMap("LoginAsNonRoot")]
                     [Validation(Required=false)]
@@ -402,14 +404,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceNetworkType { get; set; }
 
                 /// <summary>
-                /// The instance type of the instance.
+                /// The instance type.
                 /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// The instance family of the instance.
+                /// The instance family.
                 /// </summary>
                 [NameInMap("InstanceTypeFamily")]
                 [Validation(Required=false)]
@@ -418,8 +420,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The billing method for network usage. Valid values:
                 /// 
-                /// *   PayByBandwidth: pay-by-bandwidth
-                /// *   PayByTraffic: pay-by-traffic
+                /// *   PayByBandwidth
+                /// *   PayByTraffic
                 /// </summary>
                 [NameInMap("InternetChargeType")]
                 [Validation(Required=false)]
@@ -440,14 +442,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? InternetMaxBandwidthOut { get; set; }
 
                 /// <summary>
-                /// Indicates whether the instance is I/O optimized.
+                /// Indicates whether the instance is an I/O optimized instance.
+                /// 
+                /// *   true
+                /// *   false
                 /// </summary>
                 [NameInMap("IoOptimized")]
                 [Validation(Required=false)]
                 public bool? IoOptimized { get; set; }
 
                 /// <summary>
-                /// The name of the key pair bound to the instance.
+                /// The name of the key pair.
                 /// </summary>
                 [NameInMap("KeyPairName")]
                 [Validation(Required=false)]
@@ -461,14 +466,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? LocalStorageAmount { get; set; }
 
                 /// <summary>
-                /// The capacity of local disks attached to the instance.
+                /// The capacity of local disks attached to the instance. Unit: GiB
                 /// </summary>
                 [NameInMap("LocalStorageCapacity")]
                 [Validation(Required=false)]
                 public long? LocalStorageCapacity { get; set; }
 
                 /// <summary>
-                /// The memory size of the instance. Unit: MiB.
+                /// The memory size. Unit: MiB.
                 /// </summary>
                 [NameInMap("Memory")]
                 [Validation(Required=false)]
@@ -484,25 +489,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// Indicates whether the access channel is enabled for instance metadata. Valid values:
                     /// 
-                    /// - enabled
-                    /// - disabled
+                    /// *   enabled
+                    /// *   disabled
                     /// </summary>
                     [NameInMap("HttpEndpoint")]
                     [Validation(Required=false)]
                     public string HttpEndpoint { get; set; }
 
                     /// <summary>
-                    /// >  This parameter is unavailable.
+                    /// >  This parameter is not publicly available.
                     /// </summary>
                     [NameInMap("HttpPutResponseHopLimit")]
                     [Validation(Required=false)]
                     public int? HttpPutResponseHopLimit { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values: 
+                    /// Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values:
                     /// 
-                    /// - optional: The security hardening mode (IMDSv2) is not forcefully used.
-                    /// - required: The security hardening mode (IMDSv2) is forcefully used.
+                    /// *   optional: The security hardening mode (IMDSv2) is not forcefully used.
+                    /// *   required: The security hardening mode (IMDSv2) is forcefully used.
                     /// </summary>
                     [NameInMap("HttpTokens")]
                     [Validation(Required=false)]
@@ -511,7 +516,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// Details about the ENIs bound to the instance.
+                /// The ENIs bound to the instance.
                 /// </summary>
                 [NameInMap("NetworkInterfaces")]
                 [Validation(Required=false)]
@@ -522,7 +527,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface> NetworkInterface { get; set; }
                     public class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface : TeaModel {
                         /// <summary>
-                        /// The sets of IPv4 prefix.
+                        /// The IPv4 prefixes of the ENI. This parameter has a value only when `AdditionalAttributes.N` is set to `NETWORK_PRIMARY_ENI_IP`.
                         /// </summary>
                         [NameInMap("Ipv4PrefixSets")]
                         [Validation(Required=false)]
@@ -533,7 +538,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv4PrefixSetsIpv4PrefixSet> Ipv4PrefixSet { get; set; }
                             public class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv4PrefixSetsIpv4PrefixSet : TeaModel {
                                 /// <summary>
-                                /// The IPv4 prefix.
+                                /// The IPv4 prefix of the ENI.
                                 /// </summary>
                                 [NameInMap("Ipv4Prefix")]
                                 [Validation(Required=false)]
@@ -544,7 +549,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// The sets of IPv6 prefix.
+                        /// The IPv6 prefixes of the ENI. This parameter has a value only when `AdditionalAttributes.N` is set to `NETWORK_PRIMARY_ENI_IP`.
                         /// </summary>
                         [NameInMap("Ipv6PrefixSets")]
                         [Validation(Required=false)]
@@ -555,7 +560,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6PrefixSetsIpv6PrefixSet> Ipv6PrefixSet { get; set; }
                             public class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6PrefixSetsIpv6PrefixSet : TeaModel {
                                 /// <summary>
-                                /// The IPv6 prefix.
+                                /// The IPv6 prefix of the ENI.
                                 /// </summary>
                                 [NameInMap("Ipv6Prefix")]
                                 [Validation(Required=false)]
@@ -566,7 +571,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// The IPv6 addresses assigned to the ENI. This parameter has a value only when the `AdditionalAttributes.N` request parameter is set to `NETWORK_PRIMARY_ENI_IP`.
+                        /// The IPv6 addresses of the ENI. This parameter has a value only when `AdditionalAttributes.N` is set to `NETWORK_PRIMARY_ENI_IP`.
                         /// </summary>
                         [NameInMap("Ipv6Sets")]
                         [Validation(Required=false)]
@@ -577,7 +582,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set> Ipv6Set { get; set; }
                             public class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set : TeaModel {
                                 /// <summary>
-                                /// The IPv6 address assigned to the ENI.
+                                /// The IPv6 address of the ENI.
                                 /// </summary>
                                 [NameInMap("Ipv6Address")]
                                 [Validation(Required=false)]
@@ -588,7 +593,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// The media access control (MAC) address of the ENI.
+                        /// The MAC address of the ENI.
                         /// </summary>
                         [NameInMap("MacAddress")]
                         [Validation(Required=false)]
@@ -609,7 +614,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string PrimaryIpAddress { get; set; }
 
                         /// <summary>
-                        /// Details about the private IP address.
+                        /// Details about the private IP addresses of the ENI.
                         /// </summary>
                         [NameInMap("PrivateIpSets")]
                         [Validation(Required=false)]
@@ -621,13 +626,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet : TeaModel {
                                 /// <summary>
                                 /// Indicates whether the IP address is the primary private IP address.
+                                /// 
+                                /// *   true
+                                /// *   false
                                 /// </summary>
                                 [NameInMap("Primary")]
                                 [Validation(Required=false)]
                                 public bool? Primary { get; set; }
 
                                 /// <summary>
-                                /// The private IP address of the instance to which the ENI is bound.
+                                /// The private IP address of the ENI.
                                 /// </summary>
                                 [NameInMap("PrivateIpAddress")]
                                 [Validation(Required=false)]
@@ -696,11 +704,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// <summary>
                         /// The reason why the instance was locked. Valid values:
                         /// 
-                        /// - financial: The instance was locked due to overdue payments.
-                        /// - security: The instance was locked due to security reasons.
-                        /// - recycling: The preemptible instance was locked and pending release.
-                        /// - dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
-                        /// - refunded: The instance was locked because a refund was made for the instance.
+                        /// *   financial: The instance was locked due to overdue payments.
+                        /// *   security: The instance was locked due to security reasons.
+                        /// *   recycling: The preemptible instance was locked and pending release.
+                        /// *   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
+                        /// *   refunded: The instance was locked because a refund is made for the instance.
                         /// </summary>
                         [NameInMap("LockReason")]
                         [Validation(Required=false)]
@@ -724,7 +732,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The RDMA IP addresses of the HPC instance.
+                /// The RDMA IP addresses of the instance in the HPC cluster.
                 /// </summary>
                 [NameInMap("RdmaIpAddress")]
                 [Validation(Required=false)]
@@ -758,7 +766,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// >  The parameter is discontinued.
+                /// >  The parameter is removed.
                 /// </summary>
                 [NameInMap("SaleCycle")]
                 [Validation(Required=false)]
@@ -785,12 +793,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SerialNumber { get; set; }
 
                 /// <summary>
-                /// The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
+                /// The protection period of the preemptible instance. Unit: hours. Valid values:
                 /// 
-                /// *   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.
-                /// *   A value of 0 indicates that the preemptible instance has no protection period.
+                /// *   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
+                /// *   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
                 /// 
-                /// >  This parameter is returned when the SpotStrategy parameter is set to SpotWithPriceLimit or SpotAsPriceGo.
+                /// Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.
+                /// 
+                /// >  This parameter is returned when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.
                 /// </summary>
                 [NameInMap("SpotDuration")]
                 [Validation(Required=false)]
@@ -799,16 +809,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The interruption mode of the preemptible instance when the system initiates a preemptible instance interruption operation. Valid values:
                 /// 
-                /// - Terminate: releases the instance. 
-                /// 
-                /// - Stop: stops the instance in economical mode.
+                /// *   Terminate: releases the preemptible instance.
+                /// *   Stop: stops the instance in economical mode.
                 /// </summary>
                 [NameInMap("SpotInterruptionBehavior")]
                 [Validation(Required=false)]
                 public string SpotInterruptionBehavior { get; set; }
 
                 /// <summary>
-                /// The maximum hourly price of the instance. It can be accurate to three decimal places. This parameter is valid only when the SpotStrategy parameter is set to SpotWithPriceLimit.
+                /// The maximum hourly price of the instance. The value can be accurate to three decimal places. This parameter is valid when SpotStrategy is set to SpotWithPriceLimit.
                 /// </summary>
                 [NameInMap("SpotPriceLimit")]
                 [Validation(Required=false)]
@@ -818,7 +827,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// The bidding policy for the pay-as-you-go instance. Valid values:
                 /// 
                 /// *   NoSpot: The instance is a regular pay-as-you-go instance.
-                /// *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
+                /// *   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.
                 /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
                 /// </summary>
                 [NameInMap("SpotStrategy")]
@@ -842,8 +851,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// Indicates whether the instance continues to be billed after it is stopped. Valid values:
                 /// 
-                /// *   KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.
-                /// *   StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.
+                /// *   KeepCharging: The instance is stopped in standard mode. Billing for the instance continues after the instance is stopped, and resources are retained for the instance.
+                /// *   StopCharging: The instance is stopped in economical mode. Billing for some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP addresses are released. The instance may be unable to restart if some required resources are out of stock in the current region.
                 /// *   Not-applicable: The instance does not support economical mode.
                 /// </summary>
                 [NameInMap("StoppedMode")]
@@ -882,7 +891,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The virtual LAN (VLAN) ID of the instance.
                 /// 
-                /// >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+                /// >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
                 /// </summary>
                 [NameInMap("VlanId")]
                 [Validation(Required=false)]
@@ -896,7 +905,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public DescribeInstancesResponseBodyInstancesInstanceVpcAttributes VpcAttributes { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstanceVpcAttributes : TeaModel {
                     /// <summary>
-                    /// The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.
+                    /// The NAT IP address of the instance. The NAT IP address is used by ECS instances in different VPCs for communication.
                     /// </summary>
                     [NameInMap("NatIpAddress")]
                     [Validation(Required=false)]
@@ -943,37 +952,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The query token returned in this call.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of instances returned.
+        /// The total number of instances queried.
         /// 
-        /// >  If you specify the `MaxResults` and `NextToken` parameters to perform a paged query, the value of the `TotalCount` response parameter is invalid.
+        /// >  If you specify the `MaxResults` and `NextToken` request parameters to perform a paged query, the value of the `TotalCount` response parameter is invalid.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

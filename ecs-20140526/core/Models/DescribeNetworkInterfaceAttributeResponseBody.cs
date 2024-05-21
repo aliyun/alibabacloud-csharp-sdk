@@ -491,7 +491,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// The tag value of the ENI.
+        /// The tags of the ENI.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -502,14 +502,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeNetworkInterfaceAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeNetworkInterfaceAttributeResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The tag key of the ENI.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The tag value of the ENI.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]

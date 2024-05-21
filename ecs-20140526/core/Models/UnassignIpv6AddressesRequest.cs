@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UnassignIpv6AddressesRequest : TeaModel {
         /// <summary>
-        /// The IPv6 addresses to unassign. Valid values of N: 1 to 10.
+        /// IPv6 address N to unassign. Valid values of N: 1 to 10.
         /// </summary>
         [NameInMap("Ipv6Address")]
         [Validation(Required=false)]
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// The IPv6 prefixes to unassign. Valid values of N: 1 to 10.
+        /// IPv6 prefix N to unassign. Valid values of N: 1 to 10.
         /// </summary>
         [NameInMap("Ipv6Prefix")]
         [Validation(Required=false)]

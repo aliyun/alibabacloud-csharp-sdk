@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         ///     **
         /// 
-        ///     **Note** Make sure that your account balance is sufficient. Otherwise, your order becomes invalid. If your account balance is insufficient, you can set `AutoPay` to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
+        ///     **Note** Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set `AutoPay` to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
         /// 
         /// *   false: disables automatic payment. An order is generated but no payment is made.
         /// 
@@ -116,12 +116,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: false.
         /// 
-        /// When you set `MigrateAcrossZone` to `true` and you upgrade the instance based on the returned information, take note of the following items:
+        /// When you set `MigrateAcrossZone` to `true` and you upgrade the instance type of an instance based on the returned information, take note of the following items:
         /// 
         /// Instance that resides in the classic network:
         /// 
         /// *   For [retired instance types](https://help.aliyun.com/document_detail/55263.html), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\\* such as vda and vdb.
-        /// *   For [instance families available for purchase](https://help.aliyun.com/document_detail/25378.html), when the instance type of an instance is changed, the private IP address of the instance changes.
+        /// *   For [instance families available for purchase](https://help.aliyun.com/document_detail/25378.html), the private IP address of the instance changes.
         /// 
         /// Instance that resides in a virtual private cloud (VPC): For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\\* such as vda and vdb.
         /// </summary>
@@ -131,11 +131,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// >  This parameter is not publicly available.
-        /// 
-        /// Valid values:
-        /// 
-        /// *   Online
-        /// *   Offline
         /// </summary>
         [NameInMap("ModifyMode")]
         [Validation(Required=false)]
