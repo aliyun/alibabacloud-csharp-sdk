@@ -33,9 +33,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrAirport { get; set; }
 
+                [NameInMap("arr_airport_code")]
+                [Validation(Required=false)]
+                public string ArrAirportCode { get; set; }
+
                 [NameInMap("arr_city")]
                 [Validation(Required=false)]
                 public string ArrCity { get; set; }
+
+                [NameInMap("arr_city_code")]
+                [Validation(Required=false)]
+                public string ArrCityCode { get; set; }
 
                 [NameInMap("arr_time")]
                 [Validation(Required=false)]
@@ -73,9 +81,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DepAirport { get; set; }
 
+                [NameInMap("dep_airport_code")]
+                [Validation(Required=false)]
+                public string DepAirportCode { get; set; }
+
                 [NameInMap("dep_city")]
                 [Validation(Required=false)]
                 public string DepCity { get; set; }
+
+                [NameInMap("dep_city_code")]
+                [Validation(Required=false)]
+                public string DepCityCode { get; set; }
 
                 [NameInMap("dep_time")]
                 [Validation(Required=false)]
@@ -213,17 +229,33 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrAirport { get; set; }
 
+                [NameInMap("arr_airport_code")]
+                [Validation(Required=false)]
+                public string ArrAirportCode { get; set; }
+
                 [NameInMap("arr_city")]
                 [Validation(Required=false)]
                 public string ArrCity { get; set; }
+
+                [NameInMap("arr_city_code")]
+                [Validation(Required=false)]
+                public string ArrCityCode { get; set; }
 
                 [NameInMap("dep_airport")]
                 [Validation(Required=false)]
                 public string DepAirport { get; set; }
 
+                [NameInMap("dep_airport_code")]
+                [Validation(Required=false)]
+                public string DepAirportCode { get; set; }
+
                 [NameInMap("dep_city")]
                 [Validation(Required=false)]
                 public string DepCity { get; set; }
+
+                [NameInMap("dep_city_code")]
+                [Validation(Required=false)]
+                public string DepCityCode { get; set; }
 
                 [NameInMap("flight_no")]
                 [Validation(Required=false)]
@@ -267,6 +299,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<FlightOrderQueryResponseBodyModuleFlightTicketInfoList> FlightTicketInfoList { get; set; }
             public class FlightOrderQueryResponseBodyModuleFlightTicketInfoList : TeaModel {
+                [NameInMap("arr_airport")]
+                [Validation(Required=false)]
+                public string ArrAirport { get; set; }
+
+                [NameInMap("arr_airport_code")]
+                [Validation(Required=false)]
+                public string ArrAirportCode { get; set; }
+
                 [NameInMap("build_price")]
                 [Validation(Required=false)]
                 public double? BuildPrice { get; set; }
@@ -274,6 +314,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("changed")]
                 [Validation(Required=false)]
                 public bool? Changed { get; set; }
+
+                [NameInMap("dep_airport")]
+                [Validation(Required=false)]
+                public string DepAirport { get; set; }
+
+                [NameInMap("dep_airport_code")]
+                [Validation(Required=false)]
+                public string DepAirportCode { get; set; }
 
                 [NameInMap("discount")]
                 [Validation(Required=false)]

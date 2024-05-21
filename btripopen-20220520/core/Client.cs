@@ -136,6 +136,142 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         }
 
         /**
+         * @summary 批量新增企业自定义角色下人员
+         *
+         * @param tmpReq AddEmployeesToCustomRoleRequest
+         * @param headers AddEmployeesToCustomRoleHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddEmployeesToCustomRoleResponse
+         */
+        public AddEmployeesToCustomRoleResponse AddEmployeesToCustomRoleWithOptions(AddEmployeesToCustomRoleRequest tmpReq, AddEmployeesToCustomRoleHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddEmployeesToCustomRoleShrinkRequest request = new AddEmployeesToCustomRoleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIdList))
+            {
+                request.UserIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIdList, "user_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                body["role_id"] = request.RoleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdListShrink))
+            {
+                body["user_id_list"] = request.UserIdListShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddEmployeesToCustomRole",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/role/v1/customRoleEmployees/add",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddEmployeesToCustomRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 批量新增企业自定义角色下人员
+         *
+         * @param tmpReq AddEmployeesToCustomRoleRequest
+         * @param headers AddEmployeesToCustomRoleHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddEmployeesToCustomRoleResponse
+         */
+        public async Task<AddEmployeesToCustomRoleResponse> AddEmployeesToCustomRoleWithOptionsAsync(AddEmployeesToCustomRoleRequest tmpReq, AddEmployeesToCustomRoleHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddEmployeesToCustomRoleShrinkRequest request = new AddEmployeesToCustomRoleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIdList))
+            {
+                request.UserIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIdList, "user_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                body["role_id"] = request.RoleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdListShrink))
+            {
+                body["user_id_list"] = request.UserIdListShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddEmployeesToCustomRole",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/role/v1/customRoleEmployees/add",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddEmployeesToCustomRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 批量新增企业自定义角色下人员
+         *
+         * @param request AddEmployeesToCustomRoleRequest
+         * @return AddEmployeesToCustomRoleResponse
+         */
+        public AddEmployeesToCustomRoleResponse AddEmployeesToCustomRole(AddEmployeesToCustomRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AddEmployeesToCustomRoleHeaders headers = new AddEmployeesToCustomRoleHeaders();
+            return AddEmployeesToCustomRoleWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 批量新增企业自定义角色下人员
+         *
+         * @param request AddEmployeesToCustomRoleRequest
+         * @return AddEmployeesToCustomRoleResponse
+         */
+        public async Task<AddEmployeesToCustomRoleResponse> AddEmployeesToCustomRoleAsync(AddEmployeesToCustomRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AddEmployeesToCustomRoleHeaders headers = new AddEmployeesToCustomRoleHeaders();
+            return await AddEmployeesToCustomRoleWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary 新增发票抬头适用人员
          *
          * @param tmpReq AddInvoiceEntityRequest
@@ -5324,6 +5460,130 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         }
 
         /**
+         * @summary 创建企业自定义角色
+         *
+         * @param request CreateCustomRoleRequest
+         * @param headers CreateCustomRoleHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCustomRoleResponse
+         */
+        public CreateCustomRoleResponse CreateCustomRoleWithOptions(CreateCustomRoleRequest request, CreateCustomRoleHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                body["role_id"] = request.RoleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                body["role_name"] = request.RoleName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCustomRole",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/role/v1/customRoles/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCustomRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建企业自定义角色
+         *
+         * @param request CreateCustomRoleRequest
+         * @param headers CreateCustomRoleHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCustomRoleResponse
+         */
+        public async Task<CreateCustomRoleResponse> CreateCustomRoleWithOptionsAsync(CreateCustomRoleRequest request, CreateCustomRoleHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                body["role_id"] = request.RoleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                body["role_name"] = request.RoleName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCustomRole",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/role/v1/customRoles/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCustomRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建企业自定义角色
+         *
+         * @param request CreateCustomRoleRequest
+         * @return CreateCustomRoleResponse
+         */
+        public CreateCustomRoleResponse CreateCustomRole(CreateCustomRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateCustomRoleHeaders headers = new CreateCustomRoleHeaders();
+            return CreateCustomRoleWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建企业自定义角色
+         *
+         * @param request CreateCustomRoleRequest
+         * @return CreateCustomRoleResponse
+         */
+        public async Task<CreateCustomRoleResponse> CreateCustomRoleAsync(CreateCustomRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateCustomRoleHeaders headers = new CreateCustomRoleHeaders();
+            return await CreateCustomRoleWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary 创建子企业
          *
          * @param request CreateSubCorpRequest
@@ -5453,6 +5713,258 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             CreateSubCorpHeaders headers = new CreateSubCorpHeaders();
             return await CreateSubCorpWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除企业自定义角色
+         *
+         * @param request DeleteCustomRoleRequest
+         * @param headers DeleteCustomRoleHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCustomRoleResponse
+         */
+        public DeleteCustomRoleResponse DeleteCustomRoleWithOptions(DeleteCustomRoleRequest request, DeleteCustomRoleHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                body["role_id"] = request.RoleId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCustomRole",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/role/v1/customRoles/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCustomRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除企业自定义角色
+         *
+         * @param request DeleteCustomRoleRequest
+         * @param headers DeleteCustomRoleHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteCustomRoleResponse
+         */
+        public async Task<DeleteCustomRoleResponse> DeleteCustomRoleWithOptionsAsync(DeleteCustomRoleRequest request, DeleteCustomRoleHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                body["role_id"] = request.RoleId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCustomRole",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/role/v1/customRoles/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCustomRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除企业自定义角色
+         *
+         * @param request DeleteCustomRoleRequest
+         * @return DeleteCustomRoleResponse
+         */
+        public DeleteCustomRoleResponse DeleteCustomRole(DeleteCustomRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteCustomRoleHeaders headers = new DeleteCustomRoleHeaders();
+            return DeleteCustomRoleWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除企业自定义角色
+         *
+         * @param request DeleteCustomRoleRequest
+         * @return DeleteCustomRoleResponse
+         */
+        public async Task<DeleteCustomRoleResponse> DeleteCustomRoleAsync(DeleteCustomRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteCustomRoleHeaders headers = new DeleteCustomRoleHeaders();
+            return await DeleteCustomRoleWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 批量删除企业自定义角色下人员
+         *
+         * @param tmpReq DeleteEmployeesFromCustomRoleRequest
+         * @param headers DeleteEmployeesFromCustomRoleHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteEmployeesFromCustomRoleResponse
+         */
+        public DeleteEmployeesFromCustomRoleResponse DeleteEmployeesFromCustomRoleWithOptions(DeleteEmployeesFromCustomRoleRequest tmpReq, DeleteEmployeesFromCustomRoleHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteEmployeesFromCustomRoleShrinkRequest request = new DeleteEmployeesFromCustomRoleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIdList))
+            {
+                request.UserIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIdList, "user_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                body["role_id"] = request.RoleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdListShrink))
+            {
+                body["user_id_list"] = request.UserIdListShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEmployeesFromCustomRole",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/role/v1/customRoleEmployees/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEmployeesFromCustomRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 批量删除企业自定义角色下人员
+         *
+         * @param tmpReq DeleteEmployeesFromCustomRoleRequest
+         * @param headers DeleteEmployeesFromCustomRoleHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteEmployeesFromCustomRoleResponse
+         */
+        public async Task<DeleteEmployeesFromCustomRoleResponse> DeleteEmployeesFromCustomRoleWithOptionsAsync(DeleteEmployeesFromCustomRoleRequest tmpReq, DeleteEmployeesFromCustomRoleHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteEmployeesFromCustomRoleShrinkRequest request = new DeleteEmployeesFromCustomRoleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIdList))
+            {
+                request.UserIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIdList, "user_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                body["role_id"] = request.RoleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdListShrink))
+            {
+                body["user_id_list"] = request.UserIdListShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEmployeesFromCustomRole",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/role/v1/customRoleEmployees/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEmployeesFromCustomRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 批量删除企业自定义角色下人员
+         *
+         * @param request DeleteEmployeesFromCustomRoleRequest
+         * @return DeleteEmployeesFromCustomRoleResponse
+         */
+        public DeleteEmployeesFromCustomRoleResponse DeleteEmployeesFromCustomRole(DeleteEmployeesFromCustomRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteEmployeesFromCustomRoleHeaders headers = new DeleteEmployeesFromCustomRoleHeaders();
+            return DeleteEmployeesFromCustomRoleWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 批量删除企业自定义角色下人员
+         *
+         * @param request DeleteEmployeesFromCustomRoleRequest
+         * @return DeleteEmployeesFromCustomRoleResponse
+         */
+        public async Task<DeleteEmployeesFromCustomRoleResponse> DeleteEmployeesFromCustomRoleAsync(DeleteEmployeesFromCustomRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteEmployeesFromCustomRoleHeaders headers = new DeleteEmployeesFromCustomRoleHeaders();
+            return await DeleteEmployeesFromCustomRoleWithOptionsAsync(request, headers, runtime);
         }
 
         /**
@@ -21006,6 +21518,122 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         }
 
         /**
+         * @summary 查询子企业列表
+         *
+         * @param request QueryGroupCorpListRequest
+         * @param headers QueryGroupCorpListHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryGroupCorpListResponse
+         */
+        public QueryGroupCorpListResponse QueryGroupCorpListWithOptions(QueryGroupCorpListRequest request, QueryGroupCorpListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryGroupCorpList",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/sub_corps/v1/corps/action/corpList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryGroupCorpListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询子企业列表
+         *
+         * @param request QueryGroupCorpListRequest
+         * @param headers QueryGroupCorpListHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryGroupCorpListResponse
+         */
+        public async Task<QueryGroupCorpListResponse> QueryGroupCorpListWithOptionsAsync(QueryGroupCorpListRequest request, QueryGroupCorpListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryGroupCorpList",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/sub_corps/v1/corps/action/corpList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryGroupCorpListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询子企业列表
+         *
+         * @param request QueryGroupCorpListRequest
+         * @return QueryGroupCorpListResponse
+         */
+        public QueryGroupCorpListResponse QueryGroupCorpList(QueryGroupCorpListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryGroupCorpListHeaders headers = new QueryGroupCorpListHeaders();
+            return QueryGroupCorpListWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 查询子企业列表
+         *
+         * @param request QueryGroupCorpListRequest
+         * @return QueryGroupCorpListResponse
+         */
+        public async Task<QueryGroupCorpListResponse> QueryGroupCorpListAsync(QueryGroupCorpListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryGroupCorpListHeaders headers = new QueryGroupCorpListHeaders();
+            return await QueryGroupCorpListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary 报销单查询
          *
          * @param request QueryReimbursementOrderRequest
@@ -25727,6 +26355,130 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             TravelStandardQueryHeaders headers = new TravelStandardQueryHeaders();
             return await TravelStandardQueryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新企业自定义角色
+         *
+         * @param request UpdateCustomRoleRequest
+         * @param headers UpdateCustomRoleHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateCustomRoleResponse
+         */
+        public UpdateCustomRoleResponse UpdateCustomRoleWithOptions(UpdateCustomRoleRequest request, UpdateCustomRoleHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                body["role_id"] = request.RoleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                body["role_name"] = request.RoleName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCustomRole",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/role/v1/customRoles/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCustomRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新企业自定义角色
+         *
+         * @param request UpdateCustomRoleRequest
+         * @param headers UpdateCustomRoleHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateCustomRoleResponse
+         */
+        public async Task<UpdateCustomRoleResponse> UpdateCustomRoleWithOptionsAsync(UpdateCustomRoleRequest request, UpdateCustomRoleHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                body["role_id"] = request.RoleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                body["role_name"] = request.RoleName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCustomRole",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/role/v1/customRoles/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCustomRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新企业自定义角色
+         *
+         * @param request UpdateCustomRoleRequest
+         * @return UpdateCustomRoleResponse
+         */
+        public UpdateCustomRoleResponse UpdateCustomRole(UpdateCustomRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateCustomRoleHeaders headers = new UpdateCustomRoleHeaders();
+            return UpdateCustomRoleWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新企业自定义角色
+         *
+         * @param request UpdateCustomRoleRequest
+         * @return UpdateCustomRoleResponse
+         */
+        public async Task<UpdateCustomRoleResponse> UpdateCustomRoleAsync(UpdateCustomRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateCustomRoleHeaders headers = new UpdateCustomRoleHeaders();
+            return await UpdateCustomRoleWithOptionsAsync(request, headers, runtime);
         }
 
         /**

@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string RealNameEn { get; set; }
 
+            [NameInMap("role_id_list")]
+            [Validation(Required=false)]
+            public List<string> RoleIdList { get; set; }
+
             [NameInMap("third_depart_id")]
             [Validation(Required=false)]
             public string ThirdDepartId { get; set; }
