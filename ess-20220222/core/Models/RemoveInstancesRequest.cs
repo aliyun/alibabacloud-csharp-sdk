@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public bool? DecreaseDesiredCapacity { get; set; }
 
+        [NameInMap("IgnoreInvalidInstance")]
+        [Validation(Required=false)]
+        public bool? IgnoreInvalidInstance { get; set; }
+
         /// <summary>
         /// The IDs of the ECS instances that you want to remove from the scaling group.
         /// 

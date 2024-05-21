@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DeleteEciScalingConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request. This request ID is returned regardless of whether the request is successful.
+        /// The request ID.
+        /// 
+        /// The request ID is consistently returned in the response, irrespective of whether the request is executed successfully or encounters an error.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

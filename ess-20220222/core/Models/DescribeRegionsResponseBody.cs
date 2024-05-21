@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the regions.
+        /// The collection of region information.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// Indicates whether the region supports scaling groups of the classic network type. Valid values:
+            /// Indicates whether the current region supports scaling groups that reside in the classic network. Valid values:
             /// 
             /// *   true
             /// *   false
@@ -27,31 +27,31 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? ClassicUnavailable { get; set; }
 
             /// <summary>
-            /// The name of the region.
+            /// The region name.
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// The endpoint of the region.
+            /// The region endpoint.
             /// </summary>
             [NameInMap("RegionEndpoint")]
             [Validation(Required=false)]
             public string RegionEndpoint { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// The region ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// Indicates whether the region supports scaling groups of the virtual private cloud (VPC) type. Valid values:
+            /// Indicates whether the current region supports scaling groups that reside in virtual private clouds (VPCs). Valid values:
             /// 
-            /// *   true: The region does not support scaling groups of the VPC type.
-            /// *   false: The region supports scaling groups of the VPC type.
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("VpcUnavailable")]
             [Validation(Required=false)]

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to put ECS instances into the Protected state. Auto Scaling does not remove ECS instances in the Protected state from scaling groups during scale-in activities.
+        /// Specifies whether to protect ECS instances from being stopped or removed from the scaling group during scale-ins. Valid values:
         /// 
         /// *   true
         /// *   false
