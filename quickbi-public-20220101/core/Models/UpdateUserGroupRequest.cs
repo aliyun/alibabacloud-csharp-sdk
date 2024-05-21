@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// The description of the user group.
         /// 
         /// *   Format verification: Maximum length 255
-        /// *   Special format verification: Chinese and English digits\_ \ / | () ] \[
+        /// *   Special format verification: Chinese and English digits_ \\ / | () ] [
         /// </summary>
         [NameInMap("UserGroupDescription")]
         [Validation(Required=false)]
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         /// <summary>
         /// The ID of the user group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// The name of the user group.
         /// 
         /// *   Format verification: Maximum length 255
-        /// *   Special format verification: Chinese and English digits\_ \ / | () ] \[
+        /// *   Special format verification: Chinese and English digits_ \\ / | () ] [
         /// </summary>
         [NameInMap("UserGroupName")]
         [Validation(Required=false)]

@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// *   ID：
         /// 
         ///     *   Enter the UID of the account to query the account information.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Account")]
         [Validation(Required=false)]

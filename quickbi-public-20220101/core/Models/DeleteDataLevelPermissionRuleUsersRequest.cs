@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class DeleteDataLevelPermissionRuleUsersRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DeleteUserModel")]
         [Validation(Required=false)]
         public string DeleteUserModel { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class CancelAuthorizationMenuRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DataPortalId")]
         [Validation(Required=false)]
         public string DataPortalId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MenuIds")]
         [Validation(Required=false)]
         public string MenuIds { get; set; }

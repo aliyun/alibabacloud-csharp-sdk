@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
     public class GetUserGroupInfoRequest : TeaModel {
         /// <summary>
         /// The ID of the user group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]

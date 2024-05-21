@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
     public class QueryDataServiceRequest : TeaModel {
         /// <summary>
         /// Call an API that is created in DataService Studio.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// # Prerequisites
         /// 
-        /// You can use the Quick BI data service to create an API for the data service. For more information, see [Data service](~~144980~~).
+        /// You can use the Quick BI data service to create an API for the data service. For more information, see [Data service](https://help.aliyun.com/document_detail/144980.html).
         /// 
         /// # Limits
         /// 

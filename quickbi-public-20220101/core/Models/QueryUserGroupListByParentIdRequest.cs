@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// 
         /// *   If you enter the ID of the parent user group, you can obtain the information of the child user group under this ID.
         /// *   If you enter -1, you can obtain the sub-user group information under the root directory.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ParentUserGroupId")]
         [Validation(Required=false)]

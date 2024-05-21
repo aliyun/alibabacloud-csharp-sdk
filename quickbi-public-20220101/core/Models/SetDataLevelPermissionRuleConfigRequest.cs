@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class SetDataLevelPermissionRuleConfigRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RuleModel")]
         [Validation(Required=false)]
         public string RuleModel { get; set; }

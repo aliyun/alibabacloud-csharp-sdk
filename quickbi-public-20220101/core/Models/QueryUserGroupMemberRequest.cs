@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]
         public string UserGroupId { get; set; }

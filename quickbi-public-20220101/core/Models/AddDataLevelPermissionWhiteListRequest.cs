@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
     public class AddDataLevelPermissionWhiteListRequest : TeaModel {
         /// <summary>
         /// The ID of the training dataset that you want to remove from the specified custom linguistic model.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CubeId")]
         [Validation(Required=false)]

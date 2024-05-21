@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// 
         /// *   Unit: minutes. Valid values: 0 to 240. Unit: minutes. Valid values: 4 hours.
         /// *   Expired bills cannot be extended.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExpireTime")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         /// <summary>
         /// The value of the third-party embedded ticket, that is, the accessTicket value in the URL.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ticket")]
         [Validation(Required=false)]

@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// The nickname of the account.
         /// 
         /// *   Format check: The value can be up to 50 characters in length.
-        /// *   Special format verification: Chinese and English digits\_ \ / | () ] \[
+        /// *   Special format verification: Chinese and English digits_ \\ / | () ] [
         /// </summary>
         [NameInMap("NickName")]
         [Validation(Required=false)]
@@ -45,6 +45,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         /// <summary>
         /// The ID of the user to be updated. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

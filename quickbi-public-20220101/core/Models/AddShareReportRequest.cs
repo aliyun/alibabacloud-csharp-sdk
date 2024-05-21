@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// 
         /// *   1: view only
         /// *   3: View and export
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AuthPoint")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         /// <summary>
         /// The validity period of the share. The value is a timestamp in milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExpireDate")]
         [Validation(Required=false)]
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// *   0: user
         /// *   1: user group
         /// *   2: organization
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ShareToType")]
         [Validation(Required=false)]
@@ -50,6 +56,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         /// <summary>
         /// The ID of the shared work. The works here include BI portal, dashboards, spreadsheets, and self-service access.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WorksId")]
         [Validation(Required=false)]

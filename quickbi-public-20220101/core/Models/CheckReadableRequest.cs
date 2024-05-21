@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
     public class CheckReadableRequest : TeaModel {
         /// <summary>
         /// The user ID of the Quick BI to be checked.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         /// <summary>
         /// The ID of the work. Resources here include BI portal, dashboards, spreadsheets, and self-service access.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WorksId")]
         [Validation(Required=false)]

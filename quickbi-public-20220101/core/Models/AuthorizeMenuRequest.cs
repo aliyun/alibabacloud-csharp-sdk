@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         /// <summary>
         /// The ID of the BI portal.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataPortalId")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// 
         /// *   The directory menu cannot be authorized.
         /// *   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MenuIds")]
         [Validation(Required=false)]

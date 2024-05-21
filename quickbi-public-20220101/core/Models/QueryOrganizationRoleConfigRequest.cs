@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryOrganizationRoleConfigRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RoleId")]
         [Validation(Required=false)]
         public long? RoleId { get; set; }

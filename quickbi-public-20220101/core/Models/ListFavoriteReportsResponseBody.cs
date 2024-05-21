@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public bool? Favorite { get; set; }
 
+                [NameInMap("FavoriteDate")]
+                [Validation(Required=false)]
+                public string FavoriteDate { get; set; }
+
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }

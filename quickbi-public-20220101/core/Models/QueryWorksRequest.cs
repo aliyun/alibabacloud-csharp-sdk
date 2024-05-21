@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryWorksRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WorksId")]
         [Validation(Required=false)]
         public string WorksId { get; set; }

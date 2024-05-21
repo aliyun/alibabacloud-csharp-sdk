@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
     public class QuerySharesToUserListRequest : TeaModel {
         /// <summary>
         /// The ID of the user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

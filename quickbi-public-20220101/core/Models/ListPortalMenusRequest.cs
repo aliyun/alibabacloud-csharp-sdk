@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
     public class ListPortalMenusRequest : TeaModel {
         /// <summary>
         /// The ID of the BI portal.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataPortalId")]
         [Validation(Required=false)]

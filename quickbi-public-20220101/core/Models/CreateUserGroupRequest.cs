@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// 
         /// *   If you enter the ID of a parent user group, the new user group is added to the user group with the ID.
         /// *   If you enter -1, the new user group is added to the root directory.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ParentUserGroupId")]
         [Validation(Required=false)]
@@ -23,7 +25,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// The description of the user group.
         /// 
         /// *   Format verification: Maximum length 255
-        /// *   Special format verification: Chinese and English digits\_ \ / | () ] \[
+        /// *   Special format verification: Chinese and English digits_ \\ / | () ] [
         /// </summary>
         [NameInMap("UserGroupDescription")]
         [Validation(Required=false)]
@@ -43,7 +45,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// The name of the RAM user group.
         /// 
         /// *   Format verification: Maximum length 255
-        /// *   Special format verification: Chinese and English digits\_ \ / | () ] \[
+        /// *   Special format verification: Chinese and English digits_ \\ / | () ] [
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserGroupName")]
         [Validation(Required=false)]

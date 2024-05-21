@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// 
         /// *   true: The task is added.
         /// *   false: The tag failed to be added.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// 
         /// *   true: The request was successful.
         /// *   false: The request failed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserIdList")]
         [Validation(Required=false)]

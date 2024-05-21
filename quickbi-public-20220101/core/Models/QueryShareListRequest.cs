@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// *   Analysis: Ad hoc analysis
         /// *   DATAFORM
         /// *   SCREEN: Data dashboard
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]

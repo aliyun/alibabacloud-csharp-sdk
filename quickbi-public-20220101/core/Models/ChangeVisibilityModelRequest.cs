@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
     public class ChangeVisibilityModelRequest : TeaModel {
         /// <summary>
         /// The number of menus that are successfully modified.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataPortalId")]
         [Validation(Required=false)]
@@ -21,11 +23,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// 
         /// *   true: The request was successful.
         /// *   false: The request failed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MenuIds")]
         [Validation(Required=false)]
         public string MenuIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ShowOnlyWithAccess")]
         [Validation(Required=false)]
         public bool? ShowOnlyWithAccess { get; set; }
