@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
 {
     public class GetSymUploadParamRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("appVersion")]
         [Validation(Required=false)]
         public string AppVersion { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("fileType")]
         [Validation(Required=false)]
         public int? FileType { get; set; }

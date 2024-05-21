@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
         [Validation(Required=false)]
         public string AppVersion { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public int? Type { get; set; }

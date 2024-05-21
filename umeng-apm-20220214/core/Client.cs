@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * @summary 获取H5页面性能统计数据
+         *
+         * @param request GetH5PageTrendRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetH5PageTrendResponse
+         */
         public GetH5PageTrendResponse GetH5PageTrendWithOptions(GetH5PageTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -81,6 +89,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetH5PageTrendResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取H5页面性能统计数据
+         *
+         * @param request GetH5PageTrendRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetH5PageTrendResponse
+         */
         public async Task<GetH5PageTrendResponse> GetH5PageTrendWithOptionsAsync(GetH5PageTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -125,6 +141,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetH5PageTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取H5页面性能统计数据
+         *
+         * @param request GetH5PageTrendRequest
+         * @return GetH5PageTrendResponse
+         */
         public GetH5PageTrendResponse GetH5PageTrend(GetH5PageTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -132,6 +154,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return GetH5PageTrendWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取H5页面性能统计数据
+         *
+         * @param request GetH5PageTrendRequest
+         * @return GetH5PageTrendResponse
+         */
         public async Task<GetH5PageTrendResponse> GetH5PageTrendAsync(GetH5PageTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -139,6 +167,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return await GetH5PageTrendWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取启动性能统计数据
+         *
+         * @param request GetLaunchTrendRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetLaunchTrendResponse
+         */
         public GetLaunchTrendResponse GetLaunchTrendWithOptions(GetLaunchTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -183,6 +219,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetLaunchTrendResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取启动性能统计数据
+         *
+         * @param request GetLaunchTrendRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetLaunchTrendResponse
+         */
         public async Task<GetLaunchTrendResponse> GetLaunchTrendWithOptionsAsync(GetLaunchTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -227,6 +271,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetLaunchTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取启动性能统计数据
+         *
+         * @param request GetLaunchTrendRequest
+         * @return GetLaunchTrendResponse
+         */
         public GetLaunchTrendResponse GetLaunchTrend(GetLaunchTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -234,6 +284,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return GetLaunchTrendWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取启动性能统计数据
+         *
+         * @param request GetLaunchTrendRequest
+         * @return GetLaunchTrendResponse
+         */
         public async Task<GetLaunchTrendResponse> GetLaunchTrendAsync(GetLaunchTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -241,6 +297,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return await GetLaunchTrendWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取原生页面性能统计数据
+         *
+         * @param request GetNativePageTrendRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetNativePageTrendResponse
+         */
         public GetNativePageTrendResponse GetNativePageTrendWithOptions(GetNativePageTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -285,6 +349,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetNativePageTrendResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取原生页面性能统计数据
+         *
+         * @param request GetNativePageTrendRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetNativePageTrendResponse
+         */
         public async Task<GetNativePageTrendResponse> GetNativePageTrendWithOptionsAsync(GetNativePageTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -329,6 +401,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetNativePageTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取原生页面性能统计数据
+         *
+         * @param request GetNativePageTrendRequest
+         * @return GetNativePageTrendResponse
+         */
         public GetNativePageTrendResponse GetNativePageTrend(GetNativePageTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -336,6 +414,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return GetNativePageTrendWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取原生页面性能统计数据
+         *
+         * @param request GetNativePageTrendRequest
+         * @return GetNativePageTrendResponse
+         */
         public async Task<GetNativePageTrendResponse> GetNativePageTrendAsync(GetNativePageTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -343,6 +427,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return await GetNativePageTrendWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取网络性能统计数据
+         *
+         * @param request GetNetworkTrendRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetNetworkTrendResponse
+         */
         public GetNetworkTrendResponse GetNetworkTrendWithOptions(GetNetworkTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -387,6 +479,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetNetworkTrendResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取网络性能统计数据
+         *
+         * @param request GetNetworkTrendRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetNetworkTrendResponse
+         */
         public async Task<GetNetworkTrendResponse> GetNetworkTrendWithOptionsAsync(GetNetworkTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -431,6 +531,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetNetworkTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取网络性能统计数据
+         *
+         * @param request GetNetworkTrendRequest
+         * @return GetNetworkTrendResponse
+         */
         public GetNetworkTrendResponse GetNetworkTrend(GetNetworkTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -438,6 +544,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return GetNetworkTrendWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取网络性能统计数据
+         *
+         * @param request GetNetworkTrendRequest
+         * @return GetNetworkTrendResponse
+         */
         public async Task<GetNetworkTrendResponse> GetNetworkTrendAsync(GetNetworkTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -445,6 +557,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return await GetNetworkTrendWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取离线统计数据
+         *
+         * @param request GetStatTrendRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetStatTrendResponse
+         */
         public GetStatTrendResponse GetStatTrendWithOptions(GetStatTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -489,6 +609,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetStatTrendResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取离线统计数据
+         *
+         * @param request GetStatTrendRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetStatTrendResponse
+         */
         public async Task<GetStatTrendResponse> GetStatTrendWithOptionsAsync(GetStatTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -533,6 +661,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetStatTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取离线统计数据
+         *
+         * @param request GetStatTrendRequest
+         * @return GetStatTrendResponse
+         */
         public GetStatTrendResponse GetStatTrend(GetStatTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -540,6 +674,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return GetStatTrendWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取离线统计数据
+         *
+         * @param request GetStatTrendRequest
+         * @return GetStatTrendResponse
+         */
         public async Task<GetStatTrendResponse> GetStatTrendAsync(GetStatTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -547,6 +687,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return await GetStatTrendWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取符号表文件上传参数
+         *
+         * @param request GetSymUploadParamRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSymUploadParamResponse
+         */
         public GetSymUploadParamResponse GetSymUploadParamWithOptions(GetSymUploadParamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -591,6 +739,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetSymUploadParamResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取符号表文件上传参数
+         *
+         * @param request GetSymUploadParamRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSymUploadParamResponse
+         */
         public async Task<GetSymUploadParamResponse> GetSymUploadParamWithOptionsAsync(GetSymUploadParamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -635,6 +791,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetSymUploadParamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取符号表文件上传参数
+         *
+         * @param request GetSymUploadParamRequest
+         * @return GetSymUploadParamResponse
+         */
         public GetSymUploadParamResponse GetSymUploadParam(GetSymUploadParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -642,6 +804,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return GetSymUploadParamWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取符号表文件上传参数
+         *
+         * @param request GetSymUploadParamRequest
+         * @return GetSymUploadParamResponse
+         */
         public async Task<GetSymUploadParamResponse> GetSymUploadParamAsync(GetSymUploadParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -649,6 +817,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return await GetSymUploadParamWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取今日实时统计数据
+         *
+         * @param request GetTodayStatTrendRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTodayStatTrendResponse
+         */
         public GetTodayStatTrendResponse GetTodayStatTrendWithOptions(GetTodayStatTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -685,6 +861,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetTodayStatTrendResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取今日实时统计数据
+         *
+         * @param request GetTodayStatTrendRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTodayStatTrendResponse
+         */
         public async Task<GetTodayStatTrendResponse> GetTodayStatTrendWithOptionsAsync(GetTodayStatTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -721,6 +905,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<GetTodayStatTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取今日实时统计数据
+         *
+         * @param request GetTodayStatTrendRequest
+         * @return GetTodayStatTrendResponse
+         */
         public GetTodayStatTrendResponse GetTodayStatTrend(GetTodayStatTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -728,6 +918,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return GetTodayStatTrendWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取今日实时统计数据
+         *
+         * @param request GetTodayStatTrendRequest
+         * @return GetTodayStatTrendResponse
+         */
         public async Task<GetTodayStatTrendResponse> GetTodayStatTrendAsync(GetTodayStatTrendRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -735,6 +931,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return await GetTodayStatTrendWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 更新监控告警计划
+         *
+         * @param request UpdateAlertPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateAlertPlanResponse
+         */
         public UpdateAlertPlanResponse UpdateAlertPlanWithOptions(UpdateAlertPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -771,6 +975,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<UpdateAlertPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 更新监控告警计划
+         *
+         * @param request UpdateAlertPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateAlertPlanResponse
+         */
         public async Task<UpdateAlertPlanResponse> UpdateAlertPlanWithOptionsAsync(UpdateAlertPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -807,6 +1019,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<UpdateAlertPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 更新监控告警计划
+         *
+         * @param request UpdateAlertPlanRequest
+         * @return UpdateAlertPlanResponse
+         */
         public UpdateAlertPlanResponse UpdateAlertPlan(UpdateAlertPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -814,6 +1032,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return UpdateAlertPlanWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 更新监控告警计划
+         *
+         * @param request UpdateAlertPlanRequest
+         * @return UpdateAlertPlanResponse
+         */
         public async Task<UpdateAlertPlanResponse> UpdateAlertPlanAsync(UpdateAlertPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -821,6 +1045,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return await UpdateAlertPlanWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 上传符号表文件
+         *
+         * @param request UploadSymbolFileRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UploadSymbolFileResponse
+         */
         public UploadSymbolFileResponse UploadSymbolFileWithOptions(UploadSymbolFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -869,6 +1101,14 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<UploadSymbolFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 上传符号表文件
+         *
+         * @param request UploadSymbolFileRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UploadSymbolFileResponse
+         */
         public async Task<UploadSymbolFileResponse> UploadSymbolFileWithOptionsAsync(UploadSymbolFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -917,6 +1157,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return TeaModel.ToObject<UploadSymbolFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 上传符号表文件
+         *
+         * @param request UploadSymbolFileRequest
+         * @return UploadSymbolFileResponse
+         */
         public UploadSymbolFileResponse UploadSymbolFile(UploadSymbolFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -924,6 +1170,12 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             return UploadSymbolFileWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 上传符号表文件
+         *
+         * @param request UploadSymbolFileRequest
+         * @return UploadSymbolFileResponse
+         */
         public async Task<UploadSymbolFileResponse> UploadSymbolFileAsync(UploadSymbolFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -939,7 +1191,7 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -966,12 +1218,13 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -1020,7 +1273,7 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -1047,12 +1300,13 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();

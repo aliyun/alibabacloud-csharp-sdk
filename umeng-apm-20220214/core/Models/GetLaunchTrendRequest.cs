@@ -13,18 +13,30 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
         [Validation(Required=false)]
         public string AppVersion { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("endDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("startDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("timeUnit")]
         [Validation(Required=false)]
         public string TimeUnit { get; set; }
