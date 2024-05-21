@@ -205,6 +205,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public bool? DiarizationEnabled { get; set; }
 
+                [NameInMap("Model")]
+                [Validation(Required=false)]
+                public string Model { get; set; }
+
                 [NameInMap("OutputLevel")]
                 [Validation(Required=false)]
                 public int? OutputLevel { get; set; }
