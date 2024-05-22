@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RemoveBackendServersShrinkRequest : TeaModel {
         /// <summary>
-        /// The list of backend servers that you want to add. You can add at most 20 backend servers.
+        /// The list of backend servers that you want to remove. You can remove up to 20 backend servers at a time.
         /// 
-        /// >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the Edge Load Balancer (ELB) instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

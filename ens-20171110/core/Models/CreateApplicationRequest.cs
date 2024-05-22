@@ -16,6 +16,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   Information such as resource specifications and network security configurations
         /// *   Service specifications
         /// *   Required resources
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Template")]
         [Validation(Required=false)]

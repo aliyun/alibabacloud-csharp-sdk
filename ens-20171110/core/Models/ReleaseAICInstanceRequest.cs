@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class ReleaseAICInstanceRequest : TeaModel {
         /// <summary>
         /// The ID of the server.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerId")]
         [Validation(Required=false)]

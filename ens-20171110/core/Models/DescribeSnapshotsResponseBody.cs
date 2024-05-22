@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<DescribeSnapshotsResponseBodySnapshots> Snapshots { get; set; }
         public class DescribeSnapshotsResponseBodySnapshots : TeaModel {
             /// <summary>
-            /// The creation time. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The creation time. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]

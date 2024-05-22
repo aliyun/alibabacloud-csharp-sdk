@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeKeyPairsResponseBodyKeyPairsKeyPair> KeyPair { get; set; }
             public class DescribeKeyPairsResponseBodyKeyPairsKeyPair : TeaModel {
                 /// <summary>
-                /// The time when the key pair was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                /// The time when the key pair was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string KeyPairFingerPrint { get; set; }
 
+                /// <summary>
+                /// The ID of the key pair.
+                /// </summary>
                 [NameInMap("KeyPairId")]
                 [Validation(Required=false)]
                 public string KeyPairId { get; set; }

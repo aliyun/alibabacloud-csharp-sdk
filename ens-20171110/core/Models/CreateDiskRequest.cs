@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   cloud_efficiency: ultra disk.
         /// *   cloud_ssd: all-flash disk.
-        /// *   local_hdd: local HDD.
-        /// *   local_ssd: local SSD.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -40,16 +40,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the edge node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// The billing method of the instance. Set the value to **PostPaid**.
         /// 
-        /// *   PrePaid: subscription.
-        /// *   PostPaid: pay-as-you-go.
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]

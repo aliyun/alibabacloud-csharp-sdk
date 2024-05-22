@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The name of the bucket.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BucketName")]
         [Validation(Required=false)]
@@ -71,6 +73,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   **Enabled**: The rule is periodically executed.
         /// *   **Disabled**: The rule is ignored.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

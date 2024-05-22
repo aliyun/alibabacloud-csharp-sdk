@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the network.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkId")]
         [Validation(Required=false)]
@@ -28,9 +30,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The name of the network. The name must meet the following requirements:
         /// 
-        /// *   The name must be 2 to 128 characters in length.
-        /// *   The name must start with a letter but cannot start with http:// or https://.
-        /// *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// *   The name must be 2 to 128 characters in length
+        /// *   It must start with a letter but cannot start with http:// or https://.
+        /// *   The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("NetworkName")]
         [Validation(Required=false)]

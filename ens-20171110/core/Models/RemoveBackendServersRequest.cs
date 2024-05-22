@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RemoveBackendServersRequest : TeaModel {
         /// <summary>
-        /// The list of backend servers that you want to add. You can add at most 20 backend servers.
+        /// The list of backend servers that you want to remove. You can remove up to 20 backend servers at a time.
         /// 
-        /// >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
@@ -33,7 +33,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// The ID of the instance that is used as the backend server.
+            /// The instance ID of the backend server.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
@@ -42,17 +44,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// The type of the backend server. Valid values:
             /// 
-            /// *   **ens**: ENS instance.
-            /// *   **eni**: ENI.
+            /// *   **ens**: an Edge Node Service (ENS) instance.
+            /// *   **eni**: an elastic network interface (ENI).
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The weight of the backend server. Default value: 100. Valid values: **0** to **100**.
-            /// 
-            /// >  The value 0 indicates that requests are not forwarded to the backend server.
+            /// The weight of the backend server.
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
@@ -62,6 +62,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the Edge Load Balancer (ELB) instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

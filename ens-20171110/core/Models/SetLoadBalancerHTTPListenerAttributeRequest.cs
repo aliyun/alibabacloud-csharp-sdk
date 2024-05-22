@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The HTTP status code for a successful health check. Valid values:
         /// 
-        /// *   **http\_2xx** (default)
-        /// *   **http\_3xx**.
-        /// *   **http\_4xx**
-        /// *   **http\_5xx**
+        /// *   **http_2xx** (default)
+        /// *   **http_3xx**.
+        /// *   **http_4xx**
+        /// *   **http_5xx**
         /// 
         /// >  This parameter takes effect only if you set HealthCheck to on.
         /// </summary>
@@ -131,6 +131,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -138,6 +140,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the Edge Load Balancer (ELB) instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

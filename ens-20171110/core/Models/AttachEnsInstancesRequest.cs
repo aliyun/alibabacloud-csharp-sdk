@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class AttachEnsInstancesRequest : TeaModel {
         /// <summary>
         /// The ID of the instance. You can specify only one instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The command that you want to execute on the instance. The command must be encoded in Base64 or UTF-8.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Scripts")]
         [Validation(Required=false)]

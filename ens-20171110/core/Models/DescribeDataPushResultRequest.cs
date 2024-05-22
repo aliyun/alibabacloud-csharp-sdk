@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DescribeDataPushResultRequest : TeaModel {
         /// <summary>
         /// The ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

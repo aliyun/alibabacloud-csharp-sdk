@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The type of the EPN instance. Set the value to **EdgeToEdge**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EPNInstanceType")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   **PayByBandwidth**: Pay by fixed bandwidth.
         /// 
         /// You can specify only one metering method for network usage and cannot overwrite the existing metering method.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 1 to 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InternetMaxBandwidthOut")]
         [Validation(Required=false)]
@@ -50,6 +56,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   **SpeedUp**: intelligent acceleration network (Internet)
         /// *   **Connection**: internal network
         /// *   **SpeedUpAndConnection**: intelligent acceleration network and internal network
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkingModel")]
         [Validation(Required=false)]

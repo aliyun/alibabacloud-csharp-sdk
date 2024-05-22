@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class CreateARMServerInstancesRequest : TeaModel {
         /// <summary>
         /// The number of instances to create. Valid values: **1** to **100**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Amount")]
         [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the Edge Node Service (ENS) node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
@@ -49,6 +53,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the image.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -78,6 +84,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   aic.cf52r.c2.np
         /// *   aic.cf52r.c3.np
         /// *   aic.cf52r.c4.np
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -101,6 +109,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// The billing method. Set the value to **PrePaid**. PrePaid specifies the subscription billing method.
         /// 
         /// >  Only PrePaid is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -111,7 +121,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   If you leave PeriodUnit empty, the instance is purchased on a monthly basis. Valid values: Day and Month.
         /// *   If you set PeriodUnit to Day, you can set Period only to 3.
-        /// *   If you set PeriodUnit to Month, you can set Period to a value within the range of \[1,9], or set the value to 12.
+        /// *   If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -122,7 +134,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   If you leave PeriodUnit empty, the instance is purchased on a monthly basis. Valid values: Day and Month.
         /// *   If you set PeriodUnit to Day, you can set Period only to 3.
-        /// *   If you set PeriodUnit to Month, you can set Period to a value within the range of \[1,9], or set the value to 12.
+        /// *   If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
@@ -131,25 +145,27 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The resolution. Valid values:
         /// 
-        /// *   1920\*1080
-        /// *   1080\*1920
-        /// *   1280\*720
-        /// *   720\*1280
-        /// *   2400\*1080
-        /// *   1920\*864
-        /// *   1080\*2400
-        /// *   864\*1920
+        /// *   1920\\*1080
+        /// *   1080\\*1920
+        /// *   1280\\*720
+        /// *   720\\*1280
+        /// *   2400\\*1080
+        /// *   1920\\*864
+        /// *   1080\\*2400
+        /// *   864\\*1920
         /// 
         /// <!---->
         /// 
-        /// *   1920\*1080
-        /// *   1080\*1920
-        /// *   1280\*720
-        /// *   720\*1280
-        /// *   2400\*1080
-        /// *   1920\*864
-        /// *   1080\*2400
-        /// *   864\*1920
+        /// *   1920\\*1080
+        /// *   1080\\*1920
+        /// *   1280\\*720
+        /// *   720\\*1280
+        /// *   2400\\*1080
+        /// *   1920\\*864
+        /// *   1080\\*2400
+        /// *   864\\*1920
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Resolution")]
         [Validation(Required=false)]
@@ -170,6 +186,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   cas.cf52m1r
         /// *   cas.tg52g2
         /// *   ens.afq-c2m3i.medium
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerType")]
         [Validation(Required=false)]

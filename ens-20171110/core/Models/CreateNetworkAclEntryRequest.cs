@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class CreateNetworkAclEntryRequest : TeaModel {
         /// <summary>
         /// The source CIDR block.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   **ingress**
         /// *   **egress**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the network ACL.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]
@@ -56,6 +62,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   **accept**: allows network traffic.
         /// *   **drop**: blocks network traffic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
@@ -66,6 +74,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   If you set **Protocol** to **all** or **icmp**, set this parameter to -1/-1, which specifies all ports.
         /// *   If you set **Protocol** to **tcp** or **udp**, the port can be **1 to 65535**. You can set this parameter to **1/200** or **80/80**, which specifies ports 1 to 200 or port 80.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PortRange")]
         [Validation(Required=false)]
@@ -73,6 +83,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The priority of the rule. Valid values: **1 to 100**. Default value: **1**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
@@ -85,6 +97,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   **tcp**: TCP
         /// *   **udp**: UDP
         /// *   **all**: all protocols
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Protocol")]
         [Validation(Required=false)]

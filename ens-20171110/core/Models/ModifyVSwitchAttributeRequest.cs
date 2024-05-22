@@ -12,7 +12,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The description of the vSwitch.
         /// 
-        /// The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.
+        /// *   The description must be 2 to 256 characters in length.
+        /// *   The description cannot start with http:// or https://.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the vSwitch.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
@@ -29,8 +32,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// The name of the vSwitch.
         /// 
         /// *   The name must be 2 to 128 characters in length.
-        /// *   The name must start with a letter but cannot start with http:// or https://.
-        /// *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// *   The name must start with a letter and cannot start with http:// or https://.
         /// </summary>
         [NameInMap("VSwitchName")]
         [Validation(Required=false)]

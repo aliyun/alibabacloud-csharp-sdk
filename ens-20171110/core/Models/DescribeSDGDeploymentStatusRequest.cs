@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the SDG.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SDGId")]
         [Validation(Required=false)]

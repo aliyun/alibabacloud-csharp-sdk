@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string BucketAcl { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }

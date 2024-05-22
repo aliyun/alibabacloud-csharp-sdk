@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class ReInitDiskRequest : TeaModel {
         /// <summary>
         /// The ID of the disk to be initialized. You can initialize only one disk at a time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the image to use to create the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]

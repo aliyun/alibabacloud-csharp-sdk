@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the instance for which you want to modify attributes. You can specify only one ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -26,7 +28,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The name of the instance.
         /// 
-        /// The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class UpgradeAICInstanceImageShrinkRequest : TeaModel {
         /// <summary>
         /// The ID of the AIC image.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The IDs of the servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerIds")]
         [Validation(Required=false)]

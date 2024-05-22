@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class UnassignPrivateIpAddressesRequest : TeaModel {
         /// <summary>
         /// The ID of the ENI.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The secondary private IP addresses that you want to unassign.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

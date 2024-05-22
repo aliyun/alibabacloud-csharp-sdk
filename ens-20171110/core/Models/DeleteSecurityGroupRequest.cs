@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DeleteSecurityGroupRequest : TeaModel {
         /// <summary>
         /// The security group ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

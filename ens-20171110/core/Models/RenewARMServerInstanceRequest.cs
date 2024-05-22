@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the instance that you want to renew.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The renewal period. By default, instances are renewed on a monthly basis. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   Month (default)
         /// *   Year
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]

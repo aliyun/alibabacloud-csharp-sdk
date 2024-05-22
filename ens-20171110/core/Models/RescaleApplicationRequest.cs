@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class RescaleApplicationRequest : TeaModel {
         /// <summary>
         /// The ID of the application. You can query the application ID by calling the ListApplications operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   Add: adds new resources.
         /// *   Del: releases resources.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RescaleType")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The required resources. The value must be a JSON string.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceSelector")]
         [Validation(Required=false)]

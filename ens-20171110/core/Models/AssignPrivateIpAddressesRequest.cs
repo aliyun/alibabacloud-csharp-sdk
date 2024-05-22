@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class AssignPrivateIpAddressesRequest : TeaModel {
         /// <summary>
         /// The ID of the ENI.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]

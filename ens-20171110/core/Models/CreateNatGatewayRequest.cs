@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class CreateNatGatewayRequest : TeaModel {
         /// <summary>
         /// The ID of the Edge Node Service (ENS) node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the network.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkId")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the vSwitch.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

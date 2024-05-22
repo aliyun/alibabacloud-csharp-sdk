@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DistApplicationDataRequest : TeaModel {
         /// <summary>
         /// The ID of the application. To obtain the application ID, call the ListApplications operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The list of data files that you want to distribute. The value must be a JSON string.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

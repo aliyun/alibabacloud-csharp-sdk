@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DeleteDeviceInternetPortRequest : TeaModel {
         /// <summary>
         /// The ID of the instance. You can specify the ID of the server or container.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   SNAT
         /// *   DNAT
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatType")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

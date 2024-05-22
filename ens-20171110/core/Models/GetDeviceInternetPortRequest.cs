@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class GetDeviceInternetPortRequest : TeaModel {
         /// <summary>
         /// The ID of the instance. You can specify the ID of the server or container. You can specify only one ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   SNAT
         /// *   DNAT
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatType")]
         [Validation(Required=false)]

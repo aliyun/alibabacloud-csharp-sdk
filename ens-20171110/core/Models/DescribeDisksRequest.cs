@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionIds { get; set; }
 
         /// <summary>
-        /// The instance to which the disk is attached.
+        /// The ID of the instance to which the disk is attached.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   Available: The disk can be attached.
         /// *   Attaching: The disk is being attached.
         /// *   Detaching: The disk is being detached.
-        /// *   Creating: The image is being created.
+        /// *   Creating: The disk is being created.
         /// *   ReIniting: The disk is being reset.
         /// *   Deleting: The disk is being released.
         /// *   Deleted: The disk is released.

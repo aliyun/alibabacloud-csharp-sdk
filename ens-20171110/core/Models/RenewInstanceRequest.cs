@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class RenewInstanceRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   8
         /// *   9
         /// *   12
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]

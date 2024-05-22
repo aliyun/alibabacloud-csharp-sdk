@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DescribeEnsRegionIdIpv6InfoRequest : TeaModel {
         /// <summary>
         /// The ID of the node. You can specify only one node ID in a call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]

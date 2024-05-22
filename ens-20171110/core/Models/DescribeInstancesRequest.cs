@@ -141,14 +141,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<DescribeInstancesRequestTags> Tags { get; set; }
         public class DescribeInstancesRequestTags : TeaModel {
             /// <summary>
-            /// 实例的标签键。N的取值范围为1~20。
+            /// The tag key. Valid values: 1 to 20.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// 实例的标签值。N的取值范围：1~20。
+            /// The tag value. Valid values: 1 to 20.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

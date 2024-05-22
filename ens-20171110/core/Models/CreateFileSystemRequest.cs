@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class CreateFileSystemRequest : TeaModel {
         /// <summary>
         /// The information about the orders.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderDetails")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// 
             /// *   PrePaid: subscription. This billing method is not supported.
             /// *   PostPaid: pay-as-you-go.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// The ID of the node.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("EnsRegionId")]
             [Validation(Required=false)]
@@ -35,6 +41,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// The name of the file system.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("FileSystemName")]
             [Validation(Required=false)]
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// The name of the mount target.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("MountTargetDomain")]
             [Validation(Required=false)]
@@ -49,6 +59,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// The ID of the VPC.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("NetworkId")]
             [Validation(Required=false)]
@@ -56,6 +68,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// The type of the order.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("OrderType")]
             [Validation(Required=false)]
@@ -63,6 +77,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// The storage protocol. Valid values: nsf and smb.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
@@ -70,6 +86,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// The type of the storage. Set the value to capacity.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("StorgeType")]
             [Validation(Required=false)]

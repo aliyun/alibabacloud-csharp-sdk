@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class UpgradeApplicationRequest : TeaModel {
         /// <summary>
         /// The ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   Configuration information of the target version
         /// *   Canary release policy for resources
         /// *   Intelligent upgrade policy that contains information such as the time window and resource usage limit
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Template")]
         [Validation(Required=false)]

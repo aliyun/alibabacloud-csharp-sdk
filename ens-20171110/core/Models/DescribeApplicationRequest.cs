@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DescribeApplicationRequest : TeaModel {
         /// <summary>
         /// The ID of the application. You can call the ListApplications operation to obtain the application ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -44,6 +46,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("OutDetailStatParams")]
         [Validation(Required=false)]
         public string OutDetailStatParams { get; set; }
+
+        [NameInMap("ResourceSelector")]
+        [Validation(Required=false)]
+        public string ResourceSelector { get; set; }
 
     }
 

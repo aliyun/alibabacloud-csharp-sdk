@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the instance. You can specify the ID of the server or container.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The internal IP address of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InternalIp")]
         [Validation(Required=false)]
@@ -47,6 +51,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   SNAT
         /// *   DNAT
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatType")]
         [Validation(Required=false)]
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the Edge Node Service (ENS) node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

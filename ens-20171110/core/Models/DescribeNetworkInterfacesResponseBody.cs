@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet> NetworkInterfaceSet { get; set; }
             public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet : TeaModel {
                 /// <summary>
-                /// The time when the ENI was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.
+                /// The time when the ENI was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the ENI.
+                /// The description of ENI.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string EnsRegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the instance to which the ENI is attached.
+                /// The ID of the instance to which the ENI is bound.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The media access control (MAC) address of the ENI.
+                /// The MAC address of the ENI.
                 /// </summary>
                 [NameInMap("MacAddress")]
                 [Validation(Required=false)]
@@ -70,31 +70,31 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string NetworkInterfaceId { get; set; }
 
                 /// <summary>
-                /// The name of the ENI.
+                /// The ENI name.
                 /// </summary>
                 [NameInMap("NetworkInterfaceName")]
                 [Validation(Required=false)]
                 public string NetworkInterfaceName { get; set; }
 
                 /// <summary>
-                /// The primary private IP address.
+                /// The private IP address of the server.
                 /// </summary>
                 [NameInMap("PrimaryIp")]
                 [Validation(Required=false)]
                 public string PrimaryIp { get; set; }
 
                 /// <summary>
-                /// The type of the primary IP address. Valid values:
+                /// The primary private IP address. Valid values:
                 /// 
-                /// *   **Public**: public endpoint.
-                /// *   **Private**: internal endpoint.
+                /// *   **Public**: public IP address.
+                /// *   **Private**: internal IP address.
                 /// </summary>
                 [NameInMap("PrimaryIpType")]
                 [Validation(Required=false)]
                 public string PrimaryIpType { get; set; }
 
                 /// <summary>
-                /// Details about the private IP addresses.
+                /// Details about the private IP address.
                 /// </summary>
                 [NameInMap("PrivateIpSets")]
                 [Validation(Required=false)]
@@ -105,10 +105,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
                     public class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet : TeaModel {
                         /// <summary>
-                        /// Indicates whether the IP address is the primary private IP address. Valid values:
+                        /// Specifies whether the private IP address is the primary private IP address. Valid values:
                         /// 
-                        /// *   true: The IP address is the primary private IP address.
-                        /// *   false: The IP address is the secondary private IP address.
+                        /// *   true
+                        /// *   false
                         /// </summary>
                         [NameInMap("Primary")]
                         [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// IDs of security groups.
+                /// The ID of the security group.
                 /// </summary>
                 [NameInMap("SecurityGroupIds")]
                 [Validation(Required=false)]

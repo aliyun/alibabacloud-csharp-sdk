@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DescribeEpnInstanceAttributeRequest : TeaModel {
         /// <summary>
         /// The ID of the EPN instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EPNInstanceId")]
         [Validation(Required=false)]

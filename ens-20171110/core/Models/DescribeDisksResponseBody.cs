@@ -71,12 +71,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string DiskName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the cloud disk is encrypted.
+                /// Indicates whether the cloud disk is encrypted. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("Encrypted")]
                 [Validation(Required=false)]
                 public bool? Encrypted { get; set; }
 
+                /// <summary>
+                /// The ID of the Key Management Service (KMS) key that is used for the cloud disk.
+                /// </summary>
                 [NameInMap("EncryptedKeyId")]
                 [Validation(Required=false)]
                 public string EncryptedKeyId { get; set; }
@@ -103,16 +109,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// Specifies whether the cloud disk or the local disk is removable. Valid values:
+                /// Indicates whether the cloud disk or local disk is removable. Valid values:
                 /// 
                 /// *   true: The disk is removable. A removable disk can independently exist and can be attached to or detached from an instance within the same zone.
                 /// *   false: The disk is not removable. A disk that is not removable cannot independently exist or be attached to or detached from an instance within the same zone.
                 /// 
-                /// The **Portable** attribute of the following disks is **false**, and these disks share the same lifecycle with their associated instances:
+                /// If disks are of the following categories or types, the **Portable** value is **false** and the disks have the same lifecycle as their attached instances:
                 /// 
-                /// *   Local HDD.
-                /// *   Local SSD.
-                /// *   Data disk that uses the subscription billing method.
+                /// *   Local HDDs
+                /// *   Local SSDs
+                /// *   Data disks that use the subscription billing method
                 /// </summary>
                 [NameInMap("Portable")]
                 [Validation(Required=false)]
@@ -146,7 +152,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// *   Available: The disk can be attached.
                 /// *   Attaching: The disk is being attached.
                 /// *   Detaching: The disk is being detached.
-                /// *   Creating: The image is being created.
+                /// *   Creating: The disk is being created.
                 /// *   ReIniting: The disk is being reset.
                 /// </summary>
                 [NameInMap("Status")]

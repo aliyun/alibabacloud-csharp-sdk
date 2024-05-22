@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// The destination IP addresses. CIDR blocks and IPv4 addresses are supported.
         /// 
         /// By default, this parameter is empty.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestCidrIp")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   icmp
         /// *   gre
         /// *   all: All protocols are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   When the IpProtocol parameter is set to icmp, the port number range is **-1/-1**, which indicates all ports.
         /// *   When the IpProtocol parameter is set to gre, the port number range is **-1/-1**, which indicates all ports.
         /// *   When the IpProtocol parameter is set to all, the port number range is **-1/-1**, which indicates all ports.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PortRange")]
         [Validation(Required=false)]
@@ -66,6 +72,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the security group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

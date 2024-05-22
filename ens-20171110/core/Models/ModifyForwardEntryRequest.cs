@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class ModifyForwardEntryRequest : TeaModel {
         /// <summary>
         /// The ID of the DNAT entry.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ForwardEntryId")]
         [Validation(Required=false)]

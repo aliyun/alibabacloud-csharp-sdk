@@ -21,7 +21,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DeleteAfterImageUpload { get; set; }
 
         /// <summary>
-        /// The name of the image. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the image. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]

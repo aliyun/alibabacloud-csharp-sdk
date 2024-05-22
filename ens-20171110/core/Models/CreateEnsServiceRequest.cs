@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class CreateEnsServiceRequest : TeaModel {
         /// <summary>
         /// The ID of the resource that you want to obtain. You can specify only one ID in a request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnsServiceId")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   **Buy**: create
         /// *   **Upgrade**: change
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]

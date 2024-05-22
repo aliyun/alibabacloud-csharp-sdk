@@ -11,10 +11,24 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class RunInstancesShrinkRequest : TeaModel {
         /// <summary>
         /// The number of instances that you want to create. Valid values: 1 to 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Amount")]
         [Validation(Required=false)]
         public long? Amount { get; set; }
+
+        /// <summary>
+        /// The time when to automatically release the pay-as-you-go instance. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in Coordinated Universal Time (UTC).
+        /// 
+        /// *   If the value of `ss` is not `00`, the start time is automatically rounded down to the nearest minute based on the value of `mm`.
+        /// *   The specified time must be at least one hour later than the current time.
+        /// 
+        /// Use the UTC time format: yyyy-MM-ddTHH:mmZ
+        /// </summary>
+        [NameInMap("AutoReleaseTime")]
+        [Validation(Required=false)]
+        public string AutoReleaseTime { get; set; }
 
         /// <summary>
         /// Specifies whether to enable auto-renewal. Valid values:
@@ -29,11 +43,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// Specifies whether to use vouchers. Default values: true. Valid values:
-        /// 
-        /// - true 
-        /// 
-        /// - false
+        /// Specifies whether to use coupons. Default value: true.
         /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
@@ -42,9 +52,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The billing cycle of computing resources of the instance. Only pay-as-you-go instances are supported. Valid values:
         /// 
-        /// *   Hour
-        /// *   Day
-        /// *   Month
+        /// *   **Day**
+        /// *   **Month**
         /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
@@ -60,7 +69,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Carrier { get; set; }
 
         /// <summary>
-        /// The specification of the data disk.
+        /// The specifications of the data disk.
         /// </summary>
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
@@ -104,13 +113,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   **PrePaid**: subscription.
         /// *   **PostPaid**: pay-as-you-go.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+        /// The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
         /// 
         /// The default value of this parameter is the value of the InstanceId parameter.
         /// </summary>
@@ -120,6 +131,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The instance type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -139,17 +152,19 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The maximum public bandwidth. If the value of this parameter is greater than 0, a public IP address is assigned to the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InternetMaxBandwidthOut")]
         [Validation(Required=false)]
         public long? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// The type of IP address. Valid values:
+        /// The type of the IP address. Valid values:
         /// 
-        /// *   **ipv4**: IPv4. This is the default value.
-        /// *   **ipv6**: IPv6.
-        /// *   **ipv4Andipv6**: IPv4 and IPv6.
+        /// *   **ipv4** (default)
+        /// *   **ipv6**
+        /// *   **ipv4Andipv6**
         /// </summary>
         [NameInMap("IpType")]
         [Validation(Required=false)]
@@ -246,6 +261,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   **Middle**: province
         /// *   **Small**: city
         /// *   **Region**: node
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScheduleAreaLevel")]
         [Validation(Required=false)]
@@ -281,20 +298,41 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SecurityId { get; set; }
 
         /// <summary>
+        /// The bidding policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Valid values:
+        /// 
+        /// *   NoSpot: The instance is created as a regular pay-as-you-go instance.
+        /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
+        /// 
+        /// Default value: NoSpot.
+        /// </summary>
+        [NameInMap("SpotStrategy")]
+        [Validation(Required=false)]
+        public string SpotStrategy { get; set; }
+
+        /// <summary>
         /// The specification of the system disk.
         /// </summary>
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public string SystemDiskShrink { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<RunInstancesShrinkRequestTag> Tag { get; set; }
         public class RunInstancesShrinkRequestTag : TeaModel {
+            /// <summary>
+            /// The key of the tag.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of the tag.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

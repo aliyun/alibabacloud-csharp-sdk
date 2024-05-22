@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsSaleControlAvailableResourceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }

@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public class DescribePriceRequestSystemDisk : TeaModel {
             /// <summary>
             /// The size of the system disk. Unit: GB.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
@@ -60,13 +62,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the ENS node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// The type of the instance.
+        /// The specifications of instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -79,6 +85,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   95BandwidthByMonth: Pay by monthly 95th percentile bandwidth
         /// *   PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth
         /// *   PayByBandwidth: Pay by fixed bandwidth
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
@@ -90,6 +98,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.
         /// *   If you set PeriodUnit to Day, you can set Period only to 3.
         /// *   If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -107,6 +117,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The number of instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Quantity")]
         [Validation(Required=false)]

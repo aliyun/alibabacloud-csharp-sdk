@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class SetBackendServersResponseBody : TeaModel {
         /// <summary>
-        /// The list of backend servers that you want to add. You can add at most 20 backend servers.
-        /// 
-        /// >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
+        /// The backend servers.
         /// </summary>
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The ID of the instance that is used as the backend server.
+                /// The ID of the instance that you want to use as the backend server.
                 /// </summary>
                 [NameInMap("ServerId")]
                 [Validation(Required=false)]
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// The type of the backend server. Valid values:
                 /// 
                 /// *   **ens**: ENS instance.
-                /// *   **eni**: ENI.
+                /// *   **eni**: ENI instance.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

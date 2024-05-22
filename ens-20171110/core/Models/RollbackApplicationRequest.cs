@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class RollbackApplicationRequest : TeaModel {
         /// <summary>
         /// The ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The current version number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FromAppVersion")]
         [Validation(Required=false)]

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeExportImageInfoResponseBodyImagesImage> Image { get; set; }
             public class DescribeExportImageInfoResponseBodyImagesImage : TeaModel {
                 /// <summary>
-                /// The architecture of the image. Example: **x86\_64**.
+                /// The architecture of the image. Example: **x86_64**.
                 /// </summary>
                 [NameInMap("Architecture")]
                 [Validation(Required=false)]

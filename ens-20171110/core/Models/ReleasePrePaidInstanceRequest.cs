@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class ReleasePrePaidInstanceRequest : TeaModel {
         /// <summary>
         /// The ID of the instance to be deleted. You can specify only one instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

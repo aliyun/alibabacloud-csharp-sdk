@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeKeyPairsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the key pair.
+        /// </summary>
         [NameInMap("KeyPairId")]
         [Validation(Required=false)]
         public string KeyPairId { get; set; }
@@ -18,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   Digits
         /// *   :
-        /// *   \_
+        /// *   _
         /// *   *
         /// 
         /// You can specify only one name. By default, all key pairs are queried.

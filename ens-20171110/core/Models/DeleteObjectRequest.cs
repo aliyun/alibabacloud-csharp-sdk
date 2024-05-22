@@ -11,13 +11,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DeleteObjectRequest : TeaModel {
         /// <summary>
         /// The name of the bucket.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }
 
         /// <summary>
-        /// The name of the source file.
+        /// The name of the file.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ObjectKey")]
         [Validation(Required=false)]

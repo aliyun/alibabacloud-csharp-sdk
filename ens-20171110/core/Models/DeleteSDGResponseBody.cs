@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeWorkflowActivityRequest : TeaModel {
-        [NameInMap("WorkFlowId")]
+    public class DeleteSDGResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string WorkFlowId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

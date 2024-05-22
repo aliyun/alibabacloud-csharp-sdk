@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   We recommend that you use port 80 for HTTP.
         /// 
         /// *   We recommend that you use port 443 for HTTPS.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -40,6 +42,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the ELB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

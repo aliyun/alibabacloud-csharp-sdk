@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The region level of the scale-out. Set the value to RegionId. RegionId specifies that resource scale-out is performed based on the ID of the edge node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RescaleLevel")]
         [Validation(Required=false)]
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The scaling operation. Set the value to Add to add new resources.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RescaleType")]
         [Validation(Required=false)]
@@ -56,6 +60,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The required resources. The value must be a JSON string.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceSelector")]
         [Validation(Required=false)]

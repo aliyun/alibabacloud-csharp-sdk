@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -43,6 +45,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

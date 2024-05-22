@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PrivateKeyBody { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class RetryWorkflowRequest : TeaModel {
-        [NameInMap("WorkflowIds")]
+    public class SaveSDGRequest : TeaModel {
+        /// <summary>
+        /// The ID of the SDG to be saved.
+        /// </summary>
+        [NameInMap("SDGId")]
         [Validation(Required=false)]
-        public List<string> WorkflowIds { get; set; }
+        public string SDGId { get; set; }
 
     }
 

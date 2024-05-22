@@ -72,6 +72,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the route table that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]

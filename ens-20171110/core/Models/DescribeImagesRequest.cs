@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The name of the custom image. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+        /// The name of the custom image. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).
         /// 
         /// By default, this parameter is left empty, which indicates that the original name is retained.
         /// </summary>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public GetBucketInfoResponseBodyBucketInfo BucketInfo { get; set; }
         public class GetBucketInfoResponseBodyBucketInfo : TeaModel {
             /// <summary>
-            /// The access control list (ACL) of the bucket.
+            /// The ACL of the bucket.
             /// 
             /// *   **public-read-write**
             /// *   **public-read**
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// The time when the bucket was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// The time when the bucket was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string LogicalBucketType { get; set; }
 
             /// <summary>
-            /// The time when the bucket was modified. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// The time when the bucket was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]

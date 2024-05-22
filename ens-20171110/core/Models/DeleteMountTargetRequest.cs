@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DeleteMountTargetRequest : TeaModel {
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the file system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The name of the mount target.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MountTargetName")]
         [Validation(Required=false)]

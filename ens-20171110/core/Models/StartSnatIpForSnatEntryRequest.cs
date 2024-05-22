@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class StartSnatIpForSnatEntryRequest : TeaModel {
         /// <summary>
         /// The ID of the SNAT entry.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnatEntryId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The EIP specified in the SNAT entry.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnatIp")]
         [Validation(Required=false)]

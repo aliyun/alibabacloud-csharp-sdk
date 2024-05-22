@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class ModifyInstanceAutoRenewAttributeRequest : TeaModel {
         /// <summary>
         /// Specifies whether to enable the auto-renewal feature. Valid values: **True and False**. Default value: False.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The IDs of the instances. Separate IDs with semicolons (;).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

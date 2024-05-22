@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class AccosicateNetworkAclRequest : TeaModel {
         /// <summary>
         /// The ID of the network ACL.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The information about the resources with which you want to associate the network ACL.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public class AccosicateNetworkAclRequestResource : TeaModel {
             /// <summary>
             /// The ID of the resource with which you want to associate the network ACL.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// The type of resource with which you want to associate the network ACL. Set the value to **Network**.
             /// 
             /// ****
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]

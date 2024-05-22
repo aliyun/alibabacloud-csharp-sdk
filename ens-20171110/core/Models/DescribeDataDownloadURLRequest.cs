@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DescribeDataDownloadURLRequest : TeaModel {
         /// <summary>
         /// The ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The name of the data file.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataName")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The version number of the data file.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataVersion")]
         [Validation(Required=false)]

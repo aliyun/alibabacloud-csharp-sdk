@@ -85,6 +85,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -92,6 +94,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the Edge Load Balancer (ELB) instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

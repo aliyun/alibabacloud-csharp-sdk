@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DescribePrePaidInstanceStockRequest : TeaModel {
         /// <summary>
         /// The ID of the datadisk.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataDiskSize")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the edge node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The size of the system disk. Unit: GB.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceSpec")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the systemdisk
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SystemDiskSize")]
         [Validation(Required=false)]

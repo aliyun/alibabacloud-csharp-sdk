@@ -51,6 +51,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   The name must be **2** to **128** characters in length.
         /// *   It must start with a letter but cannot start with http:// or https://.
-        /// *   The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+        /// *   The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).
         /// 
         /// If you do not specify this parameter, the instance ID is used as the instance name by default.
         /// </summary>
@@ -92,6 +94,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// The type of the instance.
         /// 
         /// For more information, see [](~~66124~~).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -132,7 +136,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The password of the instance.
         /// 
-        /// The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include: ``()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/``
+        /// The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include: ``()`~!@#$%^&*-_+=|{}[]:;\\"<>,.?/``
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -158,6 +162,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The subscription period of the instance. Valid values: **1** to **9** and **12**. Unit: months.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -182,6 +188,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The number of instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Quantity")]
         [Validation(Required=false)]

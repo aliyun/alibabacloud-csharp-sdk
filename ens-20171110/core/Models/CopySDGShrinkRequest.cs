@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CopySDGShrinkRequest : TeaModel {
+        /// <summary>
+        /// The destination nodes.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DestinationRegionIds")]
         [Validation(Required=false)]
         public string DestinationRegionIdsShrink { get; set; }
 
+        /// <summary>
+        /// The ID of the SDG that you want to copy.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SDGId")]
         [Validation(Required=false)]
         public string SDGId { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class RestartWorkflowResponse : TeaModel {
+    public class CreateSDGResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public RestartWorkflowResponseBody Body { get; set; }
+        public CreateSDGResponseBody Body { get; set; }
 
     }
 

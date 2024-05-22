@@ -18,13 +18,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the snapshot.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// 
         /// The name cannot start with **auto** because snapshots whose names start with auto are recognized as automatic snapshots.
         /// </summary>

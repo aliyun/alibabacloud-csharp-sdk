@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeInstancesResponseBodyInstancesInstance : TeaModel {
+                [NameInMap("AutoReleaseTime")]
+                [Validation(Required=false)]
+                public string AutoReleaseTime { get; set; }
+
                 /// <summary>
                 /// The number of vCPUs.
                 /// </summary>
@@ -159,7 +163,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// 
                 /// *   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
                 /// *   For a Windows instance, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.
-                /// *   For an instance that runs another operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
+                /// *   For other operating systems: The hostname must be 2 to 64 characters in length and can contain letters, digits, and hyphens (-). It can be separated by periods (.).
                 /// </summary>
                 [NameInMap("HostName")]
                 [Validation(Required=false)]
@@ -193,7 +197,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the instance.
+                /// The name of the virtual private cloud (VPC).
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
@@ -214,10 +218,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// The instance family. Valid values:
                 /// 
-                /// *   x86\_vm: x86-based computing instance.
-                /// *   x86\_pm: x86-based physical machine.
-                /// *   x86\_bmi: x86-based bare metal instance.
-                /// *   x86\_bm: bare metal instance with the SmartNIC.
+                /// *   x86_vm: x86-based computing instance.
+                /// *   x86_pm: x86-based physical machine.
+                /// *   x86_bmi: x86-based bare metal instance.
+                /// *   x86_bm: bare metal instance with the SmartNIC.
                 /// *   pc_bmi: heterogeneous bare metal instance.
                 /// *   pc_vm: heterogeneous virtual machine.
                 /// *   arm_bmi: Arm-based computing instance.
@@ -248,7 +252,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public int? Memory { get; set; }
 
                 /// <summary>
-                /// The returned information about the network.
+                /// Details of the network.
                 /// </summary>
                 [NameInMap("NetworkAttributes")]
                 [Validation(Required=false)]
@@ -395,8 +399,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string SpecName { get; set; }
 
+                [NameInMap("SpotStrategy")]
+                [Validation(Required=false)]
+                public string SpotStrategy { get; set; }
+
                 /// <summary>
-                /// The status. Valid values:
+                /// The status of the instance. Valid values:
                 /// 
                 /// *   Running
                 /// *   Expired
@@ -407,7 +415,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The returned information about the disk.
+                /// Details of the system disk.
                 /// </summary>
                 [NameInMap("SystemDisk")]
                 [Validation(Required=false)]

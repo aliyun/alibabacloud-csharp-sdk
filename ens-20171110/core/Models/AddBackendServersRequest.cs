@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// The list of backend servers that you want to add. You can add at most 20 backend servers.
         /// 
         /// >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// The ID of the ENS instance.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
@@ -62,6 +66,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

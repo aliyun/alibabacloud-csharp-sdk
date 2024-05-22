@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DeleteApplicationRequest : TeaModel {
         /// <summary>
         /// The ID of the application. To obtain the application ID, call the ListApplication operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

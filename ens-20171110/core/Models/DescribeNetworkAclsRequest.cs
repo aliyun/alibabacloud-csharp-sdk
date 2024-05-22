@@ -18,8 +18,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The name of the network ACL.
-        /// 
-        /// The name must be 1 to 128 characters in length. The name cannot start with \*\*http:// **or** https://\*\*.
         /// </summary>
         [NameInMap("NetworkAclName")]
         [Validation(Required=false)]

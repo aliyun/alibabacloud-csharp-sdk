@@ -18,13 +18,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The network. The value is a JSON string. Only IPv6 is supported. Sample code of an IPv6 network: \[{ "ipType": "public", "ipAddressType": "ipv6" }]
+        /// The network. The value is a JSON string. Only IPv6 is supported. Sample code of an IPv6 network: [{ "ipType": "public", "ipAddressType": "ipv6" }]
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Networks")]
         [Validation(Required=false)]

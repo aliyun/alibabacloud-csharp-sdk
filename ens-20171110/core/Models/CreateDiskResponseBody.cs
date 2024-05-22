@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateDiskResponseBody : TeaModel {
         /// <summary>
-        /// IDs of instances.
+        /// The IDs of the instances.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

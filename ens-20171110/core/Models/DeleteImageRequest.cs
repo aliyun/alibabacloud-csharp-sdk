@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// The ID of the image. You can specify only one image ID.
         /// 
         /// You can delete only custom images that you created.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]

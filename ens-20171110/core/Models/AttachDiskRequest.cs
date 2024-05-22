@@ -21,7 +21,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DeleteWithInstance { get; set; }
 
         /// <summary>
-        /// The ID of the disk to be attached. The cloud disk and the instance must belong to the same zone.
+        /// The ID of the disk to be attached. The cloud disk and the instance must belong to the same node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string NetworkAclEntryName { get; set; }
 
                 /// <summary>
-                /// The action to be performed on network traffic that matches the rule. Valid values:
+                /// The action that is performed on network traffic that matches the rule. Valid values:
                 /// 
                 /// *   **accept**: allows the network traffic.
                 /// *   **drop**: blocks the network traffic.
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// The destination port range of the outbound rule.
                 /// 
-                /// *   If **Protocol** in the outbound rule is set to **all** or **icmp**, \*\*-1/-1\*\* is returned for this parameter. \*\*-1/-1\*\* indicates all ports.
-                /// *   If **Protocol** in the outbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 120/120 indicates port 1 to port 200 and 80/80 indicates port 80. Valid values for a port: **1 to 65535**.
+                /// *   If **Protocol** of the outbound rule is set to **all** or **icmp** the port range is **-1/-1**, which indicates all ports.
+                /// *   If **Protocol** of the outbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: **1 to 65535**.
                 /// </summary>
                 [NameInMap("PortRange")]
                 [Validation(Required=false)]
@@ -93,12 +93,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// The protocol. Valid values:
+                /// The protocol type. Valid values:
                 /// 
-                /// *   **icmp**
-                /// *   **tcp**
-                /// *   **udp**
-                /// *   **all**
+                /// *   **icmp**: ICMP.
+                /// *   **tcp**: TCP.
+                /// *   **udp**: UDP.
+                /// *   **all**: all protocols.
                 /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
@@ -164,8 +164,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// The destination port range of the inbound rule.
                 /// 
-                /// *   If **Protocol** in the inbound rule is set to **all** or **icmp**, \*\*-1/-1\*\* is returned for this parameter. \*\*-1/-1\*\* indicates all ports.
-                /// *   If **Protocol** in the inbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200 and 80/80 indicates port 80. Valid values for a port: **1 to 65535**.
+                /// *   If **Protocol** of the inbound rule is set to **all** or **icmp**, the port range is **-1/-1**, which indicates all ports.
+                /// *   If **Protocol** of the inbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: **1 to 65535**.
                 /// </summary>
                 [NameInMap("PortRange")]
                 [Validation(Required=false)]
@@ -179,12 +179,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// The protocol. Valid values:
+                /// The protocol type. Valid values:
                 /// 
-                /// *   **icmp**
-                /// *   **tcp**
-                /// *   **udp**
-                /// *   **all**
+                /// *   **icmp**: ICMP.
+                /// *   **tcp**: TCP.
+                /// *   **udp**: UDP.
+                /// *   **all**: all protocols.
                 /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeNetworkAclsResponseBodyNetworkAclsResources> Resources { get; set; }
             public class DescribeNetworkAclsResponseBodyNetworkAclsResources : TeaModel {
                 /// <summary>
-                /// The ID of the ENS node.
+                /// The ID of the edge node.
                 /// </summary>
                 [NameInMap("EnsRegionId")]
                 [Validation(Required=false)]

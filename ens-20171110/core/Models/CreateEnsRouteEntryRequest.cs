@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.
         /// *   The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.
         /// *   0.0.0.0/0 indicates the default CIDR block.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the next hop of the custom route entry.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NextHopId")]
         [Validation(Required=false)]
@@ -52,6 +56,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the route table to which you want to add a custom route entry.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]

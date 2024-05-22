@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DeleteEnsRouteEntryRequest : TeaModel {
         /// <summary>
         /// The ID of the route that you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RouteEntryId")]
         [Validation(Required=false)]

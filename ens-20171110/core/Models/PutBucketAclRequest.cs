@@ -10,11 +10,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PutBucketAclRequest : TeaModel {
         /// <summary>
-        /// The ACL of the bucket.
+        /// The access control list (ACL) of the bucket.
         /// 
         /// *   **public-read-write**
         /// *   **public-read**
         /// *   **private** (default)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BucketAcl")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The name of the bucket.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BucketName")]
         [Validation(Required=false)]

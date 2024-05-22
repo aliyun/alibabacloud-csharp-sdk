@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class ModifyImageAttributeRequest : TeaModel {
         /// <summary>
         /// The ID of the image.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The name of the image.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class AssociateEnsEipAddressRequest : TeaModel {
         /// <summary>
         /// The ID of the EIP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AllocationId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// The ID of the cloud service with which you want to associate the EIP.
         /// 
         /// >  IDs of Edge Load Balancer (ELB) are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

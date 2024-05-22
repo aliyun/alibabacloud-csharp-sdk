@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Bucket { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The time is in UTC. Format: 2010-01-21T09:50:23Z.
+        /// The end of the time range to query. The time must be in UTC. Format: 2010-01-21T09:50:23Z.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -33,7 +35,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. The time is in UTC. Format: 2010-01-21T09:50:23Z.
+        /// The beginning of the time range to query. The time must be in UTC. Format: 2010-01-21T09:50:23Z.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

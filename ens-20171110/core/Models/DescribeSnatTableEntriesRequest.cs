@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DescribeSnatTableEntriesRequest : TeaModel {
         /// <summary>
         /// The ID of the Network Address Translation (NAT) gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]

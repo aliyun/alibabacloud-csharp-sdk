@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the NAT gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]

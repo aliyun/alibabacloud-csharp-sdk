@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class RetryWorkflowShrinkRequest : TeaModel {
-        [NameInMap("WorkflowIds")]
+    public class SaveSDGResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string WorkflowIdsShrink { get; set; }
+        public string RequestId { get; set; }
 
     }
 

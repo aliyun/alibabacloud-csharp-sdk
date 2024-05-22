@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class RunServiceScheduleRequest : TeaModel {
         /// <summary>
         /// The ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -18,13 +20,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The IP address of the client.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClientIp")]
         [Validation(Required=false)]
         public string ClientIp { get; set; }
 
         /// <summary>
-        /// The directory to which the data file is mounted. The value must be a full path and cannot be \"/../\". Example: \["/data/app01", "/data/user"]. Specify the relative path of the virtual device for this parameter. For example, specify /data for this parameter when the actual path of the virtual device is /data/{input path}.
+        /// The directory to which the data file is mounted. The value must be a full path and cannot be \\"/../\\". Example: ["/data/app01", "/data/user"]. Specify the relative path of the virtual device for this parameter. For example, specify /data for this parameter when the actual path of the virtual device is /data/{input path}.
         /// </summary>
         [NameInMap("Directorys")]
         [Validation(Required=false)]
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   Confirm: confirms the scheduling operation.
         /// *   Cancel: cancels the scheduling operation.
         /// *   Console: performs the scheduling operation when the device is in the scheduling state.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceAction")]
         [Validation(Required=false)]
@@ -80,6 +86,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The UUID of the device.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

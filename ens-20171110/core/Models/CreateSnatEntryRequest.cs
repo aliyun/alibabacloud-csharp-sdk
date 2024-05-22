@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class CreateSnatEntryRequest : TeaModel {
         /// <summary>
         /// The ID of the Network Address Translation (NAT) gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The elastic IP address (EIP) in the SNAT entry. Separate multiple EIPs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnatIp")]
         [Validation(Required=false)]

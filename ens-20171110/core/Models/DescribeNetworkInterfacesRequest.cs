@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page. Maximum value: 50. Default value: 10.
+        /// The number of entries to return on each page. Maximum value: 100. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

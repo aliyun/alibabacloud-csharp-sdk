@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class DeleteSnapshotRequest : TeaModel {
         /// <summary>
         /// The ID of the snapshot.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]

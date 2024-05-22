@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the security group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   The name must be 2 to 128 characters in length.
         /// *   The name must start with a letter but cannot start with http:// or https://.
-        /// *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// *   The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("SecurityGroupName")]
         [Validation(Required=false)]

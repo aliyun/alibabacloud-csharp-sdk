@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class SetLoadBalancerStatusRequest : TeaModel {
         /// <summary>
         /// The ID of the ELB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// 
         /// *   **Active** (default): The listener for the instance can forward the received traffic based on the rule.
         /// *   **InActive**: The listener for the instance does not forward the received traffic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerStatus")]
         [Validation(Required=false)]

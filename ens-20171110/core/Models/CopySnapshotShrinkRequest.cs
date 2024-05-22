@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class CopySnapshotShrinkRequest : TeaModel {
         /// <summary>
         /// The destination nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationRegionIds")]
         [Validation(Required=false)]
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DestinationSnapshotDescription { get; set; }
 
         /// <summary>
-        /// The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("DestinationSnapshotName")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the source snapshot.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]

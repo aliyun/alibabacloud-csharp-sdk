@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// The region ID of the disk. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]

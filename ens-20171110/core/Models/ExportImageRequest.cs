@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class ExportImageRequest : TeaModel {
         /// <summary>
         /// The ID of the image.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The OSS bucket to which you want to export the image.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OSSBucket")]
         [Validation(Required=false)]
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// Valid values:
         /// 
         /// *   cn-beijing
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OSSRegionId")]
         [Validation(Required=false)]

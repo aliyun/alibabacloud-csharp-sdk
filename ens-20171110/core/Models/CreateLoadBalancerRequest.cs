@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class CreateLoadBalancerRequest : TeaModel {
         /// <summary>
         /// The ID of the Edge Node Service (ENS) node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The specification of the ELB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerSpec")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The network ID of the created ELB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkId")]
         [Validation(Required=false)]
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The billing method of the instance. Valid value: PostPaid. PostPaid specifies the pay-as-you-go billing method.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -48,6 +56,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the vSwitch to which the internal-facing ELB instance belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

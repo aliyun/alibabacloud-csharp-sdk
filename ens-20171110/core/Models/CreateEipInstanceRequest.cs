@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The ID of the Edge Node Service (ENS) node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The billing method of the EIP. Set the value to **PostPaid**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// The metering method of the EIP. Set the value to **95BandwidthByMonth**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]

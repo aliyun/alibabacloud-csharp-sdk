@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<GetOssUsageDataResponseBodyUsageList> UsageList { get; set; }
         public class GetOssUsageDataResponseBodyUsageList : TeaModel {
             /// <summary>
-            /// The inbound bandwidth over the intranet. Unit: bit/s.
+            /// The inbound bandwidth over the internal network. Unit: bit/s.
             /// </summary>
             [NameInMap("LanRxBw")]
             [Validation(Required=false)]
             public long? LanRxBw { get; set; }
 
             /// <summary>
-            /// The outbound bandwidth over the intranet. Unit: bit/s.
+            /// The outbound bandwidth over the internal network. Unit: bit/s.
             /// </summary>
             [NameInMap("LanTxBw")]
             [Validation(Required=false)]
             public long? LanTxBw { get; set; }
 
             /// <summary>
-            /// The number of time point within a day.
+            /// The number of time points within a day.
             /// </summary>
             [NameInMap("Point")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? StorageUsageByte { get; set; }
 
             /// <summary>
-            /// The outbound bandwidth over the intranet. Unit: bit/s.
+            /// The outbound bandwidth over the Internet. Unit: bit/s.
             /// </summary>
             [NameInMap("WanRxBw")]
             [Validation(Required=false)]

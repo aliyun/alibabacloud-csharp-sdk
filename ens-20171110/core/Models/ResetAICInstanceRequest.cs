@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The IDs of the AIC instance groups.
-        /// </summary>
-        [NameInMap("InstanceIds")]
-        [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
-
-        /// <summary>
         /// The ID of the server.
         /// </summary>
         [NameInMap("ServerId")]

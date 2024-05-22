@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   **Big**: area
         /// *   **Middle**: province
         /// *   **Small**: city
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetLevelCode")]
         [Validation(Required=false)]
