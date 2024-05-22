@@ -10631,6 +10631,106 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
+         * @summary 查询APP的密钥信息
+         *
+         * @param request DescribeAppSecuritiesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAppSecuritiesResponse
+         */
+        public DescribeAppSecuritiesResponse DescribeAppSecuritiesWithOptions(DescribeAppSecuritiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAppSecurities",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppSecuritiesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询APP的密钥信息
+         *
+         * @param request DescribeAppSecuritiesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAppSecuritiesResponse
+         */
+        public async Task<DescribeAppSecuritiesResponse> DescribeAppSecuritiesWithOptionsAsync(DescribeAppSecuritiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAppSecurities",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppSecuritiesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询APP的密钥信息
+         *
+         * @param request DescribeAppSecuritiesRequest
+         * @return DescribeAppSecuritiesResponse
+         */
+        public DescribeAppSecuritiesResponse DescribeAppSecurities(DescribeAppSecuritiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAppSecuritiesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询APP的密钥信息
+         *
+         * @param request DescribeAppSecuritiesRequest
+         * @return DescribeAppSecuritiesResponse
+         */
+        public async Task<DescribeAppSecuritiesResponse> DescribeAppSecuritiesAsync(DescribeAppSecuritiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAppSecuritiesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary This key is used for authentication when an API call is made.
          *
          * @description *   This operation is intended for API callers.
