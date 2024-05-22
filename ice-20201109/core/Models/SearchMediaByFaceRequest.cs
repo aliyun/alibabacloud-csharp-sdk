@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string EntityId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FaceSearchToken")]
         [Validation(Required=false)]
         public string FaceSearchToken { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PersonImageUrl")]
         [Validation(Required=false)]
         public string PersonImageUrl { get; set; }

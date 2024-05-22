@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Config { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DBId")]
         [Validation(Required=false)]
         public string DBId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string InputShrink { get; set; }
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string PipelineId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PrimaryKey")]
         [Validation(Required=false)]
         public string PrimaryKey { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteDNAFilesRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DBId")]
         [Validation(Required=false)]
         public string DBId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PrimaryKeys")]
         [Validation(Required=false)]
         public string PrimaryKeys { get; set; }

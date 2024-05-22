@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListLiveRecordJobsRequest : TeaModel {
+        /// <summary>
+        /// Use the UTC time format: yyyy-MM-ddTHH:mmZ
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
+        /// <summary>
+        /// Use the UTC time format: yyyy-MM-ddTHH:mmZ
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }

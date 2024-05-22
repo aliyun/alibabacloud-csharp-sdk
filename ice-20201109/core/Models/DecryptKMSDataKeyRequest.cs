@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DecryptKMSDataKeyRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CiphertextBlob")]
         [Validation(Required=false)]
         public string CiphertextBlob { get; set; }

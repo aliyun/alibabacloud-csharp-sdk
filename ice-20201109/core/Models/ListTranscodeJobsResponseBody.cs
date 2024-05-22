@@ -77,6 +77,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [Validation(Required=false)]
                     public List<ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigCombineConfigs> CombineConfigs { get; set; }
                     public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigCombineConfigs : TeaModel {
+                        /// <summary>
+                        /// This parameter is required.
+                        /// </summary>
                         [NameInMap("AudioIndex")]
                         [Validation(Required=false)]
                         public string AudioIndex { get; set; }
@@ -89,6 +92,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                         [Validation(Required=false)]
                         public double? Start { get; set; }
 
+                        /// <summary>
+                        /// This parameter is required.
+                        /// </summary>
                         [NameInMap("VideoIndex")]
                         [Validation(Required=false)]
                         public string VideoIndex { get; set; }

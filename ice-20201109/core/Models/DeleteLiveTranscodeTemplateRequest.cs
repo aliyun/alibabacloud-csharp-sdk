@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteLiveTranscodeTemplateRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }

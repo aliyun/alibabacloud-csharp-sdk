@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateLiveTranscodeJobRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public UpdateLiveTranscodeJobRequestStreamInput StreamInput { get; set; }
         public class UpdateLiveTranscodeJobRequestStreamInput : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("InputUrl")]
             [Validation(Required=false)]
             public string InputUrl { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -49,10 +58,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public UpdateLiveTranscodeJobRequestTranscodeOutput TranscodeOutput { get; set; }
         public class UpdateLiveTranscodeJobRequestTranscodeOutput : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }

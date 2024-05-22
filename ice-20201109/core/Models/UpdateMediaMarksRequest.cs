@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateMediaMarksRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MediaMarks")]
         [Validation(Required=false)]
         public string MediaMarks { get; set; }

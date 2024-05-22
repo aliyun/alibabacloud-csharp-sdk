@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string AvatarDescription { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AvatarName")]
         [Validation(Required=false)]
         public string AvatarName { get; set; }

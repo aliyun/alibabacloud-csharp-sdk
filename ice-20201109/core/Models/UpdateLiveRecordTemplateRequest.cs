@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class UpdateLiveRecordTemplateRequest : TeaModel {
         /// <summary>
         /// 代表资源名称的资源属性字段
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// 录制格式
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RecordFormat")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// 格式
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Format")]
             [Validation(Required=false)]
@@ -59,6 +65,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// 代表资源一级ID的资源属性字段
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

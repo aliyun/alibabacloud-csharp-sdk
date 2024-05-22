@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InputGroup")]
         [Validation(Required=false)]
         public string InputGroupShrink { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OutputGroup")]
         [Validation(Required=false)]
         public string OutputGroupShrink { get; set; }

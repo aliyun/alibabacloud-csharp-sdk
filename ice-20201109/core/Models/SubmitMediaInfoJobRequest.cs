@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitMediaInfoJobRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public SubmitMediaInfoJobRequestInput Input { get; set; }
         public class SubmitMediaInfoJobRequestInput : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }

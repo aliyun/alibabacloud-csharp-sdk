@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string DemoAudioMediaURL { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VoiceId")]
         [Validation(Required=false)]
         public string VoiceId { get; set; }

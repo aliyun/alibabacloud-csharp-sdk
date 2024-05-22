@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Model { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

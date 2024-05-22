@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateCustomizedVoiceJobRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Gender")]
         [Validation(Required=false)]
         public string Gender { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Scenario")]
         [Validation(Required=false)]
         public string Scenario { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string VoiceDesc { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VoiceId")]
         [Validation(Required=false)]
         public string VoiceId { get; set; }

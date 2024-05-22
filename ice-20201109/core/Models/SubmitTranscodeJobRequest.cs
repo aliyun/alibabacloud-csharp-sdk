@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InputGroup")]
         [Validation(Required=false)]
         public List<SubmitTranscodeJobRequestInputGroup> InputGroup { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string InputUrl { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -35,14 +44,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OutputGroup")]
         [Validation(Required=false)]
         public List<SubmitTranscodeJobRequestOutputGroup> OutputGroup { get; set; }
         public class SubmitTranscodeJobRequestOutputGroup : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Output")]
             [Validation(Required=false)]
             public SubmitTranscodeJobRequestOutputGroupOutput Output { get; set; }
             public class SubmitTranscodeJobRequestOutputGroupOutput : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Media")]
                 [Validation(Required=false)]
                 public string Media { get; set; }
@@ -51,12 +69,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string OutputUrl { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
             }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("ProcessConfig")]
             [Validation(Required=false)]
             public SubmitTranscodeJobRequestOutputGroupProcessConfig ProcessConfig { get; set; }
@@ -65,6 +89,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public List<SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs> CombineConfigs { get; set; }
                 public class SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs : TeaModel {
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
                     [NameInMap("AudioIndex")]
                     [Validation(Required=false)]
                     public string AudioIndex { get; set; }
@@ -77,6 +104,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [Validation(Required=false)]
                     public double? Start { get; set; }
 
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
                     [NameInMap("VideoIndex")]
                     [Validation(Required=false)]
                     public string VideoIndex { get; set; }
@@ -163,6 +193,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                     }
 
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
                     [NameInMap("TemplateId")]
                     [Validation(Required=false)]
                     public string TemplateId { get; set; }
@@ -201,6 +234,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                     }
 
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
                     [NameInMap("TemplateId")]
                     [Validation(Required=false)]
                     public string TemplateId { get; set; }
@@ -257,12 +293,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                     }
 
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
                     [NameInMap("TemplateId")]
                     [Validation(Required=false)]
                     public string TemplateId { get; set; }
 
                 }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Transcode")]
                 [Validation(Required=false)]
                 public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscode Transcode { get; set; }
@@ -471,6 +513,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                     }
 
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
                     [NameInMap("TemplateId")]
                     [Validation(Required=false)]
                     public string TemplateId { get; set; }

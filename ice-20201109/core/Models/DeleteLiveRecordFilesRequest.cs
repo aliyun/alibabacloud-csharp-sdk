@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteLiveRecordFilesRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RecordIds")]
         [Validation(Required=false)]
         public List<string> RecordIds { get; set; }

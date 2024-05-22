@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitIProductionJobRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FunctionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public SubmitIProductionJobRequestInput Input { get; set; }
         public class SubmitIProductionJobRequestInput : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -35,14 +47,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
         public SubmitIProductionJobRequestOutput Output { get; set; }
         public class SubmitIProductionJobRequestOutput : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }

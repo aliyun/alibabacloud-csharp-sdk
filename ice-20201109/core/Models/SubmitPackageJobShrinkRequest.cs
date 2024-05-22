@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitPackageJobShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Inputs")]
         [Validation(Required=false)]
         public string InputsShrink { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
         public string OutputShrink { get; set; }

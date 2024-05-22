@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Timeline { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }

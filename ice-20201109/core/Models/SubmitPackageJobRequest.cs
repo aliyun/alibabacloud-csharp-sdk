@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitPackageJobRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Inputs")]
         [Validation(Required=false)]
         public List<SubmitPackageJobRequestInputs> Inputs { get; set; }
         public class SubmitPackageJobRequestInputs : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Input")]
             [Validation(Required=false)]
             public SubmitPackageJobRequestInputsInput Input { get; set; }
             public class SubmitPackageJobRequestInputsInput : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Media")]
                 [Validation(Required=false)]
                 public string Media { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -33,14 +45,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
         public SubmitPackageJobRequestOutput Output { get; set; }
         public class SubmitPackageJobRequestOutput : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }

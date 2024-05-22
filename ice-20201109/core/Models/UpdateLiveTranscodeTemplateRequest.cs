@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }

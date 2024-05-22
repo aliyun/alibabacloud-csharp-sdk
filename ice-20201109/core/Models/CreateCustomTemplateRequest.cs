@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateCustomTemplateRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -17,10 +20,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? Subtype { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
         public string TemplateConfig { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public int? Type { get; set; }

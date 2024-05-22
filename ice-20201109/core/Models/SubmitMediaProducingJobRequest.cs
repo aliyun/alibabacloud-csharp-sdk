@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string MediaMetadata { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OutputMediaConfig")]
         [Validation(Required=false)]
         public string OutputMediaConfig { get; set; }

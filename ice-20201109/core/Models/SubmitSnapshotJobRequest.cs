@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitSnapshotJobRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public SubmitSnapshotJobRequestInput Input { get; set; }
         public class SubmitSnapshotJobRequestInput : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -27,14 +36,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
         public SubmitSnapshotJobRequestOutput Output { get; set; }
         public class SubmitSnapshotJobRequestOutput : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -51,6 +69,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
         public SubmitSnapshotJobRequestTemplateConfig TemplateConfig { get; set; }
@@ -135,6 +156,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }

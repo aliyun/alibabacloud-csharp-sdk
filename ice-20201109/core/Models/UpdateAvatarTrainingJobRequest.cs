@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string AvatarName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }

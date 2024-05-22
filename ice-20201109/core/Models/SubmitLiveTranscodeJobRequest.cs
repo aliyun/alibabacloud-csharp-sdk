@@ -9,28 +9,46 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitLiveTranscodeJobRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("StartMode")]
         [Validation(Required=false)]
         public int? StartMode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("StreamInput")]
         [Validation(Required=false)]
         public SubmitLiveTranscodeJobRequestStreamInput StreamInput { get; set; }
         public class SubmitLiveTranscodeJobRequestStreamInput : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("InputUrl")]
             [Validation(Required=false)]
             public string InputUrl { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
@@ -49,6 +67,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TranscodeOutput")]
         [Validation(Required=false)]
         public SubmitLiveTranscodeJobRequestTranscodeOutput TranscodeOutput { get; set; }
@@ -57,6 +78,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }

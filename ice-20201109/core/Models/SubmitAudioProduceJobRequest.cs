@@ -13,14 +13,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EditingConfig")]
         [Validation(Required=false)]
         public string EditingConfig { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InputConfig")]
         [Validation(Required=false)]
         public string InputConfig { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OutputConfig")]
         [Validation(Required=false)]
         public string OutputConfig { get; set; }

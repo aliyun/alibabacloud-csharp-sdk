@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateLiveTranscodeTemplateRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -79,6 +82,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

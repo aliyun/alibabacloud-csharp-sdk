@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetDemonstrationForCustomizedVoiceJobRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Scenario")]
         [Validation(Required=false)]
         public string Scenario { get; set; }

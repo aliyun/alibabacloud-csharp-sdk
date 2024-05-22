@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class SubmitLiveRecordJobRequest : TeaModel {
         /// <summary>
         /// 代表资源名称的资源属性字段
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -23,6 +25,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string NotifyUrl { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RecordOutput")]
         [Validation(Required=false)]
         public SubmitLiveRecordJobRequestRecordOutput RecordOutput { get; set; }
@@ -35,16 +40,25 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("StreamInput")]
         [Validation(Required=false)]
         public SubmitLiveRecordJobRequestStreamInput StreamInput { get; set; }
         public class SubmitLiveRecordJobRequestStreamInput : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -57,6 +71,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// 录制模板ID
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

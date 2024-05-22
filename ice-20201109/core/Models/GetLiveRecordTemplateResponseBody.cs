@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public class GetLiveRecordTemplateResponseBodyRecordTemplate : TeaModel {
             /// <summary>
             /// 代表创建时间的资源属性字段
+            /// 
+            /// Use the UTC time format: yyyy-MM-ddTHH:mmZ
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// 代表创建时间的资源属性字段
+            /// 
+            /// Use the UTC time format: yyyy-MM-ddTHH:mmZ
             /// </summary>
             [NameInMap("LastModified")]
             [Validation(Required=false)]

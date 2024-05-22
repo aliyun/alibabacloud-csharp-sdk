@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetEditingProjectMaterialsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }

@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InputURL")]
         [Validation(Required=false)]
         public string InputURL { get; set; }

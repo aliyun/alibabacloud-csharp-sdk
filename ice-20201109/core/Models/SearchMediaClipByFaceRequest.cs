@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string EntityId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FaceSearchToken")]
         [Validation(Required=false)]
         public string FaceSearchToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
