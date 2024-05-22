@@ -12,6 +12,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class AddRecordTemplateRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -92,10 +95,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public bool? EnableM3u8DateTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FileSplitInterval")]
         [Validation(Required=false)]
         public int? FileSplitInterval { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Formats")]
         [Validation(Required=false)]
         public List<string> Formats { get; set; }
@@ -104,10 +113,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string HttpCallbackUrl { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("LayoutIds")]
         [Validation(Required=false)]
         public List<long?> LayoutIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MediaEncode")]
         [Validation(Required=false)]
         public int? MediaEncode { get; set; }
@@ -116,10 +131,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string MnsQueue { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OssBucket")]
         [Validation(Required=false)]
         public string OssBucket { get; set; }
@@ -128,6 +149,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string OssEndpoint { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OssFilePrefix")]
         [Validation(Required=false)]
         public string OssFilePrefix { get; set; }
@@ -136,6 +160,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TaskProfile")]
         [Validation(Required=false)]
         public string TaskProfile { get; set; }

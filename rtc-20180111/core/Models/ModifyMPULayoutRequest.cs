@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class ModifyMPULayoutRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public int? AudioMixCount { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("LayoutId")]
         [Validation(Required=false)]
         public long? LayoutId { get; set; }

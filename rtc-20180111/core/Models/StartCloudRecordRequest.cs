@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
     public class StartCloudRecordRequest : TeaModel {
         /// <summary>
         /// appId
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         /// <summary>
         /// channelName
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChannelId")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public class StartCloudRecordRequestPanes : TeaModel {
             /// <summary>
             /// paneId
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("PaneId")]
             [Validation(Required=false)]
@@ -48,6 +54,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         /// <summary>
         /// storageConfig
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StorageConfig")]
         [Validation(Required=false)]
@@ -55,6 +63,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public class StartCloudRecordRequestStorageConfig : TeaModel {
             /// <summary>
             /// accessKey
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("AccessKey")]
             [Validation(Required=false)]
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             /// <summary>
             /// bucket
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Bucket")]
             [Validation(Required=false)]
@@ -69,6 +81,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             /// <summary>
             /// region
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -76,6 +90,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             /// <summary>
             /// secretKey
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("SecretKey")]
             [Validation(Required=false)]
@@ -83,6 +99,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             /// <summary>
             /// vendor
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]
@@ -99,6 +117,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         /// <summary>
         /// templateId
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

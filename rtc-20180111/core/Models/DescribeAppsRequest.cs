@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("AppVersion")]
+        [Validation(Required=false)]
+        public string AppVersion { get; set; }
+
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }

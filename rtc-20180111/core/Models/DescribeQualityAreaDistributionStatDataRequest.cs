@@ -11,11 +11,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
     public class DescribeQualityAreaDistributionStatDataRequest : TeaModel {
         /// <summary>
         /// APP ID
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public long? EndDate { get; set; }
@@ -24,6 +29,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string ParentArea { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public long? StartDate { get; set; }

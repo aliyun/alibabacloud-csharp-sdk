@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
     public class DescribeFaultDiagnosisUserListRequest : TeaModel {
         /// <summary>
         /// APP ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -20,6 +22,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string ChannelId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EndTs")]
         [Validation(Required=false)]
         public long? EndTs { get; set; }
@@ -28,14 +33,23 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string FaultTypes { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("StartTs")]
         [Validation(Required=false)]
         public long? StartTs { get; set; }
