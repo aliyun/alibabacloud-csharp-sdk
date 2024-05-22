@@ -57,12 +57,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public string FlowLogName { get; set; }
 
+                [NameInMap("FlowLogVersion")]
+                [Validation(Required=false)]
+                public string FlowLogVersion { get; set; }
+
                 /// <summary>
                 /// The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.
                 /// </summary>
                 [NameInMap("Interval")]
                 [Validation(Required=false)]
                 public long? Interval { get; set; }
+
+                [NameInMap("LogFormatString")]
+                [Validation(Required=false)]
+                public string LogFormatString { get; set; }
 
                 /// <summary>
                 /// The name of the Logstore where the flow log is stored.
@@ -130,6 +138,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [NameInMap("TransitRouterAttachmentId")]
                 [Validation(Required=false)]
                 public string TransitRouterAttachmentId { get; set; }
+
+                [NameInMap("TransitRouterId")]
+                [Validation(Required=false)]
+                public string TransitRouterId { get; set; }
 
             }
 
