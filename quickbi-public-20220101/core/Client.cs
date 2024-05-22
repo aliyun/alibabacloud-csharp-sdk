@@ -2050,6 +2050,138 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         }
 
         /**
+         * @summary 生成智能小Q嵌入ticket
+         *
+         * @param request CreateTicket4CopilotRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTicket4CopilotResponse
+         */
+        public CreateTicket4CopilotResponse CreateTicket4CopilotWithOptions(CreateTicket4CopilotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
+            {
+                query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountType))
+            {
+                query["AccountType"] = request.AccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopilotId))
+            {
+                query["CopilotId"] = request.CopilotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                query["ExpireTime"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketNum))
+            {
+                query["TicketNum"] = request.TicketNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTicket4Copilot",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTicket4CopilotResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 生成智能小Q嵌入ticket
+         *
+         * @param request CreateTicket4CopilotRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTicket4CopilotResponse
+         */
+        public async Task<CreateTicket4CopilotResponse> CreateTicket4CopilotWithOptionsAsync(CreateTicket4CopilotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
+            {
+                query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountType))
+            {
+                query["AccountType"] = request.AccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopilotId))
+            {
+                query["CopilotId"] = request.CopilotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                query["ExpireTime"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketNum))
+            {
+                query["TicketNum"] = request.TicketNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTicket4Copilot",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTicket4CopilotResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 生成智能小Q嵌入ticket
+         *
+         * @param request CreateTicket4CopilotRequest
+         * @return CreateTicket4CopilotResponse
+         */
+        public CreateTicket4CopilotResponse CreateTicket4Copilot(CreateTicket4CopilotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTicket4CopilotWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 生成智能小Q嵌入ticket
+         *
+         * @param request CreateTicket4CopilotRequest
+         * @return CreateTicket4CopilotResponse
+         */
+        public async Task<CreateTicket4CopilotResponse> CreateTicket4CopilotAsync(CreateTicket4CopilotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTicket4CopilotWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Create a user group. You can specify a parent user group.
          *
          * @param request CreateUserGroupRequest

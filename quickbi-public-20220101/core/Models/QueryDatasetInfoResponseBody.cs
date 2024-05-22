@@ -348,6 +348,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
             }
 
+            [NameInMap("OpenOfflineAcceleration")]
+            [Validation(Required=false)]
+            public bool? OpenOfflineAcceleration { get; set; }
+
             /// <summary>
             /// Test Space
             /// </summary>

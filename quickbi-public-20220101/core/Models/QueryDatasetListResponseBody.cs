@@ -132,6 +132,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public string ModifyTime { get; set; }
 
+                [NameInMap("OpenOfflineAcceleration")]
+                [Validation(Required=false)]
+                public bool? OpenOfflineAcceleration { get; set; }
+
                 /// <summary>
                 /// The creation time.
                 /// </summary>
