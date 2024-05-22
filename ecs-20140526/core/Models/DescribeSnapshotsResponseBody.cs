@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotsResponseBodySnapshotsSnapshot> Snapshot { get; set; }
             public class DescribeSnapshotsResponseBodySnapshotsSnapshot : TeaModel {
                 /// <summary>
-                /// Indicates whether the snapshot can be used to create or roll back disks. Valid values:
+                /// Indicates whether the snapshot can be used to create or roll back a disk. Valid values:
                 /// 
                 /// *   true
                 /// *   false
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The category of the snapshot.
                 /// 
-                /// >  This parameter will be removed in the future. We recommend that you use `InstantAccess` to ensure future compatibility.
+                /// >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use `InstantAccess`.
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// Indicates whether the instant access feature is enabled. Valid values:
                 /// 
-                /// *   true: The instant access feature is enabled. The instant access feature can be enabled only for enhanced SSDs (ESSDs).
+                /// *   true: The instant access feature is enabled. By default, the instant access feature is enabled for Enterprise SSDs (ESSDs).
                 /// *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
                 /// </summary>
                 [NameInMap("InstantAccess")]
@@ -102,13 +102,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// Indicates the validity period of the instant access feature. When the specified period expires, the instant access feature is automatically disabled.
                 /// 
                 /// By default, the value of this parameter is the same as the value of `RetentionDays`.
+                /// 
+                /// >  This parameter is deprecated. The normal snapshots of ESSDs are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).
                 /// </summary>
                 [NameInMap("InstantAccessRetentionDays")]
                 [Validation(Required=false)]
                 public int? InstantAccessRetentionDays { get; set; }
 
                 /// <summary>
-                /// The ID of the Key Management Service (KMS) key used for the data disk.
+                /// The ID of the KMS key used for the data disk.
                 /// </summary>
                 [NameInMap("KMSKeyId")]
                 [Validation(Required=false)]
@@ -136,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Progress { get; set; }
 
                 /// <summary>
-                /// The ID of the region to which the snapshot belongs.
+                /// The region ID of the snapshot.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -150,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? RemainTime { get; set; }
 
                 /// <summary>
-                /// The resource group ID to which the snapshot belongs.
+                /// The ID of the resource group to which the snapshot belongs.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -170,6 +172,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string SnapshotId { get; set; }
 
+                [NameInMap("SnapshotLinkId")]
+                [Validation(Required=false)]
+                public string SnapshotLinkId { get; set; }
+
                 /// <summary>
                 /// The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.
                 /// </summary>
@@ -185,7 +191,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SnapshotSN { get; set; }
 
                 /// <summary>
-                /// The type of snapshot. Valid values:
+                /// The type of the snapshot. Valid values:
                 /// 
                 /// *   auto or timer: automatic snapshot
                 /// *   user: manual snapshot
@@ -236,7 +242,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The category of the source disk.
                 /// 
-                /// >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+                /// >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
                 /// </summary>
                 [NameInMap("SourceStorageType")]
                 [Validation(Required=false)]

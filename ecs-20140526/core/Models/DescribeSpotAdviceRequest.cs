@@ -30,9 +30,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   NVIDIA T4
         /// *   NVIDIA P100
         /// *   NVIDIA V100
-        /// *   NVIDIA A100
         /// 
-        /// This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute optimized instance types](https://help.aliyun.com/document_detail/108496.html).
+        /// This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute-optimized and vGPU-accelerated instance families](https://help.aliyun.com/document_detail/108496.html).
         /// </summary>
         [NameInMap("GpuSpec")]
         [Validation(Required=false)]

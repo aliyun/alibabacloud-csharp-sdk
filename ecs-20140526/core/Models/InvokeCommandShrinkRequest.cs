@@ -240,6 +240,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// Specifies how to stop the command task when a command execution is manually stopped or times out. Valid values:
+        /// 
+        /// *   Process: stops the process of the command.
+        /// *   ProcessTree: stops the process tree of the command. In this case, the process of the command and all subprocesses of the process are stopped.
+        /// </summary>
         [NameInMap("TerminationMode")]
         [Validation(Required=false)]
         public string TerminationMode { get; set; }
