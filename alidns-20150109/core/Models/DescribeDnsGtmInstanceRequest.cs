@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class DescribeDnsGtmInstanceRequest : TeaModel {
         /// <summary>
         /// The ID of the instance about which you want to query the information.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

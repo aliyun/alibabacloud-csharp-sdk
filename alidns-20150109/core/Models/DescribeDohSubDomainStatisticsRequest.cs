@@ -36,6 +36,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The subdomain whose statistics you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubDomain")]
         [Validation(Required=false)]

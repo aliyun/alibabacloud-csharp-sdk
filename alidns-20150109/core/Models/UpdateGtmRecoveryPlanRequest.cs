@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the disaster recovery plan.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RecoveryPlanId")]
         [Validation(Required=false)]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the DNS record.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RecordId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The weight of the DNS record that you want to specify. Valid values: `1 to 100`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

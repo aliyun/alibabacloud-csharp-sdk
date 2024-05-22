@@ -66,6 +66,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string DomainType { get; set; }
 
+                /// <summary>
+                /// Indicates whether the DNS traffic analysis feature is enabled for the domain name. Valid values:
+                /// 
+                /// *   OPEN
+                /// *   CLOSE
+                /// </summary>
                 [NameInMap("resolveAnalysisStatus")]
                 [Validation(Required=false)]
                 public string ResolveAnalysisStatus { get; set; }

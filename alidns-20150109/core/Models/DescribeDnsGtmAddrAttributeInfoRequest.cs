@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class DescribeDnsGtmAddrAttributeInfoRequest : TeaModel {
         /// <summary>
         /// The addresses whose source regions you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Addrs")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// *   IPV4: IPv4 address
         /// *   IPV6: IPv6 address
         /// *   DOMAIN: domain name
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateGtmAddressPoolRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Addr")]
         [Validation(Required=false)]
         public List<UpdateGtmAddressPoolRequestAddr> Addr { get; set; }
@@ -42,6 +45,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the address pool that you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]
@@ -70,6 +75,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The type of the address pool that you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

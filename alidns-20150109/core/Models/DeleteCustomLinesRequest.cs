@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The unique IDs of the custom lines that you want to delete. Separate the unique IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LineIds")]
         [Validation(Required=false)]

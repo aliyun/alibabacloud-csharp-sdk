@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
                 }
 
+                [NameInMap("ZoneName")]
+                [Validation(Required=false)]
+                public string ZoneName { get; set; }
+
             }
 
         }

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class DeleteSubDomainRecordsRequest : TeaModel {
         /// <summary>
         /// The domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// The host record.
         /// 
         /// For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RR")]
         [Validation(Required=false)]

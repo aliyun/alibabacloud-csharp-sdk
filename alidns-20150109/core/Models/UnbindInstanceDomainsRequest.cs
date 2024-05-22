@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// The domain names.
         /// 
         /// Separate multiple domain names with commas (,). Up to 100 domain names can be entered.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the access policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]

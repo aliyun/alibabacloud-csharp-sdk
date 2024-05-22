@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class UpdateDomainRemarkRequest : TeaModel {
         /// <summary>
         /// The domain name that already exists in Alibaba Cloud DNS.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

@@ -46,6 +46,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
         /// 
         /// You can only query the DNS records within the last 90 days.``
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

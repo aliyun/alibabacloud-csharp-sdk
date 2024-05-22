@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class DeleteGtmAddressPoolRequest : TeaModel {
         /// <summary>
         /// The ID of the address pool that you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]

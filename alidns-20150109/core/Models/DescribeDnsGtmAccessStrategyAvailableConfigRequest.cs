@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class DescribeDnsGtmAccessStrategyAvailableConfigRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   GEO: geographical location-based
         /// *   LATENCY: latency-based
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StrategyMode")]
         [Validation(Required=false)]

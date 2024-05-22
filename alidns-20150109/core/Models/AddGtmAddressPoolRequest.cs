@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class AddGtmAddressPoolRequest : TeaModel {
         /// <summary>
         /// The address pools.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Addr")]
         [Validation(Required=false)]
@@ -52,6 +54,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the GTM instance for which you want to create an address pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -98,6 +102,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The minimum number of available addresses in the address pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MinAvailableAddrNum")]
         [Validation(Required=false)]
@@ -141,6 +147,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The name of the address pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -170,6 +178,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   **IP**: IPv4 address
         /// *   **DOMAIN**: domain name
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// The hostname.
         /// 
         /// For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RR")]
         [Validation(Required=false)]
@@ -47,6 +49,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the DNS record.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RecordId")]
         [Validation(Required=false)]
@@ -67,6 +71,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// The type of the DNS record. For more information, see
         /// 
         /// [DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -81,6 +87,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The record value.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class AddDomainBackupRequest : TeaModel {
         /// <summary>
         /// The domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   **DAY**: Backs up data once every day.
         /// *   **HOUR**: Backs up data once every hour.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PeriodType")]
         [Validation(Required=false)]

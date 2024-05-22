@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The subdomain name for which you want to enable weighted round-robin. Set the parameter to @.example.com instead of example.com.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubDomain")]
         [Validation(Required=false)]

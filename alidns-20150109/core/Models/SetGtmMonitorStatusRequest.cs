@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The health check ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   **OPEN**: Enabled
         /// *   **CLOSE**: Disabled
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

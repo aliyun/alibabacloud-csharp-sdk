@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class AddCustomLineRequest : TeaModel {
         /// <summary>
         /// The domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The CIDR blocks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpSegment")]
         [Validation(Required=false)]
@@ -51,6 +55,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The name of the custom line.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LineName")]
         [Validation(Required=false)]

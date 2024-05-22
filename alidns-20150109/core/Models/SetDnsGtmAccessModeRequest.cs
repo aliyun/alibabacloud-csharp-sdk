@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// *   AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.
         /// *   DEFAULT: uses the primary address pool group.
         /// *   FAILOVER: uses the secondary address pool group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccessMode")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]

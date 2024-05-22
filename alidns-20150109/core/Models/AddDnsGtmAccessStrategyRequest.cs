@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class AddDnsGtmAccessStrategyRequest : TeaModel {
         /// <summary>
         /// The address pools in the primary address pool set.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DefaultAddrPool")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// *   IPV4
         /// *   IPV6
         /// *   DOMAIN
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DefaultAddrPoolType")]
         [Validation(Required=false)]
@@ -72,6 +76,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The minimum number of available addresses in the primary address pool set.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DefaultMinAvailableAddrNum")]
         [Validation(Required=false)]
@@ -147,6 +153,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -171,6 +179,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   GEO: geographical location-based access policy
         /// *   LATENCY: latency-based access policy
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StrategyMode")]
         [Validation(Required=false)]
@@ -178,6 +188,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The name of the access policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]

@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 }
 
                 /// <summary>
-                /// The user\"s domain name or domain name list.
+                /// The user\\"s domain name or domain name list.
                 /// </summary>
                 [NameInMap("UserDomainName")]
                 [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class CopyGtmConfigRequest : TeaModel {
         /// <summary>
         /// The type of the object that you want to copy. Only the INSTANCE type is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CopyType")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the source object. Only instance IDs are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceId")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the target object. Only instance IDs are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetId")]
         [Validation(Required=false)]

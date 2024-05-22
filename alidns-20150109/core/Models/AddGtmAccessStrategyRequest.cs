@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class AddGtmAccessStrategyRequest : TeaModel {
         /// <summary>
         /// The line codes of access regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccessLines")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the default address pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DefaultAddrPoolId")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// The ID of the failover address pool.
         /// 
         /// If the failover address pool is not set, pass the **Empty** value.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FailoverAddrPoolId")]
         [Validation(Required=false)]
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the GTM instance for which you want to create an access policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -48,6 +56,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The name of the access policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]

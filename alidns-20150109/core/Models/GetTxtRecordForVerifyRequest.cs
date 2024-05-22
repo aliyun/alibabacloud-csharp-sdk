@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   ADD_SUB_DOMAIN
         /// *   RETRIEVAL
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -53,14 +53,23 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of entries returned on all pages.
+        /// </summary>
         [NameInMap("TotalItems")]
         [Validation(Required=false)]
         public int? TotalItems { get; set; }
 
+        /// <summary>
+        /// The total number of pages returned.
+        /// </summary>
         [NameInMap("TotalPages")]
         [Validation(Required=false)]
         public int? TotalPages { get; set; }

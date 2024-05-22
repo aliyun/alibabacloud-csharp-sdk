@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class DescribeDnsGtmInstanceAddressPoolRequest : TeaModel {
         /// <summary>
         /// The ID of the address pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]

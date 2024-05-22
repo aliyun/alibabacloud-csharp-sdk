@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class SetDomainDnssecStatusRequest : TeaModel {
         /// <summary>
         /// The domain name for which you want to set the DNSSEC status.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   ON: enables DNSSEC for the domain name.
         /// *   OFF: disables DNSSEC for the domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

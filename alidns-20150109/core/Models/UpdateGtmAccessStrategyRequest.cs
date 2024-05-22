@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the access policy that you want to query for the GTM instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]

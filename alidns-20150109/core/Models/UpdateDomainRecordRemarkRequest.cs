@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the DNS record.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RecordId")]
         [Validation(Required=false)]

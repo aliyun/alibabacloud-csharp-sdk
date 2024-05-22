@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class DescribeGtmInstanceAddressPoolsRequest : TeaModel {
         /// <summary>
         /// The ID of the GTM instance that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class AddDnsGtmAddressPoolRequest : TeaModel {
         /// <summary>
         /// The address pools.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Addr")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public class AddDnsGtmAddressPoolRequestAddr : TeaModel {
             /// <summary>
             /// The address in the address pool.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Addr")]
             [Validation(Required=false)]
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             ///     *   NO_NEED: no need for rectification
             ///     *   RECTIFIED: rectified
             ///     *   AUTO: automatic rectification
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("AttributeInfo")]
             [Validation(Required=false)]
@@ -51,6 +57,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             /// *   SMART: smart return
             /// *   ONLINE: always online
             /// *   OFFLINE: always offline
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
@@ -74,6 +82,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -125,6 +135,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   ALL_RR: returns all addresses.
         /// *   RATIO: returns addresses by weight.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LbaStrategy")]
         [Validation(Required=false)]
@@ -195,6 +207,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The name of the address pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -225,6 +239,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// *   IPV4: IPv4 address
         /// *   IPV6: IPv6 address
         /// *   DOMAIN: domain name
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class TransferDomainRequest : TeaModel {
         /// <summary>
         /// The domain names. Separate multiple domain names with commas (,). Only domain names registered with Alibaba Cloud are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The destination user ID. The domain names and their Domain Name System (DNS) records are transferred to the destination user ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetUserId")]
         [Validation(Required=false)]

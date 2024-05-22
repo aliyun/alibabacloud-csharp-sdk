@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class AddGtmMonitorRequest : TeaModel {
         /// <summary>
         /// The ID of the address pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The number of consecutive failures.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The health check interval. Unit: seconds. Set the value to 60.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The nodes for monitoring.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IspCityNode")]
         [Validation(Required=false)]
@@ -86,6 +94,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   port: the port that you want to check
         /// *   failureRate: the failure rate
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MonitorExtendInfo")]
         [Validation(Required=false)]
@@ -98,6 +108,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// *   HTTPS
         /// *   PING
         /// *   TCP
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
@@ -105,6 +117,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]

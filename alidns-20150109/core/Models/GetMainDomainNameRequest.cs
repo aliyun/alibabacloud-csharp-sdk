@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class GetMainDomainNameRequest : TeaModel {
         /// <summary>
         /// The string. The string can be up to 128 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InputString")]
         [Validation(Required=false)]

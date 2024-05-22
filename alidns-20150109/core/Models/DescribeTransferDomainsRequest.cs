@@ -56,6 +56,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   IN: The domain name was transferred to the current account.
         /// *   OUT: The domain name was transferred from the current account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TransferType")]
         [Validation(Required=false)]

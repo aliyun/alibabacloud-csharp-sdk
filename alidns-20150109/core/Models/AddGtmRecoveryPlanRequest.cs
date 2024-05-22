@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class AddGtmRecoveryPlanRequest : TeaModel {
         /// <summary>
         /// The list of IDs of faulty address pools.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FaultAddrPool")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The name of the disaster recovery plan that you want to create.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

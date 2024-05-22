@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class DescribeRecordStatisticsRequest : TeaModel {
         /// <summary>
         /// The domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -44,6 +46,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The hostname. If you want to resolve the subdomain name www.dns-exmaple.top, set this parameter to www.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Rr")]
         [Validation(Required=false)]
@@ -57,6 +61,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// If the time range is less than or equal to seven days, data is returned on an hourly basis.````
         /// 
         /// If the time range is greater than seven days, data is returned on a daily basis.````
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

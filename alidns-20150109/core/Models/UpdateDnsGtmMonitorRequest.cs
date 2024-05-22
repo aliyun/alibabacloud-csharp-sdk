@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The monitored nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IspCityNode")]
         [Validation(Required=false)]
@@ -55,6 +57,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the health check configuration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
@@ -108,6 +112,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         ///         *   IPV4
         ///         *   IPV6
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MonitorExtendInfo")]
         [Validation(Required=false)]
@@ -120,6 +126,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// *   HTTPS
         /// *   PING
         /// *   TCP
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]

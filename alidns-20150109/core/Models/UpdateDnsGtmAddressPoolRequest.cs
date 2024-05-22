@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class UpdateDnsGtmAddressPoolRequest : TeaModel {
         /// <summary>
         /// The address pools.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Addr")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public class UpdateDnsGtmAddressPoolRequestAddr : TeaModel {
             /// <summary>
             /// The address in the address pool.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Addr")]
             [Validation(Required=false)]
@@ -53,6 +57,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             /// *   SMART: smart return.
             /// *   ONLINE: always online.
             /// *   OFFLINE: always offline.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
@@ -69,6 +75,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the address pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]
@@ -86,6 +94,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   ALL_RR: returns all addresses.
         /// *   RATIO: returns addresses by weight.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LbaStrategy")]
         [Validation(Required=false)]

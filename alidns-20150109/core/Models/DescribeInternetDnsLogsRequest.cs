@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeInternetDnsLogsRequest : TeaModel {
+        [NameInMap("AccountId")]
+        [Validation(Required=false)]
+        public long? AccountId { get; set; }
+
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

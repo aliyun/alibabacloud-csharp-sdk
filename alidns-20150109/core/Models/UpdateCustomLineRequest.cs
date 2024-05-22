@@ -41,13 +41,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The unique ID of the custom line.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LineId")]
         [Validation(Required=false)]
         public long? LineId { get; set; }
 
         /// <summary>
-        /// The name of the custom line. The name must be 1 to 20 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+        /// The name of the custom line. The name must be 1 to 20 characters in length and can contain letters, digits, hyphens (-), and underscores (_).
         /// </summary>
         [NameInMap("LineName")]
         [Validation(Required=false)]

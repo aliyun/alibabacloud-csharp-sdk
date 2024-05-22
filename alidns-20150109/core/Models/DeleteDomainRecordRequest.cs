@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// The ID of the DNS record.
         /// 
         /// This parameter is returned when you add a DNS record or when you query a list of DNS records.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RecordId")]
         [Validation(Required=false)]

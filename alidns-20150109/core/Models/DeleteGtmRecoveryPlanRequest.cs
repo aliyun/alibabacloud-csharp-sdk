@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the disaster recovery plan that you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RecoveryPlanId")]
         [Validation(Required=false)]

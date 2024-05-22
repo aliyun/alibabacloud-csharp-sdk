@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
     public class AddDnsGtmMonitorRequest : TeaModel {
         /// <summary>
         /// The ID of the address pool.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The health check interval. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The monitored nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IspCityNode")]
         [Validation(Required=false)]
@@ -108,6 +116,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         ///         *   IPV4
         ///         *   IPV6
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MonitorExtendInfo")]
         [Validation(Required=false)]
@@ -120,6 +130,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// *   HTTPS
         /// *   PING
         /// *   TCP
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
@@ -127,6 +139,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The health check timeout period. Unit: milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]

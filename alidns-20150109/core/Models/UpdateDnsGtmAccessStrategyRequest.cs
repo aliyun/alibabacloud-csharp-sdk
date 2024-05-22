@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The address pools in the primary address pool set.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DefaultAddrPool")]
         [Validation(Required=false)]
@@ -49,6 +51,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// *   IPV4
         /// *   IPV6
         /// *   DOMAIN
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DefaultAddrPoolType")]
         [Validation(Required=false)]
@@ -83,6 +87,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The minimum number of available addresses in the primary address pool set.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DefaultMinAvailableAddrNum")]
         [Validation(Required=false)]
@@ -172,6 +178,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the access policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
@@ -179,6 +187,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The name of the access policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]

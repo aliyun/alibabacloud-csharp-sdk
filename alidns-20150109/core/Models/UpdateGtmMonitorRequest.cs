@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The monitored nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IspCityNode")]
         [Validation(Required=false)]
@@ -57,6 +59,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The ID of the health check configuration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
@@ -83,6 +87,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         /// *   port: the port to check.
         /// *   failureRate: the failure rate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MonitorExtendInfo")]
         [Validation(Required=false)]
@@ -90,6 +96,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// The protocol used for the health check.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
