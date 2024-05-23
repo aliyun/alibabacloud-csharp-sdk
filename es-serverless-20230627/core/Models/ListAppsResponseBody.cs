@@ -77,6 +77,9 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

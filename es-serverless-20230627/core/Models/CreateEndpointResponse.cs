@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 {
-    public class GetMonitorDataResponse : TeaModel {
+    public class CreateEndpointResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetMonitorDataResponseBody Body { get; set; }
+        public CreateEndpointResponseBody Body { get; set; }
 
     }
 

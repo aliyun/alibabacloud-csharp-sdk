@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * @summary 创建Serverless应用
+         *
+         * @param request CreateAppRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAppResponse
+         */
         public CreateAppResponse CreateAppWithOptions(CreateAppRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -78,6 +86,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             {
                 body["regionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scenario))
+            {
+                body["scenario"] = request.Scenario;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
             {
                 body["version"] = request.Version;
@@ -103,6 +115,14 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<CreateAppResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 创建Serverless应用
+         *
+         * @param request CreateAppRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAppResponse
+         */
         public async Task<CreateAppResponse> CreateAppWithOptionsAsync(CreateAppRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -144,6 +164,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             {
                 body["regionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scenario))
+            {
+                body["scenario"] = request.Scenario;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
             {
                 body["version"] = request.Version;
@@ -169,6 +193,12 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<CreateAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 创建Serverless应用
+         *
+         * @param request CreateAppRequest
+         * @return CreateAppResponse
+         */
         public CreateAppResponse CreateApp(CreateAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -176,6 +206,12 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return CreateAppWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 创建Serverless应用
+         *
+         * @param request CreateAppRequest
+         * @return CreateAppResponse
+         */
         public async Task<CreateAppResponse> CreateAppAsync(CreateAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -183,6 +219,139 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return await CreateAppWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 创建端点
+         *
+         * @param request CreateEndpointRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateEndpointResponse
+         */
+        public CreateEndpointResponse CreateEndpointWithOptions(CreateEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointZones))
+            {
+                body["endpointZones"] = request.EndpointZones;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["vpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEndpoint",
+                Version = "2023-06-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/es-serverless/endpoints",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEndpointResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建端点
+         *
+         * @param request CreateEndpointRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateEndpointResponse
+         */
+        public async Task<CreateEndpointResponse> CreateEndpointWithOptionsAsync(CreateEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointZones))
+            {
+                body["endpointZones"] = request.EndpointZones;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["vpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEndpoint",
+                Version = "2023-06-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/es-serverless/endpoints",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEndpointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建端点
+         *
+         * @param request CreateEndpointRequest
+         * @return CreateEndpointResponse
+         */
+        public CreateEndpointResponse CreateEndpoint(CreateEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateEndpointWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建端点
+         *
+         * @param request CreateEndpointRequest
+         * @return CreateEndpointResponse
+         */
+        public async Task<CreateEndpointResponse> CreateEndpointAsync(CreateEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateEndpointWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除Serverless应用。
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAppResponse
+         */
         public DeleteAppResponse DeleteAppWithOptions(string appName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -204,6 +373,13 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<DeleteAppResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除Serverless应用。
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAppResponse
+         */
         public async Task<DeleteAppResponse> DeleteAppWithOptionsAsync(string appName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -225,6 +401,11 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<DeleteAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除Serverless应用。
+         *
+         * @return DeleteAppResponse
+         */
         public DeleteAppResponse DeleteApp(string appName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -232,6 +413,11 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return DeleteAppWithOptions(appName, headers, runtime);
         }
 
+        /**
+         * @summary 删除Serverless应用。
+         *
+         * @return DeleteAppResponse
+         */
         public async Task<DeleteAppResponse> DeleteAppAsync(string appName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -239,6 +425,14 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return await DeleteAppWithOptionsAsync(appName, headers, runtime);
         }
 
+        /**
+         * @summary 获取Serverless应用详情
+         *
+         * @param request GetAppRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAppResponse
+         */
         public GetAppResponse GetAppWithOptions(string appName, GetAppRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -267,6 +461,14 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<GetAppResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取Serverless应用详情
+         *
+         * @param request GetAppRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAppResponse
+         */
         public async Task<GetAppResponse> GetAppWithOptionsAsync(string appName, GetAppRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -295,6 +497,12 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<GetAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取Serverless应用详情
+         *
+         * @param request GetAppRequest
+         * @return GetAppResponse
+         */
         public GetAppResponse GetApp(string appName, GetAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -302,6 +510,12 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return GetAppWithOptions(appName, request, headers, runtime);
         }
 
+        /**
+         * @summary 获取Serverless应用详情
+         *
+         * @param request GetAppRequest
+         * @return GetAppResponse
+         */
         public async Task<GetAppResponse> GetAppAsync(string appName, GetAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -309,6 +523,13 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return await GetAppWithOptionsAsync(appName, request, headers, runtime);
         }
 
+        /**
+         * @summary 获取Serverless应用配额详情
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAppQuotaResponse
+         */
         public GetAppQuotaResponse GetAppQuotaWithOptions(string appName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -330,6 +551,13 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<GetAppQuotaResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取Serverless应用配额详情
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAppQuotaResponse
+         */
         public async Task<GetAppQuotaResponse> GetAppQuotaWithOptionsAsync(string appName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -351,6 +579,11 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<GetAppQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取Serverless应用配额详情
+         *
+         * @return GetAppQuotaResponse
+         */
         public GetAppQuotaResponse GetAppQuota(string appName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -358,6 +591,11 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return GetAppQuotaWithOptions(appName, headers, runtime);
         }
 
+        /**
+         * @summary 获取Serverless应用配额详情
+         *
+         * @return GetAppQuotaResponse
+         */
         public async Task<GetAppQuotaResponse> GetAppQuotaAsync(string appName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -365,6 +603,14 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return await GetAppQuotaWithOptionsAsync(appName, headers, runtime);
         }
 
+        /**
+         * @summary 获取监控数据
+         *
+         * @param request GetMonitorDataRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetMonitorDataResponse
+         */
         public GetMonitorDataResponse GetMonitorDataWithOptions(GetMonitorDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -388,6 +634,14 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<GetMonitorDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取监控数据
+         *
+         * @param request GetMonitorDataRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetMonitorDataResponse
+         */
         public async Task<GetMonitorDataResponse> GetMonitorDataWithOptionsAsync(GetMonitorDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -411,6 +665,12 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<GetMonitorDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取监控数据
+         *
+         * @param request GetMonitorDataRequest
+         * @return GetMonitorDataResponse
+         */
         public GetMonitorDataResponse GetMonitorData(GetMonitorDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -418,6 +678,12 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return GetMonitorDataWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取监控数据
+         *
+         * @param request GetMonitorDataRequest
+         * @return GetMonitorDataResponse
+         */
         public async Task<GetMonitorDataResponse> GetMonitorDataAsync(GetMonitorDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -425,6 +691,14 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return await GetMonitorDataWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 查看Serverless应用列表
+         *
+         * @param request ListAppsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAppsResponse
+         */
         public ListAppsResponse ListAppsWithOptions(ListAppsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -477,6 +751,14 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<ListAppsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查看Serverless应用列表
+         *
+         * @param request ListAppsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAppsResponse
+         */
         public async Task<ListAppsResponse> ListAppsWithOptionsAsync(ListAppsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -529,6 +811,12 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<ListAppsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查看Serverless应用列表
+         *
+         * @param request ListAppsRequest
+         * @return ListAppsResponse
+         */
         public ListAppsResponse ListApps(ListAppsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -536,6 +824,12 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return ListAppsWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 查看Serverless应用列表
+         *
+         * @param request ListAppsRequest
+         * @return ListAppsResponse
+         */
         public async Task<ListAppsResponse> ListAppsAsync(ListAppsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -543,6 +837,14 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return await ListAppsWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 编辑Serverless应用
+         *
+         * @param request UpdateAppRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateAppResponse
+         */
         public UpdateAppResponse UpdateAppWithOptions(string appName, UpdateAppRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -595,6 +897,14 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<UpdateAppResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 编辑Serverless应用
+         *
+         * @param request UpdateAppRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateAppResponse
+         */
         public async Task<UpdateAppResponse> UpdateAppWithOptionsAsync(string appName, UpdateAppRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -647,6 +957,12 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return TeaModel.ToObject<UpdateAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 编辑Serverless应用
+         *
+         * @param request UpdateAppRequest
+         * @return UpdateAppResponse
+         */
         public UpdateAppResponse UpdateApp(string appName, UpdateAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -654,6 +970,12 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
             return UpdateAppWithOptions(appName, request, headers, runtime);
         }
 
+        /**
+         * @summary 编辑Serverless应用
+         *
+         * @param request UpdateAppRequest
+         * @return UpdateAppResponse
+         */
         public async Task<UpdateAppResponse> UpdateAppAsync(string appName, UpdateAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

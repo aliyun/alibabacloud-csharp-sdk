@@ -14,11 +14,16 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
     public class CreateAppRequest : TeaModel {
         /// <summary>
         /// 应用名
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("appName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("authentication")]
         [Validation(Required=false)]
         public CreateAppRequestAuthentication Authentication { get; set; }
@@ -39,6 +44,9 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("chargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
@@ -143,6 +151,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
         [NameInMap("regionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("scenario")]
+        [Validation(Required=false)]
+        public string Scenario { get; set; }
 
         [NameInMap("version")]
         [Validation(Required=false)]

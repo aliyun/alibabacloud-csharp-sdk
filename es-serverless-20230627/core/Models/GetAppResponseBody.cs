@@ -41,9 +41,89 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
 
+            [NameInMap("network")]
+            [Validation(Required=false)]
+            public List<GetAppResponseBodyResultNetwork> Network { get; set; }
+            public class GetAppResponseBodyResultNetwork : TeaModel {
+                [NameInMap("domain")]
+                [Validation(Required=false)]
+                public string Domain { get; set; }
+
+                [NameInMap("enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                [NameInMap("port")]
+                [Validation(Required=false)]
+                public int? Port { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("whiteIpGroup")]
+                [Validation(Required=false)]
+                public List<GetAppResponseBodyResultNetworkWhiteIpGroup> WhiteIpGroup { get; set; }
+                public class GetAppResponseBodyResultNetworkWhiteIpGroup : TeaModel {
+                    [NameInMap("groupName")]
+                    [Validation(Required=false)]
+                    public string GroupName { get; set; }
+
+                    [NameInMap("ips")]
+                    [Validation(Required=false)]
+                    public List<string> Ips { get; set; }
+
+                }
+
+            }
+
             [NameInMap("ownerId")]
             [Validation(Required=false)]
             public string OwnerId { get; set; }
+
+            [NameInMap("privateNetwork")]
+            [Validation(Required=false)]
+            public List<GetAppResponseBodyResultPrivateNetwork> PrivateNetwork { get; set; }
+            public class GetAppResponseBodyResultPrivateNetwork : TeaModel {
+                [NameInMap("domain")]
+                [Validation(Required=false)]
+                public string Domain { get; set; }
+
+                [NameInMap("enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                [NameInMap("port")]
+                [Validation(Required=false)]
+                public int? Port { get; set; }
+
+                [NameInMap("pvlEndpointId")]
+                [Validation(Required=false)]
+                public string PvlEndpointId { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("vpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+                [NameInMap("whiteIpGroup")]
+                [Validation(Required=false)]
+                public List<GetAppResponseBodyResultPrivateNetworkWhiteIpGroup> WhiteIpGroup { get; set; }
+                public class GetAppResponseBodyResultPrivateNetworkWhiteIpGroup : TeaModel {
+                    [NameInMap("groupName")]
+                    [Validation(Required=false)]
+                    public string GroupName { get; set; }
+
+                    [NameInMap("ips")]
+                    [Validation(Required=false)]
+                    public List<string> Ips { get; set; }
+
+                }
+
+            }
 
             [NameInMap("regionId")]
             [Validation(Required=false)]

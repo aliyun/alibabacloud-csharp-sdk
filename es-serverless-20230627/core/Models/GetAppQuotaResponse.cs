@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 {
     public class GetAppQuotaResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public GetAppQuotaResponseBody Body { get; set; }
 
     }
