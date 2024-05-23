@@ -21,12 +21,25 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
             [Validation(Required=false)]
             public List<DescribeDrdsInstanceNetInfoForInnerResponseBodyNetInfosNetInfo> NetInfo { get; set; }
             public class DescribeDrdsInstanceNetInfoForInnerResponseBodyNetInfosNetInfo : TeaModel {
+                [NameInMap("IP")]
+                [Validation(Required=false)]
                 public string IP { get; set; }
+
+                [NameInMap("IsForVpc")]
+                [Validation(Required=false)]
                 public bool? IsForVpc { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
                 public string Port { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("NetworkType")]
         [Validation(Required=false)]

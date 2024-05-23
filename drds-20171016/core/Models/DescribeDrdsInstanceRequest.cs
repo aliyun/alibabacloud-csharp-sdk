@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20171016.Models
 {
     public class DescribeDrdsInstanceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }

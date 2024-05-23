@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

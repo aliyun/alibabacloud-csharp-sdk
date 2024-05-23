@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
         [Validation(Required=false)]
         public string DbName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
@@ -24,6 +27,9 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }

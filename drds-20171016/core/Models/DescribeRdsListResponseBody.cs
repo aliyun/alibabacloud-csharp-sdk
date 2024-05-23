@@ -17,12 +17,32 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
             [Validation(Required=false)]
             public List<DescribeRdsListResponseBodyDataRdsInstance> RdsInstance { get; set; }
             public class DescribeRdsListResponseBodyDataRdsInstance : TeaModel {
+                [NameInMap("ConnectUrl")]
+                [Validation(Required=false)]
                 public string ConnectUrl { get; set; }
+
+                [NameInMap("DbType")]
+                [Validation(Required=false)]
                 public string DbType { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public int? InstanceId { get; set; }
+
+                [NameInMap("InstanceName")]
+                [Validation(Required=false)]
                 public string InstanceName { get; set; }
+
+                [NameInMap("InstanceStatus")]
+                [Validation(Required=false)]
                 public string InstanceStatus { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
                 public int? Port { get; set; }
+
+                [NameInMap("ReadOnlyChildren")]
+                [Validation(Required=false)]
                 public DescribeRdsListResponseBodyDataRdsInstanceReadOnlyChildren ReadOnlyChildren { get; set; }
                 public class DescribeRdsListResponseBodyDataRdsInstanceReadOnlyChildren : TeaModel {
                     [NameInMap("Child")]
@@ -60,9 +80,14 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
                     }
 
                 }
+
+                [NameInMap("ReadWeight")]
+                [Validation(Required=false)]
                 public int? ReadWeight { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

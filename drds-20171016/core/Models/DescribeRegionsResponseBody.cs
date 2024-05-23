@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyDrdsRegionsDrdsRegion> DrdsRegion { get; set; }
             public class DescribeRegionsResponseBodyDrdsRegionsDrdsRegion : TeaModel {
+                [NameInMap("InstanceSeriesList")]
+                [Validation(Required=false)]
                 public DescribeRegionsResponseBodyDrdsRegionsDrdsRegionInstanceSeriesList InstanceSeriesList { get; set; }
                 public class DescribeRegionsResponseBodyDrdsRegionsDrdsRegionInstanceSeriesList : TeaModel {
                     [NameInMap("InstanceSeries")]
@@ -39,20 +41,41 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
                             [Validation(Required=false)]
                             public List<DescribeRegionsResponseBodyDrdsRegionsDrdsRegionInstanceSeriesListInstanceSeriesSpecListSpec> Spec { get; set; }
                             public class DescribeRegionsResponseBodyDrdsRegionsDrdsRegionInstanceSeriesListInstanceSeriesSpecListSpec : TeaModel {
+                                [NameInMap("SpecId")]
+                                [Validation(Required=false)]
                                 public string SpecId { get; set; }
+
+                                [NameInMap("SpecName")]
+                                [Validation(Required=false)]
                                 public string SpecName { get; set; }
+
                             }
-                        };
+
+                        }
 
                     }
 
                 }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("RegionName")]
+                [Validation(Required=false)]
                 public string RegionName { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
+                [NameInMap("ZoneName")]
+                [Validation(Required=false)]
                 public string ZoneName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

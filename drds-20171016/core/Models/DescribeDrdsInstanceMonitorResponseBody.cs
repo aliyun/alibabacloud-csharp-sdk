@@ -17,8 +17,16 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
             [Validation(Required=false)]
             public List<DescribeDrdsInstanceMonitorResponseBodyDataPartialPerformanceData> PartialPerformanceData { get; set; }
             public class DescribeDrdsInstanceMonitorResponseBodyDataPartialPerformanceData : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("Unit")]
+                [Validation(Required=false)]
                 public string Unit { get; set; }
+
+                [NameInMap("Values")]
+                [Validation(Required=false)]
                 public DescribeDrdsInstanceMonitorResponseBodyDataPartialPerformanceDataValues Values { get; set; }
                 public class DescribeDrdsInstanceMonitorResponseBodyDataPartialPerformanceDataValues : TeaModel {
                     [NameInMap("PerformanceValue")]
@@ -36,8 +44,10 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

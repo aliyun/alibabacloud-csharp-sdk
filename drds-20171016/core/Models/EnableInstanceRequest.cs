@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
         [Validation(Required=false)]
         public string RestoreTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SourceDbInstId")]
         [Validation(Required=false)]
         public string SourceDbInstId { get; set; }

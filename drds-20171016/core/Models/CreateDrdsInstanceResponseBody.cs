@@ -22,10 +22,12 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
                 public List<string> DrdsInstanceId { get; set; }
 
             }
+
             [NameInMap("OrderId")]
             [Validation(Required=false)]
             public long? OrderId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

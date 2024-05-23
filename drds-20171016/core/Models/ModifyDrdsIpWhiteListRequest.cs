@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20171016.Models
 {
     public class ModifyDrdsIpWhiteListRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("IpWhiteList")]
         [Validation(Required=false)]
         public string IpWhiteList { get; set; }

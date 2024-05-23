@@ -16,13 +16,16 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
             [NameInMap("AccountName")]
             [Validation(Required=false)]
             public string AccountName { get; set; }
+
             [NameInMap("DbName")]
             [Validation(Required=false)]
             public string DbName { get; set; }
+
             [NameInMap("DrdsInstanceId")]
             [Validation(Required=false)]
             public string DrdsInstanceId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -22,7 +22,8 @@ namespace AlibabaCloud.SDK.Drds20171016.Models
                 public List<string> Ip { get; set; }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
