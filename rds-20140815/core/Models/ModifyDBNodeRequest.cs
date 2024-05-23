@@ -30,13 +30,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The new storage capacity of the instance. Unit: GB For more information, see [Instance types](~~26312~~).
+        /// The new storage capacity of the instance. Unit: GB For more information, see [Instance types](https://help.aliyun.com/document_detail/26312.html).
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]

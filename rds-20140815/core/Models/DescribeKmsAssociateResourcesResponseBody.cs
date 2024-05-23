@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeKmsAssociateResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The information about the associated ApsaraDB RDS instance.
+        /// The information about the associated ApsaraDB RDS instances.
         /// </summary>
         [NameInMap("AssociateDBInstances")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// The way in which the key is used. Return values:
+            /// The purpose of the key. Valid values:
             /// 
             /// *   **DiskEncryption**: cloud disk encryption
             /// *   **TDE**: transparent data encryption

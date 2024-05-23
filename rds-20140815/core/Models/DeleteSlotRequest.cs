@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -50,6 +52,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The name of the replication slot. You can call the DescribeSlots operation to query the name of the replication slot.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SlotName")]
         [Validation(Required=false)]
@@ -60,6 +64,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   ACTIVE
         /// *   INACTIVE
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SlotStatus")]
         [Validation(Required=false)]

@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The prefix of the internal endpoint.
         /// 
         /// When you create any type of endpoint, an internal endpoint is automatically created for the endpoint. This parameter specifies the prefix of the internal endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
@@ -35,31 +37,39 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceEndpointDescription { get; set; }
 
         /// <summary>
-        /// The type of the endpoint. Valid values:
+        /// The endpoint type. Valid values:
         /// 
         /// *   Primary: read/write endpoint of the instance
         /// *   Readonly: read-only endpoint of the instance
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceEndpointType")]
         [Validation(Required=false)]
         public string DBInstanceEndpointType { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The information about the node that is configured for the endpoint.
+        /// The information about the endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeItems")]
         [Validation(Required=false)]
         public List<CreateDBInstanceEndpointRequestNodeItems> NodeItems { get; set; }
         public class CreateDBInstanceEndpointRequestNodeItems : TeaModel {
             /// <summary>
-            /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+            /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
@@ -67,6 +77,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
             /// <summary>
             /// The node ID.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
@@ -87,6 +99,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The port number of the internal endpoint. You can specify the port number for the internal endpoint.
         /// 
         /// Valid values: 3000 to 5999.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
@@ -100,7 +114,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.
+        /// The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -112,13 +126,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The vSwitch ID of the internal endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The virtual private cloud (VPC) ID of the internal endpoint.
+        /// The VPC ID of the internal endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

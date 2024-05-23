@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The system automatically assigns a connection mode to the instance.
         /// 
         /// >  SQL Server 2012, SQL Server 2016, and SQL Server 2017 support only the standard mode.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectionMode")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

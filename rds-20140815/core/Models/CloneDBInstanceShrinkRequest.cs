@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// The instance type of the new instance. For information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+        /// The instance type of the new instance. For information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
         /// 
         /// > By default, the new instance uses the same instance type as the original primary instance.
         /// </summary>
@@ -88,13 +88,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The storage capacity of the new instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+        /// The storage capacity of the new instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
         /// 
         /// > By default, the new instance has the same storage capacity as the original primary instance.
         /// </summary>
@@ -165,7 +167,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **Postpaid**: pay-as-you-go.
         /// *   **Prepaid**: subscription.
-        /// *   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](~~411291~~), [Overview of serverless ApsaraDB RDS for SQL Server instances](~~604344~~), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](~~607742~~).
+        /// *   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/411291.html), [Overview of serverless ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/604344.html), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/607742.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -218,7 +222,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// The configuration of the serverless instance. You must specify this parameter only when you restore data to a new serverless instance.
+        /// The specifications for the serverless instance. You must specify this parameter only when you restore data to a new serverless instance.
+        /// 
+        /// >  This parameter is available only on the China site (aliyun.com).
         /// </summary>
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]

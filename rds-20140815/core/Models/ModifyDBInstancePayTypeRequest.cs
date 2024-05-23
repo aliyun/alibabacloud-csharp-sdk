@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class ModifyDBInstancePayTypeRequest : TeaModel {
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The billing method of the instance. The value is fixed as **Prepaid**, which indicates the subscription billing method.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **Year**
         /// *   **Month**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]

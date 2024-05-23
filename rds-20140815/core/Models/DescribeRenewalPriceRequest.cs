@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The instance type of the instance. For more information, see [Primary instance types](~~26312~~). By default, the current instance type applies.
+        /// The instance type of the instance. For more information, see [Primary instance types](https://help.aliyun.com/document_detail/26312.html). By default, the current instance type applies.
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
@@ -32,13 +32,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The type of the order that you want to place. Set the value to **BUY**.
+        /// The type of order. Set the value to **BUY**.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -96,6 +98,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **Year**
         /// *   **Month**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TimeType")]
         [Validation(Required=false)]
@@ -106,6 +110,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   If you set the **TimeType** parameter to **Year**, the value of the UsedTime parameter is within the range of **1 to 3**.
         /// *   If you set the **TimeType** parameter to **Month**, the value of the UsedTime parameter is within the range of **1 to 9**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]

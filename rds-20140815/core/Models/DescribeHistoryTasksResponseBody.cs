@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TaskDetail { get; set; }
 
             /// <summary>
-            /// The task ID in the t-\*\*\* format.
+            /// The task ID in the t-\\*\\*\\* format.
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]

@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public float? CpuAllocatedAmount { get; set; }
 
                 /// <summary>
-                /// The core overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
+                /// The core overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).
                 /// </summary>
                 [NameInMap("CpuAllocationRatio")]
                 [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public float? DiskAllocatedAmount { get; set; }
 
                 /// <summary>
-                /// The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
+                /// The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).
                 /// </summary>
                 [NameInMap("DiskAllocationRatio")]
                 [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public float? MemAllocatedAmount { get; set; }
 
                 /// <summary>
-                /// The memory overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
+                /// The memory overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).
                 /// </summary>
                 [NameInMap("MemAllocationRatio")]
                 [Validation(Required=false)]

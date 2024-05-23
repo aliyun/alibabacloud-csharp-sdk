@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// The details about the O\&M task.
+        /// The details about the O\\&M task.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string AllowChange { get; set; }
 
             /// <summary>
-            /// The code of the task level. The value S1 indicates the system O\&M level. The value S0 indicates the exception fixing level.
+            /// The code of the task level. The value S1 indicates the system O\\&M level. The value S0 indicates the exception fixing level.
             /// </summary>
             [NameInMap("ChangeLevel")]
             [Validation(Required=false)]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TaskParams { get; set; }
 
             /// <summary>
-            /// The type of the O\&M task. Valid values:
+            /// The type of the O\\&M task. Valid values:
             /// 
             /// *   **rds_apsaradb_ha**: primary/secondary switchover
             /// *   **rds_apsaradb_transfer**: instance migration

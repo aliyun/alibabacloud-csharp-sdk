@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   365: one year
         /// *   1095: three years
         /// *   1825: five years
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigValue")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

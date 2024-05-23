@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class SwitchDBInstanceHARequest : TeaModel {
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The secondary instance ID. You can call the DescribeDBInstanceHAConfig operation to query the secondary instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

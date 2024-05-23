@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// > *   You can perform a logical backup only when databases are created on the instance.
         /// > *   When you perform a snapshot backup on an ApsaraDB RDS for MariaDB instance, you must set this parameter to **Physical**.
-        /// > *   For more information about the supported backup types, see [Use the data backup feature](~~98818~~).
+        /// > *   For more information about the supported backup types, see [Use the data backup feature](https://help.aliyun.com/document_detail/98818.html).
         /// > *   When you perform a snapshot backup on an ApsaraDB RDS for SQL Server instance that uses cloud disks, you must set this parameter to **Snapshot**.
         /// </summary>
         [NameInMap("BackupMethod")]
@@ -56,6 +56,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

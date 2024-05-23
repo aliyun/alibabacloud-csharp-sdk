@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **240**: A snapshot backup is performed every 240 minutes.
         /// *   **480**: A snapshot backup is performed every 480 minutes.
         /// 
-        /// > *   You can configure a backup policy by using this parameter and the **PreferredBackupPeriod** parameter. For example, if you set **PreferredBackupPeriod** to Saturday,Sunday and BackupInterval to \*\*-1\*\*, a snapshot backup is performed on every Saturday and Sunday.
+        /// > *   You can configure a backup policy by using this parameter and the **PreferredBackupPeriod** parameter. For example, if you set **PreferredBackupPeriod** to Saturday,Sunday and BackupInterval to \\*\\*-1\\*\\*, a snapshot backup is performed on every Saturday and Sunday.
         /// > *   If the instance runs PostgreSQL, BackupInterval is supported only when the instance is equipped with cloud disks.
-        /// > *   If the instance runs SQL Server, BackupInterval is supported only when the snapshot backup feature is enabled for the instance. For more information, see [Enable snapshot backups for an ApsaraDB RDS for SQL Server instance](~~211143~~).
+        /// > *   If the instance runs SQL Server, BackupInterval is supported only when the snapshot backup feature is enabled for the instance. For more information, see [Enable snapshot backups for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/211143.html).
         /// > *   If **Category** is set to **Flash**, BackupInterval is invalid.
         /// > *   This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
         /// </summary>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **0**: Backups are not compressed.
         /// *   **1**: The zlib tool is used to compress backups into .tar.gz files.
         /// *   **2**: The zlib tool is used to compress backups in parallel.
-        /// *   **4**: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported for instances that run MySQL 5.6 or MySQL 5.7. Backups in this compression format can be used to restore individual databases and tables. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+        /// *   **4**: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported for instances that run MySQL 5.6 or MySQL 5.7. Backups in this compression format can be used to restore individual databases and tables. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/103175.html).
         /// *   **8**: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported only for instances that run MySQL 8.0. Backups in this compression format cannot be used to restore individual databases and tables.
         /// 
         /// > This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
@@ -154,6 +154,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -232,7 +234,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The number of binary log files that you want to retain on the instance. Default value: **60**. Valid values: **6** to **100**.
         /// 
         /// > *   This parameter takes effect only when **BackupPolicyMode** is set to **LogBackupPolicy**.
-        /// > *   If the instance runs MySQL, you can set this parameter to \*\*-1\*\*. The value -1 specifies that no limits are imposed on the number of binary log files retained on the instance.
+        /// > *   If the instance runs MySQL, you can set this parameter to \\*\\*-1\\*\\*. The value -1 specifies that no limits are imposed on the number of binary log files retained on the instance.
         /// </summary>
         [NameInMap("LogBackupLocalRetentionNumber")]
         [Validation(Required=false)]

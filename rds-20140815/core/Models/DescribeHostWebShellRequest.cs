@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class DescribeHostWebShellRequest : TeaModel {
         /// <summary>
         /// The username of the account that is used to log on to the host of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The password of the host account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance hostname. You can call the DescribeDBInstanceIpHostname operation to query the hostname.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HostName")]
         [Validation(Required=false)]
@@ -43,6 +51,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionID")]
         [Validation(Required=false)]

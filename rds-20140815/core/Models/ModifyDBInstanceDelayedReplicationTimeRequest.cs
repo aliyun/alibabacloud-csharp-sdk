@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceDelayedReplicationTimeRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+        /// The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The replication latency of the read-only instance. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReadSQLReplicationTime")]
         [Validation(Required=false)]

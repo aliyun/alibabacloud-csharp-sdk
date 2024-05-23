@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<ListClassesResponseBodyItems> Items { get; set; }
         public class ListClassesResponseBodyItems : TeaModel {
             /// <summary>
-            /// The code of the instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~) and [Read-only ApsaraDB RDS instance types](~~145759~~).
+            /// The code of the instance type. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html) and [Read-only ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/145759.html).
             /// </summary>
             [NameInMap("ClassCode")]
             [Validation(Required=false)]
             public string ClassCode { get; set; }
 
             /// <summary>
-            /// The instance family. For more information, see [Overview of instance families](~~57184~~).
+            /// The instance family. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/57184.html).
             /// </summary>
             [NameInMap("ClassGroup")]
             [Validation(Required=false)]

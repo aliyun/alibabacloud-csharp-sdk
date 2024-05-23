@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class DescribeDBInstanceConnectivityRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbInstanceName")]
         [Validation(Required=false)]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The source IP address.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceIpAddress")]
         [Validation(Required=false)]

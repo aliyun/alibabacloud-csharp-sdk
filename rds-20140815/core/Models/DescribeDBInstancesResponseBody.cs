@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The details of the instance.
+        /// The information about the instances.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,10 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBInstancesResponseBodyItemsDBInstance> DBInstance { get; set; }
             public class DescribeDBInstancesResponseBodyItemsDBInstance : TeaModel {
                 /// <summary>
-                /// Indicates whether the buffer pool extension (BPE) feature is enabled. Valid values:
-                /// 
-                /// *   **1**
-                /// *   **0**
+                /// A deprecated parameter.
                 /// </summary>
                 [NameInMap("BpeEnabled")]
                 [Validation(Required=false)]
@@ -84,12 +81,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                /// <summary>
+                /// The number of CPU instances.
+                /// 
+                /// Returns only when the InstanceLevel parameter is 1.
+                /// </summary>
                 [NameInMap("DBInstanceCPU")]
                 [Validation(Required=false)]
                 public string DBInstanceCPU { get; set; }
 
                 /// <summary>
-                /// The instance type of the instance. For information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+                /// The instance type of the instance. For information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
                 /// </summary>
                 [NameInMap("DBInstanceClass")]
                 [Validation(Required=false)]
@@ -109,6 +111,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
+                /// <summary>
+                /// The memory size of the node. Unit: MB.
+                /// 
+                /// Returns only when the InstanceLevel parameter is 1.
+                /// </summary>
                 [NameInMap("DBInstanceMemory")]
                 [Validation(Required=false)]
                 public int? DBInstanceMemory { get; set; }
@@ -124,7 +131,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceNetType { get; set; }
 
                 /// <summary>
-                /// The instance status. For more information, see [Instance statuses](~~26315~~).
+                /// The instance status. For more information, see [Instance statuses](https://help.aliyun.com/document_detail/26315.html).
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]
@@ -138,7 +145,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceStorageType { get; set; }
 
                 /// <summary>
-                /// The role of the instance. Valid values:
+                /// The type of the instance. Valid values:
                 /// 
                 /// *   **Primary**: primary instance
                 /// *   **Readonly**: read-only instance
@@ -150,14 +157,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceType { get; set; }
 
                 /// <summary>
-                /// The ID of the dedicated cluster to which the instances belong.
+                /// The ID of the dedicated cluster.
                 /// </summary>
                 [NameInMap("DedicatedHostGroupId")]
                 [Validation(Required=false)]
                 public string DedicatedHostGroupId { get; set; }
 
                 /// <summary>
-                /// The name of the dedicated cluster to which the instance belongs.
+                /// The name of the dedicated cluster.
                 /// </summary>
                 [NameInMap("DedicatedHostGroupName")]
                 [Validation(Required=false)]
@@ -291,10 +298,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string InstanceNetworkType { get; set; }
 
                 /// <summary>
-                /// Whether IO acceleration is enabled. The value has the following meanings:
+                /// Indicates whether the I/O acceleration feature is enabled. Valid values:
                 /// 
-                /// - 1: enabled
-                /// - 0: not enabled
+                /// *   1: enabled
+                /// *   0: disabled
                 /// </summary>
                 [NameInMap("IoAccelerationEnabled")]
                 [Validation(Required=false)]
@@ -351,7 +358,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// The IDs of the read-only instances that are attached to the primary instance. This parameter is returned only when the instance is a primary instance.
+                /// The IDs of the read-only instances. This parameter is returned only when the instance is a primary instance and has the read-only instances attached.
                 /// </summary>
                 [NameInMap("ReadOnlyDBInstanceIds")]
                 [Validation(Required=false)]

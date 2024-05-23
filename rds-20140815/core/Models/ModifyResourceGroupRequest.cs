@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The resource group ID. You can call the ListResourceGroups operation to obtain the resource group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

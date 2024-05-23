@@ -26,28 +26,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceEndpointDescription { get; set; }
 
         /// <summary>
-        /// The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~610488~~) operation to query the endpoint ID of the instance.
+        /// The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceEndpointId")]
         [Validation(Required=false)]
         public string DBInstanceEndpointId { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The information about the node that is configured for the endpoint.
+        /// The information about the endpoint.
         /// </summary>
         [NameInMap("NodeItems")]
         [Validation(Required=false)]
         public List<ModifyDBInstanceEndpointRequestNodeItems> NodeItems { get; set; }
         public class ModifyDBInstanceEndpointRequestNodeItems : TeaModel {
             /// <summary>
-            /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+            /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
             /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
@@ -56,10 +60,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The node ID.
             /// 
-            /// You can use one of the following methods to query the ID of the node:
+            /// You can query the node ID by using the following methods:
             /// 
-            /// *   Log on to the ApsaraDB RDS console, go to the instance details page, and then view the ID of the node in the instance topology section.
-            /// *   Call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the ID of the node.
+            /// *   Log on the ApsaraDB RDS console, go to the instance details page, and then view the ID of the node in the instance topology in the lower part of the instance details page.
+            /// *   Call the DescribeDBInstanceAttribute operation to query the node ID.
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]

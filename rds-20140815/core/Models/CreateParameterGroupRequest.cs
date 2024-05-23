@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **mysql**
         /// *   **PostgreSQL**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -36,6 +38,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         ///     *   **13.0**
         ///     *   **14.0**
         ///     *   **15.0**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -55,15 +59,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The name of the parameter template.
         /// 
-        /// *   The value must start with a letter and can contain letters, digits, periods (.), and underscores (\_).
+        /// *   The value must start with a letter and can contain letters, digits, periods (.), and underscores (_).
         /// *   The value can be 8 to 64 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ParameterGroupName")]
         [Validation(Required=false)]
         public string ParameterGroupName { get; set; }
 
         /// <summary>
-        /// A JSON string that consists of parameters and their values in the parameter template. Format: {"Parameter 1":"Value of Parameter 1","Parameter 2":"Value of Parameter 2"...}. For more information about the parameters that can be modified, see [Modify the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~) or [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](~~96751~~).
+        /// A JSON string that consists of parameters and their values in the parameter template. Format: {"Parameter 1":"Value of Parameter 1","Parameter 2":"Value of Parameter 2"...}. For more information about the parameters that can be modified, see [Modify the parameters of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96063.html) or [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96751.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -71,6 +79,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The region ID of the parameter template. You can call the DescribeRegions operation to query the most recent zone list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

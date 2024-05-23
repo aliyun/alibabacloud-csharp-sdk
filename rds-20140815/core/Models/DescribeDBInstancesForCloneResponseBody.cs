@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The instance type of the instance. For more information, see [Instance types](~~26312~~).
+                /// The instance type of the instance. For more information, see [Instance types](https://help.aliyun.com/document_detail/26312.html).
                 /// </summary>
                 [NameInMap("DBInstanceClass")]
                 [Validation(Required=false)]
                 public string DBInstanceClass { get; set; }
 
                 /// <summary>
-                /// The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-). The value must start with a letter.
+                /// The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-). The value must start with a letter.
                 /// 
                 /// > The value cannot start with http:// or https://.
                 /// </summary>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceNetType { get; set; }
 
                 /// <summary>
-                /// The status of the instance. For more information, see [Instance state table](~~26315~~).
+                /// The status of the instance. For more information, see [Instance state table](https://help.aliyun.com/document_detail/26315.html).
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]

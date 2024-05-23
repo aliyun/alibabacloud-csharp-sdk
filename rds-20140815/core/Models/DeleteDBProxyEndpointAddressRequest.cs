@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class DeleteDBProxyEndpointAddressRequest : TeaModel {
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// If the instance runs MySQL, the default value of this parameter is **Classic**.
         /// 
         /// > If the instance runs PostgreSQL, you must set this parameter to **Public** or **VPC**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBProxyConnectStringNetType")]
         [Validation(Required=false)]
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]

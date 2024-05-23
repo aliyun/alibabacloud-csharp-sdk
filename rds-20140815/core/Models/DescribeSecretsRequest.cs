@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The database engine of the database.
         /// 
         /// > Only MySQL is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -56,6 +58,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The number of the page to return. Valid values: any non-zero positive integer.
         /// 
         /// > The default value is 1.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -63,6 +67,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The number of entries per page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -70,6 +76,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

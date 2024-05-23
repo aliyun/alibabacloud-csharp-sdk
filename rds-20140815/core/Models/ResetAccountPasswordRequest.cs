@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class ResetAccountPasswordRequest : TeaModel {
         /// <summary>
         /// The username of the account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -21,7 +23,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// > *   The value must be 8 to 32 characters in length.
         /// > *   The value must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.
-        /// > *   The following special characters are supported: ! @ # $ & % ^ \* ( ) \_ + - =
+        /// > *   The following special characters are supported: ! @ # $ & % ^ \\* ( ) _ + - =
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

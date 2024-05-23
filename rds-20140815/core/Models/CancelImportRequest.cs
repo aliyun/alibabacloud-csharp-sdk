@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class CancelImportRequest : TeaModel {
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The migration task ID.
         /// 
         /// >  This parameter is returned when the migration task is started. For more information, see ImportDatabaseBetweenInstances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImportId")]
         [Validation(Required=false)]

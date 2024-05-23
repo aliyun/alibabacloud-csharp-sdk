@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string OssBucket { get; set; }
 
             /// <summary>
-            /// The metadata of the full backup file. For more information, see [Manage object metadata](~~31859~~).
+            /// The metadata of the full backup file. For more information, see [Manage object metadata](https://help.aliyun.com/document_detail/31859.html).
             /// </summary>
             [NameInMap("OssFileMetaData")]
             [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class CreatePostgresExtensionsRequest : TeaModel {
         /// <summary>
         /// The account of the user who owns the extension. Only privileged accounts are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The database name. You can call the DescribeDatabases operation to query the database name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNames")]
         [Validation(Required=false)]
@@ -73,7 +79,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   true
         /// *   false
         /// 
-        /// >  For more information about the risks, see [Limits on extension creation for ApsaraDB RDS for PostgreSQL instances](~~2587815~~).
+        /// >  For more information about the risks, see [Limits on extension creation for ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/2587815.html).
         /// </summary>
         [NameInMap("RiskConfirmed")]
         [Validation(Required=false)]

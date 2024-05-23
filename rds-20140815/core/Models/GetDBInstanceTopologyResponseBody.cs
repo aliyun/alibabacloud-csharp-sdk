@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The ID of the instance.
                 /// 
-                /// > : The value \*\*-1\*\* is returned for an instance that does not reside in a dedicated cluster.
+                /// > : The value \\*\\*-1\\*\\* is returned for an instance that does not reside in a dedicated cluster.
                 /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]

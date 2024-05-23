@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyActiveOperationTasksRequest : TeaModel {
         /// <summary>
-        /// The O\&M task ID. Separate multiple IDs with commas (,).
+        /// The O\\&M task ID. Separate multiple IDs with commas (,).
         /// 
-        /// >  You can call the DescribeActiveOperationTask operation to query the O\&M task ID.
+        /// >  You can call the DescribeActiveOperationTask operation to query the O\\&M task ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
@@ -58,6 +60,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The scheduled switching time that you want to specify. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
         /// >  The time that is specified by the SwitchTime parameter cannot be later than the time that is specified by the Deadline parameter. You can call the DescribeActiveOperationTasks operation to query the value of the Deadline parameter in the response.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SwitchTime")]
         [Validation(Required=false)]

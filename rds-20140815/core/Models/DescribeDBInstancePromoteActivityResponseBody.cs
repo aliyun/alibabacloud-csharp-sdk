@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Bid { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+        /// The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the instance ID.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// The activity information about the instance. For more information, see [Instance activities](~~2391834~~).
+        /// The activity information about the instance. For more information, see [Instance activities](https://help.aliyun.com/document_detail/2391834.html).
         /// </summary>
         [NameInMap("IsActivity")]
         [Validation(Required=false)]

@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The ID of the KMS resource. Only key IDs are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KmsResourceId")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The type of the KMS resource. Only key is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KmsResourceType")]
         [Validation(Required=false)]
@@ -41,6 +45,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The ID of the Alibaba Cloud account to which the KMS resource belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KmsResourceUser")]
         [Validation(Required=false)]

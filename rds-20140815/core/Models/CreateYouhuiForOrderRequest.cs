@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class CreateYouhuiForOrderRequest : TeaModel {
         /// <summary>
         /// The activity ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ActivityId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

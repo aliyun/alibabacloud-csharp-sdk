@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The backup interval. Unit: minutes.
         /// 
-        /// *   If the instance runs MySQL, the interval is the same as the value of the Snapshot Backup Start Time parameter rather than the Snapshot Backup Period parameter in the ApsaraDB RDS console. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
+        /// *   If the instance runs MySQL, the interval is the same as the value of the Snapshot Backup Start Time parameter rather than the Snapshot Backup Period parameter in the ApsaraDB RDS console. For more information, see [Back up an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/98818.html).
         /// *   If the instance runs SQL Server, the interval is the same as the log backup frequency.
         /// </summary>
         [NameInMap("BackupInterval")]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **True**
         /// *   **False**
         /// 
-        /// >  This parameter is returned only when the instance runs MySQL. For more information, see [Configure the PITR feature](~~2666046~~).
+        /// >  This parameter is returned only when the instance runs MySQL. For more information, see [Configure the PITR feature](https://help.aliyun.com/document_detail/2666046.html).
         /// </summary>
         [NameInMap("EnablePitrProtection")]
         [Validation(Required=false)]

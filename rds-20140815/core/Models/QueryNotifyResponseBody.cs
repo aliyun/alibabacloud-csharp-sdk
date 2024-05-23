@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public long? AliUid { get; set; }
 
                 /// <summary>
-                /// Indicates whether the notification has been confirmed. You can call the [ConfirmNotify](~~610444~~) operation to mark the notification as confirmed. Valid values:
+                /// Indicates whether the notification has been confirmed. You can call the [ConfirmNotify](https://help.aliyun.com/document_detail/610444.html) operation to mark the notification as confirmed. Valid values:
                 /// 
                 /// *   **true**
                 /// *   **false**
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public bool? ConfirmFlag { get; set; }
 
                 /// <summary>
-                /// The UID of the contact who called the [ConfirmNotify](~~610444~~) operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.
+                /// The UID of the contact who called the [ConfirmNotify](https://help.aliyun.com/document_detail/610444.html) operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.
                 /// 
                 /// The value **0** indicates that the notification is automatically confirmed by the system.
                 /// </summary>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// The type of the notification. Valid values:
                 /// 
                 /// *   **Sell**: sales notification
-                /// *   **Operation**: O\&M notification
+                /// *   **Operation**: O\\&M notification
                 /// *   **Promotion**: promotion notification
                 /// </summary>
                 [NameInMap("Type")]

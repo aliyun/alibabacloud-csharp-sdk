@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **rds_intl**: The instances are subscription primary instances.
         /// *   **rords_intl**: The instances are pay-as-you-go read-only instances.
         /// *   **rds_rordspre_public_intl**: The instances are subscription read-only instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
@@ -44,6 +46,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **UPGRADE**: specifies the query orders that are used to change the specifications of instances.
         /// *   **RENEW**: specifies the query orders that are used to renew instances.
         /// *   **CONVERT**: specifies the query orders that are used to change the billing methods of instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]

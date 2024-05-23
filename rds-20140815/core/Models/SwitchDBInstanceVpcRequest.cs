@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class SwitchDBInstanceVpcRequest : TeaModel {
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The VPC ID.
         /// 
         /// > The VPC must reside in the same region as the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The vSwitch ID of the instance.
         /// 
         /// > The vSwitch must belong to the same zone as the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

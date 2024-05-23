@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class ReleaseInstanceConnectionRequest : TeaModel {
         /// <summary>
         /// The public endpoint of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentConnectionString")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **0**: virtual private cloud (VPC)
         /// *   **1**: classic network
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]

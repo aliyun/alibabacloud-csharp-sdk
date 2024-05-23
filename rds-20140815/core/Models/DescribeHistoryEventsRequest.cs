@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ArchiveStatus { get; set; }
 
         /// <summary>
-        /// The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+        /// The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).
         /// </summary>
         [NameInMap("EventCategory")]
         [Validation(Required=false)]
@@ -53,7 +53,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EventStatus { get; set; }
 
         /// <summary>
-        /// The system event type. This parameter takes effect only when InstanceEventType.N is not specified. Valid values: SystemMaintenance.Reboot: The instance is restarted due to system maintenance. SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance. SystemFailure.Reboot: The instance is restarted due to a system error. SystemFailure.Redeploy: The instance is redeployed due to a system error. SystemFailure.Delete: The instance is released due to an instance creation failure. InstanceFailure.Reboot: The instance is restarted due to an instance error. InstanceExpiration.Stop: The subscription instance is stopped due to expiration. InstanceExpiration.Delete: The subscription instance is released due to expiration. AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment. AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment. For more information, see Overview. The values of this parameter are applicable only to instance system events, but not to disk system events.
+        /// The system event type. This parameter takes effect only when InstanceEventType.N is not specified. Valid values:
+        /// 
+        /// *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
+        /// *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
+        /// *   SystemFailure.Reboot: The instance is restarted due to a system error.
+        /// *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
+        /// *   SystemFailure.Delete: The instance is released due to an instance creation failure.
+        /// *   InstanceFailure.Reboot: The instance is restarted due to an instance error.
+        /// *   InstanceExpiration.Stop: The subscription instance is stopped due to expiration.
+        /// *   InstanceExpiration.Delete: The subscription instance is released due to expiration.
+        /// *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
+        /// *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
+        /// 
+        /// >  For more information, see Overview. The values of this parameter are applicable only to instance system events, but not to disk system events.
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
@@ -88,7 +101,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/610399.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

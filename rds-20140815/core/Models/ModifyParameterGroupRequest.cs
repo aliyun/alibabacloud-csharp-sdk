@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The parameter template ID. You can call the DescribeParameterGroups operation to query the parameter template ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The parameter template name.
         /// 
-        /// *   The name can contain letters, digits, periods (.), and underscores (\_). It must start with a letter.
+        /// *   The name can contain letters, digits, periods (.), and underscores (_). It must start with a letter.
         /// *   It can be 8 to 64 characters in length.
         /// 
         /// > If you do not specify this parameter, the original name of the parameter template is retained.
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupName { get; set; }
 
         /// <summary>
-        /// A JSON string that consists of parameters and their values in the parameter template. Format: {"Parameter 1":"Value of Parameter 1","Parameter 2":"Value of Parameter 2"...}. For more information about the parameters that can be modified, see [Modify the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~) or [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](~~96751~~).
+        /// A JSON string that consists of parameters and their values in the parameter template. Format: {"Parameter 1":"Value of Parameter 1","Parameter 2":"Value of Parameter 2"...}. For more information about the parameters that can be modified, see [Modify the parameters of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96063.html) or [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96751.html).
         /// 
         /// > 
         /// 
@@ -74,6 +76,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
         /// 
         /// >  The region of a parameter template cannot be changed. You can call the CloneParameterGroup operation to replicate a parameter template to a specific region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

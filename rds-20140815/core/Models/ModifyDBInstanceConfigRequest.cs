@@ -17,19 +17,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The name of the configuration item that you want to modify.
+        /// The name of the configuration item that you want to modify. Valid values:
         /// 
-        /// *   **pgbouncer**
+        /// *   **pgbouncer**. This configuration item is supported for ApsaraDB RDS for PostgreSQL instances.
+        /// *   **clear_errorlog**. This configuration item is supported for ApsaraDB RDS for SQL Server instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigName")]
         [Validation(Required=false)]
         public string ConfigName { get; set; }
 
         /// <summary>
-        /// The value of the configuration item that you want to modify.
+        /// The value of the configuration item that you want to modify. Valid values:
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// *   If you set ConfigName to pgbouncer, the valid values are **true** and **false**.
+        /// *   If you set ConfigName to clear_errorlog, set the value to **1**. The value 1 indicates that error logs are cleaned up.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigValue")]
         [Validation(Required=false)]
@@ -37,6 +42,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// The effective time. Valid values:
             /// 
             /// *   **Immediate**: This is the default value.
-            /// *   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~610402~~).
+            /// *   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](https://help.aliyun.com/document_detail/610402.html).
             /// </summary>
             [NameInMap("EffectiveTime")]
             [Validation(Required=false)]

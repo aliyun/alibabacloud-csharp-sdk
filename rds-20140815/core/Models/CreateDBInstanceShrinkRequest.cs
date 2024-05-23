@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **babelfishEnabled**: specifies whether to enable Babelfish for the instance. If you set this field to **true**, you enable Babelfish for the instance. If you leave this parameter empty, Babelfish is disabled for the instance.
         /// *   **migrationMode**: The migration mode of the instance. Valid values: **single-db** and **multi-db**.
-        /// *   **masterUsername**: The username of the administrator account. The username can contain lowercase letters, digits, and underscores (\_). It must start with a letter and end with a letter or digit. It can be up to 63 characters in length and cannot start with pg.
+        /// *   **masterUsername**: The username of the administrator account. The username can contain lowercase letters, digits, and underscores (_). It must start with a letter and end with a letter or digit. It can be up to 63 characters in length and cannot start with pg.
         /// *   **masterUserPassword**: The password of the administrator account. The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. It must be 8 to 32 characters in length. The password can contain any of the following characters: `! @ # $ % ^ & * ( ) _ + - =`.
         /// 
-        /// > This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).
+        /// > This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](https://help.aliyun.com/document_detail/428613.html).
         /// </summary>
         [NameInMap("BabelfishConfig")]
         [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// A reserved parameter. You do not need to specify this parameter.
+        /// A reserved parameter.
         /// </summary>
         [NameInMap("ColdDataEnabled")]
         [Validation(Required=false)]
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CreateStrategy { get; set; }
 
         /// <summary>
-        /// The instance type of the instance. You can specify a standard instance type or an economy instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+        /// The instance type of the instance. You can specify a standard instance type or an economy instance type. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
         /// 
         /// To create a serverless instance, set this parameter to one of the following values:
         /// 
@@ -164,13 +164,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   If you want to create a serverless instance that runs SQL Server, set this parameter to **mssql.mem2.serverless.s2**.
         /// *   If you want to create a serverless instance that runs PostgreSQL on RDS Basic Edition, set this parameter to **pg.n2.serverless.1c**.
         /// *   If you want to create a serverless instance that runs PostgreSQL on RDS High-availability Edition, set this parameter to **pg.n2.serverless.2c**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The instance name. The name must be 2 to 255 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The instance name. The name must be 2 to 255 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.
         /// 
         /// > The name cannot start with http:// or https://.
         /// </summary>
@@ -180,13 +182,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The network connection type of the instance. The value of this parameter is fixed as **Intranet**, indicating an internal network connection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceNetType")]
         [Validation(Required=false)]
         public string DBInstanceNetType { get; set; }
 
         /// <summary>
-        /// The storage capacity of the instance. Unit: GB. The storage capacity increases in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+        /// The storage capacity of the instance. Unit: GB. The storage capacity increases in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
@@ -237,11 +243,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   If you set **Engine** to **MySQL**:
         /// 
         ///     *   The time zone of the instance is in UTC. Valid values: **-12:59** to **+13:00**.
-        ///     *   If the instance uses local SSDs, you can specify the name of the time zone. Example: Asia/Hong_Kong. For more information, see [Time zones](~~297356~~).
+        ///     *   If the instance uses local SSDs, you can specify the name of the time zone. Example: Asia/Hong_Kong. For more information, see [Time zones](https://help.aliyun.com/document_detail/297356.html).
         /// 
         /// *   If you set **Engine** to **PostgreSQL**:
         /// 
-        ///     *   The time zone of the instance is not in UTC. For more information, see [Time zones](~~297356~~).
+        ///     *   The time zone of the instance is not in UTC. For more information, see [Time zones](https://help.aliyun.com/document_detail/297356.html).
         ///     *   You can specify this parameter only when the instance runs PostgreSQL with standard SSDs or ESSDs.
         /// 
         /// > *   You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.
@@ -286,9 +292,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The ID of the key that was used to encrypt the disk in the region where the disk is deployed. If this parameter is specified, disk encryption is enabled and you must also specify the **RoleARN** parameter. Disk encryption cannot be disabled after it is enabled.
         /// 
-        /// You can obtain the ID of the key in the Key Management Service (KMS) console or create a key. For more information, see [Create a CMK](~~181610~~).
+        /// You can obtain the ID of the key in the Key Management Service (KMS) console or create a key. For more information, see [Create a CMK](https://help.aliyun.com/document_detail/181610.html).
         /// 
-        /// >  This parameter is optional when you create an instance that runs MySQL, PostgreSQL, or SQL Server. You need to only specify the **RoleARN** parameter to create an instance that has cloud disk encryption enabled by using the obtained key ID.
+        /// > *   This parameter is not required when you create an RDS instance that runs MySQL, PostgreSQL, or SQL Server. You need to only specify the **RoleARN** parameter to create an instance that has cloud disk encryption enabled by using the obtained key ID.
+        /// > *   You can configure RAM authorization to require a RAM user to enable cloud disk encryption when the RAM user is used to create an instance. If cloud disk encryption is disabled during the instance creation, the creation operation fails. To complete the configuration, you can attach the following policy to the RAM user: `{"Version":"1","Statement":[{"Effect":"Deny","Action":"rds:CreateDBInstance","Resource":"*","Condition":{"StringEquals":{"rds:DiskEncryptionRequired":"false"}}}]}`
+        /// 
+        /// 
+        /// 
+        /// >Warning: The configuration also affects the CreateOrder operation that is called to create instances in the console.
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
@@ -301,6 +312,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **SQLServer**
         /// *   **PostgreSQL**
         /// *   **MariaDB**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -312,14 +325,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   Regular instance
         /// 
         ///     *   Valid values when you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**
-        ///     *   Valid values when you set Engine to SQLServer: **08r2\_ent_ha** (cloud disks, discontinued), **2008r2** (local disks, discontinued), **2012** (SQL Server EE Basic), **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_ent_ha**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_ent**, **2017\_std_ha**, **2017\_web**, **2019\_ent**, **2019\_std_ha**, **2019\_web**, **2022\_ent**, **2022\_std_ha**, and **2022\_web**
+        ///     *   Valid values when you set Engine to SQLServer: **08r2_ent_ha** (cloud disks, discontinued), **2008r2** (local disks, discontinued), **2012** (SQL Server EE Basic), **2012_ent_ha**, **2012_std_ha**, **2012_web**, **2014_ent_ha**, **2014_std_ha**, **2016_ent_ha**, **2016_std_ha**, **2016_web**, **2017_ent**, **2017_std_ha**, **2017_web**, **2019_ent**, **2019_std_ha**, **2019_web**, **2022_ent**, **2022_std_ha**, and **2022_web**
         ///     *   Valid values when you set Engine to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, **15.0**, and **16.0**
-        ///     *   Valid value if you set the Engine parameter to MariaDB: **10.3**
+        ///     *   Valid values when you set Engine to MariaDB: **10.3**
         /// 
         /// *   Serverless instance
         /// 
         ///     *   Valid values when you set Engine to MySQL: **5.7** and **8.0**
-        ///     *   Valid values when you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**
+        ///     *   Valid values when you set Engine to SQLServer: **2016_std_sl**, **2017_std_sl**, and **2019_std_sl**
         ///     *   Valid values when you set Engine to PostgreSQL: **14.0**, **15.0**, and **16.0**
         /// 
         /// > 
@@ -330,7 +343,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).
         /// 
-        /// *   ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled support only PostgreSQL 13.0, PostgreSQL 14.0, and PostgreSQL 15.0.
+        /// *   Babelfish is supported only for ApsaraDB RDS for PostgreSQL instances that run PostgreSQL 15.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -362,9 +377,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **Postpaid**: pay-as-you-go.
         /// *   **Prepaid**: subscription.
-        /// *   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](~~411291~~), [Overview of serverless ApsaraDB RDS for SQL Server instances](~~604344~~), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](~~607742~~).
+        /// *   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/411291.html), [Overview of serverless ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/604344.html), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/607742.html).
         /// 
         /// > The system automatically generates a purchase order and completes the payment.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -401,6 +418,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -425,10 +444,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RoleARN { get; set; }
 
         /// <summary>
-        /// The IP address whitelist of the instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for MySQL instance](~~43185~~). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
+        /// The IP address whitelist of the instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/43185.html). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
         /// 
         /// *   IP addresses, such as 10.10.XX.XX.
         /// *   CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityIPList")]
         [Validation(Required=false)]
@@ -449,7 +470,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Enable**
         /// *   **Disable** (default)
         /// 
-        /// >  After the instance is created, you can call the ModifyDasInstanceConfig operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion](~~173826~~).
+        /// >  After the instance is created, you can call the ModifyDasInstanceConfig operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion](https://help.aliyun.com/document_detail/173826.html).
         /// </summary>
         [NameInMap("StorageAutoScale")]
         [Validation(Required=false)]
@@ -564,12 +585,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         ///     *   xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
         ///     *   xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
         /// 
-        ///     > You can call the DescribeDBMiniEngineVersions operation to query the minor engine version. For more information about the differences between minor engine versions of AliSQL, see [Release notes](~~96060~~).
+        ///     > You can call the DescribeDBMiniEngineVersions operation to query the minor engine version. For more information about the differences between minor engine versions of AliSQL, see [Release notes](https://help.aliyun.com/document_detail/96060.html).
         /// 
         /// *   If you create an instance that runs PostgreSQL, the value is in the following format: `rds_postgres_<Major engine version>00_<Minor engine version>`. Example: `rds_postgres_1400_20220830`.
         /// 
         ///     *   1400: The major engine version is PostgreSQL 14.
-        ///     *   20220830: the AliPG version. You can call the DescribeDBMiniEngineVersions operation to query the AliPG version. For more information about minor engine versions, see [Release notes for AliPG](~~126002~~).
+        ///     *   20220830: the AliPG version. You can call the DescribeDBMiniEngineVersions operation to query the AliPG version. For more information about minor engine versions, see [Release notes for AliPG](https://help.aliyun.com/document_detail/126002.html).
         /// 
         ///     > If you configure the **BabelfishConfig** parameter for your instance that runs PostgreSQL and set the babelfishEnabled field to true, the value of this parameter is in the following format: `rds_postgres_Major engine version00_AliPG version_babelfish`.
         /// </summary>
@@ -622,6 +643,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        /// <summary>
+        /// The whitelists. If you enter more than one IP address or CIDR block, you must separate these IP addresses or CIDR blocks with commas (,). Do not add spaces preceding or following the commas. Example: `192.168.0.1,172.16.213.9`.
+        /// </summary>
         [NameInMap("WhitelistTemplateList")]
         [Validation(Required=false)]
         public string WhitelistTemplateList { get; set; }

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class ModifyDatabaseConfigRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The database name.
         /// 
         /// >  You can specify only one database name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The name of the database property that you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatabasePropertyName")]
         [Validation(Required=false)]
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The value of the database property that you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatabasePropertyValue")]
         [Validation(Required=false)]

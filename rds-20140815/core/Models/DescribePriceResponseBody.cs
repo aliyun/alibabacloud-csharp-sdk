@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePriceResponseBody : TeaModel {
+        /// <summary>
+        /// Order parameters.
+        /// </summary>
         [NameInMap("OrderParams")]
         [Validation(Required=false)]
         public string OrderParams { get; set; }
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public string IsSelected { get; set; }
 
                     /// <summary>
-                    /// The name of the coupon.
+                    /// The coupon name.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -107,6 +110,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public float? DiscountPrice { get; set; }
 
+            /// <summary>
+            /// Order Information
+            /// </summary>
             [NameInMap("OrderLines")]
             [Validation(Required=false)]
             public string OrderLines { get; set; }
@@ -131,10 +137,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
             }
 
+            /// <summary>
+            /// Estimated hourly cost calculated based on the maximum RCU selected by the user.
+            /// </summary>
             [NameInMap("TradeMaxRCUAmount")]
             [Validation(Required=false)]
             public float? TradeMaxRCUAmount { get; set; }
 
+            /// <summary>
+            /// Estimated hourly cost calculated based on the minimum RCU selected by the user.
+            /// </summary>
             [NameInMap("TradeMinRCUAmount")]
             [Validation(Required=false)]
             public float? TradeMinRCUAmount { get; set; }
@@ -191,46 +203,79 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// Serverless price information.
+        /// </summary>
         [NameInMap("ServerlessPrice")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyServerlessPrice ServerlessPrice { get; set; }
         public class DescribePriceResponseBodyServerlessPrice : TeaModel {
+            /// <summary>
+            /// MaxRCU discount amount.
+            /// </summary>
             [NameInMap("RCUDiscountMaxAmount")]
             [Validation(Required=false)]
             public float? RCUDiscountMaxAmount { get; set; }
 
+            /// <summary>
+            /// MinRCU discount amount.
+            /// </summary>
             [NameInMap("RCUDiscountMinAmount")]
             [Validation(Required=false)]
             public float? RCUDiscountMinAmount { get; set; }
 
+            /// <summary>
+            /// MaxRCU price.
+            /// </summary>
             [NameInMap("RCUOriginalMaxAmount")]
             [Validation(Required=false)]
             public float? RCUOriginalMaxAmount { get; set; }
 
+            /// <summary>
+            /// MinRCU price.
+            /// </summary>
             [NameInMap("RCUOriginalMinAmount")]
             [Validation(Required=false)]
             public float? RCUOriginalMinAmount { get; set; }
 
+            /// <summary>
+            /// Original price of the disk.
+            /// </summary>
             [NameInMap("StorageOriginalAmount")]
             [Validation(Required=false)]
             public float? StorageOriginalAmount { get; set; }
 
+            /// <summary>
+            /// Maximum total price before discount.
+            /// </summary>
             [NameInMap("TotalOriginalMaxAmount")]
             [Validation(Required=false)]
             public float? TotalOriginalMaxAmount { get; set; }
 
+            /// <summary>
+            /// The minimum total price before the discount.
+            /// </summary>
             [NameInMap("TotalOriginalMinAmount")]
             [Validation(Required=false)]
             public float? TotalOriginalMinAmount { get; set; }
 
+            /// <summary>
+            /// MaxRCU transaction price.
+            /// </summary>
             [NameInMap("TradeMaxRCUAmount")]
             [Validation(Required=false)]
             public float? TradeMaxRCUAmount { get; set; }
 
+            /// <summary>
+            /// MinRCU transaction price.
+            /// </summary>
             [NameInMap("TradeMinRCUAmount")]
             [Validation(Required=false)]
             public float? TradeMinRCUAmount { get; set; }
 
+            /// <summary>
+            /// Disk discount price.
+            /// </summary>
             [NameInMap("storageDiscountAmount")]
             [Validation(Required=false)]
             public float? StorageDiscountAmount { get; set; }

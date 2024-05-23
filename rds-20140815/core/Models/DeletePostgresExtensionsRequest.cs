@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/610396.html) operation to query the ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The database on which the extension is installed. If you want to specify multiple databases, separate the databases with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNames")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The name of the extension. If you want to specify multiple extensions, separate the extension names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Extensions")]
         [Validation(Required=false)]

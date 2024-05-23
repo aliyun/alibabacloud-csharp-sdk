@@ -11,11 +11,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class AttachWhitelistTemplateToInstanceRequest : TeaModel {
         /// <summary>
         /// The name of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InsName")]
         [Validation(Required=false)]
         public string InsName { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -37,6 +42,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

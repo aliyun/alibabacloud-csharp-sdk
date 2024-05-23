@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         ///     *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.
         /// 
         ///     > If you create a serverless instance, you must specify this parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -69,6 +71,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **cloud_essd3**: ESSD of PL3
         /// 
         /// > Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to **cloud_essd**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
@@ -81,6 +85,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// * **SQLServer**
         /// * **PostgreSQL**
         /// * **MariaDB**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -92,17 +98,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   Regular instance
         /// 
         ///     *   Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**
-        ///     *   Valid values if you set Engine to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
+        ///     *   Valid values if you set Engine to SQLServer: **2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent**
         ///     *   Valid values if you set Engine to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**
         ///     *   Valid value when you set Engine to MariaDB: **10.3**
         /// 
         /// *   Serverless instance
         /// 
         ///     *   Valid values if you set Engine to MySQL: **5.7** and **8.0**
-        ///     *   Valid values if you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**
+        ///     *   Valid values if you set Engine to SQLServer: **2016_std_sl**, **2017_std_sl**, and **2019_std_sl**
         ///     *   Valid value if you set Engine to PostgreSQL: **14.0**
         /// 
         ///     > ApsaraDB RDS for MariaDB does not support serverless instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -130,6 +138,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -142,7 +152,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The zone ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the zone ID of the instance.
         /// 
-        /// > If the DescribeDBInstanceAttribute operation returns multiple zones, you must specify only one of the returned zones.`` For example, if the DescribeDBInstanceAttribute operation returns `cn-hangzhou-MAZ9(g,h)`, you can set this parameter to `cn-hangzhou-g` or cn-hangzhou-h.
+        /// >  If the DescribeDBInstanceAttribute operation returns multiple zones, you must specify only one of the returned zones. For example, if the DescribeDBInstanceAttribute operation returns `cn-hangzhou-MAZ9(g,h)`, you can set this parameter to `cn-hangzhou-g` or `cn-hangzhou-h`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

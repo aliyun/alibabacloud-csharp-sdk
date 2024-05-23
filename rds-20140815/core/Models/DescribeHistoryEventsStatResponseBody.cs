@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeHistoryEventsStatResponseBodyItems> Items { get; set; }
         public class DescribeHistoryEventsStatResponseBodyItems : TeaModel {
             /// <summary>
-            /// The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+            /// The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).
             /// </summary>
             [NameInMap("EventCategory")]
             [Validation(Required=false)]

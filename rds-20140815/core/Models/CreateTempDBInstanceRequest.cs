@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The backup set ID. You can call the DescribeBackups operation to query the backup set ID.
         /// 
-        /// >  You must specify at least one of the **BackupId** or **RestoreTime** parameters.
+        /// >  You must specify at least one of **BackupId** and **RestoreTime** parameters.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

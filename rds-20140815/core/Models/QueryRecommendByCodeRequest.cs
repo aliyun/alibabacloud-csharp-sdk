@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class QueryRecommendByCodeRequest : TeaModel {
         /// <summary>
         /// The code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

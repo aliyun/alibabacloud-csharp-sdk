@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ReceiveDBInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the primary instance.
+        /// The ID of the primary instance. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the ID of the primary instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the disaster recovery instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the disaster recovery instance.
+        /// The ID of the disaster recovery instance. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the ID of the disaster recovery instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GuardDBInstanceId")]
         [Validation(Required=false)]

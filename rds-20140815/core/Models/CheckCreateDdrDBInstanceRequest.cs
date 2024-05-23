@@ -19,14 +19,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupSetId { get; set; }
 
         /// <summary>
-        /// The instance type of the destination instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+        /// The instance type of the destination instance. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The storage capacity of the destination instance. Valid values: **5 to 2000**. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary instance types](~~26312~~).
+        /// The storage capacity of the destination instance. Valid values: **5 to 2000**. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary instance types](https://help.aliyun.com/document_detail/26312.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **MySQL**
         /// *   **SQLServer**
         /// *   **PostgreSQL**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -47,8 +53,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// The major engine version of the destination instance. The value of this parameter varies based on the value of **Engine**.
         /// 
         /// *   Valid values when Engine is set to MySQL: **5.5, 5.6, 5.7, and 8.0**
-        /// *   Valid values when Engine is set to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
+        /// *   Valid values when Engine is set to SQLServer: **2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent**
         /// *   PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -60,6 +68,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -96,6 +106,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **1**: restores data to a point in time. If you set this parameter to 1, you must also specify the **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName** parameters.
         /// 
         /// Default value: **0**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RestoreType")]
         [Validation(Required=false)]

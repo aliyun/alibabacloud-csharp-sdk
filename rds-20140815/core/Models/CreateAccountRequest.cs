@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
-        /// The description of the account. The value must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.
+        /// The description of the account. The value must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.
         /// 
         /// > : The name cannot start with http:// or https://.
         /// </summary>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   The name must be unique.
         /// 
-        /// *   The name can contain lowercase letters, digits, and underscores (\_). For MySQL databases, the name can contain uppercase letters.
+        /// *   The name can contain lowercase letters, digits, and underscores (_). For MySQL databases, the name can contain uppercase letters.
         /// 
         /// *   The name must start with a letter and end with a letter or digit.
         /// 
@@ -39,7 +39,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         ///     *   If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.
         ///     *   If the instance runs MariaDB, the value must be 2 to 16 characters in length.
         /// 
-        /// *   For more information about invalid characters, see [Forbidden keywords](~~26317~~).
+        /// *   For more information about invalid characters, see [Forbidden keywords](https://help.aliyun.com/document_detail/26317.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -54,6 +56,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
         /// 
         /// *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Super**: privileged account.
         /// *   **Sysadmin**: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.
         /// 
-        /// Before you create a system admin account, check whether the RDS instance meets all prerequisites. For more information, see [Create a system admin account](~~170736~~).
+        /// Before you create a system admin account, check whether the RDS instance meets all prerequisites. For more information, see [Create a system admin account](https://help.aliyun.com/document_detail/170736.html).
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
@@ -74,6 +78,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

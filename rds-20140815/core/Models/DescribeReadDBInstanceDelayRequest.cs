@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class DescribeReadDBInstanceDelayRequest : TeaModel {
         /// <summary>
         /// The primary instance ID. You can call the DescribeDBInstances operation to query the primary instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The read-only instance ID. You can call the DescribeDBInstances operation to query the read-only instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ReadInstanceId")]
         [Validation(Required=false)]

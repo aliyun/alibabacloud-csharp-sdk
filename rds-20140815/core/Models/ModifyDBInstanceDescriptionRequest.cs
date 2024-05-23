@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceDescriptionRequest : TeaModel {
         /// <summary>
-        /// The name of the instance.
-        /// 
-        /// > The name must be 2 to 64 characters in length.
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

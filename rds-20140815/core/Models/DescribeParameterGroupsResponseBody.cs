@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// Indicates whether parameter templates exist in the specified region. Valid values:
         /// *   true
         /// *   false
-        /// ><notice>This parameter is deprecated.></notice>
+        /// >Notice: This parameter is deprecated.
         /// </summary>
         [NameInMap("SignalForOptimizeParams")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class DetachGadInstanceMemberRequest : TeaModel {
         /// <summary>
         /// The ID of the global active database cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GadInstanceName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The ID of the instance that serves as the unit node you want to remove. You can call the DescribeGadInstances query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MemberInstanceName")]
         [Validation(Required=false)]

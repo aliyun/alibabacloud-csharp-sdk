@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **Auto:** automatic update.
         /// *   **Manual**: manual update. ApsaraDB RDS automatically updates the current minor engine version of the instance only when the current minor engine version is phased out.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AutoUpgradeMinorVersion")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

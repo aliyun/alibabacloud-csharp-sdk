@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The status of the instance. For more information, see [Instance state table](~~26315~~).
+                /// The status of the instance. For more information, see [Instance state table](https://help.aliyun.com/document_detail/26315.html).
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]

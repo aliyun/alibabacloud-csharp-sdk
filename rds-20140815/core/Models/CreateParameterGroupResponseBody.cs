@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateParameterGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the parameter template. You can call the [DescribeParameterGroups](~~144491~~) operation to query the IDs of parameter templates.
+        /// The ID of the parameter template. You can call the [DescribeParameterGroups](https://help.aliyun.com/document_detail/144491.html) operation to query the IDs of parameter templates.
         /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]

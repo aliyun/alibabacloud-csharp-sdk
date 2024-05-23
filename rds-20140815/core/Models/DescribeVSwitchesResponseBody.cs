@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The information about the vSwitches.
+        /// The information about the vSwitch.
         /// </summary>
         [NameInMap("VSwitchs")]
         [Validation(Required=false)]
@@ -46,6 +46,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public class DescribeVSwitchesResponseBodyVSwitchs : TeaModel {
             /// <summary>
             /// The number of available IP addresses in the vSwitch.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("AvailableIpAddressCount")]
             [Validation(Required=false)]
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The status of the vSwitch. Valid values:
             /// 
-            /// *   **Pending**: The vSwitch is being configured.
+            /// *   **Pending**: The vSwitch is being specified.
             /// *   **Available**: The vSwitch is available.
             /// </summary>
             [NameInMap("Status")]

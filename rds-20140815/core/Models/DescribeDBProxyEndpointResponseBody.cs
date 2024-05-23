@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// The method that is used to assign read weights. For more information, see [Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances](~~96076~~). Valid values:
+        /// The method that is used to assign read weights. For more information, see [Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/96076.html). Valid values:
         /// 
         /// *   **Standard**: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.
         /// *   **Custom**: You must manually assign read weights to the instance and its read-only instances.

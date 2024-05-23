@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **all**: all types
         /// *   **S0**: returns the tasks of the exception fixing level.
-        /// *   **S1**: returns the tasks of the system O\&M level.
+        /// *   **S1**: returns the tasks of the system O\\&M level.
         /// </summary>
         [NameInMap("ChangeLevel")]
         [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: 1 to 100. Default value: 25.
+        /// The number of entries per page. Default value: 25. Maximum value: 100.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

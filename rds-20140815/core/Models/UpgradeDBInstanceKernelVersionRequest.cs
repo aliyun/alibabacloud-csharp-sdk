@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
         /// 
-        /// > *   If your instance runs PostgreSQL, you must make sure that the instance uses **cloud disks**. If the instance uses local disks, you must call the [RestartDBInstance](~~26230~~) operation to restart the instance. The system automatically updates the minor engine version of the instance to the latest version during the restart.
+        /// > *   If your instance runs PostgreSQL, you must make sure that the instance uses **cloud disks**. If the instance uses local disks, you must call the [RestartDBInstance](https://help.aliyun.com/document_detail/26230.html) operation to restart the instance. The system automatically updates the minor engine version of the instance to the latest version during the restart.
         /// > *   If your instance runs SQL Server, you must make sure that the instance runs SQL Server 2019.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// If you do not specify this parameter, the instance is updated to the latest minor engine version.
         /// 
-        /// >  For more information about minor engine versions, see [Release notes of AliPG](~~126002~~), [Release notes of AliSQL](~~96060~~), and [Release notes of minor engine versions of ApsaraDB RDS for SQL Server](~~213577~~).
+        /// >  For more information about minor engine versions, see [Release notes of AliPG](https://help.aliyun.com/document_detail/126002.html), [Release notes of AliSQL](https://help.aliyun.com/document_detail/96060.html), and [Release notes of minor engine versions of ApsaraDB RDS for SQL Server](https://help.aliyun.com/document_detail/213577.html).
         /// </summary>
         [NameInMap("TargetMinorVersion")]
         [Validation(Required=false)]

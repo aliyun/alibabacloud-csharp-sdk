@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CurrentInstanceId { get; set; }
 
         /// <summary>
-        /// The instance type of the instance. For more information, see [Instance types](~~26312~~).
+        /// The instance type of the instance. For more information, see [Instance types](https://help.aliyun.com/document_detail/26312.html).
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The status of the instance. For more information, see [Instance state table](~~26315~~).
+        /// The status of the instance. For more information, see [Instance state table](https://help.aliyun.com/document_detail/26315.html).
         /// </summary>
         [NameInMap("DBInstanceStatus")]
         [Validation(Required=false)]
@@ -160,6 +160,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

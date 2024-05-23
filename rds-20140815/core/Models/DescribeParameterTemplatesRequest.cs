@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **mssql**: SQL Server
         /// *   **PostgreSQL**: PostgreSQL
         /// *   **MariaDB**: MariaDB
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -53,6 +55,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   Valid values when you set the Engine parameter to mssql: **2008r2**.
         /// *   Valid values when you set the Engine parameter to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**.
         /// *   Valid values when you set the Engine parameter to MariaDB: **10.3**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]

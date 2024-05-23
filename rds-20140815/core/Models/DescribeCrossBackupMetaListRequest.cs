@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossBackupMetaListRequest : TeaModel {
         /// <summary>
-        /// The ID of the cross-region backup file that you want to use. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query the ID of the cross-region backup file.
+        /// The ID of the cross-region backup file that you want to use. You can call the [DescribeCrossRegionBackups](https://help.aliyun.com/document_detail/121733.html) operation to query the ID of the cross-region backup file.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BackupSetId")]
         [Validation(Required=false)]

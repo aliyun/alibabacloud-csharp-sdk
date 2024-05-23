@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   The value must start with a lowercase letter, and end with a lowercase letter or a digit.
         /// 
-        /// *   The value can contain lowercase letters, digits, and underscores (\_).
+        /// *   The value can contain lowercase letters, digits, and underscores (_).
         /// 
         /// *   The length of the value must meet the following requirements:
         /// 
@@ -27,7 +27,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         ///     *   If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.
         ///     *   If the instance runs MariaDB, the value must be 2 to 16 characters in length.
         /// 
-        /// *   For more information about invalid characters, see [Forbidden keywords table](~~26317~~).
+        /// *   For more information about invalid characters, see [Forbidden keywords table](https://help.aliyun.com/document_detail/26317.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

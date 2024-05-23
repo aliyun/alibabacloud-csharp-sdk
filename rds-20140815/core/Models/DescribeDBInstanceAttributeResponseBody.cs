@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The configuration of the Babelfish feature for the ApsaraDB RDS for PostgreSQL instance.
                 /// 
-                /// >  This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](~~428613~~).
+                /// >  This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](https://help.aliyun.com/document_detail/428613.html).
                 /// </summary>
                 [NameInMap("BabelfishConfig")]
                 [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     /// *   **single-db**
                     /// *   **multi-db**
                     /// 
-                    /// >  For more information about migration modes for Babelfish, see [Migration modes](~~428613~~).
+                    /// >  For more information about migration modes for Babelfish, see [Migration modes](https://help.aliyun.com/document_detail/428613.html).
                     /// </summary>
                     [NameInMap("MigrationMode")]
                     [Validation(Required=false)]
@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
                 public bool? BurstingEnabled { get; set; }
+
+                [NameInMap("CanTempUpgrade")]
+                [Validation(Required=false)]
+                public bool? CanTempUpgrade { get; set; }
 
                 /// <summary>
                 /// The RDS edition. Valid values:
@@ -269,7 +273,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceCPU { get; set; }
 
                 /// <summary>
-                /// The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+                /// The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
                 /// </summary>
                 [NameInMap("DBInstanceClass")]
                 [Validation(Required=false)]
@@ -326,7 +330,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceNetType { get; set; }
 
                 /// <summary>
-                /// The status of the instance. For more information, see [Instance states](~~26315~~).
+                /// The status of the instance. For more information, see [Instance states](https://help.aliyun.com/document_detail/26315.html).
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]
@@ -747,6 +751,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("TempDBInstanceId")]
                 [Validation(Required=false)]
                 public string TempDBInstanceId { get; set; }
+
+                [NameInMap("TempUpgradeTimeEnd")]
+                [Validation(Required=false)]
+                public string TempUpgradeTimeEnd { get; set; }
+
+                [NameInMap("TempUpgradeTimeStart")]
+                [Validation(Required=false)]
+                public string TempUpgradeTimeStart { get; set; }
 
                 /// <summary>
                 /// The time zone.

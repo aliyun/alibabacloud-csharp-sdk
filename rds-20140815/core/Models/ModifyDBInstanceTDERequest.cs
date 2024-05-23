@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceTDERequest : TeaModel {
         /// <summary>
-        /// The file that contains the certificate.\
+        /// The file that contains the certificate.\\
         /// Format:
         /// 
         /// *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)
         /// *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)
         /// 
         /// > *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
-        /// > *   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// > *   You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("Certificate")]
         [Validation(Required=false)]
@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -80,14 +82,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PassWord { get; set; }
 
         /// <summary>
-        /// The file that contains the private key of the certificate.\
+        /// The file that contains the private key of the certificate.\\
         /// Format:
         /// 
         /// *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)
         /// *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)
         /// 
         /// > *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
-        /// > *   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// > *   You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("PrivateKey")]
         [Validation(Required=false)]
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](~~93689~~).
+        /// The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](https://help.aliyun.com/document_detail/93689.html).
         /// 
         /// > This parameter is available when the instance runs MySQL or PostgreSQL.
         /// </summary>
@@ -115,6 +117,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **Enabled**
         /// *   **Disabled**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TDEStatus")]
         [Validation(Required=false)]

@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts> DedicatedHosts { get; set; }
             public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts : TeaModel {
                 /// <summary>
-                /// The host account. You can call the [CreateDedicatedHostAccount](~~196877~~) operation to create a host account.
+                /// The host account. You can call the [CreateDedicatedHostAccount](https://help.aliyun.com/document_detail/196877.html) operation to create a host account.
                 /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string BastionInstanceId { get; set; }
 
                 /// <summary>
-                /// The core overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
+                /// The core overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).
                 /// </summary>
                 [NameInMap("CPUAllocationRatio")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DedicatedHostId { get; set; }
 
                 /// <summary>
-                /// The disk overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
+                /// The disk overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).
                 /// </summary>
                 [NameInMap("DiskAllocationRatio")]
                 [Validation(Required=false)]

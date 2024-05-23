@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class ModifyDBInstanceProxyConfigurationRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **TransparentSwitch**: transparent switchover
         /// *   **PersistentConnections**: short-lived connection optimization
         /// *   **AttacksProtection**: brute-force attack protection
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProxyConfigurationKey")]
         [Validation(Required=false)]
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         ///     *   **Disable**: The feature is disabled. This is the default value.
         /// 
         /// Format: {"Feature 1":"Status 1","Feature 2":"Status 2"...}
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProxyConfigurationValue")]
         [Validation(Required=false)]

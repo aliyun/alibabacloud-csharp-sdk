@@ -16,6 +16,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **AsyncExecuteDBCheck**: asynchronous database check
         /// 
         /// > The check methods are supported for RDS instances that run SQL Server 2008 R2.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CheckDBMode")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The name of the database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The ID of the migration task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MigrateTaskId")]
         [Validation(Required=false)]

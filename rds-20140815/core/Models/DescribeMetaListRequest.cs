@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeMetaListRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set from which you want to restore data. You can call the DescribeBackups operation to query the backup set ID.
+        /// The ID of the backup set from which you want to restore data. You can call the DescribeBackups operation to query the IDs of data backup files.
         /// 
-        /// >  This parameter must be specified when the **RestoreType** parameter is set to **BackupSetID**.
+        /// >  This parameter is required when you set the **RestoreType** parameter to **BackupSetID**.
         /// </summary>
         [NameInMap("BackupSetID")]
         [Validation(Required=false)]
@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -97,9 +99,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// The method that is used to restore data. Valid values:
+        /// The restoration method that you want to use. Valid values:
         /// 
-        /// *   **BackupSetID**: Data is restored from a backup set. If you use this value, you must also specify the **BackupSetID** parameter.
+        /// *   **BackupSetID**: Data is restored from the backup set. If you use this value, you must also specify the **BackupSetID** parameter.
         /// *   **RestoreTime**: Data is restored to a specific point in time. If you use this value, you must also specify the **RestoreTime** parameter.
         /// 
         /// Default value: **BackupSetID**.

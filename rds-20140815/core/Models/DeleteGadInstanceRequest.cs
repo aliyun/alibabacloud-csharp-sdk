@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class DeleteGadInstanceRequest : TeaModel {
         /// <summary>
         /// The ID of the global active database cluster. You can call the GadInstanceName operation to query the cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GadInstanceName")]
         [Validation(Required=false)]

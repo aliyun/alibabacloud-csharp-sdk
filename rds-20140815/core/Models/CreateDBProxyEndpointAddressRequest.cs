@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class CreateDBProxyEndpointAddressRequest : TeaModel {
         /// <summary>
         /// The prefix of the proxy endpoint Enter a custom prefix.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Classic**: classic network
         /// 
         /// Default value: **Classic**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBProxyConnectStringNetType")]
         [Validation(Required=false)]
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBProxyEndpointId")]
         [Validation(Required=false)]

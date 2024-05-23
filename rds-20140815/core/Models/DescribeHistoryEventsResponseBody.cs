@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+                /// The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).
                 /// </summary>
                 [NameInMap("EventCategory")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventImpact { get; set; }
 
                 /// <summary>
-                /// The event level. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+                /// The event level. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).
                 /// </summary>
                 [NameInMap("EventLevel")]
                 [Validation(Required=false)]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Time { get; set; }
 
             /// <summary>
-            /// The event type. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+            /// The event type. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

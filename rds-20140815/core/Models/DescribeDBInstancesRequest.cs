@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// The instance type of the instance. For information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+        /// The instance type of the instance. For information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The status of the instance. For more information, see [Instance states](~~26315~~).
+        /// The status of the instance. For more information, see [Instance states](https://help.aliyun.com/document_detail/26315.html).
         /// </summary>
         [NameInMap("DBInstanceStatus")]
         [Validation(Required=false)]
@@ -212,6 +212,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// > *   A primary instance can serve only as the central node of a single global active database cluster.
         /// > *   The primary instance can serve as the central node of the global active database cluster only in the following regions: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CentralDBInstanceId")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The username of the privileged account of the central node. You can call the DescribeAccounts operation to query the privileged account of the central node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CentralRdsDtsAdminAccount")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The password of the privileged account of the central node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CentralRdsDtsAdminPassword")]
         [Validation(Required=false)]
@@ -35,6 +41,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The region ID of the central node. You can call the DescribeRegions operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CentralRegionId")]
         [Validation(Required=false)]
@@ -48,6 +56,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Table**: the name of the table. If you set the **all** field to **false**, you must nest the name of the table that you want to synchronize into the JSON array.
         /// 
         /// Example: `{ "testdb": { "name": "testdb", "all": false, "Table": { "order": { "name": "order", "all": true }, "ordernew": { "name": "ordernew", "all": true } } } }`
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBList")]
         [Validation(Required=false)]
@@ -92,6 +102,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The information about the unit node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UnitNode")]
         [Validation(Required=false)]
@@ -101,7 +113,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// The name of the unit node that you want to create. The name must meet the following requirements:
             /// 
             /// *   The name must be **2 to 255** characters in length.
-            /// *   The name can contain letters, digits, underscores (\_), and hyphens (-) and must start with a letter.
+            /// *   The name can contain letters, digits, underscores (_), and hyphens (-) and must start with a letter.
             /// *   The name cannot start with `http://` or `https://`.
             /// 
             /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
@@ -111,7 +123,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DBInstanceDescription { get; set; }
 
             /// <summary>
-            /// The storage capacity of the unit node that you want to create. Unit: GB You can adjust the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableResource operation to query the storage capacity range that is supported by the new instance type.
+            /// The storage capacity of the unit node that you want to create. Unit: GB You can adjust the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html). You can also call the DescribeAvailableResource operation to query the storage capacity range that is supported by the new instance type.
             /// 
             /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
@@ -138,7 +150,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DBInstanceStorageType { get; set; }
 
             /// <summary>
-            /// The instance type of the unit node that you want to create. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the DescribeAvailableResource operation to query the available instance types in a region.
+            /// The instance type of the unit node that you want to create. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html). You can call the DescribeAvailableResource operation to query the available instance types in a region.
             /// 
             /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
             /// </summary>
@@ -154,6 +166,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// *   **ignore**: DTS hides the conflicting primary key on the node.
             /// 
             /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DtsConflict")]
             [Validation(Required=false)]
@@ -167,9 +181,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// *   **large**
             /// *   **micro**
             /// 
-            /// >  For more information, see [Specifications of data synchronization tasks](~~26605~~).
+            /// >  For more information, see [Specifications of data synchronization tasks](https://help.aliyun.com/document_detail/26605.html).
             /// 
             /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DtsInstanceClass")]
             [Validation(Required=false)]
@@ -216,13 +232,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// The region ID of the unit node that you want to create. You can call the DescribeRegions operation to query the most recent region list.
             /// 
             /// **N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RegionID")]
             [Validation(Required=false)]
             public string RegionID { get; set; }
 
             /// <summary>
-            /// The [IP address whitelist](~~43185~~) of the unit node that you want to create. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
+            /// The [IP address whitelist](https://help.aliyun.com/document_detail/43185.html) of the unit node that you want to create. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
             /// 
             /// *   IP addresses, such as `10.10.10.10`.
             /// *   CIDR blocks, such as `10.10.10.10/24`. In this example, **24** indicates that the prefix of the IP address in the whitelist is 24 bits in length. You can replace 24 with a value within the range of **1 to 32**.

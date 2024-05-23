@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The number of entries to return on each page. Enumerated valid values: 10, 30, and 50.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxRecordsPerPage")]
         [Validation(Required=false)]
@@ -28,11 +30,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The page number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNumbers")]
         [Validation(Required=false)]
         public int? PageNumbers { get; set; }
 
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The details of the node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBNode")]
         [Validation(Required=false)]
@@ -34,17 +38,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public class CreateDBNodesRequestDBNode : TeaModel {
             /// <summary>
             /// The specification information of the node.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("classCode")]
             [Validation(Required=false)]
             public string ClassCode { get; set; }
 
+            /// <summary>
+            /// The vSwitch ID of the node.
+            /// </summary>
             [NameInMap("vswitchId")]
             [Validation(Required=false)]
             public string VswitchId { get; set; }
 
             /// <summary>
-            /// The zone ID of the node.
+            /// The ID of the zone in which the node is deployed.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("zoneId")]
             [Validation(Required=false)]

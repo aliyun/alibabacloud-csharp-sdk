@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class ModifyDTCSecurityIpHostsForSQLServerRequest : TeaModel {
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The region ID. You can call the DescribeRegions operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -42,7 +46,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The IP address of the ECS instance and the hostname of the Windows computer. Format: `IP address,Hostname`. Separate multiple entries with semicolon (;).
         /// 
-        /// >  For more information about how to query the computer hostname, see [Configure a distributed transaction whitelist](~~124321~~).
+        /// >  For more information about how to query the computer hostname, see [Configure a distributed transaction whitelist](https://help.aliyun.com/document_detail/124321.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityIpHosts")]
         [Validation(Required=false)]
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The name of the IP address whitelist.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WhiteListGroupName")]
         [Validation(Required=false)]

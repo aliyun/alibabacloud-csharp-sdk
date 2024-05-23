@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The dedicated proxy endpoint of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbProxyConnectString")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbProxyEndpointId")]
         [Validation(Required=false)]
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   2: updates the validity period of the SSL certificate.
         /// 
         /// > This setting causes your instance to restart. Proceed with caution.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbProxySslEnabled")]
         [Validation(Required=false)]

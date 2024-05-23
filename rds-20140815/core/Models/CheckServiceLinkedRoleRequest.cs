@@ -16,7 +16,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The region ID.
         /// 
-        /// >  You can specify any region for this parameter, which does not affect your query results. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// >  You can specify any region for this parameter, which does not affect your query results. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -40,7 +42,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The SLR name.
         /// 
-        /// >  For more information about the SLRs supported by ApsaraDB RDS, see [Service-linked roles](~~342840~~).
+        /// >  For more information about the SLRs supported by ApsaraDB RDS, see [Service-linked roles](https://help.aliyun.com/document_detail/342840.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceLinkedRole")]
         [Validation(Required=false)]

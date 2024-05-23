@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class DescribeInstanceLinkedWhitelistTemplateRequest : TeaModel {
         /// <summary>
         /// The instance name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InsName")]
         [Validation(Required=false)]

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems> MinorVersionItems { get; set; }
         public class DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems : TeaModel {
             /// <summary>
-            /// The PostgreSQL version to which the minor engine version corresponds. For more information, see [Release notes for AliPG](~~126002~~).
+            /// The PostgreSQL version to which the minor engine version corresponds. For more information, see [Release notes for AliPG](https://help.aliyun.com/document_detail/126002.html).
             /// 
             /// >  This parameter is available only for instances that run **PostgreSQL**.
             /// </summary>

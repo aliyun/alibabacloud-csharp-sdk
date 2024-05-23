@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ResourceNiche")]
         [Validation(Required=false)]
         public string ResourceNiche { get; set; }
