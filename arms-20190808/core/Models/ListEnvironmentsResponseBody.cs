@@ -171,6 +171,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
                 }
 
+                /// <summary>
+                /// The payable resource plan. Valid values:
+                /// 
+                /// *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
+                /// *   Otherwise, leave the parameter empty.
+                /// </summary>
                 [NameInMap("FeePackage")]
                 [Validation(Required=false)]
                 public string FeePackage { get; set; }
@@ -204,13 +210,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string LatestReleaseCreateTime { get; set; }
 
                 /// <summary>
-                /// type of managed:
+                /// Indicates whether agents or exporters are managed. Valid values:
                 /// 
-                /// - none: not managed. default value of prometheus for ACK.
-                /// 
-                /// - agent: managed agent. default value of promehtues for ASK/ACS/AckOne.
-                /// 
-                /// - agent-exproter: managed agent and exporter. default of prometheus for Cloud.
+                /// *   none: No. By default, no managed agents or exporters are provided for ACK clusters.
+                /// *   agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.
+                /// *   agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
                 /// </summary>
                 [NameInMap("ManagedType")]
                 [Validation(Required=false)]
@@ -231,7 +235,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string PrometheusInstanceId { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// The ID of the region where the Message Queue for RabbitMQ instance resides.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -245,7 +249,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public int? ReleaseCount { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -275,7 +279,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// The user ID.
+                /// The ID of the user.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]

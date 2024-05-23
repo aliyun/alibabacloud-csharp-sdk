@@ -19133,6 +19133,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
             {
                 query["EnvironmentId"] = request.EnvironmentId;
@@ -19171,6 +19175,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
             {
                 query["EnvironmentId"] = request.EnvironmentId;

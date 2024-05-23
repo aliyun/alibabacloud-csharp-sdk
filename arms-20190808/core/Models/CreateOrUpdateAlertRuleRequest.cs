@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AlertName { get; set; }
 
         /// <summary>
-        /// Alarm Notification Channel Configuration. Used for compatibility with legacy rules.
+        /// The configuration of the alert sending channel. This parameter is used to be compatible with the old version of the rule.
         /// </summary>
         [NameInMap("AlertPiplines")]
         [Validation(Required=false)]
@@ -61,19 +61,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// 
         /// ```json
         /// { 
-        ///     "Condition": "OR", 
-        ///      "AlertRuleItems": [ 
+        ///     "Condition": "OR",
+        ///      "AlertRuleItems": [
         ///              { "Operator": "CURRENT_LTE",
-        ///                  "MetricKey": "appstat.jvm.threadcount", 
-        ///                  "Value": 1000, 
+        ///                  "MetricKey": "appstat.jvm.threadcount",
+        ///                  "Value": 1000,
         ///                  "Aggregate": "AVG",
-        ///                   "N": 1
+        ///                   "N": 10,
+        ///                   "Tolerability": 169
         ///             } 
         ///        ]  
         ///   }
         /// ```
         /// 
-        /// > The conditional fields vary depending on the values of the **MetricsType** and **AlertRuleItems.MetricKey** parameters. For more information about the types of metrics supported by Application Monitoring and Browser Monitoring and the alert rule fields corresponding to each metric, see the supplementary description.
+        /// >  The filter conditions specified by the **AlertRuleItems.MetricKey** field depends on the value of the **MetricsType** parameter. For more information about the types of metrics supported by Application Monitoring and Browser Monitoring and the alert rule fields corresponding to each metric, see the supplementary description.
         /// </summary>
         [NameInMap("AlertRuleContent")]
         [Validation(Required=false)]
@@ -90,20 +91,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AlertStatus { get; set; }
 
         /// <summary>
-        /// The type of the alert rule. Valid values:
+        /// The following alert rule types are available:
         /// 
         /// *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
         /// *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
-        /// *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service
-        /// 
-        /// Valid values:
-        /// 
-        /// *   PROMETHEUS_MONITORING_ALERT_RULE
-        /// *   APPLICATION_MONITORING_ALERT_RULE
-        /// *   BROWSER_MONITORING_ALERT_RULE
-        /// *   prometheus monitoring alert
-        /// *   application monitoring alert
-        /// *   browser monitoring alert
+        /// *   RUM_MONITORING_ALERT_RULE: alert rule for RUM Monitoring
+        /// *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus
+        /// *   XTRACE_MONITORING_ALERT_RULE: alert rule for Managed Service for OpenTelemetry
+        /// *   EBPF_MONITORING_ALERT_RULE: alert rule for Application Monitoring eBPF Edition
         /// 
         /// This parameter is required.
         /// </summary>
@@ -158,20 +153,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? Duration { get; set; }
 
         /// <summary>
-        /// The filter conditions of the Application Monitoring or Browser Monitoring alert rule. The following code shows the format of matching rules:
+        /// The filter conditions of the Application Monitoring or Browser Monitoring alert rule. Format:
         /// 
         ///     "DimFilters": [ 
         ///     { 
         ///      "FilterOpt": "ALL",
-        ///      "FilterValues": [],         // The value of the filter condition. 
-        ///      "FilterKey": "rootIp"     // The key of the filter condition. 
+        ///     "FilterValues": [],         //The value of the filter condition.
+        ///     "FilterKey": "rootIp"     //The key of the filter condition.
         ///     }
         ///     ]
         /// 
         /// Valid values of **FilterOpt**:
         /// 
         /// *   STATIC: matches the value of the specified dimension.
-        /// *   ALL: matches the values of all dimensions.
+        /// *   ALL: traverses all dimension values. Dynamic thresholds do not support traversal.
         /// *   DISABLE: aggregates the values of all dimensions.
         /// </summary>
         [NameInMap("Filters")]
@@ -245,7 +240,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string MetricsType { get; set; }
 
         /// <summary>
-        /// Effective Time and Notification Time. Used for compatibility with legacy rules.
+        /// The effective time and notification time. This parameter is used to be compatible with the old version of the rule.
         /// </summary>
         [NameInMap("Notice")]
         [Validation(Required=false)]
@@ -275,6 +270,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Pids { get; set; }
 
+        /// <summary>
+        /// It is determined when creating the underlying rules of Prometheus. The background will verify whether the product exists, which is used to distinguish cloud product filtering queries.
+        /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]
         public string Product { get; set; }

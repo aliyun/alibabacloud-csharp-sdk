@@ -150,6 +150,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
                 }
 
+                [NameInMap("Ips")]
+                [Validation(Required=false)]
+                public List<string> Ips { get; set; }
+
                 /// <summary>
                 /// The Kubernetes resource name of the feature.
                 /// </summary>
