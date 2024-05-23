@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class ListProjectsRequest : TeaModel {
+    public class ListProjectsShrinkRequest : TeaModel {
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
@@ -23,17 +23,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<ListProjectsRequestTag> Tag { get; set; }
-        public class ListProjectsRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagShrink { get; set; }
 
     }
 

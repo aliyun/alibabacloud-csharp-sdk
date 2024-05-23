@@ -4520,13 +4520,19 @@ namespace AlibabaCloud.SDK.Imm20200930
         /**
          * @summary 创建项目
          *
-         * @param request CreateProjectRequest
+         * @param tmpReq CreateProjectRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateProjectResponse
          */
-        public CreateProjectResponse CreateProjectWithOptions(CreateProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateProjectResponse CreateProjectWithOptions(CreateProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateProjectShrinkRequest request = new CreateProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
@@ -4563,6 +4569,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRole))
             {
                 query["ServiceRole"] = request.ServiceRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -4590,13 +4600,19 @@ namespace AlibabaCloud.SDK.Imm20200930
         /**
          * @summary 创建项目
          *
-         * @param request CreateProjectRequest
+         * @param tmpReq CreateProjectRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateProjectResponse
          */
-        public async Task<CreateProjectResponse> CreateProjectWithOptionsAsync(CreateProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateProjectResponse> CreateProjectWithOptionsAsync(CreateProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateProjectShrinkRequest request = new CreateProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
@@ -4633,6 +4649,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRole))
             {
                 query["ServiceRole"] = request.ServiceRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -10764,13 +10784,19 @@ namespace AlibabaCloud.SDK.Imm20200930
         /**
          * @summary 获取项目列表
          *
-         * @param request ListProjectsRequest
+         * @param tmpReq ListProjectsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListProjectsResponse
          */
-        public ListProjectsResponse ListProjectsWithOptions(ListProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListProjectsResponse ListProjectsWithOptions(ListProjectsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListProjectsShrinkRequest request = new ListProjectsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -10783,6 +10809,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
             {
                 query["Prefix"] = request.Prefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10806,13 +10836,19 @@ namespace AlibabaCloud.SDK.Imm20200930
         /**
          * @summary 获取项目列表
          *
-         * @param request ListProjectsRequest
+         * @param tmpReq ListProjectsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListProjectsResponse
          */
-        public async Task<ListProjectsResponse> ListProjectsWithOptionsAsync(ListProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListProjectsResponse> ListProjectsWithOptionsAsync(ListProjectsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListProjectsShrinkRequest request = new ListProjectsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -10825,6 +10861,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
             {
                 query["Prefix"] = request.Prefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13960,13 +14000,19 @@ namespace AlibabaCloud.SDK.Imm20200930
         /**
          * @summary 更新项目
          *
-         * @param request UpdateProjectRequest
+         * @param tmpReq UpdateProjectRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateProjectResponse
          */
-        public UpdateProjectResponse UpdateProjectWithOptions(UpdateProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateProjectResponse UpdateProjectWithOptions(UpdateProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateProjectShrinkRequest request = new UpdateProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
@@ -14003,6 +14049,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRole))
             {
                 query["ServiceRole"] = request.ServiceRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -14030,13 +14080,19 @@ namespace AlibabaCloud.SDK.Imm20200930
         /**
          * @summary 更新项目
          *
-         * @param request UpdateProjectRequest
+         * @param tmpReq UpdateProjectRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateProjectResponse
          */
-        public async Task<UpdateProjectResponse> UpdateProjectWithOptionsAsync(UpdateProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateProjectResponse> UpdateProjectWithOptionsAsync(UpdateProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateProjectShrinkRequest request = new UpdateProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
@@ -14073,6 +14129,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRole))
             {
                 query["ServiceRole"] = request.ServiceRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {

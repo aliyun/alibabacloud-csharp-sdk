@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class CreateProjectRequest : TeaModel {
+    public class CreateProjectShrinkRequest : TeaModel {
         [NameInMap("DatasetMaxBindCount")]
         [Validation(Required=false)]
         public long? DatasetMaxBindCount { get; set; }
@@ -50,17 +50,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreateProjectRequestTag> Tag { get; set; }
-        public class CreateProjectRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagShrink { get; set; }
 
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
