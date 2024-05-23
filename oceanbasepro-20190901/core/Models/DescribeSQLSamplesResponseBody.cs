@@ -293,6 +293,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string Server { get; set; }
 
+            [NameInMap("SqlText")]
+            [Validation(Required=false)]
+            public string SqlText { get; set; }
+
             /// <summary>
             /// SQL type.
             /// </summary>

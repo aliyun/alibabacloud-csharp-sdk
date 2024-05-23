@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The return result of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantMode")]
         [Validation(Required=false)]

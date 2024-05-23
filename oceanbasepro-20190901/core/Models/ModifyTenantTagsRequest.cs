@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class ModifyTenantTagsRequest : TeaModel {
         /// <summary>
         /// The ID of the OceanBase cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The tags.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the tenant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

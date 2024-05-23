@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class DescribeOasSQLDetailsRequest : TeaModel {
         /// <summary>
         /// The name of the database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The end time of querying the SQL execution plan.   
         /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the OceanBase cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -37,6 +43,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// SQL ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SqlId")]
         [Validation(Required=false)]
@@ -45,6 +53,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The start time of querying the SQL execution plan.   
         /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -52,6 +62,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the tenant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

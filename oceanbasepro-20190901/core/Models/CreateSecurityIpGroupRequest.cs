@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class CreateSecurityIpGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the OceanBase cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The name of the whitelist group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityIpGroupName")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The return result of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityIps")]
         [Validation(Required=false)]

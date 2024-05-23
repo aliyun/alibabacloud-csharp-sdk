@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The instance ID of the primary/standby instance. You can set the default value to the instance ID of the instance to be switched to the primary instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The instance ID of the instance to be switched to the primary instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TargetInstanceId")]
         [Validation(Required=false)]

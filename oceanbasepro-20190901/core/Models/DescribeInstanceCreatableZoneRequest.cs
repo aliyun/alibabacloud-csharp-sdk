@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class DescribeInstanceCreatableZoneRequest : TeaModel {
         /// <summary>
         /// The ID of the zone.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

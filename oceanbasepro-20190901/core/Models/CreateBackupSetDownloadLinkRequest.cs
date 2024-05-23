@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class CreateBackupSetDownloadLinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BackupSetId")]
         [Validation(Required=false)]
         public string BackupSetId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

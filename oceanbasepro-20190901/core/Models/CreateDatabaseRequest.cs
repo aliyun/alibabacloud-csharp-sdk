@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// Alibaba Cloud CLI
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatabaseName")]
         [Validation(Required=false)]
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the tenant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Encoding")]
         [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The collation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -56,6 +62,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The name of the database.   
         /// You cannot use reserved keywords, such as test and mysql.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

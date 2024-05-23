@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class DescribeMetricsDataResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public List<string> Data { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

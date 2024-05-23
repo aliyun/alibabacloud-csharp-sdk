@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The end time of the time range for querying suspicious SQL statements.   
         /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -40,6 +42,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string FilterConditionShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -122,6 +127,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The start time of the time range for querying suspicious SQL statements.   
         /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -129,6 +136,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the tenant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

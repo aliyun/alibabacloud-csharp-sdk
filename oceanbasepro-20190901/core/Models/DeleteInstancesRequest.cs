@@ -33,6 +33,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The ID of the cluster to be deleted.   
         /// The value is a string in the JSON format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

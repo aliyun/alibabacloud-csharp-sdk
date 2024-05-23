@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class DescribeInstanceRequest : TeaModel {
         /// <summary>
         /// The size of the data disk, in GB.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

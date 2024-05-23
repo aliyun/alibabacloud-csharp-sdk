@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the OceanBase cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// Specification.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

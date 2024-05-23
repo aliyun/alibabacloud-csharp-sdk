@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class ModifyDatabaseUserRolesRequest : TeaModel {
         /// <summary>
         /// The ID of the tenant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DatabaseName")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// A list of usernames and their respective roles.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the OceanBase cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]

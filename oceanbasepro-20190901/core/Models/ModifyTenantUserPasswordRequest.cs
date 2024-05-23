@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string EncryptionType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -29,6 +32,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// &InstanceId=ob317v4uif****
         /// &Common request parameters
         /// ```
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the OceanBase cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]
@@ -43,6 +50,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// You can call this operation to change the logon password of a specified account in a tenant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserPassword")]
         [Validation(Required=false)]

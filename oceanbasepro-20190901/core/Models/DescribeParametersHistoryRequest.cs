@@ -12,6 +12,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The type of the parameter.   
         /// Valid values: CLUSTER and TENANT.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Dimension")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The end time for the query of parameter modification history.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the OceanBase cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -43,6 +49,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// The number of the page to return.    
         /// - Start value: 1   
         /// - Default value: 1
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// The number of rows to return on each page.   
         /// - Maximum value: 100   
         /// - Default value: 10
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -59,6 +69,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The start time of the time range for querying the parameter modification history.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

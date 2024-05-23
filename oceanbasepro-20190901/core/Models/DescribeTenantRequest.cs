@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// - ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   
         /// - PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   
         /// - ONLINE: The address is in service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// Indicates whether to enable transaction splitting.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

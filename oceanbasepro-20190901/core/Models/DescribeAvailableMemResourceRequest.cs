@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class DescribeAvailableMemResourceRequest : TeaModel {
         /// <summary>
         /// The number of CPU cores.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CpuNum")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the OceanBase cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The number of resource distribution nodes in the tenant.   
         /// The number is determined by the deployment mode of the cluster. If the cluster is deployed in 2-2-2 mode, the maximum number of resource distribution nodes is 2.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UnitNum")]
         [Validation(Required=false)]

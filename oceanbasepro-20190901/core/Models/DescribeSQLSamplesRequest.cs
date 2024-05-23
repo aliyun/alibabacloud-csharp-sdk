@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class DescribeSQLSamplesRequest : TeaModel {
         /// <summary>
         /// The database name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
@@ -19,6 +21,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The end time of querying the slow query execution.
         /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -31,8 +35,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("ReturnSqlText")]
+        [Validation(Required=false)]
+        public bool? ReturnSqlText { get; set; }
+
         /// <summary>
         /// SQL ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SqlId")]
         [Validation(Required=false)]
@@ -41,6 +51,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The start time of querying the slow query execution.
         /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

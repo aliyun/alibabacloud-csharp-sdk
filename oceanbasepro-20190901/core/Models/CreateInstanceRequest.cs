@@ -32,10 +32,16 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// The billing method of the instance. Valid values:  
         /// - PrePay: the subscription billing method. You must ensure that the remaining balance or credit balance of your account can cover the cost of the subscription. Otherwise, you will receive an InvalidPayMethod error. 
         /// - PostPay: the pay-as-you-go billing method. This is the default value. By default, fees are charged on an hourly basis.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
+
+        [NameInMap("CpuArch")]
+        [Validation(Required=false)]
+        public string CpuArch { get; set; }
 
         /// <summary>
         /// The size of the storage space,in GB.    
@@ -76,6 +82,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         ///  - 14C70GB: indicates 14 CPU cores and 70 GB of memory. This is the default value.
         /// - 30C180GB: indicates 30 CPU cores and 180 GB of memory.     
         /// - 62C400GB: indicates 62 CPU cores and 400 GB of memory.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
@@ -168,6 +176,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// - normal: Standard Cluster Edition (Cloud Disk). This is the default value.
         /// - normal_ssd: Standard Cluster Edition (Local Disk).
         /// - history: History Database Cluster Edition.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Series")]
         [Validation(Required=false)]
@@ -175,7 +185,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the zone to which the instance belongs.   
-        /// For more information about how to obtain the list of zones, see [DescribeZones](~~25610~~).
+        /// For more information about how to obtain the list of zones, see [DescribeZones](https://help.aliyun.com/document_detail/25610.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]

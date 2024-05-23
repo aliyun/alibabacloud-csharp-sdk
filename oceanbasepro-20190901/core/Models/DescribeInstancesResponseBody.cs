@@ -80,21 +80,21 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 /// </summary>
                 [NameInMap("ScaleStepInMerge")]
                 [Validation(Required=false)]
-                public long? ScaleStepInMerge { get; set; }
+                public double? ScaleStepInMerge { get; set; }
 
                 /// <summary>
                 /// The size of scaling step during daily use.
                 /// </summary>
                 [NameInMap("ScaleStepInNormal")]
                 [Validation(Required=false)]
-                public long? ScaleStepInNormal { get; set; }
+                public double? ScaleStepInNormal { get; set; }
 
                 /// <summary>
                 /// The maximum usage of the data disk, in percentage, that triggers the scaling of the data disk for major compactions.
                 /// </summary>
                 [NameInMap("UpperMergeThreshold")]
                 [Validation(Required=false)]
-                public long? UpperMergeThreshold { get; set; }
+                public double? UpperMergeThreshold { get; set; }
 
                 /// <summary>
                 /// The scale-out strategy. Valid values: RAW and PERCENTAGE.
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 /// </summary>
                 [NameInMap("UpperThreshold")]
                 [Validation(Required=false)]
-                public long? UpperThreshold { get; set; }
+                public double? UpperThreshold { get; set; }
 
                 /// <summary>
                 /// The maximum space, in GB, to which the data disk can be scaled.
                 /// </summary>
                 [NameInMap("Upperbound")]
                 [Validation(Required=false)]
-                public long? Upperbound { get; set; }
+                public double? Upperbound { get; set; }
 
             }
 
@@ -302,28 +302,28 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     /// </summary>
                     [NameInMap("OriginalTotalCpu")]
                     [Validation(Required=false)]
-                    public long? OriginalTotalCpu { get; set; }
+                    public double? OriginalTotalCpu { get; set; }
 
                     /// <summary>
                     /// The total number of CPU cores of the cluster.
                     /// </summary>
                     [NameInMap("TotalCpu")]
                     [Validation(Required=false)]
-                    public long? TotalCpu { get; set; }
+                    public double? TotalCpu { get; set; }
 
                     /// <summary>
                     /// The number of CPU cores of each replica node in the cluster.
                     /// </summary>
                     [NameInMap("UnitCpu")]
                     [Validation(Required=false)]
-                    public long? UnitCpu { get; set; }
+                    public double? UnitCpu { get; set; }
 
                     /// <summary>
                     /// The number of CPU cores used in the cluster.
                     /// </summary>
                     [NameInMap("UsedCpu")]
                     [Validation(Required=false)]
-                    public long? UsedCpu { get; set; }
+                    public double? UsedCpu { get; set; }
 
                 }
 
@@ -339,21 +339,21 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     /// </summary>
                     [NameInMap("OriginalTotalDiskSize")]
                     [Validation(Required=false)]
-                    public long? OriginalTotalDiskSize { get; set; }
+                    public double? OriginalTotalDiskSize { get; set; }
 
                     /// <summary>
                     /// The total storage space of the cluster, in GB.
                     /// </summary>
                     [NameInMap("TotalDiskSize")]
                     [Validation(Required=false)]
-                    public long? TotalDiskSize { get; set; }
+                    public double? TotalDiskSize { get; set; }
 
                     /// <summary>
                     /// The storage space of each replica node in the cluster, in GB.
                     /// </summary>
                     [NameInMap("UnitDiskSize")]
                     [Validation(Required=false)]
-                    public long? UnitDiskSize { get; set; }
+                    public double? UnitDiskSize { get; set; }
 
                     /// <summary>
                     /// The size of used storage space of the cluster, in GB.
@@ -376,14 +376,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     /// </summary>
                     [NameInMap("OriginalTotalMemory")]
                     [Validation(Required=false)]
-                    public long? OriginalTotalMemory { get; set; }
+                    public double? OriginalTotalMemory { get; set; }
 
                     /// <summary>
                     /// The total memory size of the cluster, in GB.
                     /// </summary>
                     [NameInMap("TotalMemory")]
                     [Validation(Required=false)]
-                    public long? TotalMemory { get; set; }
+                    public double? TotalMemory { get; set; }
 
                     /// <summary>
                     /// The memory size of each replica node in the cluster, in GB.

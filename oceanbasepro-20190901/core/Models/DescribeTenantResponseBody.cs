@@ -186,6 +186,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
+            [NameInMap("LowerCaseTableNames")]
+            [Validation(Required=false)]
+            public byte[] LowerCaseTableNames { get; set; }
+
             /// <summary>
             /// ```
             /// http(s)://[Endpoint]/?Action=DescribeTenant
@@ -732,6 +736,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("TimeZone")]
             [Validation(Required=false)]
             public string TimeZone { get; set; }
+
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
 
             /// <summary>
             /// Indicates whether the clog service is available. To enable the clog service, submit a ticket.

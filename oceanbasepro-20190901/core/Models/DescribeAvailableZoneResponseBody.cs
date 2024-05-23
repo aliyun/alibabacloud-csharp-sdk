@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public string Channel { get; set; }
 
+                [NameInMap("CpuArch")]
+                [Validation(Required=false)]
+                public string CpuArch { get; set; }
+
                 [NameInMap("DeployType")]
                 [Validation(Required=false)]
                 public string DeployType { get; set; }

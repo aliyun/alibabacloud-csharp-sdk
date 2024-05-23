@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// It must be 2 to 128 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).   
         /// 
         /// > <br>Invalid characters, such as slashes (/), are not allowed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -58,6 +60,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The password of the username that is used to access the database. It must be Base64 encoded.   
         /// For example, for the password abcd123@!, the Base64-encoded value is YWJjZDEyM0Ah.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -84,6 +88,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The type of the MySQL data source.   
         /// Valid values: INTERNET, VPC, RDS, PolarDB, and DG.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -91,6 +97,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The username that is used to access the database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]

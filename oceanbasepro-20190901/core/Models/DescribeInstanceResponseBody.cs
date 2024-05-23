@@ -216,6 +216,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string PayType { get; set; }
 
+            [NameInMap("PrimaryInstance")]
+            [Validation(Required=false)]
+            public string PrimaryInstance { get; set; }
+
+            [NameInMap("PrimaryRegion")]
+            [Validation(Required=false)]
+            public string PrimaryRegion { get; set; }
+
             [NameInMap("ProxyClusterId")]
             [Validation(Required=false)]
             public string ProxyClusterId { get; set; }

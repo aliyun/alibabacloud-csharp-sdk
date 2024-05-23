@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class CreateProjectModifyRecordsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public List<CreateProjectModifyRecordsRequestDatabases> Databases { get; set; }
@@ -235,6 +238,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }

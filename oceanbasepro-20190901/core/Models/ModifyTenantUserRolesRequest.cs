@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// update: updates all privileges. This is the default value.  
         /// add: adds a privilege.  
         /// delete: deletes a privilege.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The operation that you want to perform.   
         /// Set the value to **ModifyTenantUserRoles**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The role of the database account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// The type of the account. Valid values:   
         /// - Admin: the super administrator account.   
         /// - Normal: a general account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserRole")]
         [Validation(Required=false)]

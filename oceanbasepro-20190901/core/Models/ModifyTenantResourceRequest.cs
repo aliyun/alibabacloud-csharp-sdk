@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class ModifyTenantResourceRequest : TeaModel {
         /// <summary>
         /// The information about the CPU resources of the tenant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the OceanBase cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The memory size of the tenant, in GB.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
@@ -42,10 +48,13 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// </summary>
         [NameInMap("ReadOnlyZoneList")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ReadOnlyZoneList { get; set; }
 
         /// <summary>
         /// The ID of the tenant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

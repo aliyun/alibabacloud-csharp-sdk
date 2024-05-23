@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeZonesRequest : TeaModel {
+        [NameInMap("CpuArch")]
+        [Validation(Required=false)]
+        public string CpuArch { get; set; }
+
         /// <summary>
         /// The operation that you want to perform.   
         /// Set the value to **DescribeZones**.

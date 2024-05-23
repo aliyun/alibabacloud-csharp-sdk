@@ -12,6 +12,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The primary zone of the tenant.    
         /// It is one of the zones in which the cluster is deployed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -47,6 +49,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The return result of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
@@ -62,6 +66,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [NameInMap("UserVSwitchId")]
         [Validation(Required=false)]
         public string UserVSwitchId { get; set; }
+
+        [NameInMap("UserVpcOwnerId")]
+        [Validation(Required=false)]
+        public string UserVpcOwnerId { get; set; }
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]

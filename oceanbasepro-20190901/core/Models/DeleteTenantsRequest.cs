@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class DeleteTenantsRequest : TeaModel {
         /// <summary>
         /// You can call this operation to delete one or more tenants from an OceanBase cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// &InstanceId=ob317v4uif****
         /// &Common request parameters
         /// ```
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantIds")]
         [Validation(Required=false)]

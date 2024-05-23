@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class DescribeBackupSetDownloadLinkRequest : TeaModel {
         /// <summary>
         /// The ID of the download task corresponding to the target backup set.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DownloadTaskId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the OceanBase cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

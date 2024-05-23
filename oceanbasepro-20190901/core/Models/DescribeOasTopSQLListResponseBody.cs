@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("Executions")]
             [Validation(Required=false)]
-            public double? Executions { get; set; }
+            public long? Executions { get; set; }
 
             /// <summary>
             /// Average number of partition accessed during the execution period.
@@ -629,7 +629,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
                 [NameInMap("Executions")]
                 [Validation(Required=false)]
-                public double? Executions { get; set; }
+                public long? Executions { get; set; }
 
                 [NameInMap("FailCount")]
                 [Validation(Required=false)]

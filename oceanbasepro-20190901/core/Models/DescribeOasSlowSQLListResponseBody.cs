@@ -386,49 +386,49 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode4012Count")]
             [Validation(Required=false)]
-            public long? RetCode4012Count { get; set; }
+            public double? RetCode4012Count { get; set; }
 
             /// <summary>
             /// Number of occurrences of code 4013 during the execution period.
             /// </summary>
             [NameInMap("RetCode4013Count")]
             [Validation(Required=false)]
-            public long? RetCode4013Count { get; set; }
+            public double? RetCode4013Count { get; set; }
 
             /// <summary>
             /// Number of occurrences of code 5001 during the execution period.
             /// </summary>
             [NameInMap("RetCode5001Count")]
             [Validation(Required=false)]
-            public long? RetCode5001Count { get; set; }
+            public double? RetCode5001Count { get; set; }
 
             /// <summary>
             /// Number of occurrences of code 5024 during the execution period.
             /// </summary>
             [NameInMap("RetCode5024Count")]
             [Validation(Required=false)]
-            public long? RetCode5024Count { get; set; }
+            public double? RetCode5024Count { get; set; }
 
             /// <summary>
             /// Number of occurrences of code 5167 during the execution period.
             /// </summary>
             [NameInMap("RetCode5167Count")]
             [Validation(Required=false)]
-            public long? RetCode5167Count { get; set; }
+            public double? RetCode5167Count { get; set; }
 
             /// <summary>
             /// Number of occurrences of code 5217 during the execution period.
             /// </summary>
             [NameInMap("RetCode5217Count")]
             [Validation(Required=false)]
-            public long? RetCode5217Count { get; set; }
+            public double? RetCode5217Count { get; set; }
 
             /// <summary>
             /// Number of occurrences of code 6002 during the execution period.
             /// </summary>
             [NameInMap("RetCode6002Count")]
             [Validation(Required=false)]
-            public long? RetCode6002Count { get; set; }
+            public double? RetCode6002Count { get; set; }
 
             /// <summary>
             /// Total number of retries during the execution period.

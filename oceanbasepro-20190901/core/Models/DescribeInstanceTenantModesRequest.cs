@@ -12,6 +12,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// <summary>
         /// The operation that you want to perform.   
         /// Set the value to **DescribeInstanceTenantModes**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

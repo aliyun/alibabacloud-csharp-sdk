@@ -9,10 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeAvailableZoneRequest : TeaModel {
+        [NameInMap("CpuArch")]
+        [Validation(Required=false)]
+        public string CpuArch { get; set; }
+
         [NameInMap("DeployType")]
         [Validation(Required=false)]
         public string DeployType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }

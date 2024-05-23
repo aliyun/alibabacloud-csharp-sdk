@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
             /// <summary>
             /// The actual data size, in GB. 
-            /// ><notice>This parameter is no longer used in later versions. RequiredSize is used instead.></notice>
+            /// >Notice: This parameter is no longer used in later versions. RequiredSize is used instead.
             /// </summary>
             [NameInMap("DataSize")]
             [Validation(Required=false)]

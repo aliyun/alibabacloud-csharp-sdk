@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the OceanBase cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The ID of the tenant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
@@ -46,13 +50,17 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The name of the database account.  You cannot use reserved keywords, such as SYS and root.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }
 
         /// <summary>
-        /// The password of the database account.  It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % \ ^ \ & \ * ( ) _ + - =
+        /// The password of the database account.  It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % \\ ^ \\ & \\ * ( ) _ + - =
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserPassword")]
         [Validation(Required=false)]
@@ -60,6 +68,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// The type of the database account. Valid values: Admin: the super administrator account. Normal: a general account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserType")]
         [Validation(Required=false)]

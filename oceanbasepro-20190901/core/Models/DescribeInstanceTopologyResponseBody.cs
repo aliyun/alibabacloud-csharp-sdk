@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     /// </summary>
                     [NameInMap("IsPrimaryTenantZone")]
                     [Validation(Required=false)]
-                    public string IsPrimaryTenantZone { get; set; }
+                    public bool? IsPrimaryTenantZone { get; set; }
 
                     /// <summary>
                     /// The server with the highest disk usage.

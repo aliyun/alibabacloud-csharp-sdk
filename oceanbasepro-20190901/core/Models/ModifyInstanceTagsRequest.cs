@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
     public class ModifyInstanceTagsRequest : TeaModel {
         /// <summary>
         /// The tags.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         /// <summary>
         /// You can call this operation to modify the value of the cluster tags.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
