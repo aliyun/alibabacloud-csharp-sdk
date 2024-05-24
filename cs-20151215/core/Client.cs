@@ -898,6 +898,104 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 检查是否授权指定服务角色
+         *
+         * @param request CheckServiceRoleRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckServiceRoleResponse
+         */
+        public CheckServiceRoleResponse CheckServiceRoleWithOptions(CheckServiceRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Roles))
+            {
+                body["roles"] = request.Roles;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckServiceRole",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/ram/check-service-role",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckServiceRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 检查是否授权指定服务角色
+         *
+         * @param request CheckServiceRoleRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckServiceRoleResponse
+         */
+        public async Task<CheckServiceRoleResponse> CheckServiceRoleWithOptionsAsync(CheckServiceRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Roles))
+            {
+                body["roles"] = request.Roles;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckServiceRole",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/ram/check-service-role",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckServiceRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 检查是否授权指定服务角色
+         *
+         * @param request CheckServiceRoleRequest
+         * @return CheckServiceRoleResponse
+         */
+        public CheckServiceRoleResponse CheckServiceRole(CheckServiceRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CheckServiceRoleWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 检查是否授权指定服务角色
+         *
+         * @param request CheckServiceRoleRequest
+         * @return CheckServiceRoleResponse
+         */
+        public async Task<CheckServiceRoleResponse> CheckServiceRoleAsync(CheckServiceRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CheckServiceRoleWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.
          *
          * @param request CreateAutoscalingConfigRequest
@@ -1950,7 +2048,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-         * @summary You can call the CreateClusterNodePool operation to create a node pool for a Container Service for Kubernetes (ACK) cluster.
+         * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&M workload.
          *
          * @param request CreateClusterNodePoolRequest
          * @param headers map
@@ -2026,7 +2124,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-         * @summary You can call the CreateClusterNodePool operation to create a node pool for a Container Service for Kubernetes (ACK) cluster.
+         * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&M workload.
          *
          * @param request CreateClusterNodePoolRequest
          * @param headers map
@@ -2102,7 +2200,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-         * @summary You can call the CreateClusterNodePool operation to create a node pool for a Container Service for Kubernetes (ACK) cluster.
+         * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&M workload.
          *
          * @param request CreateClusterNodePoolRequest
          * @return CreateClusterNodePoolResponse
@@ -2115,7 +2213,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-         * @summary You can call the CreateClusterNodePool operation to create a node pool for a Container Service for Kubernetes (ACK) cluster.
+         * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&M workload.
          *
          * @param request CreateClusterNodePoolRequest
          * @return CreateClusterNodePoolResponse
@@ -13670,9 +13768,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /**
          * @summary Sets the validity period of a kubeconfig file used by a Resource Access Management (RAM) user or RAM role to connect to a Container Service for Kubernetes (ACK) cluster. The validity period ranges from 1 to 876,000 hours. You can call this API operation when you customize configurations by using an Alibaba Cloud account. The default validity period of a kubeconfig file is three years.
          *
-         * @description **
-         * ****
-         * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
+         * @description - You can call this operation only with an Alibaba Cloud account. 
+         * - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
          *
          * @param request UpdateK8sClusterUserConfigExpireRequest
          * @param headers map
@@ -13714,9 +13811,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /**
          * @summary Sets the validity period of a kubeconfig file used by a Resource Access Management (RAM) user or RAM role to connect to a Container Service for Kubernetes (ACK) cluster. The validity period ranges from 1 to 876,000 hours. You can call this API operation when you customize configurations by using an Alibaba Cloud account. The default validity period of a kubeconfig file is three years.
          *
-         * @description **
-         * ****
-         * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
+         * @description - You can call this operation only with an Alibaba Cloud account. 
+         * - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
          *
          * @param request UpdateK8sClusterUserConfigExpireRequest
          * @param headers map
@@ -13758,9 +13854,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /**
          * @summary Sets the validity period of a kubeconfig file used by a Resource Access Management (RAM) user or RAM role to connect to a Container Service for Kubernetes (ACK) cluster. The validity period ranges from 1 to 876,000 hours. You can call this API operation when you customize configurations by using an Alibaba Cloud account. The default validity period of a kubeconfig file is three years.
          *
-         * @description **
-         * ****
-         * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
+         * @description - You can call this operation only with an Alibaba Cloud account. 
+         * - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
          *
          * @param request UpdateK8sClusterUserConfigExpireRequest
          * @return UpdateK8sClusterUserConfigExpireResponse
@@ -13775,9 +13870,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /**
          * @summary Sets the validity period of a kubeconfig file used by a Resource Access Management (RAM) user or RAM role to connect to a Container Service for Kubernetes (ACK) cluster. The validity period ranges from 1 to 876,000 hours. You can call this API operation when you customize configurations by using an Alibaba Cloud account. The default validity period of a kubeconfig file is three years.
          *
-         * @description **
-         * ****
-         * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
+         * @description - You can call this operation only with an Alibaba Cloud account. 
+         * - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
          *
          * @param request UpdateK8sClusterUserConfigExpireRequest
          * @return UpdateK8sClusterUserConfigExpireResponse

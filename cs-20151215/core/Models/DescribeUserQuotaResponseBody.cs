@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? ClusterQuota { get; set; }
 
         /// <summary>
+        /// This parameter is deprecated.
+        /// 
         /// The quota of enhanced edge node pools.
         /// </summary>
         [NameInMap("edge_improved_nodepool_quota")]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota EdgeImprovedNodepoolQuota { get; set; }
         public class DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota : TeaModel {
             /// <summary>
+            /// This parameter is deprecated.
+            /// 
             /// The maximum bandwidth of each enhanced node pool. Unit: Mbit/s.
             /// </summary>
             [NameInMap("bandwidth")]
@@ -52,6 +56,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
+            /// This parameter is deprecated.
+            /// 
             /// The quota of enhanced edge node pools that belong to an Alibaba Cloud account.
             /// </summary>
             [NameInMap("count")]
@@ -59,6 +65,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? Count { get; set; }
 
             /// <summary>
+            /// This parameter is deprecated.
+            /// 
             /// The maximum subscription duration of an enhanced edge node pool. Unit: months.
             /// 
             /// > You can ignore this parameter because enhanced edge node pools are pay-as-you-go resources.
