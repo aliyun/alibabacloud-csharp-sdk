@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ListJobsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("deploymentId")]
         [Validation(Required=false)]
         public string DeploymentId { get; set; }
@@ -20,6 +23,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("sortName")]
+        [Validation(Required=false)]
+        public string SortName { get; set; }
 
     }
 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class DeleteMemberResponse : TeaModel {
+    public class ListEditableNamespaceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DeleteMemberResponseBody Body { get; set; }
+        public ListEditableNamespaceResponseBody Body { get; set; }
 
     }
 

@@ -8,17 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class Member : TeaModel {
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("member")]
+    public class EditableNamespace : TeaModel {
+        [NameInMap("Namespace")]
         [Validation(Required=false)]
-        public string Member_ { get; set; }
+        public string Namespace { get; set; }
 
-        [NameInMap("role")]
+        [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }
+
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

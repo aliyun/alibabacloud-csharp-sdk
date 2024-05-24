@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public BatchResourceSetting BatchResourceSetting { get; set; }
 
+        [NameInMap("createdAt")]
+        [Validation(Required=false)]
+        public string CreatedAt { get; set; }
+
         [NameInMap("creator")]
         [Validation(Required=false)]
         public string Creator { get; set; }
@@ -53,6 +57,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        [NameInMap("localVariables")]
+        [Validation(Required=false)]
+        public List<LocalVariable> LocalVariables { get; set; }
+
         [NameInMap("logging")]
         [Validation(Required=false)]
         public Logging Logging { get; set; }
@@ -60,6 +68,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [NameInMap("metric")]
         [Validation(Required=false)]
         public JobMetric Metric { get; set; }
+
+        [NameInMap("modifiedAt")]
+        [Validation(Required=false)]
+        public string ModifiedAt { get; set; }
 
         [NameInMap("modifier")]
         [Validation(Required=false)]
@@ -96,6 +108,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [NameInMap("userFlinkConf")]
         [Validation(Required=false)]
         public Dictionary<string, object> UserFlinkConf { get; set; }
+
+        [NameInMap("workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class StopJobRequestBody : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("stopStrategy")]
         [Validation(Required=false)]
         public string StopStrategy { get; set; }

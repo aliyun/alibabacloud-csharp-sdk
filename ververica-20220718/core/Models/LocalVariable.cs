@@ -8,17 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class Member : TeaModel {
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("member")]
+    public class LocalVariable : TeaModel {
+        [NameInMap("name")]
         [Validation(Required=false)]
-        public string Member_ { get; set; }
+        public string Name { get; set; }
 
-        [NameInMap("role")]
+        [NameInMap("value")]
         [Validation(Required=false)]
-        public string Role { get; set; }
+        public string Value { get; set; }
 
     }
 
