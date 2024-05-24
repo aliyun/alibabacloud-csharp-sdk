@@ -1,3 +1,7 @@
+2024-05-24 Version: 1.21.8
+- Update API ListApplications: update response param.
+
+
 2024-05-21 Version: 1.21.7
 - Update API CreateApplication: add param BaseAppId.
 - Update API CreateApplication: add param MicroRegistrationConfig.

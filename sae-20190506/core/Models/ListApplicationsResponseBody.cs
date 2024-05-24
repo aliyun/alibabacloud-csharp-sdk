@@ -168,6 +168,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public bool? MseEnabled { get; set; }
 
+                [NameInMap("MseNamespaceId")]
+                [Validation(Required=false)]
+                public string MseNamespaceId { get; set; }
+
                 /// <summary>
                 /// demo-app
                 /// </summary>
