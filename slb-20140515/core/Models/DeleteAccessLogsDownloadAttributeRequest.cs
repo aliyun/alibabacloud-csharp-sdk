@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// *   **LogProject**: the name of the project of Log Service.
         /// *   **LogStore**: the name of the Logstore of Log Service.
         /// *   **LoadBalancerId**: the ID of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LogsDownloadAttributes")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The region ID of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

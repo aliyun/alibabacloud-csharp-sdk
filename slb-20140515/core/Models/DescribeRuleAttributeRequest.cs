@@ -20,7 +20,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The ID of the region where the Server Load Balancer (SLB) instance is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -36,6 +38,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the forwarding rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

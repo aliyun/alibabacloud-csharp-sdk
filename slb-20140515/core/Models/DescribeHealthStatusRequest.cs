@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the Classic Load Balancer (CLB) instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

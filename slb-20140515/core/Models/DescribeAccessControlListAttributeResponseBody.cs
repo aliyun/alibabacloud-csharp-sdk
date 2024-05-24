@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string AclId { get; set; }
 
         /// <summary>
-        /// The ACL name. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of each ACL must be unique within a region. Fuzzy match is supported.
+        /// The ACL name. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (_). The name of each ACL must be unique within a region. Fuzzy match is supported.
         /// </summary>
         [NameInMap("AclName")]
         [Validation(Required=false)]

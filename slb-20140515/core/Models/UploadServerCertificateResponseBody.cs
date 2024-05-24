@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The name of the server certificate.
         /// 
-        /// The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (\_), and hyphens (-).
+        /// The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("ServerCertificateName")]
         [Validation(Required=false)]

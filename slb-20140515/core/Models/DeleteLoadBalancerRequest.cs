@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
     public class DeleteLoadBalancerRequest : TeaModel {
         /// <summary>
         /// The SLB instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The region ID of the SLB instance.
         /// 
-        /// You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

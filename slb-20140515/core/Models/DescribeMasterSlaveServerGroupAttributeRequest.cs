@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
     public class DescribeMasterSlaveServerGroupAttributeRequest : TeaModel {
         /// <summary>
         /// The ID of the primary/secondary server group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MasterSlaveServerGroupId")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The region ID of the Classic Load Balancer (CLB) instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

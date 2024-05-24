@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
         /// The ID of the resource group to which you want to move the resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The region ID of the Classic Load Balancer (CLB) instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The resource ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -59,6 +65,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// *   **loadbalancer**: a CLB instance
         /// *   **certificate**: a certificate
         /// *   **acl**: an access control list (ACL)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

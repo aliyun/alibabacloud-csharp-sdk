@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeVServerGroupsRequest : TeaModel {
+        /// <summary>
+        /// The name of the vServer group.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -35,6 +38,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -51,7 +56,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The region ID of the Classic Load Balancer (CLB) instance.
         /// 
-        /// You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

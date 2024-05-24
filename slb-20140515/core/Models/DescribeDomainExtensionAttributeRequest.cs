@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
     public class DescribeDomainExtensionAttributeRequest : TeaModel {
         /// <summary>
         /// The ID of the additional certificate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainExtensionId")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the region where the Server Load Balancer (SLB) instance is deployed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

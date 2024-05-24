@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The CLB instance name.
         /// 
-        /// The name must be 1 to 80 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+        /// The name must be 1 to 80 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.
         /// 
         /// If you do not specify this parameter, the system automatically assigns a name to the CLB instance.
         /// </summary>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string MasterZoneId { get; set; }
 
         /// <summary>
-        /// The reason for enabling the configuration read-only mode. The reason must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+        /// The reason for enabling the configuration read-only mode. The reason must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).
         /// 
         /// >  This parameter takes effect only when **ModificationProtectionStatus** is set to **ConsoleProtection**.
         /// </summary>
@@ -213,6 +213,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The region ID of the CLB instance.
         /// 
         /// You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

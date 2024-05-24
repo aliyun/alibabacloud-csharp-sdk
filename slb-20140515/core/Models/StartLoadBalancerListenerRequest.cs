@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The listener port of the SLB instance.
         /// 
         /// Valid values: **1 to 65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the SLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -45,7 +49,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The region where the SLB instance is deployed.
         /// 
-        /// You can retrieve the region ID by calling the [DescribeRegions](~~27584~~) operation.
+        /// You can retrieve the region ID by calling the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

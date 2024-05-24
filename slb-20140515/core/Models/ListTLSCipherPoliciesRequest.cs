@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public int? MaxItems { get; set; }
 
         /// <summary>
-        /// The name of the TLS policy. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name of the TLS policy. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -54,7 +54,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

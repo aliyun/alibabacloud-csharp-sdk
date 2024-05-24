@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The domain name that is used for health checks. Valid values:
         /// 
-        /// *   **$\_ip**: The private IP address of the backend server. If the $\_ip parameter is set or the HealthCheckDomain parameter is not set, SLB uses the private IP addresses of backend servers as the domain names for health checks.
+        /// *   **$_ip**: The private IP address of the backend server. If the $_ip parameter is set or the HealthCheckDomain parameter is not set, SLB uses the private IP addresses of backend servers as the domain names for health checks.
         /// *   **domain**: The domain name must be 1 to 80 characters in length. It can contain only letters, digits, periods (.),and hyphens (-).
         /// 
         /// >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string HealthCheckDomain { get; set; }
 
         /// <summary>
-        /// The HTTP status code that indicates a successful health check. Separate multiple HTTP status codes with commas (,). Default value: **http\_2xx**.
+        /// The HTTP status code that indicates a successful health check. Separate multiple HTTP status codes with commas (,). Default value: **http_2xx**.
         /// 
-        /// Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.
+        /// Valid values: **http_2xx**, **http_3xx**, **http_4xx**, and **http_5xx**.
         /// 
         /// >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
         /// </summary>

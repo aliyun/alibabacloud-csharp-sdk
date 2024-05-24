@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
     public class AddListenerWhiteListItemRequest : TeaModel {
         /// <summary>
         /// The frontend port that is used by the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The ID of the region where the Classic Load Balancer (CLB) instance is created.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -64,7 +68,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// 
         /// Separate multiple IP addresses or CIDR blocks with commas (,).
         /// 
-        /// You cannot enter **0.0.0.0** or **0.0.0.0/0**. To disable access control, you can call the [SetListenerAccessControlStatus](~~27599~~) operation to set the value of the **AccessControlStatus** parameter to **close**.
+        /// You cannot enter **0.0.0.0** or **0.0.0.0/0**. To disable access control, you can call the [SetListenerAccessControlStatus](https://help.aliyun.com/document_detail/27599.html) operation to set the value of the **AccessControlStatus** parameter to **close**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceItems")]
         [Validation(Required=false)]

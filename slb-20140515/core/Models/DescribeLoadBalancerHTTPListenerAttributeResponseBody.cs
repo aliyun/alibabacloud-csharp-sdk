@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule> Rule { get; set; }
             public class DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule : TeaModel {
                 /// <summary>
-                /// The endpoint.
+                /// The domain name.
                 /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
@@ -260,14 +260,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// The request path.
+                /// The request URL.
                 /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
                 public string Url { get; set; }
 
                 /// <summary>
-                /// The ID of the server group that is associated with the forwarding rule.
+                /// The ID of the server group specified in the forwarding rule.
                 /// </summary>
                 [NameInMap("VServerGroupId")]
                 [Validation(Required=false)]
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The routing algorithm. Valid values:
         /// 
         /// *   **wrr**: Backend servers that have higher weights receive more requests than backend servers that have lower weights.
-        /// *   \*\* rr\*\*: Requests are sequentially distributed to backend servers.
+        /// *   \\*\\* rr\\*\\*: Requests are sequentially distributed to backend servers.
         /// </summary>
         [NameInMap("Scheduler")]
         [Validation(Required=false)]
@@ -348,14 +348,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeLoadBalancerHTTPListenerAttributeResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// The key of tag N. Valid values of N: **1** to **20**. The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.
+                /// The key of tag N. Valid values of N: **1** to **20**. The tag key cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with `acs:` or `aliyun` or contain `http://` or `https://`.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The value of tag N. Valid values of N: **1** to **20**. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
+                /// The value of tag N. Valid values of N: **1** to **20**. The tag value can be an empty string. The tag value must be 0 to 128 characters in length, and cannot start with `acs:`. It cannot contain `http://` or `https://`.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
@@ -389,6 +389,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string XForwardedFor { get; set; }
 
+        /// <summary>
+        /// Indicates whether the `XForwardedFor_ClientSrcPort` header is used to retrieve the client port. Valid values:
+        /// 
+        /// *   **on**
+        /// *   **off**
+        /// </summary>
         [NameInMap("XForwardedFor_ClientSrcPort")]
         [Validation(Required=false)]
         public string XForwardedFor_ClientSrcPort { get; set; }
@@ -413,6 +419,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string XForwardedFor_SLBIP { get; set; }
 
+        /// <summary>
+        /// Indicates whether the `XForwardedFor_SLBPORT` header is used to retrieve the listener port of the CLB instance. Valid values:
+        /// 
+        /// *   **on**
+        /// *   **off**
+        /// </summary>
         [NameInMap("XForwardedFor_SLBPORT")]
         [Validation(Required=false)]
         public string XForwardedFor_SLBPORT { get; set; }

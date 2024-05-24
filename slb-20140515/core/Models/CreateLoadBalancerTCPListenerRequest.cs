@@ -63,6 +63,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// 
         /// *   **-1**: For a pay-by-data-transfer Internet-facing CLB instance, this value can be set to -1, which specifies unlimited bandwidth.
         /// *   **1** to **5120**: For a pay-by-bandwidth Internet-facing CLB instance, you can specify the maximum bandwidth of each listener. The sum of the maximum bandwidth values that you set for all listeners cannot exceed the maximum bandwidth of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -92,7 +94,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The name of the listener.
         /// 
-        /// The name must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
+        /// The name must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -132,7 +134,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The domain name that you want to use for health checks. Valid values:
         /// 
-        /// *   **$\_ip**: the private IP address of a backend server. If you do not set the HealthCheckDomain parameter or set the parameter to $\_ip, the CLB instance uses the private IP address of each backend server for health checks.
+        /// *   **$_ip**: the private IP address of a backend server. If you do not set the HealthCheckDomain parameter or set the parameter to $_ip, the CLB instance uses the private IP address of each backend server for health checks.
         /// *   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
         /// </summary>
         [NameInMap("HealthCheckDomain")]
@@ -142,10 +144,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The HTTP status code for a successful health check. Separate multiple HTTP status codes with commas (,). Valid values:
         /// 
-        /// *   **http\_2xx**(default)
-        /// *   **http\_3xx**
-        /// *   **http\_4xx**
-        /// *   **http\_5xx**
+        /// *   **http_2xx**(default)
+        /// *   **http_3xx**
+        /// *   **http_4xx**
+        /// *   **http_5xx**
         /// </summary>
         [NameInMap("HealthCheckHttpCode")]
         [Validation(Required=false)]
@@ -193,6 +195,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The frontend port used by the CLB instance.
         /// 
         /// Valid values: **1** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -200,6 +204,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -246,7 +252,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
         /// 
-        /// You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.
+        /// You can query the region ID from the [Regions and zones](https://help.aliyun.com/document_detail/40654.html) list or by calling the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

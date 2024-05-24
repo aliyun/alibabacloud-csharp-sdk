@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The domain name that is used for health checks. Valid values:
         /// 
-        /// *   **$\_ip**: the private IP address of a backend server. If you do not set this parameter or set the parameter to $\_ip, the CLB instance uses the private IP address of each backend server as the domain name for health checks.
+        /// *   **$_ip**: the private IP address of a backend server. If you do not set this parameter or set the parameter to $_ip, the CLB instance uses the private IP address of each backend server as the domain name for health checks.
         /// *   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.),and hyphens (-).
         /// 
         /// >  This parameter takes effect only when the **HealthCheck** parameter is set to **on**.
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The HTTP status code of a successful health check. Separate multiple HTTP status codes with commas (,).
         /// 
-        /// Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.
+        /// Valid values: **http_2xx**, **http_3xx**, **http_4xx**, and **http_5xx**.
         /// 
         /// >  This parameter takes effect only when the **HealthCheck** parameter is set to **on**.
         /// </summary>
@@ -228,6 +228,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The frontend port that is used by the CLB instance.
         /// 
         /// Valid values: **1** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -235,6 +237,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -251,7 +255,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The ID of the region where the CLB instance is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -321,35 +325,35 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The Transport Layer Security (TLS) security policy. Each security policy contains TLS protocol versions and cipher suites available for HTTPS.
         /// 
-        /// *   **tls_cipher_policy\_1\_0**:
+        /// *   **tls_cipher_policy_1_0**:
         /// 
         ///     Supported TLS versions: TLS 1.0, TLS 1.1, and TLS 1.2
         /// 
         ///     Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
         /// 
-        /// *   **tls_cipher_policy\_1\_1**:
+        /// *   **tls_cipher_policy_1_1**:
         /// 
         ///     Supported TLS versions: TLS 1.1 and TLS 1.2
         /// 
         ///     Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
         /// 
-        /// *   **tls_cipher_policy\_1\_2**
+        /// *   **tls_cipher_policy_1_2**
         /// 
         ///     Supported TLS version: TLS 1.2
         /// 
         ///     Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
         /// 
-        /// *   **tls_cipher_policy\_1\_2\_strict**
+        /// *   **tls_cipher_policy_1_2_strict**
         /// 
         ///     Supported TLS version: TLS 1.2
         /// 
         ///     Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
         /// 
-        /// *   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**
+        /// *   **tls_cipher_policy_1_2_strict_with_1_3**
         /// 
         ///     Supported TLS versions: TLS 1.2 and TLS 1.3
         /// 
-        ///     Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+        ///     Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
         /// </summary>
         [NameInMap("TLSCipherPolicy")]
         [Validation(Required=false)]
@@ -393,6 +397,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string XForwardedFor { get; set; }
 
+        /// <summary>
+        /// Specifies whether to use the `XForwardedFor_ClientSrcPort` header to retrieve the client port. Valid values:
+        /// 
+        /// *   **on**
+        /// *   **off**
+        /// </summary>
         [NameInMap("XForwardedFor_ClientSrcPort")]
         [Validation(Required=false)]
         public string XForwardedFor_ClientSrcPort { get; set; }
@@ -417,6 +427,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string XForwardedFor_SLBIP { get; set; }
 
+        /// <summary>
+        /// Specifies whether to use the `XForwardedFor_SLBPORT` header to retrieve the listener port of the CLB instance. Valid values:
+        /// 
+        /// *   **on**
+        /// *   **off**
+        /// </summary>
         [NameInMap("XForwardedFor_SLBPORT")]
         [Validation(Required=false)]
         public string XForwardedFor_SLBPORT { get; set; }

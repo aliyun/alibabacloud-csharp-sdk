@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -38,9 +40,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// *   **slb.s3.medium**
         /// *   **slb.s3.large**
         /// 
-        /// The specifications available vary by region. For more information about the specifications, see [High-performance CLB instance](~~85931~~).
+        /// The specifications available vary by region. For more information about the specifications, see [High-performance CLB instance](https://help.aliyun.com/document_detail/85931.html).
         /// 
         /// > When you switch a shared-resource CLB instance to a high-performance CLB instance, your service may be interrupted for 10 to 30 seconds. We recommend that you modify the specification during off-peak hours or use Alibaba Cloud DNS to schedule your workloads to another CLB instance before you modify the specification.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerSpec")]
         [Validation(Required=false)]
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The region ID of the CLB instance.
         /// 
-        /// You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~27584~~) operation.
+        /// You can query the region ID from the [Regions and zones](https://help.aliyun.com/document_detail/40654.html) list or by calling the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

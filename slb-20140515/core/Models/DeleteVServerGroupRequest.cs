@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the region to which the associated Server Load Balancer (SLB) instance belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -36,6 +38,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The ID of the VServer group to be deleted.
         /// 
         /// >  If the VServer group is in use, it cannot be deleted.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VServerGroupId")]
         [Validation(Required=false)]

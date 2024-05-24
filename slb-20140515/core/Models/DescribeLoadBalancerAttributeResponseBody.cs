@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string MasterZoneId { get; set; }
 
         /// <summary>
-        /// The reason why the configuration read-only mode is enabled. The value is 1 to 80 characters in length. It starts with a letter and can contain digits, periods (.), underscores (\_), and hyphens (-).
+        /// The reason why the configuration read-only mode is enabled. The value is 1 to 80 characters in length. It starts with a letter and can contain digits, periods (.), underscores (_), and hyphens (-).
         /// 
         /// >  This parameter is valid only when **ModificationProtectionStatus** is set to **ConsoleProtection**.
         /// </summary>

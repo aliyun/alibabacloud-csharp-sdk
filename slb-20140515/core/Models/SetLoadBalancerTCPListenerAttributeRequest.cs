@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The name of the listener.
         /// 
-        /// The name must be 1 to 256 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
+        /// The name must be 1 to 256 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The domain name that is used for health checks. You can set this parameter when the TCP listener requires HTTP health checks. If you do not set this parameter, TCP health checks are performed.
         /// 
-        /// *   **$\_ip**: the private IP addresses of the backend servers.
+        /// *   **$_ip**: the private IP addresses of the backend servers.
         /// 
         ///     If you do not set the HealthCheckHost parameter or set the parameter to $SERVER_IP, the CLB instance uses the private IP addresses of backend servers for health checks.
         /// 
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The HTTP status code for a successful health check. Separate multiple HTTP status codes with commas (,).
         /// 
-        /// Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.
+        /// Valid values: **http_2xx**, **http_3xx**, **http_4xx**, and **http_5xx**.
         /// </summary>
         [NameInMap("HealthCheckHttpCode")]
         [Validation(Required=false)]
@@ -184,6 +184,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The frontend port used by the CLB instance.
         /// 
         /// Valid values: **1** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -191,6 +193,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -247,7 +251,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The region ID of the CLB instance.
         /// 
-        /// You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~DescribeRegions~~) operation.
+        /// You can query the region ID from the [Regions and zones](https://help.aliyun.com/document_detail/40654.html) list or by calling the [DescribeRegions](~~DescribeRegions~~) operation.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

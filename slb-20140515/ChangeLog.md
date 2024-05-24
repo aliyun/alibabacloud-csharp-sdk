@@ -1,3 +1,6 @@
+2024-05-24 Version: 2.0.6
+- Generated csharp 2014-05-15 for Slb.
+
 2023-12-14 Version: 2.0.5
 - Generated csharp 2014-05-15 for Slb.
 

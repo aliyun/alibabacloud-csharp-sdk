@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The region where the Server Load Balancer (SLB) instance is created.
         /// 
-        /// You can call the [DescribeRegions](~~27584~~) operation to query region IDs.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query region IDs.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -36,6 +36,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the server certificate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerCertificateId")]
         [Validation(Required=false)]

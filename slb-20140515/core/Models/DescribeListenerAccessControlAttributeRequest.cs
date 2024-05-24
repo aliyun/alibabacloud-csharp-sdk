@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The frontend port that is used by the CLB instance.
         /// 
         /// Valid values: **1 to 65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The CLB instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -45,7 +49,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The region where the Classic Load Balancer (CLB) instance is created.
         /// 
-        /// You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.
+        /// You can query the region ID from the [Regions and zones](https://help.aliyun.com/document_detail/40654.html) list or by calling the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

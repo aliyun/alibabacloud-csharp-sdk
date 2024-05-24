@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The region ID of the Classic Load Balancer (CLB) instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the vServer group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VServerGroupId")]
         [Validation(Required=false)]

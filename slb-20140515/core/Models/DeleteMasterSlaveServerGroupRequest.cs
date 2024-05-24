@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The ID of the active/standby server group to be deleted.
         /// 
         /// >  An active/standby server group in use cannot be deleted.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MasterSlaveServerGroupId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the region to which the associated Server Load Balancer (SLB) instance belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

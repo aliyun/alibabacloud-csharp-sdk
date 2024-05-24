@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The name of this action.
         /// 
         /// Value: **UploadCACertificate**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CACertificate")]
         [Validation(Required=false)]
@@ -21,7 +23,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The ID of the region to which the CA certificate belongs.
         /// 
-        /// To query the region ID, call [DescribeRegions](~~27584~~).
+        /// To query the region ID, call [DescribeRegions](https://help.aliyun.com/document_detail/27584.html).
         /// </summary>
         [NameInMap("CACertificateName")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The region id.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

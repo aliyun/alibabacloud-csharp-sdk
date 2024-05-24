@@ -11,13 +11,15 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
     public class SetLoadBalancerModificationProtectionRequest : TeaModel {
         /// <summary>
         /// The ID of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// The reason why the configuration read-only mode is enabled. The value must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+        /// The reason why the configuration read-only mode is enabled. The value must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).
         /// 
         /// >  This parameter is valid only if the **ModificationProtectionStatus** parameter is set to **ConsoleProtection**.
         /// </summary>
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// *   **ConsoleProtection**: enables the configuration read-only mode.
         /// 
         /// >  If you set this parameter to **ConsoleProtection**, you cannot use the CLB console to modify instance configurations. However, you can call API operations to modify instance configurations.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ModificationProtectionStatus")]
         [Validation(Required=false)]
@@ -48,7 +52,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The region ID of the CLB instance.
         /// 
-        /// You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

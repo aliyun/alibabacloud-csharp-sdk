@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The domain name that is used for health checks. Valid values:
         /// 
-        /// *   **$\_ip**: the private IP addresses of backend servers. If you do not set the HealthCheckDomain parameter or set the parameter to $\_ip, the CLB instance uses the private IP address of each backend server for health checks.
+        /// *   **$_ip**: the private IP addresses of backend servers. If you do not set the HealthCheckDomain parameter or set the parameter to $_ip, the CLB instance uses the private IP address of each backend server for health checks.
         /// *   **domain**: The domain name is 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
         /// </summary>
         [NameInMap("HealthCheckDomain")]

@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The metering method of the instance after the change.
         /// 
         /// Valid value: **PayByCLCU**. Only pay-by-LCU is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -66,7 +70,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The region ID of the CLB instance.
         /// 
-        /// You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

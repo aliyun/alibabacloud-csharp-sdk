@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The region where the CLB instances are deployed.
         /// 
-        /// You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.
         /// 
         /// >  If the endpoint of the region is slb.aliyuncs.com, you must specify the `RegionId` parameter.
         /// </summary>

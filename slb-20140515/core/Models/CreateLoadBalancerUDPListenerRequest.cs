@@ -60,6 +60,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:
         /// 
         /// **-1**: For a pay-by-data-transfer Internet-facing CLB instance, you can set this parameter to **-1**. This way, the bandwidth of the listener is unlimited.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The name of the listener.
         /// 
-        /// The name must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
+        /// The name must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -119,6 +121,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The frontend port used by the CLB instance.
         /// 
         /// Valid values: **1** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -126,6 +130,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// Specify whether to enable or disable deletion protection for the SLB instance.
         /// 
         /// Valid values: **on and off**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DeleteProtection")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the SLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -36,7 +40,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The region where the SLB instance is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~27584~~) operation to query region IDs.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query region IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

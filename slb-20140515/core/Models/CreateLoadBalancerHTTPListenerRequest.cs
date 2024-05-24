@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:
         /// 
-        /// *   **-1**: If you set the value to -1, the bandwidth of the listener is unlimited.
-        /// *   **1** to **5120**: The sum of bandwidth values that you specify for all listeners of the CLB instance cannot exceed the maximum bandwidth of the CLB instance.
+        /// *   **-1**: If -1 is returned, the bandwidth of the listener is unlimited.
+        /// *   **1** to **5120**: The sum of the maximum bandwidth that you specify for all listeners of the CLB instance cannot exceed the maximum bandwidth of the CLB instance.
         /// 
         /// >  This parameter is available only in the Chinese mainland.
         /// </summary>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The name of the listener.
         /// 
-        /// The name must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
+        /// The name must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public int? ForwardPort { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable `Gzip` compression to compress specific types of files. Valid values:
+        /// Specifies whether to enable `GZIP` compression to compress specific types of files. Valid values:
         /// 
-        /// *   **on** (default): yes
-        /// *   **off**: no
+        /// *   **on** (default)
+        /// *   **off**
         /// </summary>
         [NameInMap("Gzip")]
         [Validation(Required=false)]
@@ -121,6 +121,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// 
         /// *   **on**: yes
         /// *   **off**: no
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HealthCheck")]
         [Validation(Required=false)]
@@ -140,7 +142,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The domain name that is used for health checks. Valid values:
         /// 
-        /// *   **$\_ip**: the private IP address of a backend server. If you do not set the HealthCheckDomain parameter or set the parameter to $\_ip, the CLB instance uses the private IP address of each backend server for health checks.
+        /// *   **$_ip**: the private IP address of a backend server. If you do not set the HealthCheckDomain parameter or set the parameter to $_ip, the CLB instance uses the private IP address of each backend server for health checks.
         /// *   **domain**: The domain name must be 1 to 80 characters in length and can contain letters, digits, periods (.), and hyphens (-).
         /// 
         /// >  This parameter takes effect only if the **HealthCheck** parameter is set to **on**.
@@ -152,7 +154,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The HTTP status code for a successful health check. Separate multiple HTTP status codes with commas (,).
         /// 
-        /// Valid values: **http\_2xx** (default), **http\_3xx**, **http\_4xx**, and **http\_5xx**.
+        /// Valid values: **http_2xx** (default), **http_3xx**, **http_4xx**, and **http_5xx**.
         /// 
         /// >  This parameter takes effect only if the **HealthCheck** parameter is set to **on**.
         /// </summary>
@@ -240,6 +242,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The frontend port that is used by the CLB instance.
         /// 
         /// Valid values: **1** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -247,6 +251,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// The ID of the CLB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -263,7 +269,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// The ID of the region where the CLB instance is deployed.
         /// 
-        /// You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~27584~~) operation.
+        /// You can query the region ID from the [Regions and zones](https://help.aliyun.com/document_detail/40654.html) list or by calling the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -303,6 +309,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// 
         /// *   **on**: yes
         /// *   **off** (default): no
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StickySession")]
         [Validation(Required=false)]
@@ -373,21 +381,27 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// Specifies whether to use the `X-Forwarded-For` header to retrieve client IP addresses. Valid values:
         /// 
-        /// *   **on** (default): yes
-        /// *   **off**: no
+        /// *   **on** (default)
+        /// *   **off**
         /// </summary>
         [NameInMap("XForwardedFor")]
         [Validation(Required=false)]
         public string XForwardedFor { get; set; }
 
+        /// <summary>
+        /// Specifies whether to use the `XForwardedFor_ClientSrcPort` header to retrieve the client port. Valid values:
+        /// 
+        /// *   **on**
+        /// *   **off**
+        /// </summary>
         [NameInMap("XForwardedFor_ClientSrcPort")]
         [Validation(Required=false)]
         public string XForwardedFor_ClientSrcPort { get; set; }
 
         /// <summary>
-        /// Specifies whether to use the `SLB-ID` header to retrieve the ID of the CLB instance. Valid values:
+        /// Indicates whether the `SLB-ID` header is used to retrieve the ID of the CLB instance. Valid values:
         /// 
-        /// *   **on**: yes
+        /// *   **on**
         /// *   **off** (default): no
         /// </summary>
         [NameInMap("XForwardedFor_SLBID")]
@@ -395,23 +409,29 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string XForwardedFor_SLBID { get; set; }
 
         /// <summary>
-        /// Specifies whether to use the `SLB-IP` header to retrieve the virtual IP address (VIP) of the client. Valid values:
+        /// Indicates whether the `SLB-IP` header is used to retrieve the virtual IP address (VIP) requested by the client. Valid values:
         /// 
-        /// *   **on**: yes
+        /// *   **on**
         /// *   **off** (default): no
         /// </summary>
         [NameInMap("XForwardedFor_SLBIP")]
         [Validation(Required=false)]
         public string XForwardedFor_SLBIP { get; set; }
 
+        /// <summary>
+        /// Specifies whether to use the `XForwardedFor_SLBPORT` header to retrieve the listener port of the CLB instance. Valid values:
+        /// 
+        /// *   **on**
+        /// *   **off**
+        /// </summary>
         [NameInMap("XForwardedFor_SLBPORT")]
         [Validation(Required=false)]
         public string XForwardedFor_SLBPORT { get; set; }
 
         /// <summary>
-        /// Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listening protocol. Valid values:
+        /// Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol. Valid values:
         /// 
-        /// *   **on**: yes
+        /// *   **on**
         /// *   **off** (default): no
         /// </summary>
         [NameInMap("XForwardedFor_proto")]
