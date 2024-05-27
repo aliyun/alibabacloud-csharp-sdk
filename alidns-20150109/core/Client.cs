@@ -3946,6 +3946,106 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
+         * @param request DescribeCloudGtmAddressPoolRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCloudGtmAddressPoolResponse
+         */
+        public DescribeCloudGtmAddressPoolResponse DescribeCloudGtmAddressPoolWithOptions(DescribeCloudGtmAddressPoolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressPoolId))
+            {
+                query["AddressPoolId"] = request.AddressPoolId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCloudGtmAddressPool",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCloudGtmAddressPoolResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeCloudGtmAddressPoolRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCloudGtmAddressPoolResponse
+         */
+        public async Task<DescribeCloudGtmAddressPoolResponse> DescribeCloudGtmAddressPoolWithOptionsAsync(DescribeCloudGtmAddressPoolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressPoolId))
+            {
+                query["AddressPoolId"] = request.AddressPoolId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCloudGtmAddressPool",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCloudGtmAddressPoolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeCloudGtmAddressPoolRequest
+         * @return DescribeCloudGtmAddressPoolResponse
+         */
+        public DescribeCloudGtmAddressPoolResponse DescribeCloudGtmAddressPool(DescribeCloudGtmAddressPoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCloudGtmAddressPoolWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request DescribeCloudGtmAddressPoolRequest
+         * @return DescribeCloudGtmAddressPoolResponse
+         */
+        public async Task<DescribeCloudGtmAddressPoolResponse> DescribeCloudGtmAddressPoolAsync(DescribeCloudGtmAddressPoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCloudGtmAddressPoolWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries a custom line.
          *
          * @param request DescribeCustomLineRequest
