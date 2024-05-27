@@ -8,33 +8,33 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
-    public class BatchKillProcessListRequest : TeaModel {
+    public class ModifyTagValueNameRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// The name of the tag group.
         /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("Key")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string Key { get; set; }
 
         /// <summary>
-        /// The list of sessions to close.
+        /// The new name of the tag.
         /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("SessionList")]
+        [NameInMap("NewValue")]
         [Validation(Required=false)]
-        public string SessionList { get; set; }
+        public string NewValue { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// The name of the tag.
         /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("TenantId")]
+        [NameInMap("Value")]
         [Validation(Required=false)]
-        public string TenantId { get; set; }
+        public string Value { get; set; }
 
     }
 

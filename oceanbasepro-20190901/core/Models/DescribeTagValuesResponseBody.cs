@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
-    public class DescribeInstanceTagsRequest : TeaModel {
+    public class DescribeTagValuesResponseBody : TeaModel {
         /// <summary>
-        /// The list of cluster IDs.
+        /// The mappings between tag groups and tags.
         /// </summary>
-        [NameInMap("InstanceIds")]
+        [NameInMap("Map")]
         [Validation(Required=false)]
-        public string InstanceIds { get; set; }
+        public string Map { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The ID of the request.
         /// </summary>
-        [NameInMap("Tags")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Tags { get; set; }
+        public string RequestId { get; set; }
 
     }
 

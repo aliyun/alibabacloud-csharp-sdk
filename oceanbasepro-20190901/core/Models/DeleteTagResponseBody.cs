@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
-    public class DescribeInstanceTagsRequest : TeaModel {
+    public class DeleteTagResponseBody : TeaModel {
         /// <summary>
-        /// The list of cluster IDs.
+        /// The tag group deletion result.
         /// </summary>
-        [NameInMap("InstanceIds")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string InstanceIds { get; set; }
+        public string Message { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The ID of the request.
         /// </summary>
-        [NameInMap("Tags")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Tags { get; set; }
+        public string RequestId { get; set; }
 
     }
 

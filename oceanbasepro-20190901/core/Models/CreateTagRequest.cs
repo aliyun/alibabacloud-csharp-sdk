@@ -8,20 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
-    public class DescribeInstanceTagsRequest : TeaModel {
+    public class CreateTagRequest : TeaModel {
         /// <summary>
-        /// The list of cluster IDs.
+        /// The identifier of the client.
         /// </summary>
-        [NameInMap("InstanceIds")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string InstanceIds { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The name of the tag group.
+        /// 
+        /// This parameter is required.
         /// </summary>
-        [NameInMap("Tags")]
+        [NameInMap("Key")]
         [Validation(Required=false)]
-        public string Tags { get; set; }
+        public string Key { get; set; }
 
     }
 

@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary BatchKillProcessList
+         * @summary You can call this operation to close sessions in batches. Please note that this operation is executed asynchronously. After calling this operation, you need to verify it by calling DescribeProcessStatsComposition.
          *
          * @param request BatchKillProcessListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary BatchKillProcessList
+         * @summary You can call this operation to close sessions in batches. Please note that this operation is executed asynchronously. After calling this operation, you need to verify it by calling DescribeProcessStatsComposition.
          *
          * @param request BatchKillProcessListRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary BatchKillProcessList
+         * @summary You can call this operation to close sessions in batches. Please note that this operation is executed asynchronously. After calling this operation, you need to verify it by calling DescribeProcessStatsComposition.
          *
          * @param request BatchKillProcessListRequest
          * @return BatchKillProcessListResponse
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary BatchKillProcessList
+         * @summary You can call this operation to close sessions in batches. Please note that this operation is executed asynchronously. After calling this operation, you need to verify it by calling DescribeProcessStatsComposition.
          *
          * @param request BatchKillProcessListRequest
          * @return BatchKillProcessListResponse
@@ -2026,6 +2026,206 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
+         * @summary You can call this operation to create a tag group.
+         *
+         * @param request CreateTagRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTagResponse
+         */
+        public CreateTagResponse CreateTagWithOptions(CreateTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTag",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call this operation to create a tag group.
+         *
+         * @param request CreateTagRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTagResponse
+         */
+        public async Task<CreateTagResponse> CreateTagWithOptionsAsync(CreateTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTag",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call this operation to create a tag group.
+         *
+         * @param request CreateTagRequest
+         * @return CreateTagResponse
+         */
+        public CreateTagResponse CreateTag(CreateTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTagWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary You can call this operation to create a tag group.
+         *
+         * @param request CreateTagRequest
+         * @return CreateTagResponse
+         */
+        public async Task<CreateTagResponse> CreateTagAsync(CreateTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTagWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @param request CreateTagValueRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTagValueResponse
+         */
+        public CreateTagValueResponse CreateTagValueWithOptions(CreateTagValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                body["Value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTagValue",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTagValueResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request CreateTagValueRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTagValueResponse
+         */
+        public async Task<CreateTagValueResponse> CreateTagValueWithOptionsAsync(CreateTagValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                body["Value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTagValue",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTagValueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request CreateTagValueRequest
+         * @return CreateTagValueResponse
+         */
+        public CreateTagValueResponse CreateTagValue(CreateTagValueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTagValueWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request CreateTagValueRequest
+         * @return CreateTagValueResponse
+         */
+        public async Task<CreateTagValueResponse> CreateTagValueAsync(CreateTagValueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTagValueWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary You can call this operation to create a tenant.
          *
          * @param tmpReq CreateTenantRequest
@@ -3151,6 +3351,198 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSecurityIpGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary You can call this operation to delete a tag group.
+         *
+         * @param request DeleteTagRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteTagResponse
+         */
+        public DeleteTagResponse DeleteTagWithOptions(DeleteTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTag",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call this operation to delete a tag group.
+         *
+         * @param request DeleteTagRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteTagResponse
+         */
+        public async Task<DeleteTagResponse> DeleteTagWithOptionsAsync(DeleteTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTag",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call this operation to delete a tag group.
+         *
+         * @param request DeleteTagRequest
+         * @return DeleteTagResponse
+         */
+        public DeleteTagResponse DeleteTag(DeleteTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteTagWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary You can call this operation to delete a tag group.
+         *
+         * @param request DeleteTagRequest
+         * @return DeleteTagResponse
+         */
+        public async Task<DeleteTagResponse> DeleteTagAsync(DeleteTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteTagWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary You can call this operation to delete a tag from a tag group.
+         *
+         * @param request DeleteTagValueRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteTagValueResponse
+         */
+        public DeleteTagValueResponse DeleteTagValueWithOptions(DeleteTagValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                body["Value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTagValue",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTagValueResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call this operation to delete a tag from a tag group.
+         *
+         * @param request DeleteTagValueRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteTagValueResponse
+         */
+        public async Task<DeleteTagValueResponse> DeleteTagValueWithOptionsAsync(DeleteTagValueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                body["Value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTagValue",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTagValueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call this operation to delete a tag from a tag group.
+         *
+         * @param request DeleteTagValueRequest
+         * @return DeleteTagValueResponse
+         */
+        public DeleteTagValueResponse DeleteTagValue(DeleteTagValueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteTagValueWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary You can call this operation to delete a tag from a tag group.
+         *
+         * @param request DeleteTagValueRequest
+         * @return DeleteTagValueResponse
+         */
+        public async Task<DeleteTagValueResponse> DeleteTagValueAsync(DeleteTagValueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteTagValueWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -5038,7 +5430,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary The tag of the resource.
+         * @summary You can call this operation to query the tags of clusters.
          *
          * @param request DescribeInstanceTagsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5076,7 +5468,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary The tag of the resource.
+         * @summary You can call this operation to query the tags of clusters.
          *
          * @param request DescribeInstanceTagsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5114,7 +5506,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary The tag of the resource.
+         * @summary You can call this operation to query the tags of clusters.
          *
          * @param request DescribeInstanceTagsRequest
          * @return DescribeInstanceTagsResponse
@@ -5126,7 +5518,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary The tag of the resource.
+         * @summary You can call this operation to query the tags of clusters.
          *
          * @param request DescribeInstanceTagsRequest
          * @return DescribeInstanceTagsResponse
@@ -7270,7 +7662,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary DescribeProcessStatsComposition
+         * @summary You can call this operation to query session information.
          *
          * @param request DescribeProcessStatsCompositionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7332,7 +7724,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary DescribeProcessStatsComposition
+         * @summary You can call this operation to query session information.
          *
          * @param request DescribeProcessStatsCompositionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -7394,7 +7786,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary DescribeProcessStatsComposition
+         * @summary You can call this operation to query session information.
          *
          * @param request DescribeProcessStatsCompositionRequest
          * @return DescribeProcessStatsCompositionResponse
@@ -7406,7 +7798,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary DescribeProcessStatsComposition
+         * @summary You can call this operation to query session information.
          *
          * @param request DescribeProcessStatsCompositionRequest
          * @return DescribeProcessStatsCompositionResponse
@@ -9099,6 +9491,98 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlowSQLListWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary You can call this operation to query tags.
+         *
+         * @param request DescribeTagValuesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTagValuesResponse
+         */
+        public DescribeTagValuesResponse DescribeTagValuesWithOptions(DescribeTagValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTagValues",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTagValuesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call this operation to query tags.
+         *
+         * @param request DescribeTagValuesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTagValuesResponse
+         */
+        public async Task<DescribeTagValuesResponse> DescribeTagValuesWithOptionsAsync(DescribeTagValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTagValues",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTagValuesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call this operation to query tags.
+         *
+         * @param request DescribeTagValuesRequest
+         * @return DescribeTagValuesResponse
+         */
+        public DescribeTagValuesResponse DescribeTagValues(DescribeTagValuesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTagValuesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary You can call this operation to query tags.
+         *
+         * @param request DescribeTagValuesRequest
+         * @return DescribeTagValuesResponse
+         */
+        public async Task<DescribeTagValuesResponse> DescribeTagValuesAsync(DescribeTagValuesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTagValuesWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -12679,6 +13163,206 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySecurityIpsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @param request ModifyTagNameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyTagNameResponse
+         */
+        public ModifyTagNameResponse ModifyTagNameWithOptions(ModifyTagNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewKey))
+            {
+                body["NewKey"] = request.NewKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTagName",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTagNameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request ModifyTagNameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyTagNameResponse
+         */
+        public async Task<ModifyTagNameResponse> ModifyTagNameWithOptionsAsync(ModifyTagNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewKey))
+            {
+                body["NewKey"] = request.NewKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTagName",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTagNameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request ModifyTagNameRequest
+         * @return ModifyTagNameResponse
+         */
+        public ModifyTagNameResponse ModifyTagName(ModifyTagNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyTagNameWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request ModifyTagNameRequest
+         * @return ModifyTagNameResponse
+         */
+        public async Task<ModifyTagNameResponse> ModifyTagNameAsync(ModifyTagNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyTagNameWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary You can call this operation to rename a tag.
+         *
+         * @param request ModifyTagValueNameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyTagValueNameResponse
+         */
+        public ModifyTagValueNameResponse ModifyTagValueNameWithOptions(ModifyTagValueNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewValue))
+            {
+                body["NewValue"] = request.NewValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                body["Value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTagValueName",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTagValueNameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call this operation to rename a tag.
+         *
+         * @param request ModifyTagValueNameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyTagValueNameResponse
+         */
+        public async Task<ModifyTagValueNameResponse> ModifyTagValueNameWithOptionsAsync(ModifyTagValueNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewValue))
+            {
+                body["NewValue"] = request.NewValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                body["Value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTagValueName",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTagValueNameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call this operation to rename a tag.
+         *
+         * @param request ModifyTagValueNameRequest
+         * @return ModifyTagValueNameResponse
+         */
+        public ModifyTagValueNameResponse ModifyTagValueName(ModifyTagValueNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyTagValueNameWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary You can call this operation to rename a tag.
+         *
+         * @param request ModifyTagValueNameRequest
+         * @return ModifyTagValueNameResponse
+         */
+        public async Task<ModifyTagValueNameResponse> ModifyTagValueNameAsync(ModifyTagValueNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyTagValueNameWithOptionsAsync(request, runtime);
         }
 
         /**
