@@ -140,6 +140,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public string BodyFormat { get; set; }
 
+            [NameInMap("EscapePathParam")]
+            [Validation(Required=false)]
+            public bool? EscapePathParam { get; set; }
+
             /// <summary>
             /// The description of the request body.
             /// </summary>
