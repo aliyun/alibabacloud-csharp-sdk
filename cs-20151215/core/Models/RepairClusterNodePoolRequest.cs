@@ -20,6 +20,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public List<string> Nodes { get; set; }
 
+        [NameInMap("operations")]
+        [Validation(Required=false)]
+        public List<RepairClusterNodePoolRequestOperations> Operations { get; set; }
+        public class RepairClusterNodePoolRequestOperations : TeaModel {
+            [NameInMap("args")]
+            [Validation(Required=false)]
+            public List<string> Args { get; set; }
+
+            [NameInMap("operation_id")]
+            [Validation(Required=false)]
+            public string OperationId { get; set; }
+
+        }
+
     }
 
 }
