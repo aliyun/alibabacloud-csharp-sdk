@@ -33,6 +33,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string NatGatewayName { get; set; }
 
+            [NameInMap("NatRouteEntryList")]
+            [Validation(Required=false)]
+            public List<DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList> NatRouteEntryList { get; set; }
+            public class DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList : TeaModel {
+                [NameInMap("DestinationCidr")]
+                [Validation(Required=false)]
+                public string DestinationCidr { get; set; }
+
+                [NameInMap("NextHopId")]
+                [Validation(Required=false)]
+                public string NextHopId { get; set; }
+
+                [NameInMap("NextHopType")]
+                [Validation(Required=false)]
+                public string NextHopType { get; set; }
+
+                [NameInMap("RouteTableId")]
+                [Validation(Required=false)]
+                public string RouteTableId { get; set; }
+
+            }
+
             [NameInMap("ProxyId")]
             [Validation(Required=false)]
             public string ProxyId { get; set; }

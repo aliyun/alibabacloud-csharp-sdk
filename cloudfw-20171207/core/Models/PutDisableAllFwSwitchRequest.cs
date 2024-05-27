@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The natural language of the request and response. Valid values:
+        /// The language of the content within the request and response. Valid values: Valid values:
         /// 
-        /// *   **zh**: Chinese (default)
+        /// *   **zh** (default): Chinese
         /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
