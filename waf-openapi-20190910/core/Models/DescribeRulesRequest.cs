@@ -59,6 +59,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RuleGroupId")]
         [Validation(Required=false)]
         public long? RuleGroupId { get; set; }
