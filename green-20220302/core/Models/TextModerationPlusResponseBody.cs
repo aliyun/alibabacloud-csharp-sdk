@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public string Answer { get; set; }
 
+                [NameInMap("HitLabel")]
+                [Validation(Required=false)]
+                public string HitLabel { get; set; }
+
+                [NameInMap("HitLibName")]
+                [Validation(Required=false)]
+                public string HitLibName { get; set; }
+
             }
 
             [NameInMap("Result")]
