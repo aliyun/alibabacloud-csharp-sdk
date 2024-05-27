@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string BizType { get; set; }
 
+            [NameInMap("BusinessStatus")]
+            [Validation(Required=false)]
+            public string BusinessStatus { get; set; }
+
             /// <summary>
             /// The time when the IP address pool was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
             /// </summary>

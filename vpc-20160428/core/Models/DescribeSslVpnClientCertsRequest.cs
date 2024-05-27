@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// The ID of the resource group to which the SSL client certificate belongs.
         /// 
         /// The SSL client certificate is the same as the resource group of the SSL server associated with it.
-        /// You can call the [DescribeSslVpnServers](https://help.aliyun.com/document_detail/2526933.html) operation to query the ID of the resource group to which the SSL server belongs.
+        /// You can call the [DescribeSslVpnServers](https://help.aliyun.com/document_detail/2794078.html) operation to query the ID of the resource group to which the SSL server belongs.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
