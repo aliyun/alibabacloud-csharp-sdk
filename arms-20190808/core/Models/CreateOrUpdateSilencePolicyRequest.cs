@@ -54,6 +54,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
+
     }
 
 }

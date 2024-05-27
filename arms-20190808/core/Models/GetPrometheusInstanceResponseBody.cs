@@ -108,6 +108,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string PushGatewayIntraUrl { get; set; }
 
+            [NameInMap("ReadOnly")]
+            [Validation(Required=false)]
+            public bool? ReadOnly { get; set; }
+
             /// <summary>
             /// The region ID.
             /// </summary>
