@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public string NotifyStrategy { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SubscriptionName")]
         [Validation(Required=false)]
         public string SubscriptionName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TopicName")]
         [Validation(Required=false)]
         public string TopicName { get; set; }

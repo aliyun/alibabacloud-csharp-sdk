@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class DeleteQueueRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]
         public string QueueName { get; set; }

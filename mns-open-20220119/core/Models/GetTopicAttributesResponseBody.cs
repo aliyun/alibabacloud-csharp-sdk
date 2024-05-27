@@ -41,6 +41,20 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             [Validation(Required=false)]
             public long? MessageRetentionPeriod { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetTopicAttributesResponseBodyDataTags> Tags { get; set; }
+            public class GetTopicAttributesResponseBodyDataTags : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
             [NameInMap("TopicName")]
             [Validation(Required=false)]
             public string TopicName { get; set; }

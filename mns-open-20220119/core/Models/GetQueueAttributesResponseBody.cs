@@ -61,6 +61,20 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             [Validation(Required=false)]
             public string QueueName { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetQueueAttributesResponseBodyDataTags> Tags { get; set; }
+            public class GetQueueAttributesResponseBodyDataTags : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
             [NameInMap("VisibilityTimeout")]
             [Validation(Required=false)]
             public long? VisibilityTimeout { get; set; }

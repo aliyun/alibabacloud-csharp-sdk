@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public long? PollingWaitSeconds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]
         public string QueueName { get; set; }
