@@ -8743,6 +8743,130 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @param request ImportCorpNumbersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ImportCorpNumbersResponse
+         */
+        public ImportCorpNumbersResponse ImportCorpNumbersWithOptions(ImportCorpNumbersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CorpName))
+            {
+                query["CorpName"] = request.CorpName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberList))
+            {
+                query["NumberList"] = request.NumberList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Provider))
+            {
+                query["Provider"] = request.Provider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Province))
+            {
+                query["Province"] = request.Province;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
+            {
+                query["TagList"] = request.TagList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportCorpNumbers",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportCorpNumbersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request ImportCorpNumbersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ImportCorpNumbersResponse
+         */
+        public async Task<ImportCorpNumbersResponse> ImportCorpNumbersWithOptionsAsync(ImportCorpNumbersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CorpName))
+            {
+                query["CorpName"] = request.CorpName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberList))
+            {
+                query["NumberList"] = request.NumberList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Provider))
+            {
+                query["Provider"] = request.Provider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Province))
+            {
+                query["Province"] = request.Province;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
+            {
+                query["TagList"] = request.TagList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportCorpNumbers",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportCorpNumbersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request ImportCorpNumbersRequest
+         * @return ImportCorpNumbersResponse
+         */
+        public ImportCorpNumbersResponse ImportCorpNumbers(ImportCorpNumbersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportCorpNumbersWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request ImportCorpNumbersRequest
+         * @return ImportCorpNumbersResponse
+         */
+        public async Task<ImportCorpNumbersResponse> ImportCorpNumbersAsync(ImportCorpNumbersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportCorpNumbersWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @deprecated OpenAPI ImportCustomCallTagging is deprecated, please use CCC::2020-07-01::ImportCustomCallTaggings instead.
          *
          * @summary 文件导入呼入控制号码
