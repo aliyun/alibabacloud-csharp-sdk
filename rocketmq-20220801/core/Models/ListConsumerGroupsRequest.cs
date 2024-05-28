@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
         /// <summary>
         /// The number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
         /// <summary>
         /// The number of entries to return on each page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]

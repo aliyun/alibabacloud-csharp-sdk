@@ -9,14 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class UpdateInstanceRequest : TeaModel {
+        /// <summary>
+        /// The access control list for the instance.
+        /// </summary>
         [NameInMap("aclInfo")]
         [Validation(Required=false)]
         public UpdateInstanceRequestAclInfo AclInfo { get; set; }
         public class UpdateInstanceRequestAclInfo : TeaModel {
+            /// <summary>
+            /// The authentication type of the instance.
+            /// </summary>
             [NameInMap("aclTypes")]
             [Validation(Required=false)]
             public List<string> AclTypes { get; set; }
 
+            /// <summary>
+            /// Indicates whether the authentication-free in VPCs feature is enabled.
+            /// Indicates whether the authentication-free in VPCs feature is enabled.
+            /// Valid values:
+            /// - true
+            /// - false
+            /// </summary>
             [NameInMap("defaultVpcAuthFree")]
             [Validation(Required=false)]
             public bool? DefaultVpcAuthFree { get; set; }
@@ -73,9 +86,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             /// *   true
             /// *   false
             /// 
-            /// After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see [Computing fees](~~427237~~).
+            /// After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see [Computing fees](https://help.aliyun.com/document_detail/427237.html).
             /// 
-            /// >  The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance editions](~~444715~~).
+            /// >  The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance editions](https://help.aliyun.com/document_detail/444715.html).
             /// </summary>
             [NameInMap("autoScaling")]
             [Validation(Required=false)]
@@ -84,9 +97,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             /// <summary>
             /// The retention period of messages. Unit: hours.
             /// 
-            /// For information about the valid values of this parameter, see the "Limits on resource quotas" section of the [Limits](~~440347~~) topic.
+            /// For information about the valid values of this parameter, see the "Limits on resource quotas" section of the [Limits](https://help.aliyun.com/document_detail/440347.html) topic.
             /// 
-            /// ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see [Storage fees](~~427238~~).
+            /// ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see [Storage fees](https://help.aliyun.com/document_detail/427238.html).
             /// </summary>
             [NameInMap("messageRetentionTime")]
             [Validation(Required=false)]

@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public List<ListConsumerGroupSubscriptionsResponseBodyData> Data { get; set; }
         public class ListConsumerGroupSubscriptionsResponseBodyData : TeaModel {
+            [NameInMap("consistency")]
+            [Validation(Required=false)]
+            public bool? Consistency { get; set; }
+
             /// <summary>
             /// The consumer group ID.
             /// </summary>

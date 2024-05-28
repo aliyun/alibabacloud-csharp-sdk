@@ -47,13 +47,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public GetInstanceResponseBodyDataAclInfo AclInfo { get; set; }
             public class GetInstanceResponseBodyDataAclInfo : TeaModel {
                 /// <summary>
-                /// The authentication types of the instance. Deprecated, it is recommended to use the aclTypes field.
+                /// The authentication type of the instance. This parameter is no longer in use. We recommend that you configure aclTypes.
                 /// 
                 /// Valid values:
                 /// 
-                /// default: intelligent authentication
+                /// - default: intelligent identity authentication
                 /// 
-                /// apache_acl: apache acl authentication
+                /// - apache_acl:access control list (ACL) identity authentication**
                 /// </summary>
                 [NameInMap("aclType")]
                 [Validation(Required=false)]
@@ -62,19 +62,31 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
                 /// <summary>
                 /// The authentication types of the instance.
-                /// 
-                /// Valid values:
-                /// 
-                /// default: intelligent authentication
-                /// 
-                /// apache_acl: apache acl authentication
                 /// </summary>
                 [NameInMap("aclTypes")]
                 [Validation(Required=false)]
                 public List<string> AclTypes { get; set; }
 
                 /// <summary>
-                /// No need for authentication in intranet.
+                /// Indicates whether the authentication-free in VPCs feature is enabled.
+                /// 
+                /// Valid values:
+                /// 
+                /// *   true
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                /// *   false
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
+                /// 
+                ///     <!-- -->
                 /// </summary>
                 [NameInMap("defaultVpcAuthFree")]
                 [Validation(Required=false)]
@@ -111,7 +123,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// The extended configurations. We recommend you configure the productInfo, internetInfo, or aclInfo parameter instead of this parameter.
+            /// The extended configurations. We recommend you configure productInfo, internetInfo, or aclInfo instead of this parameter.
             /// </summary>
             [NameInMap("extConfig")]
             [Validation(Required=false)]
@@ -171,7 +183,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// *   enable
                 /// *   disable
                 /// 
-                /// By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](~~427240~~).
+                /// By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](https://help.aliyun.com/document_detail/427240.html).
                 /// </summary>
                 [NameInMap("internetSpec")]
                 [Validation(Required=false)]
@@ -180,16 +192,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// <summary>
                 /// The retention period of messages. Unit: hours.
                 /// 
-                /// For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](~~440347~~).
+                /// For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](https://help.aliyun.com/document_detail/440347.html).
                 /// 
-                /// The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](~~427238~~).
+                /// The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](https://help.aliyun.com/document_detail/427238.html).
                 /// </summary>
                 [NameInMap("messageRetentionTime")]
                 [Validation(Required=false)]
                 public int? MessageRetentionTime { get; set; }
 
                 /// <summary>
-                /// The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](~~444715~~).
+                /// The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](https://help.aliyun.com/document_detail/444715.html).
                 /// </summary>
                 [NameInMap("msgProcessSpec")]
                 [Validation(Required=false)]
@@ -210,9 +222,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// *   true: enable
                 /// *   false: disable
                 /// 
-                /// After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](~~427237~~).
+                /// After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](https://help.aliyun.com/document_detail/427237.html).
                 /// 
-                /// > The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance specifications](~~444715~~).
+                /// > The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance specifications](https://help.aliyun.com/document_detail/444715.html).
                 /// </summary>
                 [NameInMap("supportAutoScaling")]
                 [Validation(Required=false)]
@@ -242,7 +254,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The quotas in the instance.
+            /// The instance quotas.
             /// </summary>
             [NameInMap("instanceQuotas")]
             [Validation(Required=false)]
@@ -301,29 +313,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     /// 
                     /// Valid values:
                     /// 
-                    /// *   TCP_VPC
-                    /// 
-                    ///     <!-- -->
-                    /// 
-                    ///     :
-                    /// 
-                    ///     <!-- -->
-                    /// 
-                    ///     VPC endpoint
-                    /// 
-                    ///     <!-- -->
-                    /// 
-                    /// *   TCP_INTERNET
-                    /// 
-                    ///     <!-- -->
-                    /// 
-                    ///     :
-                    /// 
-                    ///     <!-- -->
-                    /// 
-                    ///     public endpoint
-                    /// 
-                    ///     <!-- -->
+                    /// - TCP_VPC: VPC endpoint
+                    /// - TCP_INTERNET:public endpoint
                     /// </summary>
                     [NameInMap("endpointType")]
                     [Validation(Required=false)]
@@ -337,10 +328,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string EndpointUrl { get; set; }
 
                     /// <summary>
-                    /// The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use a public endpoint to access the ApsaraMQ for RocketMQ broker.
+                    /// The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use the public endpoint to access the instance.
                     /// 
-                    /// *   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
-                    /// *   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.
+                    /// *   If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
+                    /// *   If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
                     /// 
                     /// We recommend that you configure internetInfo.ipWhitelist instead of this parameter.
                     /// </summary>
@@ -384,7 +375,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     /// *   enable
                     /// *   disable
                     /// 
-                    /// By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](~~427240~~).
+                    /// By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](https://help.aliyun.com/document_detail/427240.html).
                     /// </summary>
                     [NameInMap("internetSpec")]
                     [Validation(Required=false)]
@@ -403,14 +394,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 }
 
                 /// <summary>
-                /// The information about the VPC.
+                /// The virtual private cloud (VPC) information.
                 /// </summary>
                 [NameInMap("vpcInfo")]
                 [Validation(Required=false)]
                 public GetInstanceResponseBodyDataNetworkInfoVpcInfo VpcInfo { get; set; }
                 public class GetInstanceResponseBodyDataNetworkInfoVpcInfo : TeaModel {
                     /// <summary>
-                    /// The ID of the security group with which the instance is associated.
+                    /// The security group ID.
                     /// </summary>
                     [NameInMap("securityGroupIds")]
                     [Validation(Required=false)]
@@ -421,7 +412,22 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     /// </summary>
                     [NameInMap("vSwitchId")]
                     [Validation(Required=false)]
+                    [Obsolete]
                     public string VSwitchId { get; set; }
+
+                    [NameInMap("vSwitches")]
+                    [Validation(Required=false)]
+                    public List<GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches> VSwitches { get; set; }
+                    public class GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches : TeaModel {
+                        [NameInMap("vSwitchId")]
+                        [Validation(Required=false)]
+                        public string VSwitchId { get; set; }
+
+                        [NameInMap("zoneId")]
+                        [Validation(Required=false)]
+                        public string ZoneId { get; set; }
+
+                    }
 
                     /// <summary>
                     /// The ID of the VPC with which the instance is associated.
@@ -470,16 +476,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// <summary>
                 /// The retention period of messages. Unit: hours.
                 /// 
-                /// For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](~~440347~~).
+                /// For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](https://help.aliyun.com/document_detail/440347.html).
                 /// 
-                /// The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](~~427238~~).
+                /// The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](https://help.aliyun.com/document_detail/427238.html).
                 /// </summary>
                 [NameInMap("messageRetentionTime")]
                 [Validation(Required=false)]
                 public int? MessageRetentionTime { get; set; }
 
                 /// <summary>
-                /// The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](~~444715~~).
+                /// The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](https://help.aliyun.com/document_detail/444715.html).
                 /// </summary>
                 [NameInMap("msgProcessSpec")]
                 [Validation(Required=false)]
@@ -500,16 +506,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// *   true: enable
                 /// *   false: disable
                 /// 
-                /// After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](~~427237~~).
+                /// After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](https://help.aliyun.com/document_detail/427237.html).
                 /// 
-                /// > The elastic TPS feature is supported by only specific instance editions. For more information, see [Instance specifications](~~444715~~).
+                /// > The elastic TPS feature is supported by only specific instance editions. For more information, see [Instance specifications](https://help.aliyun.com/document_detail/444715.html).
                 /// </summary>
                 [NameInMap("supportAutoScaling")]
                 [Validation(Required=false)]
                 public bool? SupportAutoScaling { get; set; }
 
                 /// <summary>
-                /// Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.
+                /// Indicates whether the message trace feature is enabled. Valid values:
+                /// 
+                /// *   true
+                /// *   false
+                /// 
+                /// This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.
                 /// </summary>
                 [NameInMap("traceOn")]
                 [Validation(Required=false)]
@@ -546,7 +557,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The primary edition of the instance. For information about the differences between primary edition instances, see [Instance selection](~~444722~~).
+            /// The primary edition of the instance. For information about the differences between primary edition instances, see [Instance selection](https://help.aliyun.com/document_detail/444722.html).
             /// 
             /// Valid values:
             /// 
@@ -624,7 +635,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The sub-category edition of the instance. For information about the differences between sub-category edition instances, see [Instance selection](~~444722~~).
+            /// The sub-category edition of the instance. For information about the differences between sub-category edition instances, see [Instance selection](https://help.aliyun.com/document_detail/444722.html).
             /// 
             /// Valid values:
             /// 

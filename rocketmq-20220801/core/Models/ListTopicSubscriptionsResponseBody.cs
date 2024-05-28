@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public List<ListTopicSubscriptionsResponseBodyData> Data { get; set; }
         public class ListTopicSubscriptionsResponseBodyData : TeaModel {
+            [NameInMap("consistency")]
+            [Validation(Required=false)]
+            public string Consistency { get; set; }
+
             [NameInMap("consumerGroupId")]
             [Validation(Required=false)]
             public string ConsumerGroupId { get; set; }

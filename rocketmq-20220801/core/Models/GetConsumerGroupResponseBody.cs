@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public GetConsumerGroupResponseBodyData Data { get; set; }
         public class GetConsumerGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// The consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](~~440356~~).
+            /// The consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](https://help.aliyun.com/document_detail/440356.html).
             /// </summary>
             [NameInMap("consumeRetryPolicy")]
             [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// <summary>
                 /// The dead-letter topic.
                 /// 
-                /// If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](~~440356~~).
+                /// If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](https://help.aliyun.com/document_detail/440356.html).
                 /// </summary>
                 [NameInMap("deadLetterTargetTopic")]
                 [Validation(Required=false)]
