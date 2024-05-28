@@ -18,6 +18,16 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string AclId { get; set; }
 
+        [NameInMap("AclIds")]
+        [Validation(Required=false)]
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds AclIds { get; set; }
+        public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds : TeaModel {
+            [NameInMap("AclId")]
+            [Validation(Required=false)]
+            public List<string> AclId { get; set; }
+
+        }
+
         /// <summary>
         /// Indicates whether access control is enabled. Valid values:
         /// 

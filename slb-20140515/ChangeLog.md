@@ -1,3 +1,11 @@
+2024-05-28 Version: 2.0.7
+- Update API DescribeLoadBalancerHTTPListenerAttribute: update response param.
+- Update API DescribeLoadBalancerHTTPSListenerAttribute: update response param.
+- Update API DescribeLoadBalancerListeners: update response param.
+- Update API DescribeLoadBalancerTCPListenerAttribute: update response param.
+- Update API DescribeLoadBalancerUDPListenerAttribute: update response param.
+
+
 2024-05-24 Version: 2.0.6
 - Generated csharp 2014-05-15 for Slb.
 
