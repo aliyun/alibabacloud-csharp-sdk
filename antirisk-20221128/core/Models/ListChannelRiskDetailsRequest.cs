@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Antirisk20221128.Models
         [Validation(Required=false)]
         public string Channel { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("end")]
         [Validation(Required=false)]
         public string End { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Antirisk20221128.Models
         [Validation(Required=false)]
         public string IsAllChannel { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("start")]
         [Validation(Required=false)]
         public string Start { get; set; }

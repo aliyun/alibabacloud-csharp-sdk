@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * @summary 获取实时反作弊信息
+         *
+         * @param request GetRealTimeRiskInfoRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetRealTimeRiskInfoResponse
+         */
         public GetRealTimeRiskInfoResponse GetRealTimeRiskInfoWithOptions(GetRealTimeRiskInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -73,6 +81,14 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return TeaModel.ToObject<GetRealTimeRiskInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取实时反作弊信息
+         *
+         * @param request GetRealTimeRiskInfoRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetRealTimeRiskInfoResponse
+         */
         public async Task<GetRealTimeRiskInfoResponse> GetRealTimeRiskInfoWithOptionsAsync(GetRealTimeRiskInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -109,6 +125,12 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return TeaModel.ToObject<GetRealTimeRiskInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取实时反作弊信息
+         *
+         * @param request GetRealTimeRiskInfoRequest
+         * @return GetRealTimeRiskInfoResponse
+         */
         public GetRealTimeRiskInfoResponse GetRealTimeRiskInfo(GetRealTimeRiskInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -116,6 +138,12 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return GetRealTimeRiskInfoWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 获取实时反作弊信息
+         *
+         * @param request GetRealTimeRiskInfoRequest
+         * @return GetRealTimeRiskInfoResponse
+         */
         public async Task<GetRealTimeRiskInfoResponse> GetRealTimeRiskInfoAsync(GetRealTimeRiskInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -123,6 +151,14 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return await GetRealTimeRiskInfoWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary atoken换zid+tags
+         *
+         * @param request GetZidTagByAtokenRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetZidTagByAtokenResponse
+         */
         public GetZidTagByAtokenResponse GetZidTagByAtokenWithOptions(GetZidTagByAtokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -155,6 +191,14 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return TeaModel.ToObject<GetZidTagByAtokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary atoken换zid+tags
+         *
+         * @param request GetZidTagByAtokenRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetZidTagByAtokenResponse
+         */
         public async Task<GetZidTagByAtokenResponse> GetZidTagByAtokenWithOptionsAsync(GetZidTagByAtokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -187,6 +231,12 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return TeaModel.ToObject<GetZidTagByAtokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary atoken换zid+tags
+         *
+         * @param request GetZidTagByAtokenRequest
+         * @return GetZidTagByAtokenResponse
+         */
         public GetZidTagByAtokenResponse GetZidTagByAtoken(GetZidTagByAtokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -194,6 +244,12 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return GetZidTagByAtokenWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary atoken换zid+tags
+         *
+         * @param request GetZidTagByAtokenRequest
+         * @return GetZidTagByAtokenResponse
+         */
         public async Task<GetZidTagByAtokenResponse> GetZidTagByAtokenAsync(GetZidTagByAtokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -201,6 +257,14 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return await GetZidTagByAtokenWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary atoken换zid+tags+风险分
+         *
+         * @param request GetZidTagScoreByAtokenRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetZidTagScoreByAtokenResponse
+         */
         public GetZidTagScoreByAtokenResponse GetZidTagScoreByAtokenWithOptions(GetZidTagScoreByAtokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -233,6 +297,14 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return TeaModel.ToObject<GetZidTagScoreByAtokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary atoken换zid+tags+风险分
+         *
+         * @param request GetZidTagScoreByAtokenRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetZidTagScoreByAtokenResponse
+         */
         public async Task<GetZidTagScoreByAtokenResponse> GetZidTagScoreByAtokenWithOptionsAsync(GetZidTagScoreByAtokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -265,6 +337,12 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return TeaModel.ToObject<GetZidTagScoreByAtokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary atoken换zid+tags+风险分
+         *
+         * @param request GetZidTagScoreByAtokenRequest
+         * @return GetZidTagScoreByAtokenResponse
+         */
         public GetZidTagScoreByAtokenResponse GetZidTagScoreByAtoken(GetZidTagScoreByAtokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -272,6 +350,12 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return GetZidTagScoreByAtokenWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary atoken换zid+tags+风险分
+         *
+         * @param request GetZidTagScoreByAtokenRequest
+         * @return GetZidTagScoreByAtokenResponse
+         */
         public async Task<GetZidTagScoreByAtokenResponse> GetZidTagScoreByAtokenAsync(GetZidTagScoreByAtokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -279,6 +363,14 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return await GetZidTagScoreByAtokenWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary  渠道风险明细
+         *
+         * @param request ListChannelRiskDetailsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListChannelRiskDetailsResponse
+         */
         public ListChannelRiskDetailsResponse ListChannelRiskDetailsWithOptions(ListChannelRiskDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -323,6 +415,14 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return TeaModel.ToObject<ListChannelRiskDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary  渠道风险明细
+         *
+         * @param request ListChannelRiskDetailsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListChannelRiskDetailsResponse
+         */
         public async Task<ListChannelRiskDetailsResponse> ListChannelRiskDetailsWithOptionsAsync(ListChannelRiskDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -367,6 +467,12 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return TeaModel.ToObject<ListChannelRiskDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary  渠道风险明细
+         *
+         * @param request ListChannelRiskDetailsRequest
+         * @return ListChannelRiskDetailsResponse
+         */
         public ListChannelRiskDetailsResponse ListChannelRiskDetails(ListChannelRiskDetailsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -374,6 +480,12 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return ListChannelRiskDetailsWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary  渠道风险明细
+         *
+         * @param request ListChannelRiskDetailsRequest
+         * @return ListChannelRiskDetailsResponse
+         */
         public async Task<ListChannelRiskDetailsResponse> ListChannelRiskDetailsAsync(ListChannelRiskDetailsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -381,6 +493,14 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return await ListChannelRiskDetailsWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary 卸载明细列表
+         *
+         * @param request ListUninstallDetailRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUninstallDetailResponse
+         */
         public ListUninstallDetailResponse ListUninstallDetailWithOptions(ListUninstallDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -417,6 +537,14 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return TeaModel.ToObject<ListUninstallDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 卸载明细列表
+         *
+         * @param request ListUninstallDetailRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUninstallDetailResponse
+         */
         public async Task<ListUninstallDetailResponse> ListUninstallDetailWithOptionsAsync(ListUninstallDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -453,6 +581,12 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return TeaModel.ToObject<ListUninstallDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 卸载明细列表
+         *
+         * @param request ListUninstallDetailRequest
+         * @return ListUninstallDetailResponse
+         */
         public ListUninstallDetailResponse ListUninstallDetail(ListUninstallDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -460,6 +594,12 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return ListUninstallDetailWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary 卸载明细列表
+         *
+         * @param request ListUninstallDetailRequest
+         * @return ListUninstallDetailResponse
+         */
         public async Task<ListUninstallDetailResponse> ListUninstallDetailAsync(ListUninstallDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

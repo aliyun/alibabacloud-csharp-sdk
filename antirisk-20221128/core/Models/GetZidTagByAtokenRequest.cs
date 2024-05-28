@@ -11,11 +11,16 @@ namespace AlibabaCloud.SDK.Antirisk20221128.Models
     public class GetZidTagByAtokenRequest : TeaModel {
         /// <summary>
         /// atoken
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("atoken")]
         [Validation(Required=false)]
         public string Atoken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("dataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
