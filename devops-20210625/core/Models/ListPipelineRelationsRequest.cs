@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListPipelineRelationsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("relObjectType")]
         [Validation(Required=false)]
         public string RelObjectType { get; set; }

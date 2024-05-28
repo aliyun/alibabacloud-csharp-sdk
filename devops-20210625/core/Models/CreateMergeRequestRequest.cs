@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("createFrom")]
         [Validation(Required=false)]
         public string CreateFrom { get; set; }
@@ -25,22 +28,37 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public List<string> ReviewerIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("sourceBranch")]
         [Validation(Required=false)]
         public string SourceBranch { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("sourceProjectId")]
         [Validation(Required=false)]
         public long? SourceProjectId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("targetBranch")]
         [Validation(Required=false)]
         public string TargetBranch { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("targetProjectId")]
         [Validation(Required=false)]
         public long? TargetProjectId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
@@ -49,6 +67,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string WorkItemIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("organizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }

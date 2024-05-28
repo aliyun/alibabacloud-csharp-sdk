@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("spaceIdentifier")]
         [Validation(Required=false)]
         public string SpaceIdentifier { get; set; }

@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("identity")]
         [Validation(Required=false)]
         public string Identity { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("organizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }

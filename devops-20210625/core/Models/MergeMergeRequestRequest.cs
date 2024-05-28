@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string MergeMessage { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("mergeType")]
         [Validation(Required=false)]
         public string MergeType { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public bool? RemoveSourceBranch { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("organizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }

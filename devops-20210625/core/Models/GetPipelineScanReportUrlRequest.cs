@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetPipelineScanReportUrlRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("reportPath")]
         [Validation(Required=false)]
         public string ReportPath { get; set; }

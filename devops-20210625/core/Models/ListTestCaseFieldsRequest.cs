@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListTestCaseFieldsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("spaceIdentifier")]
         [Validation(Required=false)]
         public string SpaceIdentifier { get; set; }

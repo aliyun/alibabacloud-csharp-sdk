@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetPipelineEmasArtifactUrlRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("serviceConnectionId")]
         [Validation(Required=false)]
         public long? ServiceConnectionId { get; set; }

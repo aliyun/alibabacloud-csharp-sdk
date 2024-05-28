@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ruleInfos")]
         [Validation(Required=false)]
         public List<CreatePushRuleRequestRuleInfos> RuleInfos { get; set; }
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("organizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }

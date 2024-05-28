@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public List<CreateCheckRunRequestAnnotations> Annotations { get; set; }
         public class CreateCheckRunRequestAnnotations : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("annotationLevel")]
             [Validation(Required=false)]
             public string AnnotationLevel { get; set; }
@@ -25,14 +28,23 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public long? EndColumn { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("endLine")]
             [Validation(Required=false)]
             public long? EndLine { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("path")]
             [Validation(Required=false)]
             public string Path { get; set; }
@@ -45,6 +57,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public long? StartColumn { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("startLine")]
             [Validation(Required=false)]
             public long? StartLine { get; set; }
@@ -71,10 +86,16 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string ExternalId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("headSha")]
         [Validation(Required=false)]
         public string HeadSha { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -87,6 +108,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public List<CreateCheckRunRequestOutputImages> Images { get; set; }
             public class CreateCheckRunRequestOutputImages : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("alt")]
                 [Validation(Required=false)]
                 public string Alt { get; set; }
@@ -95,12 +119,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 [Validation(Required=false)]
                 public string Caption { get; set; }
 
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("imageUrl")]
                 [Validation(Required=false)]
                 public string ImageUrl { get; set; }
 
             }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("summary")]
             [Validation(Required=false)]
             public string Summary { get; set; }
@@ -109,6 +139,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string Text { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("title")]
             [Validation(Required=false)]
             public string Title { get; set; }
@@ -123,10 +156,16 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("organizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("repositoryIdentity")]
         [Validation(Required=false)]
         public string RepositoryIdentity { get; set; }

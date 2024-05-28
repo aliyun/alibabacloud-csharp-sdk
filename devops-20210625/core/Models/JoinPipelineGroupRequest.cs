@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class JoinPipelineGroupRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("groupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("pipelineIds")]
         [Validation(Required=false)]
         public string PipelineIds { get; set; }

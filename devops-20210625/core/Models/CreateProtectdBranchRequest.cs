@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("allowMergeRoles")]
         [Validation(Required=false)]
         public List<int?> AllowMergeRoles { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public List<string> AllowPushUserIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("branch")]
         [Validation(Required=false)]
         public string Branch { get; set; }
@@ -159,6 +165,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("organizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }

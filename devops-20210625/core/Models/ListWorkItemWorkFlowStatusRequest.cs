@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListWorkItemWorkFlowStatusRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("spaceIdentifier")]
         [Validation(Required=false)]
         public string SpaceIdentifier { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("spaceType")]
         [Validation(Required=false)]
         public string SpaceType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("workitemCategoryIdentifier")]
         [Validation(Required=false)]
         public string WorkitemCategoryIdentifier { get; set; }

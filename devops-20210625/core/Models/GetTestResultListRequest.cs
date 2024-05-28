@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string Conditions { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("directoryIdentifier")]
         [Validation(Required=false)]
         public string DirectoryIdentifier { get; set; }

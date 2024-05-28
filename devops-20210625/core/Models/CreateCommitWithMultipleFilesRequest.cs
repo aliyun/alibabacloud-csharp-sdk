@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("actions")]
         [Validation(Required=false)]
         public List<CreateCommitWithMultipleFilesRequestActions> Actions { get; set; }
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("branch")]
         [Validation(Required=false)]
         public string Branch { get; set; }
@@ -43,10 +49,16 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string CommitMessage { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("organizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("repositoryIdentity")]
         [Validation(Required=false)]
         public string RepositoryIdentity { get; set; }

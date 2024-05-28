@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class UpdatePipelineRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("pipelineId")]
         [Validation(Required=false)]
         public string PipelineId { get; set; }

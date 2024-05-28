@@ -13,14 +13,23 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("spaceIdentifier")]
         [Validation(Required=false)]
         public string SpaceIdentifier { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("staffIds")]
         [Validation(Required=false)]
         public List<string> StaffIds { get; set; }

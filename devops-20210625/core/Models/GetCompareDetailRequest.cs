@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetCompareDetailRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("from")]
         [Validation(Required=false)]
         public string From { get; set; }
@@ -25,10 +28,16 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public bool? MergeBase { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("organizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("to")]
         [Validation(Required=false)]
         public string To { get; set; }

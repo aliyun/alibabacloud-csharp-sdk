@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreateWorkitemV2Request : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("assignedTo")]
         [Validation(Required=false)]
         public string AssignedTo { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -43,6 +49,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public List<string> Participants { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("spaceIdentifier")]
         [Validation(Required=false)]
         public string SpaceIdentifier { get; set; }
@@ -51,6 +60,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string SprintIdentifier { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }
@@ -71,6 +83,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public List<string> Versions { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("workitemTypeIdentifier")]
         [Validation(Required=false)]
         public string WorkitemTypeIdentifier { get; set; }

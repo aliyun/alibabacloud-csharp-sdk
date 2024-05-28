@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreateTestCaseRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("assignedTo")]
         [Validation(Required=false)]
         public string AssignedTo { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("directoryIdentifier")]
         [Validation(Required=false)]
         public string DirectoryIdentifier { get; set; }
@@ -35,10 +41,16 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string Priority { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("spaceIdentifier")]
         [Validation(Required=false)]
         public string SpaceIdentifier { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }
@@ -69,6 +81,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
             }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("stepType")]
             [Validation(Required=false)]
             public string StepType { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListServiceConnectionsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("sericeConnectionType")]
         [Validation(Required=false)]
         public string SericeConnectionType { get; set; }

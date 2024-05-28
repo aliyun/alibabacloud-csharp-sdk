@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreateWorkitemRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("assignedTo")]
         [Validation(Required=false)]
         public string AssignedTo { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -51,14 +57,23 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public List<string> Participant { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("space")]
         [Validation(Required=false)]
         public string Space { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("spaceIdentifier")]
         [Validation(Required=false)]
         public string SpaceIdentifier { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("spaceType")]
         [Validation(Required=false)]
         public string SpaceType { get; set; }
@@ -67,6 +82,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public List<string> Sprint { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }
@@ -79,6 +97,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public List<string> Verifier { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("workitemType")]
         [Validation(Required=false)]
         public string WorkitemType { get; set; }

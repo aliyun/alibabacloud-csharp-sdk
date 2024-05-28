@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
     public class CreateOAuthTokenRequest : TeaModel {
         /// <summary>
         /// clientId
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("clientId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
         /// <summary>
         /// client_secret
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("clientSecret")]
         [Validation(Required=false)]
@@ -27,6 +31,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("grantType")]
         [Validation(Required=false)]
         public string GrantType { get; set; }
@@ -35,6 +42,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string Login { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("scope")]
         [Validation(Required=false)]
         public string Scope { get; set; }

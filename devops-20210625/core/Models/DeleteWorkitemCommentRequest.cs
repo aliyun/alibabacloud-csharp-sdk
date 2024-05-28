@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class DeleteWorkitemCommentRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("commentId")]
         [Validation(Required=false)]
         public long? CommentId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("identifier")]
         [Validation(Required=false)]
         public string Identifier { get; set; }

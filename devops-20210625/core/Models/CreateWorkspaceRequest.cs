@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreateWorkspaceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("codeUrl")]
         [Validation(Required=false)]
         public string CodeUrl { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("codeVersion")]
         [Validation(Required=false)]
         public string CodeVersion { get; set; }
@@ -37,6 +43,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public bool? Reuse { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("workspaceTemplate")]
         [Validation(Required=false)]
         public string WorkspaceTemplate { get; set; }
