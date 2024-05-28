@@ -77,6 +77,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public long? CallsOffered { get; set; }
 
+                    [NameInMap("CallsQueuingCanceled")]
+                    [Validation(Required=false)]
+                    public string CallsQueuingCanceled { get; set; }
+
+                    [NameInMap("CallsQueuingFailure")]
+                    [Validation(Required=false)]
+                    public string CallsQueuingFailure { get; set; }
+
+                    [NameInMap("CallsQueuingRerouted")]
+                    [Validation(Required=false)]
+                    public string CallsQueuingRerouted { get; set; }
+
                     [NameInMap("CallsQueuingTimeout")]
                     [Validation(Required=false)]
                     public long? CallsQueuingTimeout { get; set; }
