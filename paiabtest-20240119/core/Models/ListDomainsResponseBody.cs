@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PAIABTest20240119.Models
             [Validation(Required=false)]
             public string BucketType { get; set; }
 
+            [NameInMap("Buckets")]
+            [Validation(Required=false)]
+            public string Buckets { get; set; }
+
             [NameInMap("Condition")]
             [Validation(Required=false)]
             public string Condition { get; set; }
