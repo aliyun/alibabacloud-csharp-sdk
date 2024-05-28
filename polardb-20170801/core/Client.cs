@@ -22300,6 +22300,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["TargetDBRevisionVersionCode"] = request.TargetDBRevisionVersionCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetProxyRevisionVersionCode))
+            {
+                query["TargetProxyRevisionVersionCode"] = request.TargetProxyRevisionVersionCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpgradeLabel))
             {
                 query["UpgradeLabel"] = request.UpgradeLabel;
@@ -22380,6 +22384,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDBRevisionVersionCode))
             {
                 query["TargetDBRevisionVersionCode"] = request.TargetDBRevisionVersionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetProxyRevisionVersionCode))
+            {
+                query["TargetProxyRevisionVersionCode"] = request.TargetProxyRevisionVersionCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpgradeLabel))
             {

@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string TargetDBRevisionVersionCode { get; set; }
 
+        [NameInMap("TargetProxyRevisionVersionCode")]
+        [Validation(Required=false)]
+        public string TargetProxyRevisionVersionCode { get; set; }
+
         /// <summary>
         /// The upgrade tag. The value is fixed as **INNOVATE**.
         /// 

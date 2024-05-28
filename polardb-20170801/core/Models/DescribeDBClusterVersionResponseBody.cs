@@ -140,6 +140,28 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ProxyRevisionVersion { get; set; }
 
+        [NameInMap("ProxyRevisionVersionList")]
+        [Validation(Required=false)]
+        public List<DescribeDBClusterVersionResponseBodyProxyRevisionVersionList> ProxyRevisionVersionList { get; set; }
+        public class DescribeDBClusterVersionResponseBodyProxyRevisionVersionList : TeaModel {
+            [NameInMap("ReleaseNote")]
+            [Validation(Required=false)]
+            public string ReleaseNote { get; set; }
+
+            [NameInMap("ReleaseType")]
+            [Validation(Required=false)]
+            public string ReleaseType { get; set; }
+
+            [NameInMap("RevisionVersionCode")]
+            [Validation(Required=false)]
+            public string RevisionVersionCode { get; set; }
+
+            [NameInMap("RevisionVersionName")]
+            [Validation(Required=false)]
+            public string RevisionVersionName { get; set; }
+
+        }
+
         /// <summary>
         /// The status of PolarProxy. Valid values:
         /// 
