@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string IdempotentId { get; set; }
 
+        [NameInMap("industry")]
+        [Validation(Required=false)]
+        public string Industry { get; set; }
+
         [NameInMap("introduction")]
         [Validation(Required=false)]
         public string Introduction { get; set; }
@@ -61,6 +65,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [NameInMap("theme")]
         [Validation(Required=false)]
         public string Theme { get; set; }
+
+        [NameInMap("themes")]
+        [Validation(Required=false)]
+        public List<string> Themes { get; set; }
 
     }
 

@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public List<long?> IllustrationTaskIdList { get; set; }
 
+        [NameInMap("publishStatus")]
+        [Validation(Required=false)]
+        public string PublishStatus { get; set; }
+
         [NameInMap("textContent")]
         [Validation(Required=false)]
         public string TextContent { get; set; }
@@ -54,12 +58,20 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string TextStatus { get; set; }
 
+        [NameInMap("textStyleType")]
+        [Validation(Required=false)]
+        public string TextStyleType { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
         [NameInMap("textTaskId")]
         [Validation(Required=false)]
         public long? TextTaskId { get; set; }
+
+        [NameInMap("textThemes")]
+        [Validation(Required=false)]
+        public List<string> TextThemes { get; set; }
 
         [NameInMap("title")]
         [Validation(Required=false)]

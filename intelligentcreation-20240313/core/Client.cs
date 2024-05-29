@@ -642,15 +642,23 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
         /**
          * @summary 查询文案主题列表
          *
+         * @param request ListTextThemesRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListTextThemesResponse
          */
-        public ListTextThemesResponse ListTextThemesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListTextThemesResponse ListTextThemesWithOptions(ListTextThemesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
+            {
+                query["industry"] = request.Industry;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -670,15 +678,23 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
         /**
          * @summary 查询文案主题列表
          *
+         * @param request ListTextThemesRequest
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListTextThemesResponse
          */
-        public async Task<ListTextThemesResponse> ListTextThemesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListTextThemesResponse> ListTextThemesWithOptionsAsync(ListTextThemesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
+            {
+                query["industry"] = request.Industry;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -698,25 +714,173 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
         /**
          * @summary 查询文案主题列表
          *
+         * @param request ListTextThemesRequest
          * @return ListTextThemesResponse
          */
-        public ListTextThemesResponse ListTextThemes()
+        public ListTextThemesResponse ListTextThemes(ListTextThemesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListTextThemesWithOptions(headers, runtime);
+            return ListTextThemesWithOptions(request, headers, runtime);
         }
 
         /**
          * @summary 查询文案主题列表
          *
+         * @param request ListTextThemesRequest
          * @return ListTextThemesResponse
          */
-        public async Task<ListTextThemesResponse> ListTextThemesAsync()
+        public async Task<ListTextThemesResponse> ListTextThemesAsync(ListTextThemesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListTextThemesWithOptionsAsync(headers, runtime);
+            return await ListTextThemesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 列举文案
+         *
+         * @param request ListTextsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTextsResponse
+         */
+        public ListTextsResponse ListTextsWithOptions(ListTextsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerationSource))
+            {
+                query["generationSource"] = request.GenerationSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
+            {
+                query["industry"] = request.Industry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishStatus))
+            {
+                query["publishStatus"] = request.PublishStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextStyleType))
+            {
+                query["textStyleType"] = request.TextStyleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextTheme))
+            {
+                query["textTheme"] = request.TextTheme;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTexts",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/texts",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTextsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 列举文案
+         *
+         * @param request ListTextsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTextsResponse
+         */
+        public async Task<ListTextsResponse> ListTextsWithOptionsAsync(ListTextsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerationSource))
+            {
+                query["generationSource"] = request.GenerationSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
+            {
+                query["industry"] = request.Industry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishStatus))
+            {
+                query["publishStatus"] = request.PublishStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextStyleType))
+            {
+                query["textStyleType"] = request.TextStyleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextTheme))
+            {
+                query["textTheme"] = request.TextTheme;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTexts",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/texts",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTextsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 列举文案
+         *
+         * @param request ListTextsRequest
+         * @return ListTextsResponse
+         */
+        public ListTextsResponse ListTexts(ListTextsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListTextsWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 列举文案
+         *
+         * @param request ListTextsRequest
+         * @return ListTextsResponse
+         */
+        public async Task<ListTextsResponse> ListTextsAsync(ListTextsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListTextsWithOptionsAsync(request, headers, runtime);
         }
 
     }
