@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
+            [NameInMap("GroupMemberRelationSourceId")]
+            [Validation(Required=false)]
+            public string GroupMemberRelationSourceId { get; set; }
+
+            [NameInMap("GroupMemberRelationSourceType")]
+            [Validation(Required=false)]
+            public string GroupMemberRelationSourceType { get; set; }
+
         }
 
         /// <summary>

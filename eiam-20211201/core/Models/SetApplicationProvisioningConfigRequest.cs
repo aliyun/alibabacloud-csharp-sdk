@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
     public class SetApplicationProvisioningConfigRequest : TeaModel {
         /// <summary>
         /// The ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
@@ -58,6 +60,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -78,6 +82,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// 
         /// *   idaas_callback: custom event callback protocol of IDaaS.
         /// *   scim2: System for Cross-domain Identity Management (SCIM) protocol.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProvisionProtocolType")]
         [Validation(Required=false)]

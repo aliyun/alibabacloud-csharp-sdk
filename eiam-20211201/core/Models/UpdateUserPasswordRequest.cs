@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
     public class UpdateUserPasswordRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The new password of the account. For more information about the password format, see the "Password Policies" topic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The account ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
     public class SetPasswordHistoryConfigurationRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// 
         /// *   enabled
         /// *   disabled
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PasswordHistoryStatus")]
         [Validation(Required=false)]

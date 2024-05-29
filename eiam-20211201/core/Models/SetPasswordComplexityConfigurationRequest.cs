@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
     public class SetPasswordComplexityConfigurationRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// 
             /// *   inclusion_upper_case: The password must contain uppercase letters.
             /// *   inclusion_lower_case: The password must contain lowercase letters.
-            /// *   inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / \" ! # $ ^ ? : , ( ) { } \[ ] ~ - \_ .
+            /// *   inclusion_special_case: The password must contain one or more of the following special characters: @ % + \\ / \\" ! # $ ^ ? : , ( ) { } [ ] ~ - _ .
             /// *   inclusion_number: The password must contain digits.
             /// *   exclusion_username: The password cannot contain a username.
             /// *   exclusion_email: The password cannot contain an email prefix.
@@ -43,6 +45,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The minimum number of characters in a password.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PasswordMinLength")]
         [Validation(Required=false)]

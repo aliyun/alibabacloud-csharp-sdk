@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
     public class DeleteApplicationClientSecretRequest : TeaModel {
         /// <summary>
         /// The ID of the application for which you want to delete a client key.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The ID of the client key that you want to delete for the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecretId")]
         [Validation(Required=false)]

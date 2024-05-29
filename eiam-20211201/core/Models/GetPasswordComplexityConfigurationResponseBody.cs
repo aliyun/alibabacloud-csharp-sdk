@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// 
                 /// *   inclusion_upper_case: The password must contain uppercase letters.
                 /// *   inclusion_lower_case: The password must contain lowercase letters.
-                /// *   inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / \" ! # $ ^ ? : , ( ) { } \[ ] ~ - \_ .
+                /// *   inclusion_special_case: The password must contain one or more of the following special characters: @ % + \\ / \\" ! # $ ^ ? : , ( ) { } [ ] ~ - _ .
                 /// *   inclusion_number: The password must contain digits.
                 /// *   exclusion_username: The password cannot contain a username.
                 /// *   exclusion_email: The password cannot contain an email prefix.

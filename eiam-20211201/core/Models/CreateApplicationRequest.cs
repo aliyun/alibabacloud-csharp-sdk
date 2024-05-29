@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
     public class CreateApplicationRequest : TeaModel {
         /// <summary>
         /// The name of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// 
         /// *   urn:alibaba:idaas:app:source:template: application template
         /// *   urn:alibaba:idaas:app:source:standard: standard protocol
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationSourceType")]
         [Validation(Required=false)]
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -59,6 +65,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// 
         /// *   saml2: the SAML 2.0 protocol.
         /// *   oidc: the OpenID Connect protocol.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SsoType")]
         [Validation(Required=false)]

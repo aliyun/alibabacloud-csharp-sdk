@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
     public class ObtainDomainProxyTokenRequest : TeaModel {
         /// <summary>
         /// 域名ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// 域名代理Token ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainProxyTokenId")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// IDaaS EIAM实例的ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

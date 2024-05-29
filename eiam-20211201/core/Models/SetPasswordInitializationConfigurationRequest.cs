@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
     public class SetPasswordInitializationConfigurationRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// 
         /// *   enabled
         /// *   disabled
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PasswordInitializationStatus")]
         [Validation(Required=false)]

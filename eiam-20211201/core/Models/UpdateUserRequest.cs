@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// The email address. The prefix of the email address can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+        /// The email address. The prefix of the email address can contain letters, digits, periods (.), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
@@ -66,6 +66,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -94,13 +96,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The account ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
 
         /// <summary>
-        /// The name of the account. The name can be up to 64 characters in length. It can contain letters, digits, and the following special characters: \_ . @ -
+        /// The name of the account. The name can be up to 64 characters in length. It can contain letters, digits, and the following special characters: _ . @ -
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]

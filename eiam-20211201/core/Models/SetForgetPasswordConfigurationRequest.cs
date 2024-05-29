@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// 忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ForgetPasswordStatus")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

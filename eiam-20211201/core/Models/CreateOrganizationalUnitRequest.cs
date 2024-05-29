@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The name of the organization. The name can be up to 64 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrganizationalUnitName")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// The parent organization ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ParentId")]
         [Validation(Required=false)]
