@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// *   **InstanceId**: the ID of the instance. This field is required and must be of the STRING type.
         /// *   **Protocol**: the forwarding protocol. This field is required and must be of the STRING type. Valid values: **tcp** and **udp**.
         /// *   **FrontendPort**: the forwarding port. This field is required and must be of the INTEGER type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkRule")]
         [Validation(Required=false)]

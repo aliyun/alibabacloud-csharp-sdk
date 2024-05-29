@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The domain name for which you want to configure the Static Page Caching policy.
         /// 
-        /// > You can call the [DescribeDomains](~~91724~~) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.
+        /// > You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// 
         /// *   **1**: yes
         /// *   **0**: no
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]

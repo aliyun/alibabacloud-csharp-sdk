@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The name of the scheduling rule to manage.
         /// 
-        /// > You can call the [DescribeSchedulerRules](~~157481~~) operation to query the names of all scheduling rules.
+        /// > You can call the [DescribeSchedulerRules](https://help.aliyun.com/document_detail/157481.html) operation to query the names of all scheduling rules.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// *   **3**: network acceleration rule
         /// *   **5**: Alibaba Cloud CDN (CDN) interaction rule
         /// *   **6**: cloud service interaction rule
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
@@ -42,8 +46,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// 
         /// *   **Interval**: optional. The waiting time that is required before the service traffic is switched back. Unit: minutes. Data type: integer. Usage notes:
         /// 
-        ///     *   If the **State** parameter is set to **0**, you must set this parameter to \*\*-1\*\*. Otherwise, the call fails.
+        ///     *   If the **State** parameter is set to **0**, you must set this parameter to \\*\\*-1\\*\\*. Otherwise, the call fails.
         ///     *   If the **State** parameter is set to **1**, you do not need to set this parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SwitchData")]
         [Validation(Required=false)]

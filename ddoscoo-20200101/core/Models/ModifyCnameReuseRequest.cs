@@ -19,7 +19,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The domain name of the website.
         /// 
-        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// 
         /// *   **1**: enables CNAME reuse.
         /// *   **2**: disables CNAME reuse.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]

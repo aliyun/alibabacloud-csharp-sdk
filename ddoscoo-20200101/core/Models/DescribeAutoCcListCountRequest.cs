@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// The ID of the instance.
         /// 
         /// > You can call the **DescribeInstanceIds** operation to query the IDs of all instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

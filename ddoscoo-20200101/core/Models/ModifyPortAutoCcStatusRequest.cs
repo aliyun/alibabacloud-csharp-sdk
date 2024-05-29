@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+        /// > You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// *   **normal**
         /// *   **loose**
         /// *   **strict**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// 
         /// *   **on**: enables the policy.
         /// *   **off**: disables the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Switch")]
         [Validation(Required=false)]

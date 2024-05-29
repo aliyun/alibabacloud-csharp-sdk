@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
     public class DeleteDomainResourceRequest : TeaModel {
         /// <summary>
         /// The domain name for which the forwarding rule is configured.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]

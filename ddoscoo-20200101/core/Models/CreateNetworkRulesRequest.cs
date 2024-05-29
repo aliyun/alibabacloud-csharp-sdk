@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// *   **FrontendPort**: the forwarding port. This field is required and must be of the INTEGER type.
         /// *   **BackendPort**: the port of the origin server. This field is required and must be of the INTEGER type.
         /// *   **RealServers**: the IP addresses of the origin server. This field is required and must be a JSON array. You can specify up to 20 IP addresses.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkRules")]
         [Validation(Required=false)]

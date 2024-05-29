@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The number of entries to return on each page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
     public class ModifySceneDefensePolicyRequest : TeaModel {
         /// <summary>
         /// The end time of the policy. The value is a UNIX timestamp. Unit: milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The name of the policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -26,7 +30,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The ID of the policy that you want to modify.
         /// 
-        /// > You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.
+        /// > You can call the [DescribeSceneDefensePolicies](https://help.aliyun.com/document_detail/159382.html) operation to query the IDs of all policies.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The start time of the policy. The value is a UNIX timestamp. Unit: milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -44,6 +52,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// 
         /// *   **promotion**: important activity
         /// *   **bypass**: all traffic forwarded
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Template")]
         [Validation(Required=false)]

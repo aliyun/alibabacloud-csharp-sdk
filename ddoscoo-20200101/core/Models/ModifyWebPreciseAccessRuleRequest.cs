@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The domain name of the website.
         /// 
-        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -60,6 +62,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         ///     *   **content**: the match content. This parameter is required and must be of the string type.
         /// 
         /// *   **header_name**: the HTTP header. This parameter is optional and must be of the string type. This parameter takes effect only when **field** is **header**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]

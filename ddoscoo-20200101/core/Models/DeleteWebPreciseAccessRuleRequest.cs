@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The domain name of the website.
         /// 
-        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// An array that consists of the names of rules to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleNames")]
         [Validation(Required=false)]

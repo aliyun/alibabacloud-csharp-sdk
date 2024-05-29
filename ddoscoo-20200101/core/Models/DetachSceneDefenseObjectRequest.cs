@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The protection asset that you want to remove from a policy. Separate multiple protection assets with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Objects")]
         [Validation(Required=false)]
@@ -26,7 +28,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The ID of the policy.
         /// 
-        /// > You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.
+        /// > You can call the [DescribeSceneDefensePolicies](https://help.aliyun.com/document_detail/159382.html) operation to query the IDs of all policies.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

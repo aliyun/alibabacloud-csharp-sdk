@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         ///     *   UDP 1900: SSDP reflection attacks
         ///     *   UDP 3389: RDP reflection attacks
         ///     *   UDP 11211: memcached reflection attacks
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -38,7 +40,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+        /// > You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

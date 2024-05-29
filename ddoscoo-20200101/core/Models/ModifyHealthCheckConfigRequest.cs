@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// 
         /// *   **tcp**
         /// *   **udp**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ForwardProtocol")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The forwarding port.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FrontendPort")]
         [Validation(Required=false)]
@@ -52,6 +56,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// *   **Up**: the number of consecutive successful health checks that must occur before declaring a port healthy, which must be of the INTEGER type. Valid values: **1** to **10**.
         /// 
         /// *   **Down**: the number of consecutive failed health checks that must occur before declaring a port unhealthy, which must be of the INTEGER type. Valid values: **1** to **10**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HealthCheck")]
         [Validation(Required=false)]
@@ -60,7 +66,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+        /// > You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

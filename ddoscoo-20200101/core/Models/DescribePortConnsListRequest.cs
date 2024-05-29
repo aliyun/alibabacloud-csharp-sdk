@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
         /// 
         /// > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -21,7 +23,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+        /// > You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The interval for returning data. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
@@ -52,6 +58,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
         /// 
         /// > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

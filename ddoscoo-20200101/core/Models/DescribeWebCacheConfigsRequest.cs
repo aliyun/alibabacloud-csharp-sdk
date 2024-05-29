@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
     public class DescribeWebCacheConfigsRequest : TeaModel {
         /// <summary>
         /// An array consisting of domain names for which you want to query the Static Page Caching configurations.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]

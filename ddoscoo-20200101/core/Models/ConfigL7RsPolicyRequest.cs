@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The domain name of the website.
         /// 
-        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query the domain names for which forwarding rules are configured.
+        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query the domain names for which forwarding rules are configured.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         ///     *   **Attribute**: the parameter for back-to-origin. This field is optional and must be a JSON object. The value contains the following field:
         /// 
         ///         *   **Weight**: the weight of the server. This field is optional and must be an integer. This field takes effect only when **ProxyMode** is set to **rr**. Valid values: **1** to **100**. Default value: **100**. An origin server with a higher weight receives more requests.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
         /// 
-        /// For more information about resource groups, see [Create a resource group](~~94485~~).
+        /// For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.
         /// 
         /// > The time must be in the latest 30 days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The number of the page to return. For example, to query the returned results on the first page, set the value to **1**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The number of entries to return on each page. Maximum value: **50**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -62,6 +68,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.
         /// 
         /// > The time must be in the latest 30 days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

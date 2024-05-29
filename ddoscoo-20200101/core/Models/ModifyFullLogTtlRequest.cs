@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The log storage duration of a website. Valid values: **30** to **180**. Unit: days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ttl")]
         [Validation(Required=false)]

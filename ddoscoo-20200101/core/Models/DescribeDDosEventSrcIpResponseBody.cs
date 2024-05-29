@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public List<DescribeDDosEventSrcIpResponseBodyIps> Ips { get; set; }
         public class DescribeDDosEventSrcIpResponseBodyIps : TeaModel {
             /// <summary>
-            /// The code or ID of the source region. For more information, see [Codes of administrative regions in China and codes of countries and areas](~~167926~~). For example, **110000** indicates Beijing, China, and **us** indicates the United States.
+            /// The code or ID of the source region. For more information, see [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html). For example, **110000** indicates Beijing, China, and **us** indicates the United States.
             /// </summary>
             [NameInMap("AreaId")]
             [Validation(Required=false)]

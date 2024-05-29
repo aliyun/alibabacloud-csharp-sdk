@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// The session persistence settings of the port forwarding rule. This parameter is a JSON string. The string contains the following fields:
         /// 
         /// *   **PersistenceTimeout**: The timeout period of session persistence. This field is required and must be of the integer type. Valid values: **30** to **3600**. Unit: seconds. Default value: **0**. A value of 0 indicates that session persistence is disabled.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// 
         /// *   **tcp**
         /// *   **udp**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ForwardProtocol")]
         [Validation(Required=false)]
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The forwarding port.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FrontendPort")]
         [Validation(Required=false)]
@@ -38,7 +44,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+        /// > You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

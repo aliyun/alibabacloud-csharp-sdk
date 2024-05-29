@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// The name of the RAM role to query. Set the value to **AliyunDDoSCOODefaultRole**, which indicates the default role of Anti-DDoS Pro or Anti-DDoS Premium.
         /// 
         /// > Anti-DDoS Pro or Anti-DDoS Premium uses the default role to access other cloud services.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]

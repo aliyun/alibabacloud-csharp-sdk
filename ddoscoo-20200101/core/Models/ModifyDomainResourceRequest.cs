@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
     public class ModifyDomainResourceRequest : TeaModel {
         /// <summary>
         /// The domain name that is added to the Anti-DDoS Pro or Anti-DDoS Premium instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// An array consisting of the IDs of instances that you want to associate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// An array that consists of the details of the protocol type and port number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProxyTypes")]
         [Validation(Required=false)]
@@ -51,6 +57,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public class ModifyDomainResourceRequestProxyTypes : TeaModel {
             /// <summary>
             /// An array that consists of port numbers.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ProxyPorts")]
             [Validation(Required=false)]
@@ -72,6 +80,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// An array that consists of the addresses of origin servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RealServers")]
         [Validation(Required=false)]
@@ -85,6 +95,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// *   **1**: domain name
         /// 
         ///     If you deploy proxies, such as a Web Application Firewall (WAF) instance, between the origin server and the Anti-DDoS Pro or Anti-DDoS Premium instance, set the value to 1. If you use the domain name, you must enter the address of the proxy, such as the CNAME of WAF.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RsType")]
         [Validation(Required=false)]

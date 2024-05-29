@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// *   **RealServers**: the IP addresses of the origin server. This field is required and must be a JSON array. You can specify up to 20 IP addresses.
         /// 
         /// > You can modify only the value of **RealServers** when you modify a port forwarding rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkRules")]
         [Validation(Required=false)]

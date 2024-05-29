@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// The abbreviation of the country or area. For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic. For example, **cn** indicates China, and **us** indicates the United States.
+            /// The abbreviation of the country or area. For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html) topic. For example, **cn** indicates China, and **us** indicates the United States.
             /// </summary>
             [NameInMap("CountryId")]
             [Validation(Required=false)]

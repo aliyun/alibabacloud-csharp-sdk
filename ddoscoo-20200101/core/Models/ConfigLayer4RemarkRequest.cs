@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// 
         /// This parameter is a string that consists of JSON arrays. Each element in a JSON array indicates a port forwarding rule. You can perform this operation only on one port forwarding rule at a time.
         /// 
-        /// > You can call the [DescribeNetworkRules](~~157484~~) to query existing port forwarding rules.
+        /// > You can call the [DescribeNetworkRules](https://help.aliyun.com/document_detail/157484.html) to query existing port forwarding rules.
         /// 
         /// Each port forwarding rule contains the following fields:
         /// 
@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// *   **Protocol**: the forwarding protocol. This field is required and must be of the STRING type. Valid values: **tcp** and **udp**.
         /// *   **FrontendPort**: the forwarding port. This field is required and must be of the INTEGER type.
         /// *   **Remark**: the remarks of the port forwarding rule. This field is required and must be of the STRING type. The value can contain letters, digits, and some special characters, such as `, . + - * / _`. The value can be up to 200 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Listeners")]
         [Validation(Required=false)]

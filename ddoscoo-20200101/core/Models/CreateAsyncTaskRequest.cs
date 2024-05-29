@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// If **TaskType** is set to **2**, the following field is returned:
         /// 
         /// *   **domain**: the domain name of the website, which must be of the STRING type. If you do not specify this field, the forwarding rules of all websites are exported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskParams")]
         [Validation(Required=false)]
@@ -40,6 +42,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// *   **4**: the task to export the anti-DDoS mitigation policies of an instance
         /// *   **5**: the task to download the blacklist for destination IP addresses of an instance
         /// *   **6**: the task to download the whitelist for destination IP addresses of an instance
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

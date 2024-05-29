@@ -37,6 +37,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * @param request AddAutoCcBlacklistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddAutoCcBlacklistResponse
+         */
         public AddAutoCcBlacklistResponse AddAutoCcBlacklistWithOptions(AddAutoCcBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -72,6 +77,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<AddAutoCcBlacklistResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request AddAutoCcBlacklistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddAutoCcBlacklistResponse
+         */
         public async Task<AddAutoCcBlacklistResponse> AddAutoCcBlacklistWithOptionsAsync(AddAutoCcBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -107,12 +117,20 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<AddAutoCcBlacklistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request AddAutoCcBlacklistRequest
+         * @return AddAutoCcBlacklistResponse
+         */
         public AddAutoCcBlacklistResponse AddAutoCcBlacklist(AddAutoCcBlacklistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddAutoCcBlacklistWithOptions(request, runtime);
         }
 
+        /**
+         * @param request AddAutoCcBlacklistRequest
+         * @return AddAutoCcBlacklistResponse
+         */
         public async Task<AddAutoCcBlacklistResponse> AddAutoCcBlacklistAsync(AddAutoCcBlacklistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -120,14 +138,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
-          * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the [EmptyAutoCcWhitelist](~~157505~~) operation to remove the IP addresses from the whitelist.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AddAutoCcWhitelistRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddAutoCcWhitelistResponse
+         * @summary Adds IP addresses to the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @description You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
+         * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the [EmptyAutoCcWhitelist](https://help.aliyun.com/document_detail/157505.html) operation to remove the IP addresses from the whitelist.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request AddAutoCcWhitelistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddAutoCcWhitelistResponse
          */
         public AddAutoCcWhitelistResponse AddAutoCcWhitelistWithOptions(AddAutoCcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -165,14 +185,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
-          * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the [EmptyAutoCcWhitelist](~~157505~~) operation to remove the IP addresses from the whitelist.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AddAutoCcWhitelistRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddAutoCcWhitelistResponse
+         * @summary Adds IP addresses to the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @description You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
+         * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the [EmptyAutoCcWhitelist](https://help.aliyun.com/document_detail/157505.html) operation to remove the IP addresses from the whitelist.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request AddAutoCcWhitelistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddAutoCcWhitelistResponse
          */
         public async Task<AddAutoCcWhitelistResponse> AddAutoCcWhitelistWithOptionsAsync(AddAutoCcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -210,13 +232,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
-          * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the [EmptyAutoCcWhitelist](~~157505~~) operation to remove the IP addresses from the whitelist.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AddAutoCcWhitelistRequest
-          * @return AddAutoCcWhitelistResponse
+         * @summary Adds IP addresses to the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @description You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
+         * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the [EmptyAutoCcWhitelist](https://help.aliyun.com/document_detail/157505.html) operation to remove the IP addresses from the whitelist.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request AddAutoCcWhitelistRequest
+         * @return AddAutoCcWhitelistResponse
          */
         public AddAutoCcWhitelistResponse AddAutoCcWhitelist(AddAutoCcWhitelistRequest request)
         {
@@ -225,13 +249,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
-          * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the [EmptyAutoCcWhitelist](~~157505~~) operation to remove the IP addresses from the whitelist.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request AddAutoCcWhitelistRequest
-          * @return AddAutoCcWhitelistResponse
+         * @summary Adds IP addresses to the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @description You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
+         * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the [EmptyAutoCcWhitelist](https://help.aliyun.com/document_detail/157505.html) operation to remove the IP addresses from the whitelist.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request AddAutoCcWhitelistRequest
+         * @return AddAutoCcWhitelistResponse
          */
         public async Task<AddAutoCcWhitelistResponse> AddAutoCcWhitelistAsync(AddAutoCcWhitelistRequest request)
         {
@@ -239,45 +265,54 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await AddAutoCcWhitelistWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Associates an SSL certificate with the forwarding rule of a website.
+         *
+         * @param request AssociateWebCertRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AssociateWebCertResponse
+         */
         public AssociateWebCertResponse AssociateWebCertWithOptions(AssociateWebCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cert))
-            {
-                query["Cert"] = request.Cert;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
-            {
-                query["CertId"] = request.CertId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertIdentifier))
-            {
-                query["CertIdentifier"] = request.CertIdentifier;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
-            {
-                query["CertName"] = request.CertName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRegion))
-            {
-                query["CertRegion"] = request.CertRegion;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
-            {
-                query["Domain"] = request.Domain;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
-            {
-                query["Key"] = request.Key;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cert))
+            {
+                body["Cert"] = request.Cert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                body["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertIdentifier))
+            {
+                body["CertIdentifier"] = request.CertIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                body["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRegion))
+            {
+                body["CertRegion"] = request.CertRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                body["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -294,45 +329,54 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<AssociateWebCertResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Associates an SSL certificate with the forwarding rule of a website.
+         *
+         * @param request AssociateWebCertRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AssociateWebCertResponse
+         */
         public async Task<AssociateWebCertResponse> AssociateWebCertWithOptionsAsync(AssociateWebCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cert))
-            {
-                query["Cert"] = request.Cert;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
-            {
-                query["CertId"] = request.CertId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertIdentifier))
-            {
-                query["CertIdentifier"] = request.CertIdentifier;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
-            {
-                query["CertName"] = request.CertName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRegion))
-            {
-                query["CertRegion"] = request.CertRegion;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
-            {
-                query["Domain"] = request.Domain;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
-            {
-                query["Key"] = request.Key;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cert))
+            {
+                body["Cert"] = request.Cert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                body["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertIdentifier))
+            {
+                body["CertIdentifier"] = request.CertIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                body["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRegion))
+            {
+                body["CertRegion"] = request.CertRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                body["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                body["Key"] = request.Key;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -349,18 +393,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<AssociateWebCertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Associates an SSL certificate with the forwarding rule of a website.
+         *
+         * @param request AssociateWebCertRequest
+         * @return AssociateWebCertResponse
+         */
         public AssociateWebCertResponse AssociateWebCert(AssociateWebCertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateWebCertWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Associates an SSL certificate with the forwarding rule of a website.
+         *
+         * @param request AssociateWebCertRequest
+         * @return AssociateWebCertResponse
+         */
         public async Task<AssociateWebCertResponse> AssociateWebCertAsync(AssociateWebCertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateWebCertWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Adds an object to a scenario-specific custom policy for protection.
+         *
+         * @param request AttachSceneDefenseObjectRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachSceneDefenseObjectResponse
+         */
         public AttachSceneDefenseObjectResponse AttachSceneDefenseObjectWithOptions(AttachSceneDefenseObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -396,6 +459,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<AttachSceneDefenseObjectResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Adds an object to a scenario-specific custom policy for protection.
+         *
+         * @param request AttachSceneDefenseObjectRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachSceneDefenseObjectResponse
+         */
         public async Task<AttachSceneDefenseObjectResponse> AttachSceneDefenseObjectWithOptionsAsync(AttachSceneDefenseObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -431,12 +501,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<AttachSceneDefenseObjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Adds an object to a scenario-specific custom policy for protection.
+         *
+         * @param request AttachSceneDefenseObjectRequest
+         * @return AttachSceneDefenseObjectResponse
+         */
         public AttachSceneDefenseObjectResponse AttachSceneDefenseObject(AttachSceneDefenseObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachSceneDefenseObjectWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Adds an object to a scenario-specific custom policy for protection.
+         *
+         * @param request AttachSceneDefenseObjectRequest
+         * @return AttachSceneDefenseObjectResponse
+         */
         public async Task<AttachSceneDefenseObjectResponse> AttachSceneDefenseObjectAsync(AttachSceneDefenseObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -444,11 +526,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
-          *
-          * @param request ConfigL7RsPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ConfigL7RsPolicyResponse
+         * @summary Configures a back-to-origin policy for the forwarding rule of a website.
+         *
+         * @description If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
+         *
+         * @param request ConfigL7RsPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigL7RsPolicyResponse
          */
         public ConfigL7RsPolicyResponse ConfigL7RsPolicyWithOptions(ConfigL7RsPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -490,11 +574,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
-          *
-          * @param request ConfigL7RsPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ConfigL7RsPolicyResponse
+         * @summary Configures a back-to-origin policy for the forwarding rule of a website.
+         *
+         * @description If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
+         *
+         * @param request ConfigL7RsPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigL7RsPolicyResponse
          */
         public async Task<ConfigL7RsPolicyResponse> ConfigL7RsPolicyWithOptionsAsync(ConfigL7RsPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -536,10 +622,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
-          *
-          * @param request ConfigL7RsPolicyRequest
-          * @return ConfigL7RsPolicyResponse
+         * @summary Configures a back-to-origin policy for the forwarding rule of a website.
+         *
+         * @description If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
+         *
+         * @param request ConfigL7RsPolicyRequest
+         * @return ConfigL7RsPolicyResponse
          */
         public ConfigL7RsPolicyResponse ConfigL7RsPolicy(ConfigL7RsPolicyRequest request)
         {
@@ -548,10 +636,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
-          *
-          * @param request ConfigL7RsPolicyRequest
-          * @return ConfigL7RsPolicyResponse
+         * @summary Configures a back-to-origin policy for the forwarding rule of a website.
+         *
+         * @description If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
+         *
+         * @param request ConfigL7RsPolicyRequest
+         * @return ConfigL7RsPolicyResponse
          */
         public async Task<ConfigL7RsPolicyResponse> ConfigL7RsPolicyAsync(ConfigL7RsPolicyRequest request)
         {
@@ -559,6 +649,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ConfigL7RsPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Specifies a threshold for the clean bandwidth of an Anti-DDoS Pro or Anti-DDoS premium instance. If the threshold is reached, rate limiting is triggered.
+         *
+         * @param request ConfigLayer4RealLimitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigLayer4RealLimitResponse
+         */
         public ConfigLayer4RealLimitResponse ConfigLayer4RealLimitWithOptions(ConfigLayer4RealLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -590,6 +687,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigLayer4RealLimitResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Specifies a threshold for the clean bandwidth of an Anti-DDoS Pro or Anti-DDoS premium instance. If the threshold is reached, rate limiting is triggered.
+         *
+         * @param request ConfigLayer4RealLimitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigLayer4RealLimitResponse
+         */
         public async Task<ConfigLayer4RealLimitResponse> ConfigLayer4RealLimitWithOptionsAsync(ConfigLayer4RealLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -621,18 +725,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigLayer4RealLimitResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Specifies a threshold for the clean bandwidth of an Anti-DDoS Pro or Anti-DDoS premium instance. If the threshold is reached, rate limiting is triggered.
+         *
+         * @param request ConfigLayer4RealLimitRequest
+         * @return ConfigLayer4RealLimitResponse
+         */
         public ConfigLayer4RealLimitResponse ConfigLayer4RealLimit(ConfigLayer4RealLimitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigLayer4RealLimitWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Specifies a threshold for the clean bandwidth of an Anti-DDoS Pro or Anti-DDoS premium instance. If the threshold is reached, rate limiting is triggered.
+         *
+         * @param request ConfigLayer4RealLimitRequest
+         * @return ConfigLayer4RealLimitResponse
+         */
         public async Task<ConfigLayer4RealLimitResponse> ConfigLayer4RealLimitAsync(ConfigLayer4RealLimitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigLayer4RealLimitWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Adds a description to a port forwarding rule.
+         *
+         * @param request ConfigLayer4RemarkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigLayer4RemarkResponse
+         */
         public ConfigLayer4RemarkResponse ConfigLayer4RemarkWithOptions(ConfigLayer4RemarkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -660,6 +783,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigLayer4RemarkResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Adds a description to a port forwarding rule.
+         *
+         * @param request ConfigLayer4RemarkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigLayer4RemarkResponse
+         */
         public async Task<ConfigLayer4RemarkResponse> ConfigLayer4RemarkWithOptionsAsync(ConfigLayer4RemarkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -687,18 +817,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigLayer4RemarkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Adds a description to a port forwarding rule.
+         *
+         * @param request ConfigLayer4RemarkRequest
+         * @return ConfigLayer4RemarkResponse
+         */
         public ConfigLayer4RemarkResponse ConfigLayer4Remark(ConfigLayer4RemarkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigLayer4RemarkWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Adds a description to a port forwarding rule.
+         *
+         * @param request ConfigLayer4RemarkRequest
+         * @return ConfigLayer4RemarkResponse
+         */
         public async Task<ConfigLayer4RemarkResponse> ConfigLayer4RemarkAsync(ConfigLayer4RemarkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigLayer4RemarkWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables the origin redundancy mode for a port forwarding rule.
+         *
+         * @param request ConfigLayer4RuleBakModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigLayer4RuleBakModeResponse
+         */
         public ConfigLayer4RuleBakModeResponse ConfigLayer4RuleBakModeWithOptions(ConfigLayer4RuleBakModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -730,6 +879,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigLayer4RuleBakModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables the origin redundancy mode for a port forwarding rule.
+         *
+         * @param request ConfigLayer4RuleBakModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigLayer4RuleBakModeResponse
+         */
         public async Task<ConfigLayer4RuleBakModeResponse> ConfigLayer4RuleBakModeWithOptionsAsync(ConfigLayer4RuleBakModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -761,18 +917,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigLayer4RuleBakModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables the origin redundancy mode for a port forwarding rule.
+         *
+         * @param request ConfigLayer4RuleBakModeRequest
+         * @return ConfigLayer4RuleBakModeResponse
+         */
         public ConfigLayer4RuleBakModeResponse ConfigLayer4RuleBakMode(ConfigLayer4RuleBakModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigLayer4RuleBakModeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables the origin redundancy mode for a port forwarding rule.
+         *
+         * @param request ConfigLayer4RuleBakModeRequest
+         * @return ConfigLayer4RuleBakModeResponse
+         */
         public async Task<ConfigLayer4RuleBakModeResponse> ConfigLayer4RuleBakModeAsync(ConfigLayer4RuleBakModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigLayer4RuleBakModeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Configures the IP addresses of the primary and secondary origin servers for a port forwarding rule.
+         *
+         * @param request ConfigLayer4RulePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigLayer4RulePolicyResponse
+         */
         public ConfigLayer4RulePolicyResponse ConfigLayer4RulePolicyWithOptions(ConfigLayer4RulePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -800,6 +975,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigLayer4RulePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures the IP addresses of the primary and secondary origin servers for a port forwarding rule.
+         *
+         * @param request ConfigLayer4RulePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigLayer4RulePolicyResponse
+         */
         public async Task<ConfigLayer4RulePolicyResponse> ConfigLayer4RulePolicyWithOptionsAsync(ConfigLayer4RulePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -827,18 +1009,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigLayer4RulePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures the IP addresses of the primary and secondary origin servers for a port forwarding rule.
+         *
+         * @param request ConfigLayer4RulePolicyRequest
+         * @return ConfigLayer4RulePolicyResponse
+         */
         public ConfigLayer4RulePolicyResponse ConfigLayer4RulePolicy(ConfigLayer4RulePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigLayer4RulePolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Configures the IP addresses of the primary and secondary origin servers for a port forwarding rule.
+         *
+         * @param request ConfigLayer4RulePolicyRequest
+         * @return ConfigLayer4RulePolicyResponse
+         */
         public async Task<ConfigLayer4RulePolicyResponse> ConfigLayer4RulePolicyAsync(ConfigLayer4RulePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigLayer4RulePolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Configures blocked locations for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request ConfigNetworkRegionBlockRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigNetworkRegionBlockResponse
+         */
         public ConfigNetworkRegionBlockResponse ConfigNetworkRegionBlockWithOptions(ConfigNetworkRegionBlockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -870,6 +1071,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigNetworkRegionBlockResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures blocked locations for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request ConfigNetworkRegionBlockRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigNetworkRegionBlockResponse
+         */
         public async Task<ConfigNetworkRegionBlockResponse> ConfigNetworkRegionBlockWithOptionsAsync(ConfigNetworkRegionBlockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -901,18 +1109,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigNetworkRegionBlockResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures blocked locations for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request ConfigNetworkRegionBlockRequest
+         * @return ConfigNetworkRegionBlockResponse
+         */
         public ConfigNetworkRegionBlockResponse ConfigNetworkRegionBlock(ConfigNetworkRegionBlockRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigNetworkRegionBlockWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Configures blocked locations for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request ConfigNetworkRegionBlockRequest
+         * @return ConfigNetworkRegionBlockResponse
+         */
         public async Task<ConfigNetworkRegionBlockResponse> ConfigNetworkRegionBlockAsync(ConfigNetworkRegionBlockRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigNetworkRegionBlockWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the IP addresses of the origin server that is configured in a port forwarding rule.
+         *
+         * @param request ConfigNetworkRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigNetworkRulesResponse
+         */
         public ConfigNetworkRulesResponse ConfigNetworkRulesWithOptions(ConfigNetworkRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -940,6 +1167,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigNetworkRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the IP addresses of the origin server that is configured in a port forwarding rule.
+         *
+         * @param request ConfigNetworkRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigNetworkRulesResponse
+         */
         public async Task<ConfigNetworkRulesResponse> ConfigNetworkRulesWithOptionsAsync(ConfigNetworkRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -967,12 +1201,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigNetworkRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the IP addresses of the origin server that is configured in a port forwarding rule.
+         *
+         * @param request ConfigNetworkRulesRequest
+         * @return ConfigNetworkRulesResponse
+         */
         public ConfigNetworkRulesResponse ConfigNetworkRules(ConfigNetworkRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigNetworkRulesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the IP addresses of the origin server that is configured in a port forwarding rule.
+         *
+         * @param request ConfigNetworkRulesRequest
+         * @return ConfigNetworkRulesResponse
+         */
         public async Task<ConfigNetworkRulesResponse> ConfigNetworkRulesAsync(ConfigNetworkRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -980,13 +1226,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ConfigUdpReflectRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ConfigUdpReflectResponse
+         * @summary Adds the filtering policies for UDP reflection attacks on an Anti-DDoS Pro or Anti-DDoS Premium instance to filter out the source ports of UDP traffic.
+         *
+         * @description You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ConfigUdpReflectRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigUdpReflectResponse
          */
         public ConfigUdpReflectResponse ConfigUdpReflectWithOptions(ConfigUdpReflectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1024,13 +1272,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ConfigUdpReflectRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ConfigUdpReflectResponse
+         * @summary Adds the filtering policies for UDP reflection attacks on an Anti-DDoS Pro or Anti-DDoS Premium instance to filter out the source ports of UDP traffic.
+         *
+         * @description You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ConfigUdpReflectRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigUdpReflectResponse
          */
         public async Task<ConfigUdpReflectResponse> ConfigUdpReflectWithOptionsAsync(ConfigUdpReflectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1068,12 +1318,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ConfigUdpReflectRequest
-          * @return ConfigUdpReflectResponse
+         * @summary Adds the filtering policies for UDP reflection attacks on an Anti-DDoS Pro or Anti-DDoS Premium instance to filter out the source ports of UDP traffic.
+         *
+         * @description You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ConfigUdpReflectRequest
+         * @return ConfigUdpReflectResponse
          */
         public ConfigUdpReflectResponse ConfigUdpReflect(ConfigUdpReflectRequest request)
         {
@@ -1082,12 +1334,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ConfigUdpReflectRequest
-          * @return ConfigUdpReflectResponse
+         * @summary Adds the filtering policies for UDP reflection attacks on an Anti-DDoS Pro or Anti-DDoS Premium instance to filter out the source ports of UDP traffic.
+         *
+         * @description You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ConfigUdpReflectRequest
+         * @return ConfigUdpReflectResponse
          */
         public async Task<ConfigUdpReflectResponse> ConfigUdpReflectAsync(ConfigUdpReflectRequest request)
         {
@@ -1095,6 +1349,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ConfigUdpReflectWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Configures the mode of the Frequency Control policy for a website.
+         *
+         * @param request ConfigWebCCTemplateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigWebCCTemplateResponse
+         */
         public ConfigWebCCTemplateResponse ConfigWebCCTemplateWithOptions(ConfigWebCCTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1130,6 +1391,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigWebCCTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures the mode of the Frequency Control policy for a website.
+         *
+         * @param request ConfigWebCCTemplateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigWebCCTemplateResponse
+         */
         public async Task<ConfigWebCCTemplateResponse> ConfigWebCCTemplateWithOptionsAsync(ConfigWebCCTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1165,18 +1433,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigWebCCTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures the mode of the Frequency Control policy for a website.
+         *
+         * @param request ConfigWebCCTemplateRequest
+         * @return ConfigWebCCTemplateResponse
+         */
         public ConfigWebCCTemplateResponse ConfigWebCCTemplate(ConfigWebCCTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigWebCCTemplateWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Configures the mode of the Frequency Control policy for a website.
+         *
+         * @param request ConfigWebCCTemplateRequest
+         * @return ConfigWebCCTemplateResponse
+         */
         public async Task<ConfigWebCCTemplateResponse> ConfigWebCCTemplateAsync(ConfigWebCCTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigWebCCTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Configures the IP address whitelist and blacklist for a website.
+         *
+         * @param request ConfigWebIpSetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigWebIpSetResponse
+         */
         public ConfigWebIpSetResponse ConfigWebIpSetWithOptions(ConfigWebIpSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1216,6 +1503,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigWebIpSetResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures the IP address whitelist and blacklist for a website.
+         *
+         * @param request ConfigWebIpSetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigWebIpSetResponse
+         */
         public async Task<ConfigWebIpSetResponse> ConfigWebIpSetWithOptionsAsync(ConfigWebIpSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1255,18 +1549,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ConfigWebIpSetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Configures the IP address whitelist and blacklist for a website.
+         *
+         * @param request ConfigWebIpSetRequest
+         * @return ConfigWebIpSetResponse
+         */
         public ConfigWebIpSetResponse ConfigWebIpSet(ConfigWebIpSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfigWebIpSetWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Configures the IP address whitelist and blacklist for a website.
+         *
+         * @param request ConfigWebIpSetRequest
+         * @return ConfigWebIpSetResponse
+         */
         public async Task<ConfigWebIpSetResponse> ConfigWebIpSetAsync(ConfigWebIpSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigWebIpSetWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates an asynchronous export task to export forwarding rules for websites, port forwarding rules, session persistence and health check settings, DDoS mitigation policies, the IP address blacklist, or the IP address whitelist.
+         *
+         * @param request CreateAsyncTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAsyncTaskResponse
+         */
         public CreateAsyncTaskResponse CreateAsyncTaskWithOptions(CreateAsyncTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1302,6 +1615,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateAsyncTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates an asynchronous export task to export forwarding rules for websites, port forwarding rules, session persistence and health check settings, DDoS mitigation policies, the IP address blacklist, or the IP address whitelist.
+         *
+         * @param request CreateAsyncTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAsyncTaskResponse
+         */
         public async Task<CreateAsyncTaskResponse> CreateAsyncTaskWithOptionsAsync(CreateAsyncTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1337,18 +1657,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateAsyncTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates an asynchronous export task to export forwarding rules for websites, port forwarding rules, session persistence and health check settings, DDoS mitigation policies, the IP address blacklist, or the IP address whitelist.
+         *
+         * @param request CreateAsyncTaskRequest
+         * @return CreateAsyncTaskResponse
+         */
         public CreateAsyncTaskResponse CreateAsyncTask(CreateAsyncTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAsyncTaskWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates an asynchronous export task to export forwarding rules for websites, port forwarding rules, session persistence and health check settings, DDoS mitigation policies, the IP address blacklist, or the IP address whitelist.
+         *
+         * @param request CreateAsyncTaskRequest
+         * @return CreateAsyncTaskResponse
+         */
         public async Task<CreateAsyncTaskResponse> CreateAsyncTaskAsync(CreateAsyncTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAsyncTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a forwarding rule for a website.
+         *
+         * @param request CreateDomainResourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDomainResourceResponse
+         */
         public CreateDomainResourceResponse CreateDomainResourceWithOptions(CreateDomainResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1396,6 +1735,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateDomainResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a forwarding rule for a website.
+         *
+         * @param request CreateDomainResourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDomainResourceResponse
+         */
         public async Task<CreateDomainResourceResponse> CreateDomainResourceWithOptionsAsync(CreateDomainResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1443,18 +1789,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateDomainResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a forwarding rule for a website.
+         *
+         * @param request CreateDomainResourceRequest
+         * @return CreateDomainResourceResponse
+         */
         public CreateDomainResourceResponse CreateDomainResource(CreateDomainResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDomainResourceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a forwarding rule for a website.
+         *
+         * @param request CreateDomainResourceRequest
+         * @return CreateDomainResourceResponse
+         */
         public async Task<CreateDomainResourceResponse> CreateDomainResourceAsync(CreateDomainResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDomainResourceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a port forwarding rule.
+         *
+         * @param request CreateNetworkRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateNetworkRulesResponse
+         */
         public CreateNetworkRulesResponse CreateNetworkRulesWithOptions(CreateNetworkRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1482,6 +1847,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateNetworkRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a port forwarding rule.
+         *
+         * @param request CreateNetworkRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateNetworkRulesResponse
+         */
         public async Task<CreateNetworkRulesResponse> CreateNetworkRulesWithOptionsAsync(CreateNetworkRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1509,12 +1881,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateNetworkRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a port forwarding rule.
+         *
+         * @param request CreateNetworkRulesRequest
+         * @return CreateNetworkRulesResponse
+         */
         public CreateNetworkRulesResponse CreateNetworkRules(CreateNetworkRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateNetworkRulesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a port forwarding rule.
+         *
+         * @param request CreateNetworkRulesRequest
+         * @return CreateNetworkRulesResponse
+         */
         public async Task<CreateNetworkRulesResponse> CreateNetworkRulesAsync(CreateNetworkRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1522,11 +1906,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request CreatePortRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreatePortResponse
+         * @summary Creates a port forwarding rule.
+         *
+         * @description You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request CreatePortRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreatePortResponse
          */
         public CreatePortResponse CreatePortWithOptions(CreatePortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1572,11 +1958,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request CreatePortRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreatePortResponse
+         * @summary Creates a port forwarding rule.
+         *
+         * @description You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request CreatePortRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreatePortResponse
          */
         public async Task<CreatePortResponse> CreatePortWithOptionsAsync(CreatePortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1622,10 +2010,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request CreatePortRequest
-          * @return CreatePortResponse
+         * @summary Creates a port forwarding rule.
+         *
+         * @description You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request CreatePortRequest
+         * @return CreatePortResponse
          */
         public CreatePortResponse CreatePort(CreatePortRequest request)
         {
@@ -1634,10 +2024,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request CreatePortRequest
-          * @return CreatePortResponse
+         * @summary Creates a port forwarding rule.
+         *
+         * @description You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request CreatePortRequest
+         * @return CreatePortResponse
          */
         public async Task<CreatePortResponse> CreatePortAsync(CreatePortRequest request)
         {
@@ -1645,6 +2037,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await CreatePortWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a scenario-specific custom policy.
+         *
+         * @param request CreateSceneDefensePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSceneDefensePolicyResponse
+         */
         public CreateSceneDefensePolicyResponse CreateSceneDefensePolicyWithOptions(CreateSceneDefensePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1684,6 +2083,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateSceneDefensePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a scenario-specific custom policy.
+         *
+         * @param request CreateSceneDefensePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSceneDefensePolicyResponse
+         */
         public async Task<CreateSceneDefensePolicyResponse> CreateSceneDefensePolicyWithOptionsAsync(CreateSceneDefensePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1723,18 +2129,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateSceneDefensePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a scenario-specific custom policy.
+         *
+         * @param request CreateSceneDefensePolicyRequest
+         * @return CreateSceneDefensePolicyResponse
+         */
         public CreateSceneDefensePolicyResponse CreateSceneDefensePolicy(CreateSceneDefensePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSceneDefensePolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a scenario-specific custom policy.
+         *
+         * @param request CreateSceneDefensePolicyRequest
+         * @return CreateSceneDefensePolicyResponse
+         */
         public async Task<CreateSceneDefensePolicyResponse> CreateSceneDefensePolicyAsync(CreateSceneDefensePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSceneDefensePolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a scheduling rule for Sec-Traffic Manager.
+         *
+         * @param request CreateSchedulerRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSchedulerRuleResponse
+         */
         public CreateSchedulerRuleResponse CreateSchedulerRuleWithOptions(CreateSchedulerRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1778,6 +2203,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateSchedulerRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a scheduling rule for Sec-Traffic Manager.
+         *
+         * @param request CreateSchedulerRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSchedulerRuleResponse
+         */
         public async Task<CreateSchedulerRuleResponse> CreateSchedulerRuleWithOptionsAsync(CreateSchedulerRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1821,12 +2253,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateSchedulerRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a scheduling rule for Sec-Traffic Manager.
+         *
+         * @param request CreateSchedulerRuleRequest
+         * @return CreateSchedulerRuleResponse
+         */
         public CreateSchedulerRuleResponse CreateSchedulerRule(CreateSchedulerRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSchedulerRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a scheduling rule for Sec-Traffic Manager.
+         *
+         * @param request CreateSchedulerRuleRequest
+         * @return CreateSchedulerRuleResponse
+         */
         public async Task<CreateSchedulerRuleResponse> CreateSchedulerRuleAsync(CreateSchedulerRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1834,14 +2278,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Pro instances at a time.
-          * > Anti-DDoS Premium does not support the tag feature.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateTagResourcesResponse
+         * @summary Adds tags to multiple Anti-DDoS Pro instances at a time.
+         *
+         * @description You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Pro instances at a time.
+         * > Anti-DDoS Premium does not support the tag feature.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTagResourcesResponse
          */
         public CreateTagResourcesResponse CreateTagResourcesWithOptions(CreateTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1887,14 +2333,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Pro instances at a time.
-          * > Anti-DDoS Premium does not support the tag feature.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateTagResourcesResponse
+         * @summary Adds tags to multiple Anti-DDoS Pro instances at a time.
+         *
+         * @description You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Pro instances at a time.
+         * > Anti-DDoS Premium does not support the tag feature.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTagResourcesResponse
          */
         public async Task<CreateTagResourcesResponse> CreateTagResourcesWithOptionsAsync(CreateTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1940,13 +2388,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Pro instances at a time.
-          * > Anti-DDoS Premium does not support the tag feature.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateTagResourcesRequest
-          * @return CreateTagResourcesResponse
+         * @summary Adds tags to multiple Anti-DDoS Pro instances at a time.
+         *
+         * @description You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Pro instances at a time.
+         * > Anti-DDoS Premium does not support the tag feature.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateTagResourcesRequest
+         * @return CreateTagResourcesResponse
          */
         public CreateTagResourcesResponse CreateTagResources(CreateTagResourcesRequest request)
         {
@@ -1955,13 +2405,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Pro instances at a time.
-          * > Anti-DDoS Premium does not support the tag feature.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateTagResourcesRequest
-          * @return CreateTagResourcesResponse
+         * @summary Adds tags to multiple Anti-DDoS Pro instances at a time.
+         *
+         * @description You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Pro instances at a time.
+         * > Anti-DDoS Premium does not support the tag feature.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateTagResourcesRequest
+         * @return CreateTagResourcesResponse
          */
         public async Task<CreateTagResourcesResponse> CreateTagResourcesAsync(CreateTagResourcesRequest request)
         {
@@ -1969,6 +2421,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await CreateTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request CreateWebCCRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWebCCRuleResponse
+         */
         public CreateWebCCRuleResponse CreateWebCCRuleWithOptions(CreateWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2028,6 +2485,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateWebCCRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request CreateWebCCRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWebCCRuleResponse
+         */
         public async Task<CreateWebCCRuleResponse> CreateWebCCRuleWithOptionsAsync(CreateWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2087,18 +2549,33 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateWebCCRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request CreateWebCCRuleRequest
+         * @return CreateWebCCRuleResponse
+         */
         public CreateWebCCRuleResponse CreateWebCCRule(CreateWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateWebCCRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @param request CreateWebCCRuleRequest
+         * @return CreateWebCCRuleResponse
+         */
         public async Task<CreateWebCCRuleResponse> CreateWebCCRuleAsync(CreateWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateWebCCRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a forwarding rule for a website.
+         *
+         * @param request CreateWebRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWebRuleResponse
+         */
         public CreateWebRuleResponse CreateWebRuleWithOptions(CreateWebRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2150,6 +2627,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateWebRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a forwarding rule for a website.
+         *
+         * @param request CreateWebRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWebRuleResponse
+         */
         public async Task<CreateWebRuleResponse> CreateWebRuleWithOptionsAsync(CreateWebRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2201,18 +2685,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateWebRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a forwarding rule for a website.
+         *
+         * @param request CreateWebRuleRequest
+         * @return CreateWebRuleResponse
+         */
         public CreateWebRuleResponse CreateWebRule(CreateWebRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateWebRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a forwarding rule for a website.
+         *
+         * @param request CreateWebRuleRequest
+         * @return CreateWebRuleResponse
+         */
         public async Task<CreateWebRuleResponse> CreateWebRuleAsync(CreateWebRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateWebRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes an asynchronous export task.
+         *
+         * @param request DeleteAsyncTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAsyncTaskResponse
+         */
         public DeleteAsyncTaskResponse DeleteAsyncTaskWithOptions(DeleteAsyncTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2244,6 +2747,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteAsyncTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes an asynchronous export task.
+         *
+         * @param request DeleteAsyncTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAsyncTaskResponse
+         */
         public async Task<DeleteAsyncTaskResponse> DeleteAsyncTaskWithOptionsAsync(DeleteAsyncTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2275,18 +2785,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteAsyncTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes an asynchronous export task.
+         *
+         * @param request DeleteAsyncTaskRequest
+         * @return DeleteAsyncTaskResponse
+         */
         public DeleteAsyncTaskResponse DeleteAsyncTask(DeleteAsyncTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAsyncTaskWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes an asynchronous export task.
+         *
+         * @param request DeleteAsyncTaskRequest
+         * @return DeleteAsyncTaskResponse
+         */
         public async Task<DeleteAsyncTaskResponse> DeleteAsyncTaskAsync(DeleteAsyncTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAsyncTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Removes IP addresses from the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DeleteAutoCcBlacklistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAutoCcBlacklistResponse
+         */
         public DeleteAutoCcBlacklistResponse DeleteAutoCcBlacklistWithOptions(DeleteAutoCcBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2318,6 +2847,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteAutoCcBlacklistResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes IP addresses from the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DeleteAutoCcBlacklistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAutoCcBlacklistResponse
+         */
         public async Task<DeleteAutoCcBlacklistResponse> DeleteAutoCcBlacklistWithOptionsAsync(DeleteAutoCcBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2349,18 +2885,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteAutoCcBlacklistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes IP addresses from the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DeleteAutoCcBlacklistRequest
+         * @return DeleteAutoCcBlacklistResponse
+         */
         public DeleteAutoCcBlacklistResponse DeleteAutoCcBlacklist(DeleteAutoCcBlacklistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAutoCcBlacklistWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Removes IP addresses from the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DeleteAutoCcBlacklistRequest
+         * @return DeleteAutoCcBlacklistResponse
+         */
         public async Task<DeleteAutoCcBlacklistResponse> DeleteAutoCcBlacklistAsync(DeleteAutoCcBlacklistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAutoCcBlacklistWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Removes IP addresses from the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DeleteAutoCcWhitelistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAutoCcWhitelistResponse
+         */
         public DeleteAutoCcWhitelistResponse DeleteAutoCcWhitelistWithOptions(DeleteAutoCcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2392,6 +2947,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteAutoCcWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes IP addresses from the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DeleteAutoCcWhitelistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAutoCcWhitelistResponse
+         */
         public async Task<DeleteAutoCcWhitelistResponse> DeleteAutoCcWhitelistWithOptionsAsync(DeleteAutoCcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2423,18 +2985,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteAutoCcWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes IP addresses from the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DeleteAutoCcWhitelistRequest
+         * @return DeleteAutoCcWhitelistResponse
+         */
         public DeleteAutoCcWhitelistResponse DeleteAutoCcWhitelist(DeleteAutoCcWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAutoCcWhitelistWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Removes IP addresses from the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DeleteAutoCcWhitelistRequest
+         * @return DeleteAutoCcWhitelistResponse
+         */
         public async Task<DeleteAutoCcWhitelistResponse> DeleteAutoCcWhitelistAsync(DeleteAutoCcWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAutoCcWhitelistWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a specified forwarding rule of a website.
+         *
+         * @param request DeleteDomainResourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDomainResourceResponse
+         */
         public DeleteDomainResourceResponse DeleteDomainResourceWithOptions(DeleteDomainResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2462,6 +3043,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteDomainResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a specified forwarding rule of a website.
+         *
+         * @param request DeleteDomainResourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDomainResourceResponse
+         */
         public async Task<DeleteDomainResourceResponse> DeleteDomainResourceWithOptionsAsync(DeleteDomainResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2489,18 +3077,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteDomainResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a specified forwarding rule of a website.
+         *
+         * @param request DeleteDomainResourceRequest
+         * @return DeleteDomainResourceResponse
+         */
         public DeleteDomainResourceResponse DeleteDomainResource(DeleteDomainResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDomainResourceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a specified forwarding rule of a website.
+         *
+         * @param request DeleteDomainResourceRequest
+         * @return DeleteDomainResourceResponse
+         */
         public async Task<DeleteDomainResourceResponse> DeleteDomainResourceAsync(DeleteDomainResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDomainResourceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a port forwarding rule. You can delete only one port forwarding rule at a time.
+         *
+         * @param request DeleteNetworkRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNetworkRuleResponse
+         */
         public DeleteNetworkRuleResponse DeleteNetworkRuleWithOptions(DeleteNetworkRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2528,6 +3135,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteNetworkRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a port forwarding rule. You can delete only one port forwarding rule at a time.
+         *
+         * @param request DeleteNetworkRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNetworkRuleResponse
+         */
         public async Task<DeleteNetworkRuleResponse> DeleteNetworkRuleWithOptionsAsync(DeleteNetworkRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2555,12 +3169,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteNetworkRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a port forwarding rule. You can delete only one port forwarding rule at a time.
+         *
+         * @param request DeleteNetworkRuleRequest
+         * @return DeleteNetworkRuleResponse
+         */
         public DeleteNetworkRuleResponse DeleteNetworkRule(DeleteNetworkRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNetworkRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a port forwarding rule. You can delete only one port forwarding rule at a time.
+         *
+         * @param request DeleteNetworkRuleRequest
+         * @return DeleteNetworkRuleResponse
+         */
         public async Task<DeleteNetworkRuleResponse> DeleteNetworkRuleAsync(DeleteNetworkRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2568,12 +3194,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.
-          * > You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request DeletePortRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeletePortResponse
+         * @summary Deletes the specified port forwarding rule.
+         *
+         * @description After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.
+         * > You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request DeletePortRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeletePortResponse
          */
         public DeletePortResponse DeletePortWithOptions(DeletePortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2619,12 +3247,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.
-          * > You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request DeletePortRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeletePortResponse
+         * @summary Deletes the specified port forwarding rule.
+         *
+         * @description After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.
+         * > You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request DeletePortRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeletePortResponse
          */
         public async Task<DeletePortResponse> DeletePortWithOptionsAsync(DeletePortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2670,11 +3300,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.
-          * > You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request DeletePortRequest
-          * @return DeletePortResponse
+         * @summary Deletes the specified port forwarding rule.
+         *
+         * @description After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.
+         * > You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request DeletePortRequest
+         * @return DeletePortResponse
          */
         public DeletePortResponse DeletePort(DeletePortRequest request)
         {
@@ -2683,11 +3315,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.
-          * > You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request DeletePortRequest
-          * @return DeletePortResponse
+         * @summary Deletes the specified port forwarding rule.
+         *
+         * @description After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.
+         * > You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request DeletePortRequest
+         * @return DeletePortResponse
          */
         public async Task<DeletePortResponse> DeletePortAsync(DeletePortRequest request)
         {
@@ -2695,6 +3329,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DeletePortWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a scenario-specific custom policy.
+         *
+         * @param request DeleteSceneDefensePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSceneDefensePolicyResponse
+         */
         public DeleteSceneDefensePolicyResponse DeleteSceneDefensePolicyWithOptions(DeleteSceneDefensePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2722,6 +3363,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteSceneDefensePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a scenario-specific custom policy.
+         *
+         * @param request DeleteSceneDefensePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSceneDefensePolicyResponse
+         */
         public async Task<DeleteSceneDefensePolicyResponse> DeleteSceneDefensePolicyWithOptionsAsync(DeleteSceneDefensePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2749,18 +3397,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteSceneDefensePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a scenario-specific custom policy.
+         *
+         * @param request DeleteSceneDefensePolicyRequest
+         * @return DeleteSceneDefensePolicyResponse
+         */
         public DeleteSceneDefensePolicyResponse DeleteSceneDefensePolicy(DeleteSceneDefensePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSceneDefensePolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a scenario-specific custom policy.
+         *
+         * @param request DeleteSceneDefensePolicyRequest
+         * @return DeleteSceneDefensePolicyResponse
+         */
         public async Task<DeleteSceneDefensePolicyResponse> DeleteSceneDefensePolicyAsync(DeleteSceneDefensePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSceneDefensePolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a scheduling rule of Sec-Traffic Manager.
+         *
+         * @param request DeleteSchedulerRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSchedulerRuleResponse
+         */
         public DeleteSchedulerRuleResponse DeleteSchedulerRuleWithOptions(DeleteSchedulerRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2792,6 +3459,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteSchedulerRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a scheduling rule of Sec-Traffic Manager.
+         *
+         * @param request DeleteSchedulerRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSchedulerRuleResponse
+         */
         public async Task<DeleteSchedulerRuleResponse> DeleteSchedulerRuleWithOptionsAsync(DeleteSchedulerRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2823,12 +3497,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteSchedulerRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a scheduling rule of Sec-Traffic Manager.
+         *
+         * @param request DeleteSchedulerRuleRequest
+         * @return DeleteSchedulerRuleResponse
+         */
         public DeleteSchedulerRuleResponse DeleteSchedulerRule(DeleteSchedulerRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSchedulerRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a scheduling rule of Sec-Traffic Manager.
+         *
+         * @param request DeleteSchedulerRuleRequest
+         * @return DeleteSchedulerRuleResponse
+         */
         public async Task<DeleteSchedulerRuleResponse> DeleteSchedulerRuleAsync(DeleteSchedulerRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2836,14 +3522,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DeleteTagResources operation to remove tags from Anti-DDoS Pro instances.
-          * > Only Anti-DDoS Pro supports tags.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteTagResourcesResponse
+         * @summary Removes tags from Anti-DDoS Pro instances.
+         *
+         * @description You can call the DeleteTagResources operation to remove tags from Anti-DDoS Pro instances.
+         * > Only Anti-DDoS Pro supports tags.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteTagResourcesResponse
          */
         public DeleteTagResourcesResponse DeleteTagResourcesWithOptions(DeleteTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2893,14 +3581,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DeleteTagResources operation to remove tags from Anti-DDoS Pro instances.
-          * > Only Anti-DDoS Pro supports tags.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteTagResourcesResponse
+         * @summary Removes tags from Anti-DDoS Pro instances.
+         *
+         * @description You can call the DeleteTagResources operation to remove tags from Anti-DDoS Pro instances.
+         * > Only Anti-DDoS Pro supports tags.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteTagResourcesResponse
          */
         public async Task<DeleteTagResourcesResponse> DeleteTagResourcesWithOptionsAsync(DeleteTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2950,13 +3640,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DeleteTagResources operation to remove tags from Anti-DDoS Pro instances.
-          * > Only Anti-DDoS Pro supports tags.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteTagResourcesRequest
-          * @return DeleteTagResourcesResponse
+         * @summary Removes tags from Anti-DDoS Pro instances.
+         *
+         * @description You can call the DeleteTagResources operation to remove tags from Anti-DDoS Pro instances.
+         * > Only Anti-DDoS Pro supports tags.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteTagResourcesRequest
+         * @return DeleteTagResourcesResponse
          */
         public DeleteTagResourcesResponse DeleteTagResources(DeleteTagResourcesRequest request)
         {
@@ -2965,13 +3657,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DeleteTagResources operation to remove tags from Anti-DDoS Pro instances.
-          * > Only Anti-DDoS Pro supports tags.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteTagResourcesRequest
-          * @return DeleteTagResourcesResponse
+         * @summary Removes tags from Anti-DDoS Pro instances.
+         *
+         * @description You can call the DeleteTagResources operation to remove tags from Anti-DDoS Pro instances.
+         * > Only Anti-DDoS Pro supports tags.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteTagResourcesRequest
+         * @return DeleteTagResourcesResponse
          */
         public async Task<DeleteTagResourcesResponse> DeleteTagResourcesAsync(DeleteTagResourcesRequest request)
         {
@@ -2979,6 +3673,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DeleteTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a custom frequency control rule of a website.
+         *
+         * @param request DeleteWebCCRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebCCRuleResponse
+         */
         public DeleteWebCCRuleResponse DeleteWebCCRuleWithOptions(DeleteWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3014,6 +3715,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteWebCCRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a custom frequency control rule of a website.
+         *
+         * @param request DeleteWebCCRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebCCRuleResponse
+         */
         public async Task<DeleteWebCCRuleResponse> DeleteWebCCRuleWithOptionsAsync(DeleteWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3049,12 +3757,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteWebCCRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a custom frequency control rule of a website.
+         *
+         * @param request DeleteWebCCRuleRequest
+         * @return DeleteWebCCRuleResponse
+         */
         public DeleteWebCCRuleResponse DeleteWebCCRule(DeleteWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteWebCCRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a custom frequency control rule of a website.
+         *
+         * @param request DeleteWebCCRuleRequest
+         * @return DeleteWebCCRuleResponse
+         */
         public async Task<DeleteWebCCRuleResponse> DeleteWebCCRuleAsync(DeleteWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3062,13 +3782,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteWebCacheCustomRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteWebCacheCustomRuleResponse
+         * @summary Deletes the custom rules of the Static Page Caching policy for a website.
+         *
+         * @description You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteWebCacheCustomRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebCacheCustomRuleResponse
          */
         public DeleteWebCacheCustomRuleResponse DeleteWebCacheCustomRuleWithOptions(DeleteWebCacheCustomRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3106,13 +3828,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteWebCacheCustomRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteWebCacheCustomRuleResponse
+         * @summary Deletes the custom rules of the Static Page Caching policy for a website.
+         *
+         * @description You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteWebCacheCustomRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebCacheCustomRuleResponse
          */
         public async Task<DeleteWebCacheCustomRuleResponse> DeleteWebCacheCustomRuleWithOptionsAsync(DeleteWebCacheCustomRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3150,12 +3874,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteWebCacheCustomRuleRequest
-          * @return DeleteWebCacheCustomRuleResponse
+         * @summary Deletes the custom rules of the Static Page Caching policy for a website.
+         *
+         * @description You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteWebCacheCustomRuleRequest
+         * @return DeleteWebCacheCustomRuleResponse
          */
         public DeleteWebCacheCustomRuleResponse DeleteWebCacheCustomRule(DeleteWebCacheCustomRuleRequest request)
         {
@@ -3164,12 +3890,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteWebCacheCustomRuleRequest
-          * @return DeleteWebCacheCustomRuleResponse
+         * @summary Deletes the custom rules of the Static Page Caching policy for a website.
+         *
+         * @description You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteWebCacheCustomRuleRequest
+         * @return DeleteWebCacheCustomRuleResponse
          */
         public async Task<DeleteWebCacheCustomRuleResponse> DeleteWebCacheCustomRuleAsync(DeleteWebCacheCustomRuleRequest request)
         {
@@ -3177,6 +3905,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DeleteWebCacheCustomRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes the accurate access control rules that are created for a website.
+         *
+         * @param request DeleteWebPreciseAccessRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebPreciseAccessRuleResponse
+         */
         public DeleteWebPreciseAccessRuleResponse DeleteWebPreciseAccessRuleWithOptions(DeleteWebPreciseAccessRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3212,6 +3947,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteWebPreciseAccessRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes the accurate access control rules that are created for a website.
+         *
+         * @param request DeleteWebPreciseAccessRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebPreciseAccessRuleResponse
+         */
         public async Task<DeleteWebPreciseAccessRuleResponse> DeleteWebPreciseAccessRuleWithOptionsAsync(DeleteWebPreciseAccessRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3247,18 +3989,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteWebPreciseAccessRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes the accurate access control rules that are created for a website.
+         *
+         * @param request DeleteWebPreciseAccessRuleRequest
+         * @return DeleteWebPreciseAccessRuleResponse
+         */
         public DeleteWebPreciseAccessRuleResponse DeleteWebPreciseAccessRule(DeleteWebPreciseAccessRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteWebPreciseAccessRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes the accurate access control rules that are created for a website.
+         *
+         * @param request DeleteWebPreciseAccessRuleRequest
+         * @return DeleteWebPreciseAccessRuleResponse
+         */
         public async Task<DeleteWebPreciseAccessRuleResponse> DeleteWebPreciseAccessRuleAsync(DeleteWebPreciseAccessRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteWebPreciseAccessRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a forwarding rule of a website.
+         *
+         * @param request DeleteWebRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebRuleResponse
+         */
         public DeleteWebRuleResponse DeleteWebRuleWithOptions(DeleteWebRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3290,6 +4051,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteWebRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a forwarding rule of a website.
+         *
+         * @param request DeleteWebRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebRuleResponse
+         */
         public async Task<DeleteWebRuleResponse> DeleteWebRuleWithOptionsAsync(DeleteWebRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3321,12 +4089,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteWebRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a forwarding rule of a website.
+         *
+         * @param request DeleteWebRuleRequest
+         * @return DeleteWebRuleResponse
+         */
         public DeleteWebRuleResponse DeleteWebRule(DeleteWebRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteWebRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a forwarding rule of a website.
+         *
+         * @param request DeleteWebRuleRequest
+         * @return DeleteWebRuleResponse
+         */
         public async Task<DeleteWebRuleResponse> DeleteWebRuleAsync(DeleteWebRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3334,13 +4114,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeAsyncTasksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAsyncTasksResponse
+         * @summary Queries the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
+         *
+         * @description You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeAsyncTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAsyncTasksResponse
          */
         public DescribeAsyncTasksResponse DescribeAsyncTasksWithOptions(DescribeAsyncTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3378,13 +4160,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeAsyncTasksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAsyncTasksResponse
+         * @summary Queries the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
+         *
+         * @description You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeAsyncTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAsyncTasksResponse
          */
         public async Task<DescribeAsyncTasksResponse> DescribeAsyncTasksWithOptionsAsync(DescribeAsyncTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3422,12 +4206,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeAsyncTasksRequest
-          * @return DescribeAsyncTasksResponse
+         * @summary Queries the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
+         *
+         * @description You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeAsyncTasksRequest
+         * @return DescribeAsyncTasksResponse
          */
         public DescribeAsyncTasksResponse DescribeAsyncTasks(DescribeAsyncTasksRequest request)
         {
@@ -3436,12 +4222,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeAsyncTasksRequest
-          * @return DescribeAsyncTasksResponse
+         * @summary Queries the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
+         *
+         * @description You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeAsyncTasksRequest
+         * @return DescribeAsyncTasksResponse
          */
         public async Task<DescribeAsyncTasksResponse> DescribeAsyncTasksAsync(DescribeAsyncTasksRequest request)
         {
@@ -3449,6 +4237,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeAsyncTasksWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the peak QPS of DDoS attacks within the specific period of time.
+         *
+         * @param request DescribeAttackAnalysisMaxQpsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAttackAnalysisMaxQpsResponse
+         */
         public DescribeAttackAnalysisMaxQpsResponse DescribeAttackAnalysisMaxQpsWithOptions(DescribeAttackAnalysisMaxQpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3480,6 +4275,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAttackAnalysisMaxQpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the peak QPS of DDoS attacks within the specific period of time.
+         *
+         * @param request DescribeAttackAnalysisMaxQpsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAttackAnalysisMaxQpsResponse
+         */
         public async Task<DescribeAttackAnalysisMaxQpsResponse> DescribeAttackAnalysisMaxQpsWithOptionsAsync(DescribeAttackAnalysisMaxQpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3511,18 +4313,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAttackAnalysisMaxQpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the peak QPS of DDoS attacks within the specific period of time.
+         *
+         * @param request DescribeAttackAnalysisMaxQpsRequest
+         * @return DescribeAttackAnalysisMaxQpsResponse
+         */
         public DescribeAttackAnalysisMaxQpsResponse DescribeAttackAnalysisMaxQps(DescribeAttackAnalysisMaxQpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAttackAnalysisMaxQpsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the peak QPS of DDoS attacks within the specific period of time.
+         *
+         * @param request DescribeAttackAnalysisMaxQpsRequest
+         * @return DescribeAttackAnalysisMaxQpsResponse
+         */
         public async Task<DescribeAttackAnalysisMaxQpsResponse> DescribeAttackAnalysisMaxQpsAsync(DescribeAttackAnalysisMaxQpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAttackAnalysisMaxQpsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries IP addresses in the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeAutoCcBlacklistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAutoCcBlacklistResponse
+         */
         public DescribeAutoCcBlacklistResponse DescribeAutoCcBlacklistWithOptions(DescribeAutoCcBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3562,6 +4383,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAutoCcBlacklistResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries IP addresses in the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeAutoCcBlacklistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAutoCcBlacklistResponse
+         */
         public async Task<DescribeAutoCcBlacklistResponse> DescribeAutoCcBlacklistWithOptionsAsync(DescribeAutoCcBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3601,18 +4429,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAutoCcBlacklistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries IP addresses in the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeAutoCcBlacklistRequest
+         * @return DescribeAutoCcBlacklistResponse
+         */
         public DescribeAutoCcBlacklistResponse DescribeAutoCcBlacklist(DescribeAutoCcBlacklistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAutoCcBlacklistWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries IP addresses in the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeAutoCcBlacklistRequest
+         * @return DescribeAutoCcBlacklistResponse
+         */
         public async Task<DescribeAutoCcBlacklistResponse> DescribeAutoCcBlacklistAsync(DescribeAutoCcBlacklistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAutoCcBlacklistWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the numbers of IP addresses in the IP address whitelist and IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeAutoCcListCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAutoCcListCountResponse
+         */
         public DescribeAutoCcListCountResponse DescribeAutoCcListCountWithOptions(DescribeAutoCcListCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3644,6 +4491,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAutoCcListCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the numbers of IP addresses in the IP address whitelist and IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeAutoCcListCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAutoCcListCountResponse
+         */
         public async Task<DescribeAutoCcListCountResponse> DescribeAutoCcListCountWithOptionsAsync(DescribeAutoCcListCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3675,18 +4529,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAutoCcListCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the numbers of IP addresses in the IP address whitelist and IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeAutoCcListCountRequest
+         * @return DescribeAutoCcListCountResponse
+         */
         public DescribeAutoCcListCountResponse DescribeAutoCcListCount(DescribeAutoCcListCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAutoCcListCountWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the numbers of IP addresses in the IP address whitelist and IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeAutoCcListCountRequest
+         * @return DescribeAutoCcListCountResponse
+         */
         public async Task<DescribeAutoCcListCountResponse> DescribeAutoCcListCountAsync(DescribeAutoCcListCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAutoCcListCountWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries IP addresses in the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeAutoCcWhitelistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAutoCcWhitelistResponse
+         */
         public DescribeAutoCcWhitelistResponse DescribeAutoCcWhitelistWithOptions(DescribeAutoCcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3726,6 +4599,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAutoCcWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries IP addresses in the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeAutoCcWhitelistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAutoCcWhitelistResponse
+         */
         public async Task<DescribeAutoCcWhitelistResponse> DescribeAutoCcWhitelistWithOptionsAsync(DescribeAutoCcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3765,18 +4645,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAutoCcWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries IP addresses in the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeAutoCcWhitelistRequest
+         * @return DescribeAutoCcWhitelistResponse
+         */
         public DescribeAutoCcWhitelistResponse DescribeAutoCcWhitelist(DescribeAutoCcWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAutoCcWhitelistWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries IP addresses in the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeAutoCcWhitelistRequest
+         * @return DescribeAutoCcWhitelistResponse
+         */
         public async Task<DescribeAutoCcWhitelistResponse> DescribeAutoCcWhitelistAsync(DescribeAutoCcWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAutoCcWhitelistWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the back-to-origin CIDR blocks of Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request DescribeBackSourceCidrRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackSourceCidrResponse
+         */
         public DescribeBackSourceCidrResponse DescribeBackSourceCidrWithOptions(DescribeBackSourceCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3812,6 +4711,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeBackSourceCidrResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the back-to-origin CIDR blocks of Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request DescribeBackSourceCidrRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackSourceCidrResponse
+         */
         public async Task<DescribeBackSourceCidrResponse> DescribeBackSourceCidrWithOptionsAsync(DescribeBackSourceCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3847,18 +4753,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeBackSourceCidrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the back-to-origin CIDR blocks of Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request DescribeBackSourceCidrRequest
+         * @return DescribeBackSourceCidrResponse
+         */
         public DescribeBackSourceCidrResponse DescribeBackSourceCidr(DescribeBackSourceCidrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackSourceCidrWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the back-to-origin CIDR blocks of Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request DescribeBackSourceCidrRequest
+         * @return DescribeBackSourceCidrResponse
+         */
         public async Task<DescribeBackSourceCidrResponse> DescribeBackSourceCidrAsync(DescribeBackSourceCidrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackSourceCidrWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the blackhole filtering status of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribeBlackholeStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBlackholeStatusResponse
+         */
         public DescribeBlackholeStatusResponse DescribeBlackholeStatusWithOptions(DescribeBlackholeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3886,6 +4811,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeBlackholeStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the blackhole filtering status of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribeBlackholeStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBlackholeStatusResponse
+         */
         public async Task<DescribeBlackholeStatusResponse> DescribeBlackholeStatusWithOptionsAsync(DescribeBlackholeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3913,12 +4845,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeBlackholeStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the blackhole filtering status of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribeBlackholeStatusRequest
+         * @return DescribeBlackholeStatusResponse
+         */
         public DescribeBlackholeStatusResponse DescribeBlackholeStatus(DescribeBlackholeStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBlackholeStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the blackhole filtering status of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribeBlackholeStatusRequest
+         * @return DescribeBlackholeStatusResponse
+         */
         public async Task<DescribeBlackholeStatusResponse> DescribeBlackholeStatusAsync(DescribeBlackholeStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3926,14 +4870,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * This operation is used to query the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
-          * > This operation is suitable only for Anti-DDoS Pro.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeBlockStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeBlockStatusResponse
+         * @summary Queries the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
+         *
+         * @description This operation is used to query the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
+         * > This operation is suitable only for Anti-DDoS Pro.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeBlockStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBlockStatusResponse
          */
         public DescribeBlockStatusResponse DescribeBlockStatusWithOptions(DescribeBlockStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3967,14 +4913,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * This operation is used to query the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
-          * > This operation is suitable only for Anti-DDoS Pro.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeBlockStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeBlockStatusResponse
+         * @summary Queries the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
+         *
+         * @description This operation is used to query the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
+         * > This operation is suitable only for Anti-DDoS Pro.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeBlockStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBlockStatusResponse
          */
         public async Task<DescribeBlockStatusResponse> DescribeBlockStatusWithOptionsAsync(DescribeBlockStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4008,13 +4956,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * This operation is used to query the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
-          * > This operation is suitable only for Anti-DDoS Pro.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeBlockStatusRequest
-          * @return DescribeBlockStatusResponse
+         * @summary Queries the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
+         *
+         * @description This operation is used to query the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
+         * > This operation is suitable only for Anti-DDoS Pro.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeBlockStatusRequest
+         * @return DescribeBlockStatusResponse
          */
         public DescribeBlockStatusResponse DescribeBlockStatus(DescribeBlockStatusRequest request)
         {
@@ -4023,13 +4973,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * This operation is used to query the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
-          * > This operation is suitable only for Anti-DDoS Pro.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeBlockStatusRequest
-          * @return DescribeBlockStatusResponse
+         * @summary Queries the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
+         *
+         * @description This operation is used to query the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
+         * > This operation is suitable only for Anti-DDoS Pro.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeBlockStatusRequest
+         * @return DescribeBlockStatusResponse
          */
         public async Task<DescribeBlockStatusResponse> DescribeBlockStatusAsync(DescribeBlockStatusRequest request)
         {
@@ -4037,6 +4989,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeBlockStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the certificate information about a website.
+         *
+         * @param request DescribeCertsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCertsResponse
+         */
         public DescribeCertsResponse DescribeCertsWithOptions(DescribeCertsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4068,6 +5027,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeCertsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the certificate information about a website.
+         *
+         * @param request DescribeCertsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCertsResponse
+         */
         public async Task<DescribeCertsResponse> DescribeCertsWithOptionsAsync(DescribeCertsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4099,18 +5065,35 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeCertsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the certificate information about a website.
+         *
+         * @param request DescribeCertsRequest
+         * @return DescribeCertsResponse
+         */
         public DescribeCertsResponse DescribeCerts(DescribeCertsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCertsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the certificate information about a website.
+         *
+         * @param request DescribeCertsRequest
+         * @return DescribeCertsResponse
+         */
         public async Task<DescribeCertsResponse> DescribeCertsAsync(DescribeCertsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCertsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DescribeCnameReusesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCnameReusesResponse
+         */
         public DescribeCnameReusesResponse DescribeCnameReusesWithOptions(DescribeCnameReusesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4142,6 +5125,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeCnameReusesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeCnameReusesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCnameReusesResponse
+         */
         public async Task<DescribeCnameReusesResponse> DescribeCnameReusesWithOptionsAsync(DescribeCnameReusesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4173,18 +5161,33 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeCnameReusesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeCnameReusesRequest
+         * @return DescribeCnameReusesResponse
+         */
         public DescribeCnameReusesResponse DescribeCnameReuses(DescribeCnameReusesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCnameReusesWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DescribeCnameReusesRequest
+         * @return DescribeCnameReusesResponse
+         */
         public async Task<DescribeCnameReusesResponse> DescribeCnameReusesAsync(DescribeCnameReusesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCnameReusesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the attack events launched against one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribeDDoSEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDoSEventsResponse
+         */
         public DescribeDDoSEventsResponse DescribeDDoSEventsWithOptions(DescribeDDoSEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4232,6 +5235,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDoSEventsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the attack events launched against one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribeDDoSEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDoSEventsResponse
+         */
         public async Task<DescribeDDoSEventsResponse> DescribeDDoSEventsWithOptionsAsync(DescribeDDoSEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4279,12 +5289,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDoSEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the attack events launched against one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribeDDoSEventsRequest
+         * @return DescribeDDoSEventsResponse
+         */
         public DescribeDDoSEventsResponse DescribeDDoSEvents(DescribeDDoSEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDDoSEventsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the attack events launched against one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribeDDoSEventsRequest
+         * @return DescribeDDoSEventsResponse
+         */
         public async Task<DescribeDDoSEventsResponse> DescribeDDoSEventsAsync(DescribeDDoSEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4292,13 +5314,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDDosAllEventListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDDosAllEventListResponse
+         * @summary Query DDoS attacks by IP address.
+         *
+         * @description You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDDosAllEventListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDosAllEventListResponse
          */
         public DescribeDDosAllEventListResponse DescribeDDosAllEventListWithOptions(DescribeDDosAllEventListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4344,13 +5368,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDDosAllEventListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDDosAllEventListResponse
+         * @summary Query DDoS attacks by IP address.
+         *
+         * @description You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDDosAllEventListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDosAllEventListResponse
          */
         public async Task<DescribeDDosAllEventListResponse> DescribeDDosAllEventListWithOptionsAsync(DescribeDDosAllEventListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4396,12 +5422,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDDosAllEventListRequest
-          * @return DescribeDDosAllEventListResponse
+         * @summary Query DDoS attacks by IP address.
+         *
+         * @description You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDDosAllEventListRequest
+         * @return DescribeDDosAllEventListResponse
          */
         public DescribeDDosAllEventListResponse DescribeDDosAllEventList(DescribeDDosAllEventListRequest request)
         {
@@ -4410,12 +5438,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDDosAllEventListRequest
-          * @return DescribeDDosAllEventListResponse
+         * @summary Query DDoS attacks by IP address.
+         *
+         * @description You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDDosAllEventListRequest
+         * @return DescribeDDosAllEventListResponse
          */
         public async Task<DescribeDDosAllEventListResponse> DescribeDDosAllEventListAsync(DescribeDDosAllEventListRequest request)
         {
@@ -4424,11 +5454,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventAreaRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDDosEventAreaResponse
+         * @summary Queries the source region from which a volumetric attack is initiated.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventAreaRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDosEventAreaResponse
          */
         public DescribeDDosEventAreaResponse DescribeDDosEventAreaWithOptions(DescribeDDosEventAreaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4466,11 +5498,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventAreaRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDDosEventAreaResponse
+         * @summary Queries the source region from which a volumetric attack is initiated.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventAreaRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDosEventAreaResponse
          */
         public async Task<DescribeDDosEventAreaResponse> DescribeDDosEventAreaWithOptionsAsync(DescribeDDosEventAreaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4508,10 +5542,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventAreaRequest
-          * @return DescribeDDosEventAreaResponse
+         * @summary Queries the source region from which a volumetric attack is initiated.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventAreaRequest
+         * @return DescribeDDosEventAreaResponse
          */
         public DescribeDDosEventAreaResponse DescribeDDosEventArea(DescribeDDosEventAreaRequest request)
         {
@@ -4520,10 +5556,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventAreaRequest
-          * @return DescribeDDosEventAreaResponse
+         * @summary Queries the source region from which a volumetric attack is initiated.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventAreaRequest
+         * @return DescribeDDosEventAreaResponse
          */
         public async Task<DescribeDDosEventAreaResponse> DescribeDDosEventAreaAsync(DescribeDDosEventAreaRequest request)
         {
@@ -4532,11 +5570,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventAttackTypeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDDosEventAttackTypeResponse
+         * @summary Queries the attack type details of a volumetric attack.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventAttackTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDosEventAttackTypeResponse
          */
         public DescribeDDosEventAttackTypeResponse DescribeDDosEventAttackTypeWithOptions(DescribeDDosEventAttackTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4574,11 +5614,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventAttackTypeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDDosEventAttackTypeResponse
+         * @summary Queries the attack type details of a volumetric attack.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventAttackTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDosEventAttackTypeResponse
          */
         public async Task<DescribeDDosEventAttackTypeResponse> DescribeDDosEventAttackTypeWithOptionsAsync(DescribeDDosEventAttackTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4616,10 +5658,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventAttackTypeRequest
-          * @return DescribeDDosEventAttackTypeResponse
+         * @summary Queries the attack type details of a volumetric attack.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventAttackTypeRequest
+         * @return DescribeDDosEventAttackTypeResponse
          */
         public DescribeDDosEventAttackTypeResponse DescribeDDosEventAttackType(DescribeDDosEventAttackTypeRequest request)
         {
@@ -4628,10 +5672,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventAttackTypeRequest
-          * @return DescribeDDosEventAttackTypeResponse
+         * @summary Queries the attack type details of a volumetric attack.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventAttackTypeRequest
+         * @return DescribeDDosEventAttackTypeResponse
          */
         public async Task<DescribeDDosEventAttackTypeResponse> DescribeDDosEventAttackTypeAsync(DescribeDDosEventAttackTypeRequest request)
         {
@@ -4640,11 +5686,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventIspRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDDosEventIspResponse
+         * @summary Queries the Internet service provider (ISP) information about a volumetric attack.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventIspRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDosEventIspResponse
          */
         public DescribeDDosEventIspResponse DescribeDDosEventIspWithOptions(DescribeDDosEventIspRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4682,11 +5730,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventIspRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDDosEventIspResponse
+         * @summary Queries the Internet service provider (ISP) information about a volumetric attack.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventIspRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDosEventIspResponse
          */
         public async Task<DescribeDDosEventIspResponse> DescribeDDosEventIspWithOptionsAsync(DescribeDDosEventIspRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4724,10 +5774,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventIspRequest
-          * @return DescribeDDosEventIspResponse
+         * @summary Queries the Internet service provider (ISP) information about a volumetric attack.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventIspRequest
+         * @return DescribeDDosEventIspResponse
          */
         public DescribeDDosEventIspResponse DescribeDDosEventIsp(DescribeDDosEventIspRequest request)
         {
@@ -4736,10 +5788,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventIspRequest
-          * @return DescribeDDosEventIspResponse
+         * @summary Queries the Internet service provider (ISP) information about a volumetric attack.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventIspRequest
+         * @return DescribeDDosEventIspResponse
          */
         public async Task<DescribeDDosEventIspResponse> DescribeDDosEventIspAsync(DescribeDDosEventIspRequest request)
         {
@@ -4747,6 +5801,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDDosEventIspWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the peaks of volumetric attacks (bit/s), connection flood attacks (CPS), and resource exhaustion attacks on websites (QPS).
+         *
+         * @param request DescribeDDosEventMaxRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDosEventMaxResponse
+         */
         public DescribeDDosEventMaxResponse DescribeDDosEventMaxWithOptions(DescribeDDosEventMaxRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4778,6 +5839,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosEventMaxResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the peaks of volumetric attacks (bit/s), connection flood attacks (CPS), and resource exhaustion attacks on websites (QPS).
+         *
+         * @param request DescribeDDosEventMaxRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDosEventMaxResponse
+         */
         public async Task<DescribeDDosEventMaxResponse> DescribeDDosEventMaxWithOptionsAsync(DescribeDDosEventMaxRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4809,12 +5877,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosEventMaxResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the peaks of volumetric attacks (bit/s), connection flood attacks (CPS), and resource exhaustion attacks on websites (QPS).
+         *
+         * @param request DescribeDDosEventMaxRequest
+         * @return DescribeDDosEventMaxResponse
+         */
         public DescribeDDosEventMaxResponse DescribeDDosEventMax(DescribeDDosEventMaxRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDDosEventMaxWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the peaks of volumetric attacks (bit/s), connection flood attacks (CPS), and resource exhaustion attacks on websites (QPS).
+         *
+         * @param request DescribeDDosEventMaxRequest
+         * @return DescribeDDosEventMaxResponse
+         */
         public async Task<DescribeDDosEventMaxResponse> DescribeDDosEventMaxAsync(DescribeDDosEventMaxRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4822,11 +5902,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventSrcIpRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDDosEventSrcIpResponse
+         * @summary Queries the source IP address from which a volumetric attack is initiated.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventSrcIpRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDosEventSrcIpResponse
          */
         public DescribeDDosEventSrcIpResponse DescribeDDosEventSrcIpWithOptions(DescribeDDosEventSrcIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4868,11 +5950,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventSrcIpRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDDosEventSrcIpResponse
+         * @summary Queries the source IP address from which a volumetric attack is initiated.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventSrcIpRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDosEventSrcIpResponse
          */
         public async Task<DescribeDDosEventSrcIpResponse> DescribeDDosEventSrcIpWithOptionsAsync(DescribeDDosEventSrcIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4914,10 +5998,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventSrcIpRequest
-          * @return DescribeDDosEventSrcIpResponse
+         * @summary Queries the source IP address from which a volumetric attack is initiated.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventSrcIpRequest
+         * @return DescribeDDosEventSrcIpResponse
          */
         public DescribeDDosEventSrcIpResponse DescribeDDosEventSrcIp(DescribeDDosEventSrcIpRequest request)
         {
@@ -4926,10 +6012,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for volumetric attacks.
-          *
-          * @param request DescribeDDosEventSrcIpRequest
-          * @return DescribeDDosEventSrcIpResponse
+         * @summary Queries the source IP address from which a volumetric attack is initiated.
+         *
+         * @description > This operation is suitable only for volumetric attacks.
+         *
+         * @param request DescribeDDosEventSrcIpRequest
+         * @return DescribeDDosEventSrcIpResponse
          */
         public async Task<DescribeDDosEventSrcIpResponse> DescribeDDosEventSrcIpAsync(DescribeDDosEventSrcIpRequest request)
         {
@@ -4938,14 +6026,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Premium instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of available global advanced mitigation sessions.
-          * > This operation is suitable only for Anti-DDoS Premium.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDefenseCountStatisticsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDefenseCountStatisticsResponse
+         * @summary Queries the statistics on advanced mitigation sessions of an Anti-DDoS Premium instance.
+         *
+         * @description You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Premium instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of available global advanced mitigation sessions.
+         * > This operation is suitable only for Anti-DDoS Premium.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDefenseCountStatisticsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDefenseCountStatisticsResponse
          */
         public DescribeDefenseCountStatisticsResponse DescribeDefenseCountStatisticsWithOptions(DescribeDefenseCountStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4975,14 +6065,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Premium instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of available global advanced mitigation sessions.
-          * > This operation is suitable only for Anti-DDoS Premium.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDefenseCountStatisticsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDefenseCountStatisticsResponse
+         * @summary Queries the statistics on advanced mitigation sessions of an Anti-DDoS Premium instance.
+         *
+         * @description You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Premium instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of available global advanced mitigation sessions.
+         * > This operation is suitable only for Anti-DDoS Premium.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDefenseCountStatisticsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDefenseCountStatisticsResponse
          */
         public async Task<DescribeDefenseCountStatisticsResponse> DescribeDefenseCountStatisticsWithOptionsAsync(DescribeDefenseCountStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5012,13 +6104,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Premium instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of available global advanced mitigation sessions.
-          * > This operation is suitable only for Anti-DDoS Premium.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDefenseCountStatisticsRequest
-          * @return DescribeDefenseCountStatisticsResponse
+         * @summary Queries the statistics on advanced mitigation sessions of an Anti-DDoS Premium instance.
+         *
+         * @description You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Premium instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of available global advanced mitigation sessions.
+         * > This operation is suitable only for Anti-DDoS Premium.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDefenseCountStatisticsRequest
+         * @return DescribeDefenseCountStatisticsResponse
          */
         public DescribeDefenseCountStatisticsResponse DescribeDefenseCountStatistics(DescribeDefenseCountStatisticsRequest request)
         {
@@ -5027,13 +6121,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Premium instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of available global advanced mitigation sessions.
-          * > This operation is suitable only for Anti-DDoS Premium.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDefenseCountStatisticsRequest
-          * @return DescribeDefenseCountStatisticsResponse
+         * @summary Queries the statistics on advanced mitigation sessions of an Anti-DDoS Premium instance.
+         *
+         * @description You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Premium instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of available global advanced mitigation sessions.
+         * > This operation is suitable only for Anti-DDoS Premium.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDefenseCountStatisticsRequest
+         * @return DescribeDefenseCountStatisticsResponse
          */
         public async Task<DescribeDefenseCountStatisticsResponse> DescribeDefenseCountStatisticsAsync(DescribeDefenseCountStatisticsRequest request)
         {
@@ -5042,11 +6138,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Premium.
-          *
-          * @param request DescribeDefenseRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDefenseRecordsResponse
+         * @summary Queries the advanced mitigation logs of Anti-DDoS Premium.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Premium.
+         *
+         * @param request DescribeDefenseRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDefenseRecordsResponse
          */
         public DescribeDefenseRecordsResponse DescribeDefenseRecordsWithOptions(DescribeDefenseRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5096,11 +6194,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Premium.
-          *
-          * @param request DescribeDefenseRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDefenseRecordsResponse
+         * @summary Queries the advanced mitigation logs of Anti-DDoS Premium.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Premium.
+         *
+         * @param request DescribeDefenseRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDefenseRecordsResponse
          */
         public async Task<DescribeDefenseRecordsResponse> DescribeDefenseRecordsWithOptionsAsync(DescribeDefenseRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5150,10 +6250,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Premium.
-          *
-          * @param request DescribeDefenseRecordsRequest
-          * @return DescribeDefenseRecordsResponse
+         * @summary Queries the advanced mitigation logs of Anti-DDoS Premium.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Premium.
+         *
+         * @param request DescribeDefenseRecordsRequest
+         * @return DescribeDefenseRecordsResponse
          */
         public DescribeDefenseRecordsResponse DescribeDefenseRecords(DescribeDefenseRecordsRequest request)
         {
@@ -5162,10 +6264,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Premium.
-          *
-          * @param request DescribeDefenseRecordsRequest
-          * @return DescribeDefenseRecordsResponse
+         * @summary Queries the advanced mitigation logs of Anti-DDoS Premium.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Premium.
+         *
+         * @param request DescribeDefenseRecordsRequest
+         * @return DescribeDefenseRecordsResponse
          */
         public async Task<DescribeDefenseRecordsResponse> DescribeDefenseRecordsAsync(DescribeDefenseRecordsRequest request)
         {
@@ -5173,6 +6277,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDefenseRecordsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the attack events launched against a website.
+         *
+         * @param request DescribeDomainAttackEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainAttackEventsResponse
+         */
         public DescribeDomainAttackEventsResponse DescribeDomainAttackEventsWithOptions(DescribeDomainAttackEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5220,6 +6331,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainAttackEventsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the attack events launched against a website.
+         *
+         * @param request DescribeDomainAttackEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainAttackEventsResponse
+         */
         public async Task<DescribeDomainAttackEventsResponse> DescribeDomainAttackEventsWithOptionsAsync(DescribeDomainAttackEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5267,18 +6385,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainAttackEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the attack events launched against a website.
+         *
+         * @param request DescribeDomainAttackEventsRequest
+         * @return DescribeDomainAttackEventsResponse
+         */
         public DescribeDomainAttackEventsResponse DescribeDomainAttackEvents(DescribeDomainAttackEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainAttackEventsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the attack events launched against a website.
+         *
+         * @param request DescribeDomainAttackEventsRequest
+         * @return DescribeDomainAttackEventsResponse
+         */
         public async Task<DescribeDomainAttackEventsResponse> DescribeDomainAttackEventsAsync(DescribeDomainAttackEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainAttackEventsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the attack overview of a website, such as the peak HTTP and HTTPS traffic.
+         *
+         * @param request DescribeDomainOverviewRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainOverviewResponse
+         */
         public DescribeDomainOverviewResponse DescribeDomainOverviewWithOptions(DescribeDomainOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5318,6 +6455,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainOverviewResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the attack overview of a website, such as the peak HTTP and HTTPS traffic.
+         *
+         * @param request DescribeDomainOverviewRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainOverviewResponse
+         */
         public async Task<DescribeDomainOverviewResponse> DescribeDomainOverviewWithOptionsAsync(DescribeDomainOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5357,18 +6501,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainOverviewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the attack overview of a website, such as the peak HTTP and HTTPS traffic.
+         *
+         * @param request DescribeDomainOverviewRequest
+         * @return DescribeDomainOverviewResponse
+         */
         public DescribeDomainOverviewResponse DescribeDomainOverview(DescribeDomainOverviewRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainOverviewWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the attack overview of a website, such as the peak HTTP and HTTPS traffic.
+         *
+         * @param request DescribeDomainOverviewRequest
+         * @return DescribeDomainOverviewResponse
+         */
         public async Task<DescribeDomainOverviewResponse> DescribeDomainOverviewAsync(DescribeDomainOverviewRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainOverviewWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the statistics on the queries per second (QPS) of a website.
+         *
+         * @param request DescribeDomainQPSListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainQPSListResponse
+         */
         public DescribeDomainQPSListResponse DescribeDomainQPSListWithOptions(DescribeDomainQPSListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5412,6 +6575,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainQPSListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the statistics on the queries per second (QPS) of a website.
+         *
+         * @param request DescribeDomainQPSListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainQPSListResponse
+         */
         public async Task<DescribeDomainQPSListResponse> DescribeDomainQPSListWithOptionsAsync(DescribeDomainQPSListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5455,12 +6625,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainQPSListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the statistics on the queries per second (QPS) of a website.
+         *
+         * @param request DescribeDomainQPSListRequest
+         * @return DescribeDomainQPSListResponse
+         */
         public DescribeDomainQPSListResponse DescribeDomainQPSList(DescribeDomainQPSListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainQPSListWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the statistics on the queries per second (QPS) of a website.
+         *
+         * @param request DescribeDomainQPSListRequest
+         * @return DescribeDomainQPSListResponse
+         */
         public async Task<DescribeDomainQPSListResponse> DescribeDomainQPSListAsync(DescribeDomainQPSListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5468,14 +6650,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
-          * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          * ### Limits
-          * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDomainResourceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainResourceResponse
+         * @summary Queries the configurations of a forwarding rule.
+         *
+         * @description You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
+         * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         * ### Limits
+         * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDomainResourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainResourceResponse
          */
         public DescribeDomainResourceResponse DescribeDomainResourceWithOptions(DescribeDomainResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5521,14 +6705,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
-          * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          * ### Limits
-          * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDomainResourceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainResourceResponse
+         * @summary Queries the configurations of a forwarding rule.
+         *
+         * @description You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
+         * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         * ### Limits
+         * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDomainResourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainResourceResponse
          */
         public async Task<DescribeDomainResourceResponse> DescribeDomainResourceWithOptionsAsync(DescribeDomainResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5574,13 +6760,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
-          * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          * ### Limits
-          * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDomainResourceRequest
-          * @return DescribeDomainResourceResponse
+         * @summary Queries the configurations of a forwarding rule.
+         *
+         * @description You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
+         * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         * ### Limits
+         * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDomainResourceRequest
+         * @return DescribeDomainResourceResponse
          */
         public DescribeDomainResourceResponse DescribeDomainResource(DescribeDomainResourceRequest request)
         {
@@ -5589,13 +6777,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
-          * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          * ### Limits
-          * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDomainResourceRequest
-          * @return DescribeDomainResourceResponse
+         * @summary Queries the configurations of a forwarding rule.
+         *
+         * @description You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
+         * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         * ### Limits
+         * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDomainResourceRequest
+         * @return DescribeDomainResourceResponse
          */
         public async Task<DescribeDomainResourceResponse> DescribeDomainResourceAsync(DescribeDomainResourceRequest request)
         {
@@ -5603,6 +6793,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainResourceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the global mitigation policy for a domain name.
+         *
+         * @param request DescribeDomainSecurityProfileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainSecurityProfileResponse
+         */
         public DescribeDomainSecurityProfileResponse DescribeDomainSecurityProfileWithOptions(DescribeDomainSecurityProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5630,6 +6827,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainSecurityProfileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the global mitigation policy for a domain name.
+         *
+         * @param request DescribeDomainSecurityProfileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainSecurityProfileResponse
+         */
         public async Task<DescribeDomainSecurityProfileResponse> DescribeDomainSecurityProfileWithOptionsAsync(DescribeDomainSecurityProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5657,18 +6861,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainSecurityProfileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the global mitigation policy for a domain name.
+         *
+         * @param request DescribeDomainSecurityProfileRequest
+         * @return DescribeDomainSecurityProfileResponse
+         */
         public DescribeDomainSecurityProfileResponse DescribeDomainSecurityProfile(DescribeDomainSecurityProfileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainSecurityProfileWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the global mitigation policy for a domain name.
+         *
+         * @param request DescribeDomainSecurityProfileRequest
+         * @return DescribeDomainSecurityProfileResponse
+         */
         public async Task<DescribeDomainSecurityProfileResponse> DescribeDomainSecurityProfileAsync(DescribeDomainSecurityProfileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainSecurityProfileWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the statistics on HTTP status codes of a website within a specified period of time.
+         *
+         * @param request DescribeDomainStatusCodeCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainStatusCodeCountResponse
+         */
         public DescribeDomainStatusCodeCountResponse DescribeDomainStatusCodeCountWithOptions(DescribeDomainStatusCodeCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5708,6 +6931,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainStatusCodeCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the statistics on HTTP status codes of a website within a specified period of time.
+         *
+         * @param request DescribeDomainStatusCodeCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainStatusCodeCountResponse
+         */
         public async Task<DescribeDomainStatusCodeCountResponse> DescribeDomainStatusCodeCountWithOptionsAsync(DescribeDomainStatusCodeCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5747,18 +6977,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainStatusCodeCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the statistics on HTTP status codes of a website within a specified period of time.
+         *
+         * @param request DescribeDomainStatusCodeCountRequest
+         * @return DescribeDomainStatusCodeCountResponse
+         */
         public DescribeDomainStatusCodeCountResponse DescribeDomainStatusCodeCount(DescribeDomainStatusCodeCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainStatusCodeCountWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the statistics on HTTP status codes of a website within a specified period of time.
+         *
+         * @param request DescribeDomainStatusCodeCountRequest
+         * @return DescribeDomainStatusCodeCountResponse
+         */
         public async Task<DescribeDomainStatusCodeCountResponse> DescribeDomainStatusCodeCountAsync(DescribeDomainStatusCodeCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainStatusCodeCountWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the statistics on HTTP status codes of a website.
+         *
+         * @param request DescribeDomainStatusCodeListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainStatusCodeListResponse
+         */
         public DescribeDomainStatusCodeListResponse DescribeDomainStatusCodeListWithOptions(DescribeDomainStatusCodeListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5806,6 +7055,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainStatusCodeListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the statistics on HTTP status codes of a website.
+         *
+         * @param request DescribeDomainStatusCodeListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainStatusCodeListResponse
+         */
         public async Task<DescribeDomainStatusCodeListResponse> DescribeDomainStatusCodeListWithOptionsAsync(DescribeDomainStatusCodeListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5853,18 +7109,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainStatusCodeListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the statistics on HTTP status codes of a website.
+         *
+         * @param request DescribeDomainStatusCodeListRequest
+         * @return DescribeDomainStatusCodeListResponse
+         */
         public DescribeDomainStatusCodeListResponse DescribeDomainStatusCodeList(DescribeDomainStatusCodeListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainStatusCodeListWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the statistics on HTTP status codes of a website.
+         *
+         * @param request DescribeDomainStatusCodeListRequest
+         * @return DescribeDomainStatusCodeListResponse
+         */
         public async Task<DescribeDomainStatusCodeListResponse> DescribeDomainStatusCodeListAsync(DescribeDomainStatusCodeListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainStatusCodeListWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the peak queries per second (QPS) information about a website, such as the attack QPS and total QPS, within a specific period of time.
+         *
+         * @param request DescribeDomainTopAttackListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainTopAttackListResponse
+         */
         public DescribeDomainTopAttackListResponse DescribeDomainTopAttackListWithOptions(DescribeDomainTopAttackListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5900,6 +7175,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainTopAttackListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the peak queries per second (QPS) information about a website, such as the attack QPS and total QPS, within a specific period of time.
+         *
+         * @param request DescribeDomainTopAttackListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainTopAttackListResponse
+         */
         public async Task<DescribeDomainTopAttackListResponse> DescribeDomainTopAttackListWithOptionsAsync(DescribeDomainTopAttackListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5935,18 +7217,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainTopAttackListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the peak queries per second (QPS) information about a website, such as the attack QPS and total QPS, within a specific period of time.
+         *
+         * @param request DescribeDomainTopAttackListRequest
+         * @return DescribeDomainTopAttackListResponse
+         */
         public DescribeDomainTopAttackListResponse DescribeDomainTopAttackList(DescribeDomainTopAttackListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainTopAttackListWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the peak queries per second (QPS) information about a website, such as the attack QPS and total QPS, within a specific period of time.
+         *
+         * @param request DescribeDomainTopAttackListRequest
+         * @return DescribeDomainTopAttackListResponse
+         */
         public async Task<DescribeDomainTopAttackListResponse> DescribeDomainTopAttackListAsync(DescribeDomainTopAttackListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainTopAttackListWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the areas and countries from which requests are sent to a website within a specified period of time.
+         *
+         * @param request DescribeDomainViewSourceCountriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainViewSourceCountriesResponse
+         */
         public DescribeDomainViewSourceCountriesResponse DescribeDomainViewSourceCountriesWithOptions(DescribeDomainViewSourceCountriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5986,6 +7287,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewSourceCountriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the areas and countries from which requests are sent to a website within a specified period of time.
+         *
+         * @param request DescribeDomainViewSourceCountriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainViewSourceCountriesResponse
+         */
         public async Task<DescribeDomainViewSourceCountriesResponse> DescribeDomainViewSourceCountriesWithOptionsAsync(DescribeDomainViewSourceCountriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6025,18 +7333,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewSourceCountriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the areas and countries from which requests are sent to a website within a specified period of time.
+         *
+         * @param request DescribeDomainViewSourceCountriesRequest
+         * @return DescribeDomainViewSourceCountriesResponse
+         */
         public DescribeDomainViewSourceCountriesResponse DescribeDomainViewSourceCountries(DescribeDomainViewSourceCountriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainViewSourceCountriesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the areas and countries from which requests are sent to a website within a specified period of time.
+         *
+         * @param request DescribeDomainViewSourceCountriesRequest
+         * @return DescribeDomainViewSourceCountriesResponse
+         */
         public async Task<DescribeDomainViewSourceCountriesResponse> DescribeDomainViewSourceCountriesAsync(DescribeDomainViewSourceCountriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainViewSourceCountriesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the administrative regions in China from which requests are sent to a website within a specified period of time.
+         *
+         * @param request DescribeDomainViewSourceProvincesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainViewSourceProvincesResponse
+         */
         public DescribeDomainViewSourceProvincesResponse DescribeDomainViewSourceProvincesWithOptions(DescribeDomainViewSourceProvincesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6076,6 +7403,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewSourceProvincesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the administrative regions in China from which requests are sent to a website within a specified period of time.
+         *
+         * @param request DescribeDomainViewSourceProvincesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainViewSourceProvincesResponse
+         */
         public async Task<DescribeDomainViewSourceProvincesResponse> DescribeDomainViewSourceProvincesWithOptionsAsync(DescribeDomainViewSourceProvincesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6115,18 +7449,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewSourceProvincesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the administrative regions in China from which requests are sent to a website within a specified period of time.
+         *
+         * @param request DescribeDomainViewSourceProvincesRequest
+         * @return DescribeDomainViewSourceProvincesResponse
+         */
         public DescribeDomainViewSourceProvincesResponse DescribeDomainViewSourceProvinces(DescribeDomainViewSourceProvincesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainViewSourceProvincesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the administrative regions in China from which requests are sent to a website within a specified period of time.
+         *
+         * @param request DescribeDomainViewSourceProvincesRequest
+         * @return DescribeDomainViewSourceProvincesResponse
+         */
         public async Task<DescribeDomainViewSourceProvincesResponse> DescribeDomainViewSourceProvincesAsync(DescribeDomainViewSourceProvincesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainViewSourceProvincesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the top N URLs that require the longest time to respond to requests within a specified period of time.
+         *
+         * @param request DescribeDomainViewTopCostTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainViewTopCostTimeResponse
+         */
         public DescribeDomainViewTopCostTimeResponse DescribeDomainViewTopCostTimeWithOptions(DescribeDomainViewTopCostTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6170,6 +7523,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewTopCostTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the top N URLs that require the longest time to respond to requests within a specified period of time.
+         *
+         * @param request DescribeDomainViewTopCostTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainViewTopCostTimeResponse
+         */
         public async Task<DescribeDomainViewTopCostTimeResponse> DescribeDomainViewTopCostTimeWithOptionsAsync(DescribeDomainViewTopCostTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6213,18 +7573,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewTopCostTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the top N URLs that require the longest time to respond to requests within a specified period of time.
+         *
+         * @param request DescribeDomainViewTopCostTimeRequest
+         * @return DescribeDomainViewTopCostTimeResponse
+         */
         public DescribeDomainViewTopCostTimeResponse DescribeDomainViewTopCostTime(DescribeDomainViewTopCostTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainViewTopCostTimeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the top N URLs that require the longest time to respond to requests within a specified period of time.
+         *
+         * @param request DescribeDomainViewTopCostTimeRequest
+         * @return DescribeDomainViewTopCostTimeResponse
+         */
         public async Task<DescribeDomainViewTopCostTimeResponse> DescribeDomainViewTopCostTimeAsync(DescribeDomainViewTopCostTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainViewTopCostTimeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the top N URLs that receive the most requests within a specified period of time.
+         *
+         * @param request DescribeDomainViewTopUrlRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainViewTopUrlResponse
+         */
         public DescribeDomainViewTopUrlResponse DescribeDomainViewTopUrlWithOptions(DescribeDomainViewTopUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6268,6 +7647,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewTopUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the top N URLs that receive the most requests within a specified period of time.
+         *
+         * @param request DescribeDomainViewTopUrlRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainViewTopUrlResponse
+         */
         public async Task<DescribeDomainViewTopUrlResponse> DescribeDomainViewTopUrlWithOptionsAsync(DescribeDomainViewTopUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6311,18 +7697,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewTopUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the top N URLs that receive the most requests within a specified period of time.
+         *
+         * @param request DescribeDomainViewTopUrlRequest
+         * @return DescribeDomainViewTopUrlResponse
+         */
         public DescribeDomainViewTopUrlResponse DescribeDomainViewTopUrl(DescribeDomainViewTopUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainViewTopUrlWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the top N URLs that receive the most requests within a specified period of time.
+         *
+         * @param request DescribeDomainViewTopUrlRequest
+         * @return DescribeDomainViewTopUrlResponse
+         */
         public async Task<DescribeDomainViewTopUrlResponse> DescribeDomainViewTopUrlAsync(DescribeDomainViewTopUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainViewTopUrlWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries domain names for which forwarding rules are created.
+         *
+         * @param request DescribeDomainsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainsResponse
+         */
         public DescribeDomainsResponse DescribeDomainsWithOptions(DescribeDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6354,6 +7759,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries domain names for which forwarding rules are created.
+         *
+         * @param request DescribeDomainsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDomainsResponse
+         */
         public async Task<DescribeDomainsResponse> DescribeDomainsWithOptionsAsync(DescribeDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6385,12 +7797,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries domain names for which forwarding rules are created.
+         *
+         * @param request DescribeDomainsRequest
+         * @return DescribeDomainsResponse
+         */
         public DescribeDomainsResponse DescribeDomains(DescribeDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries domain names for which forwarding rules are created.
+         *
+         * @param request DescribeDomainsRequest
+         * @return DescribeDomainsResponse
+         */
         public async Task<DescribeDomainsResponse> DescribeDomainsAsync(DescribeDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6398,11 +7822,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request DescribeElasticBandwidthSpecRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeElasticBandwidthSpecResponse
+         * @summary Queries the available burstable protection bandwidths of an Anti-DDoS Pro instance.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request DescribeElasticBandwidthSpecRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticBandwidthSpecResponse
          */
         public DescribeElasticBandwidthSpecResponse DescribeElasticBandwidthSpecWithOptions(DescribeElasticBandwidthSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6432,11 +7858,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request DescribeElasticBandwidthSpecRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeElasticBandwidthSpecResponse
+         * @summary Queries the available burstable protection bandwidths of an Anti-DDoS Pro instance.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request DescribeElasticBandwidthSpecRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticBandwidthSpecResponse
          */
         public async Task<DescribeElasticBandwidthSpecResponse> DescribeElasticBandwidthSpecWithOptionsAsync(DescribeElasticBandwidthSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6466,10 +7894,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request DescribeElasticBandwidthSpecRequest
-          * @return DescribeElasticBandwidthSpecResponse
+         * @summary Queries the available burstable protection bandwidths of an Anti-DDoS Pro instance.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request DescribeElasticBandwidthSpecRequest
+         * @return DescribeElasticBandwidthSpecResponse
          */
         public DescribeElasticBandwidthSpecResponse DescribeElasticBandwidthSpec(DescribeElasticBandwidthSpecRequest request)
         {
@@ -6478,10 +7908,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request DescribeElasticBandwidthSpecRequest
-          * @return DescribeElasticBandwidthSpecResponse
+         * @summary Queries the available burstable protection bandwidths of an Anti-DDoS Pro instance.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request DescribeElasticBandwidthSpecRequest
+         * @return DescribeElasticBandwidthSpecResponse
          */
         public async Task<DescribeElasticBandwidthSpecResponse> DescribeElasticBandwidthSpecAsync(DescribeElasticBandwidthSpecRequest request)
         {
@@ -6489,6 +7921,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeElasticBandwidthSpecWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 高防弹性qps曲线图
+         *
+         * @param request DescribeElasticQpsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticQpsResponse
+         */
         public DescribeElasticQpsResponse DescribeElasticQpsWithOptions(DescribeElasticQpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6532,6 +7971,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeElasticQpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 高防弹性qps曲线图
+         *
+         * @param request DescribeElasticQpsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticQpsResponse
+         */
         public async Task<DescribeElasticQpsResponse> DescribeElasticQpsWithOptionsAsync(DescribeElasticQpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6575,18 +8021,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeElasticQpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 高防弹性qps曲线图
+         *
+         * @param request DescribeElasticQpsRequest
+         * @return DescribeElasticQpsResponse
+         */
         public DescribeElasticQpsResponse DescribeElasticQps(DescribeElasticQpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeElasticQpsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 高防弹性qps曲线图
+         *
+         * @param request DescribeElasticQpsRequest
+         * @return DescribeElasticQpsResponse
+         */
         public async Task<DescribeElasticQpsResponse> DescribeElasticQpsAsync(DescribeElasticQpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeElasticQpsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询qps日95流量图
+         *
+         * @param request DescribeElasticQpsRecordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticQpsRecordResponse
+         */
         public DescribeElasticQpsRecordResponse DescribeElasticQpsRecordWithOptions(DescribeElasticQpsRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6622,6 +8087,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeElasticQpsRecordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询qps日95流量图
+         *
+         * @param request DescribeElasticQpsRecordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeElasticQpsRecordResponse
+         */
         public async Task<DescribeElasticQpsRecordResponse> DescribeElasticQpsRecordWithOptionsAsync(DescribeElasticQpsRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6657,18 +8129,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeElasticQpsRecordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询qps日95流量图
+         *
+         * @param request DescribeElasticQpsRecordRequest
+         * @return DescribeElasticQpsRecordResponse
+         */
         public DescribeElasticQpsRecordResponse DescribeElasticQpsRecord(DescribeElasticQpsRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeElasticQpsRecordWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询qps日95流量图
+         *
+         * @param request DescribeElasticQpsRecordRequest
+         * @return DescribeElasticQpsRecordResponse
+         */
         public async Task<DescribeElasticQpsRecordResponse> DescribeElasticQpsRecordAsync(DescribeElasticQpsRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeElasticQpsRecordWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the custom header that is specified for a domain name.
+         *
+         * @param request DescribeHeadersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHeadersResponse
+         */
         public DescribeHeadersResponse DescribeHeadersWithOptions(DescribeHeadersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6700,6 +8191,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeHeadersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the custom header that is specified for a domain name.
+         *
+         * @param request DescribeHeadersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHeadersResponse
+         */
         public async Task<DescribeHeadersResponse> DescribeHeadersWithOptionsAsync(DescribeHeadersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6731,18 +8229,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeHeadersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the custom header that is specified for a domain name.
+         *
+         * @param request DescribeHeadersRequest
+         * @return DescribeHeadersResponse
+         */
         public DescribeHeadersResponse DescribeHeaders(DescribeHeadersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHeadersWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the custom header that is specified for a domain name.
+         *
+         * @param request DescribeHeadersRequest
+         * @return DescribeHeadersResponse
+         */
         public async Task<DescribeHeadersResponse> DescribeHeadersAsync(DescribeHeadersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHeadersWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the Layer 4 or Layer 7 health check configurations of a port forwarding rule.
+         *
+         * @param request DescribeHealthCheckListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHealthCheckListResponse
+         */
         public DescribeHealthCheckListResponse DescribeHealthCheckListWithOptions(DescribeHealthCheckListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6770,6 +8287,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeHealthCheckListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the Layer 4 or Layer 7 health check configurations of a port forwarding rule.
+         *
+         * @param request DescribeHealthCheckListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHealthCheckListResponse
+         */
         public async Task<DescribeHealthCheckListResponse> DescribeHealthCheckListWithOptionsAsync(DescribeHealthCheckListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6797,18 +8321,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeHealthCheckListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the Layer 4 or Layer 7 health check configurations of a port forwarding rule.
+         *
+         * @param request DescribeHealthCheckListRequest
+         * @return DescribeHealthCheckListResponse
+         */
         public DescribeHealthCheckListResponse DescribeHealthCheckList(DescribeHealthCheckListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHealthCheckListWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the Layer 4 or Layer 7 health check configurations of a port forwarding rule.
+         *
+         * @param request DescribeHealthCheckListRequest
+         * @return DescribeHealthCheckListResponse
+         */
         public async Task<DescribeHealthCheckListResponse> DescribeHealthCheckListAsync(DescribeHealthCheckListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHealthCheckListWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the health status of an origin server.
+         *
+         * @param request DescribeHealthCheckStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHealthCheckStatusResponse
+         */
         public DescribeHealthCheckStatusResponse DescribeHealthCheckStatusWithOptions(DescribeHealthCheckStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6836,6 +8379,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeHealthCheckStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the health status of an origin server.
+         *
+         * @param request DescribeHealthCheckStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHealthCheckStatusResponse
+         */
         public async Task<DescribeHealthCheckStatusResponse> DescribeHealthCheckStatusWithOptionsAsync(DescribeHealthCheckStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6863,12 +8413,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeHealthCheckStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the health status of an origin server.
+         *
+         * @param request DescribeHealthCheckStatusRequest
+         * @return DescribeHealthCheckStatusResponse
+         */
         public DescribeHealthCheckStatusResponse DescribeHealthCheckStatus(DescribeHealthCheckStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHealthCheckStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the health status of an origin server.
+         *
+         * @param request DescribeHealthCheckStatusRequest
+         * @return DescribeHealthCheckStatusResponse
+         */
         public async Task<DescribeHealthCheckStatusResponse> DescribeHealthCheckStatusAsync(DescribeHealthCheckStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6876,13 +8438,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstanceDetailsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceDetailsResponse
+         * @summary Queries the IP addresses and Internet service provider (ISP) lines of Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @description You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstanceDetailsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceDetailsResponse
          */
         public DescribeInstanceDetailsResponse DescribeInstanceDetailsWithOptions(DescribeInstanceDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6912,13 +8476,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstanceDetailsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceDetailsResponse
+         * @summary Queries the IP addresses and Internet service provider (ISP) lines of Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @description You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstanceDetailsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceDetailsResponse
          */
         public async Task<DescribeInstanceDetailsResponse> DescribeInstanceDetailsWithOptionsAsync(DescribeInstanceDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6948,12 +8514,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstanceDetailsRequest
-          * @return DescribeInstanceDetailsResponse
+         * @summary Queries the IP addresses and Internet service provider (ISP) lines of Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @description You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstanceDetailsRequest
+         * @return DescribeInstanceDetailsResponse
          */
         public DescribeInstanceDetailsResponse DescribeInstanceDetails(DescribeInstanceDetailsRequest request)
         {
@@ -6962,12 +8530,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstanceDetailsRequest
-          * @return DescribeInstanceDetailsResponse
+         * @summary Queries the IP addresses and Internet service provider (ISP) lines of Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @description You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstanceDetailsRequest
+         * @return DescribeInstanceDetailsResponse
          */
         public async Task<DescribeInstanceDetailsResponse> DescribeInstanceDetailsAsync(DescribeInstanceDetailsRequest request)
         {
@@ -6975,6 +8545,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeInstanceDetailsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about Anti-DDoS Pro and Anti-DDoS Premium instances.
+         *
+         * @param request DescribeInstanceExtRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceExtResponse
+         */
         public DescribeInstanceExtResponse DescribeInstanceExtWithOptions(DescribeInstanceExtRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7010,6 +8587,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceExtResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about Anti-DDoS Pro and Anti-DDoS Premium instances.
+         *
+         * @param request DescribeInstanceExtRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceExtResponse
+         */
         public async Task<DescribeInstanceExtResponse> DescribeInstanceExtWithOptionsAsync(DescribeInstanceExtRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7045,18 +8629,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceExtResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about Anti-DDoS Pro and Anti-DDoS Premium instances.
+         *
+         * @param request DescribeInstanceExtRequest
+         * @return DescribeInstanceExtResponse
+         */
         public DescribeInstanceExtResponse DescribeInstanceExt(DescribeInstanceExtRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceExtWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about Anti-DDoS Pro and Anti-DDoS Premium instances.
+         *
+         * @param request DescribeInstanceExtRequest
+         * @return DescribeInstanceExtResponse
+         */
         public async Task<DescribeInstanceExtResponse> DescribeInstanceExtAsync(DescribeInstanceExtRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceExtWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary The description of the instance.
+         *
+         * @param request DescribeInstanceIdsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceIdsResponse
+         */
         public DescribeInstanceIdsResponse DescribeInstanceIdsWithOptions(DescribeInstanceIdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7092,6 +8695,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceIdsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary The description of the instance.
+         *
+         * @param request DescribeInstanceIdsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceIdsResponse
+         */
         public async Task<DescribeInstanceIdsResponse> DescribeInstanceIdsWithOptionsAsync(DescribeInstanceIdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7127,12 +8737,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceIdsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary The description of the instance.
+         *
+         * @param request DescribeInstanceIdsRequest
+         * @return DescribeInstanceIdsResponse
+         */
         public DescribeInstanceIdsResponse DescribeInstanceIds(DescribeInstanceIdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceIdsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary The description of the instance.
+         *
+         * @param request DescribeInstanceIdsRequest
+         * @return DescribeInstanceIdsResponse
+         */
         public async Task<DescribeInstanceIdsResponse> DescribeInstanceIdsAsync(DescribeInstanceIdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7140,13 +8762,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstanceSpecsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceSpecsResponse
+         * @summary Queries the specifications of Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @description You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstanceSpecsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceSpecsResponse
          */
         public DescribeInstanceSpecsResponse DescribeInstanceSpecsWithOptions(DescribeInstanceSpecsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7176,13 +8800,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstanceSpecsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceSpecsResponse
+         * @summary Queries the specifications of Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @description You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstanceSpecsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceSpecsResponse
          */
         public async Task<DescribeInstanceSpecsResponse> DescribeInstanceSpecsWithOptionsAsync(DescribeInstanceSpecsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7212,12 +8838,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstanceSpecsRequest
-          * @return DescribeInstanceSpecsResponse
+         * @summary Queries the specifications of Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @description You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstanceSpecsRequest
+         * @return DescribeInstanceSpecsResponse
          */
         public DescribeInstanceSpecsResponse DescribeInstanceSpecs(DescribeInstanceSpecsRequest request)
         {
@@ -7226,12 +8854,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstanceSpecsRequest
-          * @return DescribeInstanceSpecsResponse
+         * @summary Queries the specifications of Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @description You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstanceSpecsRequest
+         * @return DescribeInstanceSpecsResponse
          */
         public async Task<DescribeInstanceSpecsResponse> DescribeInstanceSpecsAsync(DescribeInstanceSpecsRequest request)
         {
@@ -7239,6 +8869,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeInstanceSpecsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the statistics on one or more Anti-DDoS Pro or Anti-DDoS Premium instances, such as the numbers of protected domain names and ports.
+         *
+         * @param request DescribeInstanceStatisticsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceStatisticsResponse
+         */
         public DescribeInstanceStatisticsResponse DescribeInstanceStatisticsWithOptions(DescribeInstanceStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7266,6 +8903,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the statistics on one or more Anti-DDoS Pro or Anti-DDoS Premium instances, such as the numbers of protected domain names and ports.
+         *
+         * @param request DescribeInstanceStatisticsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceStatisticsResponse
+         */
         public async Task<DescribeInstanceStatisticsResponse> DescribeInstanceStatisticsWithOptionsAsync(DescribeInstanceStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7293,18 +8937,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the statistics on one or more Anti-DDoS Pro or Anti-DDoS Premium instances, such as the numbers of protected domain names and ports.
+         *
+         * @param request DescribeInstanceStatisticsRequest
+         * @return DescribeInstanceStatisticsResponse
+         */
         public DescribeInstanceStatisticsResponse DescribeInstanceStatistics(DescribeInstanceStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceStatisticsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the statistics on one or more Anti-DDoS Pro or Anti-DDoS Premium instances, such as the numbers of protected domain names and ports.
+         *
+         * @param request DescribeInstanceStatisticsRequest
+         * @return DescribeInstanceStatisticsResponse
+         */
         public async Task<DescribeInstanceStatisticsResponse> DescribeInstanceStatisticsAsync(DescribeInstanceStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the status of a specified Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeInstanceStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceStatusResponse
+         */
         public DescribeInstanceStatusResponse DescribeInstanceStatusWithOptions(DescribeInstanceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7336,6 +8999,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the status of a specified Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeInstanceStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceStatusResponse
+         */
         public async Task<DescribeInstanceStatusResponse> DescribeInstanceStatusWithOptionsAsync(DescribeInstanceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7367,12 +9037,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the status of a specified Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeInstanceStatusRequest
+         * @return DescribeInstanceStatusResponse
+         */
         public DescribeInstanceStatusResponse DescribeInstanceStatus(DescribeInstanceStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the status of a specified Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeInstanceStatusRequest
+         * @return DescribeInstanceStatusResponse
+         */
         public async Task<DescribeInstanceStatusResponse> DescribeInstanceStatusAsync(DescribeInstanceStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7380,11 +9062,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
-          *
-          * @param request DescribeInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstancesResponse
+         * @description You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
+         *
+         * @param request DescribeInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstancesResponse
          */
         public DescribeInstancesResponse DescribeInstancesWithOptions(DescribeInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7458,11 +9140,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
-          *
-          * @param request DescribeInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstancesResponse
+         * @description You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
+         *
+         * @param request DescribeInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstancesResponse
          */
         public async Task<DescribeInstancesResponse> DescribeInstancesWithOptionsAsync(DescribeInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7536,10 +9218,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
-          *
-          * @param request DescribeInstancesRequest
-          * @return DescribeInstancesResponse
+         * @description You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
+         *
+         * @param request DescribeInstancesRequest
+         * @return DescribeInstancesResponse
          */
         public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest request)
         {
@@ -7548,10 +9230,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
-          *
-          * @param request DescribeInstancesRequest
-          * @return DescribeInstancesResponse
+         * @description You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
+         *
+         * @param request DescribeInstancesRequest
+         * @return DescribeInstancesResponse
          */
         public async Task<DescribeInstancesResponse> DescribeInstancesAsync(DescribeInstancesRequest request)
         {
@@ -7559,6 +9241,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the back-to-origin policies for the forwarding rule of a website.
+         *
+         * @param request DescribeL7RsPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeL7RsPolicyResponse
+         */
         public DescribeL7RsPolicyResponse DescribeL7RsPolicyWithOptions(DescribeL7RsPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7594,6 +9283,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeL7RsPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the back-to-origin policies for the forwarding rule of a website.
+         *
+         * @param request DescribeL7RsPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeL7RsPolicyResponse
+         */
         public async Task<DescribeL7RsPolicyResponse> DescribeL7RsPolicyWithOptionsAsync(DescribeL7RsPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7629,18 +9325,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeL7RsPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the back-to-origin policies for the forwarding rule of a website.
+         *
+         * @param request DescribeL7RsPolicyRequest
+         * @return DescribeL7RsPolicyResponse
+         */
         public DescribeL7RsPolicyResponse DescribeL7RsPolicy(DescribeL7RsPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeL7RsPolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the back-to-origin policies for the forwarding rule of a website.
+         *
+         * @param request DescribeL7RsPolicyRequest
+         * @return DescribeL7RsPolicyResponse
+         */
         public async Task<DescribeL7RsPolicyResponse> DescribeL7RsPolicyAsync(DescribeL7RsPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeL7RsPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the back-to-origin settings of a port forwarding rule.
+         *
+         * @param request DescribeLayer4RulePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeLayer4RulePolicyResponse
+         */
         public DescribeLayer4RulePolicyResponse DescribeLayer4RulePolicyWithOptions(DescribeLayer4RulePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7668,6 +9383,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeLayer4RulePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the back-to-origin settings of a port forwarding rule.
+         *
+         * @param request DescribeLayer4RulePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeLayer4RulePolicyResponse
+         */
         public async Task<DescribeLayer4RulePolicyResponse> DescribeLayer4RulePolicyWithOptionsAsync(DescribeLayer4RulePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7695,18 +9417,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeLayer4RulePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the back-to-origin settings of a port forwarding rule.
+         *
+         * @param request DescribeLayer4RulePolicyRequest
+         * @return DescribeLayer4RulePolicyResponse
+         */
         public DescribeLayer4RulePolicyResponse DescribeLayer4RulePolicy(DescribeLayer4RulePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeLayer4RulePolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the back-to-origin settings of a port forwarding rule.
+         *
+         * @param request DescribeLayer4RulePolicyRequest
+         * @return DescribeLayer4RulePolicyResponse
+         */
         public async Task<DescribeLayer4RulePolicyResponse> DescribeLayer4RulePolicyAsync(DescribeLayer4RulePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeLayer4RulePolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Checks whether a Logstore is created for Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request DescribeLogStoreExistStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeLogStoreExistStatusResponse
+         */
         public DescribeLogStoreExistStatusResponse DescribeLogStoreExistStatusWithOptions(DescribeLogStoreExistStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7734,6 +9475,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeLogStoreExistStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Checks whether a Logstore is created for Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request DescribeLogStoreExistStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeLogStoreExistStatusResponse
+         */
         public async Task<DescribeLogStoreExistStatusResponse> DescribeLogStoreExistStatusWithOptionsAsync(DescribeLogStoreExistStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7761,18 +9509,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeLogStoreExistStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Checks whether a Logstore is created for Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request DescribeLogStoreExistStatusRequest
+         * @return DescribeLogStoreExistStatusResponse
+         */
         public DescribeLogStoreExistStatusResponse DescribeLogStoreExistStatus(DescribeLogStoreExistStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeLogStoreExistStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Checks whether a Logstore is created for Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request DescribeLogStoreExistStatusRequest
+         * @return DescribeLogStoreExistStatusResponse
+         */
         public async Task<DescribeLogStoreExistStatusResponse> DescribeLogStoreExistStatusAsync(DescribeLogStoreExistStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeLogStoreExistStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the blocked locations that are configured for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeNetworkRegionBlockRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNetworkRegionBlockResponse
+         */
         public DescribeNetworkRegionBlockResponse DescribeNetworkRegionBlockWithOptions(DescribeNetworkRegionBlockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7800,6 +9567,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeNetworkRegionBlockResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the blocked locations that are configured for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeNetworkRegionBlockRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNetworkRegionBlockResponse
+         */
         public async Task<DescribeNetworkRegionBlockResponse> DescribeNetworkRegionBlockWithOptionsAsync(DescribeNetworkRegionBlockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7827,18 +9601,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeNetworkRegionBlockResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the blocked locations that are configured for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeNetworkRegionBlockRequest
+         * @return DescribeNetworkRegionBlockResponse
+         */
         public DescribeNetworkRegionBlockResponse DescribeNetworkRegionBlock(DescribeNetworkRegionBlockRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNetworkRegionBlockWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the blocked locations that are configured for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeNetworkRegionBlockRequest
+         * @return DescribeNetworkRegionBlockResponse
+         */
         public async Task<DescribeNetworkRegionBlockResponse> DescribeNetworkRegionBlockAsync(DescribeNetworkRegionBlockRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNetworkRegionBlockWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the mitigation settings of the port forwarding rule for a non-website service. The mitigation settings include session persistence and DDoS mitigation policies.
+         *
+         * @param request DescribeNetworkRuleAttributesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNetworkRuleAttributesResponse
+         */
         public DescribeNetworkRuleAttributesResponse DescribeNetworkRuleAttributesWithOptions(DescribeNetworkRuleAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7866,6 +9659,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeNetworkRuleAttributesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the mitigation settings of the port forwarding rule for a non-website service. The mitigation settings include session persistence and DDoS mitigation policies.
+         *
+         * @param request DescribeNetworkRuleAttributesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNetworkRuleAttributesResponse
+         */
         public async Task<DescribeNetworkRuleAttributesResponse> DescribeNetworkRuleAttributesWithOptionsAsync(DescribeNetworkRuleAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7893,18 +9693,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeNetworkRuleAttributesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the mitigation settings of the port forwarding rule for a non-website service. The mitigation settings include session persistence and DDoS mitigation policies.
+         *
+         * @param request DescribeNetworkRuleAttributesRequest
+         * @return DescribeNetworkRuleAttributesResponse
+         */
         public DescribeNetworkRuleAttributesResponse DescribeNetworkRuleAttributes(DescribeNetworkRuleAttributesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNetworkRuleAttributesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the mitigation settings of the port forwarding rule for a non-website service. The mitigation settings include session persistence and DDoS mitigation policies.
+         *
+         * @param request DescribeNetworkRuleAttributesRequest
+         * @return DescribeNetworkRuleAttributesResponse
+         */
         public async Task<DescribeNetworkRuleAttributesResponse> DescribeNetworkRuleAttributesAsync(DescribeNetworkRuleAttributesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNetworkRuleAttributesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries port forwarding rules.
+         *
+         * @param request DescribeNetworkRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNetworkRulesResponse
+         */
         public DescribeNetworkRulesResponse DescribeNetworkRulesWithOptions(DescribeNetworkRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7948,6 +9767,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeNetworkRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries port forwarding rules.
+         *
+         * @param request DescribeNetworkRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeNetworkRulesResponse
+         */
         public async Task<DescribeNetworkRulesResponse> DescribeNetworkRulesWithOptionsAsync(DescribeNetworkRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7991,12 +9817,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeNetworkRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries port forwarding rules.
+         *
+         * @param request DescribeNetworkRulesRequest
+         * @return DescribeNetworkRulesResponse
+         */
         public DescribeNetworkRulesResponse DescribeNetworkRules(DescribeNetworkRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNetworkRulesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries port forwarding rules.
+         *
+         * @param request DescribeNetworkRulesRequest
+         * @return DescribeNetworkRulesResponse
+         */
         public async Task<DescribeNetworkRulesResponse> DescribeNetworkRulesAsync(DescribeNetworkRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8004,12 +9842,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          * You can query operations performed on Anti-DDoS Pro, such as configuring burstable protection bandwidth, deactivating blackhole filtering, configuring the Diversion from Origin Server policy, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.
-          *
-          * @param request DescribeOpEntitiesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeOpEntitiesResponse
+         * @summary Queries the operation logs of Anti-DDoS Pro.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         * You can query operations performed on Anti-DDoS Pro, such as configuring burstable protection bandwidth, deactivating blackhole filtering, configuring the Diversion from Origin Server policy, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.
+         *
+         * @param request DescribeOpEntitiesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeOpEntitiesResponse
          */
         public DescribeOpEntitiesResponse DescribeOpEntitiesWithOptions(DescribeOpEntitiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8063,12 +9903,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          * You can query operations performed on Anti-DDoS Pro, such as configuring burstable protection bandwidth, deactivating blackhole filtering, configuring the Diversion from Origin Server policy, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.
-          *
-          * @param request DescribeOpEntitiesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeOpEntitiesResponse
+         * @summary Queries the operation logs of Anti-DDoS Pro.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         * You can query operations performed on Anti-DDoS Pro, such as configuring burstable protection bandwidth, deactivating blackhole filtering, configuring the Diversion from Origin Server policy, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.
+         *
+         * @param request DescribeOpEntitiesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeOpEntitiesResponse
          */
         public async Task<DescribeOpEntitiesResponse> DescribeOpEntitiesWithOptionsAsync(DescribeOpEntitiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8122,11 +9964,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          * You can query operations performed on Anti-DDoS Pro, such as configuring burstable protection bandwidth, deactivating blackhole filtering, configuring the Diversion from Origin Server policy, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.
-          *
-          * @param request DescribeOpEntitiesRequest
-          * @return DescribeOpEntitiesResponse
+         * @summary Queries the operation logs of Anti-DDoS Pro.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         * You can query operations performed on Anti-DDoS Pro, such as configuring burstable protection bandwidth, deactivating blackhole filtering, configuring the Diversion from Origin Server policy, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.
+         *
+         * @param request DescribeOpEntitiesRequest
+         * @return DescribeOpEntitiesResponse
          */
         public DescribeOpEntitiesResponse DescribeOpEntities(DescribeOpEntitiesRequest request)
         {
@@ -8135,11 +9979,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          * You can query operations performed on Anti-DDoS Pro, such as configuring burstable protection bandwidth, deactivating blackhole filtering, configuring the Diversion from Origin Server policy, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.
-          *
-          * @param request DescribeOpEntitiesRequest
-          * @return DescribeOpEntitiesResponse
+         * @summary Queries the operation logs of Anti-DDoS Pro.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         * You can query operations performed on Anti-DDoS Pro, such as configuring burstable protection bandwidth, deactivating blackhole filtering, configuring the Diversion from Origin Server policy, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.
+         *
+         * @param request DescribeOpEntitiesRequest
+         * @return DescribeOpEntitiesResponse
          */
         public async Task<DescribeOpEntitiesResponse> DescribeOpEntitiesAsync(DescribeOpEntitiesRequest request)
         {
@@ -8148,11 +9994,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request DescribePortRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePortResponse
+         * @summary Queries the port forwarding rules that are created for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @description You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request DescribePortRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortResponse
          */
         public DescribePortResponse DescribePortWithOptions(DescribePortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8198,11 +10046,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request DescribePortRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePortResponse
+         * @summary Queries the port forwarding rules that are created for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @description You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request DescribePortRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortResponse
          */
         public async Task<DescribePortResponse> DescribePortWithOptionsAsync(DescribePortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8248,10 +10098,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request DescribePortRequest
-          * @return DescribePortResponse
+         * @summary Queries the port forwarding rules that are created for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @description You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request DescribePortRequest
+         * @return DescribePortResponse
          */
         public DescribePortResponse DescribePort(DescribePortRequest request)
         {
@@ -8260,10 +10112,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request DescribePortRequest
-          * @return DescribePortResponse
+         * @summary Queries the port forwarding rules that are created for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @description You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request DescribePortRequest
+         * @return DescribePortResponse
          */
         public async Task<DescribePortResponse> DescribePortAsync(DescribePortRequest request)
         {
@@ -8272,13 +10126,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribePortAttackMaxFlowRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePortAttackMaxFlowResponse
+         * @summary Queries the peak attack traffic bandwidth and peak attack traffic packet rates of one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.
+         *
+         * @description You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribePortAttackMaxFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortAttackMaxFlowResponse
          */
         public DescribePortAttackMaxFlowResponse DescribePortAttackMaxFlowWithOptions(DescribePortAttackMaxFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8320,13 +10176,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribePortAttackMaxFlowRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePortAttackMaxFlowResponse
+         * @summary Queries the peak attack traffic bandwidth and peak attack traffic packet rates of one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.
+         *
+         * @description You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribePortAttackMaxFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortAttackMaxFlowResponse
          */
         public async Task<DescribePortAttackMaxFlowResponse> DescribePortAttackMaxFlowWithOptionsAsync(DescribePortAttackMaxFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8368,12 +10226,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribePortAttackMaxFlowRequest
-          * @return DescribePortAttackMaxFlowResponse
+         * @summary Queries the peak attack traffic bandwidth and peak attack traffic packet rates of one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.
+         *
+         * @description You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribePortAttackMaxFlowRequest
+         * @return DescribePortAttackMaxFlowResponse
          */
         public DescribePortAttackMaxFlowResponse DescribePortAttackMaxFlow(DescribePortAttackMaxFlowRequest request)
         {
@@ -8382,12 +10242,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribePortAttackMaxFlowRequest
-          * @return DescribePortAttackMaxFlowResponse
+         * @summary Queries the peak attack traffic bandwidth and peak attack traffic packet rates of one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.
+         *
+         * @description You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribePortAttackMaxFlowRequest
+         * @return DescribePortAttackMaxFlowResponse
          */
         public async Task<DescribePortAttackMaxFlowResponse> DescribePortAttackMaxFlowAsync(DescribePortAttackMaxFlowRequest request)
         {
@@ -8395,6 +10257,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribePortAttackMaxFlowWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the configurations of the Intelligent Protection policy for non-website services.
+         *
+         * @param request DescribePortAutoCcStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortAutoCcStatusResponse
+         */
         public DescribePortAutoCcStatusResponse DescribePortAutoCcStatusWithOptions(DescribePortAutoCcStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8422,6 +10291,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortAutoCcStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the configurations of the Intelligent Protection policy for non-website services.
+         *
+         * @param request DescribePortAutoCcStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortAutoCcStatusResponse
+         */
         public async Task<DescribePortAutoCcStatusResponse> DescribePortAutoCcStatusWithOptionsAsync(DescribePortAutoCcStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8449,18 +10325,35 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortAutoCcStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the configurations of the Intelligent Protection policy for non-website services.
+         *
+         * @param request DescribePortAutoCcStatusRequest
+         * @return DescribePortAutoCcStatusResponse
+         */
         public DescribePortAutoCcStatusResponse DescribePortAutoCcStatus(DescribePortAutoCcStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePortAutoCcStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the configurations of the Intelligent Protection policy for non-website services.
+         *
+         * @param request DescribePortAutoCcStatusRequest
+         * @return DescribePortAutoCcStatusResponse
+         */
         public async Task<DescribePortAutoCcStatusResponse> DescribePortAutoCcStatusAsync(DescribePortAutoCcStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePortAutoCcStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DescribePortCcAttackTopIPRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortCcAttackTopIPResponse
+         */
         public DescribePortCcAttackTopIPResponse DescribePortCcAttackTopIPWithOptions(DescribePortCcAttackTopIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8500,6 +10393,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortCcAttackTopIPResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribePortCcAttackTopIPRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortCcAttackTopIPResponse
+         */
         public async Task<DescribePortCcAttackTopIPResponse> DescribePortCcAttackTopIPWithOptionsAsync(DescribePortCcAttackTopIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8539,18 +10437,33 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortCcAttackTopIPResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribePortCcAttackTopIPRequest
+         * @return DescribePortCcAttackTopIPResponse
+         */
         public DescribePortCcAttackTopIPResponse DescribePortCcAttackTopIP(DescribePortCcAttackTopIPRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePortCcAttackTopIPWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DescribePortCcAttackTopIPRequest
+         * @return DescribePortCcAttackTopIPResponse
+         */
         public async Task<DescribePortCcAttackTopIPResponse> DescribePortCcAttackTopIPAsync(DescribePortCcAttackTopIPRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePortCcAttackTopIPWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary The statistics on the connections established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances are queried.
+         *
+         * @param request DescribePortConnsCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortConnsCountResponse
+         */
         public DescribePortConnsCountResponse DescribePortConnsCountWithOptions(DescribePortConnsCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8594,6 +10507,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortConnsCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary The statistics on the connections established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances are queried.
+         *
+         * @param request DescribePortConnsCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortConnsCountResponse
+         */
         public async Task<DescribePortConnsCountResponse> DescribePortConnsCountWithOptionsAsync(DescribePortConnsCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8637,18 +10557,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortConnsCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary The statistics on the connections established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances are queried.
+         *
+         * @param request DescribePortConnsCountRequest
+         * @return DescribePortConnsCountResponse
+         */
         public DescribePortConnsCountResponse DescribePortConnsCount(DescribePortConnsCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePortConnsCountWithOptions(request, runtime);
         }
 
+        /**
+         * @summary The statistics on the connections established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances are queried.
+         *
+         * @param request DescribePortConnsCountRequest
+         * @return DescribePortConnsCountResponse
+         */
         public async Task<DescribePortConnsCountResponse> DescribePortConnsCountAsync(DescribePortConnsCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePortConnsCountWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the connections established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribePortConnsListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortConnsListResponse
+         */
         public DescribePortConnsListResponse DescribePortConnsListWithOptions(DescribePortConnsListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8696,6 +10635,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortConnsListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the connections established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribePortConnsListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortConnsListResponse
+         */
         public async Task<DescribePortConnsListResponse> DescribePortConnsListWithOptionsAsync(DescribePortConnsListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8743,18 +10689,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortConnsListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the connections established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribePortConnsListRequest
+         * @return DescribePortConnsListResponse
+         */
         public DescribePortConnsListResponse DescribePortConnsList(DescribePortConnsListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePortConnsListWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the connections established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribePortConnsListRequest
+         * @return DescribePortConnsListResponse
+         */
         public async Task<DescribePortConnsListResponse> DescribePortConnsListAsync(DescribePortConnsListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePortConnsListWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the traffic data of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribePortFlowListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortFlowListResponse
+         */
         public DescribePortFlowListResponse DescribePortFlowListWithOptions(DescribePortFlowListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8798,6 +10763,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortFlowListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the traffic data of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribePortFlowListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortFlowListResponse
+         */
         public async Task<DescribePortFlowListResponse> DescribePortFlowListWithOptionsAsync(DescribePortFlowListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8841,18 +10813,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortFlowListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the traffic data of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribePortFlowListRequest
+         * @return DescribePortFlowListResponse
+         */
         public DescribePortFlowListResponse DescribePortFlowList(DescribePortFlowListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePortFlowListWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the traffic data of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribePortFlowListRequest
+         * @return DescribePortFlowListResponse
+         */
         public async Task<DescribePortFlowListResponse> DescribePortFlowListAsync(DescribePortFlowListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePortFlowListWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the maximum number of connections that can be established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribePortMaxConnsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortMaxConnsResponse
+         */
         public DescribePortMaxConnsResponse DescribePortMaxConnsWithOptions(DescribePortMaxConnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8892,6 +10883,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortMaxConnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the maximum number of connections that can be established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribePortMaxConnsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortMaxConnsResponse
+         */
         public async Task<DescribePortMaxConnsResponse> DescribePortMaxConnsWithOptionsAsync(DescribePortMaxConnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8931,18 +10929,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortMaxConnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the maximum number of connections that can be established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribePortMaxConnsRequest
+         * @return DescribePortMaxConnsResponse
+         */
         public DescribePortMaxConnsResponse DescribePortMaxConns(DescribePortMaxConnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePortMaxConnsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the maximum number of connections that can be established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.
+         *
+         * @param request DescribePortMaxConnsRequest
+         * @return DescribePortMaxConnsResponse
+         */
         public async Task<DescribePortMaxConnsResponse> DescribePortMaxConnsAsync(DescribePortMaxConnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePortMaxConnsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the areas and countries from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within the specified period of time.
+         *
+         * @param request DescribePortViewSourceCountriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortViewSourceCountriesResponse
+         */
         public DescribePortViewSourceCountriesResponse DescribePortViewSourceCountriesWithOptions(DescribePortViewSourceCountriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8982,6 +10999,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortViewSourceCountriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the areas and countries from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within the specified period of time.
+         *
+         * @param request DescribePortViewSourceCountriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortViewSourceCountriesResponse
+         */
         public async Task<DescribePortViewSourceCountriesResponse> DescribePortViewSourceCountriesWithOptionsAsync(DescribePortViewSourceCountriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9021,12 +11045,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortViewSourceCountriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the areas and countries from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within the specified period of time.
+         *
+         * @param request DescribePortViewSourceCountriesRequest
+         * @return DescribePortViewSourceCountriesResponse
+         */
         public DescribePortViewSourceCountriesResponse DescribePortViewSourceCountries(DescribePortViewSourceCountriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePortViewSourceCountriesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the areas and countries from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within the specified period of time.
+         *
+         * @param request DescribePortViewSourceCountriesRequest
+         * @return DescribePortViewSourceCountriesResponse
+         */
         public async Task<DescribePortViewSourceCountriesResponse> DescribePortViewSourceCountriesAsync(DescribePortViewSourceCountriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9034,14 +11070,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
-          * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](~~157460~~) operation.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribePortViewSourceIspsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePortViewSourceIspsResponse
+         * @summary Queries the Internet service providers (ISPs) from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within the specified period of time.
+         *
+         * @description You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+         * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](https://help.aliyun.com/document_detail/157460.html) operation.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribePortViewSourceIspsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortViewSourceIspsResponse
          */
         public DescribePortViewSourceIspsResponse DescribePortViewSourceIspsWithOptions(DescribePortViewSourceIspsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9083,14 +11121,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
-          * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](~~157460~~) operation.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribePortViewSourceIspsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePortViewSourceIspsResponse
+         * @summary Queries the Internet service providers (ISPs) from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within the specified period of time.
+         *
+         * @description You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+         * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](https://help.aliyun.com/document_detail/157460.html) operation.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribePortViewSourceIspsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortViewSourceIspsResponse
          */
         public async Task<DescribePortViewSourceIspsResponse> DescribePortViewSourceIspsWithOptionsAsync(DescribePortViewSourceIspsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9132,13 +11172,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
-          * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](~~157460~~) operation.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribePortViewSourceIspsRequest
-          * @return DescribePortViewSourceIspsResponse
+         * @summary Queries the Internet service providers (ISPs) from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within the specified period of time.
+         *
+         * @description You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+         * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](https://help.aliyun.com/document_detail/157460.html) operation.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribePortViewSourceIspsRequest
+         * @return DescribePortViewSourceIspsResponse
          */
         public DescribePortViewSourceIspsResponse DescribePortViewSourceIsps(DescribePortViewSourceIspsRequest request)
         {
@@ -9147,13 +11189,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
-          * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](~~157460~~) operation.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribePortViewSourceIspsRequest
-          * @return DescribePortViewSourceIspsResponse
+         * @summary Queries the Internet service providers (ISPs) from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within the specified period of time.
+         *
+         * @description You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+         * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](https://help.aliyun.com/document_detail/157460.html) operation.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribePortViewSourceIspsRequest
+         * @return DescribePortViewSourceIspsResponse
          */
         public async Task<DescribePortViewSourceIspsResponse> DescribePortViewSourceIspsAsync(DescribePortViewSourceIspsRequest request)
         {
@@ -9161,6 +11205,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribePortViewSourceIspsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the administrative regions in China from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.
+         *
+         * @param request DescribePortViewSourceProvincesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortViewSourceProvincesResponse
+         */
         public DescribePortViewSourceProvincesResponse DescribePortViewSourceProvincesWithOptions(DescribePortViewSourceProvincesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9200,6 +11251,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortViewSourceProvincesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the administrative regions in China from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.
+         *
+         * @param request DescribePortViewSourceProvincesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePortViewSourceProvincesResponse
+         */
         public async Task<DescribePortViewSourceProvincesResponse> DescribePortViewSourceProvincesWithOptionsAsync(DescribePortViewSourceProvincesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9239,12 +11297,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortViewSourceProvincesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the administrative regions in China from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.
+         *
+         * @param request DescribePortViewSourceProvincesRequest
+         * @return DescribePortViewSourceProvincesResponse
+         */
         public DescribePortViewSourceProvincesResponse DescribePortViewSourceProvinces(DescribePortViewSourceProvincesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePortViewSourceProvincesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the administrative regions in China from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.
+         *
+         * @param request DescribePortViewSourceProvincesRequest
+         * @return DescribePortViewSourceProvincesResponse
+         */
         public async Task<DescribePortViewSourceProvincesResponse> DescribePortViewSourceProvincesAsync(DescribePortViewSourceProvincesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9252,14 +11322,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
-          * Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the [CreateSceneDefensePolicy](~~159779~~) operation.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSceneDefenseObjectsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSceneDefenseObjectsResponse
+         * @summary Queries the protected objects of a scenario-specific custom policy.
+         *
+         * @description You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
+         * Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the [CreateSceneDefensePolicy](https://help.aliyun.com/document_detail/159779.html) operation.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSceneDefenseObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSceneDefenseObjectsResponse
          */
         public DescribeSceneDefenseObjectsResponse DescribeSceneDefenseObjectsWithOptions(DescribeSceneDefenseObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9293,14 +11365,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
-          * Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the [CreateSceneDefensePolicy](~~159779~~) operation.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSceneDefenseObjectsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSceneDefenseObjectsResponse
+         * @summary Queries the protected objects of a scenario-specific custom policy.
+         *
+         * @description You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
+         * Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the [CreateSceneDefensePolicy](https://help.aliyun.com/document_detail/159779.html) operation.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSceneDefenseObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSceneDefenseObjectsResponse
          */
         public async Task<DescribeSceneDefenseObjectsResponse> DescribeSceneDefenseObjectsWithOptionsAsync(DescribeSceneDefenseObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9334,13 +11408,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
-          * Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the [CreateSceneDefensePolicy](~~159779~~) operation.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSceneDefenseObjectsRequest
-          * @return DescribeSceneDefenseObjectsResponse
+         * @summary Queries the protected objects of a scenario-specific custom policy.
+         *
+         * @description You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
+         * Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the [CreateSceneDefensePolicy](https://help.aliyun.com/document_detail/159779.html) operation.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSceneDefenseObjectsRequest
+         * @return DescribeSceneDefenseObjectsResponse
          */
         public DescribeSceneDefenseObjectsResponse DescribeSceneDefenseObjects(DescribeSceneDefenseObjectsRequest request)
         {
@@ -9349,13 +11425,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
-          * Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the [CreateSceneDefensePolicy](~~159779~~) operation.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSceneDefenseObjectsRequest
-          * @return DescribeSceneDefenseObjectsResponse
+         * @summary Queries the protected objects of a scenario-specific custom policy.
+         *
+         * @description You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
+         * Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the [CreateSceneDefensePolicy](https://help.aliyun.com/document_detail/159779.html) operation.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSceneDefenseObjectsRequest
+         * @return DescribeSceneDefenseObjectsResponse
          */
         public async Task<DescribeSceneDefenseObjectsResponse> DescribeSceneDefenseObjectsAsync(DescribeSceneDefenseObjectsRequest request)
         {
@@ -9364,13 +11442,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSceneDefensePoliciesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSceneDefensePoliciesResponse
+         * @summary Queries the configurations of a scenario-specific custom policy.
+         *
+         * @description You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSceneDefensePoliciesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSceneDefensePoliciesResponse
          */
         public DescribeSceneDefensePoliciesResponse DescribeSceneDefensePoliciesWithOptions(DescribeSceneDefensePoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9408,13 +11488,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSceneDefensePoliciesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSceneDefensePoliciesResponse
+         * @summary Queries the configurations of a scenario-specific custom policy.
+         *
+         * @description You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSceneDefensePoliciesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSceneDefensePoliciesResponse
          */
         public async Task<DescribeSceneDefensePoliciesResponse> DescribeSceneDefensePoliciesWithOptionsAsync(DescribeSceneDefensePoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9452,12 +11534,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSceneDefensePoliciesRequest
-          * @return DescribeSceneDefensePoliciesResponse
+         * @summary Queries the configurations of a scenario-specific custom policy.
+         *
+         * @description You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSceneDefensePoliciesRequest
+         * @return DescribeSceneDefensePoliciesResponse
          */
         public DescribeSceneDefensePoliciesResponse DescribeSceneDefensePolicies(DescribeSceneDefensePoliciesRequest request)
         {
@@ -9466,12 +11550,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSceneDefensePoliciesRequest
-          * @return DescribeSceneDefensePoliciesResponse
+         * @summary Queries the configurations of a scenario-specific custom policy.
+         *
+         * @description You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSceneDefensePoliciesRequest
+         * @return DescribeSceneDefensePoliciesResponse
          */
         public async Task<DescribeSceneDefensePoliciesResponse> DescribeSceneDefensePoliciesAsync(DescribeSceneDefensePoliciesRequest request)
         {
@@ -9479,6 +11565,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeSceneDefensePoliciesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DescribeSchedulerRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSchedulerRulesResponse
+         */
         public DescribeSchedulerRulesResponse DescribeSchedulerRulesWithOptions(DescribeSchedulerRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9518,6 +11609,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSchedulerRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeSchedulerRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSchedulerRulesResponse
+         */
         public async Task<DescribeSchedulerRulesResponse> DescribeSchedulerRulesWithOptionsAsync(DescribeSchedulerRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9557,18 +11653,33 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSchedulerRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeSchedulerRulesRequest
+         * @return DescribeSchedulerRulesResponse
+         */
         public DescribeSchedulerRulesResponse DescribeSchedulerRules(DescribeSchedulerRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSchedulerRulesWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DescribeSchedulerRulesRequest
+         * @return DescribeSchedulerRulesResponse
+         */
         public async Task<DescribeSchedulerRulesResponse> DescribeSchedulerRulesAsync(DescribeSchedulerRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSchedulerRulesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the destination rate limit events.
+         *
+         * @param request DescribeSlaEventListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSlaEventListResponse
+         */
         public DescribeSlaEventListResponse DescribeSlaEventListWithOptions(DescribeSlaEventListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9616,6 +11727,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSlaEventListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the destination rate limit events.
+         *
+         * @param request DescribeSlaEventListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSlaEventListResponse
+         */
         public async Task<DescribeSlaEventListResponse> DescribeSlaEventListWithOptionsAsync(DescribeSlaEventListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9663,18 +11781,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSlaEventListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the destination rate limit events.
+         *
+         * @param request DescribeSlaEventListRequest
+         * @return DescribeSlaEventListResponse
+         */
         public DescribeSlaEventListResponse DescribeSlaEventList(DescribeSlaEventListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlaEventListWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the destination rate limit events.
+         *
+         * @param request DescribeSlaEventListRequest
+         * @return DescribeSlaEventListResponse
+         */
         public async Task<DescribeSlaEventListResponse> DescribeSlaEventListAsync(DescribeSlaEventListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlaEventListWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access Log Service.
+         *
+         * @param request DescribeSlsAuthStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSlsAuthStatusResponse
+         */
         public DescribeSlsAuthStatusResponse DescribeSlsAuthStatusWithOptions(DescribeSlsAuthStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9702,6 +11839,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSlsAuthStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access Log Service.
+         *
+         * @param request DescribeSlsAuthStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSlsAuthStatusResponse
+         */
         public async Task<DescribeSlsAuthStatusResponse> DescribeSlsAuthStatusWithOptionsAsync(DescribeSlsAuthStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9729,18 +11873,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSlsAuthStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access Log Service.
+         *
+         * @param request DescribeSlsAuthStatusRequest
+         * @return DescribeSlsAuthStatusResponse
+         */
         public DescribeSlsAuthStatusResponse DescribeSlsAuthStatus(DescribeSlsAuthStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlsAuthStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access Log Service.
+         *
+         * @param request DescribeSlsAuthStatusRequest
+         * @return DescribeSlsAuthStatusResponse
+         */
         public async Task<DescribeSlsAuthStatusResponse> DescribeSlsAuthStatusAsync(DescribeSlsAuthStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlsAuthStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about the Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance, such as the log storage capacity and log storage duration.
+         *
+         * @param request DescribeSlsLogstoreInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSlsLogstoreInfoResponse
+         */
         public DescribeSlsLogstoreInfoResponse DescribeSlsLogstoreInfoWithOptions(DescribeSlsLogstoreInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9768,6 +11931,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSlsLogstoreInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about the Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance, such as the log storage capacity and log storage duration.
+         *
+         * @param request DescribeSlsLogstoreInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSlsLogstoreInfoResponse
+         */
         public async Task<DescribeSlsLogstoreInfoResponse> DescribeSlsLogstoreInfoWithOptionsAsync(DescribeSlsLogstoreInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9795,18 +11965,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSlsLogstoreInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about the Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance, such as the log storage capacity and log storage duration.
+         *
+         * @param request DescribeSlsLogstoreInfoRequest
+         * @return DescribeSlsLogstoreInfoResponse
+         */
         public DescribeSlsLogstoreInfoResponse DescribeSlsLogstoreInfo(DescribeSlsLogstoreInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlsLogstoreInfoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about the Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance, such as the log storage capacity and log storage duration.
+         *
+         * @param request DescribeSlsLogstoreInfoRequest
+         * @return DescribeSlsLogstoreInfoResponse
+         */
         public async Task<DescribeSlsLogstoreInfoResponse> DescribeSlsLogstoreInfoAsync(DescribeSlsLogstoreInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlsLogstoreInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Checks whether Log Service is activated.
+         *
+         * @param request DescribeSlsOpenStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSlsOpenStatusResponse
+         */
         public DescribeSlsOpenStatusResponse DescribeSlsOpenStatusWithOptions(DescribeSlsOpenStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9834,6 +12023,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSlsOpenStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Checks whether Log Service is activated.
+         *
+         * @param request DescribeSlsOpenStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSlsOpenStatusResponse
+         */
         public async Task<DescribeSlsOpenStatusResponse> DescribeSlsOpenStatusWithOptionsAsync(DescribeSlsOpenStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9861,12 +12057,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSlsOpenStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Checks whether Log Service is activated.
+         *
+         * @param request DescribeSlsOpenStatusRequest
+         * @return DescribeSlsOpenStatusResponse
+         */
         public DescribeSlsOpenStatusResponse DescribeSlsOpenStatus(DescribeSlsOpenStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlsOpenStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Checks whether Log Service is activated.
+         *
+         * @param request DescribeSlsOpenStatusRequest
+         * @return DescribeSlsOpenStatusResponse
+         */
         public async Task<DescribeSlsOpenStatusResponse> DescribeSlsOpenStatusAsync(DescribeSlsOpenStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9874,13 +12082,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeStsGrantStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeStsGrantStatusResponse
+         * @summary Queries whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access other cloud services.
+         *
+         * @description You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeStsGrantStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeStsGrantStatusResponse
          */
         public DescribeStsGrantStatusResponse DescribeStsGrantStatusWithOptions(DescribeStsGrantStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9914,13 +12124,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeStsGrantStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeStsGrantStatusResponse
+         * @summary Queries whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access other cloud services.
+         *
+         * @description You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeStsGrantStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeStsGrantStatusResponse
          */
         public async Task<DescribeStsGrantStatusResponse> DescribeStsGrantStatusWithOptionsAsync(DescribeStsGrantStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9954,12 +12166,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeStsGrantStatusRequest
-          * @return DescribeStsGrantStatusResponse
+         * @summary Queries whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access other cloud services.
+         *
+         * @description You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeStsGrantStatusRequest
+         * @return DescribeStsGrantStatusResponse
          */
         public DescribeStsGrantStatusResponse DescribeStsGrantStatus(DescribeStsGrantStatusRequest request)
         {
@@ -9968,12 +12182,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeStsGrantStatusRequest
-          * @return DescribeStsGrantStatusResponse
+         * @summary Queries whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access other cloud services.
+         *
+         * @description You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeStsGrantStatusRequest
+         * @return DescribeStsGrantStatusResponse
          */
         public async Task<DescribeStsGrantStatusResponse> DescribeStsGrantStatusAsync(DescribeStsGrantStatusRequest request)
         {
@@ -9982,14 +12198,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
-          * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSystemLogRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSystemLogResponse
+         * @summary Queries the details of the bills for the burstable clean bandwidth.
+         *
+         * @description You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
+         * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSystemLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSystemLogResponse
          */
         public DescribeSystemLogResponse DescribeSystemLogWithOptions(DescribeSystemLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10039,14 +12257,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
-          * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSystemLogRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSystemLogResponse
+         * @summary Queries the details of the bills for the burstable clean bandwidth.
+         *
+         * @description You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
+         * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSystemLogRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSystemLogResponse
          */
         public async Task<DescribeSystemLogResponse> DescribeSystemLogWithOptionsAsync(DescribeSystemLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10096,13 +12316,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
-          * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSystemLogRequest
-          * @return DescribeSystemLogResponse
+         * @summary Queries the details of the bills for the burstable clean bandwidth.
+         *
+         * @description You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
+         * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSystemLogRequest
+         * @return DescribeSystemLogResponse
          */
         public DescribeSystemLogResponse DescribeSystemLog(DescribeSystemLogRequest request)
         {
@@ -10111,13 +12333,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
-          * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeSystemLogRequest
-          * @return DescribeSystemLogResponse
+         * @summary Queries the details of the bills for the burstable clean bandwidth.
+         *
+         * @description You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
+         * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeSystemLogRequest
+         * @return DescribeSystemLogResponse
          */
         public async Task<DescribeSystemLogResponse> DescribeSystemLogAsync(DescribeSystemLogRequest request)
         {
@@ -10126,14 +12350,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation to query all tag keys and the Anti-DDoS Pro instances to which the tag keys are added by page.
-          * > The tag feature is suitable only for Anti-DDoS Pro.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeTagKeysRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTagKeysResponse
+         * @summary Queries all tag keys and the Anti-DDoS Pro instances to which the tag keys are added.
+         *
+         * @description You can call this operation to query all tag keys and the Anti-DDoS Pro instances to which the tag keys are added by page.
+         * > The tag feature is suitable only for Anti-DDoS Pro.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeTagKeysRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTagKeysResponse
          */
         public DescribeTagKeysResponse DescribeTagKeysWithOptions(DescribeTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10179,14 +12405,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation to query all tag keys and the Anti-DDoS Pro instances to which the tag keys are added by page.
-          * > The tag feature is suitable only for Anti-DDoS Pro.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeTagKeysRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTagKeysResponse
+         * @summary Queries all tag keys and the Anti-DDoS Pro instances to which the tag keys are added.
+         *
+         * @description You can call this operation to query all tag keys and the Anti-DDoS Pro instances to which the tag keys are added by page.
+         * > The tag feature is suitable only for Anti-DDoS Pro.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeTagKeysRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTagKeysResponse
          */
         public async Task<DescribeTagKeysResponse> DescribeTagKeysWithOptionsAsync(DescribeTagKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10232,13 +12460,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation to query all tag keys and the Anti-DDoS Pro instances to which the tag keys are added by page.
-          * > The tag feature is suitable only for Anti-DDoS Pro.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeTagKeysRequest
-          * @return DescribeTagKeysResponse
+         * @summary Queries all tag keys and the Anti-DDoS Pro instances to which the tag keys are added.
+         *
+         * @description You can call this operation to query all tag keys and the Anti-DDoS Pro instances to which the tag keys are added by page.
+         * > The tag feature is suitable only for Anti-DDoS Pro.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeTagKeysRequest
+         * @return DescribeTagKeysResponse
          */
         public DescribeTagKeysResponse DescribeTagKeys(DescribeTagKeysRequest request)
         {
@@ -10247,13 +12477,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call this operation to query all tag keys and the Anti-DDoS Pro instances to which the tag keys are added by page.
-          * > The tag feature is suitable only for Anti-DDoS Pro.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeTagKeysRequest
-          * @return DescribeTagKeysResponse
+         * @summary Queries all tag keys and the Anti-DDoS Pro instances to which the tag keys are added.
+         *
+         * @description You can call this operation to query all tag keys and the Anti-DDoS Pro instances to which the tag keys are added by page.
+         * > The tag feature is suitable only for Anti-DDoS Pro.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeTagKeysRequest
+         * @return DescribeTagKeysResponse
          */
         public async Task<DescribeTagKeysResponse> DescribeTagKeysAsync(DescribeTagKeysRequest request)
         {
@@ -10262,14 +12494,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Pro instance.
-          * > Only Anti-DDoS Pro supports tags.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTagResourcesResponse
+         * @summary Queries the information about the tags that are added to an Anti-DDoS Pro instance.
+         *
+         * @description You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Pro instance.
+         * > Only Anti-DDoS Pro supports tags.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTagResourcesResponse
          */
         public DescribeTagResourcesResponse DescribeTagResourcesWithOptions(DescribeTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10319,14 +12553,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Pro instance.
-          * > Only Anti-DDoS Pro supports tags.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTagResourcesResponse
+         * @summary Queries the information about the tags that are added to an Anti-DDoS Pro instance.
+         *
+         * @description You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Pro instance.
+         * > Only Anti-DDoS Pro supports tags.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTagResourcesResponse
          */
         public async Task<DescribeTagResourcesResponse> DescribeTagResourcesWithOptionsAsync(DescribeTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10376,13 +12612,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Pro instance.
-          * > Only Anti-DDoS Pro supports tags.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeTagResourcesRequest
-          * @return DescribeTagResourcesResponse
+         * @summary Queries the information about the tags that are added to an Anti-DDoS Pro instance.
+         *
+         * @description You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Pro instance.
+         * > Only Anti-DDoS Pro supports tags.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeTagResourcesRequest
+         * @return DescribeTagResourcesResponse
          */
         public DescribeTagResourcesResponse DescribeTagResources(DescribeTagResourcesRequest request)
         {
@@ -10391,13 +12629,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Pro instance.
-          * > Only Anti-DDoS Pro supports tags.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeTagResourcesRequest
-          * @return DescribeTagResourcesResponse
+         * @summary Queries the information about the tags that are added to an Anti-DDoS Pro instance.
+         *
+         * @description You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Pro instance.
+         * > Only Anti-DDoS Pro supports tags.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeTagResourcesRequest
+         * @return DescribeTagResourcesResponse
          */
         public async Task<DescribeTagResourcesResponse> DescribeTagResourcesAsync(DescribeTagResourcesRequest request)
         {
@@ -10405,6 +12645,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the peak bandwidth and peak packet rates of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+         *
+         * @param request DescribeTotalAttackMaxFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTotalAttackMaxFlowResponse
+         */
         public DescribeTotalAttackMaxFlowResponse DescribeTotalAttackMaxFlowWithOptions(DescribeTotalAttackMaxFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10444,6 +12691,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeTotalAttackMaxFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the peak bandwidth and peak packet rates of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+         *
+         * @param request DescribeTotalAttackMaxFlowRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTotalAttackMaxFlowResponse
+         */
         public async Task<DescribeTotalAttackMaxFlowResponse> DescribeTotalAttackMaxFlowWithOptionsAsync(DescribeTotalAttackMaxFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10483,18 +12737,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeTotalAttackMaxFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the peak bandwidth and peak packet rates of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+         *
+         * @param request DescribeTotalAttackMaxFlowRequest
+         * @return DescribeTotalAttackMaxFlowResponse
+         */
         public DescribeTotalAttackMaxFlowResponse DescribeTotalAttackMaxFlow(DescribeTotalAttackMaxFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTotalAttackMaxFlowWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the peak bandwidth and peak packet rates of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+         *
+         * @param request DescribeTotalAttackMaxFlowRequest
+         * @return DescribeTotalAttackMaxFlowResponse
+         */
         public async Task<DescribeTotalAttackMaxFlowResponse> DescribeTotalAttackMaxFlowAsync(DescribeTotalAttackMaxFlowRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTotalAttackMaxFlowWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the source ports of UDP traffic that are filtered out by the filtering policies for UDP reflection attacks on an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeUdpReflectRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUdpReflectResponse
+         */
         public DescribeUdpReflectResponse DescribeUdpReflectWithOptions(DescribeUdpReflectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10526,6 +12799,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeUdpReflectResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the source ports of UDP traffic that are filtered out by the filtering policies for UDP reflection attacks on an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeUdpReflectRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUdpReflectResponse
+         */
         public async Task<DescribeUdpReflectResponse> DescribeUdpReflectWithOptionsAsync(DescribeUdpReflectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10557,18 +12837,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeUdpReflectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the source ports of UDP traffic that are filtered out by the filtering policies for UDP reflection attacks on an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeUdpReflectRequest
+         * @return DescribeUdpReflectResponse
+         */
         public DescribeUdpReflectResponse DescribeUdpReflect(DescribeUdpReflectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUdpReflectWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the source ports of UDP traffic that are filtered out by the filtering policies for UDP reflection attacks on an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request DescribeUdpReflectRequest
+         * @return DescribeUdpReflectResponse
+         */
         public async Task<DescribeUdpReflectResponse> DescribeUdpReflectAsync(DescribeUdpReflectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUdpReflectWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the total quota and remaining quota that allow you to deactivate blackhole filtering.
+         *
+         * @param request DescribeUnBlackholeCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUnBlackholeCountResponse
+         */
         public DescribeUnBlackholeCountResponse DescribeUnBlackholeCountWithOptions(DescribeUnBlackholeCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10596,6 +12895,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeUnBlackholeCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the total quota and remaining quota that allow you to deactivate blackhole filtering.
+         *
+         * @param request DescribeUnBlackholeCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUnBlackholeCountResponse
+         */
         public async Task<DescribeUnBlackholeCountResponse> DescribeUnBlackholeCountWithOptionsAsync(DescribeUnBlackholeCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10623,12 +12929,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeUnBlackholeCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the total quota and remaining quota that allow you to deactivate blackhole filtering.
+         *
+         * @param request DescribeUnBlackholeCountRequest
+         * @return DescribeUnBlackholeCountResponse
+         */
         public DescribeUnBlackholeCountResponse DescribeUnBlackholeCount(DescribeUnBlackholeCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUnBlackholeCountWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the total quota and remaining quota that allow you to deactivate blackhole filtering.
+         *
+         * @param request DescribeUnBlackholeCountRequest
+         * @return DescribeUnBlackholeCountResponse
+         */
         public async Task<DescribeUnBlackholeCountResponse> DescribeUnBlackholeCountAsync(DescribeUnBlackholeCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10636,11 +12954,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request DescribeUnBlockCountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUnBlockCountResponse
+         * @summary Queries the remaining quota that allows you to use the Diversion from Origin Server policy.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request DescribeUnBlockCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUnBlockCountResponse
          */
         public DescribeUnBlockCountResponse DescribeUnBlockCountWithOptions(DescribeUnBlockCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10670,11 +12990,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request DescribeUnBlockCountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUnBlockCountResponse
+         * @summary Queries the remaining quota that allows you to use the Diversion from Origin Server policy.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request DescribeUnBlockCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUnBlockCountResponse
          */
         public async Task<DescribeUnBlockCountResponse> DescribeUnBlockCountWithOptionsAsync(DescribeUnBlockCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10704,10 +13026,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request DescribeUnBlockCountRequest
-          * @return DescribeUnBlockCountResponse
+         * @summary Queries the remaining quota that allows you to use the Diversion from Origin Server policy.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request DescribeUnBlockCountRequest
+         * @return DescribeUnBlockCountResponse
          */
         public DescribeUnBlockCountResponse DescribeUnBlockCount(DescribeUnBlockCountRequest request)
         {
@@ -10716,10 +13040,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request DescribeUnBlockCountRequest
-          * @return DescribeUnBlockCountResponse
+         * @summary Queries the remaining quota that allows you to use the Diversion from Origin Server policy.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request DescribeUnBlockCountRequest
+         * @return DescribeUnBlockCountResponse
          */
         public async Task<DescribeUnBlockCountResponse> DescribeUnBlockCountAsync(DescribeUnBlockCountRequest request)
         {
@@ -10728,13 +13054,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWebAccessLogDispatchStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeWebAccessLogDispatchStatusResponse
+         * @summary Checks whether the log analysis feature is enabled for all domain names.
+         *
+         * @description You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWebAccessLogDispatchStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebAccessLogDispatchStatusResponse
          */
         public DescribeWebAccessLogDispatchStatusResponse DescribeWebAccessLogDispatchStatusWithOptions(DescribeWebAccessLogDispatchStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10772,13 +13100,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWebAccessLogDispatchStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeWebAccessLogDispatchStatusResponse
+         * @summary Checks whether the log analysis feature is enabled for all domain names.
+         *
+         * @description You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWebAccessLogDispatchStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebAccessLogDispatchStatusResponse
          */
         public async Task<DescribeWebAccessLogDispatchStatusResponse> DescribeWebAccessLogDispatchStatusWithOptionsAsync(DescribeWebAccessLogDispatchStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10816,12 +13146,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWebAccessLogDispatchStatusRequest
-          * @return DescribeWebAccessLogDispatchStatusResponse
+         * @summary Checks whether the log analysis feature is enabled for all domain names.
+         *
+         * @description You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWebAccessLogDispatchStatusRequest
+         * @return DescribeWebAccessLogDispatchStatusResponse
          */
         public DescribeWebAccessLogDispatchStatusResponse DescribeWebAccessLogDispatchStatus(DescribeWebAccessLogDispatchStatusRequest request)
         {
@@ -10830,12 +13162,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWebAccessLogDispatchStatusRequest
-          * @return DescribeWebAccessLogDispatchStatusResponse
+         * @summary Checks whether the log analysis feature is enabled for all domain names.
+         *
+         * @description You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWebAccessLogDispatchStatusRequest
+         * @return DescribeWebAccessLogDispatchStatusResponse
          */
         public async Task<DescribeWebAccessLogDispatchStatusResponse> DescribeWebAccessLogDispatchStatusAsync(DescribeWebAccessLogDispatchStatusRequest request)
         {
@@ -10843,6 +13177,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeWebAccessLogDispatchStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the remaining quota that allows you to clear the Logstore.
+         *
+         * @param request DescribeWebAccessLogEmptyCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebAccessLogEmptyCountResponse
+         */
         public DescribeWebAccessLogEmptyCountResponse DescribeWebAccessLogEmptyCountWithOptions(DescribeWebAccessLogEmptyCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10870,6 +13211,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAccessLogEmptyCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the remaining quota that allows you to clear the Logstore.
+         *
+         * @param request DescribeWebAccessLogEmptyCountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebAccessLogEmptyCountResponse
+         */
         public async Task<DescribeWebAccessLogEmptyCountResponse> DescribeWebAccessLogEmptyCountWithOptionsAsync(DescribeWebAccessLogEmptyCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10897,18 +13245,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAccessLogEmptyCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the remaining quota that allows you to clear the Logstore.
+         *
+         * @param request DescribeWebAccessLogEmptyCountRequest
+         * @return DescribeWebAccessLogEmptyCountResponse
+         */
         public DescribeWebAccessLogEmptyCountResponse DescribeWebAccessLogEmptyCount(DescribeWebAccessLogEmptyCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeWebAccessLogEmptyCountWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the remaining quota that allows you to clear the Logstore.
+         *
+         * @param request DescribeWebAccessLogEmptyCountRequest
+         * @return DescribeWebAccessLogEmptyCountResponse
+         */
         public async Task<DescribeWebAccessLogEmptyCountResponse> DescribeWebAccessLogEmptyCountAsync(DescribeWebAccessLogEmptyCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWebAccessLogEmptyCountWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about the Log Analysis feature for a website, such as the feature status and the Log Service project and Logstore that are used.
+         *
+         * @param request DescribeWebAccessLogStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebAccessLogStatusResponse
+         */
         public DescribeWebAccessLogStatusResponse DescribeWebAccessLogStatusWithOptions(DescribeWebAccessLogStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10940,6 +13307,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAccessLogStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about the Log Analysis feature for a website, such as the feature status and the Log Service project and Logstore that are used.
+         *
+         * @param request DescribeWebAccessLogStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebAccessLogStatusResponse
+         */
         public async Task<DescribeWebAccessLogStatusResponse> DescribeWebAccessLogStatusWithOptionsAsync(DescribeWebAccessLogStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10971,18 +13345,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAccessLogStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about the Log Analysis feature for a website, such as the feature status and the Log Service project and Logstore that are used.
+         *
+         * @param request DescribeWebAccessLogStatusRequest
+         * @return DescribeWebAccessLogStatusResponse
+         */
         public DescribeWebAccessLogStatusResponse DescribeWebAccessLogStatus(DescribeWebAccessLogStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeWebAccessLogStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about the Log Analysis feature for a website, such as the feature status and the Log Service project and Logstore that are used.
+         *
+         * @param request DescribeWebAccessLogStatusRequest
+         * @return DescribeWebAccessLogStatusResponse
+         */
         public async Task<DescribeWebAccessLogStatusResponse> DescribeWebAccessLogStatusAsync(DescribeWebAccessLogStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWebAccessLogStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the mode in which a website service is added to Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request DescribeWebAccessModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebAccessModeResponse
+         */
         public DescribeWebAccessModeResponse DescribeWebAccessModeWithOptions(DescribeWebAccessModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11010,6 +13403,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAccessModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the mode in which a website service is added to Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request DescribeWebAccessModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebAccessModeResponse
+         */
         public async Task<DescribeWebAccessModeResponse> DescribeWebAccessModeWithOptionsAsync(DescribeWebAccessModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11037,18 +13437,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAccessModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the mode in which a website service is added to Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request DescribeWebAccessModeRequest
+         * @return DescribeWebAccessModeResponse
+         */
         public DescribeWebAccessModeResponse DescribeWebAccessMode(DescribeWebAccessModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeWebAccessModeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the mode in which a website service is added to Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request DescribeWebAccessModeRequest
+         * @return DescribeWebAccessModeResponse
+         */
         public async Task<DescribeWebAccessModeResponse> DescribeWebAccessModeAsync(DescribeWebAccessModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWebAccessModeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the Location Blacklist (Domain Names) configurations for websites.
+         *
+         * @param request DescribeWebAreaBlockConfigsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebAreaBlockConfigsResponse
+         */
         public DescribeWebAreaBlockConfigsResponse DescribeWebAreaBlockConfigsWithOptions(DescribeWebAreaBlockConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11080,6 +13499,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAreaBlockConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the Location Blacklist (Domain Names) configurations for websites.
+         *
+         * @param request DescribeWebAreaBlockConfigsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebAreaBlockConfigsResponse
+         */
         public async Task<DescribeWebAreaBlockConfigsResponse> DescribeWebAreaBlockConfigsWithOptionsAsync(DescribeWebAreaBlockConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11111,18 +13537,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAreaBlockConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the Location Blacklist (Domain Names) configurations for websites.
+         *
+         * @param request DescribeWebAreaBlockConfigsRequest
+         * @return DescribeWebAreaBlockConfigsResponse
+         */
         public DescribeWebAreaBlockConfigsResponse DescribeWebAreaBlockConfigs(DescribeWebAreaBlockConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeWebAreaBlockConfigsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the Location Blacklist (Domain Names) configurations for websites.
+         *
+         * @param request DescribeWebAreaBlockConfigsRequest
+         * @return DescribeWebAreaBlockConfigsResponse
+         */
         public async Task<DescribeWebAreaBlockConfigsResponse> DescribeWebAreaBlockConfigsAsync(DescribeWebAreaBlockConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWebAreaBlockConfigsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the custom frequency control rules that are created for a website.
+         *
+         * @param request DescribeWebCCRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebCCRulesResponse
+         */
         public DescribeWebCCRulesResponse DescribeWebCCRulesWithOptions(DescribeWebCCRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11162,6 +13607,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebCCRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the custom frequency control rules that are created for a website.
+         *
+         * @param request DescribeWebCCRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebCCRulesResponse
+         */
         public async Task<DescribeWebCCRulesResponse> DescribeWebCCRulesWithOptionsAsync(DescribeWebCCRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11201,12 +13653,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebCCRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the custom frequency control rules that are created for a website.
+         *
+         * @param request DescribeWebCCRulesRequest
+         * @return DescribeWebCCRulesResponse
+         */
         public DescribeWebCCRulesResponse DescribeWebCCRules(DescribeWebCCRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeWebCCRulesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the custom frequency control rules that are created for a website.
+         *
+         * @param request DescribeWebCCRulesRequest
+         * @return DescribeWebCCRulesResponse
+         */
         public async Task<DescribeWebCCRulesResponse> DescribeWebCCRulesAsync(DescribeWebCCRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11214,13 +13678,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWebCacheConfigsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeWebCacheConfigsResponse
+         * @summary Queries the Static Page Caching configuration of websites.
+         *
+         * @description You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWebCacheConfigsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebCacheConfigsResponse
          */
         public DescribeWebCacheConfigsResponse DescribeWebCacheConfigsWithOptions(DescribeWebCacheConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11254,13 +13720,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWebCacheConfigsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeWebCacheConfigsResponse
+         * @summary Queries the Static Page Caching configuration of websites.
+         *
+         * @description You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWebCacheConfigsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebCacheConfigsResponse
          */
         public async Task<DescribeWebCacheConfigsResponse> DescribeWebCacheConfigsWithOptionsAsync(DescribeWebCacheConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11294,12 +13762,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWebCacheConfigsRequest
-          * @return DescribeWebCacheConfigsResponse
+         * @summary Queries the Static Page Caching configuration of websites.
+         *
+         * @description You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWebCacheConfigsRequest
+         * @return DescribeWebCacheConfigsResponse
          */
         public DescribeWebCacheConfigsResponse DescribeWebCacheConfigs(DescribeWebCacheConfigsRequest request)
         {
@@ -11308,12 +13778,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeWebCacheConfigsRequest
-          * @return DescribeWebCacheConfigsResponse
+         * @summary Queries the Static Page Caching configuration of websites.
+         *
+         * @description You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeWebCacheConfigsRequest
+         * @return DescribeWebCacheConfigsResponse
          */
         public async Task<DescribeWebCacheConfigsResponse> DescribeWebCacheConfigsAsync(DescribeWebCacheConfigsRequest request)
         {
@@ -11321,6 +13793,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeWebCacheConfigsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the status of each mitigation policy for a website.
+         *
+         * @param request DescribeWebCcProtectSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebCcProtectSwitchResponse
+         */
         public DescribeWebCcProtectSwitchResponse DescribeWebCcProtectSwitchWithOptions(DescribeWebCcProtectSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11352,6 +13831,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebCcProtectSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the status of each mitigation policy for a website.
+         *
+         * @param request DescribeWebCcProtectSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebCcProtectSwitchResponse
+         */
         public async Task<DescribeWebCcProtectSwitchResponse> DescribeWebCcProtectSwitchWithOptionsAsync(DescribeWebCcProtectSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11383,18 +13869,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebCcProtectSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the status of each mitigation policy for a website.
+         *
+         * @param request DescribeWebCcProtectSwitchRequest
+         * @return DescribeWebCcProtectSwitchResponse
+         */
         public DescribeWebCcProtectSwitchResponse DescribeWebCcProtectSwitch(DescribeWebCcProtectSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeWebCcProtectSwitchWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the status of each mitigation policy for a website.
+         *
+         * @param request DescribeWebCcProtectSwitchRequest
+         * @return DescribeWebCcProtectSwitchResponse
+         */
         public async Task<DescribeWebCcProtectSwitchResponse> DescribeWebCcProtectSwitchAsync(DescribeWebCcProtectSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWebCcProtectSwitchWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the supported custom ports of a website.
+         *
+         * @param request DescribeWebCustomPortsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebCustomPortsResponse
+         */
         public DescribeWebCustomPortsResponse DescribeWebCustomPortsWithOptions(DescribeWebCustomPortsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11422,6 +13927,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebCustomPortsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the supported custom ports of a website.
+         *
+         * @param request DescribeWebCustomPortsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebCustomPortsResponse
+         */
         public async Task<DescribeWebCustomPortsResponse> DescribeWebCustomPortsWithOptionsAsync(DescribeWebCustomPortsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11449,18 +13961,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebCustomPortsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the supported custom ports of a website.
+         *
+         * @param request DescribeWebCustomPortsRequest
+         * @return DescribeWebCustomPortsResponse
+         */
         public DescribeWebCustomPortsResponse DescribeWebCustomPorts(DescribeWebCustomPortsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeWebCustomPortsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the supported custom ports of a website.
+         *
+         * @param request DescribeWebCustomPortsRequest
+         * @return DescribeWebCustomPortsResponse
+         */
         public async Task<DescribeWebCustomPortsResponse> DescribeWebCustomPortsAsync(DescribeWebCustomPortsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWebCustomPortsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about Anti-DDoS Pro or Anti-DDoS Premium instances to which a website service is added.
+         *
+         * @param request DescribeWebInstanceRelationsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebInstanceRelationsResponse
+         */
         public DescribeWebInstanceRelationsResponse DescribeWebInstanceRelationsWithOptions(DescribeWebInstanceRelationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11492,6 +14023,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebInstanceRelationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about Anti-DDoS Pro or Anti-DDoS Premium instances to which a website service is added.
+         *
+         * @param request DescribeWebInstanceRelationsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebInstanceRelationsResponse
+         */
         public async Task<DescribeWebInstanceRelationsResponse> DescribeWebInstanceRelationsWithOptionsAsync(DescribeWebInstanceRelationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11523,18 +14061,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebInstanceRelationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about Anti-DDoS Pro or Anti-DDoS Premium instances to which a website service is added.
+         *
+         * @param request DescribeWebInstanceRelationsRequest
+         * @return DescribeWebInstanceRelationsResponse
+         */
         public DescribeWebInstanceRelationsResponse DescribeWebInstanceRelations(DescribeWebInstanceRelationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeWebInstanceRelationsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about Anti-DDoS Pro or Anti-DDoS Premium instances to which a website service is added.
+         *
+         * @param request DescribeWebInstanceRelationsRequest
+         * @return DescribeWebInstanceRelationsResponse
+         */
         public async Task<DescribeWebInstanceRelationsResponse> DescribeWebInstanceRelationsAsync(DescribeWebInstanceRelationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWebInstanceRelationsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the accurate access control rules that are created for websites.
+         *
+         * @param request DescribeWebPreciseAccessRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebPreciseAccessRuleResponse
+         */
         public DescribeWebPreciseAccessRuleResponse DescribeWebPreciseAccessRuleWithOptions(DescribeWebPreciseAccessRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11566,6 +14123,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebPreciseAccessRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the accurate access control rules that are created for websites.
+         *
+         * @param request DescribeWebPreciseAccessRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebPreciseAccessRuleResponse
+         */
         public async Task<DescribeWebPreciseAccessRuleResponse> DescribeWebPreciseAccessRuleWithOptionsAsync(DescribeWebPreciseAccessRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11597,18 +14161,35 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebPreciseAccessRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the accurate access control rules that are created for websites.
+         *
+         * @param request DescribeWebPreciseAccessRuleRequest
+         * @return DescribeWebPreciseAccessRuleResponse
+         */
         public DescribeWebPreciseAccessRuleResponse DescribeWebPreciseAccessRule(DescribeWebPreciseAccessRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeWebPreciseAccessRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the accurate access control rules that are created for websites.
+         *
+         * @param request DescribeWebPreciseAccessRuleRequest
+         * @return DescribeWebPreciseAccessRuleResponse
+         */
         public async Task<DescribeWebPreciseAccessRuleResponse> DescribeWebPreciseAccessRuleAsync(DescribeWebPreciseAccessRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWebPreciseAccessRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DescribeWebReportTopIpRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebReportTopIpResponse
+         */
         public DescribeWebReportTopIpResponse DescribeWebReportTopIpWithOptions(DescribeWebReportTopIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11656,6 +14237,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebReportTopIpResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeWebReportTopIpRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebReportTopIpResponse
+         */
         public async Task<DescribeWebReportTopIpResponse> DescribeWebReportTopIpWithOptionsAsync(DescribeWebReportTopIpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11703,18 +14289,35 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebReportTopIpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeWebReportTopIpRequest
+         * @return DescribeWebReportTopIpResponse
+         */
         public DescribeWebReportTopIpResponse DescribeWebReportTopIp(DescribeWebReportTopIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeWebReportTopIpWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DescribeWebReportTopIpRequest
+         * @return DescribeWebReportTopIpResponse
+         */
         public async Task<DescribeWebReportTopIpResponse> DescribeWebReportTopIpAsync(DescribeWebReportTopIpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWebReportTopIpWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Indicates whether Allow Access Only from SM Certificates-based Clients is turned on.
+         * *   0: no
+         * *   1: yes
+         *
+         * @param request DescribeWebRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebRulesResponse
+         */
         public DescribeWebRulesResponse DescribeWebRulesWithOptions(DescribeWebRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11766,6 +14369,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Indicates whether Allow Access Only from SM Certificates-based Clients is turned on.
+         * *   0: no
+         * *   1: yes
+         *
+         * @param request DescribeWebRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebRulesResponse
+         */
         public async Task<DescribeWebRulesResponse> DescribeWebRulesWithOptionsAsync(DescribeWebRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11817,18 +14429,41 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Indicates whether Allow Access Only from SM Certificates-based Clients is turned on.
+         * *   0: no
+         * *   1: yes
+         *
+         * @param request DescribeWebRulesRequest
+         * @return DescribeWebRulesResponse
+         */
         public DescribeWebRulesResponse DescribeWebRules(DescribeWebRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeWebRulesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Indicates whether Allow Access Only from SM Certificates-based Clients is turned on.
+         * *   0: no
+         * *   1: yes
+         *
+         * @param request DescribeWebRulesRequest
+         * @return DescribeWebRulesResponse
+         */
         public async Task<DescribeWebRulesResponse> DescribeWebRulesAsync(DescribeWebRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWebRulesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Removes a protected object from a scenario-specific custom policy.
+         *
+         * @param request DetachSceneDefenseObjectRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DetachSceneDefenseObjectResponse
+         */
         public DetachSceneDefenseObjectResponse DetachSceneDefenseObjectWithOptions(DetachSceneDefenseObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11864,6 +14499,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DetachSceneDefenseObjectResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes a protected object from a scenario-specific custom policy.
+         *
+         * @param request DetachSceneDefenseObjectRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DetachSceneDefenseObjectResponse
+         */
         public async Task<DetachSceneDefenseObjectResponse> DetachSceneDefenseObjectWithOptionsAsync(DetachSceneDefenseObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11899,18 +14541,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DetachSceneDefenseObjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes a protected object from a scenario-specific custom policy.
+         *
+         * @param request DetachSceneDefenseObjectRequest
+         * @return DetachSceneDefenseObjectResponse
+         */
         public DetachSceneDefenseObjectResponse DetachSceneDefenseObject(DetachSceneDefenseObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachSceneDefenseObjectWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Removes a protected object from a scenario-specific custom policy.
+         *
+         * @param request DetachSceneDefenseObjectRequest
+         * @return DetachSceneDefenseObjectResponse
+         */
         public async Task<DetachSceneDefenseObjectResponse> DetachSceneDefenseObjectAsync(DetachSceneDefenseObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachSceneDefenseObjectWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Disables a scenario-specific custom policy.
+         *
+         * @param request DisableSceneDefensePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableSceneDefensePolicyResponse
+         */
         public DisableSceneDefensePolicyResponse DisableSceneDefensePolicyWithOptions(DisableSceneDefensePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11938,6 +14599,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableSceneDefensePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Disables a scenario-specific custom policy.
+         *
+         * @param request DisableSceneDefensePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableSceneDefensePolicyResponse
+         */
         public async Task<DisableSceneDefensePolicyResponse> DisableSceneDefensePolicyWithOptionsAsync(DisableSceneDefensePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11965,18 +14633,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableSceneDefensePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Disables a scenario-specific custom policy.
+         *
+         * @param request DisableSceneDefensePolicyRequest
+         * @return DisableSceneDefensePolicyResponse
+         */
         public DisableSceneDefensePolicyResponse DisableSceneDefensePolicy(DisableSceneDefensePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableSceneDefensePolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Disables a scenario-specific custom policy.
+         *
+         * @param request DisableSceneDefensePolicyRequest
+         * @return DisableSceneDefensePolicyResponse
+         */
         public async Task<DisableSceneDefensePolicyResponse> DisableSceneDefensePolicyAsync(DisableSceneDefensePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableSceneDefensePolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Disables the log analysis feature for a website.
+         *
+         * @param request DisableWebAccessLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableWebAccessLogConfigResponse
+         */
         public DisableWebAccessLogConfigResponse DisableWebAccessLogConfigWithOptions(DisableWebAccessLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12008,6 +14695,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableWebAccessLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Disables the log analysis feature for a website.
+         *
+         * @param request DisableWebAccessLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableWebAccessLogConfigResponse
+         */
         public async Task<DisableWebAccessLogConfigResponse> DisableWebAccessLogConfigWithOptionsAsync(DisableWebAccessLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12039,18 +14733,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableWebAccessLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Disables the log analysis feature for a website.
+         *
+         * @param request DisableWebAccessLogConfigRequest
+         * @return DisableWebAccessLogConfigResponse
+         */
         public DisableWebAccessLogConfigResponse DisableWebAccessLogConfig(DisableWebAccessLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableWebAccessLogConfigWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Disables the log analysis feature for a website.
+         *
+         * @param request DisableWebAccessLogConfigRequest
+         * @return DisableWebAccessLogConfigResponse
+         */
         public async Task<DisableWebAccessLogConfigResponse> DisableWebAccessLogConfigAsync(DisableWebAccessLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableWebAccessLogConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Disables the Frequency Control policy for a website.
+         *
+         * @param request DisableWebCCRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableWebCCResponse
+         */
         public DisableWebCCResponse DisableWebCCWithOptions(DisableWebCCRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12082,6 +14795,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableWebCCResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Disables the Frequency Control policy for a website.
+         *
+         * @param request DisableWebCCRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableWebCCResponse
+         */
         public async Task<DisableWebCCResponse> DisableWebCCWithOptionsAsync(DisableWebCCRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12113,18 +14833,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableWebCCResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Disables the Frequency Control policy for a website.
+         *
+         * @param request DisableWebCCRequest
+         * @return DisableWebCCResponse
+         */
         public DisableWebCCResponse DisableWebCC(DisableWebCCRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableWebCCWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Disables the Frequency Control policy for a website.
+         *
+         * @param request DisableWebCCRequest
+         * @return DisableWebCCResponse
+         */
         public async Task<DisableWebCCResponse> DisableWebCCAsync(DisableWebCCRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableWebCCWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Turns off the Custom Rule switch of the Frequency Control policy for a website.
+         *
+         * @param request DisableWebCCRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableWebCCRuleResponse
+         */
         public DisableWebCCRuleResponse DisableWebCCRuleWithOptions(DisableWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12156,6 +14895,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableWebCCRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Turns off the Custom Rule switch of the Frequency Control policy for a website.
+         *
+         * @param request DisableWebCCRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableWebCCRuleResponse
+         */
         public async Task<DisableWebCCRuleResponse> DisableWebCCRuleWithOptionsAsync(DisableWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12187,18 +14933,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableWebCCRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Turns off the Custom Rule switch of the Frequency Control policy for a website.
+         *
+         * @param request DisableWebCCRuleRequest
+         * @return DisableWebCCRuleResponse
+         */
         public DisableWebCCRuleResponse DisableWebCCRule(DisableWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableWebCCRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Turns off the Custom Rule switch of the Frequency Control policy for a website.
+         *
+         * @param request DisableWebCCRuleRequest
+         * @return DisableWebCCRuleResponse
+         */
         public async Task<DisableWebCCRuleResponse> DisableWebCCRuleAsync(DisableWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableWebCCRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Clears the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request EmptyAutoCcBlacklistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EmptyAutoCcBlacklistResponse
+         */
         public EmptyAutoCcBlacklistResponse EmptyAutoCcBlacklistWithOptions(EmptyAutoCcBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12226,6 +14991,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EmptyAutoCcBlacklistResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Clears the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request EmptyAutoCcBlacklistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EmptyAutoCcBlacklistResponse
+         */
         public async Task<EmptyAutoCcBlacklistResponse> EmptyAutoCcBlacklistWithOptionsAsync(EmptyAutoCcBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12253,18 +15025,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EmptyAutoCcBlacklistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Clears the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request EmptyAutoCcBlacklistRequest
+         * @return EmptyAutoCcBlacklistResponse
+         */
         public EmptyAutoCcBlacklistResponse EmptyAutoCcBlacklist(EmptyAutoCcBlacklistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EmptyAutoCcBlacklistWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Clears the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request EmptyAutoCcBlacklistRequest
+         * @return EmptyAutoCcBlacklistResponse
+         */
         public async Task<EmptyAutoCcBlacklistResponse> EmptyAutoCcBlacklistAsync(EmptyAutoCcBlacklistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EmptyAutoCcBlacklistWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Clears the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request EmptyAutoCcWhitelistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EmptyAutoCcWhitelistResponse
+         */
         public EmptyAutoCcWhitelistResponse EmptyAutoCcWhitelistWithOptions(EmptyAutoCcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12292,6 +15083,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EmptyAutoCcWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Clears the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request EmptyAutoCcWhitelistRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EmptyAutoCcWhitelistResponse
+         */
         public async Task<EmptyAutoCcWhitelistResponse> EmptyAutoCcWhitelistWithOptionsAsync(EmptyAutoCcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12319,18 +15117,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EmptyAutoCcWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Clears the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request EmptyAutoCcWhitelistRequest
+         * @return EmptyAutoCcWhitelistResponse
+         */
         public EmptyAutoCcWhitelistResponse EmptyAutoCcWhitelist(EmptyAutoCcWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EmptyAutoCcWhitelistWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Clears the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request EmptyAutoCcWhitelistRequest
+         * @return EmptyAutoCcWhitelistResponse
+         */
         public async Task<EmptyAutoCcWhitelistResponse> EmptyAutoCcWhitelistAsync(EmptyAutoCcWhitelistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EmptyAutoCcWhitelistWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Clears the Logstore of Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request EmptySlsLogstoreRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EmptySlsLogstoreResponse
+         */
         public EmptySlsLogstoreResponse EmptySlsLogstoreWithOptions(EmptySlsLogstoreRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12358,6 +15175,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EmptySlsLogstoreResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Clears the Logstore of Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request EmptySlsLogstoreRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EmptySlsLogstoreResponse
+         */
         public async Task<EmptySlsLogstoreResponse> EmptySlsLogstoreWithOptionsAsync(EmptySlsLogstoreRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12385,18 +15209,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EmptySlsLogstoreResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Clears the Logstore of Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request EmptySlsLogstoreRequest
+         * @return EmptySlsLogstoreResponse
+         */
         public EmptySlsLogstoreResponse EmptySlsLogstore(EmptySlsLogstoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EmptySlsLogstoreWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Clears the Logstore of Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request EmptySlsLogstoreRequest
+         * @return EmptySlsLogstoreResponse
+         */
         public async Task<EmptySlsLogstoreResponse> EmptySlsLogstoreAsync(EmptySlsLogstoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EmptySlsLogstoreWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables a scenario-specific custom policy.
+         *
+         * @param request EnableSceneDefensePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableSceneDefensePolicyResponse
+         */
         public EnableSceneDefensePolicyResponse EnableSceneDefensePolicyWithOptions(EnableSceneDefensePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12424,6 +15267,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableSceneDefensePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables a scenario-specific custom policy.
+         *
+         * @param request EnableSceneDefensePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableSceneDefensePolicyResponse
+         */
         public async Task<EnableSceneDefensePolicyResponse> EnableSceneDefensePolicyWithOptionsAsync(EnableSceneDefensePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12451,18 +15301,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableSceneDefensePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables a scenario-specific custom policy.
+         *
+         * @param request EnableSceneDefensePolicyRequest
+         * @return EnableSceneDefensePolicyResponse
+         */
         public EnableSceneDefensePolicyResponse EnableSceneDefensePolicy(EnableSceneDefensePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableSceneDefensePolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables a scenario-specific custom policy.
+         *
+         * @param request EnableSceneDefensePolicyRequest
+         * @return EnableSceneDefensePolicyResponse
+         */
         public async Task<EnableSceneDefensePolicyResponse> EnableSceneDefensePolicyAsync(EnableSceneDefensePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableSceneDefensePolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables the log analysis feature for a website.
+         *
+         * @param request EnableWebAccessLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableWebAccessLogConfigResponse
+         */
         public EnableWebAccessLogConfigResponse EnableWebAccessLogConfigWithOptions(EnableWebAccessLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12494,6 +15363,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableWebAccessLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables the log analysis feature for a website.
+         *
+         * @param request EnableWebAccessLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableWebAccessLogConfigResponse
+         */
         public async Task<EnableWebAccessLogConfigResponse> EnableWebAccessLogConfigWithOptionsAsync(EnableWebAccessLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12525,18 +15401,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableWebAccessLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables the log analysis feature for a website.
+         *
+         * @param request EnableWebAccessLogConfigRequest
+         * @return EnableWebAccessLogConfigResponse
+         */
         public EnableWebAccessLogConfigResponse EnableWebAccessLogConfig(EnableWebAccessLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableWebAccessLogConfigWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables the log analysis feature for a website.
+         *
+         * @param request EnableWebAccessLogConfigRequest
+         * @return EnableWebAccessLogConfigResponse
+         */
         public async Task<EnableWebAccessLogConfigResponse> EnableWebAccessLogConfigAsync(EnableWebAccessLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableWebAccessLogConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables the Frequency Control policy for a website.
+         *
+         * @param request EnableWebCCRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableWebCCResponse
+         */
         public EnableWebCCResponse EnableWebCCWithOptions(EnableWebCCRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12568,6 +15463,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableWebCCResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables the Frequency Control policy for a website.
+         *
+         * @param request EnableWebCCRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableWebCCResponse
+         */
         public async Task<EnableWebCCResponse> EnableWebCCWithOptionsAsync(EnableWebCCRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12599,18 +15501,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableWebCCResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables the Frequency Control policy for a website.
+         *
+         * @param request EnableWebCCRequest
+         * @return EnableWebCCResponse
+         */
         public EnableWebCCResponse EnableWebCC(EnableWebCCRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableWebCCWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables the Frequency Control policy for a website.
+         *
+         * @param request EnableWebCCRequest
+         * @return EnableWebCCResponse
+         */
         public async Task<EnableWebCCResponse> EnableWebCCAsync(EnableWebCCRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableWebCCWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Turns on the Custom Rule switch of the Frequency Control policy for a website.
+         *
+         * @param request EnableWebCCRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableWebCCRuleResponse
+         */
         public EnableWebCCRuleResponse EnableWebCCRuleWithOptions(EnableWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12642,6 +15563,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableWebCCRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Turns on the Custom Rule switch of the Frequency Control policy for a website.
+         *
+         * @param request EnableWebCCRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableWebCCRuleResponse
+         */
         public async Task<EnableWebCCRuleResponse> EnableWebCCRuleWithOptionsAsync(EnableWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12673,12 +15601,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableWebCCRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Turns on the Custom Rule switch of the Frequency Control policy for a website.
+         *
+         * @param request EnableWebCCRuleRequest
+         * @return EnableWebCCRuleResponse
+         */
         public EnableWebCCRuleResponse EnableWebCCRule(EnableWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableWebCCRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Turns on the Custom Rule switch of the Frequency Control policy for a website.
+         *
+         * @param request EnableWebCCRuleRequest
+         * @return EnableWebCCRuleResponse
+         */
         public async Task<EnableWebCCRuleResponse> EnableWebCCRuleAsync(EnableWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12686,11 +15626,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.
-          *
-          * @param request ModifyBizBandWidthModeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyBizBandWidthModeResponse
+         * @summary Switches between the metering methods of the burstable clean bandwidth feature.
+         *
+         * @description You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.
+         *
+         * @param request ModifyBizBandWidthModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBizBandWidthModeResponse
          */
         public ModifyBizBandWidthModeResponse ModifyBizBandWidthModeWithOptions(ModifyBizBandWidthModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12724,11 +15666,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.
-          *
-          * @param request ModifyBizBandWidthModeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyBizBandWidthModeResponse
+         * @summary Switches between the metering methods of the burstable clean bandwidth feature.
+         *
+         * @description You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.
+         *
+         * @param request ModifyBizBandWidthModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBizBandWidthModeResponse
          */
         public async Task<ModifyBizBandWidthModeResponse> ModifyBizBandWidthModeWithOptionsAsync(ModifyBizBandWidthModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12762,10 +15706,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.
-          *
-          * @param request ModifyBizBandWidthModeRequest
-          * @return ModifyBizBandWidthModeResponse
+         * @summary Switches between the metering methods of the burstable clean bandwidth feature.
+         *
+         * @description You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.
+         *
+         * @param request ModifyBizBandWidthModeRequest
+         * @return ModifyBizBandWidthModeResponse
          */
         public ModifyBizBandWidthModeResponse ModifyBizBandWidthMode(ModifyBizBandWidthModeRequest request)
         {
@@ -12774,10 +15720,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.
-          *
-          * @param request ModifyBizBandWidthModeRequest
-          * @return ModifyBizBandWidthModeResponse
+         * @summary Switches between the metering methods of the burstable clean bandwidth feature.
+         *
+         * @description You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.
+         *
+         * @param request ModifyBizBandWidthModeRequest
+         * @return ModifyBizBandWidthModeResponse
          */
         public async Task<ModifyBizBandWidthModeResponse> ModifyBizBandWidthModeAsync(ModifyBizBandWidthModeRequest request)
         {
@@ -12785,6 +15733,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyBizBandWidthModeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deactivates blackhole filtering that is triggered on an instance.
+         *
+         * @param request ModifyBlackholeStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBlackholeStatusResponse
+         */
         public ModifyBlackholeStatusResponse ModifyBlackholeStatusWithOptions(ModifyBlackholeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12816,6 +15771,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyBlackholeStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deactivates blackhole filtering that is triggered on an instance.
+         *
+         * @param request ModifyBlackholeStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBlackholeStatusResponse
+         */
         public async Task<ModifyBlackholeStatusResponse> ModifyBlackholeStatusWithOptionsAsync(ModifyBlackholeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12847,12 +15809,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyBlackholeStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deactivates blackhole filtering that is triggered on an instance.
+         *
+         * @param request ModifyBlackholeStatusRequest
+         * @return ModifyBlackholeStatusResponse
+         */
         public ModifyBlackholeStatusResponse ModifyBlackholeStatus(ModifyBlackholeStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyBlackholeStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deactivates blackhole filtering that is triggered on an instance.
+         *
+         * @param request ModifyBlackholeStatusRequest
+         * @return ModifyBlackholeStatusResponse
+         */
         public async Task<ModifyBlackholeStatusResponse> ModifyBlackholeStatusAsync(ModifyBlackholeStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12860,11 +15834,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request ModifyBlockStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyBlockStatusResponse
+         * @summary Modifies the Diversion from Origin Server configuration of an Anti-DDoS Pro instance.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request ModifyBlockStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBlockStatusResponse
          */
         public ModifyBlockStatusResponse ModifyBlockStatusWithOptions(ModifyBlockStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12906,11 +15882,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request ModifyBlockStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyBlockStatusResponse
+         * @summary Modifies the Diversion from Origin Server configuration of an Anti-DDoS Pro instance.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request ModifyBlockStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBlockStatusResponse
          */
         public async Task<ModifyBlockStatusResponse> ModifyBlockStatusWithOptionsAsync(ModifyBlockStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12952,10 +15930,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request ModifyBlockStatusRequest
-          * @return ModifyBlockStatusResponse
+         * @summary Modifies the Diversion from Origin Server configuration of an Anti-DDoS Pro instance.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request ModifyBlockStatusRequest
+         * @return ModifyBlockStatusResponse
          */
         public ModifyBlockStatusResponse ModifyBlockStatus(ModifyBlockStatusRequest request)
         {
@@ -12964,10 +15944,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request ModifyBlockStatusRequest
-          * @return ModifyBlockStatusResponse
+         * @summary Modifies the Diversion from Origin Server configuration of an Anti-DDoS Pro instance.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request ModifyBlockStatusRequest
+         * @return ModifyBlockStatusResponse
          */
         public async Task<ModifyBlockStatusResponse> ModifyBlockStatusAsync(ModifyBlockStatusRequest request)
         {
@@ -12976,11 +15958,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Premium.
-          *
-          * @param request ModifyCnameReuseRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyCnameReuseResponse
+         * @summary Enables or disables CNAME reuse for a website.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Premium.
+         *
+         * @param request ModifyCnameReuseRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCnameReuseResponse
          */
         public ModifyCnameReuseResponse ModifyCnameReuseWithOptions(ModifyCnameReuseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13022,11 +16006,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Premium.
-          *
-          * @param request ModifyCnameReuseRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyCnameReuseResponse
+         * @summary Enables or disables CNAME reuse for a website.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Premium.
+         *
+         * @param request ModifyCnameReuseRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyCnameReuseResponse
          */
         public async Task<ModifyCnameReuseResponse> ModifyCnameReuseWithOptionsAsync(ModifyCnameReuseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13068,10 +16054,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Premium.
-          *
-          * @param request ModifyCnameReuseRequest
-          * @return ModifyCnameReuseResponse
+         * @summary Enables or disables CNAME reuse for a website.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Premium.
+         *
+         * @param request ModifyCnameReuseRequest
+         * @return ModifyCnameReuseResponse
          */
         public ModifyCnameReuseResponse ModifyCnameReuse(ModifyCnameReuseRequest request)
         {
@@ -13080,10 +16068,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Premium.
-          *
-          * @param request ModifyCnameReuseRequest
-          * @return ModifyCnameReuseResponse
+         * @summary Enables or disables CNAME reuse for a website.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Premium.
+         *
+         * @param request ModifyCnameReuseRequest
+         * @return ModifyCnameReuseResponse
          */
         public async Task<ModifyCnameReuseResponse> ModifyCnameReuseAsync(ModifyCnameReuseRequest request)
         {
@@ -13091,6 +16081,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyCnameReuseWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the forwarding rule of a website.
+         *
+         * @param request ModifyDomainResourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDomainResourceResponse
+         */
         public ModifyDomainResourceResponse ModifyDomainResourceWithOptions(ModifyDomainResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13138,6 +16135,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyDomainResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the forwarding rule of a website.
+         *
+         * @param request ModifyDomainResourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDomainResourceResponse
+         */
         public async Task<ModifyDomainResourceResponse> ModifyDomainResourceWithOptionsAsync(ModifyDomainResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13185,12 +16189,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyDomainResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the forwarding rule of a website.
+         *
+         * @param request ModifyDomainResourceRequest
+         * @return ModifyDomainResourceResponse
+         */
         public ModifyDomainResourceResponse ModifyDomainResource(ModifyDomainResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDomainResourceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the forwarding rule of a website.
+         *
+         * @param request ModifyDomainResourceRequest
+         * @return ModifyDomainResourceResponse
+         */
         public async Task<ModifyDomainResourceResponse> ModifyDomainResourceAsync(ModifyDomainResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13198,11 +16214,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request ModifyElasticBandWidthRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyElasticBandWidthResponse
+         * @summary Modifies the burstable protection bandwidth of a specified Anti-DDoS Pro instance.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request ModifyElasticBandWidthRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyElasticBandWidthResponse
          */
         public ModifyElasticBandWidthResponse ModifyElasticBandWidthWithOptions(ModifyElasticBandWidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13236,11 +16254,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request ModifyElasticBandWidthRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyElasticBandWidthResponse
+         * @summary Modifies the burstable protection bandwidth of a specified Anti-DDoS Pro instance.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request ModifyElasticBandWidthRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyElasticBandWidthResponse
          */
         public async Task<ModifyElasticBandWidthResponse> ModifyElasticBandWidthWithOptionsAsync(ModifyElasticBandWidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13274,10 +16294,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request ModifyElasticBandWidthRequest
-          * @return ModifyElasticBandWidthResponse
+         * @summary Modifies the burstable protection bandwidth of a specified Anti-DDoS Pro instance.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request ModifyElasticBandWidthRequest
+         * @return ModifyElasticBandWidthResponse
          */
         public ModifyElasticBandWidthResponse ModifyElasticBandWidth(ModifyElasticBandWidthRequest request)
         {
@@ -13286,10 +16308,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request ModifyElasticBandWidthRequest
-          * @return ModifyElasticBandWidthResponse
+         * @summary Modifies the burstable protection bandwidth of a specified Anti-DDoS Pro instance.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request ModifyElasticBandWidthRequest
+         * @return ModifyElasticBandWidthResponse
          */
         public async Task<ModifyElasticBandWidthResponse> ModifyElasticBandWidthAsync(ModifyElasticBandWidthRequest request)
         {
@@ -13298,11 +16322,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * Before you call this operation, make sure that you have fully understood the billing method and [pricing](https://help.aliyun.com/document_detail/283754.html) of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.
-          *
-          * @param request ModifyElasticBizBandWidthRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyElasticBizBandWidthResponse
+         * @summary Modifies the burstable clean bandwidth for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @description Before you call this operation, make sure that you have fully understood the billing method and [pricing](https://help.aliyun.com/document_detail/283754.html) of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.
+         *
+         * @param request ModifyElasticBizBandWidthRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyElasticBizBandWidthResponse
          */
         public ModifyElasticBizBandWidthResponse ModifyElasticBizBandWidthWithOptions(ModifyElasticBizBandWidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13340,11 +16366,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * Before you call this operation, make sure that you have fully understood the billing method and [pricing](https://help.aliyun.com/document_detail/283754.html) of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.
-          *
-          * @param request ModifyElasticBizBandWidthRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyElasticBizBandWidthResponse
+         * @summary Modifies the burstable clean bandwidth for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @description Before you call this operation, make sure that you have fully understood the billing method and [pricing](https://help.aliyun.com/document_detail/283754.html) of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.
+         *
+         * @param request ModifyElasticBizBandWidthRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyElasticBizBandWidthResponse
          */
         public async Task<ModifyElasticBizBandWidthResponse> ModifyElasticBizBandWidthWithOptionsAsync(ModifyElasticBizBandWidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13382,10 +16410,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * Before you call this operation, make sure that you have fully understood the billing method and [pricing](https://help.aliyun.com/document_detail/283754.html) of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.
-          *
-          * @param request ModifyElasticBizBandWidthRequest
-          * @return ModifyElasticBizBandWidthResponse
+         * @summary Modifies the burstable clean bandwidth for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @description Before you call this operation, make sure that you have fully understood the billing method and [pricing](https://help.aliyun.com/document_detail/283754.html) of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.
+         *
+         * @param request ModifyElasticBizBandWidthRequest
+         * @return ModifyElasticBizBandWidthResponse
          */
         public ModifyElasticBizBandWidthResponse ModifyElasticBizBandWidth(ModifyElasticBizBandWidthRequest request)
         {
@@ -13394,10 +16424,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * Before you call this operation, make sure that you have fully understood the billing method and [pricing](https://help.aliyun.com/document_detail/283754.html) of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.
-          *
-          * @param request ModifyElasticBizBandWidthRequest
-          * @return ModifyElasticBizBandWidthResponse
+         * @summary Modifies the burstable clean bandwidth for an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @description Before you call this operation, make sure that you have fully understood the billing method and [pricing](https://help.aliyun.com/document_detail/283754.html) of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.
+         *
+         * @param request ModifyElasticBizBandWidthRequest
+         * @return ModifyElasticBizBandWidthResponse
          */
         public async Task<ModifyElasticBizBandWidthResponse> ModifyElasticBizBandWidthAsync(ModifyElasticBizBandWidthRequest request)
         {
@@ -13405,6 +16437,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyElasticBizBandWidthWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 开启/关闭弹性QPS 首次模式直接生效
+         *
+         * @param request ModifyElasticBizQpsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyElasticBizQpsResponse
+         */
         public ModifyElasticBizQpsResponse ModifyElasticBizQpsWithOptions(ModifyElasticBizQpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13440,6 +16479,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyElasticBizQpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 开启/关闭弹性QPS 首次模式直接生效
+         *
+         * @param request ModifyElasticBizQpsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyElasticBizQpsResponse
+         */
         public async Task<ModifyElasticBizQpsResponse> ModifyElasticBizQpsWithOptionsAsync(ModifyElasticBizQpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13475,18 +16521,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyElasticBizQpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 开启/关闭弹性QPS 首次模式直接生效
+         *
+         * @param request ModifyElasticBizQpsRequest
+         * @return ModifyElasticBizQpsResponse
+         */
         public ModifyElasticBizQpsResponse ModifyElasticBizQps(ModifyElasticBizQpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyElasticBizQpsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 开启/关闭弹性QPS 首次模式直接生效
+         *
+         * @param request ModifyElasticBizQpsRequest
+         * @return ModifyElasticBizQpsResponse
+         */
         public async Task<ModifyElasticBizQpsResponse> ModifyElasticBizQpsAsync(ModifyElasticBizQpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyElasticBizQpsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the log storage duration for Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request ModifyFullLogTtlRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyFullLogTtlResponse
+         */
         public ModifyFullLogTtlResponse ModifyFullLogTtlWithOptions(ModifyFullLogTtlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13518,6 +16583,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyFullLogTtlResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the log storage duration for Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request ModifyFullLogTtlRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyFullLogTtlResponse
+         */
         public async Task<ModifyFullLogTtlResponse> ModifyFullLogTtlWithOptionsAsync(ModifyFullLogTtlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13549,18 +16621,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyFullLogTtlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the log storage duration for Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request ModifyFullLogTtlRequest
+         * @return ModifyFullLogTtlResponse
+         */
         public ModifyFullLogTtlResponse ModifyFullLogTtl(ModifyFullLogTtlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyFullLogTtlWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the log storage duration for Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request ModifyFullLogTtlRequest
+         * @return ModifyFullLogTtlResponse
+         */
         public async Task<ModifyFullLogTtlResponse> ModifyFullLogTtlAsync(ModifyFullLogTtlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyFullLogTtlWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the custom header of a domain name that is added to an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request ModifyHeadersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyHeadersResponse
+         */
         public ModifyHeadersResponse ModifyHeadersWithOptions(ModifyHeadersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13596,6 +16687,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyHeadersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the custom header of a domain name that is added to an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request ModifyHeadersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyHeadersResponse
+         */
         public async Task<ModifyHeadersResponse> ModifyHeadersWithOptionsAsync(ModifyHeadersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13631,18 +16729,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyHeadersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the custom header of a domain name that is added to an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request ModifyHeadersRequest
+         * @return ModifyHeadersResponse
+         */
         public ModifyHeadersResponse ModifyHeaders(ModifyHeadersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHeadersWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the custom header of a domain name that is added to an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request ModifyHeadersRequest
+         * @return ModifyHeadersResponse
+         */
         public async Task<ModifyHeadersResponse> ModifyHeadersAsync(ModifyHeadersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHeadersWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the Layer 4 or Layer 7 health check configuration of a port forwarding rule.
+         *
+         * @param request ModifyHealthCheckConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyHealthCheckConfigResponse
+         */
         public ModifyHealthCheckConfigResponse ModifyHealthCheckConfigWithOptions(ModifyHealthCheckConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13682,6 +16799,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyHealthCheckConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the Layer 4 or Layer 7 health check configuration of a port forwarding rule.
+         *
+         * @param request ModifyHealthCheckConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyHealthCheckConfigResponse
+         */
         public async Task<ModifyHealthCheckConfigResponse> ModifyHealthCheckConfigWithOptionsAsync(ModifyHealthCheckConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13721,12 +16845,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyHealthCheckConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the Layer 4 or Layer 7 health check configuration of a port forwarding rule.
+         *
+         * @param request ModifyHealthCheckConfigRequest
+         * @return ModifyHealthCheckConfigResponse
+         */
         public ModifyHealthCheckConfigResponse ModifyHealthCheckConfig(ModifyHealthCheckConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHealthCheckConfigWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the Layer 4 or Layer 7 health check configuration of a port forwarding rule.
+         *
+         * @param request ModifyHealthCheckConfigRequest
+         * @return ModifyHealthCheckConfigResponse
+         */
         public async Task<ModifyHealthCheckConfigResponse> ModifyHealthCheckConfigAsync(ModifyHealthCheckConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13734,11 +16870,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request ModifyHttp2EnableRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyHttp2EnableResponse
+         * @summary Enables or disables HTTP/2 for the forwarding rule of a website.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request ModifyHttp2EnableRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyHttp2EnableResponse
          */
         public ModifyHttp2EnableResponse ModifyHttp2EnableWithOptions(ModifyHttp2EnableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13776,11 +16914,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request ModifyHttp2EnableRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyHttp2EnableResponse
+         * @summary Enables or disables HTTP/2 for the forwarding rule of a website.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request ModifyHttp2EnableRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyHttp2EnableResponse
          */
         public async Task<ModifyHttp2EnableResponse> ModifyHttp2EnableWithOptionsAsync(ModifyHttp2EnableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13818,10 +16958,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request ModifyHttp2EnableRequest
-          * @return ModifyHttp2EnableResponse
+         * @summary Enables or disables HTTP/2 for the forwarding rule of a website.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request ModifyHttp2EnableRequest
+         * @return ModifyHttp2EnableResponse
          */
         public ModifyHttp2EnableResponse ModifyHttp2Enable(ModifyHttp2EnableRequest request)
         {
@@ -13830,10 +16972,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * > This operation is suitable only for Anti-DDoS Pro.
-          *
-          * @param request ModifyHttp2EnableRequest
-          * @return ModifyHttp2EnableResponse
+         * @summary Enables or disables HTTP/2 for the forwarding rule of a website.
+         *
+         * @description > This operation is suitable only for Anti-DDoS Pro.
+         *
+         * @param request ModifyHttp2EnableRequest
+         * @return ModifyHttp2EnableResponse
          */
         public async Task<ModifyHttp2EnableResponse> ModifyHttp2EnableAsync(ModifyHttp2EnableRequest request)
         {
@@ -13841,6 +16985,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyHttp2EnableWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the description of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request ModifyInstanceRemarkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceRemarkResponse
+         */
         public ModifyInstanceRemarkResponse ModifyInstanceRemarkWithOptions(ModifyInstanceRemarkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13872,6 +17023,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyInstanceRemarkResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the description of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request ModifyInstanceRemarkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceRemarkResponse
+         */
         public async Task<ModifyInstanceRemarkResponse> ModifyInstanceRemarkWithOptionsAsync(ModifyInstanceRemarkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13903,18 +17061,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyInstanceRemarkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the description of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request ModifyInstanceRemarkRequest
+         * @return ModifyInstanceRemarkResponse
+         */
         public ModifyInstanceRemarkResponse ModifyInstanceRemark(ModifyInstanceRemarkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceRemarkWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the description of an Anti-DDoS Pro or Anti-DDoS Premium instance.
+         *
+         * @param request ModifyInstanceRemarkRequest
+         * @return ModifyInstanceRemarkResponse
+         */
         public async Task<ModifyInstanceRemarkResponse> ModifyInstanceRemarkAsync(ModifyInstanceRemarkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceRemarkWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the session persistence settings of a port forwarding rule.
+         *
+         * @param request ModifyNetworkRuleAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyNetworkRuleAttributeResponse
+         */
         public ModifyNetworkRuleAttributeResponse ModifyNetworkRuleAttributeWithOptions(ModifyNetworkRuleAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13954,6 +17131,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyNetworkRuleAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the session persistence settings of a port forwarding rule.
+         *
+         * @param request ModifyNetworkRuleAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyNetworkRuleAttributeResponse
+         */
         public async Task<ModifyNetworkRuleAttributeResponse> ModifyNetworkRuleAttributeWithOptionsAsync(ModifyNetworkRuleAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13993,12 +17177,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyNetworkRuleAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the session persistence settings of a port forwarding rule.
+         *
+         * @param request ModifyNetworkRuleAttributeRequest
+         * @return ModifyNetworkRuleAttributeResponse
+         */
         public ModifyNetworkRuleAttributeResponse ModifyNetworkRuleAttribute(ModifyNetworkRuleAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyNetworkRuleAttributeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the session persistence settings of a port forwarding rule.
+         *
+         * @param request ModifyNetworkRuleAttributeRequest
+         * @return ModifyNetworkRuleAttributeResponse
+         */
         public async Task<ModifyNetworkRuleAttributeResponse> ModifyNetworkRuleAttributeAsync(ModifyNetworkRuleAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14006,11 +17202,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.
-          *
-          * @param request ModifyOcspStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyOcspStatusResponse
+         * @summary Specifies whether to enable the Online Certificate Status Protocol (OCSP) feature.
+         *
+         * @description This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.
+         *
+         * @param request ModifyOcspStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyOcspStatusResponse
          */
         public ModifyOcspStatusResponse ModifyOcspStatusWithOptions(ModifyOcspStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14044,11 +17242,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.
-          *
-          * @param request ModifyOcspStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyOcspStatusResponse
+         * @summary Specifies whether to enable the Online Certificate Status Protocol (OCSP) feature.
+         *
+         * @description This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.
+         *
+         * @param request ModifyOcspStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyOcspStatusResponse
          */
         public async Task<ModifyOcspStatusResponse> ModifyOcspStatusWithOptionsAsync(ModifyOcspStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14082,10 +17282,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.
-          *
-          * @param request ModifyOcspStatusRequest
-          * @return ModifyOcspStatusResponse
+         * @summary Specifies whether to enable the Online Certificate Status Protocol (OCSP) feature.
+         *
+         * @description This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.
+         *
+         * @param request ModifyOcspStatusRequest
+         * @return ModifyOcspStatusResponse
          */
         public ModifyOcspStatusResponse ModifyOcspStatus(ModifyOcspStatusRequest request)
         {
@@ -14094,10 +17296,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.
-          *
-          * @param request ModifyOcspStatusRequest
-          * @return ModifyOcspStatusResponse
+         * @summary Specifies whether to enable the Online Certificate Status Protocol (OCSP) feature.
+         *
+         * @description This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.
+         *
+         * @param request ModifyOcspStatusRequest
+         * @return ModifyOcspStatusResponse
          */
         public async Task<ModifyOcspStatusResponse> ModifyOcspStatusAsync(ModifyOcspStatusRequest request)
         {
@@ -14106,11 +17310,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the ModifyPort operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request ModifyPortRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyPortResponse
+         * @summary Modifies a port forwarding rule.
+         *
+         * @description You can call the ModifyPort operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request ModifyPortRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyPortResponse
          */
         public ModifyPortResponse ModifyPortWithOptions(ModifyPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14156,11 +17362,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the ModifyPort operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request ModifyPortRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyPortResponse
+         * @summary Modifies a port forwarding rule.
+         *
+         * @description You can call the ModifyPort operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request ModifyPortRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyPortResponse
          */
         public async Task<ModifyPortResponse> ModifyPortWithOptionsAsync(ModifyPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14206,10 +17414,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the ModifyPort operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request ModifyPortRequest
-          * @return ModifyPortResponse
+         * @summary Modifies a port forwarding rule.
+         *
+         * @description You can call the ModifyPort operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request ModifyPortRequest
+         * @return ModifyPortResponse
          */
         public ModifyPortResponse ModifyPort(ModifyPortRequest request)
         {
@@ -14218,10 +17428,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the ModifyPort operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-          *
-          * @param request ModifyPortRequest
-          * @return ModifyPortResponse
+         * @summary Modifies a port forwarding rule.
+         *
+         * @description You can call the ModifyPort operation by using Terraform. For more information about Terraform, see [What is Terraform?](https://help.aliyun.com/document_detail/95820.html).
+         *
+         * @param request ModifyPortRequest
+         * @return ModifyPortResponse
          */
         public async Task<ModifyPortResponse> ModifyPortAsync(ModifyPortRequest request)
         {
@@ -14229,6 +17441,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyPortWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the Intelligent Protection configuration of a non-website service.
+         *
+         * @param request ModifyPortAutoCcStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyPortAutoCcStatusResponse
+         */
         public ModifyPortAutoCcStatusResponse ModifyPortAutoCcStatusWithOptions(ModifyPortAutoCcStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14264,6 +17483,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyPortAutoCcStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the Intelligent Protection configuration of a non-website service.
+         *
+         * @param request ModifyPortAutoCcStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyPortAutoCcStatusResponse
+         */
         public async Task<ModifyPortAutoCcStatusResponse> ModifyPortAutoCcStatusWithOptionsAsync(ModifyPortAutoCcStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14299,18 +17525,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyPortAutoCcStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the Intelligent Protection configuration of a non-website service.
+         *
+         * @param request ModifyPortAutoCcStatusRequest
+         * @return ModifyPortAutoCcStatusResponse
+         */
         public ModifyPortAutoCcStatusResponse ModifyPortAutoCcStatus(ModifyPortAutoCcStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPortAutoCcStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the Intelligent Protection configuration of a non-website service.
+         *
+         * @param request ModifyPortAutoCcStatusRequest
+         * @return ModifyPortAutoCcStatusResponse
+         */
         public async Task<ModifyPortAutoCcStatusResponse> ModifyPortAutoCcStatusAsync(ModifyPortAutoCcStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPortAutoCcStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 修改弹性qps模式
+         *
+         * @param request ModifyQpsModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyQpsModeResponse
+         */
         public ModifyQpsModeResponse ModifyQpsModeWithOptions(ModifyQpsModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14342,6 +17587,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyQpsModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改弹性qps模式
+         *
+         * @param request ModifyQpsModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyQpsModeResponse
+         */
         public async Task<ModifyQpsModeResponse> ModifyQpsModeWithOptionsAsync(ModifyQpsModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14373,18 +17625,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyQpsModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改弹性qps模式
+         *
+         * @param request ModifyQpsModeRequest
+         * @return ModifyQpsModeResponse
+         */
         public ModifyQpsModeResponse ModifyQpsMode(ModifyQpsModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyQpsModeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 修改弹性qps模式
+         *
+         * @param request ModifyQpsModeRequest
+         * @return ModifyQpsModeResponse
+         */
         public async Task<ModifyQpsModeResponse> ModifyQpsModeAsync(ModifyQpsModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyQpsModeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies a scenario-specific custom policy.
+         *
+         * @param request ModifySceneDefensePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifySceneDefensePolicyResponse
+         */
         public ModifySceneDefensePolicyResponse ModifySceneDefensePolicyWithOptions(ModifySceneDefensePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14428,6 +17699,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifySceneDefensePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies a scenario-specific custom policy.
+         *
+         * @param request ModifySceneDefensePolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifySceneDefensePolicyResponse
+         */
         public async Task<ModifySceneDefensePolicyResponse> ModifySceneDefensePolicyWithOptionsAsync(ModifySceneDefensePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14471,18 +17749,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifySceneDefensePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies a scenario-specific custom policy.
+         *
+         * @param request ModifySceneDefensePolicyRequest
+         * @return ModifySceneDefensePolicyResponse
+         */
         public ModifySceneDefensePolicyResponse ModifySceneDefensePolicy(ModifySceneDefensePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySceneDefensePolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies a scenario-specific custom policy.
+         *
+         * @param request ModifySceneDefensePolicyRequest
+         * @return ModifySceneDefensePolicyResponse
+         */
         public async Task<ModifySceneDefensePolicyResponse> ModifySceneDefensePolicyAsync(ModifySceneDefensePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySceneDefensePolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the scheduling rule of Sec-Traffic Manager.
+         *
+         * @param request ModifySchedulerRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifySchedulerRuleResponse
+         */
         public ModifySchedulerRuleResponse ModifySchedulerRuleWithOptions(ModifySchedulerRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14526,6 +17823,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifySchedulerRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the scheduling rule of Sec-Traffic Manager.
+         *
+         * @param request ModifySchedulerRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifySchedulerRuleResponse
+         */
         public async Task<ModifySchedulerRuleResponse> ModifySchedulerRuleWithOptionsAsync(ModifySchedulerRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14569,18 +17873,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifySchedulerRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the scheduling rule of Sec-Traffic Manager.
+         *
+         * @param request ModifySchedulerRuleRequest
+         * @return ModifySchedulerRuleResponse
+         */
         public ModifySchedulerRuleResponse ModifySchedulerRule(ModifySchedulerRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySchedulerRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the scheduling rule of Sec-Traffic Manager.
+         *
+         * @param request ModifySchedulerRuleRequest
+         * @return ModifySchedulerRuleResponse
+         */
         public async Task<ModifySchedulerRuleResponse> ModifySchedulerRuleAsync(ModifySchedulerRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySchedulerRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the Transport Layer Security (TLS) policy configuration for the forwarding rule of a website.
+         *
+         * @param request ModifyTlsConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyTlsConfigResponse
+         */
         public ModifyTlsConfigResponse ModifyTlsConfigWithOptions(ModifyTlsConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14616,6 +17939,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyTlsConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the Transport Layer Security (TLS) policy configuration for the forwarding rule of a website.
+         *
+         * @param request ModifyTlsConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyTlsConfigResponse
+         */
         public async Task<ModifyTlsConfigResponse> ModifyTlsConfigWithOptionsAsync(ModifyTlsConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14651,18 +17981,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyTlsConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the Transport Layer Security (TLS) policy configuration for the forwarding rule of a website.
+         *
+         * @param request ModifyTlsConfigRequest
+         * @return ModifyTlsConfigResponse
+         */
         public ModifyTlsConfigResponse ModifyTlsConfig(ModifyTlsConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyTlsConfigWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the Transport Layer Security (TLS) policy configuration for the forwarding rule of a website.
+         *
+         * @param request ModifyTlsConfigRequest
+         * @return ModifyTlsConfigResponse
+         */
         public async Task<ModifyTlsConfigResponse> ModifyTlsConfigAsync(ModifyTlsConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyTlsConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Changes the mode of the Intelligent Protection policy for a website.
+         *
+         * @param request ModifyWebAIProtectModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebAIProtectModeResponse
+         */
         public ModifyWebAIProtectModeResponse ModifyWebAIProtectModeWithOptions(ModifyWebAIProtectModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14698,6 +18047,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAIProtectModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the mode of the Intelligent Protection policy for a website.
+         *
+         * @param request ModifyWebAIProtectModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebAIProtectModeResponse
+         */
         public async Task<ModifyWebAIProtectModeResponse> ModifyWebAIProtectModeWithOptionsAsync(ModifyWebAIProtectModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14733,18 +18089,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAIProtectModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the mode of the Intelligent Protection policy for a website.
+         *
+         * @param request ModifyWebAIProtectModeRequest
+         * @return ModifyWebAIProtectModeResponse
+         */
         public ModifyWebAIProtectModeResponse ModifyWebAIProtectMode(ModifyWebAIProtectModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyWebAIProtectModeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Changes the mode of the Intelligent Protection policy for a website.
+         *
+         * @param request ModifyWebAIProtectModeRequest
+         * @return ModifyWebAIProtectModeResponse
+         */
         public async Task<ModifyWebAIProtectModeResponse> ModifyWebAIProtectModeAsync(ModifyWebAIProtectModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyWebAIProtectModeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables the Intelligent Protection policy for a website.
+         *
+         * @param request ModifyWebAIProtectSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebAIProtectSwitchResponse
+         */
         public ModifyWebAIProtectSwitchResponse ModifyWebAIProtectSwitchWithOptions(ModifyWebAIProtectSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14780,6 +18155,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAIProtectSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables the Intelligent Protection policy for a website.
+         *
+         * @param request ModifyWebAIProtectSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebAIProtectSwitchResponse
+         */
         public async Task<ModifyWebAIProtectSwitchResponse> ModifyWebAIProtectSwitchWithOptionsAsync(ModifyWebAIProtectSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14815,18 +18197,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAIProtectSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables the Intelligent Protection policy for a website.
+         *
+         * @param request ModifyWebAIProtectSwitchRequest
+         * @return ModifyWebAIProtectSwitchResponse
+         */
         public ModifyWebAIProtectSwitchResponse ModifyWebAIProtectSwitch(ModifyWebAIProtectSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyWebAIProtectSwitchWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables the Intelligent Protection policy for a website.
+         *
+         * @param request ModifyWebAIProtectSwitchRequest
+         * @return ModifyWebAIProtectSwitchResponse
+         */
         public async Task<ModifyWebAIProtectSwitchResponse> ModifyWebAIProtectSwitchAsync(ModifyWebAIProtectSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyWebAIProtectSwitchWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Changes the mode in which a website service is added to Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request ModifyWebAccessModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebAccessModeResponse
+         */
         public ModifyWebAccessModeResponse ModifyWebAccessModeWithOptions(ModifyWebAccessModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14858,6 +18259,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAccessModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the mode in which a website service is added to Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request ModifyWebAccessModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebAccessModeResponse
+         */
         public async Task<ModifyWebAccessModeResponse> ModifyWebAccessModeWithOptionsAsync(ModifyWebAccessModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14889,18 +18297,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAccessModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the mode in which a website service is added to Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request ModifyWebAccessModeRequest
+         * @return ModifyWebAccessModeResponse
+         */
         public ModifyWebAccessModeResponse ModifyWebAccessMode(ModifyWebAccessModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyWebAccessModeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Changes the mode in which a website service is added to Anti-DDoS Pro or Anti-DDoS Premium.
+         *
+         * @param request ModifyWebAccessModeRequest
+         * @return ModifyWebAccessModeResponse
+         */
         public async Task<ModifyWebAccessModeResponse> ModifyWebAccessModeAsync(ModifyWebAccessModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyWebAccessModeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the blocked locations that are configured in the Location Blacklist (Domain Names) policy for a website.
+         *
+         * @param request ModifyWebAreaBlockRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebAreaBlockResponse
+         */
         public ModifyWebAreaBlockResponse ModifyWebAreaBlockWithOptions(ModifyWebAreaBlockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14936,6 +18363,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAreaBlockResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the blocked locations that are configured in the Location Blacklist (Domain Names) policy for a website.
+         *
+         * @param request ModifyWebAreaBlockRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebAreaBlockResponse
+         */
         public async Task<ModifyWebAreaBlockResponse> ModifyWebAreaBlockWithOptionsAsync(ModifyWebAreaBlockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14971,12 +18405,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAreaBlockResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the blocked locations that are configured in the Location Blacklist (Domain Names) policy for a website.
+         *
+         * @param request ModifyWebAreaBlockRequest
+         * @return ModifyWebAreaBlockResponse
+         */
         public ModifyWebAreaBlockResponse ModifyWebAreaBlock(ModifyWebAreaBlockRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyWebAreaBlockWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the blocked locations that are configured in the Location Blacklist (Domain Names) policy for a website.
+         *
+         * @param request ModifyWebAreaBlockRequest
+         * @return ModifyWebAreaBlockResponse
+         */
         public async Task<ModifyWebAreaBlockResponse> ModifyWebAreaBlockAsync(ModifyWebAreaBlockRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14984,13 +18430,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyWebAreaBlockSwitchRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyWebAreaBlockSwitchResponse
+         * @summary Enables or disables the Location Blacklist (Domain Names) policy for a domain name.
+         *
+         * @description You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyWebAreaBlockSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebAreaBlockSwitchResponse
          */
         public ModifyWebAreaBlockSwitchResponse ModifyWebAreaBlockSwitchWithOptions(ModifyWebAreaBlockSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15028,13 +18476,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyWebAreaBlockSwitchRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyWebAreaBlockSwitchResponse
+         * @summary Enables or disables the Location Blacklist (Domain Names) policy for a domain name.
+         *
+         * @description You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyWebAreaBlockSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebAreaBlockSwitchResponse
          */
         public async Task<ModifyWebAreaBlockSwitchResponse> ModifyWebAreaBlockSwitchWithOptionsAsync(ModifyWebAreaBlockSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15072,12 +18522,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyWebAreaBlockSwitchRequest
-          * @return ModifyWebAreaBlockSwitchResponse
+         * @summary Enables or disables the Location Blacklist (Domain Names) policy for a domain name.
+         *
+         * @description You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyWebAreaBlockSwitchRequest
+         * @return ModifyWebAreaBlockSwitchResponse
          */
         public ModifyWebAreaBlockSwitchResponse ModifyWebAreaBlockSwitch(ModifyWebAreaBlockSwitchRequest request)
         {
@@ -15086,12 +18538,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyWebAreaBlockSwitchRequest
-          * @return ModifyWebAreaBlockSwitchResponse
+         * @summary Enables or disables the Location Blacklist (Domain Names) policy for a domain name.
+         *
+         * @description You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyWebAreaBlockSwitchRequest
+         * @return ModifyWebAreaBlockSwitchResponse
          */
         public async Task<ModifyWebAreaBlockSwitchResponse> ModifyWebAreaBlockSwitchAsync(ModifyWebAreaBlockSwitchRequest request)
         {
@@ -15099,6 +18553,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebAreaBlockSwitchWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request ModifyWebCCRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebCCRuleResponse
+         */
         public ModifyWebCCRuleResponse ModifyWebCCRuleWithOptions(ModifyWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15158,6 +18617,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebCCRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request ModifyWebCCRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebCCRuleResponse
+         */
         public async Task<ModifyWebCCRuleResponse> ModifyWebCCRuleWithOptionsAsync(ModifyWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15217,18 +18681,33 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebCCRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request ModifyWebCCRuleRequest
+         * @return ModifyWebCCRuleResponse
+         */
         public ModifyWebCCRuleResponse ModifyWebCCRule(ModifyWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyWebCCRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @param request ModifyWebCCRuleRequest
+         * @return ModifyWebCCRuleResponse
+         */
         public async Task<ModifyWebCCRuleResponse> ModifyWebCCRuleAsync(ModifyWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyWebCCRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the custom rule of the Static Page Caching policy for a website.
+         *
+         * @param request ModifyWebCacheCustomRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebCacheCustomRuleResponse
+         */
         public ModifyWebCacheCustomRuleResponse ModifyWebCacheCustomRuleWithOptions(ModifyWebCacheCustomRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15264,6 +18743,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebCacheCustomRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the custom rule of the Static Page Caching policy for a website.
+         *
+         * @param request ModifyWebCacheCustomRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebCacheCustomRuleResponse
+         */
         public async Task<ModifyWebCacheCustomRuleResponse> ModifyWebCacheCustomRuleWithOptionsAsync(ModifyWebCacheCustomRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15299,18 +18785,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebCacheCustomRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the custom rule of the Static Page Caching policy for a website.
+         *
+         * @param request ModifyWebCacheCustomRuleRequest
+         * @return ModifyWebCacheCustomRuleResponse
+         */
         public ModifyWebCacheCustomRuleResponse ModifyWebCacheCustomRule(ModifyWebCacheCustomRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyWebCacheCustomRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the custom rule of the Static Page Caching policy for a website.
+         *
+         * @param request ModifyWebCacheCustomRuleRequest
+         * @return ModifyWebCacheCustomRuleResponse
+         */
         public async Task<ModifyWebCacheCustomRuleResponse> ModifyWebCacheCustomRuleAsync(ModifyWebCacheCustomRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyWebCacheCustomRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Changes the cache mode of the Static Page Caching policy for a website.
+         *
+         * @param request ModifyWebCacheModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebCacheModeResponse
+         */
         public ModifyWebCacheModeResponse ModifyWebCacheModeWithOptions(ModifyWebCacheModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15346,6 +18851,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebCacheModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the cache mode of the Static Page Caching policy for a website.
+         *
+         * @param request ModifyWebCacheModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebCacheModeResponse
+         */
         public async Task<ModifyWebCacheModeResponse> ModifyWebCacheModeWithOptionsAsync(ModifyWebCacheModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15381,12 +18893,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebCacheModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the cache mode of the Static Page Caching policy for a website.
+         *
+         * @param request ModifyWebCacheModeRequest
+         * @return ModifyWebCacheModeResponse
+         */
         public ModifyWebCacheModeResponse ModifyWebCacheMode(ModifyWebCacheModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyWebCacheModeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Changes the cache mode of the Static Page Caching policy for a website.
+         *
+         * @param request ModifyWebCacheModeRequest
+         * @return ModifyWebCacheModeResponse
+         */
         public async Task<ModifyWebCacheModeResponse> ModifyWebCacheModeAsync(ModifyWebCacheModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15394,13 +18918,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyWebCacheSwitchRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyWebCacheSwitchResponse
+         * @summary Enables or disables the Static Page Caching policy for a website.
+         *
+         * @description You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyWebCacheSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebCacheSwitchResponse
          */
         public ModifyWebCacheSwitchResponse ModifyWebCacheSwitchWithOptions(ModifyWebCacheSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15438,13 +18964,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyWebCacheSwitchRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyWebCacheSwitchResponse
+         * @summary Enables or disables the Static Page Caching policy for a website.
+         *
+         * @description You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyWebCacheSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebCacheSwitchResponse
          */
         public async Task<ModifyWebCacheSwitchResponse> ModifyWebCacheSwitchWithOptionsAsync(ModifyWebCacheSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15482,12 +19010,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyWebCacheSwitchRequest
-          * @return ModifyWebCacheSwitchResponse
+         * @summary Enables or disables the Static Page Caching policy for a website.
+         *
+         * @description You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyWebCacheSwitchRequest
+         * @return ModifyWebCacheSwitchResponse
          */
         public ModifyWebCacheSwitchResponse ModifyWebCacheSwitch(ModifyWebCacheSwitchRequest request)
         {
@@ -15496,12 +19026,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyWebCacheSwitchRequest
-          * @return ModifyWebCacheSwitchResponse
+         * @summary Enables or disables the Static Page Caching policy for a website.
+         *
+         * @description You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyWebCacheSwitchRequest
+         * @return ModifyWebCacheSwitchResponse
          */
         public async Task<ModifyWebCacheSwitchResponse> ModifyWebCacheSwitchAsync(ModifyWebCacheSwitchRequest request)
         {
@@ -15509,6 +19041,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebCacheSwitchWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables the Black Lists and White Lists (Domain Names) policy for a domain name.
+         *
+         * @param request ModifyWebIpSetSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebIpSetSwitchResponse
+         */
         public ModifyWebIpSetSwitchResponse ModifyWebIpSetSwitchWithOptions(ModifyWebIpSetSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15544,6 +19083,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebIpSetSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables the Black Lists and White Lists (Domain Names) policy for a domain name.
+         *
+         * @param request ModifyWebIpSetSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebIpSetSwitchResponse
+         */
         public async Task<ModifyWebIpSetSwitchResponse> ModifyWebIpSetSwitchWithOptionsAsync(ModifyWebIpSetSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15579,18 +19125,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebIpSetSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables the Black Lists and White Lists (Domain Names) policy for a domain name.
+         *
+         * @param request ModifyWebIpSetSwitchRequest
+         * @return ModifyWebIpSetSwitchResponse
+         */
         public ModifyWebIpSetSwitchResponse ModifyWebIpSetSwitch(ModifyWebIpSetSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyWebIpSetSwitchWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables the Black Lists and White Lists (Domain Names) policy for a domain name.
+         *
+         * @param request ModifyWebIpSetSwitchRequest
+         * @return ModifyWebIpSetSwitchResponse
+         */
         public async Task<ModifyWebIpSetSwitchResponse> ModifyWebIpSetSwitchAsync(ModifyWebIpSetSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyWebIpSetSwitchWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the accurate access control rule of a website.
+         *
+         * @param request ModifyWebPreciseAccessRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebPreciseAccessRuleResponse
+         */
         public ModifyWebPreciseAccessRuleResponse ModifyWebPreciseAccessRuleWithOptions(ModifyWebPreciseAccessRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15630,6 +19195,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebPreciseAccessRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the accurate access control rule of a website.
+         *
+         * @param request ModifyWebPreciseAccessRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebPreciseAccessRuleResponse
+         */
         public async Task<ModifyWebPreciseAccessRuleResponse> ModifyWebPreciseAccessRuleWithOptionsAsync(ModifyWebPreciseAccessRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15669,18 +19241,37 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebPreciseAccessRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the accurate access control rule of a website.
+         *
+         * @param request ModifyWebPreciseAccessRuleRequest
+         * @return ModifyWebPreciseAccessRuleResponse
+         */
         public ModifyWebPreciseAccessRuleResponse ModifyWebPreciseAccessRule(ModifyWebPreciseAccessRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyWebPreciseAccessRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the accurate access control rule of a website.
+         *
+         * @param request ModifyWebPreciseAccessRuleRequest
+         * @return ModifyWebPreciseAccessRuleResponse
+         */
         public async Task<ModifyWebPreciseAccessRuleResponse> ModifyWebPreciseAccessRuleAsync(ModifyWebPreciseAccessRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyWebPreciseAccessRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables the Accurate Access Control policy for a website.
+         *
+         * @param request ModifyWebPreciseAccessSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebPreciseAccessSwitchResponse
+         */
         public ModifyWebPreciseAccessSwitchResponse ModifyWebPreciseAccessSwitchWithOptions(ModifyWebPreciseAccessSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15716,6 +19307,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebPreciseAccessSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables the Accurate Access Control policy for a website.
+         *
+         * @param request ModifyWebPreciseAccessSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebPreciseAccessSwitchResponse
+         */
         public async Task<ModifyWebPreciseAccessSwitchResponse> ModifyWebPreciseAccessSwitchWithOptionsAsync(ModifyWebPreciseAccessSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15751,18 +19349,35 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebPreciseAccessSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables the Accurate Access Control policy for a website.
+         *
+         * @param request ModifyWebPreciseAccessSwitchRequest
+         * @return ModifyWebPreciseAccessSwitchResponse
+         */
         public ModifyWebPreciseAccessSwitchResponse ModifyWebPreciseAccessSwitch(ModifyWebPreciseAccessSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyWebPreciseAccessSwitchWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables the Accurate Access Control policy for a website.
+         *
+         * @param request ModifyWebPreciseAccessSwitchRequest
+         * @return ModifyWebPreciseAccessSwitchResponse
+         */
         public async Task<ModifyWebPreciseAccessSwitchResponse> ModifyWebPreciseAccessSwitchAsync(ModifyWebPreciseAccessSwitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyWebPreciseAccessSwitchWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request ModifyWebRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebRuleResponse
+         */
         public ModifyWebRuleResponse ModifyWebRuleWithOptions(ModifyWebRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15814,6 +19429,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request ModifyWebRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebRuleResponse
+         */
         public async Task<ModifyWebRuleResponse> ModifyWebRuleWithOptionsAsync(ModifyWebRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15865,12 +19485,20 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request ModifyWebRuleRequest
+         * @return ModifyWebRuleResponse
+         */
         public ModifyWebRuleResponse ModifyWebRule(ModifyWebRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyWebRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @param request ModifyWebRuleRequest
+         * @return ModifyWebRuleResponse
+         */
         public async Task<ModifyWebRuleResponse> ModifyWebRuleAsync(ModifyWebRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15878,11 +19506,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * The ID of the request, which is used to locate and troubleshoot issues.
-          *
-          * @param request ReleaseInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReleaseInstanceResponse
+         * @summary The ID of the instance that you want to release.
+         * > You can release only expired instances. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/91478.html) operation to query the IDs and expiration status of all instances.
+         *
+         * @description The ID of the request, which is used to locate and troubleshoot issues.
+         *
+         * @param request ReleaseInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReleaseInstanceResponse
          */
         public ReleaseInstanceResponse ReleaseInstanceWithOptions(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15912,11 +19543,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * The ID of the request, which is used to locate and troubleshoot issues.
-          *
-          * @param request ReleaseInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReleaseInstanceResponse
+         * @summary The ID of the instance that you want to release.
+         * > You can release only expired instances. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/91478.html) operation to query the IDs and expiration status of all instances.
+         *
+         * @description The ID of the request, which is used to locate and troubleshoot issues.
+         *
+         * @param request ReleaseInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReleaseInstanceResponse
          */
         public async Task<ReleaseInstanceResponse> ReleaseInstanceWithOptionsAsync(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15946,10 +19580,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * The ID of the request, which is used to locate and troubleshoot issues.
-          *
-          * @param request ReleaseInstanceRequest
-          * @return ReleaseInstanceResponse
+         * @summary The ID of the instance that you want to release.
+         * > You can release only expired instances. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/91478.html) operation to query the IDs and expiration status of all instances.
+         *
+         * @description The ID of the request, which is used to locate and troubleshoot issues.
+         *
+         * @param request ReleaseInstanceRequest
+         * @return ReleaseInstanceResponse
          */
         public ReleaseInstanceResponse ReleaseInstance(ReleaseInstanceRequest request)
         {
@@ -15958,10 +19595,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * The ID of the request, which is used to locate and troubleshoot issues.
-          *
-          * @param request ReleaseInstanceRequest
-          * @return ReleaseInstanceResponse
+         * @summary The ID of the instance that you want to release.
+         * > You can release only expired instances. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/91478.html) operation to query the IDs and expiration status of all instances.
+         *
+         * @description The ID of the request, which is used to locate and troubleshoot issues.
+         *
+         * @param request ReleaseInstanceRequest
+         * @return ReleaseInstanceResponse
          */
         public async Task<ReleaseInstanceResponse> ReleaseInstanceAsync(ReleaseInstanceRequest request)
         {
@@ -15970,14 +19610,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
-          * Before you call this operation, you must have created a scheduling rule by calling the [CreateSchedulerRule](~~157479~~) operation.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request SwitchSchedulerRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SwitchSchedulerRuleResponse
+         * @summary Switches service traffic to your Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switches service traffic back to the associated cloud resources.
+         *
+         * @description You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
+         * Before you call this operation, you must have created a scheduling rule by calling the [CreateSchedulerRule](https://help.aliyun.com/document_detail/157479.html) operation.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request SwitchSchedulerRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SwitchSchedulerRuleResponse
          */
         public SwitchSchedulerRuleResponse SwitchSchedulerRuleWithOptions(SwitchSchedulerRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16015,14 +19657,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
-          * Before you call this operation, you must have created a scheduling rule by calling the [CreateSchedulerRule](~~157479~~) operation.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request SwitchSchedulerRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SwitchSchedulerRuleResponse
+         * @summary Switches service traffic to your Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switches service traffic back to the associated cloud resources.
+         *
+         * @description You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
+         * Before you call this operation, you must have created a scheduling rule by calling the [CreateSchedulerRule](https://help.aliyun.com/document_detail/157479.html) operation.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request SwitchSchedulerRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SwitchSchedulerRuleResponse
          */
         public async Task<SwitchSchedulerRuleResponse> SwitchSchedulerRuleWithOptionsAsync(SwitchSchedulerRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16060,13 +19704,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
-          * Before you call this operation, you must have created a scheduling rule by calling the [CreateSchedulerRule](~~157479~~) operation.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request SwitchSchedulerRuleRequest
-          * @return SwitchSchedulerRuleResponse
+         * @summary Switches service traffic to your Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switches service traffic back to the associated cloud resources.
+         *
+         * @description You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
+         * Before you call this operation, you must have created a scheduling rule by calling the [CreateSchedulerRule](https://help.aliyun.com/document_detail/157479.html) operation.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request SwitchSchedulerRuleRequest
+         * @return SwitchSchedulerRuleResponse
          */
         public SwitchSchedulerRuleResponse SwitchSchedulerRule(SwitchSchedulerRuleRequest request)
         {
@@ -16075,13 +19721,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
-          * You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
-          * Before you call this operation, you must have created a scheduling rule by calling the [CreateSchedulerRule](~~157479~~) operation.
-          * ### Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request SwitchSchedulerRuleRequest
-          * @return SwitchSchedulerRuleResponse
+         * @summary Switches service traffic to your Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switches service traffic back to the associated cloud resources.
+         *
+         * @description You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
+         * Before you call this operation, you must have created a scheduling rule by calling the [CreateSchedulerRule](https://help.aliyun.com/document_detail/157479.html) operation.
+         * ### Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request SwitchSchedulerRuleRequest
+         * @return SwitchSchedulerRuleResponse
          */
         public async Task<SwitchSchedulerRuleResponse> SwitchSchedulerRuleAsync(SwitchSchedulerRuleRequest request)
         {

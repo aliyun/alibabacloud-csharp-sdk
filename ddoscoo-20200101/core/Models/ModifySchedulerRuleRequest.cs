@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The name of the rule that you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// *   **3**: network acceleration
         /// *   **5**: Alibaba Cloud CDN (CDN) interaction
         /// *   **6**: cloud service interaction
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
@@ -72,6 +76,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         ///     *   **6** the IP address of the interaction resource in the cloud service interaction scenario
         /// 
         /// *   **RegionId**: the region where the interaction resource is deployed. This parameter must be specified when **ValueType** is set to **2**. The value must be of the string type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]

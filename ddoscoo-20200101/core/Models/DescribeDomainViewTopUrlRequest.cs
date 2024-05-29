@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The domain name of the website.
         /// 
-        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
         /// 
         /// > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
         /// 
         /// > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -45,6 +49,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The number of URLs to query. Valid values: **1** to **100**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Top")]
         [Validation(Required=false)]

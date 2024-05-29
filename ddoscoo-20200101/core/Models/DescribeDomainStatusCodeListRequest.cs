@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The domain name of the website. If you do not specify this parameter, the statistics on response status codes of all domain names are queried.
         /// 
-        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+        /// > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The interval for returning data. Unit: seconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// 
         /// *   **gf**: Anti-DDoS Pro or Anti-DDoS Premium
         /// *   **upstrem**: origin server
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("QueryType")]
         [Validation(Required=false)]
@@ -55,6 +59,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// The start time of the event. The value is a UNIX timestamp. Unit: seconds.
         /// 
         /// > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

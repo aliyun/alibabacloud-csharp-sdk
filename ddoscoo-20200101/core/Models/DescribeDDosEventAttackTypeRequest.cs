@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// 
         /// *   **defense**: attack events that trigger traffic scrubbing
         /// *   **blackhole**: attack events that trigger blackhole filtering
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
         /// <summary>
         /// The IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ip")]
         [Validation(Required=false)]
@@ -29,7 +33,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// The UNIX timestamp when the query starts. Unit: seconds.
         /// 
-        /// > You can call the [DescribeDDosAllEventList](~~188604~~) operation to query the beginning time of all attack events.
+        /// > You can call the [DescribeDDosAllEventList](https://help.aliyun.com/document_detail/188604.html) operation to query the beginning time of all attack events.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

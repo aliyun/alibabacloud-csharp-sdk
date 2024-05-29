@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeCnameReusesRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<string> Domains { get; set; }
