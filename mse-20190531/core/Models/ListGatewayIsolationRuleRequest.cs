@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// just for POP
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FilterParams")]
         [Validation(Required=false)]

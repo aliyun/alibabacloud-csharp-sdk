@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public GatewayOptionLogConfigDetails LogConfigDetails { get; set; }
         public class GatewayOptionLogConfigDetails : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("LogEnabled")]
             [Validation(Required=false)]
             public bool? LogEnabled { get; set; }
@@ -55,6 +58,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string ServicePort { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("TraceEnabled")]
             [Validation(Required=false)]
             public bool? TraceEnabled { get; set; }

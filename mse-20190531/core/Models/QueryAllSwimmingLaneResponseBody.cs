@@ -126,6 +126,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public List<long?> RouteIdList { get; set; }
 
+                [NameInMap("RouteIndependentPercentageEnable")]
+                [Validation(Required=false)]
+                public string RouteIndependentPercentageEnable { get; set; }
+
+                [NameInMap("RouteIndependentPercentageList")]
+                [Validation(Required=false)]
+                public List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteRouteIndependentPercentageList> RouteIndependentPercentageList { get; set; }
+                public class QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteRouteIndependentPercentageList : TeaModel {
+                    [NameInMap("Percentage")]
+                    [Validation(Required=false)]
+                    public string Percentage { get; set; }
+
+                    [NameInMap("RouteId")]
+                    [Validation(Required=false)]
+                    public string RouteId { get; set; }
+
+                }
+
             }
 
             [NameInMap("GroupId")]
@@ -151,6 +169,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
+
+            [NameInMap("PathIndependentPercentageEnable")]
+            [Validation(Required=false)]
+            public bool? PathIndependentPercentageEnable { get; set; }
 
             [NameInMap("RecordCanaryDetail")]
             [Validation(Required=false)]

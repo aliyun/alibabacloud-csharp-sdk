@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The message returned.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The HTTP status code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

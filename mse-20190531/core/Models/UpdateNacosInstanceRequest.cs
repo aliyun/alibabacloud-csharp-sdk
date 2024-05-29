@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// 
         /// *   `true`: yes.
         /// *   `false`: no.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// 
         /// *   `true`: yes.
         /// *   `false`: no.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ephemeral")]
         [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The name of the group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
@@ -55,6 +61,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The IP address of the Nacos instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ip")]
         [Validation(Required=false)]
@@ -83,6 +93,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The port number of the Nacos instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
@@ -90,6 +102,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The name of the service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
@@ -97,6 +111,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

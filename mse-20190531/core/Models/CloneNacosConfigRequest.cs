@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The data structure.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the destination namespace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -49,6 +53,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// 
         /// *   zh: Chinese
         /// *   en: English
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]

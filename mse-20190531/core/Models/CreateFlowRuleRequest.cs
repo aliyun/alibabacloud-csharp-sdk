@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The application name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -86,6 +88,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         ///     <!-- -->
         /// 
         ///     <!-- -->
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
@@ -100,6 +104,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The namespace.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -114,6 +120,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The name of the API resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
@@ -125,6 +133,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The throttling threshold.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]

@@ -71,6 +71,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Sni { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("TlsMode")]
             [Validation(Required=false)]
             public string TlsMode { get; set; }

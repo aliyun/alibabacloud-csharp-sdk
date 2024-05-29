@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The unique ID of the gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the consumer on which the gateway performs authentication operations.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

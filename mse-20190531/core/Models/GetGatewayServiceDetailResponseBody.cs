@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The details of the data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag values.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -152,21 +152,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GatewayUniqueId { get; set; }
 
                 /// <summary>
-                /// The time when the service was created.
+                /// The creation time.
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// The time when the service was modified.
+                /// The modification time.
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// The ID of the port configuration.
+                /// The port ID.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -256,14 +256,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string EndpointNumPercent { get; set; }
 
                 /// <summary>
-                /// The version of the service.
+                /// The service version.
                 /// </summary>
                 [NameInMap("ServiceVersion")]
                 [Validation(Required=false)]
                 public GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion ServiceVersion { get; set; }
                 public class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion : TeaModel {
                     /// <summary>
-                    /// The tags.
+                    /// The tag.
                     /// </summary>
                     [NameInMap("Labels")]
                     [Validation(Required=false)]
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// The version of the service.
+            /// The service version. This parameter is deprecated.
             /// </summary>
             [NameInMap("Versions")]
             [Validation(Required=false)]
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The type of the service.
+                /// The type.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

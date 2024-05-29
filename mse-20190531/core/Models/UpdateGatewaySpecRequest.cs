@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The number of nodes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Replica")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The node specifications of the gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The engine specifications. Valid values:
         /// 
-        /// \[Professional Edition]
+        /// [Professional Edition]
         /// 
         /// *   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory
         /// *   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory
@@ -39,14 +39,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// *   `MSE_SC_8_16_60_c`: 8 vCPUs and 16 GB of memory
         /// *   `MSE_SC_16_32_60_c`: 16 vCPUs and 32 GB of memory
         /// 
-        /// \[Developer Edition]
+        /// [Developer Edition]
         /// 
         /// *   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory
         /// *   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory
         /// 
-        /// \[Serverless Edition]
+        /// [Serverless Edition]
         /// 
         /// Ignore this parameter or set this parameter to `MSE_SC_SERVERLESS`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterSpecification")]
         [Validation(Required=false)]
@@ -54,6 +56,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The type of the instance. Valid values: ZooKeeper and Nacos-Ans.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
@@ -62,20 +66,22 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The engine version of the instance. Valid values:
         /// 
-        /// \[Professional Edition]
+        /// [Professional Edition]
         /// 
         /// *   `NACOS_2_0_0`
         /// *   `ZooKeeper_3_8_0`
         /// 
-        /// \[Developer Edition]
+        /// [Developer Edition]
         /// 
         /// *   `NACOS_2_0_0`
         /// *   `ZooKeeper_3_8_0`
         /// 
-        /// \[Serverless Edition]
+        /// [Serverless Edition]
         /// 
         /// *   `NACOS_2_0_0`
         /// *   `ZooKeeper_3_8_0`
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterVersion")]
         [Validation(Required=false)]
@@ -124,17 +130,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The number of nodes in the instance. Valid values: 1 to 9.
         /// 
-        /// \[Professional Edition]
+        /// [Professional Edition]
         /// 
         /// *   The value must be greater than or equal to 3 and must be an odd number.
         /// 
-        /// \[Developer Edition]
+        /// [Developer Edition]
         /// 
         /// *   The value must be 1.
         /// 
-        /// \[Serverless Edition]
+        /// [Serverless Edition]
         /// 
         /// Ignore this parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceCount")]
         [Validation(Required=false)]
@@ -163,6 +171,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// 
         /// *   `privatenet`: VPC
         /// *   `pubnet`: Internet
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetType")]
         [Validation(Required=false)]
@@ -214,7 +224,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. For the details of resource groups, see [View basic information of a resource group](~~457230~~).
+        /// The ID of the resource group. For the details of resource groups, see [View basic information of a resource group](https://help.aliyun.com/document_detail/457230.html).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

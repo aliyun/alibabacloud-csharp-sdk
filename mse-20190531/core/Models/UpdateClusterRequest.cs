@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The end time of the O\&M window.
+        /// The end time of the O\\&M window.
         /// </summary>
         [NameInMap("MaintenanceEndTime")]
         [Validation(Required=false)]
         public string MaintenanceEndTime { get; set; }
 
         /// <summary>
-        /// The start time of the O\&M window.
+        /// The start time of the O\\&M window.
         /// </summary>
         [NameInMap("MaintenanceStartTime")]
         [Validation(Required=false)]

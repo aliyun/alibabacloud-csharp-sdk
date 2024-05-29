@@ -182,6 +182,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public List<long?> RouteIdList { get; set; }
 
+            [NameInMap("RouteIndependentPercentageEnable")]
+            [Validation(Required=false)]
+            public bool? RouteIndependentPercentageEnable { get; set; }
+
+            [NameInMap("RouteIndependentPercentageList")]
+            [Validation(Required=false)]
+            public List<CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonRouteIndependentPercentageList> RouteIndependentPercentageList { get; set; }
+            public class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonRouteIndependentPercentageList : TeaModel {
+                [NameInMap("Percentage")]
+                [Validation(Required=false)]
+                public int? Percentage { get; set; }
+
+                [NameInMap("RouteId")]
+                [Validation(Required=false)]
+                public long? RouteId { get; set; }
+
+            }
+
         }
 
         /// <summary>
@@ -205,6 +223,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The name of the lane.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -213,6 +233,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
+
+        [NameInMap("PathIndependentPercentageEnable")]
+        [Validation(Required=false)]
+        public bool? PathIndependentPercentageEnable { get; set; }
 
         /// <summary>
         /// The ID of the region.

@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("pathIndependentPercentageEnable")]
+            [Validation(Required=false)]
+            public bool? PathIndependentPercentageEnable { get; set; }
+
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }

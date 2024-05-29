@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string App { get; set; }
 
             /// <summary>
-            /// The timeout period of the instance.\
+            /// The timeout period of the instance.\\
             /// After the specified timeout period expires, the service is unavailable by default and is deleted.
             /// </summary>
             [NameInMap("DurationInSecs")]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// The maximum interval between two heartbeat checks after a heartbeat check times out.\
+            /// The maximum interval between two heartbeat checks after a heartbeat check times out.\\
             /// Default value: 10.
             /// </summary>
             [NameInMap("RenewalIntervalInSecs")]

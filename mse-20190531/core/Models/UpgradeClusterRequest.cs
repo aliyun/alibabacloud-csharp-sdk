@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The destination version.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UpgradeVersion")]
         [Validation(Required=false)]

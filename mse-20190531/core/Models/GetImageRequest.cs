@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The version number of the current instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VersionCode")]
         [Validation(Required=false)]

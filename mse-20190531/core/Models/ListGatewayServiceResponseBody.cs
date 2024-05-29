@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The response parameters.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The returned information.
+            /// The data returned.
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<ListGatewayServiceResponseBodyDataResult> Result { get; set; }
             public class ListGatewayServiceResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// The ID of the gateway.
+                /// The gateway ID.
                 /// </summary>
                 [NameInMap("GatewayId")]
                 [Validation(Required=false)]
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// The name of the group.
+                /// The group.
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? HealthyThreshold { get; set; }
 
                     /// <summary>
-                    /// The URL of the HTTP request for the health check.
+                    /// The endpoint of the HTTP request for the health check.
                     /// </summary>
                     [NameInMap("HttpHost")]
                     [Validation(Required=false)]
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The IP addresses.
+                /// The list of IP addresses.
                 /// </summary>
                 [NameInMap("Ips")]
                 [Validation(Required=false)]
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ServiceNameInRegistry { get; set; }
 
                 /// <summary>
-                /// The service port.
+                /// The service port number.
                 /// </summary>
                 [NameInMap("ServicePort")]
                 [Validation(Required=false)]
@@ -413,21 +413,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? SourceId { get; set; }
 
                 /// <summary>
-                /// The type of the service source.
+                /// The source type.
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// The array of unhealthy endpoints.
+                /// The array of endpoints of unhealthy instances.
                 /// </summary>
                 [NameInMap("UnhealthyEndpoints")]
                 [Validation(Required=false)]
                 public List<string> UnhealthyEndpoints { get; set; }
 
                 /// <summary>
-                /// The version of the service.
+                /// The service version.
                 /// </summary>
                 [NameInMap("Versions")]
                 [Validation(Required=false)]

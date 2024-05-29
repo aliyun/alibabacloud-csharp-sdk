@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the consumer.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConsumerId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The unique ID of the gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The list of IDs of the authorized resources that a user wants to update.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IdList")]
         [Validation(Required=false)]
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// 
         /// *   true: enabled
         /// *   false: disabled
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceStatus")]
         [Validation(Required=false)]

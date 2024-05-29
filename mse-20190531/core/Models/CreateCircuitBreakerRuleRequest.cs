@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The application name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -53,6 +55,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         ///     <!-- -->
         /// 
         ///     <!-- -->
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
@@ -88,6 +92,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The microservice namespace to which the application belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -102,6 +108,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The name of the interface to which the rule applies. The interface name must be the same as the name on the interface details page in the console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
@@ -153,6 +161,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         ///     abnormal proportion
         /// 
         ///     <!-- -->
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Strategy")]
         [Validation(Required=false)]
@@ -160,6 +170,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// A percentage threshold for triggering circuit breaking. Valid values: 0-1. These values represent 0% to 100%.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]

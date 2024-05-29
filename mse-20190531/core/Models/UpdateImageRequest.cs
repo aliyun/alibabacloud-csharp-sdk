@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the destination cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// The destination version number.
         /// 
         /// > You must call the GetImage operation to obtain the maximum destination version number that corresponds to MaxVersionCode.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VersionCode")]
         [Validation(Required=false)]

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The timestamp when the monitoring ends.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The metric type. The following metric types are supported:
         /// 
-        /// \[Basic system metrics]
+        /// [Basic system metrics]
         /// 
         /// *   cpuUsage
         /// *   memoryUsage
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// *   gcCount
         /// *   gcTime
         /// 
-        /// \[Nacos registry]
+        /// [Nacos registry]
         /// 
         /// *   serviceCount
         /// *   writeCostTime
@@ -52,16 +54,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// *   TPS regCenterTps
         /// *   QPS regCenterQps
         /// 
-        /// \[Nacos configuration center]
+        /// [Nacos configuration center]
         /// 
         /// *   publish
         /// *   getConfig
         /// 
-        /// \[zookeeper]
+        /// [zookeeper]
         /// 
         /// *   TPS zk_TpsCount
         /// *   QPS zk_QpsCount
         /// *   zookeeper_AvgRequestLatency
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MonitorType")]
         [Validation(Required=false)]
@@ -76,6 +80,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The timestamp when the monitoring starts.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

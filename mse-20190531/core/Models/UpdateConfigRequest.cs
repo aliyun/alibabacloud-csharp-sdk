@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? MCPEnabled { get; set; }
 
         /// <summary>
-        /// The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\
+        /// The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\\
         /// If this parameter is set to 0, no limits are imposed on the number of connections.
         /// </summary>
         [NameInMap("MaxClientCnxns")]

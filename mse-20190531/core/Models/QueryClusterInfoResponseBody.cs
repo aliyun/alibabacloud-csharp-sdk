@@ -282,21 +282,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string IntranetPort { get; set; }
 
             /// <summary>
-            /// The O\&M time window.
+            /// The O\\&M time window.
             /// </summary>
             [NameInMap("MaintenancePeriod")]
             [Validation(Required=false)]
             public QueryClusterInfoResponseBodyDataMaintenancePeriod MaintenancePeriod { get; set; }
             public class QueryClusterInfoResponseBodyDataMaintenancePeriod : TeaModel {
                 /// <summary>
-                /// The start time of the O\&M time window.
+                /// The start time of the O\\&M time window.
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// The end time of the O\&M time window.
+                /// The end time of the O\\&M time window.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
@@ -333,7 +333,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string PayInfo { get; set; }
 
             /// <summary>
-            /// The public bandwidth. Unit: Mbit/s.\
+            /// The public bandwidth. Unit: Mbit/s.\\
             /// Valid values: 0 to 5000. The value 0 indicates no access to the Internet.
             /// </summary>
             [NameInMap("PubNetworkFlow")]

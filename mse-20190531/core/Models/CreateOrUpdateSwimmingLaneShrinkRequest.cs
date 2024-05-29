@@ -130,6 +130,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The name of the lane.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -138,6 +140,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
+
+        [NameInMap("PathIndependentPercentageEnable")]
+        [Validation(Required=false)]
+        public bool? PathIndependentPercentageEnable { get; set; }
 
         /// <summary>
         /// The ID of the region.

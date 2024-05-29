@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// The mock type. Valid values:
             /// 
-            /// *   \- `[unk]0[unk]`: desktop client
-            /// *   \- `[unk]1[unk]`: mobile client
+            /// *   \\- `[unk]0[unk]`: desktop client
+            /// *   \\- `[unk]1[unk]`: mobile client
             /// </summary>
             [NameInMap("MockType")]
             [Validation(Required=false)]

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the custom application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConsumerAppIds")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The items in the recycle bin.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DubboMockItems")]
         [Validation(Required=false)]
@@ -45,6 +49,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The description.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExtraJson")]
         [Validation(Required=false)]
@@ -53,10 +59,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The response time (RT) threshold of slow calls. Valid values:
         /// 
-        /// *   \- 15: 15 ms
-        /// *   \- 30: 30 ms
-        /// *   \- 60: 60 ms
-        /// *   \- 120: 120 ms
+        /// *   \\- 15: 15 ms
+        /// *   \\- 30: 30 ms
+        /// *   \\- 60: 60 ms
+        /// *   \\- 120: 120 ms
         /// </summary>
         [NameInMap("MockType")]
         [Validation(Required=false)]
@@ -64,6 +70,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The name of the rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -85,6 +93,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -92,6 +102,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The input parameters. The JSON format is supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScMockItems")]
         [Validation(Required=false)]
@@ -99,6 +111,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The rule source.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

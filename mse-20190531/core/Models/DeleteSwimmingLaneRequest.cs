@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the lane.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LaneId")]
         [Validation(Required=false)]

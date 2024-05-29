@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Aligned")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The registration latency.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DelayTime")]
         [Validation(Required=false)]
@@ -52,6 +58,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// 
         /// *   `true`: enables the rule.
         /// *   `false`: disables the rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
@@ -59,6 +67,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The slope of the prefetching curve.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FuncType")]
         [Validation(Required=false)]
@@ -87,6 +97,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -94,6 +106,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// Specifies whether to associate with service prefetching.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Related")]
         [Validation(Required=false)]
@@ -101,6 +115,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The prefetching duration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WarmupTime")]
         [Validation(Required=false)]

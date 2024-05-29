@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public QuerySwimmingLaneByIdResponseBodyData Data { get; set; }
         public class QuerySwimmingLaneByIdResponseBodyData : TeaModel {
+            [NameInMap("PathIndependentPercentageEnable")]
+            [Validation(Required=false)]
+            public bool? PathIndependentPercentageEnable { get; set; }
+
             [NameInMap("enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }

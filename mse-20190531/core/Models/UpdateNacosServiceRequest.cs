@@ -60,6 +60,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The name of the service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]

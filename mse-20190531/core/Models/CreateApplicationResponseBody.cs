@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// The service where the application is deployed. Valid values:
             /// 
-            /// *   \- ACK: Container Service for Kubernetes
-            /// *   \- Normal: another service
+            /// *   \\- ACK: Container Service for Kubernetes
+            /// *   \\- Normal: another service
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]

@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the configuration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]
@@ -63,6 +65,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The name of the group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
@@ -70,6 +74,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
