@@ -1,3 +1,9 @@
+2024-05-29 Version: 1.2.1
+- Update API CreateAppGroup: add param Version.
+- Update API ListGroups: update response param.
+- Update API UpdateAppGroup: add param Version.
+
+
 2024-05-17 Version: 1.2.0
 - Support API GetOverview.
 - Update API BatchDeleteRouteStrategy: update response param.

@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
+                [NameInMap("Version")]
+                [Validation(Required=false)]
+                public int? Version { get; set; }
+
             }
 
         }
