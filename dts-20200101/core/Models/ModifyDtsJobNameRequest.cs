@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
     public class ModifyDtsJobNameRequest : TeaModel {
         /// <summary>
         /// The ID of the data migration, data synchronization, or change tracking task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
@@ -20,13 +22,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// The new name of the DTS task.
         /// 
         /// >  We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DtsJobName")]
         [Validation(Required=false)]
         public string DtsJobName { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

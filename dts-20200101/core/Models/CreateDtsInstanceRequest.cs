@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// 
         /// > 
         /// *   The default value is **MySQL**.
-        /// *   For more information about the supported source and destination databases, see [Overview of data synchronization scenarios](~~130744~~) and [Overview of data migration scenarios](~~26618~~).
+        /// *   For more information about the supported source and destination databases, see [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/130744.html) and [Overview of data migration scenarios](https://help.aliyun.com/document_detail/26618.html).
         /// *   You must specify one of this parameter and the **JobId** parameter.
         /// </summary>
         [NameInMap("DestinationEndpointEngineName")]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointEngineName { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region in which the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// 
         /// >  You must specify one of this parameter and the **JobId** parameter.
         /// </summary>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// *   DTS supports the following instance classes for a data migration instance: **xxlarge**, **xlarge**, **large**, **medium**, and **small**.
         /// *   DTS supports the following instance classes for a data synchronization instance: **large**, **medium**, **small**, and **micro**.
         /// 
-        /// >  For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).
+        /// >  For more information about the test performance of each instance class, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html) and [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? Quantity { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// 
         /// > 
         /// *   The default value is **MySQL**.
-        /// *   For more information about the supported source and destination databases, see [Overview of data synchronization scenarios](~~130744~~) and [Overview of data migration scenarios](~~26618~~).
+        /// *   For more information about the supported source and destination databases, see [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/130744.html) and [Overview of data migration scenarios](https://help.aliyun.com/document_detail/26618.html).
         /// *   You must specify one of this parameter and the **JobId** parameter.
         /// </summary>
         [NameInMap("SourceEndpointEngineName")]
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointEngineName { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region in which the source instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// 
         /// >  You must specify one of this parameter and the **JobId** parameter.
         /// </summary>

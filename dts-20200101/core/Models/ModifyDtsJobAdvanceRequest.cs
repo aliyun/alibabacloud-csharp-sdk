@@ -37,13 +37,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? DataSynchronization { get; set; }
 
         /// <summary>
-        /// The objects of the data synchronization task after modification. The value must be a JSON string. For more information, see [Objects of DTS tasks](~~209545~~).
+        /// The objects of the data synchronization task after modification. The value must be a JSON string. For more information, see [Objects of DTS tasks](https://help.aliyun.com/document_detail/209545.html).
         /// 
         /// > 
         /// 
         /// *   The new value of DbList overwrites the original value. Make sure that all the objects that you want to synchronize are specified. Otherwise, some objects may be lost. Specify this parameter with caution.
         /// 
-        /// *   Before you call the ModifyDtsJob operation, we recommend that you call the [DescribeDtsJobDetail](~~208925~~) operation to query the current objects of the data synchronization task. Then, you can specify the new objects based on your business requirements. For example, if the current objects are Table A and Table B and you need to add Table C, you must specify Table A, Table B, and Table C for this parameter.
+        /// *   Before you call the ModifyDtsJob operation, we recommend that you call the [DescribeDtsJobDetail](https://help.aliyun.com/document_detail/208925.html) operation to query the current objects of the data synchronization task. Then, you can specify the new objects based on your business requirements. For example, if the current objects are Table A and Table B and you need to add Table C, you must specify Table A, Table B, and Table C for this parameter.
         /// </summary>
         [NameInMap("DbList")]
         [Validation(Required=false)]
@@ -51,13 +51,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The ID of the data synchronization instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DtsInstanceId")]
         [Validation(Required=false)]
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// The synchronization task ID. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+        /// The synchronization task ID. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
@@ -92,14 +94,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ModifyTypeEnum { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the data synchronization instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region in which the data synchronization instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The reserved parameters of the data synchronization task. You can add reserved parameters instead of overwriting the existing reserved parameters. The value of the parameter is a MAP JSON string. You can specify this parameter to meet special requirements, such as specifying whether to automatically start the precheck of the data synchronization task. For more information, see [MigrationReserved](~~176470~~).
+        /// The reserved parameters of the data synchronization task. You can add reserved parameters instead of overwriting the existing reserved parameters. The value of the parameter is a MAP JSON string. You can specify this parameter to meet special requirements, such as specifying whether to automatically start the precheck of the data synchronization task. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).
         /// </summary>
         [NameInMap("Reserved")]
         [Validation(Required=false)]

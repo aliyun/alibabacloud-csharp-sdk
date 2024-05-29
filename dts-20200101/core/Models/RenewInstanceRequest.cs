@@ -21,13 +21,17 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The billing method of the DTS instance. Set the value to **PREPAY**, which indicates the subscription billing method.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The ID of the data synchronization or change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+        /// The ID of the data synchronization or change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
@@ -44,7 +48,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
+        /// The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

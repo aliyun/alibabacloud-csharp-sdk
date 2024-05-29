@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
     public class ModifyDtsJobDuLimitRequest : TeaModel {
         /// <summary>
         /// The ID of the data migration, data synchronization, or change tracking task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// The upper limit of DUs for the DTS task.
         /// 
         /// >  Minimum value: **1**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DuLimit")]
         [Validation(Required=false)]

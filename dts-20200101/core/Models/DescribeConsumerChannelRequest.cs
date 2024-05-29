@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeConsumerChannelRequest : TeaModel {
         /// <summary>
-        /// The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
+        /// The ID of the change tracking instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.
         /// 
         /// >  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+        /// The ID of the change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
         /// 
         /// >  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.
         /// </summary>
@@ -49,7 +49,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ParentChannelId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

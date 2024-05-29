@@ -44,11 +44,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SynchronizationJobId")]
         [Validation(Required=false)]
         public string SynchronizationJobId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SynchronizationObjects")]
         [Validation(Required=false)]
         public string SynchronizationObjects { get; set; }

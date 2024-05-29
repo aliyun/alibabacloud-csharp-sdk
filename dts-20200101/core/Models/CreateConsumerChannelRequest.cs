@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
     public class CreateConsumerChannelRequest : TeaModel {
         /// <summary>
         /// The name of the consumer group. The name can be up to 128 characters in length. We recommend that you use an informative name for easy identification.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConsumerGroupName")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// 
         /// *   A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.
         /// *   A password must be 8 to 32 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConsumerGroupPassword")]
         [Validation(Required=false)]
@@ -29,15 +33,17 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// The username of the consumer group.
         /// 
-        /// *   A username must contain one or more of the following characters: uppercase letters, lowercase letters, digits, and underscores (\_).
+        /// *   A username must contain one or more of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).
         /// *   A username cannot exceed 16 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConsumerGroupUserName")]
         [Validation(Required=false)]
         public string ConsumerGroupUserName { get; set; }
 
         /// <summary>
-        /// The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
+        /// The ID of the change tracking instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.
         /// 
         /// >  You must specify at least one of the **DtsInstanceId** and **DtsJobId**. parameters.
         /// </summary>
@@ -46,7 +52,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+        /// The ID of the change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
         /// 
         /// >  You must specify at least one of the **DtsInstanceId** and **DtsJobId**. parameters.
         /// </summary>
@@ -55,7 +61,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

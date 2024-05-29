@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// The database account of the destination database.
             /// 
             /// > 
-            /// *   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](~~140954~~).
+            /// *   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/140954.html).
             /// *   If the **DestinationEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**, you must specify the DestinationEndpoint.UserName parameter.
             /// *   If the **DestinationEndpoint.InstanceType** parameter is set to RDS and the database version is MySQL 5.5 or MySQL 5.6, you do not need to specify the DestinationEndpoint.UserName and **DestinationEndpoint.Password** parameters.
             /// *   If the **DestinationEndpoint.InstanceType** parameter is set to **Redis**, you do not need to specify the DestinationEndpoint.UserName parameter.
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
             /// 
-            /// >  You must specify this parameter when you synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).
+            /// >  You must specify this parameter when you synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).
             /// </summary>
             [NameInMap("Role")]
             [Validation(Required=false)]
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// > 
             /// *   You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.
             /// *   If the **SourceEndpoint.InstanceType** parameter is set to **Redis**, you do not need to specify the database account.
-            /// *   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](~~140954~~).
+            /// *   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/140954.html).
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -259,15 +259,17 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// *   **false**: no
         /// 
         /// >  Default value: **true**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataInitialization")]
         [Validation(Required=false)]
         public bool? DataInitialization { get; set; }
 
         /// <summary>
-        /// The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+        /// The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).
         /// 
-        /// >  This parameter can be used for data synchronization between ApsaraDB for Redis Enterprise Edition instances. For more information, see [Use OpenAPI Explorer to configure one-way or two-way data synchronization between ApsaraDB for Redis Enterprise Edition instances](~~155967~~).
+        /// >  This parameter can be used for data synchronization between ApsaraDB for Redis Enterprise Edition instances. For more information, see [Use OpenAPI Explorer to configure one-way or two-way data synchronization between ApsaraDB for Redis Enterprise Edition instances](https://help.aliyun.com/document_detail/155967.html).
         /// </summary>
         [NameInMap("MigrationReserved")]
         [Validation(Required=false)]
@@ -292,6 +294,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// *   **false**: no
         /// 
         /// >  Default value: **true**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StructureInitialization")]
         [Validation(Required=false)]
@@ -312,7 +316,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationDirection { get; set; }
 
         /// <summary>
-        /// The ID of the data synchronization instance. You can call the [DescribeSynchronizationJobs](~~49454~~) operation to query the instance ID.
+        /// The ID of the data synchronization instance. You can call the [DescribeSynchronizationJobs](https://help.aliyun.com/document_detail/49454.html) operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SynchronizationJobId")]
         [Validation(Required=false)]
@@ -328,7 +334,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationJobName { get; set; }
 
         /// <summary>
-        /// The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see [SynchronizationObjects](~~141901~~).
+        /// The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see [SynchronizationObjects](https://help.aliyun.com/document_detail/141901.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SynchronizationObjects")]
         [Validation(Required=false)]

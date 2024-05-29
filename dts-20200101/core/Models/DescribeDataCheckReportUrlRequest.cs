@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// 
         /// *   **1**: full data verification.
         /// *   **2**: incremental data verification.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CheckType")]
         [Validation(Required=false)]
@@ -21,13 +23,17 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The name of the verified source database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
         /// <summary>
-        /// The ID of the Data Transmission Service (DTS) task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+        /// The ID of the Data Transmission Service (DTS) task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
@@ -39,6 +45,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The name of the table verified in the source database.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TbName")]
         [Validation(Required=false)]

@@ -10,19 +10,23 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class TransferInstanceClassRequest : TeaModel {
         /// <summary>
-        /// The ID of the data migration or data synchronization task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+        /// The ID of the data migration or data synchronization task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// The new instance class of the DTS instance. You can call the [DescribeDtsJobDetail](~~208925~~) operation to query the original instance class of the DTS instance.
+        /// The new instance class of the DTS instance. You can call the [DescribeDtsJobDetail](https://help.aliyun.com/document_detail/208925.html) operation to query the original instance class of the DTS instance.
         /// 
         /// *   DTS supports the following instance classes for a data migration instance: **xxlarge**, **xlarge**, **large**, **medium**, and **small**.
         /// *   DTS supports the following instance classes for a data synchronization instance: **large**, **medium**, **small**, and **micro**.
         /// 
-        /// >  For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).
+        /// >  For more information about the test performance of each instance class, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html) and [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
@@ -33,13 +37,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// 
         /// *   **UPGRADE**
         /// *   **DOWNGRADE**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
         /// <summary>
-        /// The ID of the region where the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region where the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

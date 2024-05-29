@@ -14,14 +14,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// 
         /// > 
         /// *   For multiple tasks, separate them with commas (**,**).
-        /// *   You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+        /// *   You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DtsJobIds")]
         [Validation(Required=false)]
         public string DtsJobIds { get; set; }
 
         /// <summary>
-        /// The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
+        /// The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

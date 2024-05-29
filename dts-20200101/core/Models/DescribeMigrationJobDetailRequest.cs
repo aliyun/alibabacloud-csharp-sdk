@@ -70,6 +70,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MigrationJobId")]
         [Validation(Required=false)]
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region where the data migration instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region where the data migration instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

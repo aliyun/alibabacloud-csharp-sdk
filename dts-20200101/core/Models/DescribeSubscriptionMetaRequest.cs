@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The ID of the consumer group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Sid")]
         [Validation(Required=false)]

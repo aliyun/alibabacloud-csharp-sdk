@@ -19,14 +19,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// The ID of the data migration, data synchronization, or change tracking task.
         /// 
-        /// >  You can call the [DescribeDtsJobs](~~209702~~) operation to obtain the task ID.
+        /// >  You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to obtain the task ID.
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -42,14 +42,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// One of the query conditions. The ID of the region. For more information, see [Supported regions](~~141033~~).
+        /// One of the query conditions. The ID of the region. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the DTS instance resides. For more information, see [Supported regions](~~141033~~).
+        /// The ID of the region in which the DTS instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

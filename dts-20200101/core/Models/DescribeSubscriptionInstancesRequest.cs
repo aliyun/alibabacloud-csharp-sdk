@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~49442~~).
+        /// The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/49442.html).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -71,6 +71,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// > 
             /// *   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.
             /// *   This parameter cannot be an empty string.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

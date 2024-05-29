@@ -27,8 +27,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// The specification of the data migration instance. Valid values: **small**, **medium**, **large**, **xlarge**, and **2xlarge**.
         /// 
         /// > 
-        /// *   For more information about the test performance of each specification, see [Specifications of data migration instances](~~26606~~).
-        /// *   For more information about the pricing of data migration instances, see [Pricing](~~117780~~).
+        /// *   For more information about the test performance of each specification, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html).
+        /// *   For more information about the pricing of data migration instances, see [Pricing](https://help.aliyun.com/document_detail/117780.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MigrationJobClass")]
         [Validation(Required=false)]
@@ -39,7 +41,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the data migration instance resides. The region ID of the data migration instance is the same as that of the destination database. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region where the data migration instance resides. The region ID of the data migration instance is the same as that of the destination database. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]

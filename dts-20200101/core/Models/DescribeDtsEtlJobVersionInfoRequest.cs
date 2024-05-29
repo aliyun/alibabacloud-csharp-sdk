@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDtsEtlJobVersionInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the Data Transmission Service (DTS) instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
+        /// The ID of the Data Transmission Service (DTS) instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DtsInstanceId")]
         [Validation(Required=false)]
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the ETL task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+        /// The ID of the ETL task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the DTS instance resides. You can call the [DescribeRegions](~~25609~~) operation to query the available Alibaba Cloud regions.
+        /// The ID of the region in which the DTS instance resides. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the available Alibaba Cloud regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

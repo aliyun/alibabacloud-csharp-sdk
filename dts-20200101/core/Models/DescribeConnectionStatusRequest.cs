@@ -73,6 +73,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// *   **PolarDB_o**: PolarDB for Oracle cluster
         /// *   **AnalyticDB**: AnalyticDB for MySQL cluster V3.0 or V2.0
         /// *   **Greenplum**: AnalyticDB for PostgreSQL instance
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationEndpointInstanceType")]
         [Validation(Required=false)]
@@ -107,7 +109,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointPort { get; set; }
 
         /// <summary>
-        /// The ID of the region where the destination instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region where the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("DestinationEndpointRegion")]
         [Validation(Required=false)]
@@ -116,14 +118,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// The database account of the destination database.
         /// 
-        /// >  The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see [Overview of data migration scenarios](~~26618~~) and [Overview of data synchronization scenarios](~~130744~~).
+        /// >  The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see [Overview of data migration scenarios](https://help.aliyun.com/document_detail/26618.html) and [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/130744.html).
         /// </summary>
         [NameInMap("DestinationEndpointUserName")]
         [Validation(Required=false)]
         public string DestinationEndpointUserName { get; set; }
 
         /// <summary>
-        /// The ID of the region where the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region where the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -193,6 +195,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// *   **MongoDB**: ApsaraDB for MongoDB instance
         /// *   **POLARDB**: PolarDB for MySQL cluster
         /// *   **PolarDB_o**: PolarDB for Oracle cluster
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceEndpointInstanceType")]
         [Validation(Required=false)]
@@ -224,7 +228,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointPort { get; set; }
 
         /// <summary>
-        /// The ID of the region where the source instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region where the source instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("SourceEndpointRegion")]
         [Validation(Required=false)]
@@ -233,7 +237,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// The database account of the source database.
         /// 
-        /// >  The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see [Overview of data migration scenarios](~~26618~~) and [Overview of data synchronization scenarios](~~130744~~).
+        /// >  The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see [Overview of data migration scenarios](https://help.aliyun.com/document_detail/26618.html) and [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/130744.html).
         /// </summary>
         [NameInMap("SourceEndpointUserName")]
         [Validation(Required=false)]

@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// The task ID. You must specify the task ID when you call the [DescribeEndpointSwitchStatus](~~135598~~) operation to query the execution status of the task.
+        /// The task ID. You must specify the task ID when you call the [DescribeEndpointSwitchStatus](https://help.aliyun.com/document_detail/135598.html) operation to query the execution status of the task.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

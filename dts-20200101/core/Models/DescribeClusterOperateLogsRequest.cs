@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The ID of the DTS dedicated cluster on which a DTS task runs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DedicatedClusterId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDTSIPRequest : TeaModel {
         /// <summary>
-        /// The ID of the region where the destination instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region where the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// 
         /// >  If the destination instance is a self-managed database with a public IP address, you can set the parameter to **cn-hangzhou** or the ID of the closest region.
         /// </summary>
@@ -27,9 +27,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the source instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region where the source instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// 
         /// >  If the source instance is a self-managed database with a public IP address, you can set the parameter to **cn-hangzhou** or the ID of the closest region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceEndpointRegion")]
         [Validation(Required=false)]

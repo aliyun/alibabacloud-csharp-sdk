@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// The threshold that triggers the alert.
             /// 
-            /// *   If the request parameter **Type** of the [CreateJobMonitorRule](~~212332~~) operation is set to **delay**, the unit of DelayRuleTime is seconds.
-            /// *   If the request parameter **Type** of the [CreateJobMonitorRule](~~212332~~) operation is set to **full_timeout**, the unit of DelayRuleTime is hours.
+            /// *   If the request parameter **Type** of the [CreateJobMonitorRule](https://help.aliyun.com/document_detail/212332.html) operation is set to **delay**, the unit of DelayRuleTime is seconds.
+            /// *   If the request parameter **Type** of the [CreateJobMonitorRule](https://help.aliyun.com/document_detail/212332.html) operation is set to **full_timeout**, the unit of DelayRuleTime is hours.
             /// </summary>
             [NameInMap("DelayRuleTime")]
             [Validation(Required=false)]

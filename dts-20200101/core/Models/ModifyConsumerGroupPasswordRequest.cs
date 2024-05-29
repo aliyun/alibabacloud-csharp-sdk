@@ -19,14 +19,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// The ID of the consumer group.
         /// 
-        /// You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group ID.
+        /// You can call the [DescribeConsumerGroup](https://help.aliyun.com/document_detail/122886.html) operation to query the consumer group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConsumerGroupID")]
         [Validation(Required=false)]
         public string ConsumerGroupID { get; set; }
 
         /// <summary>
-        /// The name of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group name.
+        /// The name of the consumer group. You can call the [DescribeConsumerGroup](https://help.aliyun.com/document_detail/122886.html) operation to query the consumer group name.
         /// </summary>
         [NameInMap("ConsumerGroupName")]
         [Validation(Required=false)]
@@ -34,13 +36,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The current password of the consumer group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConsumerGroupPassword")]
         [Validation(Required=false)]
         public string ConsumerGroupPassword { get; set; }
 
         /// <summary>
-        /// The username of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the username.
+        /// The username of the consumer group. You can call the [DescribeConsumerGroup](https://help.aliyun.com/document_detail/122886.html) operation to query the username.
         /// </summary>
         [NameInMap("ConsumerGroupUserName")]
         [Validation(Required=false)]
@@ -60,6 +64,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscriptionInstanceId")]
         [Validation(Required=false)]
@@ -70,6 +76,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// 
         /// *   A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.
         /// *   A password must be 8 to 32 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("consumerGroupNewPassword")]
         [Validation(Required=false)]

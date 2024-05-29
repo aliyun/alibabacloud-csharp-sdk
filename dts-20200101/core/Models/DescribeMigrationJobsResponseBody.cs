@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 public string JobCreateTime { get; set; }
 
                 /// <summary>
-                /// The specification of the data migration instance. Valid values: **small**, **medium**, **large**, **xlarge**, and **2xlarge**. For more information, see [Specifications of data migration instances](~~26606~~).
+                /// The specification of the data migration instance. Valid values: **small**, **medium**, **large**, **xlarge**, and **2xlarge**. For more information, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html).
                 /// </summary>
                 [NameInMap("MigrationJobClass")]
                 [Validation(Required=false)]

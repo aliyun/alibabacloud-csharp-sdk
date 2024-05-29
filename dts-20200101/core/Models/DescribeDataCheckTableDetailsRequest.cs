@@ -14,13 +14,17 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// 
         /// *   **1**: full data verification.
         /// *   **2**: incremental data verification.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CheckType")]
         [Validation(Required=false)]
         public int? CheckType { get; set; }
 
         /// <summary>
-        /// The ID of the data migration or data synchronization task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+        /// The ID of the data migration or data synchronization task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]

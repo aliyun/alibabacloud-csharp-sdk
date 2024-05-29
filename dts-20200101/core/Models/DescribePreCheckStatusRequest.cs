@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
     public class DescribePreCheckStatusRequest : TeaModel {
         /// <summary>
         /// The ID of the data migration, data synchronization, or change tracking task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// *   **02**: schema migration or initial schema synchronization
         /// *   **03**: full data migration or initial full data synchronization
         /// *   **04**: incremental data migration or synchronization
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JobCode")]
         [Validation(Required=false)]
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
+        /// The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

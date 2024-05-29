@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// 
             /// > 
             /// *   Default value: **MySQL**.
-            /// *   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](~~130744~~).
+            /// *   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](https://help.aliyun.com/document_detail/130744.html).
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// 
             /// > 
             /// *   Default value: **MySQL**.
-            /// *   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](~~130744~~).
+            /// *   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](https://help.aliyun.com/document_detail/130744.html).
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
@@ -75,9 +75,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? DBInstanceCount { get; set; }
 
         /// <summary>
-        /// The ID of the region where the destination database resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region where the destination database resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// 
         /// >  If the **SourceRegion** parameter is set to the China (Hong Kong) region or a region outside the Chinese mainland, you must set the DestRegion parameter to the same region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestRegion")]
         [Validation(Required=false)]
@@ -92,6 +94,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// 
         /// *   **PrePaid**: subscription
         /// *   **PostPaid** (default value): pay-as-you-go
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -118,7 +122,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the source database resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region where the source database resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceRegion")]
         [Validation(Required=false)]
@@ -127,7 +133,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// The specification of the data synchronization instance. Valid values: **micro**, **small**, **medium**, and **large**.
         /// 
-        /// >  For more information about the test performance of each specification, see [Specifications of data synchronization instances](~~26605~~).
+        /// >  For more information about the test performance of each specification, see [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SynchronizationJobClass")]
         [Validation(Required=false)]

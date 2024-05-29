@@ -65,6 +65,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// *   **PolarDB_o**: PolarDB O Edition cluster
             /// *   **AnalyticDB**: AnalyticDB for MySQL cluster V3.0 or V2.0
             /// *   **Greenplum**: AnalyticDB for PostgreSQL instance
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// The region ID of the destination database.
             /// 
-            /// >  If the **DestinationEndpoint.InstanceType** parameter is set to **LocalInstance**, you can enter **cn-hangzhou** or the ID of the region closest to the self-managed database. For more information, see [List of supported regions](~~141033~~).
+            /// >  If the **DestinationEndpoint.InstanceType** parameter is set to **LocalInstance**, you can enter **cn-hangzhou** or the ID of the region closest to the self-managed database. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -107,7 +109,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// The database account of the destination database.
             /// 
-            /// >  The permissions that are required for database accounts vary with the migration scenario. For more information, see [Overview of data migration scenarios](~~26618~~).
+            /// >  The permissions that are required for database accounts vary with the migration scenario. For more information, see [Overview of data migration scenarios](https://help.aliyun.com/document_detail/26618.html).
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -125,7 +127,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// *   **true**: yes
             /// *   **false**: no
             /// 
-            /// >  For more information about databases that support full data migration, see [Supported databases and migration types](~~26618~~).
+            /// >  For more information about databases that support full data migration, see [Supported databases and migration types](https://help.aliyun.com/document_detail/26618.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DataIntialization")]
             [Validation(Required=false)]
@@ -137,7 +141,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// *   **true**: yes
             /// *   **false**: no
             /// 
-            /// >  For more information about databases that support incremental data migration, see [Supported databases and migration types](~~26618~~).
+            /// >  For more information about databases that support incremental data migration, see [Supported databases and migration types](https://help.aliyun.com/document_detail/26618.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DataSynchronization")]
             [Validation(Required=false)]
@@ -149,7 +155,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// *   **true**: yes
             /// *   **false**: no
             /// 
-            /// >  For more information about databases that support schema migration, see [Supported databases and migration types](~~26618~~).
+            /// >  For more information about databases that support schema migration, see [Supported databases and migration types](https://help.aliyun.com/document_detail/26618.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("StructureIntialization")]
             [Validation(Required=false)]
@@ -213,6 +221,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// *   **MongoDB**: ApsaraDB for MongoDB instance
             /// *   **POLARDB**: PolarDB for MySQL cluster or PolarDB for PostgreSQL cluster
             /// *   **PolarDB_o**: PolarDB O Edition cluster
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
@@ -255,7 +265,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// The region ID of the source database.
             /// 
-            /// >  If the **SourceEndpoint.InstanceType** parameter is set to **LocalInstance**, you can enter **cn-hangzhou** or the ID of the region closest to the self-managed database. For more information, see [List of supported regions](~~141033~~).
+            /// >  If the **SourceEndpoint.InstanceType** parameter is set to **LocalInstance**, you can enter **cn-hangzhou** or the ID of the region closest to the self-managed database. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -264,7 +274,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// The authorized RAM role of the source instance. You must specify the RAM role only if the source instance and the destination instance belong to different Alibaba Cloud accounts. You can use the RAM role to allow the Alibaba Cloud account that owns the destination instance to access the source instance.
             /// 
-            /// >  For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).
+            /// >  For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).
             /// </summary>
             [NameInMap("Role")]
             [Validation(Required=false)]
@@ -273,7 +283,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// The database account of the source database.
             /// 
-            /// >  The permissions that are required for database accounts vary with the migration scenario. For more information, see [Overview of data migration scenarios](~~26618~~).
+            /// >  The permissions that are required for database accounts vary with the migration scenario. For more information, see [Overview of data migration scenarios](https://help.aliyun.com/document_detail/26618.html).
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -297,6 +307,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MigrationJobId")]
         [Validation(Required=false)]
@@ -304,6 +316,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The name of the data migration task. The name can be up to 32 characters in length. We recommend that you specify an informative name to identify the task. You do not need to use a unique task name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MigrationJobName")]
         [Validation(Required=false)]
@@ -312,14 +326,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// The objects that you want to migrate. The value is a JSON string and can contain regular expressions.
         /// 
-        /// For more information, see [MigrationObject](~~141227~~).
+        /// For more information, see [MigrationObject](https://help.aliyun.com/document_detail/141227.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MigrationObject")]
         [Validation(Required=false)]
         public string MigrationObject { get; set; }
 
         /// <summary>
-        /// The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+        /// The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).
         /// </summary>
         [NameInMap("MigrationReserved")]
         [Validation(Required=false)]
@@ -330,7 +346,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the data migration instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region where the data migration instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// 
         /// >  The region ID of the data migration instance is the same as that of the destination database.
         /// </summary>

@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// > 
             /// *   If the **Endpoint.InstanceType** parameter is set to **ECS**, you must specify the ID of the ECS instance.
             /// *   If the **Endpoint.InstanceType** parameter is set to **Express**, you must specify the ID of the VPC.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// *   **LocalInstance**: self-managed database with a public IP address
             /// *   **ECS**: self-managed database that is hosted on ECS
             /// *   **Express**: self-managed database that is connected over Express Connect
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
             /// <summary>
             /// The service port number of the database.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
@@ -56,6 +62,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// 
             /// *   **Source**
             /// *   **Destination**
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -77,7 +85,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// The authorized Resource Access Management (RAM) role of the source instance. You must specify the RAM role only if the source instance and the destination instance belong to different Alibaba Cloud accounts. You can use the RAM role to allow the Alibaba Cloud account that owns the destination instance to access the source instance.
             /// 
-            /// >  For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).
+            /// >  For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).
             /// </summary>
             [NameInMap("Role")]
             [Validation(Required=false)]
@@ -120,6 +128,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SynchronizationJobId")]
         [Validation(Required=false)]

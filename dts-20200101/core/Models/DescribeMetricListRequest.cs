@@ -52,6 +52,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// *   **cpu_total**: the CPU utilization.
         /// *   **memory_usedutilization**: the memory usage.
         /// *   **IntranetOutRate**: the outbound traffic over the internal network. Unit: byte.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -73,6 +75,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The monitored object. If the **MetricType** parameter is set to **NODE**, set this parameter to the ID of the node that is monitored.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Param")]
         [Validation(Required=false)]

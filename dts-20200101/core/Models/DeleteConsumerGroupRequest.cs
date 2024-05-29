@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// The ID of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group ID.
+        /// The ID of the consumer group. You can call the [DescribeConsumerGroup](https://help.aliyun.com/document_detail/122886.html) operation to query the consumer group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConsumerGroupID")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The ID of the change tracking instance. You can call the **DescribeSubscriptionInstances** operation to query the instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscriptionInstanceId")]
         [Validation(Required=false)]

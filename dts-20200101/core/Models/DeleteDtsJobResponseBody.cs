@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the data migration or synchronization task resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region in which the data migration or synchronization task resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

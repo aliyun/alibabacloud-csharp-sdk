@@ -568,7 +568,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// The sub-item progress of the subtask.
             /// 
-            /// >  If **\[]** is returned, the subtask has no sub-items.
+            /// >  If **[]** is returned, the subtask has no sub-items.
             /// </summary>
             [NameInMap("Sub")]
             [Validation(Required=false)]
@@ -913,7 +913,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 /// <summary>
                 /// The sub-item progress of the subtask.
                 /// 
-                /// >  If **\[]** is returned, the subtask has no sub-items.
+                /// >  If **[]** is returned, the subtask has no sub-items.
                 /// </summary>
                 [NameInMap("Sub")]
                 [Validation(Required=false)]

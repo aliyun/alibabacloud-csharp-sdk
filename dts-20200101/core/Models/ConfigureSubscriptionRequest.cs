@@ -19,7 +19,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Checkpoint { get; set; }
 
         /// <summary>
-        /// The objects for which you want to track data changes. The value must be a JSON string. For more information, see [Objects of DTS tasks](~~209545~~).
+        /// The objects for which you want to track data changes. The value must be a JSON string. For more information, see [Objects of DTS tasks](https://help.aliyun.com/document_detail/209545.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DbList")]
         [Validation(Required=false)]
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// 
         /// > 
         /// *   This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.
-        /// *   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](~~175876~~).
+        /// *   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](https://help.aliyun.com/document_detail/175876.html).
         /// </summary>
         [NameInMap("DelayPhone")]
         [Validation(Required=false)]
@@ -67,14 +69,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsBisLabel { get; set; }
 
         /// <summary>
-        /// The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
+        /// The ID of the change tracking instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.
         /// </summary>
         [NameInMap("DtsInstanceId")]
         [Validation(Required=false)]
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+        /// The ID of the change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.
         /// </summary>
         [NameInMap("DtsJobId")]
         [Validation(Required=false)]
@@ -84,6 +86,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// The name of the change tracking task.
         /// 
         /// >  We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DtsJobName")]
         [Validation(Required=false)]
@@ -104,7 +108,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// 
         /// > 
         /// *   This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.
-        /// *   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](~~175876~~).
+        /// *   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](https://help.aliyun.com/document_detail/175876.html).
         /// </summary>
         [NameInMap("ErrorPhone")]
         [Validation(Required=false)]
@@ -119,14 +123,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public double? MinDu { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The reserved parameter of DTS. The value must be a JSON string. You can specify this parameter to add more configurations of the source or destination database to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the ID of the CEN instance. For more information, see [MigrationReserved](~~176470~~).
+        /// The reserved parameter of DTS. The value must be a JSON string. You can specify this parameter to add more configurations of the source or destination database to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the ID of the CEN instance. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).
         /// </summary>
         [NameInMap("Reserve")]
         [Validation(Required=false)]
@@ -221,7 +227,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointPort { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the source database resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region in which the source database resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
         /// 
         /// >  If the source database is a self-managed database with a public IP address, you can set the value of this parameter to **cn-hangzhou** or the ID of the region that is closest to the region in which the self-managed database resides.
         /// </summary>
@@ -232,7 +238,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking task. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.
         /// 
-        /// >  For more information about the permissions that are required for the RAM role and how to grant the permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).
+        /// >  For more information about the permissions that are required for the RAM role and how to grant the permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).
         /// </summary>
         [NameInMap("SourceEndpointRole")]
         [Validation(Required=false)]
@@ -241,7 +247,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// The username of the account that is used to connect to the source database.
         /// 
-        /// >  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Prepare the source database account for change tracking](~~212653~~).
+        /// >  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Prepare the source database account for change tracking](https://help.aliyun.com/document_detail/212653.html).
         /// </summary>
         [NameInMap("SourceEndpointUserName")]
         [Validation(Required=false)]
@@ -273,6 +279,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// > 
         /// *   To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the **SubscriptionInstanceVPCId** and **SubscriptionInstanceVSwitchID** parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.
         /// *   The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscriptionInstanceNetworkType")]
         [Validation(Required=false)]

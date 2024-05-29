@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// *   **CEN**: self-managed database connected over Cloud Enterprise Network (CEN)
             /// *   **dg**: self-managed database connected over Database Gateway
             /// 
-            /// >  The engine of a self-managed database can be MySQL or Oracle. You must specify the engine type when you call the [CreateSubscriptionInstance](~~49436~~) operation.
+            /// >  The engine of a self-managed database can be MySQL or Oracle. You must specify the engine type when you call the [CreateSubscriptionInstance](https://help.aliyun.com/document_detail/49436.html) operation.
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking instance. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.
             /// 
-            /// >  For more information about the permissions that are required for the RAM role and how to grant permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).
+            /// >  For more information about the permissions that are required for the RAM role and how to grant permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).
             /// </summary>
             [NameInMap("Role")]
             [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// The username of the account that is used to connect to the source database.
             /// 
-            /// >  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Overview of change tracking scenarios](~~145715~~).
+            /// >  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Overview of change tracking scenarios](https://help.aliyun.com/document_detail/145715.html).
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -118,6 +118,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// 
             /// *   **true**: tracks DDL statements.
             /// *   **false**: does not track DDL statements.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DDL")]
             [Validation(Required=false)]
@@ -128,6 +130,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// 
             /// *   **true**: tracks DML statements.
             /// *   **false**: does not tack DML statements.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("DML")]
             [Validation(Required=false)]
@@ -179,14 +183,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
+        /// The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscriptionInstanceId")]
         [Validation(Required=false)]
         public string SubscriptionInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](~~49442~~) operation to query the instance ID.
+        /// The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](https://help.aliyun.com/document_detail/49442.html) operation to query the instance ID.
         /// </summary>
         [NameInMap("SubscriptionInstanceName")]
         [Validation(Required=false)]
@@ -204,7 +210,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SubscriptionInstanceNetworkType { get; set; }
 
         /// <summary>
-        /// The objects for which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see [SubscriptionObjects](~~141902~~).
+        /// The objects for which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see [SubscriptionObjects](https://help.aliyun.com/document_detail/141902.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscriptionObject")]
         [Validation(Required=false)]

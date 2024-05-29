@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DedicatedClusterId")]
         [Validation(Required=false)]
@@ -67,6 +69,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Phones")]
         [Validation(Required=false)]

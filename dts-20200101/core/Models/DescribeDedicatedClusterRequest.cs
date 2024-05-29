@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
     public class DescribeDedicatedClusterRequest : TeaModel {
         /// <summary>
         /// The ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DedicatedClusterId")]
         [Validation(Required=false)]

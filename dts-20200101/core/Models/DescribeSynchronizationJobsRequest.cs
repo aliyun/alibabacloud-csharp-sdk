@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// The tag value. You can call the [ListTagResources](~~191187~~) operation to query the tag value.
+        /// The tag value. You can call the [ListTagResources](https://help.aliyun.com/document_detail/191187.html) operation to query the tag value.
         /// 
         /// > 
         /// *   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tag key. You can call the [ListTagResources](~~191187~~) operation to query the tag key.
+        /// The tag key. You can call the [ListTagResources](https://help.aliyun.com/document_detail/191187.html) operation to query the tag key.
         /// 
         /// > 
         /// *   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.
@@ -75,6 +75,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public class DescribeSynchronizationJobsRequestTag : TeaModel {
             /// <summary>
             /// The ID of the request.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

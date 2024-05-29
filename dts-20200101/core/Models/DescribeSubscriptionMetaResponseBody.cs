@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? Checkpoint { get; set; }
 
             /// <summary>
-            /// The objects of the subtask. For more information, see [Objects of DTS tasks](~~209545~~).
+            /// The objects of the subtask. For more information, see [Objects of DTS tasks](https://help.aliyun.com/document_detail/209545.html).
             /// </summary>
             [NameInMap("DBList")]
             [Validation(Required=false)]
