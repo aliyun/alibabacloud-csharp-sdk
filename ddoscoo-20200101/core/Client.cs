@@ -3782,6 +3782,114 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @summary 删除新版cc规则
+         *
+         * @param request DeleteWebCCRuleV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebCCRuleV2Response
+         */
+        public DeleteWebCCRuleV2Response DeleteWebCCRuleV2WithOptions(DeleteWebCCRuleV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleNames))
+            {
+                query["RuleNames"] = request.RuleNames;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWebCCRuleV2",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWebCCRuleV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除新版cc规则
+         *
+         * @param request DeleteWebCCRuleV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteWebCCRuleV2Response
+         */
+        public async Task<DeleteWebCCRuleV2Response> DeleteWebCCRuleV2WithOptionsAsync(DeleteWebCCRuleV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleNames))
+            {
+                query["RuleNames"] = request.RuleNames;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWebCCRuleV2",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWebCCRuleV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除新版cc规则
+         *
+         * @param request DeleteWebCCRuleV2Request
+         * @return DeleteWebCCRuleV2Response
+         */
+        public DeleteWebCCRuleV2Response DeleteWebCCRuleV2(DeleteWebCCRuleV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteWebCCRuleV2WithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 删除新版cc规则
+         *
+         * @param request DeleteWebCCRuleV2Request
+         * @return DeleteWebCCRuleV2Response
+         */
+        public async Task<DeleteWebCCRuleV2Response> DeleteWebCCRuleV2Async(DeleteWebCCRuleV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteWebCCRuleV2WithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Deletes the custom rules of the Static Page Caching policy for a website.
          *
          * @description You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
@@ -18551,6 +18659,106 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyWebAreaBlockSwitchWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 统一全局CC开关
+         *
+         * @param request ModifyWebCCGlobalSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebCCGlobalSwitchResponse
+         */
+        public ModifyWebCCGlobalSwitchResponse ModifyWebCCGlobalSwitchWithOptions(ModifyWebCCGlobalSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CcGlobalSwitch))
+            {
+                query["CcGlobalSwitch"] = request.CcGlobalSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyWebCCGlobalSwitch",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyWebCCGlobalSwitchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 统一全局CC开关
+         *
+         * @param request ModifyWebCCGlobalSwitchRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyWebCCGlobalSwitchResponse
+         */
+        public async Task<ModifyWebCCGlobalSwitchResponse> ModifyWebCCGlobalSwitchWithOptionsAsync(ModifyWebCCGlobalSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CcGlobalSwitch))
+            {
+                query["CcGlobalSwitch"] = request.CcGlobalSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyWebCCGlobalSwitch",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyWebCCGlobalSwitchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 统一全局CC开关
+         *
+         * @param request ModifyWebCCGlobalSwitchRequest
+         * @return ModifyWebCCGlobalSwitchResponse
+         */
+        public ModifyWebCCGlobalSwitchResponse ModifyWebCCGlobalSwitch(ModifyWebCCGlobalSwitchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyWebCCGlobalSwitchWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 统一全局CC开关
+         *
+         * @param request ModifyWebCCGlobalSwitchRequest
+         * @return ModifyWebCCGlobalSwitchResponse
+         */
+        public async Task<ModifyWebCCGlobalSwitchResponse> ModifyWebCCGlobalSwitchAsync(ModifyWebCCGlobalSwitchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyWebCCGlobalSwitchWithOptionsAsync(request, runtime);
         }
 
         /**
