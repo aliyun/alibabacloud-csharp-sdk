@@ -13211,6 +13211,230 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
+         * @summary 查询专享实例集群的详情
+         *
+         * @param request DescribeInstanceClusterInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceClusterInfoResponse
+         */
+        public DescribeInstanceClusterInfoResponse DescribeInstanceClusterInfoWithOptions(DescribeInstanceClusterInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClusterName))
+            {
+                query["InstanceClusterName"] = request.InstanceClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceClusterInfo",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceClusterInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询专享实例集群的详情
+         *
+         * @param request DescribeInstanceClusterInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceClusterInfoResponse
+         */
+        public async Task<DescribeInstanceClusterInfoResponse> DescribeInstanceClusterInfoWithOptionsAsync(DescribeInstanceClusterInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClusterName))
+            {
+                query["InstanceClusterName"] = request.InstanceClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceClusterInfo",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceClusterInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询专享实例集群的详情
+         *
+         * @param request DescribeInstanceClusterInfoRequest
+         * @return DescribeInstanceClusterInfoResponse
+         */
+        public DescribeInstanceClusterInfoResponse DescribeInstanceClusterInfo(DescribeInstanceClusterInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInstanceClusterInfoWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询专享实例集群的详情
+         *
+         * @param request DescribeInstanceClusterInfoRequest
+         * @return DescribeInstanceClusterInfoResponse
+         */
+        public async Task<DescribeInstanceClusterInfoResponse> DescribeInstanceClusterInfoAsync(DescribeInstanceClusterInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInstanceClusterInfoWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询专享实例集群列表
+         *
+         * @param request DescribeInstanceClusterListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceClusterListResponse
+         */
+        public DescribeInstanceClusterListResponse DescribeInstanceClusterListWithOptions(DescribeInstanceClusterListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClusterId))
+            {
+                query["InstanceClusterId"] = request.InstanceClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClusterName))
+            {
+                query["InstanceClusterName"] = request.InstanceClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceClusterList",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceClusterListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询专享实例集群列表
+         *
+         * @param request DescribeInstanceClusterListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceClusterListResponse
+         */
+        public async Task<DescribeInstanceClusterListResponse> DescribeInstanceClusterListWithOptionsAsync(DescribeInstanceClusterListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClusterId))
+            {
+                query["InstanceClusterId"] = request.InstanceClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClusterName))
+            {
+                query["InstanceClusterName"] = request.InstanceClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceClusterList",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceClusterListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询专享实例集群列表
+         *
+         * @param request DescribeInstanceClusterListRequest
+         * @return DescribeInstanceClusterListResponse
+         */
+        public DescribeInstanceClusterListResponse DescribeInstanceClusterList(DescribeInstanceClusterListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInstanceClusterListWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询专享实例集群列表
+         *
+         * @param request DescribeInstanceClusterListRequest
+         * @return DescribeInstanceClusterListResponse
+         */
+        public async Task<DescribeInstanceClusterListResponse> DescribeInstanceClusterListAsync(DescribeInstanceClusterListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInstanceClusterListWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the number of lost connections to a dedicated instance within a period of time.
          *
          * @param request DescribeInstanceDropConnectionsRequest
