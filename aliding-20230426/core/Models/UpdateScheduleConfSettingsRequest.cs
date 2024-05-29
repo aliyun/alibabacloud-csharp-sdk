@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting MoziConfVirtualExtraSetting { get; set; }
             public class UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting : TeaModel {
+                [NameInMap("CloudRecordOwnerUserId")]
+                [Validation(Required=false)]
+                public string CloudRecordOwnerUserId { get; set; }
+
                 [NameInMap("EnableChat")]
                 [Validation(Required=false)]
                 public int? EnableChat { get; set; }
@@ -52,6 +56,22 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [NameInMap("LockNick")]
                 [Validation(Required=false)]
                 public int? LockNick { get; set; }
+
+                [NameInMap("MinutesOwnerUserId")]
+                [Validation(Required=false)]
+                public string MinutesOwnerUserId { get; set; }
+
+                [NameInMap("PushAllMeetingRecords")]
+                [Validation(Required=false)]
+                public bool? PushAllMeetingRecords { get; set; }
+
+                [NameInMap("PushCloudRecordCard")]
+                [Validation(Required=false)]
+                public bool? PushCloudRecordCard { get; set; }
+
+                [NameInMap("PushMinutesCard")]
+                [Validation(Required=false)]
+                public bool? PushMinutesCard { get; set; }
 
                 [NameInMap("WaitingRoom")]
                 [Validation(Required=false)]
