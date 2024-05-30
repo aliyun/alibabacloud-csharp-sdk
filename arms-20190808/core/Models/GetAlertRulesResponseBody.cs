@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// </summary>
                 [NameInMap("AlertId")]
                 [Validation(Required=false)]
-                public float? AlertId { get; set; }
+                public long? AlertId { get; set; }
 
                 /// <summary>
                 /// The name of the alert rule.
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         /// </summary>
                         [NameInMap("N")]
                         [Validation(Required=false)]
-                        public float? N { get; set; }
+                        public long? N { get; set; }
 
                         /// <summary>
                         /// The comparison operator that was used to compare the metric value with the threshold. Valid values:

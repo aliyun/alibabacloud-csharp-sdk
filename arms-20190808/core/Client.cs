@@ -3297,6 +3297,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["FeePackage"] = request.FeePackage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedType))
             {
                 query["ManagedType"] = request.ManagedType;
@@ -3370,6 +3374,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeePackage))
             {
                 query["FeePackage"] = request.FeePackage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedType))
             {
@@ -23179,7 +23187,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Removes data sources from a global aggregation instance in Prometheus Service.
+         * @summary Removes data sources from a global aggregation instance.
          *
          * @param request RemoveAliClusterIdsFromPrometheusGlobalViewRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -23225,7 +23233,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Removes data sources from a global aggregation instance in Prometheus Service.
+         * @summary Removes data sources from a global aggregation instance.
          *
          * @param request RemoveAliClusterIdsFromPrometheusGlobalViewRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -23271,7 +23279,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Removes data sources from a global aggregation instance in Prometheus Service.
+         * @summary Removes data sources from a global aggregation instance.
          *
          * @param request RemoveAliClusterIdsFromPrometheusGlobalViewRequest
          * @return RemoveAliClusterIdsFromPrometheusGlobalViewResponse
@@ -23283,7 +23291,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-         * @summary Removes data sources from a global aggregation instance in Prometheus Service.
+         * @summary Removes data sources from a global aggregation instance.
          *
          * @param request RemoveAliClusterIdsFromPrometheusGlobalViewRequest
          * @return RemoveAliClusterIdsFromPrometheusGlobalViewResponse

@@ -24,7 +24,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public GetPrometheusInstanceResponseBodyData Data { get; set; }
         public class GetPrometheusInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// The number of days for automatic archiving after storage expiration (optional values: 60, 90, 180, 365). 0 means not archive.
+            /// 权限类型：
+            /// readWrite、readOnly、httpReadOnly
+            /// </summary>
+            [NameInMap("AccessType")]
+            [Validation(Required=false)]
+            public string AccessType { get; set; }
+
+            /// <summary>
+            /// The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
             /// </summary>
             [NameInMap("ArchiveDuration")]
             [Validation(Required=false)]
@@ -52,11 +60,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// *   remote-write: Prometheus instance for Remote Write
+            /// *   remote-write: general-purpose Prometheus instance
             /// *   ecs: Prometheus instances for ECS
-            /// *   cloud-monitor: Prometheus instance for cloud services (Chinese mainland)
-            /// *   cloud-monitor: Prometheus instance for cloud services (regions outside the Chinese mainland)
-            /// *   global-view: Prometheus instance for GlobalView
+            /// *   cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland
+            /// *   cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland
+            /// *   global-view: global aggregation instance
             /// *   aliyun-cs: Prometheus instance for Container Service
             /// </summary>
             [NameInMap("ClusterType")]
@@ -107,10 +115,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("PushGatewayIntraUrl")]
             [Validation(Required=false)]
             public string PushGatewayIntraUrl { get; set; }
-
-            [NameInMap("ReadOnly")]
-            [Validation(Required=false)]
-            public bool? ReadOnly { get; set; }
 
             /// <summary>
             /// The region ID.
@@ -169,7 +173,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// Storage duration (days).
+            /// The data storage duration. Unit: days.
             /// </summary>
             [NameInMap("StorageDuration")]
             [Validation(Required=false)]

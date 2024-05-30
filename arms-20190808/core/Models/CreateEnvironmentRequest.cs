@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string FeePackage { get; set; }
 
+        [NameInMap("GrafanaWorkspaceId")]
+        [Validation(Required=false)]
+        public string GrafanaWorkspaceId { get; set; }
+
         /// <summary>
         /// Specifies whether agents or exporters are managed. Valid values:
         /// 

@@ -65,6 +65,51 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string BindVpcCidr { get; set; }
 
+            /// <summary>
+            /// The status of the database that is bound to the Prometheus instance.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   UNINSTALLING
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   INSTALLING
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   UNINSTALLED
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   RUNNING
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   MODIFYING
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// </summary>
             [NameInMap("DbInstanceStatus")]
             [Validation(Required=false)]
             public string DbInstanceStatus { get; set; }
@@ -104,6 +149,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string EnvironmentType { get; set; }
 
+            /// <summary>
+            /// The payable resource plan. Valid values:
+            /// 
+            /// *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro.
+            /// *   Otherwise, leave the parameter empty.
+            /// </summary>
             [NameInMap("FeePackage")]
             [Validation(Required=false)]
             public string FeePackage { get; set; }
@@ -142,6 +193,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("GrafanaFolderUrl")]
             [Validation(Required=false)]
             public string GrafanaFolderUrl { get; set; }
+
+            /// <summary>
+            /// grafana工作区id
+            /// </summary>
+            [NameInMap("GrafanaWorkspaceId")]
+            [Validation(Required=false)]
+            public string GrafanaWorkspaceId { get; set; }
 
             /// <summary>
             /// managed type:
@@ -196,7 +254,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// The value of the tag
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

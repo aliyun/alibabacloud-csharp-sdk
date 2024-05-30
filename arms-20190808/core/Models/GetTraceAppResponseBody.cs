@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
             /// <summary>
             /// The timestamp generated when the task was created.
             /// </summary>
@@ -50,6 +54,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<string> Labels { get; set; }
+
+            [NameInMap("Language")]
+            [Validation(Required=false)]
+            public string Language { get; set; }
 
             /// <summary>
             /// The process identifier (PID) of the application.
