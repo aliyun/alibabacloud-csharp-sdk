@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOssScanConfigResponseBody : TeaModel {
         /// <summary>
-        /// The response parameters.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -44,10 +44,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public List<string> BucketNameList { get; set; }
 
+            /// <summary>
+            /// The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
+            /// </summary>
             [NameInMap("DecompressMaxFileCount")]
             [Validation(Required=false)]
             public int? DecompressMaxFileCount { get; set; }
 
+            /// <summary>
+            /// The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
+            /// </summary>
             [NameInMap("DecompressMaxLayer")]
             [Validation(Required=false)]
             public int? DecompressMaxLayer { get; set; }

@@ -109,7 +109,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// The UUID array of the servers.
+        /// The UUIDs of the servers.
+        /// 
+        /// >  You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of the servers.
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]

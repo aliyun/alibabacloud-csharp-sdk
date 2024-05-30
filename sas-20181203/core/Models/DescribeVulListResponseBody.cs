@@ -61,12 +61,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The edition of Security Center that is authorized to scan the asset. Valid values:
             /// 
-            /// *   **1**: Basic
-            /// *   **6**: Anti-virus
-            /// *   **5**: Advanced
-            /// *   **3**: Enterprise
-            /// *   **7**: Ultimate
-            /// *   **10**: Value-added Plan
+            /// *   **1**: Basic.
+            /// *   **6**: Anti-virus.
+            /// *   **5**: Advanced.
+            /// *   **3**: Enterprise.
+            /// *   **7**: Ultimate.
+            /// *   **10**: Value-added Plan.
             /// </summary>
             [NameInMap("AuthVersion")]
             [Validation(Required=false)]
@@ -141,9 +141,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The asset importance score. Valid values:
                     /// 
-                    /// *   **2**: important asset
-                    /// *   **1**: common asset
-                    /// *   **0**: test asset
+                    /// *   **2**: important asset.
+                    /// *   **1**: common asset.
+                    /// *   **0**: test asset.
                     /// </summary>
                     [NameInMap("Assets_factor")]
                     [Validation(Required=false)]
@@ -166,8 +166,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// Indicates whether the vulnerability priority score is calculated. Valid values:
                     /// 
-                    /// *   **0**: no
-                    /// *   **1**: yes
+                    /// *   **0**: no.
+                    /// *   **1**: yes.
                     /// </summary>
                     [NameInMap("Is_calc")]
                     [Validation(Required=false)]
@@ -241,6 +241,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     [Validation(Required=false)]
                     public string ContainerName { get; set; }
 
+                    /// <summary>
+                    /// The extended information about the software package that has the vulnerability.
+                    /// </summary>
                     [NameInMap("ExtendField")]
                     [Validation(Required=false)]
                     public string ExtendField { get; set; }
@@ -313,19 +316,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The status of the vulnerability. Valid values:
                 /// 
-                /// *   **1**: unfixed
-                /// *   **2**: fix failed
-                /// *   3: rollback failed
-                /// *   **4**: being fixed
-                /// *   **5**: being rolled back
-                /// *   **6**: being verified
-                /// *   **7**: fixed
-                /// *   **8**: fixed and to be restarted
-                /// *   **9**: rolled back
-                /// *   **10**: ignored
-                /// *   **11**: rolled back and to be restarted
-                /// *   **12**: not found
-                /// *   **20**: expired
+                /// *   **1**: unfixed.
+                /// *   **2**: fix failed.
+                /// *   3: rollback failed.
+                /// *   **4**: being fixed.
+                /// *   **5**: being rolled back.
+                /// *   **6**: being verified.
+                /// *   **7**: fixed.
+                /// *   **8**: fixed and to be restarted.
+                /// *   **9**: rolled back.
+                /// *   **10**: ignored.
+                /// *   **11**: rolled back and to be restarted.
+                /// *   **12**: not found.
+                /// *   **20**: expired.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -455,9 +458,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The priority to fix the vulnerability. Valid values:
             /// 
-            /// *   **asap**: high
-            /// *   **later**: medium
-            /// *   **nntf**: low
+            /// *   **asap**: high.
+            /// *   **later**: medium.
+            /// *   **nntf**: low.
             /// 
             /// >  We recommend that you fix **high-risk** vulnerabilities at the earliest opportunity.
             /// </summary>
@@ -499,10 +502,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Indicates whether the application protection feature is supported. Valid values:
             /// 
-            /// *   **0**: no
-            /// *   **1**: yes
+            /// *   **0**: no.
+            /// *   **1**: yes.
             /// 
-            /// >  If this parameter is not returned, the application protection is not supported.
+            /// >  If this parameter is not returned, the application protection feature is not supported.
             /// </summary>
             [NameInMap("RaspDefend")]
             [Validation(Required=false)]
@@ -511,10 +514,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The protection mode of the application protection feature. Valid values:
             /// 
-            /// *   **0**: unprotected
-            /// *   **1**: the Monitor mode
-            /// *   **2**: the Block mode
-            /// *   **3**: disabled
+            /// *   **0**: unprotected.
+            /// *   **1**: the Monitor mode.
+            /// *   **2**: the Block mode.
+            /// *   **3**: disabled.
             /// </summary>
             [NameInMap("RaspStatus")]
             [Validation(Required=false)]
@@ -535,7 +538,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Related { get; set; }
 
             /// <summary>
-            /// The timestamp when the vulnerability was fixed. Unit: milliseconds.
+            /// The timestamp when the vulnerability was fixed. Unit: milliseconds. This parameter is returned only if you fix vulnerabilities in the Security Center console.
             /// </summary>
             [NameInMap("RepairTs")]
             [Validation(Required=false)]
@@ -558,19 +561,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The status of the vulnerability. Valid values:
             /// 
-            /// *   **1**: unfixed
-            /// *   **2**: fix failed
-            /// *   **3**: rollback failed
-            /// *   **4**: being fixed
-            /// *   **5**: being rolled back
-            /// *   **6**: being verified
-            /// *   **7**: fixed
-            /// *   **8**: fixed and to be restarted
-            /// *   **9**: rolled back
-            /// *   **10**: ignored
-            /// *   **11**: rolled back and to be restarted
-            /// *   **12**: not found
-            /// *   **20**: expired
+            /// *   **1**: unfixed.
+            /// *   **2**: fix failed.
+            /// *   **3**: rollback failed.
+            /// *   **4**: being fixed.
+            /// *   **5**: being rolled back.
+            /// *   **6**: being verified.
+            /// *   **7**: fixed.
+            /// *   **8**: fixed and to be restarted.
+            /// *   **9**: rolled back.
+            /// *   **10**: ignored.
+            /// *   **11**: rolled back and to be restarted.
+            /// *   **12**: not found.
+            /// *   **20**: expired.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -586,12 +589,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the vulnerability. Valid values:
             /// 
-            /// *   **cve**: Linux software vulnerability
-            /// *   **sys**: Windows system vulnerability
-            /// *   **cms**: Web-CMS vulnerability
-            /// *   **emg**: urgent vulnerability
-            /// *   **app**: application vulnerability
-            /// *   **sca**: application vulnerability that is detected by using software component analysis
+            /// *   **cve**: Linux software vulnerability.
+            /// *   **sys**: Windows system vulnerability.
+            /// *   **cms**: Web-CMS vulnerability.
+            /// *   **emg**: urgent vulnerability.
+            /// *   **app**: application vulnerability.
+            /// *   **sca**: application vulnerability that is detected by using software component analysis.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

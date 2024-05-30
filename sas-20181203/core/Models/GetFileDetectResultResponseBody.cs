@@ -30,6 +30,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
+            /// <summary>
+            /// Whether to identify as a compressed package. Valid values:
+            /// - **true**: Yes.
+            /// - **false**: No.
+            /// </summary>
             [NameInMap("Compress")]
             [Validation(Required=false)]
             public bool? Compress { get; set; }

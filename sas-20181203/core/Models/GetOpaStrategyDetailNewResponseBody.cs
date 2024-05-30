@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -209,14 +209,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulItem> Item { get; set; }
                     public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulItem : TeaModel {
                         /// <summary>
-                        /// The vulnerability ID.
+                        /// The ID of the vulnerability.
                         /// </summary>
                         [NameInMap("Id")]
                         [Validation(Required=false)]
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// The vulnerability name.
+                        /// The name of the vulnerability.
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<GetOpaStrategyDetailNewResponseBodyDataScopes> Scopes { get; set; }
             public class GetOpaStrategyDetailNewResponseBodyDataScopes : TeaModel {
                 /// <summary>
-                /// The ID of the cluster node to which the rule is applied.
+                /// The rule instance ID of the cluster.
                 /// </summary>
                 [NameInMap("AckPolicyInstanceId")]
                 [Validation(Required=false)]
@@ -361,8 +361,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// Indicates whether all namespaces are included. Valid values:
                 /// 
-                /// *   **1**: All namespaces are included.
-                /// *   **0**: Not all namespaces are included.
+                /// *   **1**: yes
+                /// *   **0**: no
                 /// </summary>
                 [NameInMap("AllNamespace")]
                 [Validation(Required=false)]

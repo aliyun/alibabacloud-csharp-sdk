@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// The IDs of vulnerabilities. You can specify up to 50 IDs. Separate multiple IDs with commas (,).
+        /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string Ids { get; set; }

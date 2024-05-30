@@ -74,6 +74,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// The type of the check item. Valid values:
+            /// 
+            /// *   **0**: paid
+            /// *   **1**: free
+            /// </summary>
             [NameInMap("CheckSaleType")]
             [Validation(Required=false)]
             public int? CheckSaleType { get; set; }
@@ -88,29 +94,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The asset subtype of the cloud service. Valid values:
             /// 
-            /// *   If **InstanceType** is set to **ECS**, this parameter supports the following valid values:
+            /// *   If the **InstanceType** parameter is set to **ECS**, this parameter supports the following valid values:
             /// 
             ///     *   **INSTANCE**
             ///     *   **DISK**
             ///     *   **SECURITY_GROUP**
             /// 
-            /// *   If **InstanceType** is set to **ACR**, this parameter supports the following valid values:
+            /// *   If the **InstanceType** parameter is set to **ACR**, this parameter supports the following valid values:
             /// 
             ///     *   **REPOSITORY_ENTERPRISE**
             ///     *   **REPOSITORY_PERSON**
             /// 
-            /// *   If **InstanceType** is set to **RAM**, this parameter supports the following valid values:
+            /// *   If the **InstanceType** parameter is set to **RAM**, this parameter supports the following valid values:
             /// 
             ///     *   **ALIAS**
             ///     *   **USER**
             ///     *   **POLICY**
             ///     *   **GROUP**
             /// 
-            /// *   If **InstanceType** is set to **WAF**, this parameter supports the following valid value:
+            /// *   If the **InstanceType** parameter is set to **WAF**, this parameter supports the following valid values:
             /// 
             ///     *   **DOMAIN**
             /// 
-            /// *   If **InstanceType** is set to other values, this parameter supports the following valid value:
+            /// *   If the **InstanceType** parameter is set to other values, this parameter supports the following valid values:
             /// 
             ///     *   **INSTANCE**
             /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteOssScanConfigResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

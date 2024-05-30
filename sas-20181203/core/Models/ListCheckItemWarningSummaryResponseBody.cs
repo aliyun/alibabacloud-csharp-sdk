@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Advice { get; set; }
 
             /// <summary>
-            /// The list of the baseline categories of attribution.
+            /// The types of the baselines to which the check item belongs.
             /// </summary>
             [NameInMap("AffiliatedRiskTypes")]
             [Validation(Required=false)]
             public List<string> AffiliatedRiskTypes { get; set; }
 
             /// <summary>
-            /// The list of baselines attribution.
+            /// The baselines to which the check item belongs.
             /// </summary>
             [NameInMap("AffiliatedRisks")]
             [Validation(Required=false)]
@@ -93,6 +93,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The baselines in which the check item is enabled.
+            /// </summary>
             [NameInMap("EnableRisks")]
             [Validation(Required=false)]
             public List<string> EnableRisks { get; set; }

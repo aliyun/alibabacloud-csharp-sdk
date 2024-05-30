@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Indicates whether the region is configured as a synchronization region on this site. Valid values:
             /// 
-            /// *   **0**: The region is configured as a synchronization region on this site.
+            /// *   **0**: The region is not configured as a synchronization region on this site.
             /// *   **1**: The region is configured as a synchronization region on this site.
             /// </summary>
             [NameInMap("Selected")]

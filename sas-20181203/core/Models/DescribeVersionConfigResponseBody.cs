@@ -179,6 +179,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? MVUnusedAuthCount { get; set; }
 
+        /// <summary>
+        /// Indicates whether the new version of the threat analysis and response feature is enabled. With the new version, you can purchase the amount of log data that you want to add to the feature and log storage capacity. Valid values:
+        /// 
+        /// *   **0**: no
+        /// *   **1**: yes
+        /// </summary>
         [NameInMap("NewThreatAnalysis")]
         [Validation(Required=false)]
         public int? NewThreatAnalysis { get; set; }
@@ -231,7 +237,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RaspCapacity { get; set; }
 
         /// <summary>
-        /// The timestamp when Security Center was expired. Unit: milliseconds. 
+        /// The timestamp when the Security Center subscription ends. Unit: milliseconds.
         /// 
         /// >  If you do not renew the subscription within seven days after the expiration date, Security Center of a paid edition is automatically downgraded to Security Center Basic. In this case, you can no longer use the features of the paid edition or view the existing configurations or statistics such as DDoS alerts in Security Center. You must purchase Security Center of a paid edition to use relevant features. For more information, see [Purchase Security Center](https://help.aliyun.com/document_detail/42308.html).
         /// </summary>
@@ -287,6 +293,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? ThreatAnalysisCapacity { get; set; }
 
+        /// <summary>
+        /// The amount of log data that you purchase for the threat analysis and response feature. Unit: GB-day.
+        /// </summary>
         [NameInMap("ThreatAnalysisFlow")]
         [Validation(Required=false)]
         public int? ThreatAnalysisFlow { get; set; }

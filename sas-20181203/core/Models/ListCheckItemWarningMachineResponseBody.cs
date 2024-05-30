@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Bind { get; set; }
 
             /// <summary>
-            /// The container ID.
+            /// The ID of the container.
             /// </summary>
             [NameInMap("ContainerId")]
             [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<ListCheckItemWarningMachineResponseBodyListFixList> FixList { get; set; }
             public class ListCheckItemWarningMachineResponseBodyListFixList : TeaModel {
                 /// <summary>
-                /// The baseline ID.
+                /// The ID of the baseline.
                 /// </summary>
                 [NameInMap("RiskId")]
                 [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// The name of the asset that is scanned.
+            /// The name of the asset on which the malicious image sample is detected.
             /// </summary>
             [NameInMap("TargetName")]
             [Validation(Required=false)]
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<ListCheckItemWarningMachineResponseBodyListWarningRiskList> WarningRiskList { get; set; }
             public class ListCheckItemWarningMachineResponseBodyListWarningRiskList : TeaModel {
                 /// <summary>
-                /// The baseline ID.
+                /// The ID of the baseline.
                 /// </summary>
                 [NameInMap("RiskId")]
                 [Validation(Required=false)]

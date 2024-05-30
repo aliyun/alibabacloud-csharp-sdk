@@ -34,6 +34,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? ConfigStatus { get; set; }
 
+            /// <summary>
+            /// Bucket decompression configuration status, valid values:
+            /// - **0**: Decompression not configured.
+            /// - **1**: Decompression configured.
+            /// </summary>
             [NameInMap("DecompressStatus")]
             [Validation(Required=false)]
             public int? DecompressStatus { get; set; }

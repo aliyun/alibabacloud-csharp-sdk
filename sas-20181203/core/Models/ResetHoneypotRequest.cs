@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the honeypot.
         /// 
-        /// > You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
+        /// >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -21,9 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string HoneypotId { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
-        /// - **zh**: Chinese
-        /// - **en**: English
+        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

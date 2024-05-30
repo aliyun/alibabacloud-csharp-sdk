@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyContainerDefenseRuleSwitchRequest : TeaModel {
         /// <summary>
-        /// The IDs of rules.
+        /// The IDs of the rules.
         /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]

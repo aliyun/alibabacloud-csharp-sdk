@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAccessKeyLeakDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the AccessKey pair leak.
+        /// The ID of the AccessKey pair leak event.
+        /// 
+        /// > You can call the [DescribeAccesskeyLeakList](~~DescribeAccesskeyLeakList~~) operation to obtain the event ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -18,6 +20,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// The Alibaba Cloud account ID of the member in the resource directory.
+        /// 
+        /// >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the ID.
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }

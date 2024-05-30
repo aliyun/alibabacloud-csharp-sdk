@@ -10,26 +10,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddSasModuleTrialResponseBody : TeaModel {
         /// <summary>
-        /// The response parameters.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddSasModuleTrialResponseBodyData Data { get; set; }
         public class AddSasModuleTrialResponseBodyData : TeaModel {
             /// <summary>
-            /// The trial use record.
+            /// The information about the trial use.
             /// </summary>
             [NameInMap("TrialRecordList")]
             [Validation(Required=false)]
             public List<AddSasModuleTrialResponseBodyDataTrialRecordList> TrialRecordList { get; set; }
             public class AddSasModuleTrialResponseBodyDataTrialRecordList : TeaModel {
                 /// <summary>
-                /// The authorized quota.
+                /// The purchased quota.
                 /// </summary>
                 [NameInMap("AuthLimit")]
                 [Validation(Required=false)]
                 public long? AuthLimit { get; set; }
 
+                /// <summary>
+                /// List of purchased quotas.
+                /// </summary>
                 [NameInMap("AuthLimitList")]
                 [Validation(Required=false)]
                 public string AuthLimitList { get; set; }
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? GmtStart { get; set; }
 
                 /// <summary>
-                /// The module code. Valid values:
+                /// The code of the module. Valid values:
                 /// 
                 /// *   **vulFix**: vulnerability fixing
                 /// *   **cloudSiem**: threat analysis
@@ -61,8 +64,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The status of the trial use. Valid values:
                 /// 
-                /// *   **1**: The feature is in trial use.
-                /// *   **0**: The trial use ends.
+                /// *   **1**: enabled
+                /// *   **0**: finished
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Digest { get; set; }
 
+            [NameInMap("FirstScanTime")]
+            [Validation(Required=false)]
+            public long? FirstScanTime { get; set; }
+
             /// <summary>
             /// The number of images on which **high** baseline risks are detected.
             /// </summary>

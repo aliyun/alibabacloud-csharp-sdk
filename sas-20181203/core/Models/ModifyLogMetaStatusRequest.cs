@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Project { get; set; }
 
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
         /// <summary>
         /// The status of the log analysis feature. Valid values:
         /// 

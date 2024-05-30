@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateOpaStrategyNewShrinkRequest : TeaModel {
         /// <summary>
-        /// The rule configuration.
+        /// The risks that you want to detect by using the rule.
         /// </summary>
         [NameInMap("AlarmDetail")]
         [Validation(Required=false)]

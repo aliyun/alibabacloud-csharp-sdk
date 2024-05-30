@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// The ID of the server.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -34,6 +37,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The name or IP address of the server to query.
+        /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }

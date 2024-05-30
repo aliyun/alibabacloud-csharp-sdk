@@ -99,6 +99,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// The estimated number of authorizations that will be consumed by this check item.
+            /// </summary>
             [NameInMap("EstimatedCount")]
             [Validation(Required=false)]
             public int? EstimatedCount { get; set; }

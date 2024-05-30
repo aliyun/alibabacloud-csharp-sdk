@@ -261,6 +261,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string SensitiveFileName { get; set; }
 
+            [NameInMap("UnprocessedNum")]
+            [Validation(Required=false)]
+            public int? UnprocessedNum { get; set; }
+
         }
 
         /// <summary>

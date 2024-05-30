@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateOpaStrategyNewRequest : TeaModel {
         /// <summary>
-        /// The rule configuration.
+        /// The risks that you want to detect by using the rule.
         /// </summary>
         [NameInMap("AlarmDetail")]
         [Validation(Required=false)]
         public UpdateOpaStrategyNewRequestAlarmDetail AlarmDetail { get; set; }
         public class UpdateOpaStrategyNewRequestAlarmDetail : TeaModel {
             /// <summary>
-            /// The baseline check configuration.
+            /// The baseline risks.
             /// </summary>
             [NameInMap("Baseline")]
             [Validation(Required=false)]
             public UpdateOpaStrategyNewRequestAlarmDetailBaseline Baseline { get; set; }
             public class UpdateOpaStrategyNewRequestAlarmDetailBaseline : TeaModel {
                 /// <summary>
-                /// The baseline check configuration.
+                /// The baseline check items.
                 /// </summary>
                 [NameInMap("Item")]
                 [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The ID of the baseline check item.
                     /// 
-                    /// >  You can call the [GetOpaClusterBaseLineList](https://help.aliyun.com/document_detail/2539883.html) operation to query the ID of the baseline check item.
+                    /// >  You can call the [GetOpaClusterBaseLineList](https://help.aliyun.com/document_detail/2539883.html) operation to query the ID.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The name of the baseline check item.
                     /// 
-                    /// >  You can call the [GetOpaClusterBaseLineList](https://help.aliyun.com/document_detail/2539883.html) operation to query the name of the baseline check item.
+                    /// >  You can call the [GetOpaClusterBaseLineList](https://help.aliyun.com/document_detail/2539883.html) operation to query the name.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The configuration of malicious samples.
+            /// The malicious sample risks.
             /// </summary>
             [NameInMap("MaliciousFile")]
             [Validation(Required=false)]
             public UpdateOpaStrategyNewRequestAlarmDetailMaliciousFile MaliciousFile { get; set; }
             public class UpdateOpaStrategyNewRequestAlarmDetailMaliciousFile : TeaModel {
                 /// <summary>
-                /// The configuration of malicious samples.
+                /// The malicious samples.
                 /// </summary>
                 [NameInMap("Item")]
                 [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The ID of the malicious sample.
                     /// 
-                    /// >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the ID of the malicious sample.
+                    /// >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the ID.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <summary>
                     /// The name of the malicious sample.
                     /// 
-                    /// >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the name of the malicious sample.
+                    /// >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the name.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -189,32 +189,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The vulnerability configuration.
+            /// The vulnerability risks.
             /// </summary>
             [NameInMap("Vul")]
             [Validation(Required=false)]
             public UpdateOpaStrategyNewRequestAlarmDetailVul Vul { get; set; }
             public class UpdateOpaStrategyNewRequestAlarmDetailVul : TeaModel {
                 /// <summary>
-                /// The information about the vulnerability.
+                /// The vulnerabilities.
                 /// </summary>
                 [NameInMap("Item")]
                 [Validation(Required=false)]
                 public List<UpdateOpaStrategyNewRequestAlarmDetailVulItem> Item { get; set; }
                 public class UpdateOpaStrategyNewRequestAlarmDetailVulItem : TeaModel {
                     /// <summary>
-                    /// The vulnerability ID.
+                    /// The ID of the vulnerability.
                     /// 
-                    /// >  You can call the [DescribeVulListPage](https://help.aliyun.com/document_detail/471928.html) operation to query the vulnerability ID.
+                    /// >  You can call the [DescribeVulListPage](https://help.aliyun.com/document_detail/471928.html) operation to query the ID.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// The vulnerability name.
+                    /// The name of the vulnerability.
                     /// 
-                    /// >  You can call the [DescribeVulListPage](https://help.aliyun.com/document_detail/471928.html) operation to query the vulnerability name.
+                    /// >  You can call the [DescribeVulListPage](https://help.aliyun.com/document_detail/471928.html) operation to query the name.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -369,9 +369,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The rule ID.
+        /// The ID of the rule.
         /// 
-        /// >  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the rule ID.
+        /// >  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the ID.
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class IgnoreCheckItemsRequest : TeaModel {
         /// <summary>
-        /// The risk items.
+        /// The information about check items.
         /// </summary>
         [NameInMap("CheckAndRiskTypeList")]
         [Validation(Required=false)]

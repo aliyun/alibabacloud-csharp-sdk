@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyClusterCnnfStatusUserConfirmRequest : TeaModel {
         /// <summary>
-        /// The IDs of the clusters.
+        /// The cluster IDs.
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]

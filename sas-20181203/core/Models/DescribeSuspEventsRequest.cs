@@ -266,6 +266,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// Whether it is strictly a mode flag.
+        /// - N: No
+        /// - Y: Yes
+        /// </summary>
         [NameInMap("StrictMode")]
         [Validation(Required=false)]
         public string StrictMode { get; set; }

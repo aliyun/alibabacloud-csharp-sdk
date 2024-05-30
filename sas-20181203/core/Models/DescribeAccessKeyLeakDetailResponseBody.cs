@@ -149,11 +149,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// The validity of the key associated with the AK. Value:
+        /// The validity of the key that is associated with the AccessKey pair. Valid values:
         /// 
-        /// * 0: to be confirmed
-        /// * 1: Valid
-        /// * 2: Invalid
+        /// *   **0**: to be confirmed.
+        /// *   **1**: valid.
+        /// *   **2**: invalid.
         /// </summary>
         [NameInMap("TokenValid")]
         [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string WhitelistStatus { get; set; }
 
         /// <summary>
-        /// The time when the AK whitelist was added. Unit: milliseconds.
+        /// The time when the AccessKey pair was added to the whitelist. Unit: milliseconds.
         /// </summary>
         [NameInMap("WhitelistTime")]
         [Validation(Required=false)]

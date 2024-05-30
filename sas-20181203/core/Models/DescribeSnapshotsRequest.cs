@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The region in which the server resides.
+        /// 
+        /// > This parameter is required if you do not specify the Uuid parameter.
         /// </summary>
         [NameInMap("MachineRegion")]
         [Validation(Required=false)]

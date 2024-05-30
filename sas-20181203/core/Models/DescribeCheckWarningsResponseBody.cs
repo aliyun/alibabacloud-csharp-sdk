@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CheckId { get; set; }
 
             /// <summary>
-            /// The ID of the alert that is triggered by the check item.
+            /// The ID of the alert that is generated for the baseline check result.
             /// </summary>
             [NameInMap("CheckWarningId")]
             [Validation(Required=false)]
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExecErrorMessage { get; set; }
 
             /// <summary>
-            /// Indicates whether the fix is supported. Valid values:
+            /// Indicates whether fixing is supported. Valid values:
             /// 
-            /// *   **0**: The fix is not supported.
-            /// *   **1**: The fix is supported.
+            /// *   **0**: Fixing is not supported.
+            /// *   **1**: Fixing is supported.
             /// </summary>
             [NameInMap("FixStatus")]
             [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastHandleTime { get; set; }
 
             /// <summary>
-            /// The severity level of a risk item. Valid values:
+            /// The risk level of the risk item. Valid values:
             /// 
             /// *   **high**
             /// *   **medium**
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// The remarks.
+            /// The description.
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
@@ -96,11 +96,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The status of the check item. Valid values:
             /// 
-            /// *   **1**: failed
-            /// *   **2**: verifying
-            /// *   **3**: passed
-            /// *   **5**: expired
-            /// *   **6**: ignored
+            /// *   **1**: failed.
+            /// *   **2**: verifying.
+            /// *   **3**: passed.
+            /// *   **5**: expired.
+            /// *   **6**: ignored.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// The UUID of the server on which the baseline check is performed.
+            /// The ID of the server on which the baseline check is performed.
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]

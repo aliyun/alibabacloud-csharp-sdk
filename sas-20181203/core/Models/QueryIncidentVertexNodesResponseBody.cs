@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Origin { get; set; }
 
                 /// <summary>
-                /// The edge properties. The value is in the text format.
+                /// The properties of the edge. The value is in the text format.
                 /// </summary>
                 [NameInMap("Properties")]
                 [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public Dictionary<string, object> Property { get; set; }
 
                 /// <summary>
-                /// The ID of the rule for which the edge was created.
+                /// The ID of the rule based on which the edge was created.
                 /// </summary>
                 [NameInMap("RuleId")]
                 [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Time { get; set; }
 
                 /// <summary>
-                /// The UNIX timestamp when the edge was created. Unit: milliseconds.
+                /// The time when the edge was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
@@ -310,8 +310,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The direction of the relationship. Valid values:
                 /// 
-                /// *   **1**: forward
-                /// *   **0**: reverse
+                /// *   **1**: forward.
+                /// *   **0**: reverse.
                 /// </summary>
                 [NameInMap("Directed")]
                 [Validation(Required=false)]
@@ -383,7 +383,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The detailed information about the node.
+            /// The information about the node.
             /// </summary>
             [NameInMap("VertexList")]
             [Validation(Required=false)]
@@ -397,7 +397,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Aliuid { get; set; }
 
                 /// <summary>
-                /// The display information about the node.
+                /// The display information of the node.
                 /// </summary>
                 [NameInMap("DisplayInfo")]
                 [Validation(Required=false)]
@@ -420,7 +420,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// The node ID.
+                /// The ID of the node.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -429,15 +429,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The display language of the neighboring node. Valid values:
                 /// 
-                /// *   **zh**: Chinese
-                /// *   **en**: English
+                /// *   **zh**: Chinese.
+                /// *   **en**: English.
                 /// </summary>
                 [NameInMap("Lang")]
                 [Validation(Required=false)]
                 public string Lang { get; set; }
 
                 /// <summary>
-                /// The node name.
+                /// The name of the node.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -483,21 +483,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// The node properties. The value is in the text format.
+                /// The properties of the node. The value is in the text format.
                 /// </summary>
                 [NameInMap("Properties")]
                 [Validation(Required=false)]
                 public string Properties { get; set; }
 
                 /// <summary>
-                /// The node property.
+                /// The property of the node.
                 /// </summary>
                 [NameInMap("Property")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Property { get; set; }
 
                 /// <summary>
-                /// The ID of the rule for which the node was created.
+                /// The ID of the rule based on which the node was created.
                 /// </summary>
                 [NameInMap("RuleId")]
                 [Validation(Required=false)]
@@ -511,14 +511,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Time { get; set; }
 
                 /// <summary>
-                /// The UNIX timestamp when the node was created. Unit: milliseconds.
+                /// The time when the node was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
                 public long? Timestamp { get; set; }
 
                 /// <summary>
-                /// The node type. Valid values include but are not limited to:
+                /// The type of the node. Valid values include but are not limited to:
                 /// 
                 /// *   **process**
                 /// *   **file**
@@ -538,7 +538,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string UpdateTime { get; set; }
 
                 /// <summary>
-                /// The node UUID.
+                /// The UUID of the node.
                 /// </summary>
                 [NameInMap("Uuid")]
                 [Validation(Required=false)]

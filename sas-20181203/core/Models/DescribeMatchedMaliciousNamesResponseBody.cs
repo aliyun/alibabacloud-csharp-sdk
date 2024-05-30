@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeMatchedMaliciousNamesResponseBody : TeaModel {
         /// <summary>
-        /// 分页查询时，当前页显示的数据条数。
+        /// The number of entries on the current page.
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// 返回数据。
+        /// The response parameters.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeMatchedMaliciousNamesResponseBodyData> Data { get; set; }
         public class DescribeMatchedMaliciousNamesResponseBodyData : TeaModel {
             /// <summary>
-            /// 恶意样本类型显示名称。
+            /// The display name of the malicious image sample type.
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// 恶意样本类型Key。
+            /// The key of the malicious image sample type.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// 本次调用请求的ID，是由阿里云为该请求生成的唯一标识符，可用于排查和定位问题。
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

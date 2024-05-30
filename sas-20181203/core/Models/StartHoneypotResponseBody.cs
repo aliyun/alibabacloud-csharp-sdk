@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class StartHoneypotResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// The information about the honeypot.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneypotId { get; set; }
 
             /// <summary>
-            /// The display name of the honeypot image.
+            /// The display name of the image.
             /// </summary>
             [NameInMap("HoneypotImageDisplayName")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneypotImageName { get; set; }
 
             /// <summary>
-            /// The name of the honeypot.
+            /// The custom name of the honeypot.
             /// </summary>
             [NameInMap("HoneypotName")]
             [Validation(Required=false)]
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// The ID of the honeypot custom parameter.
+            /// The ID of the custom configuration for the honeypot.
             /// </summary>
             [NameInMap("PresetId")]
             [Validation(Required=false)]
             public string PresetId { get; set; }
 
             /// <summary>
-            /// The status of the honeypot.
+            /// The statuses of the honeypots.
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

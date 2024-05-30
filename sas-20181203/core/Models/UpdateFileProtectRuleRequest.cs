@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AlertLevel { get; set; }
 
         /// <summary>
-        /// The operations performed on the files.
+        /// The operations that you want to perform on the files.
         /// 
         /// This parameter is required.
         /// </summary>

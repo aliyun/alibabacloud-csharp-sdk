@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The total number of rules whose status was changed.
+        /// The number of entries returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

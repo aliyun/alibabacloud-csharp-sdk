@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// The time when the cluster was created. Unit: milliseconds.
+            /// The timestamp when the cluster was created. Unit: milliseconds.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -194,8 +194,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// Indicates whether risks were detected. Valid values:
             /// 
-            /// *   **NO**: No risks were detected.
-            /// *   **YES**: Risks were detected.
+            /// *   **NO**
+            /// *   **YES**
             /// </summary>
             [NameInMap("RiskStatus")]
             [Validation(Required=false)]

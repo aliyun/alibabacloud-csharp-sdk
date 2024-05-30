@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListImageBuildRiskItemResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// The response parameters.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListImageBuildRiskItemResponseBodyData> Data { get; set; }
         public class ListImageBuildRiskItemResponseBodyData : TeaModel {
             /// <summary>
-            /// The key of the name for the image build risk item.
+            /// The type key of the risky build command.
             /// </summary>
             [NameInMap("ItemKey")]
             [Validation(Required=false)]
             public string ItemKey { get; set; }
 
             /// <summary>
-            /// The name of the name for the image build risk item.
+            /// The type name of the risky build command.
             /// </summary>
             [NameInMap("ItemName")]
             [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

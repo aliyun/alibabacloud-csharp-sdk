@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<DescribeBackupMachineStatusResponseBodyBackupMachineStatusErrorList> ErrorList { get; set; }
             public class DescribeBackupMachineStatusResponseBodyBackupMachineStatusErrorList : TeaModel {
                 /// <summary>
-                /// The error code returned.
+                /// The error code.
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// The error message returned.
+                /// The error message.
                 /// </summary>
                 [NameInMap("ErrorStatus")]
                 [Validation(Required=false)]

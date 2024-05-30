@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class BindAuthToMachineRequest : TeaModel {
         /// <summary>
-        /// The edition of Security Center that is authorized to protect the asset. Valid values:
+        /// The edition of Security Center that is authorized to scan the asset. Valid values:
         /// 
-        /// *   **6**: Anti-virus edition
-        /// *   **5**: Advanced edition
-        /// *   **3**: Enterprise edition
-        /// *   **7**: Ultimate edition
-        /// *   **10**: Value-added Plan edition
+        /// *   **6**: Anti-virus
+        /// *   **5**: Advanced
+        /// *   **3**: Enterprise
+        /// *   **7**: Ultimate
+        /// *   **10**: Value-added Plan
         /// </summary>
         [NameInMap("AuthVersion")]
         [Validation(Required=false)]
@@ -60,6 +60,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Criteria { get; set; }
 
+        /// <summary>
+        /// Specifies whether to specify servers for protection when you purchase Security Center. Valid values:
+        /// 
+        /// *   **0**: no
+        /// *   **1**: yes
+        /// 
+        /// >  If you specify servers, the servers are automatically added to Security Center for protection after the purchase order is complete.
+        /// </summary>
         [NameInMap("IsPreBind")]
         [Validation(Required=false)]
         public int? IsPreBind { get; set; }
@@ -74,10 +82,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string LogicalExp { get; set; }
 
+        /// <summary>
+        /// The edition of Security Center that you purchase in the order. Valid values:
+        /// 
+        /// *   **level7**: Anti-virus
+        /// *   **level3**: Advanced
+        /// *   **level2**: Enterprise
+        /// *   **level8**: Ultimate
+        /// *   **level10**: Value-added Plan
+        /// </summary>
         [NameInMap("NtmVersion")]
         [Validation(Required=false)]
         public string NtmVersion { get; set; }
 
+        /// <summary>
+        /// The ID of the order in which Security Center is purchased and servers are specified for protection.
+        /// </summary>
         [NameInMap("PreBindOrderId")]
         [Validation(Required=false)]
         public long? PreBindOrderId { get; set; }
