@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]
         public Stream VideoUrlObject { get; set; }

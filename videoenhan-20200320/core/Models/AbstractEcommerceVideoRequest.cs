@@ -12,6 +12,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class AbstractEcommerceVideoRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public float? Duration { get; set; }
@@ -20,6 +23,9 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public int? Height { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]
         public string VideoUrl { get; set; }

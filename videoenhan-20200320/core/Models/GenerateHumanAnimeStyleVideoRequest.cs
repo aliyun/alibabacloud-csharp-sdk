@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class GenerateHumanAnimeStyleVideoRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CartoonStyle")]
         [Validation(Required=false)]
         public string CartoonStyle { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]
         public string VideoUrl { get; set; }

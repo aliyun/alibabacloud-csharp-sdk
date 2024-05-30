@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
             [Validation(Required=false)]
             public string TemplateId { get; set; }
 
+            [NameInMap("TransResult")]
+            [Validation(Required=false)]
+            public string TransResult { get; set; }
+
         }
 
         [NameInMap("Message")]

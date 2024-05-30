@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class AbstractFilmVideoAdvanceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Length")]
         [Validation(Required=false)]
         public int? Length { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]
         public Stream VideoUrlObject { get; set; }

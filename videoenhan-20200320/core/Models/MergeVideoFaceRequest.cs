@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public bool? Enhance { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ReferenceURL")]
         [Validation(Required=false)]
         public string ReferenceURL { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VideoURL")]
         [Validation(Required=false)]
         public string VideoURL { get; set; }

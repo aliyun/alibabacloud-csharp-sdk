@@ -37,6 +37,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * @param request AbstractEcommerceVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AbstractEcommerceVideoResponse
+         */
         public AbstractEcommerceVideoResponse AbstractEcommerceVideoWithOptions(AbstractEcommerceVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -76,6 +81,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<AbstractEcommerceVideoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request AbstractEcommerceVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AbstractEcommerceVideoResponse
+         */
         public async Task<AbstractEcommerceVideoResponse> AbstractEcommerceVideoWithOptionsAsync(AbstractEcommerceVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -115,12 +125,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<AbstractEcommerceVideoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request AbstractEcommerceVideoRequest
+         * @return AbstractEcommerceVideoResponse
+         */
         public AbstractEcommerceVideoResponse AbstractEcommerceVideo(AbstractEcommerceVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AbstractEcommerceVideoWithOptions(request, runtime);
         }
 
+        /**
+         * @param request AbstractEcommerceVideoRequest
+         * @return AbstractEcommerceVideoResponse
+         */
         public async Task<AbstractEcommerceVideoResponse> AbstractEcommerceVideoAsync(AbstractEcommerceVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -135,7 +153,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -162,12 +180,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -216,7 +235,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -243,12 +262,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -289,6 +309,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return abstractEcommerceVideoResp;
         }
 
+        /**
+         * @param request AbstractFilmVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AbstractFilmVideoResponse
+         */
         public AbstractFilmVideoResponse AbstractFilmVideoWithOptions(AbstractFilmVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -320,6 +345,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<AbstractFilmVideoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request AbstractFilmVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AbstractFilmVideoResponse
+         */
         public async Task<AbstractFilmVideoResponse> AbstractFilmVideoWithOptionsAsync(AbstractFilmVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -351,12 +381,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<AbstractFilmVideoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request AbstractFilmVideoRequest
+         * @return AbstractFilmVideoResponse
+         */
         public AbstractFilmVideoResponse AbstractFilmVideo(AbstractFilmVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AbstractFilmVideoWithOptions(request, runtime);
         }
 
+        /**
+         * @param request AbstractFilmVideoRequest
+         * @return AbstractFilmVideoResponse
+         */
         public async Task<AbstractFilmVideoResponse> AbstractFilmVideoAsync(AbstractFilmVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -371,7 +409,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -398,12 +436,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -452,7 +491,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -479,12 +518,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -525,6 +565,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return abstractFilmVideoResp;
         }
 
+        /**
+         * @summary 视频人脸融合模板增加
+         *
+         * @param request AddFaceVideoTemplateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddFaceVideoTemplateResponse
+         */
         public AddFaceVideoTemplateResponse AddFaceVideoTemplateWithOptions(AddFaceVideoTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -556,6 +603,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<AddFaceVideoTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频人脸融合模板增加
+         *
+         * @param request AddFaceVideoTemplateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddFaceVideoTemplateResponse
+         */
         public async Task<AddFaceVideoTemplateResponse> AddFaceVideoTemplateWithOptionsAsync(AddFaceVideoTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -587,12 +641,24 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<AddFaceVideoTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频人脸融合模板增加
+         *
+         * @param request AddFaceVideoTemplateRequest
+         * @return AddFaceVideoTemplateResponse
+         */
         public AddFaceVideoTemplateResponse AddFaceVideoTemplate(AddFaceVideoTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddFaceVideoTemplateWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 视频人脸融合模板增加
+         *
+         * @param request AddFaceVideoTemplateRequest
+         * @return AddFaceVideoTemplateResponse
+         */
         public async Task<AddFaceVideoTemplateResponse> AddFaceVideoTemplateAsync(AddFaceVideoTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -607,7 +673,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -634,12 +700,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -688,7 +755,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -715,12 +782,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -761,6 +829,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return addFaceVideoTemplateResp;
         }
 
+        /**
+         * @param request AdjustVideoColorRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AdjustVideoColorResponse
+         */
         public AdjustVideoColorResponse AdjustVideoColorWithOptions(AdjustVideoColorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -804,6 +877,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<AdjustVideoColorResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request AdjustVideoColorRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AdjustVideoColorResponse
+         */
         public async Task<AdjustVideoColorResponse> AdjustVideoColorWithOptionsAsync(AdjustVideoColorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -847,12 +925,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<AdjustVideoColorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request AdjustVideoColorRequest
+         * @return AdjustVideoColorResponse
+         */
         public AdjustVideoColorResponse AdjustVideoColor(AdjustVideoColorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AdjustVideoColorWithOptions(request, runtime);
         }
 
+        /**
+         * @param request AdjustVideoColorRequest
+         * @return AdjustVideoColorResponse
+         */
         public async Task<AdjustVideoColorResponse> AdjustVideoColorAsync(AdjustVideoColorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -867,7 +953,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -894,12 +980,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -948,7 +1035,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -975,12 +1062,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -1021,6 +1109,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return adjustVideoColorResp;
         }
 
+        /**
+         * @param request ChangeVideoSizeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ChangeVideoSizeResponse
+         */
         public ChangeVideoSizeResponse ChangeVideoSizeWithOptions(ChangeVideoSizeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1080,6 +1173,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<ChangeVideoSizeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request ChangeVideoSizeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ChangeVideoSizeResponse
+         */
         public async Task<ChangeVideoSizeResponse> ChangeVideoSizeWithOptionsAsync(ChangeVideoSizeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1139,12 +1237,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<ChangeVideoSizeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request ChangeVideoSizeRequest
+         * @return ChangeVideoSizeResponse
+         */
         public ChangeVideoSizeResponse ChangeVideoSize(ChangeVideoSizeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeVideoSizeWithOptions(request, runtime);
         }
 
+        /**
+         * @param request ChangeVideoSizeRequest
+         * @return ChangeVideoSizeResponse
+         */
         public async Task<ChangeVideoSizeResponse> ChangeVideoSizeAsync(ChangeVideoSizeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1159,7 +1265,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -1186,12 +1292,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -1240,7 +1347,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -1267,12 +1374,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -1313,6 +1421,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return changeVideoSizeResp;
         }
 
+        /**
+         * @param request ConvertHdrVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConvertHdrVideoResponse
+         */
         public ConvertHdrVideoResponse ConvertHdrVideoWithOptions(ConvertHdrVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1352,6 +1465,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<ConvertHdrVideoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request ConvertHdrVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConvertHdrVideoResponse
+         */
         public async Task<ConvertHdrVideoResponse> ConvertHdrVideoWithOptionsAsync(ConvertHdrVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1391,12 +1509,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<ConvertHdrVideoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request ConvertHdrVideoRequest
+         * @return ConvertHdrVideoResponse
+         */
         public ConvertHdrVideoResponse ConvertHdrVideo(ConvertHdrVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConvertHdrVideoWithOptions(request, runtime);
         }
 
+        /**
+         * @param request ConvertHdrVideoRequest
+         * @return ConvertHdrVideoResponse
+         */
         public async Task<ConvertHdrVideoResponse> ConvertHdrVideoAsync(ConvertHdrVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1411,7 +1537,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -1438,12 +1564,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -1492,7 +1619,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -1519,12 +1646,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -1565,6 +1693,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return convertHdrVideoResp;
         }
 
+        /**
+         * @summary 视频人脸融合模板删除
+         *
+         * @param request DeleteFaceVideoTemplateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteFaceVideoTemplateResponse
+         */
         public DeleteFaceVideoTemplateResponse DeleteFaceVideoTemplateWithOptions(DeleteFaceVideoTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1592,6 +1727,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<DeleteFaceVideoTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频人脸融合模板删除
+         *
+         * @param request DeleteFaceVideoTemplateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteFaceVideoTemplateResponse
+         */
         public async Task<DeleteFaceVideoTemplateResponse> DeleteFaceVideoTemplateWithOptionsAsync(DeleteFaceVideoTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1619,18 +1761,37 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<DeleteFaceVideoTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频人脸融合模板删除
+         *
+         * @param request DeleteFaceVideoTemplateRequest
+         * @return DeleteFaceVideoTemplateResponse
+         */
         public DeleteFaceVideoTemplateResponse DeleteFaceVideoTemplate(DeleteFaceVideoTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteFaceVideoTemplateWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 视频人脸融合模板删除
+         *
+         * @param request DeleteFaceVideoTemplateRequest
+         * @return DeleteFaceVideoTemplateResponse
+         */
         public async Task<DeleteFaceVideoTemplateResponse> DeleteFaceVideoTemplateAsync(DeleteFaceVideoTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFaceVideoTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 视频人像增强
+         *
+         * @param request EnhancePortraitVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnhancePortraitVideoResponse
+         */
         public EnhancePortraitVideoResponse EnhancePortraitVideoWithOptions(EnhancePortraitVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1658,6 +1819,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<EnhancePortraitVideoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频人像增强
+         *
+         * @param request EnhancePortraitVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnhancePortraitVideoResponse
+         */
         public async Task<EnhancePortraitVideoResponse> EnhancePortraitVideoWithOptionsAsync(EnhancePortraitVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1685,12 +1853,24 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<EnhancePortraitVideoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频人像增强
+         *
+         * @param request EnhancePortraitVideoRequest
+         * @return EnhancePortraitVideoResponse
+         */
         public EnhancePortraitVideoResponse EnhancePortraitVideo(EnhancePortraitVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnhancePortraitVideoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 视频人像增强
+         *
+         * @param request EnhancePortraitVideoRequest
+         * @return EnhancePortraitVideoResponse
+         */
         public async Task<EnhancePortraitVideoResponse> EnhancePortraitVideoAsync(EnhancePortraitVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1705,7 +1885,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -1732,12 +1912,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -1786,7 +1967,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -1813,12 +1994,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -1859,6 +2041,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return enhancePortraitVideoResp;
         }
 
+        /**
+         * @param request EnhanceVideoQualityRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnhanceVideoQualityResponse
+         */
         public EnhanceVideoQualityResponse EnhanceVideoQualityWithOptions(EnhanceVideoQualityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1910,6 +2097,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<EnhanceVideoQualityResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request EnhanceVideoQualityRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnhanceVideoQualityResponse
+         */
         public async Task<EnhanceVideoQualityResponse> EnhanceVideoQualityWithOptionsAsync(EnhanceVideoQualityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1961,12 +2153,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<EnhanceVideoQualityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request EnhanceVideoQualityRequest
+         * @return EnhanceVideoQualityResponse
+         */
         public EnhanceVideoQualityResponse EnhanceVideoQuality(EnhanceVideoQualityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnhanceVideoQualityWithOptions(request, runtime);
         }
 
+        /**
+         * @param request EnhanceVideoQualityRequest
+         * @return EnhanceVideoQualityResponse
+         */
         public async Task<EnhanceVideoQualityResponse> EnhanceVideoQualityAsync(EnhanceVideoQualityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1981,7 +2181,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -2008,12 +2208,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -2062,7 +2263,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -2089,12 +2290,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -2135,6 +2337,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return enhanceVideoQualityResp;
         }
 
+        /**
+         * @param request EraseVideoLogoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EraseVideoLogoResponse
+         */
         public EraseVideoLogoResponse EraseVideoLogoWithOptions(EraseVideoLogoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2166,6 +2373,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<EraseVideoLogoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request EraseVideoLogoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EraseVideoLogoResponse
+         */
         public async Task<EraseVideoLogoResponse> EraseVideoLogoWithOptionsAsync(EraseVideoLogoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2197,12 +2409,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<EraseVideoLogoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request EraseVideoLogoRequest
+         * @return EraseVideoLogoResponse
+         */
         public EraseVideoLogoResponse EraseVideoLogo(EraseVideoLogoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EraseVideoLogoWithOptions(request, runtime);
         }
 
+        /**
+         * @param request EraseVideoLogoRequest
+         * @return EraseVideoLogoResponse
+         */
         public async Task<EraseVideoLogoResponse> EraseVideoLogoAsync(EraseVideoLogoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2217,7 +2437,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -2244,12 +2464,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -2298,7 +2519,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -2325,12 +2546,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -2371,6 +2593,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return eraseVideoLogoResp;
         }
 
+        /**
+         * @param request EraseVideoSubtitlesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EraseVideoSubtitlesResponse
+         */
         public EraseVideoSubtitlesResponse EraseVideoSubtitlesWithOptions(EraseVideoSubtitlesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2414,6 +2641,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<EraseVideoSubtitlesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request EraseVideoSubtitlesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EraseVideoSubtitlesResponse
+         */
         public async Task<EraseVideoSubtitlesResponse> EraseVideoSubtitlesWithOptionsAsync(EraseVideoSubtitlesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2457,12 +2689,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<EraseVideoSubtitlesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request EraseVideoSubtitlesRequest
+         * @return EraseVideoSubtitlesResponse
+         */
         public EraseVideoSubtitlesResponse EraseVideoSubtitles(EraseVideoSubtitlesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EraseVideoSubtitlesWithOptions(request, runtime);
         }
 
+        /**
+         * @param request EraseVideoSubtitlesRequest
+         * @return EraseVideoSubtitlesResponse
+         */
         public async Task<EraseVideoSubtitlesResponse> EraseVideoSubtitlesAsync(EraseVideoSubtitlesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2477,7 +2717,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -2504,12 +2744,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -2558,7 +2799,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -2585,12 +2826,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -2631,6 +2873,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return eraseVideoSubtitlesResp;
         }
 
+        /**
+         * @summary 视频人像卡通化
+         *
+         * @param request GenerateHumanAnimeStyleVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GenerateHumanAnimeStyleVideoResponse
+         */
         public GenerateHumanAnimeStyleVideoResponse GenerateHumanAnimeStyleVideoWithOptions(GenerateHumanAnimeStyleVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2662,6 +2911,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<GenerateHumanAnimeStyleVideoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频人像卡通化
+         *
+         * @param request GenerateHumanAnimeStyleVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GenerateHumanAnimeStyleVideoResponse
+         */
         public async Task<GenerateHumanAnimeStyleVideoResponse> GenerateHumanAnimeStyleVideoWithOptionsAsync(GenerateHumanAnimeStyleVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2693,12 +2949,24 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<GenerateHumanAnimeStyleVideoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频人像卡通化
+         *
+         * @param request GenerateHumanAnimeStyleVideoRequest
+         * @return GenerateHumanAnimeStyleVideoResponse
+         */
         public GenerateHumanAnimeStyleVideoResponse GenerateHumanAnimeStyleVideo(GenerateHumanAnimeStyleVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GenerateHumanAnimeStyleVideoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 视频人像卡通化
+         *
+         * @param request GenerateHumanAnimeStyleVideoRequest
+         * @return GenerateHumanAnimeStyleVideoResponse
+         */
         public async Task<GenerateHumanAnimeStyleVideoResponse> GenerateHumanAnimeStyleVideoAsync(GenerateHumanAnimeStyleVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2713,7 +2981,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -2740,12 +3008,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -2794,7 +3063,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -2821,12 +3090,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -2867,6 +3137,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return generateHumanAnimeStyleVideoResp;
         }
 
+        /**
+         * @param request GenerateVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GenerateVideoResponse
+         */
         public GenerateVideoResponse GenerateVideoWithOptions(GenerateVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2934,6 +3209,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<GenerateVideoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request GenerateVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GenerateVideoResponse
+         */
         public async Task<GenerateVideoResponse> GenerateVideoWithOptionsAsync(GenerateVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3001,12 +3281,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<GenerateVideoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request GenerateVideoRequest
+         * @return GenerateVideoResponse
+         */
         public GenerateVideoResponse GenerateVideo(GenerateVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GenerateVideoWithOptions(request, runtime);
         }
 
+        /**
+         * @param request GenerateVideoRequest
+         * @return GenerateVideoResponse
+         */
         public async Task<GenerateVideoResponse> GenerateVideoAsync(GenerateVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3021,7 +3309,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -3048,12 +3336,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -3111,7 +3400,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -3138,12 +3427,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -3193,6 +3483,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return generateVideoResp;
         }
 
+        /**
+         * @param request GetAsyncJobResultRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAsyncJobResultResponse
+         */
         public GetAsyncJobResultResponse GetAsyncJobResultWithOptions(GetAsyncJobResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3220,6 +3515,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<GetAsyncJobResultResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request GetAsyncJobResultRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetAsyncJobResultResponse
+         */
         public async Task<GetAsyncJobResultResponse> GetAsyncJobResultWithOptionsAsync(GetAsyncJobResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3247,18 +3547,31 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<GetAsyncJobResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request GetAsyncJobResultRequest
+         * @return GetAsyncJobResultResponse
+         */
         public GetAsyncJobResultResponse GetAsyncJobResult(GetAsyncJobResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAsyncJobResultWithOptions(request, runtime);
         }
 
+        /**
+         * @param request GetAsyncJobResultRequest
+         * @return GetAsyncJobResultResponse
+         */
         public async Task<GetAsyncJobResultResponse> GetAsyncJobResultAsync(GetAsyncJobResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAsyncJobResultWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request InterpolateVideoFrameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InterpolateVideoFrameResponse
+         */
         public InterpolateVideoFrameResponse InterpolateVideoFrameWithOptions(InterpolateVideoFrameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3294,6 +3607,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<InterpolateVideoFrameResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request InterpolateVideoFrameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InterpolateVideoFrameResponse
+         */
         public async Task<InterpolateVideoFrameResponse> InterpolateVideoFrameWithOptionsAsync(InterpolateVideoFrameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3329,12 +3647,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<InterpolateVideoFrameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request InterpolateVideoFrameRequest
+         * @return InterpolateVideoFrameResponse
+         */
         public InterpolateVideoFrameResponse InterpolateVideoFrame(InterpolateVideoFrameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InterpolateVideoFrameWithOptions(request, runtime);
         }
 
+        /**
+         * @param request InterpolateVideoFrameRequest
+         * @return InterpolateVideoFrameResponse
+         */
         public async Task<InterpolateVideoFrameResponse> InterpolateVideoFrameAsync(InterpolateVideoFrameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3349,7 +3675,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -3376,12 +3702,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -3430,7 +3757,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -3457,12 +3784,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -3503,6 +3831,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return interpolateVideoFrameResp;
         }
 
+        /**
+         * @param request MergeVideoFaceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MergeVideoFaceResponse
+         */
         public MergeVideoFaceResponse MergeVideoFaceWithOptions(MergeVideoFaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3546,6 +3879,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<MergeVideoFaceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request MergeVideoFaceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MergeVideoFaceResponse
+         */
         public async Task<MergeVideoFaceResponse> MergeVideoFaceWithOptionsAsync(MergeVideoFaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3589,12 +3927,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<MergeVideoFaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request MergeVideoFaceRequest
+         * @return MergeVideoFaceResponse
+         */
         public MergeVideoFaceResponse MergeVideoFace(MergeVideoFaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MergeVideoFaceWithOptions(request, runtime);
         }
 
+        /**
+         * @param request MergeVideoFaceRequest
+         * @return MergeVideoFaceResponse
+         */
         public async Task<MergeVideoFaceResponse> MergeVideoFaceAsync(MergeVideoFaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3609,7 +3955,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -3636,12 +3982,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -3719,7 +4066,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -3746,12 +4093,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -3821,6 +4169,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return mergeVideoFaceResp;
         }
 
+        /**
+         * @summary 视频模板融合换脸
+         *
+         * @param request MergeVideoModelFaceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MergeVideoModelFaceResponse
+         */
         public MergeVideoModelFaceResponse MergeVideoModelFaceWithOptions(MergeVideoModelFaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3868,6 +4223,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<MergeVideoModelFaceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频模板融合换脸
+         *
+         * @param request MergeVideoModelFaceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MergeVideoModelFaceResponse
+         */
         public async Task<MergeVideoModelFaceResponse> MergeVideoModelFaceWithOptionsAsync(MergeVideoModelFaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3915,12 +4277,24 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<MergeVideoModelFaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频模板融合换脸
+         *
+         * @param request MergeVideoModelFaceRequest
+         * @return MergeVideoModelFaceResponse
+         */
         public MergeVideoModelFaceResponse MergeVideoModelFace(MergeVideoModelFaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MergeVideoModelFaceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 视频模板融合换脸
+         *
+         * @param request MergeVideoModelFaceRequest
+         * @return MergeVideoModelFaceResponse
+         */
         public async Task<MergeVideoModelFaceResponse> MergeVideoModelFaceAsync(MergeVideoModelFaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3935,7 +4309,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -3962,12 +4336,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -4016,7 +4391,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -4043,12 +4418,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -4089,6 +4465,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return mergeVideoModelFaceResp;
         }
 
+        /**
+         * @summary 视频人脸融合模板查询
+         *
+         * @param request QueryFaceVideoTemplateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryFaceVideoTemplateResponse
+         */
         public QueryFaceVideoTemplateResponse QueryFaceVideoTemplateWithOptions(QueryFaceVideoTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4124,6 +4507,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<QueryFaceVideoTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频人脸融合模板查询
+         *
+         * @param request QueryFaceVideoTemplateRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return QueryFaceVideoTemplateResponse
+         */
         public async Task<QueryFaceVideoTemplateResponse> QueryFaceVideoTemplateWithOptionsAsync(QueryFaceVideoTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4159,18 +4549,37 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<QueryFaceVideoTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频人脸融合模板查询
+         *
+         * @param request QueryFaceVideoTemplateRequest
+         * @return QueryFaceVideoTemplateResponse
+         */
         public QueryFaceVideoTemplateResponse QueryFaceVideoTemplate(QueryFaceVideoTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryFaceVideoTemplateWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 视频人脸融合模板查询
+         *
+         * @param request QueryFaceVideoTemplateRequest
+         * @return QueryFaceVideoTemplateResponse
+         */
         public async Task<QueryFaceVideoTemplateResponse> QueryFaceVideoTemplateAsync(QueryFaceVideoTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryFaceVideoTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 视频降噪
+         *
+         * @param request ReduceVideoNoiseRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReduceVideoNoiseResponse
+         */
         public ReduceVideoNoiseResponse ReduceVideoNoiseWithOptions(ReduceVideoNoiseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4198,6 +4607,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<ReduceVideoNoiseResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频降噪
+         *
+         * @param request ReduceVideoNoiseRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReduceVideoNoiseResponse
+         */
         public async Task<ReduceVideoNoiseResponse> ReduceVideoNoiseWithOptionsAsync(ReduceVideoNoiseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4225,12 +4641,24 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<ReduceVideoNoiseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 视频降噪
+         *
+         * @param request ReduceVideoNoiseRequest
+         * @return ReduceVideoNoiseResponse
+         */
         public ReduceVideoNoiseResponse ReduceVideoNoise(ReduceVideoNoiseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReduceVideoNoiseWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 视频降噪
+         *
+         * @param request ReduceVideoNoiseRequest
+         * @return ReduceVideoNoiseResponse
+         */
         public async Task<ReduceVideoNoiseResponse> ReduceVideoNoiseAsync(ReduceVideoNoiseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4245,7 +4673,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -4272,12 +4700,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -4326,7 +4755,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -4353,12 +4782,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -4399,6 +4829,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return reduceVideoNoiseResp;
         }
 
+        /**
+         * @param request SuperResolveVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SuperResolveVideoResponse
+         */
         public SuperResolveVideoResponse SuperResolveVideoWithOptions(SuperResolveVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4430,6 +4865,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<SuperResolveVideoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request SuperResolveVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SuperResolveVideoResponse
+         */
         public async Task<SuperResolveVideoResponse> SuperResolveVideoWithOptionsAsync(SuperResolveVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4461,12 +4901,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<SuperResolveVideoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request SuperResolveVideoRequest
+         * @return SuperResolveVideoResponse
+         */
         public SuperResolveVideoResponse SuperResolveVideo(SuperResolveVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SuperResolveVideoWithOptions(request, runtime);
         }
 
+        /**
+         * @param request SuperResolveVideoRequest
+         * @return SuperResolveVideoResponse
+         */
         public async Task<SuperResolveVideoResponse> SuperResolveVideoAsync(SuperResolveVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4481,7 +4929,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -4508,12 +4956,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -4562,7 +5011,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -4589,12 +5038,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -4635,6 +5085,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return superResolveVideoResp;
         }
 
+        /**
+         * @param request ToneSdrVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ToneSdrVideoResponse
+         */
         public ToneSdrVideoResponse ToneSdrVideoWithOptions(ToneSdrVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4670,6 +5125,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<ToneSdrVideoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request ToneSdrVideoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ToneSdrVideoResponse
+         */
         public async Task<ToneSdrVideoResponse> ToneSdrVideoWithOptionsAsync(ToneSdrVideoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4705,12 +5165,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             return TeaModel.ToObject<ToneSdrVideoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request ToneSdrVideoRequest
+         * @return ToneSdrVideoResponse
+         */
         public ToneSdrVideoResponse ToneSdrVideo(ToneSdrVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ToneSdrVideoWithOptions(request, runtime);
         }
 
+        /**
+         * @param request ToneSdrVideoRequest
+         * @return ToneSdrVideoResponse
+         */
         public async Task<ToneSdrVideoResponse> ToneSdrVideoAsync(ToneSdrVideoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4725,7 +5193,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -4752,12 +5220,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -4806,7 +5275,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -4833,12 +5302,13 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();

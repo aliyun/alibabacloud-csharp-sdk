@@ -19,19 +19,30 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 
         /// <summary>
         /// 1
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileList")]
         [Validation(Required=false)]
         public List<GenerateVideoAdvanceRequestFileList> FileList { get; set; }
         public class GenerateVideoAdvanceRequestFileList : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("FileUrl")]
             [Validation(Required=false)]
             public Stream FileUrlObject { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
