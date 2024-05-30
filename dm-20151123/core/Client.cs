@@ -3054,6 +3054,78 @@ namespace AlibabaCloud.SDK.Dm20151123
         }
 
         /**
+         * @summary 获取账号详情
+         *
+         * @param request GetUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetUserResponse
+         */
+        public GetUserResponse GetUserWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUser",
+                Version = "2015-11-23",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取账号详情
+         *
+         * @param request GetUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetUserResponse
+         */
+        public async Task<GetUserResponse> GetUserWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUser",
+                Version = "2015-11-23",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取账号详情
+         *
+         * @return GetUserResponse
+         */
+        public GetUserResponse GetUser()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetUserWithOptions(runtime);
+        }
+
+        /**
+         * @summary 获取账号详情
+         *
+         * @return GetUserResponse
+         */
+        public async Task<GetUserResponse> GetUserAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetUserWithOptionsAsync(runtime);
+        }
+
+        /**
          * @summary 列出用户无效地址
          *
          * @param request ListUserSuppressionRequest
@@ -5735,6 +5807,110 @@ namespace AlibabaCloud.SDK.Dm20151123
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateIpProtectionWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 更新帐号信息
+         *
+         * @param tmpReq UpdateUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateUserResponse
+         */
+        public UpdateUserResponse UpdateUserWithOptions(UpdateUserRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateUserShrinkRequest request = new UpdateUserShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.User))
+            {
+                request.UserShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.User, "User", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserShrink))
+            {
+                body["User"] = request.UserShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUser",
+                Version = "2015-11-23",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新帐号信息
+         *
+         * @param tmpReq UpdateUserRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateUserResponse
+         */
+        public async Task<UpdateUserResponse> UpdateUserWithOptionsAsync(UpdateUserRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateUserShrinkRequest request = new UpdateUserShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.User))
+            {
+                request.UserShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.User, "User", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserShrink))
+            {
+                body["User"] = request.UserShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUser",
+                Version = "2015-11-23",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新帐号信息
+         *
+         * @param request UpdateUserRequest
+         * @return UpdateUserResponse
+         */
+        public UpdateUserResponse UpdateUser(UpdateUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateUserWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 更新帐号信息
+         *
+         * @param request UpdateUserRequest
+         * @return UpdateUserResponse
+         */
+        public async Task<UpdateUserResponse> UpdateUserAsync(UpdateUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateUserWithOptionsAsync(request, runtime);
         }
 
     }
