@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public CredentialVerifyResponseBodyResultObject ResultObject { get; set; }
         public class CredentialVerifyResponseBodyResultObject : TeaModel {
+            [NameInMap("MaterialInfo")]
+            [Validation(Required=false)]
+            public string MaterialInfo { get; set; }
+
             [NameInMap("OcrInfo")]
             [Validation(Required=false)]
             public string OcrInfo { get; set; }

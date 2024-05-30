@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string BizType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MaterialValue")]
         [Validation(Required=false)]
         public string MaterialValue { get; set; }

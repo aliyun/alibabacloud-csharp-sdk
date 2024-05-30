@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string IsOCR { get; set; }
 
+        [NameInMap("MerchantId")]
+        [Validation(Required=false)]
+        public string MerchantId { get; set; }
+
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }
