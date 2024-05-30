@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **AddMetaCollectionEntity**.
+         * @summary Adds an entity to a collection.
          *
          * @param request AddMetaCollectionEntityRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **AddMetaCollectionEntity**.
+         * @summary Adds an entity to a collection.
          *
          * @param request AddMetaCollectionEntityRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **AddMetaCollectionEntity**.
+         * @summary Adds an entity to a collection.
          *
          * @param request AddMetaCollectionEntityRequest
          * @return AddMetaCollectionEntityResponse
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **AddMetaCollectionEntity**.
+         * @summary Adds an entity to a collection.
          *
          * @param request AddMetaCollectionEntityRequest
          * @return AddMetaCollectionEntityResponse
@@ -2233,7 +2233,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @description DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](https://help.aliyun.com/document_detail/383463.html) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](https://help.aliyun.com/document_detail/383465.html) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
+         * @summary Creates a data synchronization task.
          *
          * @param request CreateDISyncTaskRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2287,7 +2287,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @description DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](https://help.aliyun.com/document_detail/383463.html) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](https://help.aliyun.com/document_detail/383465.html) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
+         * @summary Creates a data synchronization task.
          *
          * @param request CreateDISyncTaskRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2341,7 +2341,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @description DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](https://help.aliyun.com/document_detail/383463.html) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](https://help.aliyun.com/document_detail/383465.html) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
+         * @summary Creates a data synchronization task.
          *
          * @param request CreateDISyncTaskRequest
          * @return CreateDISyncTaskResponse
@@ -2353,7 +2353,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @description DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](https://help.aliyun.com/document_detail/383463.html) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](https://help.aliyun.com/document_detail/383465.html) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
+         * @summary Creates a data synchronization task.
          *
          * @param request CreateDISyncTaskRequest
          * @return CreateDISyncTaskResponse
@@ -4200,7 +4200,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -4227,12 +4227,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -4281,7 +4282,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -4308,12 +4309,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -6166,7 +6168,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             string securityToken = this._credential.GetSecurityToken();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -6193,12 +6195,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -6247,7 +6250,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             string securityToken = await this._credential.GetSecurityTokenAsync();
             string credentialType = this._credential.GetType();
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -6274,12 +6277,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
             AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
             {
+                AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
@@ -6685,6 +6689,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Creates a table folder. This API operation will be replaced soon. We recommend that you do not call this API operation.
+         *
          * @param request CreateTableThemeRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateTableThemeResponse
@@ -6729,6 +6735,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Creates a table folder. This API operation will be replaced soon. We recommend that you do not call this API operation.
+         *
          * @param request CreateTableThemeRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateTableThemeResponse
@@ -6773,6 +6781,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Creates a table folder. This API operation will be replaced soon. We recommend that you do not call this API operation.
+         *
          * @param request CreateTableThemeRequest
          * @return CreateTableThemeResponse
          */
@@ -6783,6 +6793,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Creates a table folder. This API operation will be replaced soon. We recommend that you do not call this API operation.
+         *
          * @param request CreateTableThemeRequest
          * @return CreateTableThemeResponse
          */
@@ -16757,9 +16769,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **GetMetaTableBasicInfo**.
-         *
-         * @description ****
+         * @summary Queries the basic information about a metatable.
          *
          * @param request GetMetaTableBasicInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16789,9 +16799,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **GetMetaTableBasicInfo**.
-         *
-         * @description ****
+         * @summary Queries the basic information about a metatable.
          *
          * @param request GetMetaTableBasicInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16821,9 +16829,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **GetMetaTableBasicInfo**.
-         *
-         * @description ****
+         * @summary Queries the basic information about a metatable.
          *
          * @param request GetMetaTableBasicInfoRequest
          * @return GetMetaTableBasicInfoResponse
@@ -16835,9 +16841,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **GetMetaTableBasicInfo**.
-         *
-         * @description ****
+         * @summary Queries the basic information about a metatable.
          *
          * @param request GetMetaTableBasicInfoRequest
          * @return GetMetaTableBasicInfoResponse
@@ -17405,6 +17409,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries metatables in a specified category.
+         *
          * @param request GetMetaTableListByCategoryRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetMetaTableListByCategoryResponse
@@ -17433,6 +17439,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries metatables in a specified category.
+         *
          * @param request GetMetaTableListByCategoryRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetMetaTableListByCategoryResponse
@@ -17461,6 +17469,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries metatables in a specified category.
+         *
          * @param request GetMetaTableListByCategoryRequest
          * @return GetMetaTableListByCategoryResponse
          */
@@ -17471,6 +17481,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries metatables in a specified category.
+         *
          * @param request GetMetaTableListByCategoryRequest
          * @return GetMetaTableListByCategoryResponse
          */
@@ -17605,9 +17617,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary For more information about the example on how to use the GetMetaTablePartition operation, see [Examples of DataWorks API operations](https://developer.aliyun.com/article/780879?groupCode=dataworks).
+         * @summary Queries the partitions of a metatable.
          *
-         * @description The operation that you want to perform. Set the value to **GetMetaTablePartition**.
+         * @description You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
          *
          * @param tmpReq GetMetaTablePartitionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17675,9 +17687,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary For more information about the example on how to use the GetMetaTablePartition operation, see [Examples of DataWorks API operations](https://developer.aliyun.com/article/780879?groupCode=dataworks).
+         * @summary Queries the partitions of a metatable.
          *
-         * @description The operation that you want to perform. Set the value to **GetMetaTablePartition**.
+         * @description You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
          *
          * @param tmpReq GetMetaTablePartitionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17745,9 +17757,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary For more information about the example on how to use the GetMetaTablePartition operation, see [Examples of DataWorks API operations](https://developer.aliyun.com/article/780879?groupCode=dataworks).
+         * @summary Queries the partitions of a metatable.
          *
-         * @description The operation that you want to perform. Set the value to **GetMetaTablePartition**.
+         * @description You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
          *
          * @param request GetMetaTablePartitionRequest
          * @return GetMetaTablePartitionResponse
@@ -17759,9 +17771,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary For more information about the example on how to use the GetMetaTablePartition operation, see [Examples of DataWorks API operations](https://developer.aliyun.com/article/780879?groupCode=dataworks).
+         * @summary Queries the partitions of a metatable.
          *
-         * @description The operation that you want to perform. Set the value to **GetMetaTablePartition**.
+         * @description You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
          *
          * @param request GetMetaTablePartitionRequest
          * @return GetMetaTablePartitionResponse
@@ -18569,6 +18581,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries the ancestor nodes of a node.
+         *
          * @param request GetNodeParentsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetNodeParentsResponse
@@ -18605,6 +18619,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries the ancestor nodes of a node.
+         *
          * @param request GetNodeParentsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetNodeParentsResponse
@@ -18641,6 +18657,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries the ancestor nodes of a node.
+         *
          * @param request GetNodeParentsRequest
          * @return GetNodeParentsResponse
          */
@@ -18651,6 +18669,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries the ancestor nodes of a node.
+         *
          * @param request GetNodeParentsRequest
          * @return GetNodeParentsResponse
          */
@@ -19661,6 +19681,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries the details of a custom alert rule.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=GetRemind\\&type=RPC\\&version=2020-05-18)
+         *
          * @param request GetRemindRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetRemindResponse
@@ -19693,6 +19718,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries the details of a custom alert rule.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=GetRemind\\&type=RPC\\&version=2020-05-18)
+         *
          * @param request GetRemindRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetRemindResponse
@@ -19725,6 +19755,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries the details of a custom alert rule.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=GetRemind\\&type=RPC\\&version=2020-05-18)
+         *
          * @param request GetRemindRequest
          * @return GetRemindResponse
          */
@@ -19735,6 +19770,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries the details of a custom alert rule.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=GetRemind\\&type=RPC\\&version=2020-05-18)
+         *
          * @param request GetRemindRequest
          * @return GetRemindResponse
          */
@@ -20925,6 +20965,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries compute engine instances.
+         *
          * @param request ListCalcEnginesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListCalcEnginesResponse
@@ -20977,6 +21019,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries compute engine instances.
+         *
          * @param request ListCalcEnginesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListCalcEnginesResponse
@@ -21029,6 +21073,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries compute engine instances.
+         *
          * @param request ListCalcEnginesRequest
          * @return ListCalcEnginesResponse
          */
@@ -21039,6 +21085,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries compute engine instances.
+         *
          * @param request ListCalcEnginesRequest
          * @return ListCalcEnginesResponse
          */
@@ -24577,7 +24625,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **ListMetaCollectionEntities**.
+         * @summary Queries the entities in a collection.
          *
          * @param request ListMetaCollectionEntitiesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24627,7 +24675,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **ListMetaCollectionEntities**.
+         * @summary Queries the entities in a collection.
          *
          * @param request ListMetaCollectionEntitiesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24677,7 +24725,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **ListMetaCollectionEntities**.
+         * @summary Queries the entities in a collection.
          *
          * @param request ListMetaCollectionEntitiesRequest
          * @return ListMetaCollectionEntitiesResponse
@@ -24689,7 +24737,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **ListMetaCollectionEntities**.
+         * @summary Queries the entities in a collection.
          *
          * @param request ListMetaCollectionEntitiesRequest
          * @return ListMetaCollectionEntitiesResponse
@@ -24701,9 +24749,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
+         * @summary Queries information about collections. Collections include data albums that are displayed on the DataMap page and categories that are created in the data albums. You can call this API operation to query collections by type.
          *
-         * @description You can configure only one of the Creator, Administrator, and Follower parameters.
+         * @description The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
          *
          * @param request ListMetaCollectionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24769,9 +24817,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
+         * @summary Queries information about collections. Collections include data albums that are displayed on the DataMap page and categories that are created in the data albums. You can call this API operation to query collections by type.
          *
-         * @description You can configure only one of the Creator, Administrator, and Follower parameters.
+         * @description The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
          *
          * @param request ListMetaCollectionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -24837,9 +24885,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
+         * @summary Queries information about collections. Collections include data albums that are displayed on the DataMap page and categories that are created in the data albums. You can call this API operation to query collections by type.
          *
-         * @description You can configure only one of the Creator, Administrator, and Follower parameters.
+         * @description The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
          *
          * @param request ListMetaCollectionsRequest
          * @return ListMetaCollectionsResponse
@@ -24851,9 +24899,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
+         * @summary Queries information about collections. Collections include data albums that are displayed on the DataMap page and categories that are created in the data albums. You can call this API operation to query collections by type.
          *
-         * @description You can configure only one of the Creator, Administrator, and Follower parameters.
+         * @description The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
          *
          * @param request ListMetaCollectionsRequest
          * @return ListMetaCollectionsResponse
@@ -25969,6 +26017,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries members in a DataWorks workspace.
+         *
          * @param request ListProjectMembersRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListProjectMembersResponse
@@ -26009,6 +26059,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries members in a DataWorks workspace.
+         *
          * @param request ListProjectMembersRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListProjectMembersResponse
@@ -26049,6 +26101,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries members in a DataWorks workspace.
+         *
          * @param request ListProjectMembersRequest
          * @return ListProjectMembersResponse
          */
@@ -26059,6 +26113,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries members in a DataWorks workspace.
+         *
          * @param request ListProjectMembersRequest
          * @return ListProjectMembersResponse
          */
@@ -26069,7 +26125,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Dataworks ID of the workspace.
+         * @summary A topic is added to describe how to call the ListProjectRoles operation to query all roles in a workspace.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=ListProjectRoles\\&type=RPC\\&version=2020-05-18)
          *
          * @param request ListProjectRolesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -26103,7 +26162,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Dataworks ID of the workspace.
+         * @summary A topic is added to describe how to call the ListProjectRoles operation to query all roles in a workspace.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=ListProjectRoles\\&type=RPC\\&version=2020-05-18)
          *
          * @param request ListProjectRolesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -26137,7 +26199,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Dataworks ID of the workspace.
+         * @summary A topic is added to describe how to call the ListProjectRoles operation to query all roles in a workspace.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=ListProjectRoles\\&type=RPC\\&version=2020-05-18)
          *
          * @param request ListProjectRolesRequest
          * @return ListProjectRolesResponse
@@ -26149,7 +26214,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Dataworks ID of the workspace.
+         * @summary A topic is added to describe how to call the ListProjectRoles operation to query all roles in a workspace.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=ListProjectRoles\\&type=RPC\\&version=2020-05-18)
          *
          * @param request ListProjectRolesRequest
          * @return ListProjectRolesResponse
@@ -27409,6 +27477,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries table levels. This API operation will be replaced soon. We recommend that you do not call this API operation.
+         *
          * @param request ListTableLevelRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListTableLevelResponse
@@ -27437,6 +27507,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries table levels. This API operation will be replaced soon. We recommend that you do not call this API operation.
+         *
          * @param request ListTableLevelRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListTableLevelResponse
@@ -27465,6 +27537,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries table levels. This API operation will be replaced soon. We recommend that you do not call this API operation.
+         *
          * @param request ListTableLevelRequest
          * @return ListTableLevelResponse
          */
@@ -27475,6 +27549,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries table levels. This API operation will be replaced soon. We recommend that you do not call this API operation.
+         *
          * @param request ListTableLevelRequest
          * @return ListTableLevelResponse
          */
@@ -27485,6 +27561,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries table folders. This API operation will be replaced soon. We recommend that you do not call this API operation.
+         *
          * @param request ListTableThemeRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListTableThemeResponse
@@ -27513,6 +27591,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries table folders. This API operation will be replaced soon. We recommend that you do not call this API operation.
+         *
          * @param request ListTableThemeRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListTableThemeResponse
@@ -27541,6 +27621,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries table folders. This API operation will be replaced soon. We recommend that you do not call this API operation.
+         *
          * @param request ListTableThemeRequest
          * @return ListTableThemeResponse
          */
@@ -27551,6 +27633,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Queries table folders. This API operation will be replaced soon. We recommend that you do not call this API operation.
+         *
          * @param request ListTableThemeRequest
          * @return ListTableThemeResponse
          */
@@ -34825,6 +34909,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Updates the metadata information about a table.
+         *
          * @param request UpdateMetaTableRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateMetaTableResponse
@@ -34899,6 +34985,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Updates the metadata information about a table.
+         *
          * @param request UpdateMetaTableRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdateMetaTableResponse
@@ -34973,6 +35061,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Updates the metadata information about a table.
+         *
          * @param request UpdateMetaTableRequest
          * @return UpdateMetaTableResponse
          */
@@ -34983,6 +35073,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary Updates the metadata information about a table.
+         *
          * @param request UpdateMetaTableRequest
          * @return UpdateMetaTableResponse
          */

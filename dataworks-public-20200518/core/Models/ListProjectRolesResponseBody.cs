@@ -10,32 +10,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProjectRolesResponseBody : TeaModel {
         /// <summary>
-        /// The role ID of the workspace.
+        /// The roles in the DataWorks workspace.
         /// </summary>
         [NameInMap("ProjectRoleList")]
         [Validation(Required=false)]
         public List<ListProjectRolesResponseBodyProjectRoleList> ProjectRoleList { get; set; }
         public class ListProjectRolesResponseBodyProjectRoleList : TeaModel {
+            /// <summary>
+            /// The code of the role in the DataWorks workspace.
+            /// </summary>
             [NameInMap("ProjectRoleCode")]
             [Validation(Required=false)]
             public string ProjectRoleCode { get; set; }
 
             /// <summary>
-            /// The role type of the workspace. Valid values:
+            /// The ID of the role in the DataWorks workspace.
             /// </summary>
             [NameInMap("ProjectRoleId")]
             [Validation(Required=false)]
             public int? ProjectRoleId { get; set; }
 
             /// <summary>
-            /// The role Code of the workspace.
+            /// The name of the role in the DataWorks workspace.
             /// </summary>
             [NameInMap("ProjectRoleName")]
             [Validation(Required=false)]
             public string ProjectRoleName { get; set; }
 
             /// <summary>
-            /// The role name of the workspace.
+            /// The type of the role in the DataWorks workspace.
             /// </summary>
             [NameInMap("ProjectRoleType")]
             [Validation(Required=false)]
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The roles of the workspace.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class AddMetaCollectionEntityRequest : TeaModel {
         /// <summary>
-        /// The unique identifier of the entity.
-        /// 
-        /// Example: maxcompute-table.projectA.tableA.
+        /// The unique identifier of the collection.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -21,7 +19,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CollectionQualifiedName { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can use the ID to query logs and troubleshoot issues.
+        /// The unique identifier of the entity.
+        /// 
+        /// Example: maxcompute-table.projectA.tableA.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string EntityQualifiedName { get; set; }
 
+        /// <summary>
+        /// The remarks on the entity. Example: latest product table.
+        /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }

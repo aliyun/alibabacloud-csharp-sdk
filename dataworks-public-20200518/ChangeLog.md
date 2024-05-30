@@ -1,3 +1,10 @@
+2024-05-30 Version: 5.6.1
+- Update API GetNode: update response param.
+- Update API GetNodeChildren: update response param.
+- Update API GetNodeParents: update response param.
+- Update API ListNodes: update response param.
+
+
 2024-05-20 Version: 5.6.0
 - Support API DsgDesensPlanAddOrUpdate.
 - Support API DsgSceneQuerySceneListByName.

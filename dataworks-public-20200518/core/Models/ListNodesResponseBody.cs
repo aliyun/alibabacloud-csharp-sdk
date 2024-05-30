@@ -49,12 +49,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public string Connection { get; set; }
 
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public long? CreateTime { get; set; }
+
                 /// <summary>
                 /// The name of the workflow.
                 /// </summary>
                 [NameInMap("CronExpress")]
                 [Validation(Required=false)]
                 public string CronExpress { get; set; }
+
+                [NameInMap("DeployDate")]
+                [Validation(Required=false)]
+                public long? DeployDate { get; set; }
 
                 /// <summary>
                 /// The priority for running the node. Valid values: 1, 3, 5, 7, and 8.
@@ -77,9 +85,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public int? DqcType { get; set; }
 
+                [NameInMap("FileId")]
+                [Validation(Required=false)]
+                public long? FileId { get; set; }
+
                 [NameInMap("FileType")]
                 [Validation(Required=false)]
                 public int? FileType { get; set; }
+
+                [NameInMap("FileVersion")]
+                [Validation(Required=false)]
+                public int? FileVersion { get; set; }
+
+                [NameInMap("ModifyTime")]
+                [Validation(Required=false)]
+                public long? ModifyTime { get; set; }
 
                 /// <summary>
                 /// The types of the nodes. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the type of the node.

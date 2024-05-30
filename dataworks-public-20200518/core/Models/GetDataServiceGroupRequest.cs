@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataServiceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the business process.
+        /// The business process ID.
         /// 
         /// This parameter is required.
         /// </summary>

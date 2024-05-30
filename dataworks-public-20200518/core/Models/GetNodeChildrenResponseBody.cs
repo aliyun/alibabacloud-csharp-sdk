@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public string SchedulerType { get; set; }
 
+                [NameInMap("StepType")]
+                [Validation(Required=false)]
+                public string StepType { get; set; }
+
             }
 
         }
