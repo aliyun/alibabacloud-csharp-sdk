@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("Commodity")]
+        [Validation(Required=false)]
+        public GetServiceEstimateCostRequestCommodity Commodity { get; set; }
+        public class GetServiceEstimateCostRequestCommodity : TeaModel {
+            [NameInMap("PayPeriod")]
+            [Validation(Required=false)]
+            public int? PayPeriod { get; set; }
+
+            [NameInMap("PayPeriodUnit")]
+            [Validation(Required=false)]
+            public string PayPeriodUnit { get; set; }
+
+        }
+
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public Dictionary<string, object> Parameters { get; set; }
@@ -21,6 +35,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }

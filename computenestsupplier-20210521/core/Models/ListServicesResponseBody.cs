@@ -37,6 +37,32 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string ArtifactVersion { get; set; }
 
+            [NameInMap("BuildInfo")]
+            [Validation(Required=false)]
+            public string BuildInfo { get; set; }
+
+            [NameInMap("Categories")]
+            [Validation(Required=false)]
+            public string Categories { get; set; }
+
+            [NameInMap("Commodity")]
+            [Validation(Required=false)]
+            public ListServicesResponseBodyServicesCommodity Commodity { get; set; }
+            public class ListServicesResponseBodyServicesCommodity : TeaModel {
+                [NameInMap("CommodityCode")]
+                [Validation(Required=false)]
+                public string CommodityCode { get; set; }
+
+                [NameInMap("SaasBoostMetadata")]
+                [Validation(Required=false)]
+                public string SaasBoostMetadata { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             [NameInMap("CommodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
@@ -52,6 +78,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [NameInMap("DeployType")]
             [Validation(Required=false)]
             public string DeployType { get; set; }
+
+            [NameInMap("HasBeta")]
+            [Validation(Required=false)]
+            public bool? HasBeta { get; set; }
+
+            [NameInMap("HasDraft")]
+            [Validation(Required=false)]
+            public bool? HasDraft { get; set; }
 
             [NameInMap("LatestResellSourceServiceVersion")]
             [Validation(Required=false)]
@@ -76,6 +110,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
+
+            [NameInMap("ServiceDiscoverable")]
+            [Validation(Required=false)]
+            public string ServiceDiscoverable { get; set; }
 
             [NameInMap("ServiceId")]
             [Validation(Required=false)]

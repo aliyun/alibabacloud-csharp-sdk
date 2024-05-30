@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string PolicyNames { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -57,6 +60,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public bool? Resellable { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
@@ -65,6 +71,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public List<UpdateServiceRequestServiceInfo> ServiceInfo { get; set; }
         public class UpdateServiceRequestServiceInfo : TeaModel {
+            [NameInMap("Agreements")]
+            [Validation(Required=false)]
+            public List<UpdateServiceRequestServiceInfoAgreements> Agreements { get; set; }
+            public class UpdateServiceRequestServiceInfoAgreements : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+            }
+
             [NameInMap("Image")]
             [Validation(Required=false)]
             public string Image { get; set; }
@@ -102,6 +122,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("TrialDuration")]
         [Validation(Required=false)]
         public int? TrialDuration { get; set; }
+
+        [NameInMap("UpdateOption")]
+        [Validation(Required=false)]
+        public UpdateServiceRequestUpdateOption UpdateOption { get; set; }
+        public class UpdateServiceRequestUpdateOption : TeaModel {
+            [NameInMap("UpdateFrom")]
+            [Validation(Required=false)]
+            public string UpdateFrom { get; set; }
+
+        }
 
         [NameInMap("UpgradeMetadata")]
         [Validation(Required=false)]

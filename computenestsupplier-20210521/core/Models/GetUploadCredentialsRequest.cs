@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetUploadCredentialsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }

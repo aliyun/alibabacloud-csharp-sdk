@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UpdateArtifactRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ArtifactId")]
         [Validation(Required=false)]
         public string ArtifactId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ArtifactProperty")]
         [Validation(Required=false)]
         public UpdateArtifactRequestArtifactProperty ArtifactProperty { get; set; }
@@ -55,6 +61,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public List<string> SupportRegionIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VersionName")]
         [Validation(Required=false)]
         public string VersionName { get; set; }

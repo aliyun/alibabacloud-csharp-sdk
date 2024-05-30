@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("SupplierRole")]
+        [Validation(Required=false)]
+        public string SupplierRole { get; set; }
+
     }
 
 }

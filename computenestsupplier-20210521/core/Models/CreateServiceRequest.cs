@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ApprovalType { get; set; }
 
+        [NameInMap("BuildParameters")]
+        [Validation(Required=false)]
+        public string BuildParameters { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string DeployMetadata { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DeployType")]
         [Validation(Required=false)]
         public string DeployType { get; set; }
@@ -53,6 +60,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string PolicyNames { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -73,10 +83,27 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public List<CreateServiceRequestServiceInfo> ServiceInfo { get; set; }
         public class CreateServiceRequestServiceInfo : TeaModel {
+            [NameInMap("Agreements")]
+            [Validation(Required=false)]
+            public List<CreateServiceRequestServiceInfoAgreements> Agreements { get; set; }
+            public class CreateServiceRequestServiceInfoAgreements : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+            }
+
             [NameInMap("Image")]
             [Validation(Required=false)]
             public string Image { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Locale")]
             [Validation(Required=false)]
             public string Locale { get; set; }
@@ -85,6 +112,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string LongDescriptionUrl { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

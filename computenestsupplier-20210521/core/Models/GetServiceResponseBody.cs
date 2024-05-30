@@ -17,49 +17,211 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ApprovalType { get; set; }
 
+        [NameInMap("BuildInfo")]
+        [Validation(Required=false)]
+        public string BuildInfo { get; set; }
+
+        [NameInMap("Categories")]
+        [Validation(Required=false)]
+        public string Categories { get; set; }
+
+        [NameInMap("Commodity")]
+        [Validation(Required=false)]
+        public GetServiceResponseBodyCommodity Commodity { get; set; }
+        public class GetServiceResponseBodyCommodity : TeaModel {
+            [NameInMap("ChargeType")]
+            [Validation(Required=false)]
+            public string ChargeType { get; set; }
+
+            [NameInMap("CommodityCode")]
+            [Validation(Required=false)]
+            public string CommodityCode { get; set; }
+
+            [NameInMap("Components")]
+            [Validation(Required=false)]
+            public List<string> Components { get; set; }
+
+            [NameInMap("CssMetadata")]
+            [Validation(Required=false)]
+            public GetServiceResponseBodyCommodityCssMetadata CssMetadata { get; set; }
+            public class GetServiceResponseBodyCommodityCssMetadata : TeaModel {
+                [NameInMap("ComponentsMappings")]
+                [Validation(Required=false)]
+                public List<GetServiceResponseBodyCommodityCssMetadataComponentsMappings> ComponentsMappings { get; set; }
+                public class GetServiceResponseBodyCommodityCssMetadataComponentsMappings : TeaModel {
+                    [NameInMap("Mappings")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, string> Mappings { get; set; }
+
+                    [NameInMap("TemplateName")]
+                    [Validation(Required=false)]
+                    public string TemplateName { get; set; }
+
+                }
+
+                [NameInMap("MeteringEntityExtraInfos")]
+                [Validation(Required=false)]
+                public List<GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos> MeteringEntityExtraInfos { get; set; }
+                public class GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos : TeaModel {
+                    [NameInMap("EntityId")]
+                    [Validation(Required=false)]
+                    public string EntityId { get; set; }
+
+                    [NameInMap("MetricName")]
+                    [Validation(Required=false)]
+                    public string MetricName { get; set; }
+
+                    [NameInMap("Promql")]
+                    [Validation(Required=false)]
+                    public string Promql { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+                [NameInMap("MeteringEntityMappings")]
+                [Validation(Required=false)]
+                public List<GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings> MeteringEntityMappings { get; set; }
+                public class GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings : TeaModel {
+                    [NameInMap("EntityIds")]
+                    [Validation(Required=false)]
+                    public string EntityIds { get; set; }
+
+                    [NameInMap("SpecificationName")]
+                    [Validation(Required=false)]
+                    public string SpecificationName { get; set; }
+
+                    [NameInMap("TemplateName")]
+                    [Validation(Required=false)]
+                    public string TemplateName { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("MarketplaceMetadata")]
+            [Validation(Required=false)]
+            public GetServiceResponseBodyCommodityMarketplaceMetadata MarketplaceMetadata { get; set; }
+            public class GetServiceResponseBodyCommodityMarketplaceMetadata : TeaModel {
+                [NameInMap("MeteringEntityExtraInfos")]
+                [Validation(Required=false)]
+                public List<GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos> MeteringEntityExtraInfos { get; set; }
+                public class GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos : TeaModel {
+                    [NameInMap("EntityId")]
+                    [Validation(Required=false)]
+                    public string EntityId { get; set; }
+
+                    [NameInMap("MetricName")]
+                    [Validation(Required=false)]
+                    public string MetricName { get; set; }
+
+                    [NameInMap("Promql")]
+                    [Validation(Required=false)]
+                    public string Promql { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+                [NameInMap("MeteringEntityMappings")]
+                [Validation(Required=false)]
+                public List<GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings> MeteringEntityMappings { get; set; }
+                public class GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings : TeaModel {
+                    [NameInMap("EntityIds")]
+                    [Validation(Required=false)]
+                    public string EntityIds { get; set; }
+
+                    [NameInMap("SpecificationName")]
+                    [Validation(Required=false)]
+                    public string SpecificationName { get; set; }
+
+                    [NameInMap("TemplateName")]
+                    [Validation(Required=false)]
+                    public string TemplateName { get; set; }
+
+                }
+
+                [NameInMap("SpecificationMappings")]
+                [Validation(Required=false)]
+                public List<GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings> SpecificationMappings { get; set; }
+                public class GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings : TeaModel {
+                    [NameInMap("SpecificationCode")]
+                    [Validation(Required=false)]
+                    public string SpecificationCode { get; set; }
+
+                    [NameInMap("SpecificationName")]
+                    [Validation(Required=false)]
+                    public string SpecificationName { get; set; }
+
+                    [NameInMap("TemplateName")]
+                    [Validation(Required=false)]
+                    public string TemplateName { get; set; }
+
+                    [NameInMap("TrialType")]
+                    [Validation(Required=false)]
+                    public string TrialType { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("MeteringEntities")]
+            [Validation(Required=false)]
+            public List<GetServiceResponseBodyCommodityMeteringEntities> MeteringEntities { get; set; }
+            public class GetServiceResponseBodyCommodityMeteringEntities : TeaModel {
+                [NameInMap("EntityId")]
+                [Validation(Required=false)]
+                public string EntityId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
+            [NameInMap("SaasBoostMetadata")]
+            [Validation(Required=false)]
+            public string SaasBoostMetadata { get; set; }
+
+            [NameInMap("Specifications")]
+            [Validation(Required=false)]
+            public List<GetServiceResponseBodyCommoditySpecifications> Specifications { get; set; }
+            public class GetServiceResponseBodyCommoditySpecifications : TeaModel {
+                [NameInMap("Code")]
+                [Validation(Required=false)]
+                public string Code { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Times")]
+                [Validation(Required=false)]
+                public List<string> Times { get; set; }
+
+            }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
 
-        [NameInMap("CommodityEntities")]
-        [Validation(Required=false)]
-        public List<GetServiceResponseBodyCommodityEntities> CommodityEntities { get; set; }
-        public class GetServiceResponseBodyCommodityEntities : TeaModel {
-            [NameInMap("EntityIds")]
-            [Validation(Required=false)]
-            public List<string> EntityIds { get; set; }
-
-            [NameInMap("PredefinedParameterName")]
-            [Validation(Required=false)]
-            public string PredefinedParameterName { get; set; }
-
-            [NameInMap("TemplateName")]
-            [Validation(Required=false)]
-            public string TemplateName { get; set; }
-
-        }
-
-        [NameInMap("CommoditySpecifications")]
-        [Validation(Required=false)]
-        public List<GetServiceResponseBodyCommoditySpecifications> CommoditySpecifications { get; set; }
-        public class GetServiceResponseBodyCommoditySpecifications : TeaModel {
-            [NameInMap("PredefinedParameterName")]
-            [Validation(Required=false)]
-            public string PredefinedParameterName { get; set; }
-
-            [NameInMap("SpecificationCode")]
-            [Validation(Required=false)]
-            public string SpecificationCode { get; set; }
-
-            [NameInMap("TemplateName")]
-            [Validation(Required=false)]
-            public string TemplateName { get; set; }
-
-        }
-
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
+
+        [NameInMap("CrossRegionConnectionStatus")]
+        [Validation(Required=false)]
+        public string CrossRegionConnectionStatus { get; set; }
 
         [NameInMap("DefaultLicenseDays")]
         [Validation(Required=false)]
@@ -76,6 +238,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public long? Duration { get; set; }
+
+        [NameInMap("EntitySource")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> EntitySource { get; set; }
 
         [NameInMap("IsSupportOperated")]
         [Validation(Required=false)]
@@ -133,6 +299,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("ServiceAuditDocumentUrl")]
+        [Validation(Required=false)]
+        public string ServiceAuditDocumentUrl { get; set; }
+
+        [NameInMap("ServiceDiscoverable")]
+        [Validation(Required=false)]
+        public string ServiceDiscoverable { get; set; }
+
         [NameInMap("ServiceDocUrl")]
         [Validation(Required=false)]
         public string ServiceDocUrl { get; set; }
@@ -145,6 +319,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public List<GetServiceResponseBodyServiceInfos> ServiceInfos { get; set; }
         public class GetServiceResponseBodyServiceInfos : TeaModel {
+            [NameInMap("Agreements")]
+            [Validation(Required=false)]
+            public List<GetServiceResponseBodyServiceInfosAgreements> Agreements { get; set; }
+            public class GetServiceResponseBodyServiceInfosAgreements : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+            }
+
             [NameInMap("Image")]
             [Validation(Required=false)]
             public string Image { get; set; }
@@ -178,6 +366,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("ShareType")]
         [Validation(Required=false)]
         public string ShareType { get; set; }
+
+        [NameInMap("ShareTypeStatus")]
+        [Validation(Required=false)]
+        public string ShareTypeStatus { get; set; }
 
         [NameInMap("SourceServiceId")]
         [Validation(Required=false)]
@@ -298,6 +490,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("VirtualInternetService")]
         [Validation(Required=false)]
         public string VirtualInternetService { get; set; }
+
+        [NameInMap("VirtualInternetServiceId")]
+        [Validation(Required=false)]
+        public string VirtualInternetServiceId { get; set; }
 
     }
 

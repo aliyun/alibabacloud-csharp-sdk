@@ -1,3 +1,26 @@
+2024-05-30 Version: 2.0.0
+- Support API AddServiceSharedAccounts.
+- Support API GetServiceTemplateParameterConstraints.
+- Support API UpdateServiceInstanceAttribute.
+- Support API UpdateServiceInstanceSpec.
+- Support API UpgradeServiceInstance.
+- Update API CreateService: add param BuildParameters.
+- Update API CreateService: update param ServiceInfo.
+- Update API CreateServiceInstance: add param EndTime.
+- Update API GetService: update response param.
+- Update API GetServiceEstimateCost: add param Commodity.
+- Update API GetServiceEstimateCost: update response param.
+- Update API GetServiceInstance: update response param.
+- Update API ListArtifactVersions: add param MaxResults.
+- Update API ListArtifactVersions: delete param MaxResult.
+- Update API ListServiceInstances: update response param.
+- Update API ListServiceUsages: add param SupplierRole.
+- Update API ListServiceUsages: update response param.
+- Update API ListServices: update response param.
+- Update API UpdateService: add param UpdateOption.
+- Update API UpdateService: update param ServiceInfo.
+
+
 2023-09-21 Version: 1.4.3
 - Generated csharp 2021-05-21 for ComputeNestSupplier.
 

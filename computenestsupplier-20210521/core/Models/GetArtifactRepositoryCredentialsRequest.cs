@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetArtifactRepositoryCredentialsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ArtifactType")]
         [Validation(Required=false)]
         public string ArtifactType { get; set; }

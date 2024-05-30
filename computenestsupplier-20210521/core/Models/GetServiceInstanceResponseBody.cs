@@ -23,11 +23,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         [NameInMap("EnableUserPrometheus")]
         [Validation(Required=false)]
-        public string EnableUserPrometheus { get; set; }
+        public bool? EnableUserPrometheus { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("GrafanaDashBoardUrl")]
+        [Validation(Required=false)]
+        public string GrafanaDashBoardUrl { get; set; }
 
         [NameInMap("IsOperated")]
         [Validation(Required=false)]

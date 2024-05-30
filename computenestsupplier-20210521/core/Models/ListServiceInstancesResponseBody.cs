@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public List<ListServiceInstancesResponseBodyServiceInstances> ServiceInstances { get; set; }
         public class ListServiceInstancesResponseBodyServiceInstances : TeaModel {
+            [NameInMap("BizStatus")]
+            [Validation(Required=false)]
+            public string BizStatus { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }

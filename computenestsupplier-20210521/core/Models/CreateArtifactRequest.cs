@@ -59,6 +59,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ArtifactType")]
         [Validation(Required=false)]
         public string ArtifactType { get; set; }
@@ -67,6 +70,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -93,6 +99,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VersionName")]
         [Validation(Required=false)]
         public string VersionName { get; set; }
