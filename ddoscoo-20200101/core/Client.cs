@@ -1350,6 +1350,114 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @summary 配置新版基于匹配条件的cc规则
+         *
+         * @param request ConfigWebCCRuleV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigWebCCRuleV2Response
+         */
+        public ConfigWebCCRuleV2Response ConfigWebCCRuleV2WithOptions(ConfigWebCCRuleV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expires))
+            {
+                query["Expires"] = request.Expires;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleList))
+            {
+                query["RuleList"] = request.RuleList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfigWebCCRuleV2",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfigWebCCRuleV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 配置新版基于匹配条件的cc规则
+         *
+         * @param request ConfigWebCCRuleV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigWebCCRuleV2Response
+         */
+        public async Task<ConfigWebCCRuleV2Response> ConfigWebCCRuleV2WithOptionsAsync(ConfigWebCCRuleV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expires))
+            {
+                query["Expires"] = request.Expires;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleList))
+            {
+                query["RuleList"] = request.RuleList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfigWebCCRuleV2",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfigWebCCRuleV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 配置新版基于匹配条件的cc规则
+         *
+         * @param request ConfigWebCCRuleV2Request
+         * @return ConfigWebCCRuleV2Response
+         */
+        public ConfigWebCCRuleV2Response ConfigWebCCRuleV2(ConfigWebCCRuleV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ConfigWebCCRuleV2WithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 配置新版基于匹配条件的cc规则
+         *
+         * @param request ConfigWebCCRuleV2Request
+         * @return ConfigWebCCRuleV2Response
+         */
+        public async Task<ConfigWebCCRuleV2Response> ConfigWebCCRuleV2Async(ConfigWebCCRuleV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ConfigWebCCRuleV2WithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Configures the mode of the Frequency Control policy for a website.
          *
          * @param request ConfigWebCCTemplateRequest
@@ -13783,6 +13891,122 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWebCCRulesWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询新版cc规则
+         *
+         * @param request DescribeWebCCRulesV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebCCRulesV2Response
+         */
+        public DescribeWebCCRulesV2Response DescribeWebCCRulesV2WithOptions(DescribeWebCCRulesV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["Offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebCCRulesV2",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebCCRulesV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询新版cc规则
+         *
+         * @param request DescribeWebCCRulesV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeWebCCRulesV2Response
+         */
+        public async Task<DescribeWebCCRulesV2Response> DescribeWebCCRulesV2WithOptionsAsync(DescribeWebCCRulesV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["Offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWebCCRulesV2",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWebCCRulesV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询新版cc规则
+         *
+         * @param request DescribeWebCCRulesV2Request
+         * @return DescribeWebCCRulesV2Response
+         */
+        public DescribeWebCCRulesV2Response DescribeWebCCRulesV2(DescribeWebCCRulesV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeWebCCRulesV2WithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询新版cc规则
+         *
+         * @param request DescribeWebCCRulesV2Request
+         * @return DescribeWebCCRulesV2Response
+         */
+        public async Task<DescribeWebCCRulesV2Response> DescribeWebCCRulesV2Async(DescribeWebCCRulesV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeWebCCRulesV2WithOptionsAsync(request, runtime);
         }
 
         /**
