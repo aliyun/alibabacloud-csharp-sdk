@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class AddChatappPhoneNumberRequest : TeaModel {
         /// <summary>
         /// The country code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Cc")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The space ID of the user within the independent software vendor (ISV) account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The phone number without a country code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
@@ -42,6 +48,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The display name of the phone number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VerifiedName")]
         [Validation(Required=false)]

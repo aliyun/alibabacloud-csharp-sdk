@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// Modifies the business information of the account to which a specified phone number is bound.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -43,6 +45,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

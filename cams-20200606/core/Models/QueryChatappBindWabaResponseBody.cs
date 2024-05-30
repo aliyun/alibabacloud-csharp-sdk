@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// The HTTP status code returned.
         /// 
         /// *   A value of OK indicates that the call is successful.
-        /// *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+        /// *   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string AccountReviewStatus { get; set; }
 
+            [NameInMap("AuthInternationalRateEligibility")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> AuthInternationalRateEligibility { get; set; }
+
             /// <summary>
             /// The currency.
             /// </summary>
@@ -78,6 +82,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("PrimaryBusinessLocation")]
+            [Validation(Required=false)]
+            public string PrimaryBusinessLocation { get; set; }
+
         }
 
         /// <summary>
@@ -93,6 +101,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The Business Manager ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BusinessId")]
         [Validation(Required=false)]
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The fields. Separate multiple fields with commas (,).
-        /// see  [catalog fields](~~2579419~~)
+        /// see  [catalog fields](https://help.aliyun.com/document_detail/2579419.html)
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]

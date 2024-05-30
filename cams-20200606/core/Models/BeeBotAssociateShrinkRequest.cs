@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class BeeBotAssociateShrinkRequest : TeaModel {
         /// <summary>
         /// The ID of a bot instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChatBotInstanceId")]
         [Validation(Required=false)]

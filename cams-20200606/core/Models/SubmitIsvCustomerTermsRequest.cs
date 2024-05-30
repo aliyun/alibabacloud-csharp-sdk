@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class SubmitIsvCustomerTermsRequest : TeaModel {
         /// <summary>
         /// The use scenario.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BusinessDesc")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The email address of your business.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContactMail")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The country code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CountryId")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The display name of your business.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CustName")]
         [Validation(Required=false)]
@@ -39,6 +47,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The space ID of the user under the ISV account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// > Before you upload files to Object Storage Service (OSS) servers, you must call the GetChatappUploadAuthorization operation to obtain the authentication information required to upload files. You can use the SDK provided by OSS to upload files. When you upload a file, you must set the key parameter value. To set the value for the key parameter, concatenate the value of the Dir parameter and the file name by using a forward slash (/). You can obtain the value of the Dir parameter by calling the GetChatappUploadAuthorization operation.
         /// 
         /// > The value of this parameter is the name of the uploaded file.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IsvTerms")]
         [Validation(Required=false)]
@@ -57,6 +69,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The address of your business.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OfficeAddress")]
         [Validation(Required=false)]

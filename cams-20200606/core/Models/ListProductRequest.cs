@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The catalog ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CatalogId")]
         [Validation(Required=false)]
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// The fields. Separate multiple fields with commas (,).
         /// 
-        ///  see [product fields](~~2579419~~)
+        ///  see [product fields](https://help.aliyun.com/document_detail/2579419.html)
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
@@ -67,6 +69,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The ID of the WhatsApp Business account (WABA).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WabaId")]
         [Validation(Required=false)]

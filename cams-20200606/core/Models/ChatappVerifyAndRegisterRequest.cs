@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class ChatappVerifyAndRegisterRequest : TeaModel {
         /// <summary>
         /// The space ID of the user under the independent software vendor (ISV) account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The phone number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The verification code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VerifyCode")]
         [Validation(Required=false)]

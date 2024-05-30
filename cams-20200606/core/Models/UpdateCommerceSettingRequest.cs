@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class UpdateCommerceSettingRequest : TeaModel {
         /// <summary>
         /// Specifies whether to display the shopping cart button.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CartEnable")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// Specifies whether to display the catalog button.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CatalogVisible")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The space ID of the user within the independent software vendor (ISV) account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The phone number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

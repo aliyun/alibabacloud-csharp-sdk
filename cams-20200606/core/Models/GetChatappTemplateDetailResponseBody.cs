@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// The HTTP status code.
         /// 
         /// *   Example: OK. This value indicates that the request is successful.
-        /// *   Other codes indicate that the request fails. For more information, see [Error codes](~~196974~~).
+        /// *   Other codes indicate that the request fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -467,7 +467,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public Dictionary<string, string> Example { get; set; }
 
             /// <summary>
-            /// The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+            /// The language that is used in the message template. For more information, see [Language codes](https://help.aliyun.com/document_detail/463420.html).
             /// </summary>
             [NameInMap("Language")]
             [Validation(Required=false)]

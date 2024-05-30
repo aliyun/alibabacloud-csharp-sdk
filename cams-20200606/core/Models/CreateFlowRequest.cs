@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class CreateFlowRequest : TeaModel {
         /// <summary>
         /// The categories of the Flow.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Categories")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The name of the Flow.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]

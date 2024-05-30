@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// *   **text_video**: the template that contains text and videos
         /// *   **text_video_button**: the template that contains text, videos, and buttons
         /// *   **text_image**: the template that contains text and images
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -43,6 +45,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// The components of the message template.
         /// 
         /// >  If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the Type sub-parameter is set to BODY or FOOTER, the Text sub-parameter of the Components parameter must be empty.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
@@ -148,6 +152,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// *   If Category is set to AUTHENTICATION for a WhatsApp message template, you can add only one button to the WhatsApp message template and you must set the Type sub-parameter of the Buttons parameter to COPY_CODE or ONE_TAP. If the Type sub-parameter of the Buttons parameter is set to COPY_CODE, the Text sub-parameter of the Buttons parameter is required. If the Type sub-parameter of the Buttons parameter is set to ONE_TAP, the Text, SignatureHash, PackageName, and AutofillText sub-parameters of the Buttons parameter are required. The value of Text is displayed if the desired app is not installed on the device. The value of Text indicates that you must manually copy the verification code.
                 /// 
                 /// *   You can add only one button to a Viber message template, and you must set the Type sub-parameter of the Buttons parameter to URL.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -183,6 +189,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public List<CreateChatappTemplateRequestComponentsCards> Cards { get; set; }
             public class CreateChatappTemplateRequestComponentsCards : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
                 [NameInMap("CardComponents")]
                 [Validation(Required=false)]
                 public List<CreateChatappTemplateRequestComponentsCardsCardComponents> CardComponents { get; set; }
@@ -199,6 +208,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         [Validation(Required=false)]
                         public string Text { get; set; }
 
+                        /// <summary>
+                        /// This parameter is required.
+                        /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
@@ -221,6 +233,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     [Validation(Required=false)]
                     public string Text { get; set; }
 
+                    /// <summary>
+                    /// This parameter is required.
+                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
@@ -308,6 +323,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// *   **FOOTER** components are not supported in Viber message templates.
             /// 
             /// *   In Viber message templates, media resources such as images, videos, and documents are placed in the **HEADER** component. If a Viber message contains both text and an image, the image is placed below the text in the message received on a device.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -356,7 +373,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+        /// The language that is used in the message template. For more information, see [Language codes](https://help.aliyun.com/document_detail/463420.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -373,6 +392,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The name of the message template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -384,6 +405,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// *   **WHATSAPP**
         /// *   **VIBER**
         /// *   LINE: the Line message template. This type of message template will be released later.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The WABA ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WabaId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class BeeBotChatShrinkRequest : TeaModel {
         /// <summary>
         /// The ID of the bot instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChatBotInstanceId")]
         [Validation(Required=false)]
@@ -21,7 +23,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The name of the intent in the dialog flow. When this parameter is specified, the bot conducts a Q\&A based on the intent.
+        /// The name of the intent in the dialog flow. When this parameter is specified, the bot conducts a Q\\&A based on the intent.
         /// </summary>
         [NameInMap("IntentName")]
         [Validation(Required=false)]
@@ -71,6 +73,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The input of the visitor.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Utterance")]
         [Validation(Required=false)]

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string AuditStatus { get; set; }
 
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         /// <summary>
         /// The space ID of the user under the ISV account.
         /// </summary>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+        /// The language that is used in the message template. For more information, see [Language codes](https://help.aliyun.com/document_detail/463420.html).
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -68,6 +72,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public class ListChatappTemplateRequestPage : TeaModel {
             /// <summary>
             /// The page number. Default value: 1.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Index")]
             [Validation(Required=false)]
@@ -75,6 +81,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// The number of entries per page. Default value: 10.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]

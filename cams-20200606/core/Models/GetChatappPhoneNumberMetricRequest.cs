@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The end of the time range to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("End")]
         [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The beginning of the time range to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Start")]
         [Validation(Required=false)]

@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// *   **whatsapp**
         /// *   **viber**
         /// *   line. The feature that ChatAPP sends messages by using Line is under development.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChannelType")]
         [Validation(Required=false)]
@@ -104,7 +106,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <props="china">
         /// 
         /// > 中国站此字段无效
-        /// </props>
         /// </summary>
         [NameInMap("FallBackRule")]
         [Validation(Required=false)]
@@ -121,6 +122,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// The phone number of the message sender.
         /// 
         /// > You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatAPP console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -141,7 +144,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// The language that is used in the message template. This parameter is required only if you set the Type parameter to **template**. For more information about language codes, see [Language codes](~~463420~~).
+        /// The language that is used in the message template. This parameter is required only if you set the Type parameter to **template**. For more information about language codes, see [Language codes](https://help.aliyun.com/document_detail/463420.html).
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -175,7 +178,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// *   **text_video_button**: a message that contains multiple media objects, including text, video, and button.
         /// *   **text_image**: a message that contains the text and image media objects.
         /// 
-        /// > For more information, see [Parameters of a message template](~~454530~~).
+        /// > For more information, see [Parameters of a message template](https://help.aliyun.com/document_detail/454530.html).
         /// </summary>
         [NameInMap("MessageType")]
         [Validation(Required=false)]
@@ -229,6 +232,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The phone number that receives the message.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]
@@ -253,6 +258,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// 
         /// *   **template**: a template message. A template message is sent based on a template that is created in the ChatAPP console and is approved. You can send template messages at any time based on your business requirements.
         /// *   **message**: a custom message. You can send a custom message to a user only within 24 hours after you receive the last message from the user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

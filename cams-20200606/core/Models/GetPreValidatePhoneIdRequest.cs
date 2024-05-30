@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class GetPreValidatePhoneIdRequest : TeaModel {
         /// <summary>
         /// The phone number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The verification code provided when you purchased the pre-registered phone number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VerifyCode")]
         [Validation(Required=false)]

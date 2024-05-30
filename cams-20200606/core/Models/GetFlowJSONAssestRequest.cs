@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// Flow ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FlowId")]
         [Validation(Required=false)]

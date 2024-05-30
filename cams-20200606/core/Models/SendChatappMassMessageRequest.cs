@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class SendChatappMassMessageRequest : TeaModel {
         /// <summary>
         /// The channel type. Valid values: whatsapp, viber, and line.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChannelType")]
         [Validation(Required=false)]
@@ -64,6 +66,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The phone number of the message sender.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -84,7 +88,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// The language. For more information about language codes, see [Language codes](~~463420~~).
+        /// The language. For more information about language codes, see [Language codes](https://help.aliyun.com/document_detail/463420.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -92,6 +98,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The phone numbers to which the message is sent.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SenderList")]
         [Validation(Required=false)]
@@ -175,6 +183,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// The phone number to which the message is sent.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("To")]
             [Validation(Required=false)]
