@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public List<DescribeApplicationSlbsResponseBodyDataInternet> Internet { get; set; }
             public class DescribeApplicationSlbsResponseBodyDataInternet : TeaModel {
+                [NameInMap("HttpsCaCertId")]
+                [Validation(Required=false)]
+                public string HttpsCaCertId { get; set; }
+
                 /// <summary>
                 /// The supported protocol.
                 /// </summary>
@@ -88,6 +92,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public List<DescribeApplicationSlbsResponseBodyDataIntranet> Intranet { get; set; }
             public class DescribeApplicationSlbsResponseBodyDataIntranet : TeaModel {
+                [NameInMap("HttpsCaCertId")]
+                [Validation(Required=false)]
+                public string HttpsCaCertId { get; set; }
+
                 /// <summary>
                 /// The supported protocol.
                 /// </summary>
