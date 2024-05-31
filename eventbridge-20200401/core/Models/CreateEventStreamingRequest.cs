@@ -2086,6 +2086,64 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public CreateEventStreamingRequestSource Source { get; set; }
         public class CreateEventStreamingRequestSource : TeaModel {
+            [NameInMap("SourceApacheKafkaParameters")]
+            [Validation(Required=false)]
+            public CreateEventStreamingRequestSourceSourceApacheKafkaParameters SourceApacheKafkaParameters { get; set; }
+            public class CreateEventStreamingRequestSourceSourceApacheKafkaParameters : TeaModel {
+                [NameInMap("Bootstraps")]
+                [Validation(Required=false)]
+                public string Bootstraps { get; set; }
+
+                [NameInMap("ConsumerGroup")]
+                [Validation(Required=false)]
+                public string ConsumerGroup { get; set; }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
+                public string NetworkType { get; set; }
+
+                [NameInMap("OffsetReset")]
+                [Validation(Required=false)]
+                public string OffsetReset { get; set; }
+
+                [NameInMap("SaslMechanism")]
+                [Validation(Required=false)]
+                public string SaslMechanism { get; set; }
+
+                [NameInMap("SaslPassword")]
+                [Validation(Required=false)]
+                public string SaslPassword { get; set; }
+
+                [NameInMap("SaslUser")]
+                [Validation(Required=false)]
+                public string SaslUser { get; set; }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
+                [NameInMap("SecurityProtocol")]
+                [Validation(Required=false)]
+                public string SecurityProtocol { get; set; }
+
+                [NameInMap("Topic")]
+                [Validation(Required=false)]
+                public string Topic { get; set; }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
+                public string VSwitchIds { get; set; }
+
+                [NameInMap("ValueDataType")]
+                [Validation(Required=false)]
+                public string ValueDataType { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+            }
+
             /// <summary>
             /// The parameters that are configured if you specify Data Transmission Service (DTS) as the event source.
             /// </summary>
@@ -2368,6 +2426,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [NameInMap("AuthType")]
                 [Validation(Required=false)]
                 public string AuthType { get; set; }
+
+                [NameInMap("BodyDataType")]
+                [Validation(Required=false)]
+                public string BodyDataType { get; set; }
 
                 /// <summary>
                 /// The SQL statement that you want to use to filter messages.
