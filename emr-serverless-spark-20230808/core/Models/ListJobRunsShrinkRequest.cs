@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string EndTimeShrink { get; set; }
 
+        [NameInMap("jobRunDeploymentId")]
+        [Validation(Required=false)]
+        public string JobRunDeploymentId { get; set; }
+
         /// <summary>
         /// 作业id。
         /// </summary>

@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string DefaultSqlComputeId { get; set; }
 
+        [NameInMap("deploymentId")]
+        [Validation(Required=false)]
+        public string DeploymentId { get; set; }
+
         [NameInMap("extraArtifactIds")]
         [Validation(Required=false)]
         public List<string> ExtraArtifactIds { get; set; }
@@ -91,6 +95,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [NameInMap("hasCommited")]
         [Validation(Required=false)]
         public bool? HasCommited { get; set; }
+
+        [NameInMap("isStreaming")]
+        [Validation(Required=false)]
+        public bool? IsStreaming { get; set; }
 
         [NameInMap("jars")]
         [Validation(Required=false)]
@@ -171,6 +179,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [NameInMap("sparkLogPath")]
         [Validation(Required=false)]
         public string SparkLogPath { get; set; }
+
+        [NameInMap("sparkSubmitClause")]
+        [Validation(Required=false)]
+        public string SparkSubmitClause { get; set; }
 
         /// <summary>
         /// This parameter is required.

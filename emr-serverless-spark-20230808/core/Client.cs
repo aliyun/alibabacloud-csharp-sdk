@@ -254,6 +254,148 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         }
 
         /**
+         * @summary 使用session运行SQL
+         *
+         * @param request CreateSqlStatementRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSqlStatementResponse
+         */
+        public CreateSqlStatementResponse CreateSqlStatementWithOptions(string workspaceId, CreateSqlStatementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeContent))
+            {
+                body["codeContent"] = request.CodeContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCatalog))
+            {
+                body["defaultCatalog"] = request.DefaultCatalog;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultDatabase))
+            {
+                body["defaultDatabase"] = request.DefaultDatabase;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlComputeId))
+            {
+                body["sqlComputeId"] = request.SqlComputeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSqlStatement",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/statement",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSqlStatementResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 使用session运行SQL
+         *
+         * @param request CreateSqlStatementRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSqlStatementResponse
+         */
+        public async Task<CreateSqlStatementResponse> CreateSqlStatementWithOptionsAsync(string workspaceId, CreateSqlStatementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeContent))
+            {
+                body["codeContent"] = request.CodeContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCatalog))
+            {
+                body["defaultCatalog"] = request.DefaultCatalog;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultDatabase))
+            {
+                body["defaultDatabase"] = request.DefaultDatabase;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlComputeId))
+            {
+                body["sqlComputeId"] = request.SqlComputeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSqlStatement",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/statement",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSqlStatementResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 使用session运行SQL
+         *
+         * @param request CreateSqlStatementRequest
+         * @return CreateSqlStatementResponse
+         */
+        public CreateSqlStatementResponse CreateSqlStatement(string workspaceId, CreateSqlStatementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateSqlStatementWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 使用session运行SQL
+         *
+         * @param request CreateSqlStatementRequest
+         * @return CreateSqlStatementResponse
+         */
+        public async Task<CreateSqlStatementResponse> CreateSqlStatementAsync(string workspaceId, CreateSqlStatementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateSqlStatementWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /**
          * @summary 获取任务
          *
          * @param request GetJobRunRequest
@@ -349,6 +491,104 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetJobRunWithOptionsAsync(workspaceId, jobRunId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取Sql Statement状态
+         *
+         * @param request GetSqlStatementRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSqlStatementResponse
+         */
+        public GetSqlStatementResponse GetSqlStatementWithOptions(string workspaceId, string statementId, GetSqlStatementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSqlStatement",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/statement/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(statementId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSqlStatementResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取Sql Statement状态
+         *
+         * @param request GetSqlStatementRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSqlStatementResponse
+         */
+        public async Task<GetSqlStatementResponse> GetSqlStatementWithOptionsAsync(string workspaceId, string statementId, GetSqlStatementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSqlStatement",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/statement/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(statementId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSqlStatementResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取Sql Statement状态
+         *
+         * @param request GetSqlStatementRequest
+         * @return GetSqlStatementResponse
+         */
+        public GetSqlStatementResponse GetSqlStatement(string workspaceId, string statementId, GetSqlStatementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSqlStatementWithOptions(workspaceId, statementId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 获取Sql Statement状态
+         *
+         * @param request GetSqlStatementRequest
+         * @return GetSqlStatementResponse
+         */
+        public async Task<GetSqlStatementResponse> GetSqlStatementAsync(string workspaceId, string statementId, GetSqlStatementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSqlStatementWithOptionsAsync(workspaceId, statementId, request, headers, runtime);
         }
 
         /**
@@ -507,6 +747,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["endTime"] = request.EndTimeShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobRunDeploymentId))
+            {
+                query["jobRunDeploymentId"] = request.JobRunDeploymentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobRunId))
             {
                 query["jobRunId"] = request.JobRunId;
@@ -600,6 +844,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimeShrink))
             {
                 query["endTime"] = request.EndTimeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobRunDeploymentId))
+            {
+                query["jobRunDeploymentId"] = request.JobRunDeploymentId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobRunId))
             {
@@ -1351,6 +1599,104 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await StartJobRunWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 终止 session statement
+         *
+         * @param request TerminateSqlStatementRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TerminateSqlStatementResponse
+         */
+        public TerminateSqlStatementResponse TerminateSqlStatementWithOptions(string workspaceId, string statementId, TerminateSqlStatementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TerminateSqlStatement",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/statement/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(statementId) + "/terminate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TerminateSqlStatementResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 终止 session statement
+         *
+         * @param request TerminateSqlStatementRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TerminateSqlStatementResponse
+         */
+        public async Task<TerminateSqlStatementResponse> TerminateSqlStatementWithOptionsAsync(string workspaceId, string statementId, TerminateSqlStatementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TerminateSqlStatement",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/statement/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(statementId) + "/terminate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TerminateSqlStatementResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 终止 session statement
+         *
+         * @param request TerminateSqlStatementRequest
+         * @return TerminateSqlStatementResponse
+         */
+        public TerminateSqlStatementResponse TerminateSqlStatement(string workspaceId, string statementId, TerminateSqlStatementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TerminateSqlStatementWithOptions(workspaceId, statementId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 终止 session statement
+         *
+         * @param request TerminateSqlStatementRequest
+         * @return TerminateSqlStatementResponse
+         */
+        public async Task<TerminateSqlStatementResponse> TerminateSqlStatementAsync(string workspaceId, string statementId, TerminateSqlStatementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TerminateSqlStatementWithOptionsAsync(workspaceId, statementId, request, headers, runtime);
         }
 
     }
