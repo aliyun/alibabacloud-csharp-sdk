@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 节点选择器。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeSelector")]
         [Validation(Required=false)]
@@ -47,6 +49,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 脚本名称。长度为1~64个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、下划线（_）、或者短划线（-）
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScriptName")]
         [Validation(Required=false)]
@@ -54,6 +58,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 脚本所在OSS路径。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScriptPath")]
         [Validation(Required=false)]

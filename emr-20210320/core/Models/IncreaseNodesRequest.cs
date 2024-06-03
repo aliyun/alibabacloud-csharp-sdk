@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// The ID of the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// The number of nodes. The number of incremental nodes for this scale-out. Valid values: 1 to 500.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IncreaseNodeCount")]
         [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// The ID of the node group. The target node group to which you want to scale out the cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]
@@ -71,6 +77,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// The ID of the region in which you want to create the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

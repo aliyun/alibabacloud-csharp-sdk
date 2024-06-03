@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 统计次数。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 统计窗口。单位为秒。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TimeWindow")]
         [Validation(Required=false)]

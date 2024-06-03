@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
     public class ListDoctorComputeSummaryRequest : TeaModel {
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DateTime")]
         [Validation(Required=false)]
@@ -84,6 +88,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

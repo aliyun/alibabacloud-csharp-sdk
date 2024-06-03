@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
     public class DiskSize : TeaModel {
         /// <summary>
         /// 磁盘类型。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]

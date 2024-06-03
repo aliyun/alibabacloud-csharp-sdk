@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
     public class PutAutoScalingPolicyRequest : TeaModel {
         /// <summary>
         /// 集群ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 节点组ID。节点组 Id-针对 ACK 集群，此字段为空。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 区域ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

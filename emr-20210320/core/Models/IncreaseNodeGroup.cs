@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 节点数量。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeCount")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 节点组ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
     public class ListApiTemplatesRequest : TeaModel {
         /// <summary>
         /// 接口名。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApiName")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 区域ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -80,6 +80,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// - APPLICATION：应用级别。
         /// - COMPONENT：组件级别。
         /// - COMPONENT_INSTANCE：组件实例级别。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RunActionScope")]
         [Validation(Required=false)]

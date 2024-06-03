@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
     public class JoinResourceGroupRequest : TeaModel {
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// The ID of the resource group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// The ID of the resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// The type of the resource. Valid values:
         /// 
         /// *   cluster: cluster
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

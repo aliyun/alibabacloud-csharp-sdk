@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 优惠券号。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PromotionOptionNo")]
         [Validation(Required=false)]

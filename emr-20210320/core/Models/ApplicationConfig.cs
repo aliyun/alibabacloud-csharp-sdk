@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
     public class ApplicationConfig : TeaModel {
         /// <summary>
         /// 应用名称。从EMR控制台集群创建页面可查看到指定发行版的应用名称列表。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 应用配置文件名。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigFileName")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 配置项键。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigItemKey")]
         [Validation(Required=false)]

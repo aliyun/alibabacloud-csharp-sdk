@@ -88,6 +88,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// *   eu-central-1
         /// *   eu-west-1
         /// *   cn-north-2-gov-1
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

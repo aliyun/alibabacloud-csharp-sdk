@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
     public class ByLoadScalingRule : TeaModel {
         /// <summary>
         /// 比较符。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ComparisonOperator")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 统计次数。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 统计量名称。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Statistics")]
         [Validation(Required=false)]
@@ -43,6 +51,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 阈值。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 统计窗口。单位为秒。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TimeWindow")]
         [Validation(Required=false)]

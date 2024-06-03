@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// *   config
         /// *   restart
         /// *   refresh_queues
+        /// *   refresh_labels
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ActionName")]
         [Validation(Required=false)]
@@ -31,6 +34,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// The cluster ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -38,6 +43,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// The operation object.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ComponentInstanceSelector")]
         [Validation(Required=false)]
@@ -69,6 +76,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

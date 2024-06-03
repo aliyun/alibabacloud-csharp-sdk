@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// - DATASERVING：数据服务。
         /// - CUSTOM：自定义集群。
         /// - HADOOP：旧版数据湖（不推荐使用，建议使用新版数据湖）。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
@@ -66,6 +68,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// - MASTER：管理类型节点组。
         /// - CORE：存储类型节点组。
         /// - TASK：计算类型节点组。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeGroupType")]
         [Validation(Required=false)]
@@ -77,6 +81,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// - Subscription：预付费。
         /// 
         /// 默认值：PayAsYouGo。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
@@ -84,6 +90,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 区域ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -98,6 +106,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 可用区ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 付费时长。PaymentDurationUnit取值为Month时，取值：1、2、3、4、5、6、7、8、9、12、24、36、48、60。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PaymentDuration")]
         [Validation(Required=false)]
@@ -43,6 +45,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <summary>
         /// 付费时长单位。取值范围：
         /// - Month：月。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PaymentDurationUnit")]
         [Validation(Required=false)]

@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 启动时间戳。单位为毫秒。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LaunchTime")]
         [Validation(Required=false)]

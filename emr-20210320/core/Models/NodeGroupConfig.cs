@@ -83,6 +83,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// - MASTER：管理类型节点组。
         /// - CORE：存储类型节点组。
         /// - TASK：计算类型节点组。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeGroupType")]
         [Validation(Required=false)]

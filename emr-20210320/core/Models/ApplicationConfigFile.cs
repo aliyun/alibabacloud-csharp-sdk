@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
     public class ApplicationConfigFile : TeaModel {
         /// <summary>
         /// 应用名称。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 配置文件名称。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigFileName")]
         [Validation(Required=false)]

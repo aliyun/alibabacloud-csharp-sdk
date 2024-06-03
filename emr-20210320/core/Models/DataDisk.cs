@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
     public class DataDisk : TeaModel {
         /// <summary>
         /// 磁盘类型。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 单位GB。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]

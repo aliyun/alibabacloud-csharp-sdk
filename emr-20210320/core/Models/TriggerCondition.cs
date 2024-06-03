@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// - LT:小于。
         /// - GE:大于等于。
         /// - LE:小于等于。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ComparisonOperator")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// - MAX：最大值。
         /// - MIN：最小值。
         /// - AVG：平均值。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Statistics")]
         [Validation(Required=false)]
@@ -48,6 +54,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// 阈值。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]

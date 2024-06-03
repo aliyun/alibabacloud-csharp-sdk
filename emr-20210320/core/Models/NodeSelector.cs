@@ -14,14 +14,24 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string NodeGroupId { get; set; }
+
+        [NameInMap("NodeGroupIds")]
+        [Validation(Required=false)]
+        public List<string> NodeGroupIds { get; set; }
 
         /// <summary>
         /// 节点组名称。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效，该参数生效。
         /// </summary>
         [NameInMap("NodeGroupName")]
         [Validation(Required=false)]
+        [Obsolete]
         public string NodeGroupName { get; set; }
+
+        [NameInMap("NodeGroupNames")]
+        [Validation(Required=false)]
+        public List<string> NodeGroupNames { get; set; }
 
         /// <summary>
         /// 节点组类型。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效。数组元数个数N取值范围：0~10。
@@ -42,6 +52,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// - CLUSTER：集群。
         /// - NODE_GROUP：节点组。
         /// - NODE：节点。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeSelectType")]
         [Validation(Required=false)]

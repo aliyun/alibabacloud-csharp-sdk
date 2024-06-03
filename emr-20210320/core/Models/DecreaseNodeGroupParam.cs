@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class DecreaseNodeGroupParam : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("NodeGroupId")]
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ReleaseInstanceIds")]
         [Validation(Required=false)]
         public List<string> ReleaseInstanceIds { get; set; }

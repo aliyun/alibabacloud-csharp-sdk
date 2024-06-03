@@ -74,6 +74,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
             /// <summary>
             /// 节点选择类型。
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("NodeSelectType")]
             [Validation(Required=false)]
