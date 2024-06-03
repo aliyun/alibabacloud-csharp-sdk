@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string PasswordArea { get; set; }
 
+                [NameInMap("pdf_oss_url")]
+                [Validation(Required=false)]
+                public string PdfOssUrl { get; set; }
+
                 [NameInMap("purchaser_bank_account_info")]
                 [Validation(Required=false)]
                 public string PurchaserBankAccountInfo { get; set; }
