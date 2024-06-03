@@ -8791,7 +8791,7 @@ namespace AlibabaCloud.SDK.ICE20201109
                 Protocol = "HTTPS",
                 Pathname = "/",
                 Method = "POST",
-                AuthType = "AK",
+                AuthType = "Anonymous",
                 Style = "RPC",
                 ReqBodyType = "formData",
                 BodyType = "json",
@@ -8825,7 +8825,7 @@ namespace AlibabaCloud.SDK.ICE20201109
                 Protocol = "HTTPS",
                 Pathname = "/",
                 Method = "POST",
-                AuthType = "AK",
+                AuthType = "Anonymous",
                 Style = "RPC",
                 ReqBodyType = "formData",
                 BodyType = "json",
@@ -15735,6 +15735,138 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchMediaByFaceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 混合搜索
+         *
+         * @param request SearchMediaByHybridRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SearchMediaByHybridResponse
+         */
+        public SearchMediaByHybridResponse SearchMediaByHybridWithOptions(SearchMediaByHybridRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
+            {
+                query["MediaType"] = request.MediaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
+            {
+                query["SearchLibName"] = request.SearchLibName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                query["Text"] = request.Text;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchMediaByHybrid",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchMediaByHybridResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 混合搜索
+         *
+         * @param request SearchMediaByHybridRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SearchMediaByHybridResponse
+         */
+        public async Task<SearchMediaByHybridResponse> SearchMediaByHybridWithOptionsAsync(SearchMediaByHybridRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
+            {
+                query["MediaType"] = request.MediaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
+            {
+                query["SearchLibName"] = request.SearchLibName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                query["Text"] = request.Text;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchMediaByHybrid",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchMediaByHybridResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 混合搜索
+         *
+         * @param request SearchMediaByHybridRequest
+         * @return SearchMediaByHybridResponse
+         */
+        public SearchMediaByHybridResponse SearchMediaByHybrid(SearchMediaByHybridRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SearchMediaByHybridWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 混合搜索
+         *
+         * @param request SearchMediaByHybridRequest
+         * @return SearchMediaByHybridResponse
+         */
+        public async Task<SearchMediaByHybridResponse> SearchMediaByHybridAsync(SearchMediaByHybridRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SearchMediaByHybridWithOptionsAsync(request, runtime);
         }
 
         /**
