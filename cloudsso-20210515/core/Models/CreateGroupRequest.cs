@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// The name of the group.
         /// 
-        /// The name can contain letters, digits, underscores (\_), hyphens (-), and periods (.).
+        /// The name can contain letters, digits, underscores (_), hyphens (-), and periods (.).
         /// 
         /// The name can be up to 128 characters in length.
         /// </summary>

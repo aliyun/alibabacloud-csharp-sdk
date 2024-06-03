@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// Specifies whether to enable MFA for all users. Valid value:
         /// 
         /// - Enabled: enables MFA for all users.
-        /// - Byuser: uses user-specific settings. For more information about how to configure MFA for a single user, see [UpdateUserMFAAuthenticationSettings](~~450135~~).
+        /// - Byuser: uses user-specific settings. For more information about how to configure MFA for a single user, see [UpdateUserMFAAuthenticationSettings](https://help.aliyun.com/document_detail/450135.html).
         /// - Disabled: disables MFA for all users.
         /// - OnlyRiskyLogin: MFA is required only for unusual logons.
         /// </summary>

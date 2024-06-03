@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// The ID of the certificate.
         /// 
-        /// You can call the [ListExternalSAMLIdPCertificates](~~341629~~) operation to query the IDs of certificates.
+        /// You can call the [ListExternalSAMLIdPCertificates](https://help.aliyun.com/document_detail/341629.html) operation to query the IDs of certificates.
         /// </summary>
         [NameInMap("CertificateId")]
         [Validation(Required=false)]

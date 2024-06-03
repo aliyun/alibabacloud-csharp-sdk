@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// The ID of the MFA device.
         /// 
-        /// You can call the [ListMFADevicesForUser](~~333531~~) operation to query the IDs of MFA devices.
+        /// You can call the [ListMFADevicesForUser](https://help.aliyun.com/document_detail/333531.html) operation to query the IDs of MFA devices.
         /// </summary>
         [NameInMap("MFADeviceId")]
         [Validation(Required=false)]

@@ -46,8 +46,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// The identity ID of the RAM user provisioning. Valid values:
         /// 
-        /// *   If you set the `PrincipalType` parameter to `Group`, the value of this parameter is the ID of a CloudSSO user group (g-\*\*\*\*\*\*\*\*).
-        /// *   If you set the `PrincipalType` parameter to `User`, the value of this parameter is the ID of a CloudSSO user (u-\*\*\*\*\*\*\*\*).
+        /// *   If you set the `PrincipalType` parameter to `Group`, the value of this parameter is the ID of a CloudSSO user group (g-\\*\\*\\*\\*\\*\\*\\*\\*).
+        /// *   If you set the `PrincipalType` parameter to `User`, the value of this parameter is the ID of a CloudSSO user (u-\\*\\*\\*\\*\\*\\*\\*\\*).
         /// </summary>
         [NameInMap("PrincipalId")]
         [Validation(Required=false)]

@@ -12,31 +12,31 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// Indicates whether the queried entries are truncated. Valid values:
         /// 
-        /// *   true: The queried entries are truncated.
-        /// *   false: The queried entries are not truncated.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("IsTruncated")]
         [Validation(Required=false)]
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is returned for the next page.
+        /// The pagination token that is used in the next request to retrieve a new page of results.
         /// 
-        /// >  This parameter is returned only when the value of `IsTruncated` is `true`.
+        /// >  This parameter is returned only when the `IsTruncated` parameter is `true`.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public List<ListUsersResponseBodyUsers> Users { get; set; }
         public class ListUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// The time when the user was created.
+            /// The time when the user was created. The value is displayed in UTC.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -84,14 +84,23 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            /// <summary>
+            /// The identifier information about the user synchronized from an external IdP.
+            /// </summary>
             [NameInMap("ExternalId")]
             [Validation(Required=false)]
             public ListUsersResponseBodyUsersExternalId ExternalId { get; set; }
             public class ListUsersResponseBodyUsersExternalId : TeaModel {
+                /// <summary>
+                /// The identifier of the user that is synchronized from an external IdP.
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.
+                /// </summary>
                 [NameInMap("Issuer")]
                 [Validation(Required=false)]
                 public string Issuer { get; set; }
@@ -133,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The time when the information about the user was modified.
+            /// The time when the information about the user was modified. The value is displayed in UTC.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]

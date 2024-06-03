@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetUserRequest : TeaModel {
         /// <summary>
-        /// The ID of the directory.
+        /// The ID of the resource directory.
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]

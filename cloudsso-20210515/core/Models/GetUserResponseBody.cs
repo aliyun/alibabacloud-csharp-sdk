@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetUserResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public GetUserResponseBodyUser User { get; set; }
         public class GetUserResponseBodyUser : TeaModel {
             /// <summary>
-            /// The time when the user was created.
+            /// The time when the user was created. The value is displayed in UTC.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -51,14 +51,23 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            /// <summary>
+            /// The identifier information about the user synchronized from an external IdP.
+            /// </summary>
             [NameInMap("ExternalId")]
             [Validation(Required=false)]
             public GetUserResponseBodyUserExternalId ExternalId { get; set; }
             public class GetUserResponseBodyUserExternalId : TeaModel {
+                /// <summary>
+                /// The identifier of the user that is synchronized from an external IdP.
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.
+                /// </summary>
                 [NameInMap("Issuer")]
                 [Validation(Required=false)]
                 public string Issuer { get; set; }
@@ -100,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The time when the information about the user was modified.
+            /// The time when the information about the user was modified. The value is displayed in UTC.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]

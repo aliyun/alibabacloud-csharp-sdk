@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// 
         /// The value can be up to 4,096 characters in length.
         /// 
-        /// If you set `PermissionPolicyType` to `Inline`, you must specify this parameter. For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](~~93739~~).
+        /// If you set `PermissionPolicyType` to `Inline`, you must specify this parameter. For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](https://help.aliyun.com/document_detail/93739.html).
         /// </summary>
         [NameInMap("InlinePolicyDocument")]
         [Validation(Required=false)]
