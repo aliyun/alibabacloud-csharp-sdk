@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string SearchType { get; set; }
 
         /// <summary>
-        /// The region in which the data asset resides. For more information, see [Supported regions](~~214257~~).
+        /// The region in which the data asset resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/214257.html).
         /// </summary>
         [NameInMap("ServiceRegionId")]
         [Validation(Required=false)]

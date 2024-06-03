@@ -42,13 +42,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to create or restore configurations based on the codes of common configuration items. This allows you to manage the configurations of common configuration items.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateConfigResponse
+         * @summary Modifies the configurations of a common configuration item for alerts.
+         *
+         * @description You can call this operation to create or restore configurations based on the codes of common configuration items. This allows you to manage the configurations of common configuration items.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateConfigResponse
          */
         public CreateConfigResponse CreateConfigWithOptions(CreateConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -98,13 +100,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to create or restore configurations based on the codes of common configuration items. This allows you to manage the configurations of common configuration items.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateConfigResponse
+         * @summary Modifies the configurations of a common configuration item for alerts.
+         *
+         * @description You can call this operation to create or restore configurations based on the codes of common configuration items. This allows you to manage the configurations of common configuration items.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateConfigResponse
          */
         public async Task<CreateConfigResponse> CreateConfigWithOptionsAsync(CreateConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -154,12 +158,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to create or restore configurations based on the codes of common configuration items. This allows you to manage the configurations of common configuration items.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateConfigRequest
-          * @return CreateConfigResponse
+         * @summary Modifies the configurations of a common configuration item for alerts.
+         *
+         * @description You can call this operation to create or restore configurations based on the codes of common configuration items. This allows you to manage the configurations of common configuration items.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateConfigRequest
+         * @return CreateConfigResponse
          */
         public CreateConfigResponse CreateConfig(CreateConfigRequest request)
         {
@@ -168,12 +174,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to create or restore configurations based on the codes of common configuration items. This allows you to manage the configurations of common configuration items.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateConfigRequest
-          * @return CreateConfigResponse
+         * @summary Modifies the configurations of a common configuration item for alerts.
+         *
+         * @description You can call this operation to create or restore configurations based on the codes of common configuration items. This allows you to manage the configurations of common configuration items.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateConfigRequest
+         * @return CreateConfigResponse
          */
         public async Task<CreateConfigResponse> CreateConfigAsync(CreateConfigRequest request)
         {
@@ -182,13 +190,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateDataLimitRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDataLimitResponse
+         * @summary Authorizes Data Security Center (DSC) to scan data assets. The data assets can be a database, a project, or a bucket.
+         *
+         * @description You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateDataLimitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDataLimitResponse
          */
         public CreateDataLimitResponse CreateDataLimitWithOptions(CreateDataLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -286,13 +296,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateDataLimitRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDataLimitResponse
+         * @summary Authorizes Data Security Center (DSC) to scan data assets. The data assets can be a database, a project, or a bucket.
+         *
+         * @description You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateDataLimitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDataLimitResponse
          */
         public async Task<CreateDataLimitResponse> CreateDataLimitWithOptionsAsync(CreateDataLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -390,12 +402,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateDataLimitRequest
-          * @return CreateDataLimitResponse
+         * @summary Authorizes Data Security Center (DSC) to scan data assets. The data assets can be a database, a project, or a bucket.
+         *
+         * @description You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateDataLimitRequest
+         * @return CreateDataLimitResponse
          */
         public CreateDataLimitResponse CreateDataLimit(CreateDataLimitRequest request)
         {
@@ -404,12 +418,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateDataLimitRequest
-          * @return CreateDataLimitResponse
+         * @summary Authorizes Data Security Center (DSC) to scan data assets. The data assets can be a database, a project, or a bucket.
+         *
+         * @description You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateDataLimitRequest
+         * @return CreateDataLimitResponse
          */
         public async Task<CreateDataLimitResponse> CreateDataLimitAsync(CreateDataLimitRequest request)
         {
@@ -417,6 +433,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await CreateDataLimitWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a custom sensitive data detection rule.
+         *
+         * @param request CreateRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRuleResponse
+         */
         public CreateRuleResponse CreateRuleWithOptions(CreateRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -508,6 +531,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<CreateRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a custom sensitive data detection rule.
+         *
+         * @param request CreateRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRuleResponse
+         */
         public async Task<CreateRuleResponse> CreateRuleWithOptionsAsync(CreateRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -599,12 +629,24 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<CreateRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a custom sensitive data detection rule.
+         *
+         * @param request CreateRuleRequest
+         * @return CreateRuleResponse
+         */
         public CreateRuleResponse CreateRule(CreateRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a custom sensitive data detection rule.
+         *
+         * @param request CreateRuleRequest
+         * @return CreateRuleResponse
+         */
         public async Task<CreateRuleResponse> CreateRuleAsync(CreateRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -612,13 +654,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to create a custom scan task for authorized data assets. You can customize the interval between two consecutive scan tasks and the time when the scan task is executed next time.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateScanTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateScanTaskResponse
+         * @summary Creates a custom scan task. The custom scan task is used to scan data assets on which Data Security Center (DSC) is granted the scan permissions for sensitive data.
+         *
+         * @description You can call this operation to create a custom scan task for authorized data assets. You can customize the interval between two consecutive scan tasks and the time when the scan task is executed next time.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateScanTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateScanTaskResponse
          */
         public CreateScanTaskResponse CreateScanTaskWithOptions(CreateScanTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -696,13 +740,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to create a custom scan task for authorized data assets. You can customize the interval between two consecutive scan tasks and the time when the scan task is executed next time.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateScanTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateScanTaskResponse
+         * @summary Creates a custom scan task. The custom scan task is used to scan data assets on which Data Security Center (DSC) is granted the scan permissions for sensitive data.
+         *
+         * @description You can call this operation to create a custom scan task for authorized data assets. You can customize the interval between two consecutive scan tasks and the time when the scan task is executed next time.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateScanTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateScanTaskResponse
          */
         public async Task<CreateScanTaskResponse> CreateScanTaskWithOptionsAsync(CreateScanTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -780,12 +826,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to create a custom scan task for authorized data assets. You can customize the interval between two consecutive scan tasks and the time when the scan task is executed next time.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateScanTaskRequest
-          * @return CreateScanTaskResponse
+         * @summary Creates a custom scan task. The custom scan task is used to scan data assets on which Data Security Center (DSC) is granted the scan permissions for sensitive data.
+         *
+         * @description You can call this operation to create a custom scan task for authorized data assets. You can customize the interval between two consecutive scan tasks and the time when the scan task is executed next time.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateScanTaskRequest
+         * @return CreateScanTaskResponse
          */
         public CreateScanTaskResponse CreateScanTask(CreateScanTaskRequest request)
         {
@@ -794,12 +842,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to create a custom scan task for authorized data assets. You can customize the interval between two consecutive scan tasks and the time when the scan task is executed next time.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateScanTaskRequest
-          * @return CreateScanTaskResponse
+         * @summary Creates a custom scan task. The custom scan task is used to scan data assets on which Data Security Center (DSC) is granted the scan permissions for sensitive data.
+         *
+         * @description You can call this operation to create a custom scan task for authorized data assets. You can customize the interval between two consecutive scan tasks and the time when the scan task is executed next time.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateScanTaskRequest
+         * @return CreateScanTaskResponse
          */
         public async Task<CreateScanTaskResponse> CreateScanTaskAsync(CreateScanTaskRequest request)
         {
@@ -808,13 +858,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to allow DSC to access the data assets in services such as Object Storage Service (OSS), ApsaraDB RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role named AliyunServiceRoleForSDDP and attaches the AliyunServiceRolePolicyForSDDP policy to the role.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateSlrRoleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateSlrRoleResponse
+         * @summary Creates a service-linked role for Data Security Center (DSC) to grant DSC the permissions to access data assets in other services.
+         *
+         * @description You can call this operation to allow DSC to access the data assets in services such as Object Storage Service (OSS), ApsaraDB RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role named AliyunServiceRoleForSDDP and attaches the AliyunServiceRolePolicyForSDDP policy to the role.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateSlrRoleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSlrRoleResponse
          */
         public CreateSlrRoleResponse CreateSlrRoleWithOptions(CreateSlrRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -852,13 +904,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to allow DSC to access the data assets in services such as Object Storage Service (OSS), ApsaraDB RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role named AliyunServiceRoleForSDDP and attaches the AliyunServiceRolePolicyForSDDP policy to the role.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateSlrRoleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateSlrRoleResponse
+         * @summary Creates a service-linked role for Data Security Center (DSC) to grant DSC the permissions to access data assets in other services.
+         *
+         * @description You can call this operation to allow DSC to access the data assets in services such as Object Storage Service (OSS), ApsaraDB RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role named AliyunServiceRoleForSDDP and attaches the AliyunServiceRolePolicyForSDDP policy to the role.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateSlrRoleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSlrRoleResponse
          */
         public async Task<CreateSlrRoleResponse> CreateSlrRoleWithOptionsAsync(CreateSlrRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -896,12 +950,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to allow DSC to access the data assets in services such as Object Storage Service (OSS), ApsaraDB RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role named AliyunServiceRoleForSDDP and attaches the AliyunServiceRolePolicyForSDDP policy to the role.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateSlrRoleRequest
-          * @return CreateSlrRoleResponse
+         * @summary Creates a service-linked role for Data Security Center (DSC) to grant DSC the permissions to access data assets in other services.
+         *
+         * @description You can call this operation to allow DSC to access the data assets in services such as Object Storage Service (OSS), ApsaraDB RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role named AliyunServiceRoleForSDDP and attaches the AliyunServiceRolePolicyForSDDP policy to the role.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateSlrRoleRequest
+         * @return CreateSlrRoleResponse
          */
         public CreateSlrRoleResponse CreateSlrRole(CreateSlrRoleRequest request)
         {
@@ -910,12 +966,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to allow DSC to access the data assets in services such as Object Storage Service (OSS), ApsaraDB RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role named AliyunServiceRoleForSDDP and attaches the AliyunServiceRolePolicyForSDDP policy to the role.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request CreateSlrRoleRequest
-          * @return CreateSlrRoleResponse
+         * @summary Creates a service-linked role for Data Security Center (DSC) to grant DSC the permissions to access data assets in other services.
+         *
+         * @description You can call this operation to allow DSC to access the data assets in services such as Object Storage Service (OSS), ApsaraDB RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role named AliyunServiceRoleForSDDP and attaches the AliyunServiceRolePolicyForSDDP policy to the role.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request CreateSlrRoleRequest
+         * @return CreateSlrRoleResponse
          */
         public async Task<CreateSlrRoleResponse> CreateSlrRoleAsync(CreateSlrRoleRequest request)
         {
@@ -924,13 +982,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to revoke the permissions on a data asset from Data Security Center (DSC).
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteDataLimitRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDataLimitResponse
+         * @summary Revokes the scan permissions on a data asset. The data asset can be a database, an instance, or a bucket.
+         *
+         * @description You can call this operation to revoke the permissions on a data asset from Data Security Center (DSC).
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteDataLimitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDataLimitResponse
          */
         public DeleteDataLimitResponse DeleteDataLimitWithOptions(DeleteDataLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -972,13 +1032,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to revoke the permissions on a data asset from Data Security Center (DSC).
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteDataLimitRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDataLimitResponse
+         * @summary Revokes the scan permissions on a data asset. The data asset can be a database, an instance, or a bucket.
+         *
+         * @description You can call this operation to revoke the permissions on a data asset from Data Security Center (DSC).
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteDataLimitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDataLimitResponse
          */
         public async Task<DeleteDataLimitResponse> DeleteDataLimitWithOptionsAsync(DeleteDataLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1020,12 +1082,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to revoke the permissions on a data asset from Data Security Center (DSC).
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteDataLimitRequest
-          * @return DeleteDataLimitResponse
+         * @summary Revokes the scan permissions on a data asset. The data asset can be a database, an instance, or a bucket.
+         *
+         * @description You can call this operation to revoke the permissions on a data asset from Data Security Center (DSC).
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteDataLimitRequest
+         * @return DeleteDataLimitResponse
          */
         public DeleteDataLimitResponse DeleteDataLimit(DeleteDataLimitRequest request)
         {
@@ -1034,12 +1098,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to revoke the permissions on a data asset from Data Security Center (DSC).
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DeleteDataLimitRequest
-          * @return DeleteDataLimitResponse
+         * @summary Revokes the scan permissions on a data asset. The data asset can be a database, an instance, or a bucket.
+         *
+         * @description You can call this operation to revoke the permissions on a data asset from Data Security Center (DSC).
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DeleteDataLimitRequest
+         * @return DeleteDataLimitResponse
          */
         public async Task<DeleteDataLimitResponse> DeleteDataLimitAsync(DeleteDataLimitRequest request)
         {
@@ -1047,6 +1113,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await DeleteDataLimitWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a custom sensitive data detection rule from Data Security Center (DSC).
+         *
+         * @param request DeleteRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRuleResponse
+         */
         public DeleteRuleResponse DeleteRuleWithOptions(DeleteRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1086,6 +1159,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DeleteRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a custom sensitive data detection rule from Data Security Center (DSC).
+         *
+         * @param request DeleteRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteRuleResponse
+         */
         public async Task<DeleteRuleResponse> DeleteRuleWithOptionsAsync(DeleteRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1125,18 +1205,35 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DeleteRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a custom sensitive data detection rule from Data Security Center (DSC).
+         *
+         * @param request DeleteRuleRequest
+         * @return DeleteRuleResponse
+         */
         public DeleteRuleResponse DeleteRule(DeleteRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteRuleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a custom sensitive data detection rule from Data Security Center (DSC).
+         *
+         * @param request DeleteRuleRequest
+         * @return DeleteRuleResponse
+         */
         public async Task<DeleteRuleResponse> DeleteRuleAsync(DeleteRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DescribeCategoryTemplateListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCategoryTemplateListResponse
+         */
         public DescribeCategoryTemplateListResponse DescribeCategoryTemplateListWithOptions(DescribeCategoryTemplateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1180,6 +1277,11 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeCategoryTemplateListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeCategoryTemplateListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCategoryTemplateListResponse
+         */
         public async Task<DescribeCategoryTemplateListResponse> DescribeCategoryTemplateListWithOptionsAsync(DescribeCategoryTemplateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1223,12 +1325,20 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeCategoryTemplateListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeCategoryTemplateListRequest
+         * @return DescribeCategoryTemplateListResponse
+         */
         public DescribeCategoryTemplateListResponse DescribeCategoryTemplateList(DescribeCategoryTemplateListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCategoryTemplateListWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DescribeCategoryTemplateListRequest
+         * @return DescribeCategoryTemplateListResponse
+         */
         public async Task<DescribeCategoryTemplateListResponse> DescribeCategoryTemplateListAsync(DescribeCategoryTemplateListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1236,13 +1346,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query rules in a classification template.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeCategoryTemplateRuleListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCategoryTemplateRuleListResponse
+         * @summary Queries rules in a classification template by page.
+         *
+         * @description You can call this operation to query rules in a classification template.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeCategoryTemplateRuleListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCategoryTemplateRuleListResponse
          */
         public DescribeCategoryTemplateRuleListResponse DescribeCategoryTemplateRuleListWithOptions(DescribeCategoryTemplateRuleListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1292,13 +1404,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query rules in a classification template.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeCategoryTemplateRuleListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCategoryTemplateRuleListResponse
+         * @summary Queries rules in a classification template by page.
+         *
+         * @description You can call this operation to query rules in a classification template.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeCategoryTemplateRuleListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCategoryTemplateRuleListResponse
          */
         public async Task<DescribeCategoryTemplateRuleListResponse> DescribeCategoryTemplateRuleListWithOptionsAsync(DescribeCategoryTemplateRuleListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1348,12 +1462,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query rules in a classification template.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeCategoryTemplateRuleListRequest
-          * @return DescribeCategoryTemplateRuleListResponse
+         * @summary Queries rules in a classification template by page.
+         *
+         * @description You can call this operation to query rules in a classification template.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeCategoryTemplateRuleListRequest
+         * @return DescribeCategoryTemplateRuleListResponse
          */
         public DescribeCategoryTemplateRuleListResponse DescribeCategoryTemplateRuleList(DescribeCategoryTemplateRuleListRequest request)
         {
@@ -1362,12 +1478,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query rules in a classification template.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeCategoryTemplateRuleListRequest
-          * @return DescribeCategoryTemplateRuleListResponse
+         * @summary Queries rules in a classification template by page.
+         *
+         * @description You can call this operation to query rules in a classification template.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeCategoryTemplateRuleListRequest
+         * @return DescribeCategoryTemplateRuleListResponse
          */
         public async Task<DescribeCategoryTemplateRuleListResponse> DescribeCategoryTemplateRuleListAsync(DescribeCategoryTemplateRuleListRequest request)
         {
@@ -1376,15 +1494,17 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.
-          * ## [](#)Precautions
-          * The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.
-          * ## [](#qps)Limits
-          * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeColumnsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeColumnsResponse
+         * @summary Queries data in the columns of the tables that Data Security Center (DSC) is authorized to access. The tables include the tables of MaxCompute and ApsaraDB RDS.
+         *
+         * @description You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.
+         * ## [](#)Precautions
+         * The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.
+         * ## [](#qps)Limits
+         * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeColumnsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeColumnsResponse
          */
         public DescribeColumnsResponse DescribeColumnsWithOptions(DescribeColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1462,15 +1582,17 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.
-          * ## [](#)Precautions
-          * The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.
-          * ## [](#qps)Limits
-          * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeColumnsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeColumnsResponse
+         * @summary Queries data in the columns of the tables that Data Security Center (DSC) is authorized to access. The tables include the tables of MaxCompute and ApsaraDB RDS.
+         *
+         * @description You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.
+         * ## [](#)Precautions
+         * The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.
+         * ## [](#qps)Limits
+         * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeColumnsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeColumnsResponse
          */
         public async Task<DescribeColumnsResponse> DescribeColumnsWithOptionsAsync(DescribeColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1548,14 +1670,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.
-          * ## [](#)Precautions
-          * The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.
-          * ## [](#qps)Limits
-          * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeColumnsRequest
-          * @return DescribeColumnsResponse
+         * @summary Queries data in the columns of the tables that Data Security Center (DSC) is authorized to access. The tables include the tables of MaxCompute and ApsaraDB RDS.
+         *
+         * @description You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.
+         * ## [](#)Precautions
+         * The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.
+         * ## [](#qps)Limits
+         * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeColumnsRequest
+         * @return DescribeColumnsResponse
          */
         public DescribeColumnsResponse DescribeColumns(DescribeColumnsRequest request)
         {
@@ -1564,14 +1688,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.
-          * ## [](#)Precautions
-          * The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.
-          * ## [](#qps)Limits
-          * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeColumnsRequest
-          * @return DescribeColumnsResponse
+         * @summary Queries data in the columns of the tables that Data Security Center (DSC) is authorized to access. The tables include the tables of MaxCompute and ApsaraDB RDS.
+         *
+         * @description You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.
+         * ## [](#)Precautions
+         * The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.
+         * ## [](#qps)Limits
+         * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeColumnsRequest
+         * @return DescribeColumnsResponse
          */
         public async Task<DescribeColumnsResponse> DescribeColumnsAsync(DescribeColumnsRequest request)
         {
@@ -1579,6 +1705,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await DescribeColumnsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询数据安全中心连接授权的MaxCompute、RDS等数据资产表中列的数据
+         *
+         * @param request DescribeColumnsV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeColumnsV2Response
+         */
         public DescribeColumnsV2Response DescribeColumnsV2WithOptions(DescribeColumnsV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1654,6 +1787,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeColumnsV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询数据安全中心连接授权的MaxCompute、RDS等数据资产表中列的数据
+         *
+         * @param request DescribeColumnsV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeColumnsV2Response
+         */
         public async Task<DescribeColumnsV2Response> DescribeColumnsV2WithOptionsAsync(DescribeColumnsV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1729,18 +1869,37 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeColumnsV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询数据安全中心连接授权的MaxCompute、RDS等数据资产表中列的数据
+         *
+         * @param request DescribeColumnsV2Request
+         * @return DescribeColumnsV2Response
+         */
         public DescribeColumnsV2Response DescribeColumnsV2(DescribeColumnsV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeColumnsV2WithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询数据安全中心连接授权的MaxCompute、RDS等数据资产表中列的数据
+         *
+         * @param request DescribeColumnsV2Request
+         * @return DescribeColumnsV2Response
+         */
         public async Task<DescribeColumnsV2Response> DescribeColumnsV2Async(DescribeColumnsV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeColumnsV2WithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries common configuration items for alerts.
+         *
+         * @param request DescribeConfigsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeConfigsResponse
+         */
         public DescribeConfigsResponse DescribeConfigsWithOptions(DescribeConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1768,6 +1927,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries common configuration items for alerts.
+         *
+         * @param request DescribeConfigsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeConfigsResponse
+         */
         public async Task<DescribeConfigsResponse> DescribeConfigsWithOptionsAsync(DescribeConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1795,18 +1961,37 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries common configuration items for alerts.
+         *
+         * @param request DescribeConfigsRequest
+         * @return DescribeConfigsResponse
+         */
         public DescribeConfigsResponse DescribeConfigs(DescribeConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeConfigsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries common configuration items for alerts.
+         *
+         * @param request DescribeConfigsRequest
+         * @return DescribeConfigsResponse
+         */
         public async Task<DescribeConfigsResponse> DescribeConfigsAsync(DescribeConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeConfigsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the sensitive data detection results of data assets that Data Security Center (DSC) is authorized to access.
+         *
+         * @param request DescribeDataAssetsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataAssetsResponse
+         */
         public DescribeDataAssetsResponse DescribeDataAssetsWithOptions(DescribeDataAssetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1858,6 +2043,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDataAssetsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the sensitive data detection results of data assets that Data Security Center (DSC) is authorized to access.
+         *
+         * @param request DescribeDataAssetsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataAssetsResponse
+         */
         public async Task<DescribeDataAssetsResponse> DescribeDataAssetsWithOptionsAsync(DescribeDataAssetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1909,18 +2101,37 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDataAssetsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the sensitive data detection results of data assets that Data Security Center (DSC) is authorized to access.
+         *
+         * @param request DescribeDataAssetsRequest
+         * @return DescribeDataAssetsResponse
+         */
         public DescribeDataAssetsResponse DescribeDataAssets(DescribeDataAssetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataAssetsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the sensitive data detection results of data assets that Data Security Center (DSC) is authorized to access.
+         *
+         * @param request DescribeDataAssetsRequest
+         * @return DescribeDataAssetsResponse
+         */
         public async Task<DescribeDataAssetsResponse> DescribeDataAssetsAsync(DescribeDataAssetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDataAssetsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of a data asset, such as a MaxCompute project, an ApsaraDB RDS database, or an Object Storage Service (OSS) bucket, that you authorize Data Security Center (DSC) to access.
+         *
+         * @param request DescribeDataLimitDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataLimitDetailResponse
+         */
         public DescribeDataLimitDetailResponse DescribeDataLimitDetailWithOptions(DescribeDataLimitDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1960,6 +2171,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDataLimitDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of a data asset, such as a MaxCompute project, an ApsaraDB RDS database, or an Object Storage Service (OSS) bucket, that you authorize Data Security Center (DSC) to access.
+         *
+         * @param request DescribeDataLimitDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataLimitDetailResponse
+         */
         public async Task<DescribeDataLimitDetailResponse> DescribeDataLimitDetailWithOptionsAsync(DescribeDataLimitDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1999,12 +2217,24 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDataLimitDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of a data asset, such as a MaxCompute project, an ApsaraDB RDS database, or an Object Storage Service (OSS) bucket, that you authorize Data Security Center (DSC) to access.
+         *
+         * @param request DescribeDataLimitDetailRequest
+         * @return DescribeDataLimitDetailResponse
+         */
         public DescribeDataLimitDetailResponse DescribeDataLimitDetail(DescribeDataLimitDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataLimitDetailWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of a data asset, such as a MaxCompute project, an ApsaraDB RDS database, or an Object Storage Service (OSS) bucket, that you authorize Data Security Center (DSC) to access.
+         *
+         * @param request DescribeDataLimitDetailRequest
+         * @return DescribeDataLimitDetailResponse
+         */
         public async Task<DescribeDataLimitDetailResponse> DescribeDataLimitDetailAsync(DescribeDataLimitDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2012,13 +2242,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the data assets that are authorized to be scanned. This facilitates resource search and aggregation.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataLimitSetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDataLimitSetResponse
+         * @summary Queries data assets, such as instances, databases, and Object Storage Service (OSS) buckets, that you authorize Data Security Center (DSC) to scan in a service.
+         *
+         * @description You can call this operation to query the data assets that are authorized to be scanned. This facilitates resource search and aggregation.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataLimitSetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataLimitSetResponse
          */
         public DescribeDataLimitSetResponse DescribeDataLimitSetWithOptions(DescribeDataLimitSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2060,13 +2292,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the data assets that are authorized to be scanned. This facilitates resource search and aggregation.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataLimitSetRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDataLimitSetResponse
+         * @summary Queries data assets, such as instances, databases, and Object Storage Service (OSS) buckets, that you authorize Data Security Center (DSC) to scan in a service.
+         *
+         * @description You can call this operation to query the data assets that are authorized to be scanned. This facilitates resource search and aggregation.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataLimitSetRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataLimitSetResponse
          */
         public async Task<DescribeDataLimitSetResponse> DescribeDataLimitSetWithOptionsAsync(DescribeDataLimitSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2108,12 +2342,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the data assets that are authorized to be scanned. This facilitates resource search and aggregation.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataLimitSetRequest
-          * @return DescribeDataLimitSetResponse
+         * @summary Queries data assets, such as instances, databases, and Object Storage Service (OSS) buckets, that you authorize Data Security Center (DSC) to scan in a service.
+         *
+         * @description You can call this operation to query the data assets that are authorized to be scanned. This facilitates resource search and aggregation.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataLimitSetRequest
+         * @return DescribeDataLimitSetResponse
          */
         public DescribeDataLimitSetResponse DescribeDataLimitSet(DescribeDataLimitSetRequest request)
         {
@@ -2122,12 +2358,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the data assets that are authorized to be scanned. This facilitates resource search and aggregation.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataLimitSetRequest
-          * @return DescribeDataLimitSetResponse
+         * @summary Queries data assets, such as instances, databases, and Object Storage Service (OSS) buckets, that you authorize Data Security Center (DSC) to scan in a service.
+         *
+         * @description You can call this operation to query the data assets that are authorized to be scanned. This facilitates resource search and aggregation.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataLimitSetRequest
+         * @return DescribeDataLimitSetResponse
          */
         public async Task<DescribeDataLimitSetResponse> DescribeDataLimitSetAsync(DescribeDataLimitSetRequest request)
         {
@@ -2135,6 +2373,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await DescribeDataLimitSetWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the data assets such as instances, databases, or buckets that Data Security Center (DSC) is authorized to access.
+         *
+         * @param request DescribeDataLimitsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataLimitsResponse
+         */
         public DescribeDataLimitsResponse DescribeDataLimitsWithOptions(DescribeDataLimitsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2218,6 +2463,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDataLimitsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the data assets such as instances, databases, or buckets that Data Security Center (DSC) is authorized to access.
+         *
+         * @param request DescribeDataLimitsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataLimitsResponse
+         */
         public async Task<DescribeDataLimitsResponse> DescribeDataLimitsWithOptionsAsync(DescribeDataLimitsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2301,12 +2553,24 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDataLimitsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the data assets such as instances, databases, or buckets that Data Security Center (DSC) is authorized to access.
+         *
+         * @param request DescribeDataLimitsRequest
+         * @return DescribeDataLimitsResponse
+         */
         public DescribeDataLimitsResponse DescribeDataLimits(DescribeDataLimitsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataLimitsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the data assets such as instances, databases, or buckets that Data Security Center (DSC) is authorized to access.
+         *
+         * @param request DescribeDataLimitsRequest
+         * @return DescribeDataLimitsResponse
+         */
         public async Task<DescribeDataLimitsResponse> DescribeDataLimitsAsync(DescribeDataLimitsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2314,13 +2578,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the execution information of a static de-identification task, including the status and progress.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataMaskingRunHistoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDataMaskingRunHistoryResponse
+         * @summary Queries the execution information about a de-identification task.
+         *
+         * @description You can call this operation to query the execution information of a static de-identification task, including the status and progress.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataMaskingRunHistoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataMaskingRunHistoryResponse
          */
         public DescribeDataMaskingRunHistoryResponse DescribeDataMaskingRunHistoryWithOptions(DescribeDataMaskingRunHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2390,13 +2656,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the execution information of a static de-identification task, including the status and progress.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataMaskingRunHistoryRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDataMaskingRunHistoryResponse
+         * @summary Queries the execution information about a de-identification task.
+         *
+         * @description You can call this operation to query the execution information of a static de-identification task, including the status and progress.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataMaskingRunHistoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataMaskingRunHistoryResponse
          */
         public async Task<DescribeDataMaskingRunHistoryResponse> DescribeDataMaskingRunHistoryWithOptionsAsync(DescribeDataMaskingRunHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2466,12 +2734,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the execution information of a static de-identification task, including the status and progress.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataMaskingRunHistoryRequest
-          * @return DescribeDataMaskingRunHistoryResponse
+         * @summary Queries the execution information about a de-identification task.
+         *
+         * @description You can call this operation to query the execution information of a static de-identification task, including the status and progress.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataMaskingRunHistoryRequest
+         * @return DescribeDataMaskingRunHistoryResponse
          */
         public DescribeDataMaskingRunHistoryResponse DescribeDataMaskingRunHistory(DescribeDataMaskingRunHistoryRequest request)
         {
@@ -2480,12 +2750,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the execution information of a static de-identification task, including the status and progress.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataMaskingRunHistoryRequest
-          * @return DescribeDataMaskingRunHistoryResponse
+         * @summary Queries the execution information about a de-identification task.
+         *
+         * @description You can call this operation to query the execution information of a static de-identification task, including the status and progress.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataMaskingRunHistoryRequest
+         * @return DescribeDataMaskingRunHistoryResponse
          */
         public async Task<DescribeDataMaskingRunHistoryResponse> DescribeDataMaskingRunHistoryAsync(DescribeDataMaskingRunHistoryRequest request)
         {
@@ -2494,13 +2766,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query static de-identification tasks. This facilitates task queries and management.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataMaskingTasksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDataMaskingTasksResponse
+         * @summary Queries de-identification tasks.
+         *
+         * @description You can call this operation to query static de-identification tasks. This facilitates task queries and management.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataMaskingTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataMaskingTasksResponse
          */
         public DescribeDataMaskingTasksResponse DescribeDataMaskingTasksWithOptions(DescribeDataMaskingTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2554,13 +2828,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query static de-identification tasks. This facilitates task queries and management.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataMaskingTasksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDataMaskingTasksResponse
+         * @summary Queries de-identification tasks.
+         *
+         * @description You can call this operation to query static de-identification tasks. This facilitates task queries and management.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataMaskingTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataMaskingTasksResponse
          */
         public async Task<DescribeDataMaskingTasksResponse> DescribeDataMaskingTasksWithOptionsAsync(DescribeDataMaskingTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2614,12 +2890,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query static de-identification tasks. This facilitates task queries and management.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataMaskingTasksRequest
-          * @return DescribeDataMaskingTasksResponse
+         * @summary Queries de-identification tasks.
+         *
+         * @description You can call this operation to query static de-identification tasks. This facilitates task queries and management.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataMaskingTasksRequest
+         * @return DescribeDataMaskingTasksResponse
          */
         public DescribeDataMaskingTasksResponse DescribeDataMaskingTasks(DescribeDataMaskingTasksRequest request)
         {
@@ -2628,12 +2906,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query static de-identification tasks. This facilitates task queries and management.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeDataMaskingTasksRequest
-          * @return DescribeDataMaskingTasksResponse
+         * @summary Queries de-identification tasks.
+         *
+         * @description You can call this operation to query static de-identification tasks. This facilitates task queries and management.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeDataMaskingTasksRequest
+         * @return DescribeDataMaskingTasksResponse
          */
         public async Task<DescribeDataMaskingTasksResponse> DescribeDataMaskingTasksAsync(DescribeDataMaskingTasksRequest request)
         {
@@ -2641,6 +2921,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await DescribeDataMaskingTasksWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查看数据对象列详情
+         *
+         * @param request DescribeDataObjectColumnDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataObjectColumnDetailResponse
+         */
         public DescribeDataObjectColumnDetailResponse DescribeDataObjectColumnDetailWithOptions(DescribeDataObjectColumnDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2692,6 +2979,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDataObjectColumnDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查看数据对象列详情
+         *
+         * @param request DescribeDataObjectColumnDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataObjectColumnDetailResponse
+         */
         public async Task<DescribeDataObjectColumnDetailResponse> DescribeDataObjectColumnDetailWithOptionsAsync(DescribeDataObjectColumnDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2743,18 +3037,37 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDataObjectColumnDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查看数据对象列详情
+         *
+         * @param request DescribeDataObjectColumnDetailRequest
+         * @return DescribeDataObjectColumnDetailResponse
+         */
         public DescribeDataObjectColumnDetailResponse DescribeDataObjectColumnDetail(DescribeDataObjectColumnDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataObjectColumnDetailWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查看数据对象列详情
+         *
+         * @param request DescribeDataObjectColumnDetailRequest
+         * @return DescribeDataObjectColumnDetailResponse
+         */
         public async Task<DescribeDataObjectColumnDetailResponse> DescribeDataObjectColumnDetailAsync(DescribeDataObjectColumnDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDataObjectColumnDetailWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查看数据对象列详情V2
+         *
+         * @param request DescribeDataObjectColumnDetailV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataObjectColumnDetailV2Response
+         */
         public DescribeDataObjectColumnDetailV2Response DescribeDataObjectColumnDetailV2WithOptions(DescribeDataObjectColumnDetailV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2806,6 +3119,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDataObjectColumnDetailV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查看数据对象列详情V2
+         *
+         * @param request DescribeDataObjectColumnDetailV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataObjectColumnDetailV2Response
+         */
         public async Task<DescribeDataObjectColumnDetailV2Response> DescribeDataObjectColumnDetailV2WithOptionsAsync(DescribeDataObjectColumnDetailV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2857,18 +3177,37 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDataObjectColumnDetailV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查看数据对象列详情V2
+         *
+         * @param request DescribeDataObjectColumnDetailV2Request
+         * @return DescribeDataObjectColumnDetailV2Response
+         */
         public DescribeDataObjectColumnDetailV2Response DescribeDataObjectColumnDetailV2(DescribeDataObjectColumnDetailV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataObjectColumnDetailV2WithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查看数据对象列详情V2
+         *
+         * @param request DescribeDataObjectColumnDetailV2Request
+         * @return DescribeDataObjectColumnDetailV2Response
+         */
         public async Task<DescribeDataObjectColumnDetailV2Response> DescribeDataObjectColumnDetailV2Async(DescribeDataObjectColumnDetailV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDataObjectColumnDetailV2WithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 分页查询数据目录对象
+         *
+         * @param request DescribeDataObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataObjectsResponse
+         */
         public DescribeDataObjectsResponse DescribeDataObjectsWithOptions(DescribeDataObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2960,6 +3299,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDataObjectsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 分页查询数据目录对象
+         *
+         * @param request DescribeDataObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDataObjectsResponse
+         */
         public async Task<DescribeDataObjectsResponse> DescribeDataObjectsWithOptionsAsync(DescribeDataObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3051,18 +3397,35 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDataObjectsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 分页查询数据目录对象
+         *
+         * @param request DescribeDataObjectsRequest
+         * @return DescribeDataObjectsResponse
+         */
         public DescribeDataObjectsResponse DescribeDataObjects(DescribeDataObjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDataObjectsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 分页查询数据目录对象
+         *
+         * @param request DescribeDataObjectsRequest
+         * @return DescribeDataObjectsResponse
+         */
         public async Task<DescribeDataObjectsResponse> DescribeDataObjectsAsync(DescribeDataObjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDataObjectsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DescribeDocTypesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDocTypesResponse
+         */
         public DescribeDocTypesResponse DescribeDocTypesWithOptions(DescribeDocTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3090,6 +3453,11 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDocTypesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeDocTypesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDocTypesResponse
+         */
         public async Task<DescribeDocTypesResponse> DescribeDocTypesWithOptionsAsync(DescribeDocTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3117,18 +3485,33 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeDocTypesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeDocTypesRequest
+         * @return DescribeDocTypesResponse
+         */
         public DescribeDocTypesResponse DescribeDocTypes(DescribeDocTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDocTypesWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DescribeDocTypesRequest
+         * @return DescribeDocTypesResponse
+         */
         public async Task<DescribeDocTypesResponse> DescribeDocTypesAsync(DescribeDocTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDocTypesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of an anomalous event. The details include the time when the anomalous event occurred, and the description and handling status of the anomalous event.
+         *
+         * @param request DescribeEventDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEventDetailResponse
+         */
         public DescribeEventDetailResponse DescribeEventDetailWithOptions(DescribeEventDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3160,6 +3543,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeEventDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of an anomalous event. The details include the time when the anomalous event occurred, and the description and handling status of the anomalous event.
+         *
+         * @param request DescribeEventDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEventDetailResponse
+         */
         public async Task<DescribeEventDetailResponse> DescribeEventDetailWithOptionsAsync(DescribeEventDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3191,18 +3581,37 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeEventDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of an anomalous event. The details include the time when the anomalous event occurred, and the description and handling status of the anomalous event.
+         *
+         * @param request DescribeEventDetailRequest
+         * @return DescribeEventDetailResponse
+         */
         public DescribeEventDetailResponse DescribeEventDetail(DescribeEventDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeEventDetailWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of an anomalous event. The details include the time when the anomalous event occurred, and the description and handling status of the anomalous event.
+         *
+         * @param request DescribeEventDetailRequest
+         * @return DescribeEventDetailResponse
+         */
         public async Task<DescribeEventDetailResponse> DescribeEventDetailAsync(DescribeEventDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeEventDetailWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the types of anomalous events.
+         *
+         * @param request DescribeEventTypesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEventTypesResponse
+         */
         public DescribeEventTypesResponse DescribeEventTypesWithOptions(DescribeEventTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3246,6 +3655,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeEventTypesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the types of anomalous events.
+         *
+         * @param request DescribeEventTypesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEventTypesResponse
+         */
         public async Task<DescribeEventTypesResponse> DescribeEventTypesWithOptionsAsync(DescribeEventTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3289,12 +3705,24 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeEventTypesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the types of anomalous events.
+         *
+         * @param request DescribeEventTypesRequest
+         * @return DescribeEventTypesResponse
+         */
         public DescribeEventTypesResponse DescribeEventTypes(DescribeEventTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeEventTypesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the types of anomalous events.
+         *
+         * @param request DescribeEventTypesRequest
+         * @return DescribeEventTypesResponse
+         */
         public async Task<DescribeEventTypesResponse> DescribeEventTypesAsync(DescribeEventTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3302,13 +3730,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query anomalous events that may involve data leaks. This helps you search for and handle anomalous events.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeEventsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeEventsResponse
+         * @summary Queries anomalous events.
+         *
+         * @description You can call this operation to query anomalous events that may involve data leaks. This helps you search for and handle anomalous events.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEventsResponse
          */
         public DescribeEventsResponse DescribeEventsWithOptions(DescribeEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3398,13 +3828,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query anomalous events that may involve data leaks. This helps you search for and handle anomalous events.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeEventsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeEventsResponse
+         * @summary Queries anomalous events.
+         *
+         * @description You can call this operation to query anomalous events that may involve data leaks. This helps you search for and handle anomalous events.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeEventsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEventsResponse
          */
         public async Task<DescribeEventsResponse> DescribeEventsWithOptionsAsync(DescribeEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3494,12 +3926,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query anomalous events that may involve data leaks. This helps you search for and handle anomalous events.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeEventsRequest
-          * @return DescribeEventsResponse
+         * @summary Queries anomalous events.
+         *
+         * @description You can call this operation to query anomalous events that may involve data leaks. This helps you search for and handle anomalous events.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeEventsRequest
+         * @return DescribeEventsResponse
          */
         public DescribeEventsResponse DescribeEvents(DescribeEventsRequest request)
         {
@@ -3508,12 +3942,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query anomalous events that may involve data leaks. This helps you search for and handle anomalous events.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeEventsRequest
-          * @return DescribeEventsResponse
+         * @summary Queries anomalous events.
+         *
+         * @description You can call this operation to query anomalous events that may involve data leaks. This helps you search for and handle anomalous events.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeEventsRequest
+         * @return DescribeEventsResponse
          */
         public async Task<DescribeEventsResponse> DescribeEventsAsync(DescribeEventsRequest request)
         {
@@ -3522,14 +3958,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
-          * This operation is no longer used for the KMS console of the new version.
-          * # [](#qps-)QPS limits
-          * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstanceSourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceSourcesResponse
+         * @summary Queries a list of data assets.
+         *
+         * @description You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
+         * This operation is no longer used for the KMS console of the new version.
+         * # [](#qps-)QPS limits
+         * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstanceSourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceSourcesResponse
          */
         public DescribeInstanceSourcesResponse DescribeInstanceSourcesWithOptions(DescribeInstanceSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3607,14 +4045,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
-          * This operation is no longer used for the KMS console of the new version.
-          * # [](#qps-)QPS limits
-          * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstanceSourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceSourcesResponse
+         * @summary Queries a list of data assets.
+         *
+         * @description You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
+         * This operation is no longer used for the KMS console of the new version.
+         * # [](#qps-)QPS limits
+         * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstanceSourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceSourcesResponse
          */
         public async Task<DescribeInstanceSourcesResponse> DescribeInstanceSourcesWithOptionsAsync(DescribeInstanceSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3692,13 +4132,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
-          * This operation is no longer used for the KMS console of the new version.
-          * # [](#qps-)QPS limits
-          * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstanceSourcesRequest
-          * @return DescribeInstanceSourcesResponse
+         * @summary Queries a list of data assets.
+         *
+         * @description You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
+         * This operation is no longer used for the KMS console of the new version.
+         * # [](#qps-)QPS limits
+         * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstanceSourcesRequest
+         * @return DescribeInstanceSourcesResponse
          */
         public DescribeInstanceSourcesResponse DescribeInstanceSources(DescribeInstanceSourcesRequest request)
         {
@@ -3707,13 +4149,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
-          * This operation is no longer used for the KMS console of the new version.
-          * # [](#qps-)QPS limits
-          * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstanceSourcesRequest
-          * @return DescribeInstanceSourcesResponse
+         * @summary Queries a list of data assets.
+         *
+         * @description You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
+         * This operation is no longer used for the KMS console of the new version.
+         * # [](#qps-)QPS limits
+         * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstanceSourcesRequest
+         * @return DescribeInstanceSourcesResponse
          */
         public async Task<DescribeInstanceSourcesResponse> DescribeInstanceSourcesAsync(DescribeInstanceSourcesRequest request)
         {
@@ -3722,13 +4166,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * When you call the DescribeInstances operation, you can specify parameters such as Name and RiskLevelId to query data assets that meet filter conditions.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstancesResponse
+         * @summary Queries data assets such as MaxCompute, ApsaraDB RDS, and Object Storage Service (OSS) that you authorize Data Security Center (DSC) to access.
+         *
+         * @description When you call the DescribeInstances operation, you can specify parameters such as Name and RiskLevelId to query data assets that meet filter conditions.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstancesResponse
          */
         public DescribeInstancesResponse DescribeInstancesWithOptions(DescribeInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3794,13 +4240,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * When you call the DescribeInstances operation, you can specify parameters such as Name and RiskLevelId to query data assets that meet filter conditions.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstancesResponse
+         * @summary Queries data assets such as MaxCompute, ApsaraDB RDS, and Object Storage Service (OSS) that you authorize Data Security Center (DSC) to access.
+         *
+         * @description When you call the DescribeInstances operation, you can specify parameters such as Name and RiskLevelId to query data assets that meet filter conditions.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstancesResponse
          */
         public async Task<DescribeInstancesResponse> DescribeInstancesWithOptionsAsync(DescribeInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3866,12 +4314,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * When you call the DescribeInstances operation, you can specify parameters such as Name and RiskLevelId to query data assets that meet filter conditions.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstancesRequest
-          * @return DescribeInstancesResponse
+         * @summary Queries data assets such as MaxCompute, ApsaraDB RDS, and Object Storage Service (OSS) that you authorize Data Security Center (DSC) to access.
+         *
+         * @description When you call the DescribeInstances operation, you can specify parameters such as Name and RiskLevelId to query data assets that meet filter conditions.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstancesRequest
+         * @return DescribeInstancesResponse
          */
         public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest request)
         {
@@ -3880,12 +4330,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * When you call the DescribeInstances operation, you can specify parameters such as Name and RiskLevelId to query data assets that meet filter conditions.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeInstancesRequest
-          * @return DescribeInstancesResponse
+         * @summary Queries data assets such as MaxCompute, ApsaraDB RDS, and Object Storage Service (OSS) that you authorize Data Security Center (DSC) to access.
+         *
+         * @description When you call the DescribeInstances operation, you can specify parameters such as Name and RiskLevelId to query data assets that meet filter conditions.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeInstancesRequest
+         * @return DescribeInstancesResponse
          */
         public async Task<DescribeInstancesResponse> DescribeInstancesAsync(DescribeInstancesRequest request)
         {
@@ -3894,15 +4346,17 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.
-          * ## [](#)Precautions
-          * The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.
-          * ## [](#qps)Limits
-          * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeOssObjectDetailRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeOssObjectDetailResponse
+         * @summary Queries the details of an Object Storage Service (OSS) object that Data Security Center (DSC) is authorized to access.
+         *
+         * @description You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.
+         * ## [](#)Precautions
+         * The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.
+         * ## [](#qps)Limits
+         * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeOssObjectDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeOssObjectDetailResponse
          */
         public DescribeOssObjectDetailResponse DescribeOssObjectDetailWithOptions(DescribeOssObjectDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3936,15 +4390,17 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.
-          * ## [](#)Precautions
-          * The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.
-          * ## [](#qps)Limits
-          * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeOssObjectDetailRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeOssObjectDetailResponse
+         * @summary Queries the details of an Object Storage Service (OSS) object that Data Security Center (DSC) is authorized to access.
+         *
+         * @description You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.
+         * ## [](#)Precautions
+         * The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.
+         * ## [](#qps)Limits
+         * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeOssObjectDetailRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeOssObjectDetailResponse
          */
         public async Task<DescribeOssObjectDetailResponse> DescribeOssObjectDetailWithOptionsAsync(DescribeOssObjectDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3978,14 +4434,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.
-          * ## [](#)Precautions
-          * The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.
-          * ## [](#qps)Limits
-          * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeOssObjectDetailRequest
-          * @return DescribeOssObjectDetailResponse
+         * @summary Queries the details of an Object Storage Service (OSS) object that Data Security Center (DSC) is authorized to access.
+         *
+         * @description You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.
+         * ## [](#)Precautions
+         * The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.
+         * ## [](#qps)Limits
+         * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeOssObjectDetailRequest
+         * @return DescribeOssObjectDetailResponse
          */
         public DescribeOssObjectDetailResponse DescribeOssObjectDetail(DescribeOssObjectDetailRequest request)
         {
@@ -3994,14 +4452,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.
-          * ## [](#)Precautions
-          * The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.
-          * ## [](#qps)Limits
-          * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeOssObjectDetailRequest
-          * @return DescribeOssObjectDetailResponse
+         * @summary Queries the details of an Object Storage Service (OSS) object that Data Security Center (DSC) is authorized to access.
+         *
+         * @description You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.
+         * ## [](#)Precautions
+         * The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.
+         * ## [](#qps)Limits
+         * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeOssObjectDetailRequest
+         * @return DescribeOssObjectDetailResponse
          */
         public async Task<DescribeOssObjectDetailResponse> DescribeOssObjectDetailAsync(DescribeOssObjectDetailRequest request)
         {
@@ -4009,6 +4469,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await DescribeOssObjectDetailWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 调用本接口查询数据安全中心连接授权的OSS的单个存储对象的详细信息
+         *
+         * @param request DescribeOssObjectDetailV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeOssObjectDetailV2Response
+         */
         public DescribeOssObjectDetailV2Response DescribeOssObjectDetailV2WithOptions(DescribeOssObjectDetailV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4040,6 +4507,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeOssObjectDetailV2Response>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 调用本接口查询数据安全中心连接授权的OSS的单个存储对象的详细信息
+         *
+         * @param request DescribeOssObjectDetailV2Request
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeOssObjectDetailV2Response
+         */
         public async Task<DescribeOssObjectDetailV2Response> DescribeOssObjectDetailV2WithOptionsAsync(DescribeOssObjectDetailV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4071,18 +4545,37 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeOssObjectDetailV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 调用本接口查询数据安全中心连接授权的OSS的单个存储对象的详细信息
+         *
+         * @param request DescribeOssObjectDetailV2Request
+         * @return DescribeOssObjectDetailV2Response
+         */
         public DescribeOssObjectDetailV2Response DescribeOssObjectDetailV2(DescribeOssObjectDetailV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeOssObjectDetailV2WithOptions(request, runtime);
         }
 
+        /**
+         * @summary 调用本接口查询数据安全中心连接授权的OSS的单个存储对象的详细信息
+         *
+         * @param request DescribeOssObjectDetailV2Request
+         * @return DescribeOssObjectDetailV2Response
+         */
         public async Task<DescribeOssObjectDetailV2Response> DescribeOssObjectDetailV2Async(DescribeOssObjectDetailV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeOssObjectDetailV2WithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries Object Storage Service (OSS) objects that you authorize Data Security Center (DSC) to access.
+         *
+         * @param request DescribeOssObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeOssObjectsResponse
+         */
         public DescribeOssObjectsResponse DescribeOssObjectsWithOptions(DescribeOssObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4154,6 +4647,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeOssObjectsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries Object Storage Service (OSS) objects that you authorize Data Security Center (DSC) to access.
+         *
+         * @param request DescribeOssObjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeOssObjectsResponse
+         */
         public async Task<DescribeOssObjectsResponse> DescribeOssObjectsWithOptionsAsync(DescribeOssObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4225,12 +4725,24 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeOssObjectsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries Object Storage Service (OSS) objects that you authorize Data Security Center (DSC) to access.
+         *
+         * @param request DescribeOssObjectsRequest
+         * @return DescribeOssObjectsResponse
+         */
         public DescribeOssObjectsResponse DescribeOssObjects(DescribeOssObjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeOssObjectsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries Object Storage Service (OSS) objects that you authorize Data Security Center (DSC) to access.
+         *
+         * @param request DescribeOssObjectsRequest
+         * @return DescribeOssObjectsResponse
+         */
         public async Task<DescribeOssObjectsResponse> DescribeOssObjectsAsync(DescribeOssObjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4238,13 +4750,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query MaxCompute packages that are scanned by DSC. This helps you search for MaxCompute packages and view the summary of MaxCompute packages.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribePackagesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePackagesResponse
+         * @summary Queries information about the MaxCompute packages that Data Security Center (DSC) is authorized to access. The information includes the names of MaxCompute packages, the accounts of MaxCompute package owners, and the sensitivity levels of MaxCompute packages.
+         *
+         * @description You can call this operation to query MaxCompute packages that are scanned by DSC. This helps you search for MaxCompute packages and view the summary of MaxCompute packages.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribePackagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePackagesResponse
          */
         public DescribePackagesResponse DescribePackagesWithOptions(DescribePackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4302,13 +4816,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query MaxCompute packages that are scanned by DSC. This helps you search for MaxCompute packages and view the summary of MaxCompute packages.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribePackagesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePackagesResponse
+         * @summary Queries information about the MaxCompute packages that Data Security Center (DSC) is authorized to access. The information includes the names of MaxCompute packages, the accounts of MaxCompute package owners, and the sensitivity levels of MaxCompute packages.
+         *
+         * @description You can call this operation to query MaxCompute packages that are scanned by DSC. This helps you search for MaxCompute packages and view the summary of MaxCompute packages.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribePackagesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePackagesResponse
          */
         public async Task<DescribePackagesResponse> DescribePackagesWithOptionsAsync(DescribePackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4366,12 +4882,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query MaxCompute packages that are scanned by DSC. This helps you search for MaxCompute packages and view the summary of MaxCompute packages.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribePackagesRequest
-          * @return DescribePackagesResponse
+         * @summary Queries information about the MaxCompute packages that Data Security Center (DSC) is authorized to access. The information includes the names of MaxCompute packages, the accounts of MaxCompute package owners, and the sensitivity levels of MaxCompute packages.
+         *
+         * @description You can call this operation to query MaxCompute packages that are scanned by DSC. This helps you search for MaxCompute packages and view the summary of MaxCompute packages.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribePackagesRequest
+         * @return DescribePackagesResponse
          */
         public DescribePackagesResponse DescribePackages(DescribePackagesRequest request)
         {
@@ -4380,12 +4898,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query MaxCompute packages that are scanned by DSC. This helps you search for MaxCompute packages and view the summary of MaxCompute packages.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribePackagesRequest
-          * @return DescribePackagesResponse
+         * @summary Queries information about the MaxCompute packages that Data Security Center (DSC) is authorized to access. The information includes the names of MaxCompute packages, the accounts of MaxCompute package owners, and the sensitivity levels of MaxCompute packages.
+         *
+         * @description You can call this operation to query MaxCompute packages that are scanned by DSC. This helps you search for MaxCompute packages and view the summary of MaxCompute packages.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribePackagesRequest
+         * @return DescribePackagesResponse
          */
         public async Task<DescribePackagesResponse> DescribePackagesAsync(DescribePackagesRequest request)
         {
@@ -4393,6 +4913,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await DescribePackagesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取一级授权列表
+         *
+         * @param request DescribeParentInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParentInstanceResponse
+         */
         public DescribeParentInstanceResponse DescribeParentInstanceWithOptions(DescribeParentInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4464,6 +4991,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeParentInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取一级授权列表
+         *
+         * @param request DescribeParentInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParentInstanceResponse
+         */
         public async Task<DescribeParentInstanceResponse> DescribeParentInstanceWithOptionsAsync(DescribeParentInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4535,12 +5069,24 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeParentInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取一级授权列表
+         *
+         * @param request DescribeParentInstanceRequest
+         * @return DescribeParentInstanceResponse
+         */
         public DescribeParentInstanceResponse DescribeParentInstance(DescribeParentInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParentInstanceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 获取一级授权列表
+         *
+         * @param request DescribeParentInstanceRequest
+         * @return DescribeParentInstanceResponse
+         */
         public async Task<DescribeParentInstanceResponse> DescribeParentInstanceAsync(DescribeParentInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4548,13 +5094,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRiskLevelsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRiskLevelsResponse
+         * @summary Queries the sensitivity levels that are defined in a rule template provided by Data Security Center (DSC).
+         *
+         * @description You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRiskLevelsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRiskLevelsResponse
          */
         public DescribeRiskLevelsResponse DescribeRiskLevelsWithOptions(DescribeRiskLevelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4592,13 +5140,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRiskLevelsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRiskLevelsResponse
+         * @summary Queries the sensitivity levels that are defined in a rule template provided by Data Security Center (DSC).
+         *
+         * @description You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRiskLevelsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRiskLevelsResponse
          */
         public async Task<DescribeRiskLevelsResponse> DescribeRiskLevelsWithOptionsAsync(DescribeRiskLevelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4636,12 +5186,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRiskLevelsRequest
-          * @return DescribeRiskLevelsResponse
+         * @summary Queries the sensitivity levels that are defined in a rule template provided by Data Security Center (DSC).
+         *
+         * @description You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRiskLevelsRequest
+         * @return DescribeRiskLevelsResponse
          */
         public DescribeRiskLevelsResponse DescribeRiskLevels(DescribeRiskLevelsRequest request)
         {
@@ -4650,12 +5202,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeRiskLevelsRequest
-          * @return DescribeRiskLevelsResponse
+         * @summary Queries the sensitivity levels that are defined in a rule template provided by Data Security Center (DSC).
+         *
+         * @description You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeRiskLevelsRequest
+         * @return DescribeRiskLevelsResponse
          */
         public async Task<DescribeRiskLevelsResponse> DescribeRiskLevelsAsync(DescribeRiskLevelsRequest request)
         {
@@ -4663,6 +5217,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await DescribeRiskLevelsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries sensitive data detection rules.
+         *
+         * @param request DescribeRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRulesResponse
+         */
         public DescribeRulesResponse DescribeRulesWithOptions(DescribeRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4758,6 +5319,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries sensitive data detection rules.
+         *
+         * @param request DescribeRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRulesResponse
+         */
         public async Task<DescribeRulesResponse> DescribeRulesWithOptionsAsync(DescribeRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4853,12 +5421,24 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries sensitive data detection rules.
+         *
+         * @param request DescribeRulesRequest
+         * @return DescribeRulesResponse
+         */
         public DescribeRulesResponse DescribeRules(DescribeRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRulesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries sensitive data detection rules.
+         *
+         * @param request DescribeRulesRequest
+         * @return DescribeRulesResponse
+         */
         public async Task<DescribeRulesResponse> DescribeRulesAsync(DescribeRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4866,13 +5446,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * When you call the DescribeTables operation to query tables, you can specify parameters such as Name and RiskLevelId to filter tables.
-          * # Limits
-          * You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.
-          *
-          * @param request DescribeTablesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTablesResponse
+         * @summary Queries tables in data assets, such as MaxCompute projects and ApsaraDB RDS instances, that you authorize Data Security Center (DSC) to access.
+         *
+         * @description When you call the DescribeTables operation to query tables, you can specify parameters such as Name and RiskLevelId to filter tables.
+         * # Limits
+         * You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.
+         *
+         * @param request DescribeTablesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTablesResponse
          */
         public DescribeTablesResponse DescribeTablesWithOptions(DescribeTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4946,13 +5528,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * When you call the DescribeTables operation to query tables, you can specify parameters such as Name and RiskLevelId to filter tables.
-          * # Limits
-          * You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.
-          *
-          * @param request DescribeTablesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTablesResponse
+         * @summary Queries tables in data assets, such as MaxCompute projects and ApsaraDB RDS instances, that you authorize Data Security Center (DSC) to access.
+         *
+         * @description When you call the DescribeTables operation to query tables, you can specify parameters such as Name and RiskLevelId to filter tables.
+         * # Limits
+         * You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.
+         *
+         * @param request DescribeTablesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTablesResponse
          */
         public async Task<DescribeTablesResponse> DescribeTablesWithOptionsAsync(DescribeTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5026,12 +5610,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * When you call the DescribeTables operation to query tables, you can specify parameters such as Name and RiskLevelId to filter tables.
-          * # Limits
-          * You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.
-          *
-          * @param request DescribeTablesRequest
-          * @return DescribeTablesResponse
+         * @summary Queries tables in data assets, such as MaxCompute projects and ApsaraDB RDS instances, that you authorize Data Security Center (DSC) to access.
+         *
+         * @description When you call the DescribeTables operation to query tables, you can specify parameters such as Name and RiskLevelId to filter tables.
+         * # Limits
+         * You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.
+         *
+         * @param request DescribeTablesRequest
+         * @return DescribeTablesResponse
          */
         public DescribeTablesResponse DescribeTables(DescribeTablesRequest request)
         {
@@ -5040,12 +5626,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * When you call the DescribeTables operation to query tables, you can specify parameters such as Name and RiskLevelId to filter tables.
-          * # Limits
-          * You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.
-          *
-          * @param request DescribeTablesRequest
-          * @return DescribeTablesResponse
+         * @summary Queries tables in data assets, such as MaxCompute projects and ApsaraDB RDS instances, that you authorize Data Security Center (DSC) to access.
+         *
+         * @description When you call the DescribeTables operation to query tables, you can specify parameters such as Name and RiskLevelId to filter tables.
+         * # Limits
+         * You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.
+         *
+         * @param request DescribeTablesRequest
+         * @return DescribeTablesResponse
          */
         public async Task<DescribeTablesResponse> DescribeTablesAsync(DescribeTablesRequest request)
         {
@@ -5053,6 +5641,11 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await DescribeTablesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request DescribeTemplateAllRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTemplateAllRulesResponse
+         */
         public DescribeTemplateAllRulesResponse DescribeTemplateAllRulesWithOptions(DescribeTemplateAllRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5088,6 +5681,11 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeTemplateAllRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeTemplateAllRulesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTemplateAllRulesResponse
+         */
         public async Task<DescribeTemplateAllRulesResponse> DescribeTemplateAllRulesWithOptionsAsync(DescribeTemplateAllRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5123,12 +5721,20 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<DescribeTemplateAllRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request DescribeTemplateAllRulesRequest
+         * @return DescribeTemplateAllRulesResponse
+         */
         public DescribeTemplateAllRulesResponse DescribeTemplateAllRules(DescribeTemplateAllRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTemplateAllRulesWithOptions(request, runtime);
         }
 
+        /**
+         * @param request DescribeTemplateAllRulesRequest
+         * @return DescribeTemplateAllRulesResponse
+         */
         public async Task<DescribeTemplateAllRulesResponse> DescribeTemplateAllRulesAsync(DescribeTemplateAllRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5136,13 +5742,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the information about the current account. This helps you get familiar with your account that accesses Data Security Center (DSC).
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeUserStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserStatusResponse
+         * @summary Queries the information about an account.
+         *
+         * @description You can call this operation to query the information about the current account. This helps you get familiar with your account that accesses Data Security Center (DSC).
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeUserStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserStatusResponse
          */
         public DescribeUserStatusResponse DescribeUserStatusWithOptions(DescribeUserStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5176,13 +5784,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the information about the current account. This helps you get familiar with your account that accesses Data Security Center (DSC).
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeUserStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeUserStatusResponse
+         * @summary Queries the information about an account.
+         *
+         * @description You can call this operation to query the information about the current account. This helps you get familiar with your account that accesses Data Security Center (DSC).
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeUserStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeUserStatusResponse
          */
         public async Task<DescribeUserStatusResponse> DescribeUserStatusWithOptionsAsync(DescribeUserStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5216,12 +5826,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the information about the current account. This helps you get familiar with your account that accesses Data Security Center (DSC).
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeUserStatusRequest
-          * @return DescribeUserStatusResponse
+         * @summary Queries the information about an account.
+         *
+         * @description You can call this operation to query the information about the current account. This helps you get familiar with your account that accesses Data Security Center (DSC).
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeUserStatusRequest
+         * @return DescribeUserStatusResponse
          */
         public DescribeUserStatusResponse DescribeUserStatus(DescribeUserStatusRequest request)
         {
@@ -5230,12 +5842,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to query the information about the current account. This helps you get familiar with your account that accesses Data Security Center (DSC).
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DescribeUserStatusRequest
-          * @return DescribeUserStatusResponse
+         * @summary Queries the information about an account.
+         *
+         * @description You can call this operation to query the information about the current account. This helps you get familiar with your account that accesses Data Security Center (DSC).
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DescribeUserStatusRequest
+         * @return DescribeUserStatusResponse
          */
         public async Task<DescribeUserStatusResponse> DescribeUserStatusAsync(DescribeUserStatusRequest request)
         {
@@ -5244,13 +5858,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to disable a configuration item based on the code of the configuration item. This helps you modify configurations at the earliest opportunity.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DisableUserConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DisableUserConfigResponse
+         * @summary Disables a configuration item. After you disable a configuration item, you can call the CreateConfig operation to enable the configuration item by specifying the code of the configuration item for the Code parameter in the request.
+         *
+         * @description You can call this operation to disable a configuration item based on the code of the configuration item. This helps you modify configurations at the earliest opportunity.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DisableUserConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableUserConfigResponse
          */
         public DisableUserConfigResponse DisableUserConfigWithOptions(DisableUserConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5288,13 +5904,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to disable a configuration item based on the code of the configuration item. This helps you modify configurations at the earliest opportunity.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DisableUserConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DisableUserConfigResponse
+         * @summary Disables a configuration item. After you disable a configuration item, you can call the CreateConfig operation to enable the configuration item by specifying the code of the configuration item for the Code parameter in the request.
+         *
+         * @description You can call this operation to disable a configuration item based on the code of the configuration item. This helps you modify configurations at the earliest opportunity.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DisableUserConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DisableUserConfigResponse
          */
         public async Task<DisableUserConfigResponse> DisableUserConfigWithOptionsAsync(DisableUserConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5332,12 +5950,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to disable a configuration item based on the code of the configuration item. This helps you modify configurations at the earliest opportunity.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DisableUserConfigRequest
-          * @return DisableUserConfigResponse
+         * @summary Disables a configuration item. After you disable a configuration item, you can call the CreateConfig operation to enable the configuration item by specifying the code of the configuration item for the Code parameter in the request.
+         *
+         * @description You can call this operation to disable a configuration item based on the code of the configuration item. This helps you modify configurations at the earliest opportunity.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DisableUserConfigRequest
+         * @return DisableUserConfigResponse
          */
         public DisableUserConfigResponse DisableUserConfig(DisableUserConfigRequest request)
         {
@@ -5346,12 +5966,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to disable a configuration item based on the code of the configuration item. This helps you modify configurations at the earliest opportunity.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request DisableUserConfigRequest
-          * @return DisableUserConfigResponse
+         * @summary Disables a configuration item. After you disable a configuration item, you can call the CreateConfig operation to enable the configuration item by specifying the code of the configuration item for the Code parameter in the request.
+         *
+         * @description You can call this operation to disable a configuration item based on the code of the configuration item. This helps you modify configurations at the earliest opportunity.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request DisableUserConfigRequest
+         * @return DisableUserConfigResponse
          */
         public async Task<DisableUserConfigResponse> DisableUserConfigAsync(DisableUserConfigRequest request)
         {
@@ -5359,6 +5981,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await DisableUserConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Dynamically de-identifies sensitive data.
+         *
+         * @param request ExecDatamaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExecDatamaskResponse
+         */
         public ExecDatamaskResponse ExecDatamaskWithOptions(ExecDatamaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5398,6 +6027,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<ExecDatamaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Dynamically de-identifies sensitive data.
+         *
+         * @param request ExecDatamaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExecDatamaskResponse
+         */
         public async Task<ExecDatamaskResponse> ExecDatamaskWithOptionsAsync(ExecDatamaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5437,18 +6073,37 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<ExecDatamaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Dynamically de-identifies sensitive data.
+         *
+         * @param request ExecDatamaskRequest
+         * @return ExecDatamaskResponse
+         */
         public ExecDatamaskResponse ExecDatamask(ExecDatamaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExecDatamaskWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Dynamically de-identifies sensitive data.
+         *
+         * @param request ExecDatamaskRequest
+         * @return ExecDatamaskResponse
+         */
         public async Task<ExecDatamaskResponse> ExecDatamaskAsync(ExecDatamaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExecDatamaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Triggers a de-identification task.
+         *
+         * @param request ManualTriggerMaskingProcessRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ManualTriggerMaskingProcessResponse
+         */
         public ManualTriggerMaskingProcessResponse ManualTriggerMaskingProcessWithOptions(ManualTriggerMaskingProcessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5480,6 +6135,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<ManualTriggerMaskingProcessResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Triggers a de-identification task.
+         *
+         * @param request ManualTriggerMaskingProcessRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ManualTriggerMaskingProcessResponse
+         */
         public async Task<ManualTriggerMaskingProcessResponse> ManualTriggerMaskingProcessWithOptionsAsync(ManualTriggerMaskingProcessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5511,18 +6173,37 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<ManualTriggerMaskingProcessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Triggers a de-identification task.
+         *
+         * @param request ManualTriggerMaskingProcessRequest
+         * @return ManualTriggerMaskingProcessResponse
+         */
         public ManualTriggerMaskingProcessResponse ManualTriggerMaskingProcess(ManualTriggerMaskingProcessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ManualTriggerMaskingProcessWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Triggers a de-identification task.
+         *
+         * @param request ManualTriggerMaskingProcessRequest
+         * @return ManualTriggerMaskingProcessResponse
+         */
         public async Task<ManualTriggerMaskingProcessResponse> ManualTriggerMaskingProcessAsync(ManualTriggerMaskingProcessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ManualTriggerMaskingProcessWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies configuration items for a data asset that you authorize Data Security Center (DSC) to access.
+         *
+         * @param request ModifyDataLimitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDataLimitResponse
+         */
         public ModifyDataLimitResponse ModifyDataLimitWithOptions(ModifyDataLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5614,6 +6295,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<ModifyDataLimitResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies configuration items for a data asset that you authorize Data Security Center (DSC) to access.
+         *
+         * @param request ModifyDataLimitRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDataLimitResponse
+         */
         public async Task<ModifyDataLimitResponse> ModifyDataLimitWithOptionsAsync(ModifyDataLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5705,12 +6393,24 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<ModifyDataLimitResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies configuration items for a data asset that you authorize Data Security Center (DSC) to access.
+         *
+         * @param request ModifyDataLimitRequest
+         * @return ModifyDataLimitResponse
+         */
         public ModifyDataLimitResponse ModifyDataLimit(ModifyDataLimitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDataLimitWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies configuration items for a data asset that you authorize Data Security Center (DSC) to access.
+         *
+         * @param request ModifyDataLimitRequest
+         * @return ModifyDataLimitResponse
+         */
         public async Task<ModifyDataLimitResponse> ModifyDataLimitAsync(ModifyDataLimitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5718,13 +6418,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to modify the sensitivity levels of data. This helps you manage the sensitivity levels.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyDefaultLevelRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDefaultLevelResponse
+         * @summary Changes the sensitivity levels of sensitive data. You can change the default sensitivity levels of data that cannot be classified as sensitive or insensitive, and the sensitivity levels of data that can be classified as sensitive.
+         *
+         * @description You can call this operation to modify the sensitivity levels of data. This helps you manage the sensitivity levels.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyDefaultLevelRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDefaultLevelResponse
          */
         public ModifyDefaultLevelResponse ModifyDefaultLevelWithOptions(ModifyDefaultLevelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5762,13 +6464,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to modify the sensitivity levels of data. This helps you manage the sensitivity levels.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyDefaultLevelRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDefaultLevelResponse
+         * @summary Changes the sensitivity levels of sensitive data. You can change the default sensitivity levels of data that cannot be classified as sensitive or insensitive, and the sensitivity levels of data that can be classified as sensitive.
+         *
+         * @description You can call this operation to modify the sensitivity levels of data. This helps you manage the sensitivity levels.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyDefaultLevelRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDefaultLevelResponse
          */
         public async Task<ModifyDefaultLevelResponse> ModifyDefaultLevelWithOptionsAsync(ModifyDefaultLevelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5806,12 +6510,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to modify the sensitivity levels of data. This helps you manage the sensitivity levels.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyDefaultLevelRequest
-          * @return ModifyDefaultLevelResponse
+         * @summary Changes the sensitivity levels of sensitive data. You can change the default sensitivity levels of data that cannot be classified as sensitive or insensitive, and the sensitivity levels of data that can be classified as sensitive.
+         *
+         * @description You can call this operation to modify the sensitivity levels of data. This helps you manage the sensitivity levels.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyDefaultLevelRequest
+         * @return ModifyDefaultLevelResponse
          */
         public ModifyDefaultLevelResponse ModifyDefaultLevel(ModifyDefaultLevelRequest request)
         {
@@ -5820,12 +6526,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to modify the sensitivity levels of data. This helps you manage the sensitivity levels.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyDefaultLevelRequest
-          * @return ModifyDefaultLevelResponse
+         * @summary Changes the sensitivity levels of sensitive data. You can change the default sensitivity levels of data that cannot be classified as sensitive or insensitive, and the sensitivity levels of data that can be classified as sensitive.
+         *
+         * @description You can call this operation to modify the sensitivity levels of data. This helps you manage the sensitivity levels.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyDefaultLevelRequest
+         * @return ModifyDefaultLevelResponse
          */
         public async Task<ModifyDefaultLevelResponse> ModifyDefaultLevelAsync(ModifyDefaultLevelRequest request)
         {
@@ -5834,13 +6542,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to handle anomalous events that involve data leaks. This helps protect your data assets at the earliest opportunity.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyEventStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyEventStatusResponse
+         * @summary Handles an anomalous event.
+         *
+         * @description You can call this operation to handle anomalous events that involve data leaks. This helps protect your data assets at the earliest opportunity.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyEventStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyEventStatusResponse
          */
         public ModifyEventStatusResponse ModifyEventStatusWithOptions(ModifyEventStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5886,13 +6596,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to handle anomalous events that involve data leaks. This helps protect your data assets at the earliest opportunity.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyEventStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyEventStatusResponse
+         * @summary Handles an anomalous event.
+         *
+         * @description You can call this operation to handle anomalous events that involve data leaks. This helps protect your data assets at the earliest opportunity.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyEventStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyEventStatusResponse
          */
         public async Task<ModifyEventStatusResponse> ModifyEventStatusWithOptionsAsync(ModifyEventStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5938,12 +6650,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to handle anomalous events that involve data leaks. This helps protect your data assets at the earliest opportunity.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyEventStatusRequest
-          * @return ModifyEventStatusResponse
+         * @summary Handles an anomalous event.
+         *
+         * @description You can call this operation to handle anomalous events that involve data leaks. This helps protect your data assets at the earliest opportunity.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyEventStatusRequest
+         * @return ModifyEventStatusResponse
          */
         public ModifyEventStatusResponse ModifyEventStatus(ModifyEventStatusRequest request)
         {
@@ -5952,12 +6666,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to handle anomalous events that involve data leaks. This helps protect your data assets at the earliest opportunity.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyEventStatusRequest
-          * @return ModifyEventStatusResponse
+         * @summary Handles an anomalous event.
+         *
+         * @description You can call this operation to handle anomalous events that involve data leaks. This helps protect your data assets at the earliest opportunity.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyEventStatusRequest
+         * @return ModifyEventStatusResponse
          */
         public async Task<ModifyEventStatusResponse> ModifyEventStatusAsync(ModifyEventStatusRequest request)
         {
@@ -5965,6 +6681,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await ModifyEventStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables the detection of anomalous events of subtypes.
+         *
+         * @param request ModifyEventTypeStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyEventTypeStatusResponse
+         */
         public ModifyEventTypeStatusResponse ModifyEventTypeStatusWithOptions(ModifyEventTypeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6000,6 +6723,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<ModifyEventTypeStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables the detection of anomalous events of subtypes.
+         *
+         * @param request ModifyEventTypeStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyEventTypeStatusResponse
+         */
         public async Task<ModifyEventTypeStatusResponse> ModifyEventTypeStatusWithOptionsAsync(ModifyEventTypeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6035,12 +6765,24 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<ModifyEventTypeStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables the detection of anomalous events of subtypes.
+         *
+         * @param request ModifyEventTypeStatusRequest
+         * @return ModifyEventTypeStatusResponse
+         */
         public ModifyEventTypeStatusResponse ModifyEventTypeStatus(ModifyEventTypeStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyEventTypeStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables the detection of anomalous events of subtypes.
+         *
+         * @param request ModifyEventTypeStatusRequest
+         * @return ModifyEventTypeStatusResponse
+         */
         public async Task<ModifyEventTypeStatusResponse> ModifyEventTypeStatusAsync(ModifyEventTypeStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6048,13 +6790,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to enable or disable the report task. After you activate Data Security Center (DSC), the report task is enabled by default. After you disable the report task, you cannot view statistics that are newly generated in the Report Center module, on the Overview page of the Cloud Native Data Audit module, and in the Data security lab module. Existing statistics are not affected.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyReportTaskStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyReportTaskStatusResponse
+         * @summary Enables or disables the report task.
+         *
+         * @description You can call this operation to enable or disable the report task. After you activate Data Security Center (DSC), the report task is enabled by default. After you disable the report task, you cannot view statistics that are newly generated in the Report Center module, on the Overview page of the Cloud Native Data Audit module, and in the Data security lab module. Existing statistics are not affected.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyReportTaskStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyReportTaskStatusResponse
          */
         public ModifyReportTaskStatusResponse ModifyReportTaskStatusWithOptions(ModifyReportTaskStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6092,13 +6836,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to enable or disable the report task. After you activate Data Security Center (DSC), the report task is enabled by default. After you disable the report task, you cannot view statistics that are newly generated in the Report Center module, on the Overview page of the Cloud Native Data Audit module, and in the Data security lab module. Existing statistics are not affected.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyReportTaskStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyReportTaskStatusResponse
+         * @summary Enables or disables the report task.
+         *
+         * @description You can call this operation to enable or disable the report task. After you activate Data Security Center (DSC), the report task is enabled by default. After you disable the report task, you cannot view statistics that are newly generated in the Report Center module, on the Overview page of the Cloud Native Data Audit module, and in the Data security lab module. Existing statistics are not affected.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyReportTaskStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyReportTaskStatusResponse
          */
         public async Task<ModifyReportTaskStatusResponse> ModifyReportTaskStatusWithOptionsAsync(ModifyReportTaskStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6136,12 +6882,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to enable or disable the report task. After you activate Data Security Center (DSC), the report task is enabled by default. After you disable the report task, you cannot view statistics that are newly generated in the Report Center module, on the Overview page of the Cloud Native Data Audit module, and in the Data security lab module. Existing statistics are not affected.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyReportTaskStatusRequest
-          * @return ModifyReportTaskStatusResponse
+         * @summary Enables or disables the report task.
+         *
+         * @description You can call this operation to enable or disable the report task. After you activate Data Security Center (DSC), the report task is enabled by default. After you disable the report task, you cannot view statistics that are newly generated in the Report Center module, on the Overview page of the Cloud Native Data Audit module, and in the Data security lab module. Existing statistics are not affected.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyReportTaskStatusRequest
+         * @return ModifyReportTaskStatusResponse
          */
         public ModifyReportTaskStatusResponse ModifyReportTaskStatus(ModifyReportTaskStatusRequest request)
         {
@@ -6150,12 +6898,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to enable or disable the report task. After you activate Data Security Center (DSC), the report task is enabled by default. After you disable the report task, you cannot view statistics that are newly generated in the Report Center module, on the Overview page of the Cloud Native Data Audit module, and in the Data security lab module. Existing statistics are not affected.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyReportTaskStatusRequest
-          * @return ModifyReportTaskStatusResponse
+         * @summary Enables or disables the report task.
+         *
+         * @description You can call this operation to enable or disable the report task. After you activate Data Security Center (DSC), the report task is enabled by default. After you disable the report task, you cannot view statistics that are newly generated in the Report Center module, on the Overview page of the Cloud Native Data Audit module, and in the Data security lab module. Existing statistics are not affected.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyReportTaskStatusRequest
+         * @return ModifyReportTaskStatusResponse
          */
         public async Task<ModifyReportTaskStatusResponse> ModifyReportTaskStatusAsync(ModifyReportTaskStatusRequest request)
         {
@@ -6164,13 +6914,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * When you call this operation, you must configure request parameters to specify the rule name, rule ID, and rule content.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyRuleResponse
+         * @summary Modifies a custom sensitive data detection rule in Data Security Center (DSC).
+         *
+         * @description When you call this operation, you must configure request parameters to specify the rule name, rule ID, and rule content.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyRuleResponse
          */
         public ModifyRuleResponse ModifyRuleWithOptions(ModifyRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6244,13 +6996,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * When you call this operation, you must configure request parameters to specify the rule name, rule ID, and rule content.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyRuleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyRuleResponse
+         * @summary Modifies a custom sensitive data detection rule in Data Security Center (DSC).
+         *
+         * @description When you call this operation, you must configure request parameters to specify the rule name, rule ID, and rule content.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyRuleResponse
          */
         public async Task<ModifyRuleResponse> ModifyRuleWithOptionsAsync(ModifyRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6324,12 +7078,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * When you call this operation, you must configure request parameters to specify the rule name, rule ID, and rule content.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyRuleRequest
-          * @return ModifyRuleResponse
+         * @summary Modifies a custom sensitive data detection rule in Data Security Center (DSC).
+         *
+         * @description When you call this operation, you must configure request parameters to specify the rule name, rule ID, and rule content.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyRuleRequest
+         * @return ModifyRuleResponse
          */
         public ModifyRuleResponse ModifyRule(ModifyRuleRequest request)
         {
@@ -6338,12 +7094,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * When you call this operation, you must configure request parameters to specify the rule name, rule ID, and rule content.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request ModifyRuleRequest
-          * @return ModifyRuleResponse
+         * @summary Modifies a custom sensitive data detection rule in Data Security Center (DSC).
+         *
+         * @description When you call this operation, you must configure request parameters to specify the rule name, rule ID, and rule content.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request ModifyRuleRequest
+         * @return ModifyRuleResponse
          */
         public async Task<ModifyRuleResponse> ModifyRuleAsync(ModifyRuleRequest request)
         {
@@ -6351,6 +7109,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await ModifyRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables a sensitive data detection rule.
+         *
+         * @param request ModifyRuleStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyRuleStatusResponse
+         */
         public ModifyRuleStatusResponse ModifyRuleStatusWithOptions(ModifyRuleStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6390,6 +7155,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<ModifyRuleStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables a sensitive data detection rule.
+         *
+         * @param request ModifyRuleStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyRuleStatusResponse
+         */
         public async Task<ModifyRuleStatusResponse> ModifyRuleStatusWithOptionsAsync(ModifyRuleStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6429,12 +7201,24 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return TeaModel.ToObject<ModifyRuleStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Enables or disables a sensitive data detection rule.
+         *
+         * @param request ModifyRuleStatusRequest
+         * @return ModifyRuleStatusResponse
+         */
         public ModifyRuleStatusResponse ModifyRuleStatus(ModifyRuleStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyRuleStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Enables or disables a sensitive data detection rule.
+         *
+         * @param request ModifyRuleStatusRequest
+         * @return ModifyRuleStatusResponse
+         */
         public async Task<ModifyRuleStatusResponse> ModifyRuleStatusAsync(ModifyRuleStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6442,13 +7226,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request StopMaskingProcessRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopMaskingProcessResponse
+         * @summary Stops a de-identification task. After you stop a de-identification task, you can resume the task by calling the ManualTriggerMaskingProcess operation.
+         *
+         * @description You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request StopMaskingProcessRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopMaskingProcessResponse
          */
         public StopMaskingProcessResponse StopMaskingProcessWithOptions(StopMaskingProcessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6482,13 +7268,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request StopMaskingProcessRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopMaskingProcessResponse
+         * @summary Stops a de-identification task. After you stop a de-identification task, you can resume the task by calling the ManualTriggerMaskingProcess operation.
+         *
+         * @description You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request StopMaskingProcessRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopMaskingProcessResponse
          */
         public async Task<StopMaskingProcessResponse> StopMaskingProcessWithOptionsAsync(StopMaskingProcessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6522,12 +7310,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request StopMaskingProcessRequest
-          * @return StopMaskingProcessResponse
+         * @summary Stops a de-identification task. After you stop a de-identification task, you can resume the task by calling the ManualTriggerMaskingProcess operation.
+         *
+         * @description You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request StopMaskingProcessRequest
+         * @return StopMaskingProcessResponse
          */
         public StopMaskingProcessResponse StopMaskingProcess(StopMaskingProcessRequest request)
         {
@@ -6536,12 +7326,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
         }
 
         /**
-          * You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.
-          * # Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-          *
-          * @param request StopMaskingProcessRequest
-          * @return StopMaskingProcessResponse
+         * @summary Stops a de-identification task. After you stop a de-identification task, you can resume the task by calling the ManualTriggerMaskingProcess operation.
+         *
+         * @description You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.
+         * # Limits
+         * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         *
+         * @param request StopMaskingProcessRequest
+         * @return StopMaskingProcessResponse
          */
         public async Task<StopMaskingProcessResponse> StopMaskingProcessAsync(StopMaskingProcessRequest request)
         {

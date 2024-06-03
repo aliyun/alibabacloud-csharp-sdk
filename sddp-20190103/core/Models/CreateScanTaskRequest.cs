@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
     public class CreateScanTaskRequest : TeaModel {
         /// <summary>
         /// The unique ID of the data asset, such as an instance, a database, and a bucket. You can call the [DescribeDataLimits](~~DescribeDataLimits~~) operation to query the unique ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataLimitId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         /// <summary>
         /// The interval between two consecutive custom scan tasks. Unit: days. Valid values: 1 to 2147483648.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IntervalDay")]
         [Validation(Required=false)]
@@ -49,6 +53,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         /// <summary>
         /// The type of the service to which the data assets to be scanned belong. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -56,6 +62,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         /// <summary>
         /// The time when the scan task is executed next time. Unit: hours.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RunHour")]
         [Validation(Required=false)]
@@ -63,6 +71,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         /// <summary>
         /// The time when the scan task is executed next time. Unit: minutes.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RunMinute")]
         [Validation(Required=false)]
@@ -75,6 +85,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// *   **1**: prefix match
         /// *   **2**: suffix match
         /// *   **3**: regular expression match
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]
@@ -82,6 +94,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         /// <summary>
         /// The data to be scanned in a structured data asset. Prefix match, suffix match, and regular expression match are supported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ScanRangeContent")]
         [Validation(Required=false)]
@@ -96,6 +110,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         /// <summary>
         /// The name of the scan task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

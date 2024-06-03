@@ -141,6 +141,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// *   **3**: AnalyticDB for MySQL
         /// *   **4** :Tablestore
         /// *   **5**: ApsaraDB RDS
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

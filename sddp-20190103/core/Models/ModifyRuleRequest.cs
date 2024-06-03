@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         /// <summary>
         /// The content of the sensitive data detection rule. You can specify a regular expression, an algorithm, or keywords that are used to match sensitive fields or text.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// The ID of the sensitive data detection rule.
         /// 
         /// You can call the [DescribeRules](~~DescribeRules~~) operation to obtain the rule ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -60,6 +64,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// The name of the sensitive data detection rule.
         /// 
         /// You can call the [DescribeRules](~~DescribeRules~~) operation to obtain the rule name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

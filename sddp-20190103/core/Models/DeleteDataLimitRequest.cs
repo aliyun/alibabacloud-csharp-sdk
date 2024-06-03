@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// The ID of the data asset.
         /// 
         /// You can call the DescribeDataLimits operation to query the IDs of data assets. The value of the Id response parameter indicates the ID of a data asset.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

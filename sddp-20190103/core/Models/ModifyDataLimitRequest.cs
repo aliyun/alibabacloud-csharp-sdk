@@ -52,6 +52,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// The unique ID of the data asset for which you want to modify configuration items.
         /// 
         /// > You can call the [DescribeDataLimits](~~DescribeDataLimits~~) operation to query the ID of the data asset.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -111,6 +113,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// *   **3**: AnalyticDB for MySQL
         /// *   **4**: Tablestore
         /// *   **5**: ApsaraDB RDS
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

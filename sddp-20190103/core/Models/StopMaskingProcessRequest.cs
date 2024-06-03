@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
     public class StopMaskingProcessRequest : TeaModel {
         /// <summary>
         /// The unique ID of the de-identification task. You can query the task ID by calling the [DescribeDataMaskingTasks](~~DescribeDataMaskingTasks~~) operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         /// <summary>
         /// The ID of the sensitive data detection rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

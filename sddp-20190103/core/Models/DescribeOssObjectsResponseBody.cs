@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public long? InstanceId { get; set; }
 
+            [NameInMap("LastModifiedTime")]
+            [Validation(Required=false)]
+            public long? LastModifiedTime { get; set; }
+
             /// <summary>
             /// The name of the OSS object.
             /// </summary>

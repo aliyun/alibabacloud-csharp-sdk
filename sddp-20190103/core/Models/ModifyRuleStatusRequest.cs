@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// 
         /// *   **0**: disables the sensitive data detection rule.
         /// *   **1**: enables the sensitive data detection rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

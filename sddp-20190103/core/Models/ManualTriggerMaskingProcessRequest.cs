@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// The ID of the de-identification task.
         /// 
         /// The ID of the de-identification task is a string. You can call the DescribeDataMaskingTasks operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// The ID of the anomalous event.
         /// 
         /// > You can call the **DescribeEvents** operation to query the ID of the anomalous event.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

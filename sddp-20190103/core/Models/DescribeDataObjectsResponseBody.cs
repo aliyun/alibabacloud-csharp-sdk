@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("LastModifiedTime")]
+            [Validation(Required=false)]
+            public long? LastModifiedTime { get; set; }
+
             [NameInMap("LastScanTime")]
             [Validation(Required=false)]
             public long? LastScanTime { get; set; }
