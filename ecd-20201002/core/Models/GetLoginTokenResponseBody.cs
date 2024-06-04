@@ -63,6 +63,20 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string NextStage { get; set; }
 
+        [NameInMap("PasswordStrategy")]
+        [Validation(Required=false)]
+        public GetLoginTokenResponseBodyPasswordStrategy PasswordStrategy { get; set; }
+        public class GetLoginTokenResponseBodyPasswordStrategy : TeaModel {
+            [NameInMap("TenantAlternativeChars")]
+            [Validation(Required=false)]
+            public List<string> TenantAlternativeChars { get; set; }
+
+            [NameInMap("TenantPasswordLength")]
+            [Validation(Required=false)]
+            public string TenantPasswordLength { get; set; }
+
+        }
+
         /// <summary>
         /// Enter the mobile number of the convenience user. For an AD user, null is returned.
         /// </summary>
@@ -85,6 +99,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [NameInMap("QrCodePng")]
         [Validation(Required=false)]
         public string QrCodePng { get; set; }
+
+        [NameInMap("Reason")]
+        [Validation(Required=false)]
+        public string Reason { get; set; }
 
         /// <summary>
         /// The ID of the request.

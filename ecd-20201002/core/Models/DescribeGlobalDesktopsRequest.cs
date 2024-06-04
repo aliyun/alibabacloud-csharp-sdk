@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class DescribeGlobalDesktopsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }
@@ -44,6 +47,9 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string LoginRegionId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("LoginToken")]
         [Validation(Required=false)]
         public string LoginToken { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class IsKeepAliveRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }

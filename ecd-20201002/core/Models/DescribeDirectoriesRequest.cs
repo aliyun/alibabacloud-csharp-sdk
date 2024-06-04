@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class DescribeDirectoriesRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public List<string> DirectoryId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

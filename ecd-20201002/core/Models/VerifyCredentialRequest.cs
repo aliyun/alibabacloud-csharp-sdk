@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class VerifyCredentialRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Credential")]
         [Validation(Required=false)]
         public string Credential { get; set; }
@@ -25,14 +31,23 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string EncryptedKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("LoginToken")]
         [Validation(Required=false)]
         public string LoginToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
