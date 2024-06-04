@@ -1,3 +1,9 @@
+2024-06-04 Version: 5.6.2
+- Update API CreateDIJob: update param ResourceSettings.
+- Update API GetDIJob: update response param.
+- Update API UpdateDIJob: update param ResourceSettings.
+
+
 2024-05-30 Version: 5.6.1
 - Update API GetNode: update response param.
 - Update API GetNodeChildren: update response param.

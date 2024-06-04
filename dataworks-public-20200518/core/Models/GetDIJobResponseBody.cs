@@ -157,6 +157,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 }
 
+                [NameInMap("RequestedCu")]
+                [Validation(Required=false)]
+                public float? RequestedCu { get; set; }
+
             }
 
             [NameInMap("RunStats")]

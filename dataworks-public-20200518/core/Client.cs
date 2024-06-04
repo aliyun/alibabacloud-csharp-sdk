@@ -18093,7 +18093,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform.
+         * @summary Queries the information about a migration task.
          *
          * @param request GetMigrationSummaryRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18131,7 +18131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform.
+         * @summary Queries the information about a migration task.
          *
          * @param request GetMigrationSummaryRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18169,7 +18169,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform.
+         * @summary Queries the information about a migration task.
          *
          * @param request GetMigrationSummaryRequest
          * @return GetMigrationSummaryResponse
@@ -18181,7 +18181,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform.
+         * @summary Queries the information about a migration task.
          *
          * @param request GetMigrationSummaryRequest
          * @return GetMigrationSummaryResponse
