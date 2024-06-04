@@ -431,6 +431,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string ReferenceId { get; set; }
 
+                [NameInMap("Snapshots")]
+                [Validation(Required=false)]
+                public string Snapshots { get; set; }
+
                 [NameInMap("Source")]
                 [Validation(Required=false)]
                 public string Source { get; set; }
