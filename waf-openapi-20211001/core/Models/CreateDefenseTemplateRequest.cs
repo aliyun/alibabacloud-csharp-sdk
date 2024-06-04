@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class CreateDefenseTemplateRequest : TeaModel {
         /// <summary>
         /// The scenario in which you want to use the protection rule template. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DefenseScene")]
         [Validation(Required=false)]
@@ -26,7 +28,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// The ID of the Web Application Firewall (WAF) instance.
         /// 
-        /// >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+        /// >  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -51,6 +55,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// The name of the protection rule template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// The origin of the protection rule template that you want to create. Set the value to **custom**. The value specifies that the protection rule template is a custom template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateOrigin")]
         [Validation(Required=false)]
@@ -68,6 +76,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// 
         /// *   **0:** disabled.
         /// *   **1:** enabled.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateStatus")]
         [Validation(Required=false)]
@@ -78,6 +88,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// 
         /// *   **user_default:** default template.
         /// *   **user_custom:** custom template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

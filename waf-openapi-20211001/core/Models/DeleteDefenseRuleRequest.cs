@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// The ID of the Web Application Firewall (WAF) instance.
         /// 
-        /// >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+        /// >  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// The IDs of the protection rules that you want to delete. Separate the IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// The ID of the protection rule template to which the protection rule that you want to delete belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

@@ -348,10 +348,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// Indicates whether WAF retries to forward requests when requests fail to be forwarded to the origin server. Valid values:
+            /// Indicates whether WAF retries when requests fail to be forwarded to the origin server. Valid values:
             /// 
-            /// *   **true:** WAF retries to forward requests. This is the default value.
-            /// *   **false:** WAF does not retry to forward requests.
+            /// *   **true:** WAF retries. This is the default value.
+            /// *   **false:** WAF does not retry.
             /// </summary>
             [NameInMap("Retry")]
             [Validation(Required=false)]

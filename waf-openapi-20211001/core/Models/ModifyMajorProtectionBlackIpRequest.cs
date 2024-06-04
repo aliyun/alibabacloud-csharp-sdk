@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// The time after which the IP address blacklist becomes invalid. Unit: seconds.
         /// 
         /// >  If you set this parameter to **0**, the blacklist is permanently valid.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
@@ -28,14 +30,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// The ID of the Web Application Firewall (WAF) instance.
         /// 
-        /// >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+        /// >  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The IP addresses that you want to add to the IP address blacklist. You can specify multiple CIDR blocks or IP addresses. IPv4 and IPv6 addresses are supported. Separate the CIDR blocks or IP addresses with commas (,). For more information, see [Protection for major events](~~425591~~).
+        /// The IP addresses that you want to add to the IP address blacklist. You can specify multiple CIDR blocks or IP addresses. IPv4 and IPv6 addresses are supported. Separate the CIDR blocks or IP addresses with commas (,). For more information, see [Protection for major events](https://help.aliyun.com/document_detail/425591.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IpList")]
         [Validation(Required=false)]
@@ -60,6 +66,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// The ID of the IP address blacklist rule for major event protection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
@@ -67,6 +75,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// The ID of the IP address blacklist rule template for major event protection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

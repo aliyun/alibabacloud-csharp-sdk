@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeInstanceResponseBodyDetails Details { get; set; }
         public class DescribeInstanceResponseBodyDetails : TeaModel {
             /// <summary>
-            /// The maximum number of IP addresses that can be added to the match content of a match condition. For more information, see [Match conditions](~~374354~~).
+            /// The maximum number of IP addresses that can be added to the match content of a match condition. For more information, see [Match conditions](https://help.aliyun.com/document_detail/374354.html).
             /// </summary>
             [NameInMap("AclRuleMaxIpCount")]
             [Validation(Required=false)]
@@ -257,14 +257,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Gslb { get; set; }
 
             /// <summary>
-            /// The HTTP port range that is supported. For more information, see [View supported ports](~~385578~~).
+            /// The HTTP port range that is supported. For more information, see [View supported ports](https://help.aliyun.com/document_detail/385578.html).
             /// </summary>
             [NameInMap("HttpPorts")]
             [Validation(Required=false)]
             public string HttpPorts { get; set; }
 
             /// <summary>
-            /// The HTTPS port range that is supported. For more information, see [View supported ports](~~385578~~).
+            /// The HTTPS port range that is supported. For more information, see [View supported ports](https://help.aliyun.com/document_detail/385578.html).
             /// </summary>
             [NameInMap("HttpsPorts")]
             [Validation(Required=false)]

@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public int? XffHeaderMode { get; set; }
 
                 /// <summary>
-                /// The custom header fields that are used to obtain the actual IP addresses of clients. The value is in the \["header1","header2",...] format.
+                /// The custom header fields that are used to obtain the actual IP addresses of clients. The value is in the ["header1","header2",...] format.
                 /// 
                 /// >  This parameter is returned only if the value of **XffHeaderMode** is 2.
                 /// </summary>

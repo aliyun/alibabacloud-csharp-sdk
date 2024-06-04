@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class ModifyHybridCloudClusterBypassStatusRequest : TeaModel {
         /// <summary>
         /// The ID of the hybrid cloud cluster.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClusterResourceId")]
         [Validation(Required=false)]
@@ -21,7 +23,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// 
         /// **
         /// 
-        /// **You can call the **DescribeInstanceInfo[ operation to obtain the ID of the WAF instance.](~~140857~~)
+        /// **You can call the **DescribeInstanceInfo[ operation to obtain the ID of the WAF instance.](https://help.aliyun.com/document_detail/140857.html)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// 
         /// *   **on**: enabled.
         /// *   **off**: disabled. This is the default value.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleStatus")]
         [Validation(Required=false)]
