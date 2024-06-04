@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public int? ExpireTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

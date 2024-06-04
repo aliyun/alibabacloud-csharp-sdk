@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class ListInstanceStatisticsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WorkspaceIds")]
         [Validation(Required=false)]
         public string WorkspaceIds { get; set; }

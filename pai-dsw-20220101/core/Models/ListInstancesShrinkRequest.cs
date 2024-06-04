@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
-    public class ListInstancesRequest : TeaModel {
+    public class ListInstancesShrinkRequest : TeaModel {
         [NameInMap("AcceleratorType")]
         [Validation(Required=false)]
         public string AcceleratorType { get; set; }
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         [NameInMap("Labels")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Labels { get; set; }
+        public string LabelsShrink { get; set; }
 
         [NameInMap("Order")]
         [Validation(Required=false)]

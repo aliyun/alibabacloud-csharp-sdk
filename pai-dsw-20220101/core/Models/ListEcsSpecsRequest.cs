@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class ListEcsSpecsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AcceleratorType")]
         [Validation(Required=false)]
         public string AcceleratorType { get; set; }
