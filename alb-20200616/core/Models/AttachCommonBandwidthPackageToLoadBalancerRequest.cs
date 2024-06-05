@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class AttachCommonBandwidthPackageToLoadBalancerRequest : TeaModel {
         /// <summary>
         /// The EIP bandwidth plan ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ALB instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -47,7 +51,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The region ID of the ALB instance.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

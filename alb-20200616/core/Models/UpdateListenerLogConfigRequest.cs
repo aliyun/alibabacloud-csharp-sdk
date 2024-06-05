@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// *   **false** (default)
             /// 
             /// > You can set this parameter to **true** only if the access log feature is enabled by specifying **AccessLogEnabled**.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("TracingEnabled")]
             [Validation(Required=false)]
@@ -85,6 +87,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ID of the Application Load Balancer (ALB) listener.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]

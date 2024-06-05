@@ -11,13 +11,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class ReplaceServersInServerGroupRequest : TeaModel {
         /// <summary>
         /// The backend servers that you want to add to the server group. You can specify up to 40 backend servers in each call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddedServers")]
         [Validation(Required=false)]
         public List<ReplaceServersInServerGroupRequestAddedServers> AddedServers { get; set; }
         public class ReplaceServersInServerGroupRequestAddedServers : TeaModel {
             /// <summary>
-            /// The description of the backend server. The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.
+            /// The description of the backend server. The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -36,7 +38,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// *   If the server group type is **Instance**, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
             /// *   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.
             /// 
-            /// > You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](~~213627~~) operation to query information about the server group type so that you can set ServerId to a proper value.
+            /// > You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](https://help.aliyun.com/document_detail/213627.html) operation to query information about the server group type so that you can set ServerId to a proper value.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
@@ -94,6 +98,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The backend servers that you want to remove.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RemovedServers")]
         [Validation(Required=false)]
@@ -112,7 +118,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// *   If the server group type is **Instance**, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
             /// *   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.
             /// 
-            /// > You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](~~213627~~) operation to query information about the server group type so that you can set ServerId to a proper value.
+            /// > You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](https://help.aliyun.com/document_detail/213627.html) operation to query information about the server group type so that you can set ServerId to a proper value.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
@@ -142,6 +150,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// The ID of the server group.
         /// 
         /// > You cannot perform this operation on a server group of the Function type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]

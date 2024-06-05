@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ALB instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// The mappings between zones and vSwitches.
         /// 
         /// >  You can remove only one zone in each call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
@@ -48,13 +52,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public class StartShiftLoadBalancerZonesRequestZoneMappings : TeaModel {
             /// <summary>
             /// The ID of the vSwitch in the zone. By default, each zone uses one vSwitch and one subnet.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The zone ID. You can call the [DescribeZones](~~189196~~) operation to query the most recent zone list.
+            /// The zone ID. You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the most recent zone list.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class ListAclEntriesRequest : TeaModel {
         /// <summary>
         /// The ACL ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The IDs of the resources from which you want to remove tags.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// *   **loadbalancer**: an Application Load Balancer (ALB) instance
         /// *   **securitypolicy**: a security policy
         /// *   **servergroup**: a server group
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

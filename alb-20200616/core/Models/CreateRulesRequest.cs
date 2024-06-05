@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The listener ID of the ALB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The forwarding rules. You can specify at most 10 forwarding rules in each call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -60,6 +64,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// The priority of the forwarding rule. Valid values: **1** to **10000**. A lower value specifies a higher priority. You can specify priorities for at most 10 forwarding rules.
             /// 
             /// >  The priority of each forwarding rule added to a listener must be unique.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
@@ -67,6 +73,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// The actions of the forwarding rule.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RuleActions")]
             [Validation(Required=false)]
@@ -156,7 +164,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string ContentType { get; set; }
 
                     /// <summary>
-                    /// The HTTP status code in the response. Valid values: **HTTP\_2xx**, **HTTP\_4xx**, and **HTTP\_5xx**. **x** must be a digit.
+                    /// The HTTP status code in the response. Valid values: **HTTP_2xx**, **HTTP_4xx**, and **HTTP_5xx**. **x** must be a digit.
                     /// </summary>
                     [NameInMap("HttpCode")]
                     [Validation(Required=false)]
@@ -233,7 +241,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public CreateRulesRequestRulesRuleActionsInsertHeaderConfig InsertHeaderConfig { get; set; }
                 public class CreateRulesRequestRulesRuleActionsInsertHeaderConfig : TeaModel {
                     /// <summary>
-                    /// The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The header key specified by **InsertHeaderConfig** must be unique.
+                    /// The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header key specified by **InsertHeaderConfig** must be unique.
                     /// 
                     /// >  You cannot specify the following header keys: `slb-id`, `slb-ip`, `x-forwarded-for`, `x-forwarded-proto`, `x-forwarded-eip`, `x-forwarded-port`, `x-forwarded-client-srcport`, `connection`, `upgrade`, `content-length`, `transfer-encoding`, `keep-alive`, `te`, `host`, `cookie`, `remoteip`, and `authority`. The header keys are case-insensitive.
                     /// </summary>
@@ -252,9 +260,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     ///     *   **SLBId**: the ID of the ALB instance.
                     ///     *   **SLBPort**: the listener port.
                     /// 
-                    /// *   If **ValueType** is set to **UserDefined**, a custom header value is supported. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. You can use asterisks (\*) and question marks (?) as wildcard characters. The header value cannot start or end with a space character.
+                    /// *   If **ValueType** is set to **UserDefined**, a custom header value is supported. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. You can use asterisks (\\*) and question marks (?) as wildcard characters. The header value cannot start or end with a space character.
                     /// 
-                    /// *   If **ValueType** is set to **ReferenceHeader**, you can reference one of the request headers. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, underscores (\_), and hyphens (-).
+                    /// *   If **ValueType** is set to **ReferenceHeader**, you can reference one of the request headers. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, underscores (_), and hyphens (-).
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -275,6 +283,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
                 /// <summary>
                 /// The priority of the action. Valid values: **1 to 50000**. A lower value indicates a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter is required. The priority of each action within a forwarding rule must be unique. You can specify priorities for at most 20 actions.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("Order")]
                 [Validation(Required=false)]
@@ -294,11 +304,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     /// 
                     /// *   Limits on the value:
                     /// 
-                    ///     *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\*) and question marks (?) can be used as wildcards.
+                    ///     *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\\*) and question marks (?) can be used as wildcards.
                     ///     *   The hostname contains at least one period (.) but does not start or end with a period (.).
                     ///     *   The rightmost domain label can contain only letters and wildcard characters. It does not contain digits or hyphens (-).
                     ///     *   The domain labels do not start or end with hyphens (-).
-                    ///     *   You can use asterisks (\*) and question marks (?) as wildcards anywhere in a domain label.
+                    ///     *   You can use asterisks (\\*) and question marks (?) as wildcards anywhere in a domain label.
                     /// </summary>
                     [NameInMap("Host")]
                     [Validation(Required=false)]
@@ -319,7 +329,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     /// *   Limits on the value:
                     /// 
                     ///     *   The path must be 1 to 128 characters in length.
-                    ///     *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ]^ , "`. You can use asterisks (\*) and question marks (?) as wildcard characters.
+                    ///     *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ]^ , "`. You can use asterisks (\\*) and question marks (?) as wildcard characters.
                     ///     *   The path is case-sensitive.
                     /// </summary>
                     [NameInMap("Path")]
@@ -356,7 +366,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     /// *   Limits on the value:
                     /// 
                     ///     *   The query string must be 1 to 128 characters in length.
-                    ///     *   It can contain printable characters, except space characters, the special characters `# [ ] { } \ | < > &`, and uppercase letters.
+                    ///     *   It can contain printable characters, except space characters, the special characters `# [ ] { } \\ | < > &`, and uppercase letters.
                     /// </summary>
                     [NameInMap("Query")]
                     [Validation(Required=false)]
@@ -397,10 +407,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     /// 
                     /// *   A custom value that meets the following requirements:
                     /// 
-                    ///     *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). You can use asterisks (\*) and question marks (?) as wildcard characters.
+                    ///     *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). You can use asterisks (\\*) and question marks (?) as wildcard characters.
                     ///     *   The hostname contains at least one period (.) but does not start or end with a period (.).
                     ///     *   The rightmost domain label can contain only letters and wildcard characters. It does not contain digits or hyphens (-).
-                    ///     *   The domain labels do not start or end with hyphens (-). You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.
+                    ///     *   The domain labels do not start or end with hyphens (-). You can use asterisks (\\*) and question marks (?) anywhere in a domain label as wildcard characters.
                     /// </summary>
                     [NameInMap("Host")]
                     [Validation(Required=false)]
@@ -414,7 +424,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     /// *   Limits on the value:
                     /// 
                     ///     *   The path must be 1 to 128 characters in length.
-                    ///     *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ]^ , "`. You can use asterisks (\*) and question marks (?) as wildcard characters.
+                    ///     *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ]^ , "`. You can use asterisks (\\*) and question marks (?) as wildcard characters.
                     ///     *   The path is case-sensitive.
                     /// </summary>
                     [NameInMap("Path")]
@@ -429,7 +439,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     /// *   Limits on the value:
                     /// 
                     ///     *   The query string must be 1 to 128 characters in length.
-                    ///     *   It can contain printable characters, except space characters, the special characters `# [ ] { } \ | < > &`, and uppercase letters.
+                    ///     *   It can contain printable characters, except space characters, the special characters `# [ ] { } \\ | < > &`, and uppercase letters.
                     /// </summary>
                     [NameInMap("Query")]
                     [Validation(Required=false)]
@@ -522,6 +532,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// 
                 /// *   **FinalType**: the last action to be performed in a forwarding rule. Each forwarding rule can contain only one FinalType action. You can specify a **ForwardGroup**, **Redirect**, or **FixedResponse** action as the FinalType action.
                 /// *   **ExtType**: one or more actions to be performed before the **FinalType** action. A forwarding rule can contain one or more **ExtType** actions. To specify an ExtType action, you must specify a **FinalType** action. You can specify multiple **InsertHeader** actions or one **Rewrite** action.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -531,6 +543,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// The conditions of the forwarding rule.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RuleConditions")]
             [Validation(Required=false)]
@@ -554,8 +568,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         /// The key of the cookie.
                         /// 
                         /// *   The key must be 1 to 100 characters in length.
-                        /// *   You can use asterisks (\*) and question marks (?) as wildcard characters.
-                        /// *   It can contain printable characters, except uppercase letters, space characters, and the following special characters: `; # [ ] { } \ | < > &`.
+                        /// *   You can use asterisks (\\*) and question marks (?) as wildcard characters.
+                        /// *   It can contain printable characters, except uppercase letters, space characters, and the following special characters: `; # [ ] { } \\ | < > &`.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
@@ -565,8 +579,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         /// The value of the cookie.
                         /// 
                         /// *   The value must be 1 to 100 characters in length.
-                        /// *   You can use asterisks (\*) and question marks (?) as wildcard characters.
-                        /// *   It can contain printable characters, except uppercase letters, space characters, and the following special characters: `; # [ ] { } \ | < > &`.
+                        /// *   You can use asterisks (\\*) and question marks (?) as wildcard characters.
+                        /// *   It can contain printable characters, except uppercase letters, space characters, and the following special characters: `; # [ ] { } \\ | < > &`.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -587,7 +601,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     /// The key of the header.
                     /// 
                     /// *   The key must be 1 to 40 characters in length.
-                    /// *   It can contain lowercase letters, digits, hyphens (-), and underscores (\_).
+                    /// *   It can contain lowercase letters, digits, hyphens (-), and underscores (_).
                     /// *   You cannot specify Cookie or Host.
                     /// </summary>
                     [NameInMap("Key")]
@@ -669,7 +683,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         /// They key of the query string.
                         /// 
                         /// *   It must be 1 to 100 characters in length.
-                        /// *   You can use asterisks (\*) and question marks (?) as wildcards. The key can contain printable characters, excluding uppercase letters, space characters, and the following special characters: `# [ ] { } \ | < > &`.
+                        /// *   You can use asterisks (\\*) and question marks (?) as wildcards. The key can contain printable characters, excluding uppercase letters, space characters, and the following special characters: `# [ ] { } \\ | < > &`.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
@@ -679,7 +693,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         /// The value of the query string.
                         /// 
                         /// *   The value must be 1 to 128 characters in length.
-                        /// *   It can contain printable characters, excluding uppercase letters, space characters, and the following special characters: `# [ ] { } \ | < > &`. You can use asterisks (\*) and question marks (?) as wildcards.
+                        /// *   It can contain printable characters, excluding uppercase letters, space characters, and the following special characters: `# [ ] { } \\ | < > &`. You can use asterisks (\\*) and question marks (?) as wildcards.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -700,7 +714,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     /// The key of the header.
                     /// 
                     /// *   The key must be 1 to 40 characters in length.
-                    /// *   It can contain lowercase letters, digits, hyphens (-), and underscores (\_).
+                    /// *   It can contain lowercase letters, digits, hyphens (-), and underscores (_).
                     /// *   You cannot specify Cookie or Host.
                     /// </summary>
                     [NameInMap("Key")]
@@ -760,6 +774,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// *   **SourceIp:**: Responses are forwarded based on source IP addresses.
                 /// *   **ResponseHeader**: Responses are forwarded based on HTTP response headers.
                 /// *   **ResponseStatusCode**: Responses are forwarded based on response status codes.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -771,7 +787,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// The name of the forwarding rule. You can name at most 20 forwarding rules.
             /// 
             /// *   The name must be 2 to 128 characters in length.
-            /// *   It can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+            /// *   It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]

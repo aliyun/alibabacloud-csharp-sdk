@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The template ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HealthCheckTemplateId")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The server group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]

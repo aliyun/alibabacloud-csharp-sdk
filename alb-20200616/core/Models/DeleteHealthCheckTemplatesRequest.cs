@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ID of the health check template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HealthCheckTemplateIds")]
         [Validation(Required=false)]

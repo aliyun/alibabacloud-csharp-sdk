@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ID of the server group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]

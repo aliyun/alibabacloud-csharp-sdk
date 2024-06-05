@@ -46,6 +46,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The configuration of health checks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HealthCheckConfig")]
         [Validation(Required=false)]
@@ -76,6 +78,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// *   **false**: disables the health check feature.
             /// 
             /// >  If the **ServerGroupType** parameter is set to **Instance** or **Ip**, the health check feature is enabled by default. If the **ServerGroupType** parameter is set to **Fc**, the health check feature is disabled by default.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("HealthCheckEnabled")]
             [Validation(Required=false)]
@@ -132,7 +136,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The path that is used for health checks.
             /// 
-            /// The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).
+            /// The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \\" , +`. The URL must start with a forward slash (/).
             /// 
             /// >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.
             /// </summary>
@@ -225,7 +229,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string Scheduler { get; set; }
 
         /// <summary>
-        /// The name of the server group. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name of the server group. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerGroupName")]
         [Validation(Required=false)]
@@ -359,6 +365,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public class CreateServerGroupRequestUchConfig : TeaModel {
             /// <summary>
             /// The type of the parameter.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -366,6 +374,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// The parameter value for consistent hashing.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

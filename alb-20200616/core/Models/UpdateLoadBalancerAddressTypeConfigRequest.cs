@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// 
         /// *   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
         /// *   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the virtual private cloud (VPC) where the ALB instance is deployed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddressType")]
         [Validation(Required=false)]
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ALB instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The ID of the zone where the ALB instance is deployed. You can specify up to 10 zone IDs.
             /// 
-            /// You can call the [DescribeZones](~~189196~~) operation to query the most recent zone list.
+            /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the most recent zone list.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The server group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The backend servers that you want to remove from the server group. You can specify up to 40 backend servers in each call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Servers")]
         [Validation(Required=false)]
@@ -60,7 +64,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// *   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.
             /// *   If the server group type is **Fc**, set the ServerId parameter to the ARN of a function specified in the server group.
             /// 
-            /// > You can call the [ListServerGroups](~~213627~~) operation to query information about the server group type so that you can set ServerId to a proper value.
+            /// > You can call the [ListServerGroups](https://help.aliyun.com/document_detail/213627.html) operation to query information about the server group type so that you can set ServerId to a proper value.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
@@ -81,6 +87,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// *   **Eci**
             /// *   **Ip**
             /// *   **Fc**
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ServerType")]
             [Validation(Required=false)]

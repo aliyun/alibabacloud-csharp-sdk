@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class DeleteAScriptsRequest : TeaModel {
         /// <summary>
         /// The AScript rule IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AScriptIds")]
         [Validation(Required=false)]

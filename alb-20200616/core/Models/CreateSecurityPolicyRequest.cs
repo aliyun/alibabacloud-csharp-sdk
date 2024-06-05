@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class CreateSecurityPolicyRequest : TeaModel {
         /// <summary>
         /// The supported cipher suites.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ciphers")]
         [Validation(Required=false)]
@@ -45,7 +47,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The name of the security policy.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityPolicyName")]
         [Validation(Required=false)]
@@ -53,6 +57,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The supported Transport Layer Security (TLS) protocol versions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TLSVersions")]
         [Validation(Required=false)]

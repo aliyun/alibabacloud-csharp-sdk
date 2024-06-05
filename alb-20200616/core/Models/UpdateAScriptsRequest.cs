@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public class UpdateAScriptsRequestAScripts : TeaModel {
             /// <summary>
             /// The AScript rule ID.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("AScriptId")]
             [Validation(Required=false)]
@@ -26,7 +28,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The name of the AScript rule.
             /// 
-            /// The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+            /// The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
             /// </summary>
             [NameInMap("AScriptName")]
             [Validation(Required=false)]

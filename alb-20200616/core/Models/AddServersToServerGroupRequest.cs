@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The server group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]
@@ -39,13 +41,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The backend servers that you want to add to the server group. You can specify up to 40 backend servers in each call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Servers")]
         [Validation(Required=false)]
         public List<AddServersToServerGroupRequestServers> Servers { get; set; }
         public class AddServersToServerGroupRequestServers : TeaModel {
             /// <summary>
-            /// The description of the backend server. The description must be 2 to 256 characters in length and can contain letters, digits, periods (.), underscores (\_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify up to 40 servers in each call.
+            /// The description of the backend server. The description must be 2 to 256 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify up to 40 servers in each call.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -80,6 +84,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// *   If ServerType is set to **Instance**, set the ServerId parameter to the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
             /// *   If ServerType is set to **Ip**, set the ServerId parameter to an IP address specified in the server group.
             /// *   If the backend server group is of the **Fc** type, set this parameter to the Alibaba Cloud Resource Name (ARN) of a function.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
@@ -102,6 +108,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// *   **Eci**
             /// *   **Ip**
             /// *   **fc**
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ServerType")]
             [Validation(Required=false)]

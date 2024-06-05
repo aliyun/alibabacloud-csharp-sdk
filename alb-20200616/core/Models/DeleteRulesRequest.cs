@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ID of the forwarding rule. Valid values of N: **1** to **5**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]

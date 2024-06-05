@@ -32,13 +32,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ID of the ALB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// The name of the ALB instance. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name of the ALB instance. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("LoadBalancerName")]
         [Validation(Required=false)]
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public UpdateLoadBalancerAttributeRequestModificationProtectionConfig ModificationProtectionConfig { get; set; }
         public class UpdateLoadBalancerAttributeRequestModificationProtectionConfig : TeaModel {
             /// <summary>
-            /// It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+            /// It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.
             /// 
             /// This parameter takes effect only when **ModificationProtectionStatus** is set to **ConsoleProtection**.
             /// </summary>

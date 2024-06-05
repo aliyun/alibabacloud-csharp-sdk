@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<ListAclEntriesResponseBodyAclEntries> AclEntries { get; set; }
         public class ListAclEntriesResponseBodyAclEntries : TeaModel {
             /// <summary>
-            /// The description of the ACL entry. The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
+            /// The description of the ACL entry. The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

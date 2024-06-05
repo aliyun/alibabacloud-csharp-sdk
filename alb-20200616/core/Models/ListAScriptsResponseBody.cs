@@ -87,6 +87,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// 
         /// *   If **NextToken** is empty, no next page exists.
         /// *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

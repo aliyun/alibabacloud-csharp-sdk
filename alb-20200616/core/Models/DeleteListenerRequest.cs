@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ID of the Application Load Balancer (ALB) listener.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]

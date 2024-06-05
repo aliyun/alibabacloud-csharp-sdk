@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The listener ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]

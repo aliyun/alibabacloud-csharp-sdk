@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The security policy ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityPolicyId")]
         [Validation(Required=false)]

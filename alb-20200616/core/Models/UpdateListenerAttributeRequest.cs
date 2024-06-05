@@ -75,6 +75,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public class UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig : TeaModel {
                 /// <summary>
                 /// The server groups to which requests are forwarded.
+                /// 
+                /// This parameter is required.
                 /// </summary>
                 [NameInMap("ServerGroupTuples")]
                 [Validation(Required=false)]
@@ -82,6 +84,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public class UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples : TeaModel {
                     /// <summary>
                     /// The server group to which requests are forwarded.
+                    /// 
+                    /// This parameter is required.
                     /// </summary>
                     [NameInMap("ServerGroupId")]
                     [Validation(Required=false)]
@@ -95,6 +99,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// The type of the action. You can specify only one action type.
             /// 
             /// Set the value to **ForwardGroup** to forward requests to multiple vServer groups.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -146,7 +152,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The name of the listener.
         /// 
-        /// The name must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.
+        /// The name must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -.
         /// </summary>
         [NameInMap("ListenerDescription")]
         [Validation(Required=false)]
@@ -154,6 +160,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ID of the Application Load Balancer (ALB) listener.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
@@ -217,7 +225,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The name of the custom header. This parameter takes effect only when the **XForwardedForClientCertClientVerifyEnabled** parameter is set to **true**.
             /// 
-            /// The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (\_), and digits.
+            /// The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (_), and digits.
             /// 
             /// > This parameter is available only when you create an HTTPS listener.
             /// </summary>
@@ -240,7 +248,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The name of the custom header. This parameter takes effect only when the **XForwardedForClientCertFingerprintEnabled** parameter is set to **true**.
             /// 
-            /// The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (\_), and digits.
+            /// The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (_), and digits.
             /// 
             /// > This parameter is available only when you create an HTTPS listener.
             /// </summary>
@@ -263,7 +271,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The name of the custom header. This parameter takes effect only when **XForwardedForClientCertIssuerDNEnabled** is set to **true**.
             /// 
-            /// The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (\_), and digits.
+            /// The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (_), and digits.
             /// 
             /// > This parameter is available only when you create an HTTPS listener.
             /// </summary>
@@ -286,7 +294,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The name of the custom header. This parameter takes effect only when **XForwardedForClientCertSubjectDNEnabled** is set to **true**.
             /// 
-            /// The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (\_), and digits.
+            /// The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (_), and digits.
             /// 
             /// > This parameter is available only when you create an HTTPS listener.
             /// </summary>

@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The HTTP status codes that are used to determine whether the backend server passes the health check.
         /// 
-        /// *   If **HealthCheckProtocol** is set to **HTTP**, **HealthCheckCodes** can be set to **http\_2xx** (default), **http\_3xx**, **http\_4xx**, and **http\_5xx**. Separate multiple HTTP status codes with a comma (,).
+        /// *   If **HealthCheckProtocol** is set to **HTTP**, **HealthCheckCodes** can be set to **http_2xx** (default), **http_3xx**, **http_4xx**, and **http_5xx**. Separate multiple HTTP status codes with a comma (,).
         /// *   If **HealthCheckProtocol** is set to **gRPC**, **HealthCheckCodes** can be set to **0 to 99**. Default value: **0**. Value ranges are supported. You can enter up to 20 value ranges and separate them with a comma (,).
         /// 
         /// > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The URL path that is used for health checks.
         /// 
-        /// The URL must be 1 to 80 characters in length and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URL can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`.
+        /// The URL must be 1 to 80 characters in length and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URL can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \\" , +`.
         /// 
         /// The URL must start with a forward slash (/).
         /// 
@@ -120,6 +120,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The template ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("HealthCheckTemplateId")]
         [Validation(Required=false)]
@@ -128,7 +130,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The name of the health check template.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("HealthCheckTemplateName")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class RemoveEntriesFromAclRequest : TeaModel {
         /// <summary>
         /// The ACL ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The entries that you want to remove. You can remove up to 20 entries in each call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Entries")]
         [Validation(Required=false)]

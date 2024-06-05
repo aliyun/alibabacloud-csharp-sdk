@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The security policy ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityPolicyId")]
         [Validation(Required=false)]
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The name of the security policy.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("SecurityPolicyName")]
         [Validation(Required=false)]

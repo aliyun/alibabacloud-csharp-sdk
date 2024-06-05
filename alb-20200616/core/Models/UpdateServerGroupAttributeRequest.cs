@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The path that is used for health checks.
             /// 
-            /// The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The path must start with a forward slash (`/`).
+            /// The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \\" , +`. The path must start with a forward slash (`/`).
             /// 
             /// > This parameter takes effect when the **HealthCheckEnabled** parameter is set to **true** and the **HealthCheckProtocol** parameter is set to **HTTP**.
             /// </summary>
@@ -202,6 +202,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The server group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]
@@ -210,7 +212,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The server group name.
         /// 
-        /// The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("ServerGroupName")]
         [Validation(Required=false)]
@@ -304,6 +306,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public class UpdateServerGroupAttributeRequestUchConfig : TeaModel {
             /// <summary>
             /// The type of the parameter.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -311,6 +315,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// The setting of consistent hashing.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

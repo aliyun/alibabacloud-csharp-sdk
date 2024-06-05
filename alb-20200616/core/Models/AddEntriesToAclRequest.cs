@@ -14,13 +14,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class AddEntriesToAclRequest : TeaModel {
         /// <summary>
         /// The IP entries that you want to add. You can add up to 20 IP entries in each call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<AddEntriesToAclRequestAclEntries> AclEntries { get; set; }
         public class AddEntriesToAclRequestAclEntries : TeaModel {
             /// <summary>
-            /// The description of the IP entry. The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.
+            /// The description of the IP entry. The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -.
             /// 
             /// You can add up to 20 IP entries in each call.
             /// </summary>
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// The CIDR block of the IP entry.
             /// 
             /// You can add up to 20 IP entries in each call.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Entry")]
             [Validation(Required=false)]
@@ -41,6 +45,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ACL ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]

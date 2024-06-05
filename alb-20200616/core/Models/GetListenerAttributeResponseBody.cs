@@ -386,7 +386,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The name of the custom header. This parameter takes effect only when **XForwardedForClientCertClientVerifyEnabled** is set to **true**.
             /// 
-            /// The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.
+            /// The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.
             /// 
             /// > This parameter is available only when you create an HTTPS listener.
             /// </summary>
@@ -409,7 +409,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The name of the custom header. This parameter takes effect only when **XForwardedForClientCertFingerprintEnabled** is set to **true**.
             /// 
-            /// The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.
+            /// The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.
             /// 
             /// > This parameter is available only when you create an HTTPS listener.
             /// </summary>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The name of the custom header. This parameter takes effect only when **XForwardedForClientCertIssuerDNEnabled** is set to **true**.
             /// 
-            /// The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.
+            /// The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.
             /// 
             /// > This parameter is available only when you create an HTTPS listener.
             /// </summary>
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The name of the custom header. This parameter takes effect only when **XForwardedForClientCertSubjectDNEnabled** is set to **true**.
             /// 
-            /// The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.
+            /// The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.
             /// 
             /// > This parameter is available only when you create an HTTPS listener.
             /// </summary>

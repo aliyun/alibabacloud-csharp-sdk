@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// The reason why deletion protection is enabled.
                 /// 
-                /// It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+                /// It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.
                 /// 
                 /// This parameter takes effect only when **ModificationProtectionStatus** is set to **ConsoleProtection**.
                 /// </summary>

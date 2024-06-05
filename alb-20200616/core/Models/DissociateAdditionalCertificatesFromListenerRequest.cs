@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class DissociateAdditionalCertificatesFromListenerRequest : TeaModel {
         /// <summary>
         /// The additional certificates.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Certificates")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public class DissociateAdditionalCertificatesFromListenerRequestCertificates : TeaModel {
             /// <summary>
             /// The certificate ID. Only server certificates are supported. You can specify up to 20 IDs.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("CertificateId")]
             [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The listener ID. You must specify the ID of an HTTPS listener or a QUIC listener.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]

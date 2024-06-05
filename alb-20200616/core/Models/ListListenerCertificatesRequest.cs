@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListListenerCertificatesRequest : TeaModel {
+        [NameInMap("CertificateIds")]
+        [Validation(Required=false)]
+        public List<string> CertificateIds { get; set; }
+
         /// <summary>
         /// The type of the certificate. Valid values: **Ca** and **Server**.
         /// </summary>
@@ -18,6 +22,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The listener ID. You must specify the ID of an HTTPS listener or a QUIC listener.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]

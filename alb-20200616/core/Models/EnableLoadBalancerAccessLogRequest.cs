@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ALB instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The project to which the access log is shipped.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LogProject")]
         [Validation(Required=false)]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The Logstore to which the access log is shipped.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LogStore")]
         [Validation(Required=false)]

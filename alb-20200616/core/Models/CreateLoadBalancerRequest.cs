@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// 
         /// *   **Internet:** The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. In this case, the ALB instance can be accessed over the Internet.
         /// *   **Intranet:** The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddressType")]
         [Validation(Required=false)]
@@ -72,6 +74,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The configuration of the billing method of the ALB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerBillingConfig")]
         [Validation(Required=false)]
@@ -88,6 +92,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// The billing method of the ALB instance.
             /// 
             /// Set the value to **PostPay**, which specifies the pay-as-you-go billing method.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("PayType")]
             [Validation(Required=false)]
@@ -101,6 +107,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// *   **Basic:** basic.
         /// *   **Standard:** standard.
         /// *   **StandardWithWaf:** WAF-enabled.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerEdition")]
         [Validation(Required=false)]
@@ -109,7 +117,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The name of the ALB instance.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("LoadBalancerName")]
         [Validation(Required=false)]
@@ -123,7 +131,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public CreateLoadBalancerRequestModificationProtectionConfig ModificationProtectionConfig { get; set; }
         public class CreateLoadBalancerRequestModificationProtectionConfig : TeaModel {
             /// <summary>
-            /// The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.
+            /// The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.
             /// 
             /// > This parameter takes effect only if `Status` is set to **ConsoleProtection**.
             /// </summary>
@@ -177,6 +185,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ID of the virtual private cloud (VPC) in which you want to create the ALB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
@@ -184,6 +194,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The zones and the vSwitches in the zones. You must specify at least two zones.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
@@ -205,6 +217,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 zones.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
@@ -213,7 +227,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The zone ID of the ALB instance. You can specify up to 10 zones for an ALB instance.
             /// 
-            /// You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+            /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

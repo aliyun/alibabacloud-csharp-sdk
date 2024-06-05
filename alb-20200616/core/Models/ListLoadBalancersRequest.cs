@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The ID of the zone where the ALB instance is deployed.
         /// 
-        /// You can call the [DescribeZones](~~189196~~) operation to query zones.
+        /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query zones.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

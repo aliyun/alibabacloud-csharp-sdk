@@ -11,13 +11,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class UpdateAclAttributeRequest : TeaModel {
         /// <summary>
         /// The ACL ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
         /// <summary>
-        /// The ACL name. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The ACL name. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclName")]
         [Validation(Required=false)]

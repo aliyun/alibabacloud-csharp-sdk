@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class DissociateAclsFromListenerRequest : TeaModel {
         /// <summary>
         /// The ACL IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The listener ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]

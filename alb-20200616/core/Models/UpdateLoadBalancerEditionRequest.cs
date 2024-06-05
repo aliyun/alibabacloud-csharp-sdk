@@ -36,6 +36,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// *   **Basic**: basic
         /// *   **Standard**: standard
         /// *   **StandardWithWaf**: WAF-enabled
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerEdition")]
         [Validation(Required=false)]
@@ -43,6 +45,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The ID of the ALB instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

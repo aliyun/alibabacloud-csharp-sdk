@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The name of the ALB instance.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("LoadBalancerName")]
         [Validation(Required=false)]
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string LockReason { get; set; }
 
             /// <summary>
-            /// The reason why the configuration read-only mode was enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.
+            /// The reason why the configuration read-only mode was enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.
             /// 
             /// This parameter is valid only if you set the **ModificationProtectionStatus** parameter to **ConsoleProtection**.
             /// </summary>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public GetLoadBalancerAttributeResponseBodyModificationProtectionConfig ModificationProtectionConfig { get; set; }
         public class GetLoadBalancerAttributeResponseBodyModificationProtectionConfig : TeaModel {
             /// <summary>
-            /// The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.
+            /// The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.
             /// 
             /// This parameter is valid only if **ModificationProtectionStatus** is set to **ConsoleProtection**.
             /// </summary>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The zone ID of the ALB instance.
         /// 
-        /// You can call the [DescribeZones](~~189196~~) operation to query the zones of the ALB instance.
+        /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the zones of the ALB instance.
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// The ID of the zone where the ALB instance was deployed.
                 /// 
-                /// You can call the [DescribeZones](~~189196~~) operation to query the zones of the ALB instance.
+                /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the zones of the ALB instance.
                 /// </summary>
                 [NameInMap("Address")]
                 [Validation(Required=false)]

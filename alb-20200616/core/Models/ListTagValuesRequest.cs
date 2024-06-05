@@ -47,6 +47,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
