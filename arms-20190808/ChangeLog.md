@@ -1,3 +1,6 @@
+2024-06-05 Version: 4.9.5
+- Generated csharp 2019-08-08 for ARMS.
+
 2024-05-30 Version: 4.9.4
 - Update API CreateEnvironment: add param GrafanaWorkspaceId.
 - Update API DescribeEnvironment: update response param.

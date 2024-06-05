@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string GrafanaWorkspaceDomain { get; set; }
 
+        [NameInMap("grafanaWorkspaceDomainStatus")]
+        [Validation(Required=false)]
+        public string GrafanaWorkspaceDomainStatus { get; set; }
+
         [NameInMap("grafanaWorkspaceEdition")]
         [Validation(Required=false)]
         public string GrafanaWorkspaceEdition { get; set; }
