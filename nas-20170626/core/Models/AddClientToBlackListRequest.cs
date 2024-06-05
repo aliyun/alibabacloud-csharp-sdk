@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class AddClientToBlackListRequest : TeaModel {
         /// <summary>
         /// The IP address of the client to add.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClientIP")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// This parameter ensures the idempotency of each request. A ClientToken is generated for each client. Make sure that each ClientToken is unique between different requests. The parameter can be a maximum of 64 characters in length and contain ASCII characters.
         /// 
         /// For more information, see [How to ensure idempotence](https://www.alibabacloud.com/help/doc-detail/25693.htm).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The ID of the file system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -37,6 +43,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The ID of the region where the file system resides.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

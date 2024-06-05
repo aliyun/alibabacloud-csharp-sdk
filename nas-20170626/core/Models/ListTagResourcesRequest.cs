@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The resource type. Set the value to filesystem.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

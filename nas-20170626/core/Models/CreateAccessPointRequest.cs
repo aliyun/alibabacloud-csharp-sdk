@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateAccessPointRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccessGroup")]
         [Validation(Required=false)]
         public string AccessGroup { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public bool? EnabledRam { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
@@ -53,10 +59,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string RootDirectory { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("VswId")]
         [Validation(Required=false)]
         public string VswId { get; set; }

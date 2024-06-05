@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class EnableRecycleBinRequest : TeaModel {
         /// <summary>
         /// The ID of the file system for which you want to enable the recycle bin feature.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]

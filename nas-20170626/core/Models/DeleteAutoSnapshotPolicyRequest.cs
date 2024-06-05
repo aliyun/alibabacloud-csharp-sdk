@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// The ID of the automatic snapshot policy.
         /// 
-        /// You can call the [DescribeAutoSnapshotPolicies](~~126583~~) operation to view available automatic snapshot policies.
+        /// You can call the [DescribeAutoSnapshotPolicies](https://help.aliyun.com/document_detail/126583.html) operation to view available automatic snapshot policies.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AutoSnapshotPolicyId")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// The ID of the automatic snapshot policy.
         /// 
         /// You can call the DescribeAutoSnapshotPolicies operation to view available automatic snapshot policies.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AutoSnapshotPolicyId")]
         [Validation(Required=false)]
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// 
         /// *   The name must be 2 to 128 characters in length.
         /// *   The name must start with a letter.
-        /// *   The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-). It cannot start with `http://` or `https://`.
+        /// *   The name can contain digits, letters, colons (:), underscores (_), and hyphens (-). It cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("AutoSnapshotPolicyName")]
         [Validation(Required=false)]
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// 
         /// Valid values:
         /// 
-        /// *   \-1 (default): Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.
+        /// *   \\-1 (default): Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.
         /// *   1 to 65536: Auto snapshots are retained for the specified number of days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.
         /// </summary>
         [NameInMap("RetentionDays")]

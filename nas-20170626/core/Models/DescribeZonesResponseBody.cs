@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                         /// 
                         /// *   If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.
                         /// *   If the FileSystemType parameter is set to extreme, the storage type is standard or advance.
-                        /// *   If the FileSystemType parameter is set to cpfs, the storage type is advance\_100 (100 MB/s/TiB baseline) or advance\_200 (200 MB/s/TiB baseline).
+                        /// *   If the FileSystemType parameter is set to cpfs, the storage type is advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).
                         /// 
                         /// > CPFS file systems are available only on the China site (aliyun.com).
                         /// </summary>

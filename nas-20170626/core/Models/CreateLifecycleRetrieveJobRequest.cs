@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class CreateLifecycleRetrieveJobRequest : TeaModel {
         /// <summary>
         /// The ID of the file system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The directories or files that you want to retrieve. You can specify a maximum of 10 paths.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Paths")]
         [Validation(Required=false)]

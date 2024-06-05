@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The ID of the file system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// An LDAP search base.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SearchBase")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// An LDAP URI.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("URI")]
         [Validation(Required=false)]

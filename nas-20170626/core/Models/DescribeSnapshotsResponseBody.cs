@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public int? EncryptType { get; set; }
 
+                [NameInMap("FileSystemType")]
+                [Validation(Required=false)]
+                public string FileSystemType { get; set; }
+
                 /// <summary>
                 /// The progress of the snapshot creation. The value of this parameter is expressed as a percentage.
                 /// </summary>
@@ -92,7 +96,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// 
                 /// Valid values:
                 /// 
-                /// *   \-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.
+                /// *   \\-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.
                 /// *   1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.
                 /// </summary>
                 [NameInMap("RetentionDays")]
@@ -114,6 +118,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [NameInMap("SnapshotName")]
                 [Validation(Required=false)]
                 public string SnapshotName { get; set; }
+
+                [NameInMap("SnapshotType")]
+                [Validation(Required=false)]
+                public string SnapshotType { get; set; }
 
                 /// <summary>
                 /// The ID of the source file system.

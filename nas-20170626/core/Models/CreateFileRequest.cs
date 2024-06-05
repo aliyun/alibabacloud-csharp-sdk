@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class CreateFileRequest : TeaModel {
         /// <summary>
         /// The ID of the file system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The absolute path of the directory or file. The path must start and end with a forward slash (/) and must be 2 to 1024 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// 
         /// *   File
         /// *   Directory
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

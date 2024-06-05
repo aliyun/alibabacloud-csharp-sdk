@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class DescribeAccessRulesRequest : TeaModel {
         /// <summary>
         /// The name of the permission group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccessGroupName")]
         [Validation(Required=false)]

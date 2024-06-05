@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public int? FileSystemNums { get; set; }
 
+                [NameInMap("FileSystemType")]
+                [Validation(Required=false)]
+                public string FileSystemType { get; set; }
+
                 /// <summary>
                 /// The region ID of the automatic snapshot policy.
                 /// </summary>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// 
                 /// Valid values:
                 /// 
-                /// *   \-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.
+                /// *   \\-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.
                 /// *   1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.
                 /// </summary>
                 [NameInMap("RetentionDays")]

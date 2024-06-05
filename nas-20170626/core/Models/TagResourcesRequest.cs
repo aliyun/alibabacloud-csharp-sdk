@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class TagResourcesRequest : TeaModel {
         /// <summary>
         /// The resource IDs. Valid values of N: 1 to 50.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The resource type. Set the value to filesystem.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The details about the tags.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -40,6 +46,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// *   The tag key must be 1 to 128 characters in length.
             /// *   The tag key cannot start with `aliyun` or `acs:`.
             /// *   The tag key cannot contain `http://` or `https://`.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// *   The tag value must be 1 to 128 characters in length.
             /// *   The tag value cannot start with `aliyun` or `acs:`.
             /// *   The tag value cannot contain `http://` or `https://`.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -416,7 +416,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// 
                 /// *   Valid values for General-purpose NAS file systems: Capacity and Performance.
                 /// *   Valid values for Extreme NAS file systems: standard and advance.
-                /// *   Valid values for CPFS file systems: advance\_100 (100 MB/s/TiB baseline) and advance\_200 (200 MB/s/TiB baseline).
+                /// *   Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).
                 /// 
                 /// > CPFS file systems are available only on the China site (aliyun.com).
                 /// </summary>

@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// Limits:
         /// 
         /// *   The name must be 3 to 64 characters in length.
-        /// *   The name must start with a letter and can contain letters, digits, underscores (\_), and hyphens (-).
+        /// *   The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("AccessGroupName")]
         [Validation(Required=false)]

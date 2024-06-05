@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// 
             /// *   The description must be 2 to 128 characters in length.
             /// *   The description must start with a letter and cannot start with `http://` or `https://`.
-            /// *   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+            /// *   The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

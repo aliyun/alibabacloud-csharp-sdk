@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// The ID of the region where you want to query zones.
         /// 
         /// You can call the DescribeRegions operation to query the latest region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -11,11 +11,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class RemoveTagsRequest : TeaModel {
         /// <summary>
         /// The ID of the file system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<RemoveTagsRequestTag> Tag { get; set; }

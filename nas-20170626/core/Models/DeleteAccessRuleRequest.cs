@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class DeleteAccessRuleRequest : TeaModel {
         /// <summary>
         /// The name of the permission group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccessGroupName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The rule ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccessRuleId")]
         [Validation(Required=false)]

@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The ID of the file system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -39,14 +41,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// The home directory of each user. Each user-specific home directory must meet the following requirements:
         /// 
-        /// *   Each segment starts with a forward slash (/) or a backward slash (\\).
+        /// *   Each segment starts with a forward slash (/) or a backward slash (\\\\).
         /// *   Each segment does not contain the following special characters: `<>":|?*`.
         /// *   Each segment is 0 to 255 characters in length.
         /// *   The total length is 0 to 32,767 characters.
         /// 
         /// For example, if you create a user named A and the home directory is `/home`, the file system automatically creates a directory named `/home/A` when User A logs on to the file system. If the `/home/A` directory already exists, the file system does not create the directory.
         /// 
-        /// > User A must have the permissions to create folders in the \home directory. Otherwise, the file system cannot create the `/home/A` directory when User A logs on to the file system.
+        /// > User A must have the permissions to create folders in the \\home directory. Otherwise, the file system cannot create the `/home/A` directory when User A logs on to the file system.
         /// </summary>
         [NameInMap("HomeDirPath")]
         [Validation(Required=false)]

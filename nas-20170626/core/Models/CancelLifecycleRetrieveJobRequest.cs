@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class CancelLifecycleRetrieveJobRequest : TeaModel {
         /// <summary>
         /// The ID of the data retrieval task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

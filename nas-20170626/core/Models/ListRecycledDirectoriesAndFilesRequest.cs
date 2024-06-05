@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// The ID of the directory that you want to query.
         /// 
-        /// You can call the [ListRecycleBinJobs](~~264192~~) operation to query the value of the FileId parameter.
+        /// You can call the [ListRecycleBinJobs](https://help.aliyun.com/document_detail/264192.html) operation to query the value of the FileId parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The ID of the file system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]

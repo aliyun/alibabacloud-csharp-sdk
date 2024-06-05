@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public long? SizeReal { get; set; }
 
+                [NameInMap("SizeRealInByte")]
+                [Validation(Required=false)]
+                public long? SizeRealInByte { get; set; }
+
                 /// <summary>
                 /// The ID of the user that you specify to create a quota for the directory. The value depends on the value of the UserType parameter. Valid values: Uid and Gid.
                 /// </summary>

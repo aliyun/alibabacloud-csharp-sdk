@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                [NameInMap("DeletionProtection")]
+                [Validation(Required=false)]
+                public bool? DeletionProtection { get; set; }
+
                 /// <summary>
                 /// The fileset description.
                 /// </summary>

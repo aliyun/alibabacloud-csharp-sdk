@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class GetDirectoryOrFilePropertiesRequest : TeaModel {
         /// <summary>
         /// The ID of the file system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// The absolute path of the directory.
         /// 
         /// The path must start with a forward slash (/) and must be a path that exists in the mount target.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]

@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// The type of the file system.
         /// 
         /// Valid value: extreme, which indicates Extreme NAS file systems.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemType")]
         [Validation(Required=false)]

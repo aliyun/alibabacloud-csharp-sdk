@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// The IDs of file systems.
         /// 
         /// You can specify a maximum of 100 file system IDs. If you want to remove automatic snapshot policies from multiple file systems, separate the file system IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemIds")]
         [Validation(Required=false)]

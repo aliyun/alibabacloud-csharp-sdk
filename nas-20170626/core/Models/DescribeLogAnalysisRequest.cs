@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeLogAnalysisRequest : TeaModel {
+        [NameInMap("FileSystemType")]
+        [Validation(Required=false)]
+        public string FileSystemType { get; set; }
+
         /// <summary>
         /// The page number. Default value: 1.
         /// </summary>
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

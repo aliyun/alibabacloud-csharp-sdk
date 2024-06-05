@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class CancelDirQuotaRequest : TeaModel {
         /// <summary>
         /// The ID of the file system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The absolute path of a directory.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]
@@ -45,6 +49,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// *   Uid: user ID
         /// *   Gid: user group ID
         /// *   AllUsers: all users
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UserType")]
         [Validation(Required=false)]

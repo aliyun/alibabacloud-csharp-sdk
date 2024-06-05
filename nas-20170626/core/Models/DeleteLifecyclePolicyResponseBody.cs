@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the request was successful.
         /// 
         /// Valid values:
         /// 
         /// *   true
-        /// *   false: The request failed.
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

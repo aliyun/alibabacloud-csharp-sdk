@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
         /// 
-        /// The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)
+        /// The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](https://help.aliyun.com/document_detail/25693.html)
         /// 
         /// >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.
         /// </summary>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// 
         /// *   The description must be 2 to 128 characters in length.
         /// *   The description must start with a letter but cannot start with `http://` or `https://`.
-        /// *   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// *   The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -93,6 +93,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// The ID of the file system.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -134,6 +136,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         ///     *   The name cannot start with `http://` or `https://`.
         /// 
         /// >  The OSS bucket must be an existing bucket in the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceStorage")]
         [Validation(Required=false)]
