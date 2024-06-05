@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
     public class DeleteUserRequest : TeaModel {
         /// <summary>
         /// The user ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

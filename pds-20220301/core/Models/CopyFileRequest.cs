@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The file ID or folder ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The ID of the destination parent folder. If you want to copy the file or folder to a root directory, set this parameter to root.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("to_parent_file_id")]
         [Validation(Required=false)]

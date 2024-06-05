@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class DeleteFileResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the asynchronous task. This parameter is returned only in asynchronous processing scenarios. You can call the [GetAsyncTask](~~440456~~) operation to query the information about the asynchronous task based on the task ID.
+        /// The ID of the asynchronous task. This parameter is returned only in asynchronous processing scenarios. You can call the [GetAsyncTask](https://help.aliyun.com/document_detail/440456.html) operation to query the information about the asynchronous task based on the task ID.
         /// </summary>
         [NameInMap("async_task_id")]
         [Validation(Required=false)]

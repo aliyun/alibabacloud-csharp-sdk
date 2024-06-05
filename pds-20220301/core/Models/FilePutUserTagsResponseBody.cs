@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
     public class FilePutUserTagsResponseBody : TeaModel {
         /// <summary>
         /// The file ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// 
         /// ignore: allows you to move the file by using the same name as an existing file in the destination directory.
         /// 
-        /// auto_rename: automatically renames the file that has the same name exists in the destination directory. By default, the current point in time is added to the end of the file name. Example: xxx\_20060102\_150405.
+        /// auto_rename: automatically renames the file that has the same name exists in the destination directory. By default, the current point in time is added to the end of the file name. Example: xxx_20060102_150405.
         /// 
         /// refuse: does not move the file that you want to move but returns the information about the file that has the same name in the destination directory.
         /// 
@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The drive ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The file ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The ID of the destination parent directory to which you want to move a file or folder. If you want to move a file or folder to the root directory, set this parameter to root.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("to_parent_file_id")]
         [Validation(Required=false)]

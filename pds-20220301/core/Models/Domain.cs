@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
 
+        [NameInMap("data_hash_name")]
+        [Validation(Required=false)]
+        public string DataHashName { get; set; }
+
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }

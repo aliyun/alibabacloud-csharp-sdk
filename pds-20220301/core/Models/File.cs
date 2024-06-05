@@ -61,19 +61,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public bool? Hidden { get; set; }
 
-        [NameInMap("investigation_info")]
+        [NameInMap("image_media_metadata")]
         [Validation(Required=false)]
-        public FileInvestigationInfo InvestigationInfo { get; set; }
-        public class FileInvestigationInfo : TeaModel {
-            [NameInMap("status")]
-            [Validation(Required=false)]
-            public long? Status { get; set; }
-
-            [NameInMap("suggestion")]
-            [Validation(Required=false)]
-            public string Suggestion { get; set; }
-
-        }
+        public ImageMediaMetadata ImageMediaMetadata { get; set; }
 
         [NameInMap("labels")]
         [Validation(Required=false)]

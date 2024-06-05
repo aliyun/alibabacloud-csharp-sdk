@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             /// </summary>
             [NameInMap("body")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Body { get; set; }
+            public Dictionary<string, object> Body { get; set; }
 
             /// <summary>
             /// The ID of the child request. The ID is used to associate a child request with a response.

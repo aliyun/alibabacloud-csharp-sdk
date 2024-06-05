@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
     public class GetIdentityToBenefitPkgMappingRequest : TeaModel {
         /// <summary>
         /// The unique identifier of the benefit package.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("benefit_pkg_id")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// The unique identifier of the entity.
         /// 
         /// If you want to manage the benefits of a user, set this parameter to a user ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("identity_id")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The type of the entity. If you want to manage the benefits of a user, set this parameter to user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("identity_type")]
         [Validation(Required=false)]

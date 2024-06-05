@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string BucketName { get; set; }
 
+        [NameInMap("endpoint")]
+        [Validation(Required=false)]
+        public string Endpoint { get; set; }
+
+        [NameInMap("form_data")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> FormData { get; set; }
+
         [NameInMap("object_key")]
         [Validation(Required=false)]
         public string ObjectKey { get; set; }

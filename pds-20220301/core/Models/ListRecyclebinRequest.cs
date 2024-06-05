@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
     public class ListRecyclebinRequest : TeaModel {
         /// <summary>
         /// The drive ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
@@ -19,9 +21,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// <summary>
         /// Specifies the returned fields.
         /// 
-        /// 1\. If you set this parameter to \*, all fields of the file are returned.
+        /// 1\\. If you set this parameter to \\*, all fields of the file are returned.
         /// 
-        /// 2\. If you set this parameter to a null value or leave this parameter empty, the fields, such as file creator, file modifier, and custom tags, are not returned.
+        /// 2\\. If you set this parameter to a null value or leave this parameter empty, the fields, such as file creator, file modifier, and custom tags, are not returned.
         /// 
         /// The default value is a null value, which indicates that only some fields are returned.
         /// </summary>

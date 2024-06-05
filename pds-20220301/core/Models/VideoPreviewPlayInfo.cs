@@ -53,6 +53,28 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         }
 
+        [NameInMap("offline_video_transcoding_list")]
+        [Validation(Required=false)]
+        public List<VideoPreviewPlayInfoOfflineVideoTranscodingList> OfflineVideoTranscodingList { get; set; }
+        public class VideoPreviewPlayInfoOfflineVideoTranscodingList : TeaModel {
+            [NameInMap("keep_original_resolution")]
+            [Validation(Required=false)]
+            public bool? KeepOriginalResolution { get; set; }
+
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("template_id")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
+
+            [NameInMap("url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+        }
+
     }
 
 }

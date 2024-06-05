@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class CreateShareLinkRequest : TeaModel {
+        [NameInMap("creatable")]
+        [Validation(Required=false)]
+        public bool? Creatable { get; set; }
+
+        [NameInMap("creatable_file_id_list")]
+        [Validation(Required=false)]
+        public List<string> CreatableFileIdList { get; set; }
+
         /// <summary>
         /// The description of the share. The description must be 0 to 1,024 characters in length.
         /// </summary>
@@ -46,6 +54,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The drive ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
@@ -64,10 +74,6 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [NameInMap("file_id_list")]
         [Validation(Required=false)]
         public List<string> FileIdList { get; set; }
-
-        [NameInMap("office_editable")]
-        [Validation(Required=false)]
-        public bool? OfficeEditable { get; set; }
 
         /// <summary>
         /// The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.

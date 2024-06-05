@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// 
         /// ignore: allows you to modify the file by using the same name as an existing file on the cloud.
         /// 
-        /// auto_rename: automatically renames the file that has the same name on the cloud. By default, the current point in time is added to the end of the file name. Example: xxx\_20060102\_150405.
+        /// auto_rename: automatically renames the file that has the same name on the cloud. By default, the current point in time is added to the end of the file name. Example: xxx_20060102_150405.
         /// 
         /// refuse: does not modify the file that you want to modify but returns the information about the file that has the same name on the cloud.
         /// 
@@ -33,6 +33,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The drive ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
@@ -40,6 +42,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The file ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]

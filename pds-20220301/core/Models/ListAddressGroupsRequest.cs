@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
     public class ListAddressGroupsRequest : TeaModel {
         /// <summary>
         /// The drive ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]

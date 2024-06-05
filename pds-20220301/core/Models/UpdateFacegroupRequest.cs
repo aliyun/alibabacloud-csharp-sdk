@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
     public class UpdateFacegroupRequest : TeaModel {
         /// <summary>
         /// The drive ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The ID of the face-based group. You can call the ListFacegroups operation to query the group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("group_id")]
         [Validation(Required=false)]

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The ID of the group that you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("group_id")]
         [Validation(Required=false)]

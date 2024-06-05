@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
     public class AuthorizeShrinkRequest : TeaModel {
         /// <summary>
         /// The application ID returned when the application was created.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("client_id")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// *   ram: logs on as an Alibaba Cloud Resource Access Management (RAM) user.
         /// *   wechat: logs on by scanning a WeCom QR code.
         /// *   wechat_app: logs on without authentication in WeCom.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("login_type")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The callback URL specified when the application was created.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("redirect_uri")]
         [Validation(Required=false)]
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The format in which to return the response. Set the value to code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("response_type")]
         [Validation(Required=false)]

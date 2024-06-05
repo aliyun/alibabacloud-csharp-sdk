@@ -38,9 +38,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// **
-        /// 
-        /// **Warning **This parameter is no longer used. We recommend that you use error_code instead.
+        /// <warning>This parameter is no longer used. We recommend that you use error_code instead.</warning>
         /// 
         /// The error code returned if the asynchronous task failed.
         /// </summary>
@@ -74,9 +72,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string FinishedAt { get; set; }
 
         /// <summary>
-        /// **
-        /// 
-        /// **Warning **This parameter is no longer used. We recommend that you use error_message instead.
+        /// <warning>This parameter is no longer used. We recommend that you use error_message instead.</warning>
         /// 
         /// The error message returned if the asynchronous task failed.
         /// </summary>
@@ -108,9 +104,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string State { get; set; }
 
         /// <summary>
-        /// **
-        /// 
-        /// **Warning **This parameter is no longer used. We recommend that you use state instead.
+        /// <warning>This parameter is no longer used. We recommend that you use state instead.</warning>
         /// 
         /// The state of the task. Valid values:
         /// 

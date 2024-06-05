@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class ListUserRequest : TeaModel {
         /// <summary>
-        /// The maximum number of results to return. Valid values: 1 to 100.
+        /// The maximum number of results to return. Valid values: 1 to 100. Default value: 100.
         /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]

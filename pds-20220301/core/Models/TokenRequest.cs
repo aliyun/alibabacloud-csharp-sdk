@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The AppId of the application that is created in the Drive and Photo Service console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("client_id")]
         [Validation(Required=false)]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// refresh_token: generates an access token by using the refresh token that is returned after the authorization process is complete.
         /// 
         /// urn:ietf:params:oauth:grant-type:jwt-bearer: generates an access token by using a JWT assertion.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("grant_type")]
         [Validation(Required=false)]

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// <summary>
         /// The fields to return.
         /// 
-        /// 1.  If this parameter is set to \*, all fields of the file except the fields that must be specified are returned.
+        /// 1.  If this parameter is set to \\*, all fields of the file except the fields that must be specified are returned.
         /// 2.  If only specific fields are required, you can specify the following fields: url, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,exif.
         /// 3.  The investigation_info field is returned only if you specify this field.
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\\
         /// By default, this parameter is empty.
         /// </summary>
         [NameInMap("marker")]
@@ -137,6 +137,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The ID of the parent folder. If the parent folder is a root directory, set this parameter to root.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("parent_file_id")]
         [Validation(Required=false)]

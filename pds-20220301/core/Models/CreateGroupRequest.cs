@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The name of the group. The name must be 1 to 128 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("group_name")]
         [Validation(Required=false)]

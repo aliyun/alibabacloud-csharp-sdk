@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// The child requests.
         /// 
         /// The number of child requests. Valid value: 1 to 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("requests")]
         [Validation(Required=false)]
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             /// </summary>
             [NameInMap("body")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Body { get; set; }
+            public Dictionary<string, object> Body { get; set; }
 
             /// <summary>
             /// The header of a child request, which indicates the type of the data specified in the request body.
@@ -36,6 +38,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
             /// <summary>
             /// The ID of the child request. The ID is used to associate a child request with a response. The ID of a child request must be unique.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
@@ -49,6 +53,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             /// *   PUT
             /// *   DELETE
             /// *   HEAD
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("method")]
             [Validation(Required=false)]
@@ -79,6 +85,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             /// *   /share_link/get: queries the information about a share.
             /// *   /share_link/get_share_token: queries an access token of a share.
             /// *   /async_task/get: queries the information about an asynchronous task.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("url")]
             [Validation(Required=false)]
@@ -140,6 +148,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         ///     <!-- -->
         /// 
         ///     <!-- -->
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("resource")]
         [Validation(Required=false)]

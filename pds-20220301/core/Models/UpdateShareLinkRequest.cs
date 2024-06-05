@@ -95,6 +95,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The share ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("share_id")]
         [Validation(Required=false)]

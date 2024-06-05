@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Obsolete]
         public string CoverVideoThumbnailProcess { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
@@ -33,6 +36,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Obsolete]
         public string ImageUrlProcess { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("story_id")]
         [Validation(Required=false)]
         public string StoryId { get; set; }

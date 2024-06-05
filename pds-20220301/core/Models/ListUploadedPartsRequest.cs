@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The file ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The ID of the upload task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("upload_id")]
         [Validation(Required=false)]

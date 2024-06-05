@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class AddStoryFilesRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public List<AddStoryFilesRequestFiles> Files { get; set; }
         public class AddStoryFilesRequestFiles : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("file_id")]
             [Validation(Required=false)]
             public string FileId { get; set; }
@@ -27,6 +33,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("story_id")]
         [Validation(Required=false)]
         public string StoryId { get; set; }

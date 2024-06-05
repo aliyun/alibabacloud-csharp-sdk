@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         [NameInMap("fields")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Fields { get; set; }
 
         /// <summary>
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\\
         /// By default, this parameter is left empty.
         /// </summary>
         [NameInMap("marker")]
@@ -50,7 +51,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// *   ASC: sorts the results in ascending order.
         /// *   DESC: sorts the results in descending order.
         /// 
-        /// You must specify this parameter in the \<field name> \<ASC or DESC> format. Separate multiple field names with commas (,). A preceding field has a higher priority than a following field. Examples:
+        /// You must specify this parameter in the \\<field name> \\<ASC or DESC> format. Separate multiple field names with commas (,). A preceding field has a higher priority than a following field. Examples:
         /// 
         /// *   If you want to sort the results based on the file name in ascending order, set this parameter to "name ASC".
         /// *   If you want to sort the results based on the creation time in descending order, set this parameter to "created_at DESC".
@@ -62,6 +63,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The search condition. Fuzzy searches based on the file name or directory name are supported. The search condition can be up to 4,096 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]

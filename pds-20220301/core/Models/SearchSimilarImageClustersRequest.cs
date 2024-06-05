@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class SearchSimilarImageClustersRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }

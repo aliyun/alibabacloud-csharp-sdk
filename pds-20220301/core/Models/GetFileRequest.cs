@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// <summary>
         /// The fields to return.
         /// 
-        /// 1.  If this parameter is set to \*, all fields of the file except the fields that must be specified are returned.
+        /// 1.  If this parameter is set to \\*, all fields of the file except the fields that must be specified are returned.
         /// 2.  If only specific fields are required, you can specify the following fields: url, thumbnail, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,thumbnail.
         /// 3.  The investigation_info field is returned only if you specify this field.
         /// 
@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The file ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]

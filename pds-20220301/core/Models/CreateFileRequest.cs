@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class CreateFileRequest : TeaModel {
         /// <summary>
-        /// The processing method that is used if the file that you want to create has the same name as an existing file on the cloud. Valid values:
+        /// The processing method that is used if the file that you want to create has the same name as an existing file in the cloud. Valid values:
         /// 
-        /// ignore: allows you to create the file by using the same name as an existing file on the cloud.
+        /// ignore: allows you to create the file by using the same name as an existing file in the cloud.
         /// 
-        /// auto_rename: automatically renames the file that has the same name on the cloud. By default, the current point in time is added to the end of the file name. Example: xxx\_20060102\_150405.
+        /// auto_rename: automatically renames the file that you want to create. By default, the current point in time is added to the end of the file name. Example: xxx_20060102_150405.
         /// 
-        /// refuse: does not create the file that you want to create but returns the information about the file that has the same name on the cloud.
+        /// refuse: does not create the file that you want to create but returns the information about the file that has the same name in the cloud.
         /// 
         /// Default value: ignore.
         /// </summary>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string ContentHashName { get; set; }
 
         /// <summary>
-        /// The type of the file content. Default value: application/oct-stream. For more information about common content types, see [How do I configure the Content-Type header?](https://help.aliyun.com/document_detail/39522.htm?spm=a2c4g.11186623.0.0.5a0b7dbb1TPnWF#concept-5041)
+        /// The type of the file content. Default value: application/oct-stream.
         /// </summary>
         [NameInMap("content_type")]
         [Validation(Required=false)]
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public ImageMediaMetadata ImageMediaMetadata { get; set; }
 
         /// <summary>
-        /// The local time when the file was created. By default, this parameter is left empty. The time is specified in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.
+        /// The time when the local file was created. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.
         /// </summary>
         [NameInMap("local_created_at")]
         [Validation(Required=false)]
         public string LocalCreatedAt { get; set; }
 
         /// <summary>
-        /// The local time when the file was modified. By default, this parameter is left empty. The time is specified in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.
+        /// The time when the local file was modified. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.
         /// </summary>
         [NameInMap("local_modified_at")]
         [Validation(Required=false)]
@@ -96,6 +96,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule and cannot end with a forward slash (/).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -110,6 +112,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The ID of the parent directory. If you want to create a file or folder in the root directory, set this parameter to root.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("parent_file_id")]
         [Validation(Required=false)]
@@ -122,26 +126,29 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public List<CreateFileRequestPartInfoList> PartInfoList { get; set; }
         public class CreateFileRequestPartInfoList : TeaModel {
+            /// <summary>
+            /// The MD5 hash value of the file part. This parameter is required when the MD5 hash value of the file part needs to be verified during part upload.
+            /// </summary>
             [NameInMap("content_md5")]
             [Validation(Required=false)]
             public string ContentMd5 { get; set; }
 
             /// <summary>
-            /// 该分片前所有数据的SHA1上下文，该字段只在多分片并发上传的模式下有效
+            /// The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.
             /// </summary>
             [NameInMap("parallel_sha1_ctx")]
             [Validation(Required=false)]
             public CreateFileRequestPartInfoListParallelSha1Ctx ParallelSha1Ctx { get; set; }
             public class CreateFileRequestPartInfoListParallelSha1Ctx : TeaModel {
                 /// <summary>
-                /// 该分片前所有数据的SHA1上下文的第1-5个32位变量，该字段只在多分片并发上传的模式下有效
+                /// The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.
                 /// </summary>
                 [NameInMap("h")]
                 [Validation(Required=false)]
                 public List<long?> H { get; set; }
 
                 /// <summary>
-                /// 到上一个数据块为止的总长度，字节，需要为64的倍数，该字段只在多分片并发上传的模式下有效
+                /// The size of the file content before the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.
                 /// </summary>
                 [NameInMap("part_offset")]
                 [Validation(Required=false)]
@@ -150,7 +157,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             }
 
             /// <summary>
-            /// The serial number of a part. The number starts from 1.
+            /// The serial number of a file part. The number starts from 1.
             /// </summary>
             [NameInMap("part_number")]
             [Validation(Required=false)]
@@ -173,7 +180,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string ShareId { get; set; }
 
         /// <summary>
-        /// The file size. Unit: bytes.
+        /// The size of the file. Unit: bytes.
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
@@ -183,6 +190,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// The type of the file. Valid values:
         /// 
         /// file folder
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

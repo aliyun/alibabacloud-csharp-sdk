@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
     public class AssignRoleRequest : TeaModel {
         /// <summary>
         /// The unique identifier of a user. The group administrator role can only be assigned to a user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("identity")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The ID of the resource that the role can manage. You can only set this parameter to the ID of a group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("manage_resource_id")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The type of the resource that the role can manage. Valid value: RT_Group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("manage_resource_type")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The ID of the role that is assigned to a user. Valid value: SystemGroupAdmin.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("role_id")]
         [Validation(Required=false)]

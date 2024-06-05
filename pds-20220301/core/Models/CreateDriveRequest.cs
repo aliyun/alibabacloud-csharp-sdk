@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The name of the drive. The name can be up to 128 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("drive_name")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The owner of the drive.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("owner")]
         [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// The type of the owner. Valid values:
         /// 
         /// user and group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("owner_type")]
         [Validation(Required=false)]

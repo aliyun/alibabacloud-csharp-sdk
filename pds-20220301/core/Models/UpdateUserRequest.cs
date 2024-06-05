@@ -94,6 +94,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The user ID. The ID can be up to 64 characters in length and cannot contain a number sign (#).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

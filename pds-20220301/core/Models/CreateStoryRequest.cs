@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Obsolete]
         public Dictionary<string, string> CustomLabels { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
@@ -50,6 +53,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string StorySubType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("story_type")]
         [Validation(Required=false)]
         public string StoryType { get; set; }

@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// *   wechat: WeCom account.
         /// *   ldap: Lightweight Directory Access Protocol (LDAP) account.
         /// *   custom: custom account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("authentication_type")]
         [Validation(Required=false)]
@@ -56,6 +58,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The unique identifier.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("identity")]
         [Validation(Required=false)]
@@ -63,6 +67,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The nickname of the user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("nick_name")]
         [Validation(Required=false)]

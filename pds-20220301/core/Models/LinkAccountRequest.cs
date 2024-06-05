@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The unique identifier of the account, such as a mobile number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("identity")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// *   wechat: a WeCom account.
         /// *   ldap: a Lightweight Directory Access Protocol (LDAP) account.
         /// *   custom: a custom account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The ID of the user with which you want to associate an account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

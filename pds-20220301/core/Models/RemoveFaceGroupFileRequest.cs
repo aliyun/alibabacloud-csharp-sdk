@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class RemoveFaceGroupFileRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("face_group_id")]
         [Validation(Required=false)]
         public string FaceGroupId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
         public string FileId { get; set; }

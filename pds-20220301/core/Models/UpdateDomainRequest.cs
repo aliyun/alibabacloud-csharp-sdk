@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The domain ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("domain_id")]
         [Validation(Required=false)]

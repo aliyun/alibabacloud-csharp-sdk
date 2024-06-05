@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
     public class GetUploadUrlRequest : TeaModel {
         /// <summary>
         /// The drive ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The file ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The information about the file parts.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("part_info_list")]
         [Validation(Required=false)]
@@ -61,6 +67,20 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
             }
 
+            [NameInMap("parallel_sha256_ctx")]
+            [Validation(Required=false)]
+            public GetUploadUrlRequestPartInfoListParallelSha256Ctx ParallelSha256Ctx { get; set; }
+            public class GetUploadUrlRequestPartInfoListParallelSha256Ctx : TeaModel {
+                [NameInMap("h")]
+                [Validation(Required=false)]
+                public List<long?> H { get; set; }
+
+                [NameInMap("part_offset")]
+                [Validation(Required=false)]
+                public long? PartOffset { get; set; }
+
+            }
+
             /// <summary>
             /// The serial number of a part.
             /// </summary>
@@ -79,6 +99,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The ID of the upload task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("upload_id")]
         [Validation(Required=false)]

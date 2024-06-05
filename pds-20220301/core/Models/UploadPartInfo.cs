@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("part_number")]
         [Validation(Required=false)]
         public int? PartNumber { get; set; }
@@ -53,6 +56,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public long? PartSize { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("upload_url")]
         [Validation(Required=false)]
         public string UploadUrl { get; set; }

@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Obsolete]
         public string CustomLabels { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }

@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string NextMarker { get; set; }
 
+        [NameInMap("root_group_drive")]
+        [Validation(Required=false)]
+        public Drive RootGroupDrive { get; set; }
+
     }
 
 }

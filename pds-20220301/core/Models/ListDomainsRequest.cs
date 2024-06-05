@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string ParentDomainId { get; set; }
 
+        [NameInMap("service_code")]
+        [Validation(Required=false)]
+        public string ServiceCode { get; set; }
+
     }
 
 }

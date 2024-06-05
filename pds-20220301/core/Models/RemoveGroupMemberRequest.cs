@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
     public class RemoveGroupMemberRequest : TeaModel {
         /// <summary>
         /// The ID of the group from which you want to remove a member.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("group_id")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The ID of the member. If member_type is set to user, set this parameter to the ID of the corresponding user.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("member_id")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// *   user
         /// 
         /// Note: A group can be a member of only one group. It cannot be a member of multiple groups. A user can be a member of multiple groups.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("member_type")]
         [Validation(Required=false)]

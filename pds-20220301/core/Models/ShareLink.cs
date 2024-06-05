@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public long? SaveCount { get; set; }
 
+        [NameInMap("save_download_limit")]
+        [Validation(Required=false)]
+        public long? SaveDownloadLimit { get; set; }
+
         [NameInMap("save_limit")]
         [Validation(Required=false)]
         public long? SaveLimit { get; set; }

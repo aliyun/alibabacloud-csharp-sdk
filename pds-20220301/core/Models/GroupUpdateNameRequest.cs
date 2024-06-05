@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class GroupUpdateNameRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("group_id")]
         [Validation(Required=false)]
         public string GroupId { get; set; }

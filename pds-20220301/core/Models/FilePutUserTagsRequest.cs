@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
     public class FilePutUserTagsRequest : TeaModel {
         /// <summary>
         /// The drive ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The file ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The tags to be added to the file. You cannot leave this parameter empty. You can specify up to 1,000 tags. You cannot specify tags that have the same name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("user_tags")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public class FilePutUserTagsRequestUserTags : TeaModel {
             /// <summary>
             /// The name of the tag. The tag name cannot be empty and cannot contain number signs (#).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]

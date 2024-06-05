@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
     public class FileRemovePermissionRequest : TeaModel {
         /// <summary>
         /// The drive ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The file ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The identities with whom the file is shared.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("member_list")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public class FileRemovePermissionRequestMemberList : TeaModel {
             /// <summary>
             /// The identity to whom the permissions are granted, which is a user or a group.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("identity")]
             [Validation(Required=false)]
@@ -65,6 +73,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             /// SystemFileUploaderWithShareLink: uploader and sharer.
             /// 
             /// SystemFileViewer: viewer.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("role_id")]
             [Validation(Required=false)]

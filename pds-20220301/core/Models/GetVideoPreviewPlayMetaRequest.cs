@@ -16,6 +16,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// *   quick_video: previews a video while transcoding is in progress.
         /// *   offline_audio: previews a piece of audio after the audio is transcoded offline.
         /// *   offline_video: previews a video after the video is transcoded offline.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("category")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// The file ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
