@@ -8,24 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
-    public class GetAreaElecConstituteRequest : TeaModel {
-        /// <summary>
-        /// The enterprise code.
-        /// 
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("code")]
+    public class SendDocumentAskQuestionRequest : TeaModel {
+        [NameInMap("folderId")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string FolderId { get; set; }
 
         /// <summary>
-        /// Year.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("year")]
+        [NameInMap("prompt")]
         [Validation(Required=false)]
-        public int? Year { get; set; }
+        public string Prompt { get; set; }
+
+        [NameInMap("sessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
 
     }
 

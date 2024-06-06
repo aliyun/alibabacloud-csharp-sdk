@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         public List<GetOrgAndFactoryResponseBodyData> Data { get; set; }
         public class GetOrgAndFactoryResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the Alibaba Cloud account.
+            /// The Alibaba Cloud account ID.
             /// </summary>
             [NameInMap("aliyunPk")]
             [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
             public List<GetOrgAndFactoryResponseBodyDataFactoryList> FactoryList { get; set; }
             public class GetOrgAndFactoryResponseBodyDataFactoryList : TeaModel {
                 /// <summary>
-                /// The ID of the site.
+                /// The site ID.
                 /// </summary>
                 [NameInMap("factoryId")]
                 [Validation(Required=false)]
                 public string FactoryId { get; set; }
 
                 /// <summary>
-                /// The name of the site.
+                /// The site name.
                 /// </summary>
                 [NameInMap("factoryName")]
                 [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
             }
 
             /// <summary>
-            /// The ID of the organization.
+            /// The enterprise ID.
             /// </summary>
             [NameInMap("organizationId")]
             [Validation(Required=false)]
             public string OrganizationId { get; set; }
 
             /// <summary>
-            /// The name of the organization.
+            /// The enterprise name.
             /// </summary>
             [NameInMap("organizationName")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

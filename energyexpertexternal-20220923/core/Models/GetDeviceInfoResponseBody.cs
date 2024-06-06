@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
             public List<GetDeviceInfoResponseBodyDataRecordList> RecordList { get; set; }
             public class GetDeviceInfoResponseBodyDataRecordList : TeaModel {
                 /// <summary>
-                /// The identifier of the device.
+                /// The device identifier.
                 /// </summary>
                 [NameInMap("identifier")]
                 [Validation(Required=false)]
                 public string Identifier { get; set; }
 
                 /// <summary>
-                /// The name of the parameter.
+                /// The parameter name.
                 /// </summary>
                 [NameInMap("paramName")]
                 [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

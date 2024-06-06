@@ -8,15 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
-    public class GetDeviceListRequest : TeaModel {
+    public class GetDocumentAnalyzeResultRequest : TeaModel {
         /// <summary>
-        /// The ID of the site.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("factoryId")]
+        [NameInMap("jobId")]
         [Validation(Required=false)]
-        public string FactoryId { get; set; }
+        public string JobId { get; set; }
 
     }
 

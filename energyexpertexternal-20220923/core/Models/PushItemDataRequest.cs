@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
     public class PushItemDataRequest : TeaModel {
         /// <summary>
         /// The enterprise code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
@@ -18,13 +20,17 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
         /// <summary>
         /// Push data list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public PushItemDataRequestItems Items { get; set; }
         public class PushItemDataRequestItems : TeaModel {
             /// <summary>
-            /// The data item code.
+            /// API data identification.<props="intl">For details: [GetDataItemList ](https://www.alibabacloud.com/help/en/energy-expert/developer-reference/api-energyexpertexternal-2022-09-23-getdataitemlist)
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("code")]
             [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
             /// <summary>
             /// The month.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("month")]
             [Validation(Required=false)]
@@ -39,6 +47,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
             /// <summary>
             /// The value of the data item.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
@@ -48,6 +58,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
         /// <summary>
         /// The year of the data created.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("year")]
         [Validation(Required=false)]

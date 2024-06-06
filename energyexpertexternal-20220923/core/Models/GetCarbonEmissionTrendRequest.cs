@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
     public class GetCarbonEmissionTrendRequest : TeaModel {
         /// <summary>
         /// The enterprise code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
         /// <summary>
         /// Trend Type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("trendType")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
         /// <summary>
         /// The list of inventory year.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("yearList")]
         [Validation(Required=false)]

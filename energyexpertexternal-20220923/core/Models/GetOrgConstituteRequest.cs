@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
     public class GetOrgConstituteRequest : TeaModel {
         /// <summary>
         /// The enterprise code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
         /// <summary>
         /// Module type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("moduleType")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
         /// <summary>
         /// Year.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("year")]
         [Validation(Required=false)]

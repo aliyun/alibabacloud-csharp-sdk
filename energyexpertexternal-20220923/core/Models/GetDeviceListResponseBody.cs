@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetDeviceListResponseBody : TeaModel {
         /// <summary>
-        /// The code returned for the request.
+        /// The response code.
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
             public List<GetDeviceListResponseBodyDataDeviceList> DeviceList { get; set; }
             public class GetDeviceListResponseBodyDataDeviceList : TeaModel {
                 /// <summary>
-                /// The ID of the device.
+                /// The device ID.
                 /// </summary>
                 [NameInMap("deviceId")]
                 [Validation(Required=false)]
                 public string DeviceId { get; set; }
 
                 /// <summary>
-                /// The name of the device.
+                /// The device name.
                 /// </summary>
                 [NameInMap("deviceName")]
                 [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                 public string FirstTypeName { get; set; }
 
                 /// <summary>
-                /// The information about the device.
+                /// The device information.
                 /// </summary>
                 [NameInMap("info")]
                 [Validation(Required=false)]
@@ -67,6 +67,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                 public class GetDeviceListResponseBodyDataDeviceListInfo : TeaModel {
                     /// <summary>
                     /// The rated capacity.
+                    /// Unit is kVA.
                     /// </summary>
                     [NameInMap("constKva")]
                     [Validation(Required=false)]
@@ -149,7 +150,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

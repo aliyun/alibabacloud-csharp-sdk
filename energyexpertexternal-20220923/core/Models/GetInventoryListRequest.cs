@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
     public class GetInventoryListRequest : TeaModel {
         /// <summary>
         /// The enterprise code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         /// Type of emission
         /// 
         /// >  Valid values: footprint | emission. Meaning: footprint: all inventories are involved in the calculation; emission: only inventories with positive and zero emissions are involved in the calculation, and negative numbers are not involved in the calculation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("emissionType")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         /// Group by
         /// 
         /// >  Valid values: resource | process | resourceType | processType. Meaning: resource: aggregation by inventory group, process: aggregation by operation group, resourceType: aggregation by inventory type, processType: aggregation by phase group
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("group")]
         [Validation(Required=false)]
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
         /// <summary>
         /// The type of the obtained environmental impact: gwp indicates the carbon footprint of climate change. For more information, see the type value of the enumerated values.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("methodType")]
         [Validation(Required=false)]
@@ -43,6 +51,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
         /// <summary>
         /// The product id.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("productId")]
         [Validation(Required=false)]
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
         /// <summary>
         /// Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("productType")]
         [Validation(Required=false)]
