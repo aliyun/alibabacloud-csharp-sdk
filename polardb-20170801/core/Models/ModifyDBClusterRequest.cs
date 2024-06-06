@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("DBNodeCrashList")]
+        [Validation(Required=false)]
+        public string DBNodeCrashList { get; set; }
+
         /// <summary>
         /// The method used to replicate data across zones. Valid values:
         /// 
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("DataSyncMode")]
         [Validation(Required=false)]
         public string DataSyncMode { get; set; }
+
+        [NameInMap("FaultInjectionType")]
+        [Validation(Required=false)]
+        public string FaultInjectionType { get; set; }
 
         /// <summary>
         /// The fault scenario that you want to simulate for the cluster.

@@ -15333,9 +15333,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeCrashList))
+            {
+                query["DBNodeCrashList"] = request.DBNodeCrashList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSyncMode))
             {
                 query["DataSyncMode"] = request.DataSyncMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaultInjectionType))
+            {
+                query["FaultInjectionType"] = request.FaultInjectionType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaultSimulateMode))
             {
@@ -15407,9 +15415,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeCrashList))
+            {
+                query["DBNodeCrashList"] = request.DBNodeCrashList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSyncMode))
             {
                 query["DataSyncMode"] = request.DataSyncMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaultInjectionType))
+            {
+                query["FaultInjectionType"] = request.FaultInjectionType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaultSimulateMode))
             {

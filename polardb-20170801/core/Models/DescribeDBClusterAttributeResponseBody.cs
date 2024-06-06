@@ -223,6 +223,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string MemorySize { get; set; }
 
+            [NameInMap("Orca")]
+            [Validation(Required=false)]
+            public string Orca { get; set; }
+
             [NameInMap("RemoteMemorySize")]
             [Validation(Required=false)]
             public string RemoteMemorySize { get; set; }
@@ -407,6 +411,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string MaintainTime { get; set; }
 
+        [NameInMap("Orca")]
+        [Validation(Required=false)]
+        public string Orca { get; set; }
+
         /// <summary>
         /// The billing method of the cluster. Valid values:
         /// 
@@ -492,6 +500,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("RestoreDataPoint")]
+        [Validation(Required=false)]
+        public string RestoreDataPoint { get; set; }
+
+        [NameInMap("RestoreType")]
+        [Validation(Required=false)]
+        public string RestoreType { get; set; }
+
         /// <summary>
         /// The storage of SQL. Unit: bytes. If the value is -1, no data is stored.
         /// </summary>
@@ -505,6 +521,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ServerlessType")]
         [Validation(Required=false)]
         public string ServerlessType { get; set; }
+
+        [NameInMap("SourceDBCluster")]
+        [Validation(Required=false)]
+        public string SourceDBCluster { get; set; }
 
         /// <summary>
         /// Indicates whether the cross-zone disaster recovery feature is enabled. Valid values: ON OFF 0: Customer Drill Mode
