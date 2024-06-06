@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
 {
     public class RegisterAuthenticatorRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ApplicationExternalId")]
         [Validation(Required=false)]
         public string ApplicationExternalId { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
         [Validation(Required=false)]
         public string AuthenticatorName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AuthenticatorType")]
         [Validation(Required=false)]
         public string AuthenticatorType { get; set; }
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
         [Validation(Required=false)]
         public string LogParams { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegistrationContext")]
         [Validation(Required=false)]
         public string RegistrationContext { get; set; }
@@ -45,6 +54,9 @@ namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
         [Validation(Required=false)]
         public string ServerExtendParamsJson { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
 {
     public class ServiceInvokeRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ApplicationExternalId")]
         [Validation(Required=false)]
         public string ApplicationExternalId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DoraemonAction")]
         [Validation(Required=false)]
         public string DoraemonAction { get; set; }
@@ -29,6 +35,9 @@ namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
         [Validation(Required=false)]
         public string ServerExtendParamsJson { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]
         public string ServiceCode { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
 {
     public class ListUsersRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ApplicationExternalId")]
         [Validation(Required=false)]
         public string ApplicationExternalId { get; set; }

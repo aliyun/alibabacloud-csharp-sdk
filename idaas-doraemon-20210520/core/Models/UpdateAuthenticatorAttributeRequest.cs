@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Idaas_doraemon20210520.Models
 {
     public class UpdateAuthenticatorAttributeRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ApplicationExternalId")]
         [Validation(Required=false)]
         public string ApplicationExternalId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AuthenticatorName")]
         [Validation(Required=false)]
         public string AuthenticatorName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AuthenticatorUuid")]
         [Validation(Required=false)]
         public string AuthenticatorUuid { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
