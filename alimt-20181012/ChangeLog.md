@@ -1,3 +1,8 @@
+2024-06-06 Version: 2.2.1
+- Update API GetDetectLanguage: update response param.
+- Update API TranslateECommerce: update response param.
+
+
 2023-08-12 Version: 2.2.0
 - Generated csharp 2018-10-12 for alimt.
 

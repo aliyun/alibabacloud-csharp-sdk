@@ -21,14 +21,23 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string Field { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ImageUrls")]
         [Validation(Required=false)]
         public string ImageUrls { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SourceLanguage")]
         [Validation(Required=false)]
         public string SourceLanguage { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TargetLanguage")]
         [Validation(Required=false)]
         public string TargetLanguage { get; set; }

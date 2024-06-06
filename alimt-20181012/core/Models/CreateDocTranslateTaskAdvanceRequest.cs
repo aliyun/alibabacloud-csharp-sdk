@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FileUrl")]
         [Validation(Required=false)]
         public Stream FileUrlObject { get; set; }
@@ -25,10 +28,16 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string Scene { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SourceLanguage")]
         [Validation(Required=false)]
         public string SourceLanguage { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TargetLanguage")]
         [Validation(Required=false)]
         public string TargetLanguage { get; set; }

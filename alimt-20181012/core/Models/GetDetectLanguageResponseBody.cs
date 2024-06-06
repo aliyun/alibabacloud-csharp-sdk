@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string DetectedLanguage { get; set; }
 
+        [NameInMap("LanguageProbabilities")]
+        [Validation(Required=false)]
+        public string LanguageProbabilities { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
