@@ -96,8 +96,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// The frontend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.
-        /// 
-        /// This parameter is required.
         /// </summary>
         [NameInMap("NatIpPort")]
         [Validation(Required=false)]

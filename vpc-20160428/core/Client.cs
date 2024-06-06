@@ -20235,6 +20235,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /**
          * @summary Deletes a customer gateway.
          *
+         * @description Before you delete a customer gateway, make sure that no IPsec-VPN connection is associated with the customer gateway. For more information about how to delete an IPsec-VPN connection, see [DeleteVpnAttachment](https://help.aliyun.com/document_detail/2526938.html) or [DeleteVpnConnection](https://help.aliyun.com/document_detail/2526948.html).
+         *
          * @param request DeleteCustomerGatewayRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteCustomerGatewayResponse
@@ -20292,6 +20294,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
          * @summary Deletes a customer gateway.
+         *
+         * @description Before you delete a customer gateway, make sure that no IPsec-VPN connection is associated with the customer gateway. For more information about how to delete an IPsec-VPN connection, see [DeleteVpnAttachment](https://help.aliyun.com/document_detail/2526938.html) or [DeleteVpnConnection](https://help.aliyun.com/document_detail/2526948.html).
          *
          * @param request DeleteCustomerGatewayRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20351,6 +20355,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /**
          * @summary Deletes a customer gateway.
          *
+         * @description Before you delete a customer gateway, make sure that no IPsec-VPN connection is associated with the customer gateway. For more information about how to delete an IPsec-VPN connection, see [DeleteVpnAttachment](https://help.aliyun.com/document_detail/2526938.html) or [DeleteVpnConnection](https://help.aliyun.com/document_detail/2526948.html).
+         *
          * @param request DeleteCustomerGatewayRequest
          * @return DeleteCustomerGatewayResponse
          */
@@ -20362,6 +20368,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /**
          * @summary Deletes a customer gateway.
+         *
+         * @description Before you delete a customer gateway, make sure that no IPsec-VPN connection is associated with the customer gateway. For more information about how to delete an IPsec-VPN connection, see [DeleteVpnAttachment](https://help.aliyun.com/document_detail/2526938.html) or [DeleteVpnConnection](https://help.aliyun.com/document_detail/2526948.html).
          *
          * @param request DeleteCustomerGatewayRequest
          * @return DeleteCustomerGatewayResponse
@@ -27555,11 +27563,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /**
          * @summary Deletes an IPsec-VPN connection.
          *
-         * @description *   **DeleteVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) operation to query the status of the task.
-         *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being deleted.
-         *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection is deleted.
-         * *   You cannot repeatedly call **DeleteVpnConnection** to delete an IPsec-VPN connection from the same VPN gateway within the specified period of time.
-         * >  After an IPsec-VPN connection between a virtual private cloud (VPC) and a data center is deleted, the communication between the VPC and data center is interrupted.
+         * @description *   **DeleteVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) operation to query the status of a VPN gateway.
+         *     *   If a VPN gateway is in the **updating** state, the IPsec-VPN connection is being deleted.
+         *     *   If a VPN gateway is in the **active** state, the IPsec-VPN connection has been deleted.
+         * *   You cannot call the **DeleteVpnConnection** operation to delete multiple IPsec-VPN connections for a VPN gateway at a time.
+         * >  After an IPsec-VPN connection between a data center and Alibaba Cloud is deleted, the connection between the data center and Alibaba Cloud is closed.
          *
          * @param request DeleteVpnConnectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -27619,11 +27627,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /**
          * @summary Deletes an IPsec-VPN connection.
          *
-         * @description *   **DeleteVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) operation to query the status of the task.
-         *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being deleted.
-         *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection is deleted.
-         * *   You cannot repeatedly call **DeleteVpnConnection** to delete an IPsec-VPN connection from the same VPN gateway within the specified period of time.
-         * >  After an IPsec-VPN connection between a virtual private cloud (VPC) and a data center is deleted, the communication between the VPC and data center is interrupted.
+         * @description *   **DeleteVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) operation to query the status of a VPN gateway.
+         *     *   If a VPN gateway is in the **updating** state, the IPsec-VPN connection is being deleted.
+         *     *   If a VPN gateway is in the **active** state, the IPsec-VPN connection has been deleted.
+         * *   You cannot call the **DeleteVpnConnection** operation to delete multiple IPsec-VPN connections for a VPN gateway at a time.
+         * >  After an IPsec-VPN connection between a data center and Alibaba Cloud is deleted, the connection between the data center and Alibaba Cloud is closed.
          *
          * @param request DeleteVpnConnectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -27683,11 +27691,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /**
          * @summary Deletes an IPsec-VPN connection.
          *
-         * @description *   **DeleteVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) operation to query the status of the task.
-         *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being deleted.
-         *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection is deleted.
-         * *   You cannot repeatedly call **DeleteVpnConnection** to delete an IPsec-VPN connection from the same VPN gateway within the specified period of time.
-         * >  After an IPsec-VPN connection between a virtual private cloud (VPC) and a data center is deleted, the communication between the VPC and data center is interrupted.
+         * @description *   **DeleteVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) operation to query the status of a VPN gateway.
+         *     *   If a VPN gateway is in the **updating** state, the IPsec-VPN connection is being deleted.
+         *     *   If a VPN gateway is in the **active** state, the IPsec-VPN connection has been deleted.
+         * *   You cannot call the **DeleteVpnConnection** operation to delete multiple IPsec-VPN connections for a VPN gateway at a time.
+         * >  After an IPsec-VPN connection between a data center and Alibaba Cloud is deleted, the connection between the data center and Alibaba Cloud is closed.
          *
          * @param request DeleteVpnConnectionRequest
          * @return DeleteVpnConnectionResponse
@@ -27701,11 +27709,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /**
          * @summary Deletes an IPsec-VPN connection.
          *
-         * @description *   **DeleteVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) operation to query the status of the task.
-         *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being deleted.
-         *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection is deleted.
-         * *   You cannot repeatedly call **DeleteVpnConnection** to delete an IPsec-VPN connection from the same VPN gateway within the specified period of time.
-         * >  After an IPsec-VPN connection between a virtual private cloud (VPC) and a data center is deleted, the communication between the VPC and data center is interrupted.
+         * @description *   **DeleteVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) operation to query the status of a VPN gateway.
+         *     *   If a VPN gateway is in the **updating** state, the IPsec-VPN connection is being deleted.
+         *     *   If a VPN gateway is in the **active** state, the IPsec-VPN connection has been deleted.
+         * *   You cannot call the **DeleteVpnConnection** operation to delete multiple IPsec-VPN connections for a VPN gateway at a time.
+         * >  After an IPsec-VPN connection between a data center and Alibaba Cloud is deleted, the connection between the data center and Alibaba Cloud is closed.
          *
          * @param request DeleteVpnConnectionRequest
          * @return DeleteVpnConnectionResponse
@@ -41165,7 +41173,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 诊断vpn connection
+         * @summary Diagnoses IPsec-VPN connections.
+         *
+         * @description *   If the IPsec-VPN connection is in single-tunnel mode, the request parameter `VpnConnectionIds` is required when you call the **DiagnoseVpnConnections** operation.
+         * *   If the IPsec-VPN connection is in dual-tunnel mode, the request parameter `TunnelIds` is required when you call the **DiagnoseVpnConnections** operation.
+         * *   After you call the **DiagnoseVpnConnections** operation, if the current IPsec-VPN connection is faulty, the operation returns the corresponding error code (**FailedReasonCode**) and log (**SourceLog**). You can troubleshoot based on the error code and log information. For more information, see [Common errors and troubleshooting methods for IPsec-VPN connections](https://help.aliyun.com/document_detail/477862.html).
          *
          * @param request DiagnoseVpnConnectionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -41223,7 +41235,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 诊断vpn connection
+         * @summary Diagnoses IPsec-VPN connections.
+         *
+         * @description *   If the IPsec-VPN connection is in single-tunnel mode, the request parameter `VpnConnectionIds` is required when you call the **DiagnoseVpnConnections** operation.
+         * *   If the IPsec-VPN connection is in dual-tunnel mode, the request parameter `TunnelIds` is required when you call the **DiagnoseVpnConnections** operation.
+         * *   After you call the **DiagnoseVpnConnections** operation, if the current IPsec-VPN connection is faulty, the operation returns the corresponding error code (**FailedReasonCode**) and log (**SourceLog**). You can troubleshoot based on the error code and log information. For more information, see [Common errors and troubleshooting methods for IPsec-VPN connections](https://help.aliyun.com/document_detail/477862.html).
          *
          * @param request DiagnoseVpnConnectionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -41281,7 +41297,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 诊断vpn connection
+         * @summary Diagnoses IPsec-VPN connections.
+         *
+         * @description *   If the IPsec-VPN connection is in single-tunnel mode, the request parameter `VpnConnectionIds` is required when you call the **DiagnoseVpnConnections** operation.
+         * *   If the IPsec-VPN connection is in dual-tunnel mode, the request parameter `TunnelIds` is required when you call the **DiagnoseVpnConnections** operation.
+         * *   After you call the **DiagnoseVpnConnections** operation, if the current IPsec-VPN connection is faulty, the operation returns the corresponding error code (**FailedReasonCode**) and log (**SourceLog**). You can troubleshoot based on the error code and log information. For more information, see [Common errors and troubleshooting methods for IPsec-VPN connections](https://help.aliyun.com/document_detail/477862.html).
          *
          * @param request DiagnoseVpnConnectionsRequest
          * @return DiagnoseVpnConnectionsResponse
@@ -41293,7 +41313,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary 诊断vpn connection
+         * @summary Diagnoses IPsec-VPN connections.
+         *
+         * @description *   If the IPsec-VPN connection is in single-tunnel mode, the request parameter `VpnConnectionIds` is required when you call the **DiagnoseVpnConnections** operation.
+         * *   If the IPsec-VPN connection is in dual-tunnel mode, the request parameter `TunnelIds` is required when you call the **DiagnoseVpnConnections** operation.
+         * *   After you call the **DiagnoseVpnConnections** operation, if the current IPsec-VPN connection is faulty, the operation returns the corresponding error code (**FailedReasonCode**) and log (**SourceLog**). You can troubleshoot based on the error code and log information. For more information, see [Common errors and troubleshooting methods for IPsec-VPN connections](https://help.aliyun.com/document_detail/477862.html).
          *
          * @param request DiagnoseVpnConnectionsRequest
          * @return DiagnoseVpnConnectionsResponse
@@ -55461,6 +55485,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary Modifies the name of an SSL-VPN client certificate.
+         *
          * @param request ModifySslVpnClientCertRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifySslVpnClientCertResponse
@@ -55521,6 +55547,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary Modifies the name of an SSL-VPN client certificate.
+         *
          * @param request ModifySslVpnClientCertRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifySslVpnClientCertResponse
@@ -55581,6 +55609,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary Modifies the name of an SSL-VPN client certificate.
+         *
          * @param request ModifySslVpnClientCertRequest
          * @return ModifySslVpnClientCertResponse
          */
@@ -55591,6 +55621,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary Modifies the name of an SSL-VPN client certificate.
+         *
          * @param request ModifySslVpnClientCertRequest
          * @return ModifySslVpnClientCertResponse
          */
@@ -55604,7 +55636,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
          * @summary Modifies the configurations of an SSL server.
          *
          * @description *   If you modify only the **name** of the SSL server, the operation is synchronous. If you also modify other configurations besides the **name**, the operation is asynchronous.
-         * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) to query the status of the task.
+         * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/2794055.html) to query the status of the task.
          *     *   If a VPN gateway is in the **updating** state, the configurations of the SSL server are being modified.
          *     *   If a VPN gateway is in the **active** state, the configurations of the SSL server are modified.
          * *   You cannot repeatedly call **ModifySslVpnServer** to modify the configurations of an SSL server within the specified period of time.
@@ -55712,7 +55744,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
          * @summary Modifies the configurations of an SSL server.
          *
          * @description *   If you modify only the **name** of the SSL server, the operation is synchronous. If you also modify other configurations besides the **name**, the operation is asynchronous.
-         * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) to query the status of the task.
+         * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/2794055.html) to query the status of the task.
          *     *   If a VPN gateway is in the **updating** state, the configurations of the SSL server are being modified.
          *     *   If a VPN gateway is in the **active** state, the configurations of the SSL server are modified.
          * *   You cannot repeatedly call **ModifySslVpnServer** to modify the configurations of an SSL server within the specified period of time.
@@ -55820,7 +55852,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
          * @summary Modifies the configurations of an SSL server.
          *
          * @description *   If you modify only the **name** of the SSL server, the operation is synchronous. If you also modify other configurations besides the **name**, the operation is asynchronous.
-         * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) to query the status of the task.
+         * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/2794055.html) to query the status of the task.
          *     *   If a VPN gateway is in the **updating** state, the configurations of the SSL server are being modified.
          *     *   If a VPN gateway is in the **active** state, the configurations of the SSL server are modified.
          * *   You cannot repeatedly call **ModifySslVpnServer** to modify the configurations of an SSL server within the specified period of time.
@@ -55838,7 +55870,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
          * @summary Modifies the configurations of an SSL server.
          *
          * @description *   If you modify only the **name** of the SSL server, the operation is synchronous. If you also modify other configurations besides the **name**, the operation is asynchronous.
-         * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) to query the status of the task.
+         * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/2794055.html) to query the status of the task.
          *     *   If a VPN gateway is in the **updating** state, the configurations of the SSL server are being modified.
          *     *   If a VPN gateway is in the **active** state, the configurations of the SSL server are modified.
          * *   You cannot repeatedly call **ModifySslVpnServer** to modify the configurations of an SSL server within the specified period of time.
@@ -58841,9 +58873,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary Modifies the weight of a destination-based route of a VPN gateway.
+         * @summary Modifies the weight of a destination-based route.
          *
-         * @description *   **ModifyVpnRouteEntryWeight** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) to query the status of the task.
+         * @description *   In scenarios where a VPN gateway has an active and a standby destination-based route, if you need to modify the weight of the active destination-based route, you must first delete the standby destination-based route. After you modify the active destination-based route, configure a standby destination-based route. If you need to modify the weight of the standby destination-based route, you also need to delete the active destination-based route first. After you modify the standby destination-based route, configure an active destination-based route. For more information about how to delete a destination-based route, see [DeleteVpnRouteEntry](https://help.aliyun.com/document_detail/2526961.html).
+         * *   **ModifyVpnRouteEntryWeight** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) to query the status of the task.
          *     *   If the VPN gateway is in the **updating** state, the weight of the destination-based route is being modified.
          *     *   If the VPN gateway is in the **active** state, the weight of the destination-based route is modified.
          * *   You cannot repeatedly call the **ModifyVpnRouteEntryWeight** operation to modify the weight of destination-based route for the same VPN gateway within the specified period of time.
@@ -58924,9 +58957,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary Modifies the weight of a destination-based route of a VPN gateway.
+         * @summary Modifies the weight of a destination-based route.
          *
-         * @description *   **ModifyVpnRouteEntryWeight** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) to query the status of the task.
+         * @description *   In scenarios where a VPN gateway has an active and a standby destination-based route, if you need to modify the weight of the active destination-based route, you must first delete the standby destination-based route. After you modify the active destination-based route, configure a standby destination-based route. If you need to modify the weight of the standby destination-based route, you also need to delete the active destination-based route first. After you modify the standby destination-based route, configure an active destination-based route. For more information about how to delete a destination-based route, see [DeleteVpnRouteEntry](https://help.aliyun.com/document_detail/2526961.html).
+         * *   **ModifyVpnRouteEntryWeight** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) to query the status of the task.
          *     *   If the VPN gateway is in the **updating** state, the weight of the destination-based route is being modified.
          *     *   If the VPN gateway is in the **active** state, the weight of the destination-based route is modified.
          * *   You cannot repeatedly call the **ModifyVpnRouteEntryWeight** operation to modify the weight of destination-based route for the same VPN gateway within the specified period of time.
@@ -59007,9 +59041,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary Modifies the weight of a destination-based route of a VPN gateway.
+         * @summary Modifies the weight of a destination-based route.
          *
-         * @description *   **ModifyVpnRouteEntryWeight** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) to query the status of the task.
+         * @description *   In scenarios where a VPN gateway has an active and a standby destination-based route, if you need to modify the weight of the active destination-based route, you must first delete the standby destination-based route. After you modify the active destination-based route, configure a standby destination-based route. If you need to modify the weight of the standby destination-based route, you also need to delete the active destination-based route first. After you modify the standby destination-based route, configure an active destination-based route. For more information about how to delete a destination-based route, see [DeleteVpnRouteEntry](https://help.aliyun.com/document_detail/2526961.html).
+         * *   **ModifyVpnRouteEntryWeight** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) to query the status of the task.
          *     *   If the VPN gateway is in the **updating** state, the weight of the destination-based route is being modified.
          *     *   If the VPN gateway is in the **active** state, the weight of the destination-based route is modified.
          * *   You cannot repeatedly call the **ModifyVpnRouteEntryWeight** operation to modify the weight of destination-based route for the same VPN gateway within the specified period of time.
@@ -59024,9 +59059,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
-         * @summary Modifies the weight of a destination-based route of a VPN gateway.
+         * @summary Modifies the weight of a destination-based route.
          *
-         * @description *   **ModifyVpnRouteEntryWeight** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) to query the status of the task.
+         * @description *   In scenarios where a VPN gateway has an active and a standby destination-based route, if you need to modify the weight of the active destination-based route, you must first delete the standby destination-based route. After you modify the active destination-based route, configure a standby destination-based route. If you need to modify the weight of the standby destination-based route, you also need to delete the active destination-based route first. After you modify the standby destination-based route, configure an active destination-based route. For more information about how to delete a destination-based route, see [DeleteVpnRouteEntry](https://help.aliyun.com/document_detail/2526961.html).
+         * *   **ModifyVpnRouteEntryWeight** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](https://help.aliyun.com/document_detail/73720.html) to query the status of the task.
          *     *   If the VPN gateway is in the **updating** state, the weight of the destination-based route is being modified.
          *     *   If the VPN gateway is in the **active** state, the weight of the destination-based route is modified.
          * *   You cannot repeatedly call the **ModifyVpnRouteEntryWeight** operation to modify the weight of destination-based route for the same VPN gateway within the specified period of time.

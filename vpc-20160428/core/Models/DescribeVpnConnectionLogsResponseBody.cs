@@ -17,9 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// An array of strings.
-        /// 
-        /// Each item in the array is a log entry.
+        /// The log list.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,29 +32,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Indicates whether the log is accurate. Valid values:
         /// 
-        /// *   **true**: accurate
-        /// *   **false**: inaccurate
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("IsCompleted")]
         [Validation(Required=false)]
         public bool? IsCompleted { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -69,33 +69,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tag value.
-        /// 
-        /// The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
-        /// 
-        /// Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.
+        /// The tags to be added to the customer gateway.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeCustomerGatewaysRequestTag> Tag { get; set; }
         public class DescribeCustomerGatewaysRequestTag : TeaModel {
             /// <summary>
-            /// The tag key. The tag key cannot be an empty string.
+            /// The key of the tag. The tag key cannot be an empty string.
             /// 
-            /// It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
             /// 
-            /// You can specify at most 20 tag keys in each call.
+            /// You can specify at most 20 tag keys at a time.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// The value of the tag.
             /// 
-            /// The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+            /// The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
             /// 
-            /// Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
+            /// Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

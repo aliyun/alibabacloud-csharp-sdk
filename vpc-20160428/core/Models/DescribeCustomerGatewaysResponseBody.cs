@@ -28,23 +28,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? Asn { get; set; }
 
                 /// <summary>
-                /// The authentication key of the Border Gateway Protocol (BGP) routing protocol for the gateway device in the data center.
+                /// The authentication key that is used to connect to the gateway device in the data center by using Border Gateway Protocol (BGP).
                 /// </summary>
                 [NameInMap("AuthKey")]
                 [Validation(Required=false)]
                 public string AuthKey { get; set; }
 
                 /// <summary>
-                /// The timestamp generated when the customer gateway was created. Unit: millisecond.
+                /// The time when the customer gateway was created. Unit: millisecond.
                 /// 
-                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The ID of the customer gateway.
+                /// The customer gateway ID.
                 /// </summary>
                 [NameInMap("CustomerGatewayId")]
                 [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The public IP address of the gateway device in the data center.
+                /// The IP address of the gateway device in the data center.
                 /// </summary>
                 [NameInMap("IpAddress")]
                 [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// The ID of the resource group to which the customer gateway belongs.
                 /// 
-                /// You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.
+                /// You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The list of tags added to the customer gateway.
+                /// The tags that are added to the customer gateway.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag> Tag { get; set; }
                     public class DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of tag N.
+                        /// The key of the tag.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of tag N.
+                        /// The value of the tag.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

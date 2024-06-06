@@ -1,3 +1,9 @@
+2024-06-06 Version: 6.7.9
+- Update API CreateFullNatEntry: update param NatIpPort.
+- Update API DeleteRouteEntry: update param RouteEntryId.
+- Update API DeleteRouteEntry: update response param.
+
+
 2024-05-27 Version: 6.7.8
 - Update API ListPublicIpAddressPools: update response param.
 

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The new weight that you want to set for the destination-based route. Valid values:
+        /// The new weight of the destination-based route. Valid values:
         /// 
         /// *   **0**: a low priority
         /// *   **100**: a high priority
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnGatewayId { get; set; }
 
         /// <summary>
-        /// The previous weight of the destination-based route. Valid values:
+        /// The original weight of the destination-based route. Valid values:
         /// 
         /// *   **0**: a low priority
         /// *   **100**: a high priority

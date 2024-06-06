@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnConnectionLogsRequest : TeaModel {
         /// <summary>
-        /// The beginning of the time range to query. The value must be a UNIX timestamp. For example, 1671003744 specifies 15:42:24 (UTC+8) on December 14, 2022.
+        /// The start time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// 
-        /// >  If you specify **From**, you must also specify **To** or **MinutePeriod**.
+        /// >  If you specify **From**, you must specify **To** or **MinutePeriod**.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public int? From { get; set; }
 
         /// <summary>
-        /// The interval at which log data is queried. Valid values: **1** to **10**. Unit: minutes.
+        /// The interval at which log data is collected. Valid values: **1** to **10**. Unit: minutes.
         /// 
-        /// >  If both **From** and **To** are not specified, you must specify **MinutePeriod**.
+        /// >  If you do not specify **From** and **To**, you must specify **MinutePeriod**.
         /// </summary>
         [NameInMap("MinutePeriod")]
         [Validation(Required=false)]
@@ -36,21 +36,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The page number. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+        /// The number of entries per page. Valid values: **1** to **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the IPsec-VPN connection belongs.
+        /// The region ID of the IPsec-VPN connection.
         /// 
         /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
         /// 
@@ -69,16 +69,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The value must be a UNIX timestamp. For example, 1671004344 specifies 15:52:24 (UTC+8) on December 14, 2022.
+        /// The end time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
         /// 
-        /// >  If you specify **To**, you must also specify **From** or **MinutePeriod**.
+        /// >  If you specify **To**, you must specify **From** or **MinutePeriod**.
         /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]
         public int? To { get; set; }
 
         /// <summary>
-        /// The tunnel ID of the IPsec-VPN connection. You can specify this parameter only for IPsec-VPN connections in dual-tunnel mode.
+        /// The ID of the IPsec-VPN connection.
+        /// 
+        /// This parameter is available only for a dual-tunnel IPsec-VPN connection.
         /// </summary>
         [NameInMap("TunnelId")]
         [Validation(Required=false)]

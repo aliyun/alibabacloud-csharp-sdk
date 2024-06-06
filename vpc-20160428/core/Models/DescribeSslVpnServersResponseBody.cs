@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The detailed information about the SSL servers.
+        /// The detailed information about the SSL-VPN server.
         /// </summary>
         [NameInMap("SslVpnServers")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public int? Connections { get; set; }
 
                 /// <summary>
-                /// The timestamp generated when the SSL server was created.
+                /// The timestamp generated when the SSL-VPN server was created.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IDaaSInstanceVersion { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the IDaaS instance is created.
+                /// The region ID of the IDaaS instance.
                 /// </summary>
                 [NameInMap("IDaaSRegionId")]
                 [Validation(Required=false)]
@@ -133,44 +133,44 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public int? MaxConnections { get; set; }
 
                 /// <summary>
-                /// The name of the SSL server.
+                /// The name of the SSL-VPN server.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The port that is used by the SSL server.
+                /// The port that is used by the SSL-VPN server.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The protocol that is used by the SSL server.
+                /// The protocol that is used by the SSL-VPN server.
                 /// </summary>
                 [NameInMap("Proto")]
                 [Validation(Required=false)]
                 public string Proto { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the SSL server is created.
+                /// The region ID of the SSL-VPN server.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the SSL server belongs.
+                /// The resource group ID of the SSL-VPN server.
                 /// 
-                /// You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.
+                /// You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The ID of the SSL server.
+                /// The ID of the SSL-VPN server.
                 /// </summary>
                 [NameInMap("SslVpnServerId")]
                 [Validation(Required=false)]

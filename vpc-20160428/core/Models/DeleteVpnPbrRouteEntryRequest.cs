@@ -102,7 +102,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnGatewayId { get; set; }
 
         /// <summary>
-        /// The weight of the policy-based route.
+        /// The weight of the policy-based route. Valid values:
+        /// 
+        /// You can call [DescribeVpnPbrRouteEntries](https://help.aliyun.com/document_detail/2526959.html) to query weights of policy-based routes.
         /// 
         /// This parameter is required.
         /// </summary>
