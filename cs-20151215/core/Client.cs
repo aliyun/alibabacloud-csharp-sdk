@@ -2048,7 +2048,113 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-         * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&M workload.
+         * @summary 发起集群诊断
+         *
+         * @param request CreateClusterDiagnosisRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateClusterDiagnosisResponse
+         */
+        public CreateClusterDiagnosisResponse CreateClusterDiagnosisWithOptions(string clusterId, CreateClusterDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                body["target"] = request.Target;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateClusterDiagnosis",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/diagnosis",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateClusterDiagnosisResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 发起集群诊断
+         *
+         * @param request CreateClusterDiagnosisRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateClusterDiagnosisResponse
+         */
+        public async Task<CreateClusterDiagnosisResponse> CreateClusterDiagnosisWithOptionsAsync(string clusterId, CreateClusterDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                body["target"] = request.Target;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateClusterDiagnosis",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/diagnosis",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateClusterDiagnosisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 发起集群诊断
+         *
+         * @param request CreateClusterDiagnosisRequest
+         * @return CreateClusterDiagnosisResponse
+         */
+        public CreateClusterDiagnosisResponse CreateClusterDiagnosis(string clusterId, CreateClusterDiagnosisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateClusterDiagnosisWithOptions(clusterId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 发起集群诊断
+         *
+         * @param request CreateClusterDiagnosisRequest
+         * @return CreateClusterDiagnosisResponse
+         */
+        public async Task<CreateClusterDiagnosisResponse> CreateClusterDiagnosisAsync(string clusterId, CreateClusterDiagnosisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateClusterDiagnosisWithOptionsAsync(clusterId, request, headers, runtime);
+        }
+
+        /**
+         * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\&M workload.
          *
          * @param request CreateClusterNodePoolRequest
          * @param headers map
@@ -2124,7 +2230,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-         * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&M workload.
+         * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\&M workload.
          *
          * @param request CreateClusterNodePoolRequest
          * @param headers map
@@ -2200,7 +2306,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-         * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&M workload.
+         * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\&M workload.
          *
          * @param request CreateClusterNodePoolRequest
          * @return CreateClusterNodePoolResponse
@@ -2213,7 +2319,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-         * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&M workload.
+         * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\&M workload.
          *
          * @param request CreateClusterNodePoolRequest
          * @return CreateClusterNodePoolResponse
@@ -5202,7 +5308,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-         * @summary You can call the DescribeClusterNodePools operation to query node pools in a Container Service for Kubernetes (ACK) cluster.
+         * @summary Queries node pools in a Container Service for Kubernetes (ACK) cluster.
          *
          * @param request DescribeClusterNodePoolsRequest
          * @param headers map
@@ -5238,7 +5344,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-         * @summary You can call the DescribeClusterNodePools operation to query node pools in a Container Service for Kubernetes (ACK) cluster.
+         * @summary Queries node pools in a Container Service for Kubernetes (ACK) cluster.
          *
          * @param request DescribeClusterNodePoolsRequest
          * @param headers map
@@ -5274,7 +5380,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-         * @summary You can call the DescribeClusterNodePools operation to query node pools in a Container Service for Kubernetes (ACK) cluster.
+         * @summary Queries node pools in a Container Service for Kubernetes (ACK) cluster.
          *
          * @param request DescribeClusterNodePoolsRequest
          * @return DescribeClusterNodePoolsResponse
@@ -5287,7 +5393,7 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
-         * @summary You can call the DescribeClusterNodePools operation to query node pools in a Container Service for Kubernetes (ACK) cluster.
+         * @summary Queries node pools in a Container Service for Kubernetes (ACK) cluster.
          *
          * @param request DescribeClusterNodePoolsRequest
          * @return DescribeClusterNodePoolsResponse
@@ -8763,6 +8869,166 @@ namespace AlibabaCloud.SDK.CS20151215
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetClusterCheckWithOptionsAsync(clusterId, checkId, headers, runtime);
+        }
+
+        /**
+         * @summary 获取集群诊断检查项
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetClusterDiagnosisCheckItemsResponse
+         */
+        public GetClusterDiagnosisCheckItemsResponse GetClusterDiagnosisCheckItemsWithOptions(string clusterId, string diagnosisId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetClusterDiagnosisCheckItems",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/diagnosis/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(diagnosisId) + "/check_items",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetClusterDiagnosisCheckItemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取集群诊断检查项
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetClusterDiagnosisCheckItemsResponse
+         */
+        public async Task<GetClusterDiagnosisCheckItemsResponse> GetClusterDiagnosisCheckItemsWithOptionsAsync(string clusterId, string diagnosisId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetClusterDiagnosisCheckItems",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/diagnosis/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(diagnosisId) + "/check_items",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetClusterDiagnosisCheckItemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取集群诊断检查项
+         *
+         * @return GetClusterDiagnosisCheckItemsResponse
+         */
+        public GetClusterDiagnosisCheckItemsResponse GetClusterDiagnosisCheckItems(string clusterId, string diagnosisId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetClusterDiagnosisCheckItemsWithOptions(clusterId, diagnosisId, headers, runtime);
+        }
+
+        /**
+         * @summary 获取集群诊断检查项
+         *
+         * @return GetClusterDiagnosisCheckItemsResponse
+         */
+        public async Task<GetClusterDiagnosisCheckItemsResponse> GetClusterDiagnosisCheckItemsAsync(string clusterId, string diagnosisId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetClusterDiagnosisCheckItemsWithOptionsAsync(clusterId, diagnosisId, headers, runtime);
+        }
+
+        /**
+         * @summary 获取集群诊断结果
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetClusterDiagnosisResultResponse
+         */
+        public GetClusterDiagnosisResultResponse GetClusterDiagnosisResultWithOptions(string clusterId, string diagnosisId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetClusterDiagnosisResult",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/diagnosis/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(diagnosisId) + "/result",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetClusterDiagnosisResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取集群诊断结果
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetClusterDiagnosisResultResponse
+         */
+        public async Task<GetClusterDiagnosisResultResponse> GetClusterDiagnosisResultWithOptionsAsync(string clusterId, string diagnosisId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetClusterDiagnosisResult",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/diagnosis/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(diagnosisId) + "/result",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetClusterDiagnosisResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取集群诊断结果
+         *
+         * @return GetClusterDiagnosisResultResponse
+         */
+        public GetClusterDiagnosisResultResponse GetClusterDiagnosisResult(string clusterId, string diagnosisId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetClusterDiagnosisResultWithOptions(clusterId, diagnosisId, headers, runtime);
+        }
+
+        /**
+         * @summary 获取集群诊断结果
+         *
+         * @return GetClusterDiagnosisResultResponse
+         */
+        public async Task<GetClusterDiagnosisResultResponse> GetClusterDiagnosisResultAsync(string clusterId, string diagnosisId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetClusterDiagnosisResultWithOptionsAsync(clusterId, diagnosisId, headers, runtime);
         }
 
         /**

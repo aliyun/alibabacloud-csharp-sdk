@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public ModifyClusterNodePoolRequestAutoScaling AutoScaling { get; set; }
         public class ModifyClusterNodePoolRequestAutoScaling : TeaModel {
             /// <summary>
-            /// The maximum bandwidth of the elastic IP address (EIP).
+            /// The maximum bandwidth of the EIP.
             /// </summary>
             [NameInMap("eip_bandwidth")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// Specifies whether to associate an EIP with the node pool. Valid values:
+            /// Specifies whether to associate an elastic IP address (EIP) with the node pool. Valid values:
             /// 
             /// *   `true`: associates an EIP with the node pool.
             /// *   `false`: does not associate an EIP with the node pool.
@@ -77,12 +77,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MinInstances { get; set; }
 
             /// <summary>
-            /// The instance types that can be used for the auto scaling of the node pool. Valid values:
+            /// The instance types that can be used for auto scaling of the node pool. Valid values:
             /// 
             /// *   `cpu`: regular instance.
             /// *   `gpu`: GPU-accelerated instance.
-            /// *   `gpushare`: shared GPU-accelerated instance
-            /// *   `spot`: preemptible instance
+            /// *   `gpushare`: shared GPU-accelerated instance.
+            /// *   `spot`: preemptible instance.
             /// 
             /// Default value: `cpu`.
             /// </summary>
@@ -156,12 +156,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RuntimeVersion { get; set; }
 
             /// <summary>
-            /// The configurations of node taints.
+            /// The configuration of a node taint.
             /// </summary>
             [NameInMap("taints")]
             [Validation(Required=false)]
             public List<Taint> Taints { get; set; }
 
+            /// <summary>
+            /// Specifies whether the nodes are unschedulable after a scale-out activity is performed.
+            /// </summary>
             [NameInMap("unschedulable")]
             [Validation(Required=false)]
             public bool? Unschedulable { get; set; }
@@ -202,10 +205,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public ModifyClusterNodePoolRequestManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
             public class ModifyClusterNodePoolRequestManagementAutoRepairPolicy : TeaModel {
                 /// <summary>
-                /// Specifies whether ACK is allowed to automatically restart nodes after patching CVE vulnerabilities. Valid values:
+                /// Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:
                 /// 
-                /// *   `true`: yes
-                /// *   `false`: no
+                /// *   `true`: yes.
+                /// *   `false`: no.
                 /// </summary>
                 [NameInMap("restart_node")]
                 [Validation(Required=false)]
@@ -233,17 +236,33 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// Specifies whether ACK is allowed to automatically update the kubelet. Valid values:
                 /// 
-                /// *   `true`: yes
-                /// *   `false`: no
+                /// *   `true`: yes.
+                /// *   `false`: no.
                 /// </summary>
                 [NameInMap("auto_upgrade_kubelet")]
                 [Validation(Required=false)]
                 public bool? AutoUpgradeKubelet { get; set; }
 
+                /// <summary>
+                /// Specifies whether ACK is allowed to automatically update the operating system. This parameter takes effect only when you specify `auto_upgrade=true`. Valid values:
+                /// 
+                /// *   `true`: yes.
+                /// *   `false`: no.
+                /// 
+                /// Default value: `false`.
+                /// </summary>
                 [NameInMap("auto_upgrade_os")]
                 [Validation(Required=false)]
                 public bool? AutoUpgradeOs { get; set; }
 
+                /// <summary>
+                /// Specifies whether ACK is allowed to automatically update the runtime. This parameter takes effect only when you specify `auto_upgrade=true`. Valid values:
+                /// 
+                /// *   `true`: yes.
+                /// *   `false`: no.
+                /// 
+                /// Default value: `false`.
+                /// </summary>
                 [NameInMap("auto_upgrade_runtime")]
                 [Validation(Required=false)]
                 public bool? AutoUpgradeRuntime { get; set; }
@@ -253,8 +272,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// Specifies whether ACK is allowed to automatically patch CVE vulnerabilities. Valid values:
             /// 
-            /// *   `true`: yes
-            /// *   `true`: no
+            /// *   `true`: yes.
+            /// *   `true`: no.
             /// </summary>
             [NameInMap("auto_vul_fix")]
             [Validation(Required=false)]
@@ -270,8 +289,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// Specifies whether ACK is allowed to automatically restart nodes after patching CVE vulnerabilities. Valid values:
                 /// 
-                /// *   `true`: yes
-                /// *   `false`: no
+                /// *   `true`: yes.
+                /// *   `false`: no.
                 /// </summary>
                 [NameInMap("restart_node")]
                 [Validation(Required=false)]
@@ -395,7 +414,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// The duration of the auto-renewal. This parameter takes effect and is required only when you set `instance_charge_type` to `PrePaid`.
+            /// The auto-renewal duration. This parameter takes effect and is required only when you set `instance_charge_type` to `PrePaid`.
             /// 
             /// If you specify `PeriodUnit=Month`, the valid values are 1, 2, 3, 6, and 12.
             /// </summary>
@@ -414,7 +433,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? CompensateWithOnDemand { get; set; }
 
             /// <summary>
-            /// The configurations of the data disks that are mounted to the nodes in the node pool. You can mount 0 to 10 data disks. You can mount at most 10 data disks to the nodes in the node pool.
+            /// The configurations of the data disks that are mounted to the nodes in the node pool. You can mount at most 10 data disks to the nodes in the node pool.
             /// </summary>
             [NameInMap("data_disks")]
             [Validation(Required=false)]
@@ -525,7 +544,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? OnDemandPercentageAboveBaseCapacity { get; set; }
 
             /// <summary>
-            /// The subscription duration of worker nodes. This parameter takes effect and is required only when `instance_charge_type` is set to `PrePaid`.
+            /// The subscription duration of the nodes in the node pool. This parameter takes effect and is required only when you set `instance_charge_type` to `PrePaid`.
             /// 
             /// If `PeriodUnit=Month` is specified, the valid values are 1, 2, 3, 6, 12, 24, 36, 48, and 60.
             /// </summary>
@@ -572,7 +591,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The type of private node pool. This parameter specifies the type of private node pool that you want to use to create instances. A private node pool is generated when an elasticity assurance or a capacity reservation service takes effect. The system selects a private node pool to launch instances. Valid values:
+                /// The type of the private node pool. This parameter specifies the type of private node pool that you want to use to create instances. A private node pool is generated when an elasticity assurance or a capacity reservation service takes effect. The system selects a private node pool to launch instances. Valid values:
                 /// 
                 /// *   `Open`: specifies an open private node pool. The system selects an open private node pool to launch instances. If no matching open private node pool is available, the resources in the public node pool are used.
                 /// *   `Target`: specifies a private node pool. The system uses the resources of the specified private node pool to launch instances. If the specified private node pool is unavailable, instances cannot be launched.
@@ -657,24 +676,24 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SpotStrategy { get; set; }
 
             /// <summary>
-            /// Indicates whether Burst is enabled for the system disk when the disk type is cloud_auto.
+            /// Specifies whether to enable Burst for the system disk when the disk type is cloud_auto.
             /// </summary>
             [NameInMap("system_disk_bursting_enabled")]
             [Validation(Required=false)]
             public bool? SystemDiskBurstingEnabled { get; set; }
 
             /// <summary>
-            /// The types of system disks. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: cloud: disk cloud_efficiency: ultra disk cloud_ssd: standard SSD cloud_essd: indicates an enhanced SSD (ESSD).
+            /// The types of system disks. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: cloud: disk. cloud_efficiency: ultra disk. cloud_ssd: standard SSD. cloud_essd: enhanced SSD (ESSD).
             /// </summary>
             [NameInMap("system_disk_categories")]
             [Validation(Required=false)]
             public List<string> SystemDiskCategories { get; set; }
 
             /// <summary>
-            /// The type of system disk. Valid values:
+            /// The type of the system disk. Valid values:
             /// 
             /// *   `cloud_efficiency`: ultra disk.
-            /// *   `cloud_ssd`: standard SSD
+            /// *   `cloud_ssd`: standard SSD.
             /// 
             /// Default value: `cloud_ssd`.
             /// </summary>
@@ -690,7 +709,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskEncryptAlgorithm { get; set; }
 
             /// <summary>
-            /// Indicates whether the system disk is encrypted. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.
+            /// Specifies whether to encrypt the system disk. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.
             /// </summary>
             [NameInMap("system_disk_encrypted")]
             [Validation(Required=false)]
