@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string FuzzyQuantity { get; set; }
 
+        [NameInMap("lmItemId")]
+        [Validation(Required=false)]
+        public string LmItemId { get; set; }
+
         [NameInMap("productId")]
         [Validation(Required=false)]
         public string ProductId { get; set; }

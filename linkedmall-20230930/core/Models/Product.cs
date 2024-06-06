@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public List<string> Images { get; set; }
 
+        [NameInMap("lmItemId")]
+        [Validation(Required=false)]
+        public string LmItemId { get; set; }
+
         [NameInMap("picUrl")]
         [Validation(Required=false)]
         public string PicUrl { get; set; }
