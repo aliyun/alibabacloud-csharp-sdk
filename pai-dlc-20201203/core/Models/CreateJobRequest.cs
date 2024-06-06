@@ -53,6 +53,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string DebuggerConfigContent { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
@@ -69,10 +72,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public long? JobMaxRunningTimeMinutes { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("JobSpecs")]
         [Validation(Required=false)]
         public List<JobSpec> JobSpecs { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("JobType")]
         [Validation(Required=false)]
         public string JobType { get; set; }
@@ -105,6 +114,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public List<string> ThirdpartyLibs { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("UserCommand")]
         [Validation(Required=false)]
         public string UserCommand { get; set; }

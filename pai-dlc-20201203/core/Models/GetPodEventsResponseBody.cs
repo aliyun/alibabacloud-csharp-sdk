@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PodId")]
         [Validation(Required=false)]
         public string PodId { get; set; }

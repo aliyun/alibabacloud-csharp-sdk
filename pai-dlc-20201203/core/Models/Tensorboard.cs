@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
 
+        [NameInMap("GmtFinishTime")]
+        [Validation(Required=false)]
+        public string GmtFinishTime { get; set; }
+
         [NameInMap("GmtModifyTime")]
         [Validation(Required=false)]
         public string GmtModifyTime { get; set; }
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
+
+        [NameInMap("Username")]
+        [Validation(Required=false)]
+        public string Username { get; set; }
 
     }
 

@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MetricType")]
         [Validation(Required=false)]
         public string MetricType { get; set; }

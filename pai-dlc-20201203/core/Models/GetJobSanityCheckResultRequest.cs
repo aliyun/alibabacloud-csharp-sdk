@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetJobSanityCheckResultRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SanityCheckNumber")]
         [Validation(Required=false)]
         public int? SanityCheckNumber { get; set; }
