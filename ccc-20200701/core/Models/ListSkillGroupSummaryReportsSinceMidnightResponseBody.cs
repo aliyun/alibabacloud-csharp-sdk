@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public long? AverageWorkTime { get; set; }
 
+                    [NameInMap("CallsAbandoned")]
+                    [Validation(Required=false)]
+                    public long? CallsAbandoned { get; set; }
+
                     [NameInMap("CallsAttendedTransferOut")]
                     [Validation(Required=false)]
                     public long? CallsAttendedTransferOut { get; set; }
@@ -76,6 +80,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [NameInMap("CallsOffered")]
                     [Validation(Required=false)]
                     public long? CallsOffered { get; set; }
+
+                    [NameInMap("CallsOverflow")]
+                    [Validation(Required=false)]
+                    public string CallsOverflow { get; set; }
 
                     [NameInMap("CallsQueuingCanceled")]
                     [Validation(Required=false)]

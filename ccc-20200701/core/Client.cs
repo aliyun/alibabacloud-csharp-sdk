@@ -3315,12 +3315,15 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @deprecated OpenAPI CreateCustomCallTagging is deprecated, please use CCC::2020-07-01::CreateCustomCallTaggings instead.
+         *
          * @summary 创建呼入控制号码
          *
          * @param request CreateCustomCallTaggingRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateCustomCallTaggingResponse
          */
+        // Deprecated
         public CreateCustomCallTaggingResponse CreateCustomCallTaggingWithOptions(CreateCustomCallTaggingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3353,12 +3356,15 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @deprecated OpenAPI CreateCustomCallTagging is deprecated, please use CCC::2020-07-01::CreateCustomCallTaggings instead.
+         *
          * @summary 创建呼入控制号码
          *
          * @param request CreateCustomCallTaggingRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateCustomCallTaggingResponse
          */
+        // Deprecated
         public async Task<CreateCustomCallTaggingResponse> CreateCustomCallTaggingWithOptionsAsync(CreateCustomCallTaggingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3391,11 +3397,14 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @deprecated OpenAPI CreateCustomCallTagging is deprecated, please use CCC::2020-07-01::CreateCustomCallTaggings instead.
+         *
          * @summary 创建呼入控制号码
          *
          * @param request CreateCustomCallTaggingRequest
          * @return CreateCustomCallTaggingResponse
          */
+        // Deprecated
         public CreateCustomCallTaggingResponse CreateCustomCallTagging(CreateCustomCallTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3403,11 +3412,14 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @deprecated OpenAPI CreateCustomCallTagging is deprecated, please use CCC::2020-07-01::CreateCustomCallTaggings instead.
+         *
          * @summary 创建呼入控制号码
          *
          * @param request CreateCustomCallTaggingRequest
          * @return CreateCustomCallTaggingResponse
          */
+        // Deprecated
         public async Task<CreateCustomCallTaggingResponse> CreateCustomCallTaggingAsync(CreateCustomCallTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13183,12 +13195,15 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @deprecated OpenAPI ListLegacyAgentEventLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
+         *
          * @summary ListLegacyAgentEventLogs
          *
          * @param request ListLegacyAgentEventLogsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListLegacyAgentEventLogsResponse
          */
+        // Deprecated
         public ListLegacyAgentEventLogsResponse ListLegacyAgentEventLogsWithOptions(ListLegacyAgentEventLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13237,12 +13252,15 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @deprecated OpenAPI ListLegacyAgentEventLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
+         *
          * @summary ListLegacyAgentEventLogs
          *
          * @param request ListLegacyAgentEventLogsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListLegacyAgentEventLogsResponse
          */
+        // Deprecated
         public async Task<ListLegacyAgentEventLogsResponse> ListLegacyAgentEventLogsWithOptionsAsync(ListLegacyAgentEventLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13291,11 +13309,14 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @deprecated OpenAPI ListLegacyAgentEventLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
+         *
          * @summary ListLegacyAgentEventLogs
          *
          * @param request ListLegacyAgentEventLogsRequest
          * @return ListLegacyAgentEventLogsResponse
          */
+        // Deprecated
         public ListLegacyAgentEventLogsResponse ListLegacyAgentEventLogs(ListLegacyAgentEventLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13303,11 +13324,14 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @deprecated OpenAPI ListLegacyAgentEventLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
+         *
          * @summary ListLegacyAgentEventLogs
          *
          * @param request ListLegacyAgentEventLogsRequest
          * @return ListLegacyAgentEventLogsResponse
          */
+        // Deprecated
         public async Task<ListLegacyAgentEventLogsResponse> ListLegacyAgentEventLogsAsync(ListLegacyAgentEventLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13315,12 +13339,15 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @deprecated OpenAPI ListLegacyAgentStatusLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
+         *
          * @summary ListLegacyAgentStatusLogs
          *
          * @param request ListLegacyAgentStatusLogsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListLegacyAgentStatusLogsResponse
          */
+        // Deprecated
         public ListLegacyAgentStatusLogsResponse ListLegacyAgentStatusLogsWithOptions(ListLegacyAgentStatusLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13369,12 +13396,15 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @deprecated OpenAPI ListLegacyAgentStatusLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
+         *
          * @summary ListLegacyAgentStatusLogs
          *
          * @param request ListLegacyAgentStatusLogsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ListLegacyAgentStatusLogsResponse
          */
+        // Deprecated
         public async Task<ListLegacyAgentStatusLogsResponse> ListLegacyAgentStatusLogsWithOptionsAsync(ListLegacyAgentStatusLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13423,11 +13453,14 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @deprecated OpenAPI ListLegacyAgentStatusLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
+         *
          * @summary ListLegacyAgentStatusLogs
          *
          * @param request ListLegacyAgentStatusLogsRequest
          * @return ListLegacyAgentStatusLogsResponse
          */
+        // Deprecated
         public ListLegacyAgentStatusLogsResponse ListLegacyAgentStatusLogs(ListLegacyAgentStatusLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13435,11 +13468,14 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @deprecated OpenAPI ListLegacyAgentStatusLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
+         *
          * @summary ListLegacyAgentStatusLogs
          *
          * @param request ListLegacyAgentStatusLogsRequest
          * @return ListLegacyAgentStatusLogsResponse
          */
+        // Deprecated
         public async Task<ListLegacyAgentStatusLogsResponse> ListLegacyAgentStatusLogsAsync(ListLegacyAgentStatusLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

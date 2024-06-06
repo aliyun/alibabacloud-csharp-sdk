@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public float? CompletionRate { get; set; }
 
+            [NameInMap("ContactFlowId")]
+            [Validation(Required=false)]
+            public string ContactFlowId { get; set; }
+
             [NameInMap("MaxAttemptCount")]
             [Validation(Required=false)]
             public long? MaxAttemptCount { get; set; }
