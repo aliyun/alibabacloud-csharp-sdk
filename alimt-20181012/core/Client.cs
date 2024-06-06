@@ -848,6 +848,138 @@ namespace AlibabaCloud.SDK.Alimt20181012
         }
 
         /**
+         * @summary GetBatchTranslateByVPC
+         *
+         * @param request GetBatchTranslateByVPCRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetBatchTranslateByVPCResponse
+         */
+        public GetBatchTranslateByVPCResponse GetBatchTranslateByVPCWithOptions(GetBatchTranslateByVPCRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiType))
+            {
+                body["ApiType"] = request.ApiType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            {
+                body["FormatType"] = request.FormatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["Scene"] = request.Scene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            {
+                body["SourceText"] = request.SourceText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBatchTranslateByVPC",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBatchTranslateByVPCResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary GetBatchTranslateByVPC
+         *
+         * @param request GetBatchTranslateByVPCRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetBatchTranslateByVPCResponse
+         */
+        public async Task<GetBatchTranslateByVPCResponse> GetBatchTranslateByVPCWithOptionsAsync(GetBatchTranslateByVPCRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiType))
+            {
+                body["ApiType"] = request.ApiType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            {
+                body["FormatType"] = request.FormatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["Scene"] = request.Scene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            {
+                body["SourceText"] = request.SourceText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBatchTranslateByVPC",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBatchTranslateByVPCResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary GetBatchTranslateByVPC
+         *
+         * @param request GetBatchTranslateByVPCRequest
+         * @return GetBatchTranslateByVPCResponse
+         */
+        public GetBatchTranslateByVPCResponse GetBatchTranslateByVPC(GetBatchTranslateByVPCRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetBatchTranslateByVPCWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary GetBatchTranslateByVPC
+         *
+         * @param request GetBatchTranslateByVPCRequest
+         * @return GetBatchTranslateByVPCResponse
+         */
+        public async Task<GetBatchTranslateByVPCResponse> GetBatchTranslateByVPCAsync(GetBatchTranslateByVPCRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetBatchTranslateByVPCWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 语种识别
          *
          * @param request GetDetectLanguageRequest
@@ -2637,6 +2769,142 @@ namespace AlibabaCloud.SDK.Alimt20181012
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TranslateGeneralWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary TranslateGeneralVpc
+         *
+         * @param request TranslateGeneralVpcRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TranslateGeneralVpcResponse
+         */
+        public TranslateGeneralVpcResponse TranslateGeneralVpcWithOptions(TranslateGeneralVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
+            {
+                query["Context"] = request.Context;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            {
+                body["FormatType"] = request.FormatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["Scene"] = request.Scene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            {
+                body["SourceText"] = request.SourceText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TranslateGeneralVpc",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TranslateGeneralVpcResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary TranslateGeneralVpc
+         *
+         * @param request TranslateGeneralVpcRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TranslateGeneralVpcResponse
+         */
+        public async Task<TranslateGeneralVpcResponse> TranslateGeneralVpcWithOptionsAsync(TranslateGeneralVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
+            {
+                query["Context"] = request.Context;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            {
+                body["FormatType"] = request.FormatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["Scene"] = request.Scene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            {
+                body["SourceText"] = request.SourceText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TranslateGeneralVpc",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TranslateGeneralVpcResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary TranslateGeneralVpc
+         *
+         * @param request TranslateGeneralVpcRequest
+         * @return TranslateGeneralVpcResponse
+         */
+        public TranslateGeneralVpcResponse TranslateGeneralVpc(TranslateGeneralVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TranslateGeneralVpcWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary TranslateGeneralVpc
+         *
+         * @param request TranslateGeneralVpcRequest
+         * @return TranslateGeneralVpcResponse
+         */
+        public async Task<TranslateGeneralVpcResponse> TranslateGeneralVpcAsync(TranslateGeneralVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TranslateGeneralVpcWithOptionsAsync(request, runtime);
         }
 
         /**
