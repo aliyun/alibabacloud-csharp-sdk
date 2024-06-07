@@ -1998,6 +1998,110 @@ namespace AlibabaCloud.SDK.Csas20230120
         }
 
         /**
+         * @summary 批量删除用户非在线设备
+         *
+         * @param request DeleteUserDevicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteUserDevicesResponse
+         */
+        public DeleteUserDevicesResponse DeleteUserDevicesWithOptions(DeleteUserDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceTags))
+            {
+                bodyFlat["DeviceTags"] = request.DeviceTags;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteUserDevices",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteUserDevicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 批量删除用户非在线设备
+         *
+         * @param request DeleteUserDevicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteUserDevicesResponse
+         */
+        public async Task<DeleteUserDevicesResponse> DeleteUserDevicesWithOptionsAsync(DeleteUserDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceTags))
+            {
+                bodyFlat["DeviceTags"] = request.DeviceTags;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteUserDevices",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteUserDevicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 批量删除用户非在线设备
+         *
+         * @param request DeleteUserDevicesRequest
+         * @return DeleteUserDevicesResponse
+         */
+        public DeleteUserDevicesResponse DeleteUserDevices(DeleteUserDevicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteUserDevicesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 批量删除用户非在线设备
+         *
+         * @param request DeleteUserDevicesRequest
+         * @return DeleteUserDevicesResponse
+         */
+        public async Task<DeleteUserDevicesResponse> DeleteUserDevicesAsync(DeleteUserDevicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteUserDevicesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 删除用户组
          *
          * @param request DeleteUserGroupRequest
@@ -2199,6 +2303,222 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachApplication2ConnectorWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 批量查询用户设备列表
+         *
+         * @param request ExportUserDevicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExportUserDevicesResponse
+         */
+        public ExportUserDevicesResponse ExportUserDevicesWithOptions(ExportUserDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppStatuses))
+            {
+                bodyFlat["AppStatuses"] = request.AppStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Department))
+            {
+                body["Department"] = request.Department;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceBelong))
+            {
+                body["DeviceBelong"] = request.DeviceBelong;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceStatuses))
+            {
+                bodyFlat["DeviceStatuses"] = request.DeviceStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceTags))
+            {
+                bodyFlat["DeviceTags"] = request.DeviceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceTypes))
+            {
+                bodyFlat["DeviceTypes"] = request.DeviceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlpStatuses))
+            {
+                bodyFlat["DlpStatuses"] = request.DlpStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hostname))
+            {
+                body["Hostname"] = request.Hostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IaStatuses))
+            {
+                bodyFlat["IaStatuses"] = request.IaStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mac))
+            {
+                body["Mac"] = request.Mac;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NacStatuses))
+            {
+                bodyFlat["NacStatuses"] = request.NacStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaStatuses))
+            {
+                bodyFlat["PaStatuses"] = request.PaStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaseUserId))
+            {
+                body["SaseUserId"] = request.SaseUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharingStatus))
+            {
+                body["SharingStatus"] = request.SharingStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                body["Username"] = request.Username;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportUserDevices",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportUserDevicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 批量查询用户设备列表
+         *
+         * @param request ExportUserDevicesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExportUserDevicesResponse
+         */
+        public async Task<ExportUserDevicesResponse> ExportUserDevicesWithOptionsAsync(ExportUserDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppStatuses))
+            {
+                bodyFlat["AppStatuses"] = request.AppStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Department))
+            {
+                body["Department"] = request.Department;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceBelong))
+            {
+                body["DeviceBelong"] = request.DeviceBelong;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceStatuses))
+            {
+                bodyFlat["DeviceStatuses"] = request.DeviceStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceTags))
+            {
+                bodyFlat["DeviceTags"] = request.DeviceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceTypes))
+            {
+                bodyFlat["DeviceTypes"] = request.DeviceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlpStatuses))
+            {
+                bodyFlat["DlpStatuses"] = request.DlpStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hostname))
+            {
+                body["Hostname"] = request.Hostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IaStatuses))
+            {
+                bodyFlat["IaStatuses"] = request.IaStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mac))
+            {
+                body["Mac"] = request.Mac;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NacStatuses))
+            {
+                bodyFlat["NacStatuses"] = request.NacStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaStatuses))
+            {
+                bodyFlat["PaStatuses"] = request.PaStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaseUserId))
+            {
+                body["SaseUserId"] = request.SaseUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharingStatus))
+            {
+                body["SharingStatus"] = request.SharingStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                body["Username"] = request.Username;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportUserDevices",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportUserDevicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 批量查询用户设备列表
+         *
+         * @param request ExportUserDevicesRequest
+         * @return ExportUserDevicesResponse
+         */
+        public ExportUserDevicesResponse ExportUserDevices(ExportUserDevicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExportUserDevicesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 批量查询用户设备列表
+         *
+         * @param request ExportUserDevicesRequest
+         * @return ExportUserDevicesResponse
+         */
+        public async Task<ExportUserDevicesResponse> ExportUserDevicesAsync(ExportUserDevicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExportUserDevicesWithOptionsAsync(request, runtime);
         }
 
         /**
