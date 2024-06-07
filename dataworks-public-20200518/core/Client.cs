@@ -949,7 +949,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **ChangeResourceManagerResourceGroup**.
+         * @summary Modifies the resource group that you specify when you activate DataWorks or purchase a DataWorks exclusive resource group.
          *
          * @param request ChangeResourceManagerResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -991,7 +991,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **ChangeResourceManagerResourceGroup**.
+         * @summary Modifies the resource group that you specify when you activate DataWorks or purchase a DataWorks exclusive resource group.
          *
          * @param request ChangeResourceManagerResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1033,7 +1033,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **ChangeResourceManagerResourceGroup**.
+         * @summary Modifies the resource group that you specify when you activate DataWorks or purchase a DataWorks exclusive resource group.
          *
          * @param request ChangeResourceManagerResourceGroupRequest
          * @return ChangeResourceManagerResourceGroupResponse
@@ -1045,7 +1045,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **ChangeResourceManagerResourceGroup**.
+         * @summary Modifies the resource group that you specify when you activate DataWorks or purchase a DataWorks exclusive resource group.
          *
          * @param request ChangeResourceManagerResourceGroupRequest
          * @return ChangeResourceManagerResourceGroupResponse
@@ -4617,10 +4617,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Collections are classified into various types. The names of collections of the same type must be different.
+         * @summary Creates a collection.
          *
-         * @description A category must belong to a data album.
-         * You can create a category in a data album only after you create the data album. You can set the value of the parentQualifiedName parameter to the unique identifier of the data album to create the category.
+         * @description Collections are classified into various types. The names of collections of the same type must be different.
          *
          * @param request CreateMetaCollectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4666,10 +4665,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Collections are classified into various types. The names of collections of the same type must be different.
+         * @summary Creates a collection.
          *
-         * @description A category must belong to a data album.
-         * You can create a category in a data album only after you create the data album. You can set the value of the parentQualifiedName parameter to the unique identifier of the data album to create the category.
+         * @description Collections are classified into various types. The names of collections of the same type must be different.
          *
          * @param request CreateMetaCollectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4715,10 +4713,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Collections are classified into various types. The names of collections of the same type must be different.
+         * @summary Creates a collection.
          *
-         * @description A category must belong to a data album.
-         * You can create a category in a data album only after you create the data album. You can set the value of the parentQualifiedName parameter to the unique identifier of the data album to create the category.
+         * @description Collections are classified into various types. The names of collections of the same type must be different.
          *
          * @param request CreateMetaCollectionRequest
          * @return CreateMetaCollectionResponse
@@ -4730,10 +4727,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Collections are classified into various types. The names of collections of the same type must be different.
+         * @summary Creates a collection.
          *
-         * @description A category must belong to a data album.
-         * You can create a category in a data album only after you create the data album. You can set the value of the parentQualifiedName parameter to the unique identifier of the data album to create the category.
+         * @description Collections are classified into various types. The names of collections of the same type must be different.
          *
          * @param request CreateMetaCollectionRequest
          * @return CreateMetaCollectionResponse
@@ -8381,7 +8377,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **DeleteMetaCollection**.
+         * @summary Deletes a collection.
          *
          * @param request DeleteMetaCollectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8415,7 +8411,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **DeleteMetaCollection**.
+         * @summary Deletes a collection.
          *
          * @param request DeleteMetaCollectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8449,7 +8445,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **DeleteMetaCollection**.
+         * @summary Deletes a collection.
          *
          * @param request DeleteMetaCollectionRequest
          * @return DeleteMetaCollectionResponse
@@ -8461,7 +8457,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **DeleteMetaCollection**.
+         * @summary Deletes a collection.
          *
          * @param request DeleteMetaCollectionRequest
          * @return DeleteMetaCollectionResponse
@@ -8473,7 +8469,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **DeleteMetaCollectionEntity**.
+         * @summary Deletes an entity from a collection.
          *
          * @param request DeleteMetaCollectionEntityRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8511,7 +8507,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **DeleteMetaCollectionEntity**.
+         * @summary Deletes an entity from a collection.
          *
          * @param request DeleteMetaCollectionEntityRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8549,7 +8545,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **DeleteMetaCollectionEntity**.
+         * @summary Deletes an entity from a collection.
          *
          * @param request DeleteMetaCollectionEntityRequest
          * @return DeleteMetaCollectionEntityResponse
@@ -8561,7 +8557,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary The operation that you want to perform. Set the value to **DeleteMetaCollectionEntity**.
+         * @summary Deletes an entity from a collection.
          *
          * @param request DeleteMetaCollectionEntityRequest
          * @return DeleteMetaCollectionEntityResponse
@@ -21897,7 +21893,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Queries the information about APIs in the development state.
+         * @summary Queries a list of APIs in the development state.
          *
          * @param request ListDataServiceApisRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21955,7 +21951,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Queries the information about APIs in the development state.
+         * @summary Queries a list of APIs in the development state.
          *
          * @param request ListDataServiceApisRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -22013,7 +22009,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Queries the information about APIs in the development state.
+         * @summary Queries a list of APIs in the development state.
          *
          * @param request ListDataServiceApisRequest
          * @return ListDataServiceApisResponse
@@ -22025,7 +22021,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Queries the information about APIs in the development state.
+         * @summary Queries a list of APIs in the development state.
          *
          * @param request ListDataServiceApisRequest
          * @return ListDataServiceApisResponse
@@ -34793,9 +34789,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Only the name and comment of a collection can be updated.
+         * @summary Updates a collection.
          *
-         * @description You must configure at least one of the Name and Comment parameters when you update a collection.
+         * @description Only the name and comment of a collection can be updated.
          *
          * @param request UpdateMetaCollectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -34837,9 +34833,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Only the name and comment of a collection can be updated.
+         * @summary Updates a collection.
          *
-         * @description You must configure at least one of the Name and Comment parameters when you update a collection.
+         * @description Only the name and comment of a collection can be updated.
          *
          * @param request UpdateMetaCollectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -34881,9 +34877,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Only the name and comment of a collection can be updated.
+         * @summary Updates a collection.
          *
-         * @description You must configure at least one of the Name and Comment parameters when you update a collection.
+         * @description Only the name and comment of a collection can be updated.
          *
          * @param request UpdateMetaCollectionRequest
          * @return UpdateMetaCollectionResponse
@@ -34895,9 +34891,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
-         * @summary Only the name and comment of a collection can be updated.
+         * @summary Updates a collection.
          *
-         * @description You must configure at least one of the Name and Comment parameters when you update a collection.
+         * @description Only the name and comment of a collection can be updated.
          *
          * @param request UpdateMetaCollectionRequest
          * @return UpdateMetaCollectionResponse

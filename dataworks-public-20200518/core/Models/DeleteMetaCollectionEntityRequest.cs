@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteMetaCollectionEntityRequest : TeaModel {
         /// <summary>
-        /// The unique identifier of the entity.
+        /// The unique identifier of the collection.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CollectionQualifiedName { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The unique identifier of the entity.
         /// 
         /// This parameter is required.
         /// </summary>

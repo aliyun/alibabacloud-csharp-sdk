@@ -1,3 +1,6 @@
+2024-06-07 Version: 5.6.3
+- Generated csharp 2020-05-18 for dataworks-public.
+
 2024-06-04 Version: 5.6.2
 - Update API CreateDIJob: update param ResourceSettings.
 - Update API GetDIJob: update response param.
