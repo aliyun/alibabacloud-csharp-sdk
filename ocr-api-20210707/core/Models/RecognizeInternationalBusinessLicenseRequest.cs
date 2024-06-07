@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeInternationalBusinessLicenseRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Country")]
         [Validation(Required=false)]
         public string Country { get; set; }

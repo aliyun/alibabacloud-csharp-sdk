@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeEduPaperOcrRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ImageType")]
         [Validation(Required=false)]
         public string ImageType { get; set; }

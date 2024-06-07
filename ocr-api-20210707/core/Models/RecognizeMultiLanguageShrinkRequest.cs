@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeMultiLanguageShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Languages")]
         [Validation(Required=false)]
         public string LanguagesShrink { get; set; }

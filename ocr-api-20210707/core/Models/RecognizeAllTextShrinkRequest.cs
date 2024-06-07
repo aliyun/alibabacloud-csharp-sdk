@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 
         [NameInMap("OutputCoordinate")]
         [Validation(Required=false)]
-        public byte[] OutputCoordinate { get; set; }
+        public string OutputCoordinate { get; set; }
 
         [NameInMap("OutputFigure")]
         [Validation(Required=false)]
@@ -65,6 +65,9 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=false)]
         public string TableConfigShrink { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
