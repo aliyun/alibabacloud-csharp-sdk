@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// The subtype of the environment. Valid values:
         /// 
-        /// *   CS: ACK, One
+        /// *   CS: ACK
         /// *   ECS: ECS
         /// *   Cloud: cloud service
         /// 
@@ -100,6 +100,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string FeePackage { get; set; }
 
+        /// <summary>
+        /// 环境绑定的grafana工作区id。传空时，表示使用默认的共享grafana。
+        /// </summary>
         [NameInMap("GrafanaWorkspaceId")]
         [Validation(Required=false)]
         public string GrafanaWorkspaceId { get; set; }
@@ -109,14 +112,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// 
         /// *   none: No. By default, no managed agents or exporters are provided for ACK clusters.
         /// *   agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.
-        /// *   agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
+        /// *   agent-exporter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
         /// </summary>
         [NameInMap("ManagedType")]
         [Validation(Required=false)]
         public string ManagedType { get; set; }
 
         /// <summary>
-        /// The ID of the Prometheus instance. If no Prometheus instance is created, call the InitEnvironment operation to initialize a storage instance.
+        /// The ID of the Prometheus instance. If no Prometheus instance is created, call the InitEnvironment operation.
         /// </summary>
         [NameInMap("PrometheusInstanceId")]
         [Validation(Required=false)]

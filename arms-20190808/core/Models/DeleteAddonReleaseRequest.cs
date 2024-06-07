@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteAddonReleaseRequest : TeaModel {
+        [NameInMap("AddonName")]
+        [Validation(Required=false)]
+        public string AddonName { get; set; }
+
         /// <summary>
         /// Environment ID.
         /// 

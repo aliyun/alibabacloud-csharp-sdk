@@ -1,3 +1,8 @@
+2024-06-07 Version: 4.9.6
+- Update API DeleteAddonRelease: add param AddonName.
+- Update API ListAddons: update response param.
+
+
 2024-06-05 Version: 4.9.5
 - Generated csharp 2019-08-08 for ARMS.
 
