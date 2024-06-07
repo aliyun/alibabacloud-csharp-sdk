@@ -24621,6 +24621,122 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
         /**
+         * @summary 查询DataWorks计量数据
+         *
+         * @param request ListMeasureDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListMeasureDataResponse
+         */
+        public ListMeasureDataResponse ListMeasureDataWithOptions(ListMeasureDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentCode))
+            {
+                query["ComponentCode"] = request.ComponentCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainCode))
+            {
+                query["DomainCode"] = request.DomainCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMeasureData",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMeasureDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询DataWorks计量数据
+         *
+         * @param request ListMeasureDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListMeasureDataResponse
+         */
+        public async Task<ListMeasureDataResponse> ListMeasureDataWithOptionsAsync(ListMeasureDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentCode))
+            {
+                query["ComponentCode"] = request.ComponentCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainCode))
+            {
+                query["DomainCode"] = request.DomainCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMeasureData",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMeasureDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询DataWorks计量数据
+         *
+         * @param request ListMeasureDataRequest
+         * @return ListMeasureDataResponse
+         */
+        public ListMeasureDataResponse ListMeasureData(ListMeasureDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMeasureDataWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询DataWorks计量数据
+         *
+         * @param request ListMeasureDataRequest
+         * @return ListMeasureDataResponse
+         */
+        public async Task<ListMeasureDataResponse> ListMeasureDataAsync(ListMeasureDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMeasureDataWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the entities in a collection.
          *
          * @param request ListMetaCollectionEntitiesRequest
