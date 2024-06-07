@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QueryPhoneNoAByTrackNoRequest : TeaModel {
+        /// <summary>
+        /// The cabinet number.
+        /// </summary>
         [NameInMap("CabinetNo")]
         [Validation(Required=false)]
         public string CabinetNo { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// Phone number X returned by the API operation for creating a binding.
+        /// </summary>
         [NameInMap("PhoneNoX")]
         [Validation(Required=false)]
         public string PhoneNoX { get; set; }
@@ -29,6 +35,11 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tracking number.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("trackNo")]
         [Validation(Required=false)]
         public string TrackNo { get; set; }

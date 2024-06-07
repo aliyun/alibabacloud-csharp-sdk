@@ -9,14 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class GetTotalPublicUrlRequest : TeaModel {
+        /// <summary>
+        /// The ID of the call record.
+        /// 
+        /// Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view **Call Record ID** on the **Call Record Query** page.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
 
+        /// <summary>
+        /// The call initiation time in the call record.
+        /// 
+        /// Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account). View **Call Initiated At** on the **Call Record Query** page, or view the call_time field in the Call Detail Record (CDR) receipt.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CallTime")]
         [Validation(Required=false)]
         public string CallTime { get; set; }
 
+        /// <summary>
+        /// Specifies whether the verification on the binding ID is required.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CheckSubs")]
         [Validation(Required=false)]
         public bool? CheckSubs { get; set; }
@@ -25,6 +44,11 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PartnerKey")]
         [Validation(Required=false)]
         public string PartnerKey { get; set; }

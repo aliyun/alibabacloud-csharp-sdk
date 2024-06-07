@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class BindBatchAxgRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AxgBindList")]
         [Validation(Required=false)]
         public List<BindBatchAxgRequestAxgBindList> AxgBindList { get; set; }
@@ -37,6 +40,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [Validation(Required=false)]
             public string Expiration { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
@@ -53,6 +59,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [Validation(Required=false)]
             public string OutOrderId { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("PhoneNoA")]
             [Validation(Required=false)]
             public string PhoneNoA { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class BindBatchAxgShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AxgBindList")]
         [Validation(Required=false)]
         public string AxgBindListShrink { get; set; }

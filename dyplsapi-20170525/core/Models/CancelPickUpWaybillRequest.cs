@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CancelPickUpWaybillRequest : TeaModel {
+        /// <summary>
+        /// The cancellation reason.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CancelDesc")]
         [Validation(Required=false)]
         public string CancelDesc { get; set; }
 
+        /// <summary>
+        /// The ID of the external order.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OuterOrderCode")]
         [Validation(Required=false)]
         public string OuterOrderCode { get; set; }
