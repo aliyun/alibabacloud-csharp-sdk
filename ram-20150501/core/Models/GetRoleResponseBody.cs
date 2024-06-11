@@ -9,39 +9,77 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetRoleResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The information of the RAM role.
+        /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public GetRoleResponseBodyRole Role { get; set; }
         public class GetRoleResponseBodyRole : TeaModel {
+            /// <summary>
+            /// The Alibaba Cloud Resource Name (ARN) of the RAM role.
+            /// </summary>
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public string Arn { get; set; }
+
+            /// <summary>
+            /// The content of the policy that specifies one or more entities entrusted to assume the RAM role.
+            /// </summary>
             [NameInMap("AssumeRolePolicyDocument")]
             [Validation(Required=false)]
             public string AssumeRolePolicyDocument { get; set; }
+
+            /// <summary>
+            /// The time when the RAM role was created.
+            /// </summary>
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
+
+            /// <summary>
+            /// The description of the RAM role.
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            /// <summary>
+            /// The maximum session duration of the RAM role.
+            /// </summary>
             [NameInMap("MaxSessionDuration")]
             [Validation(Required=false)]
             public long? MaxSessionDuration { get; set; }
+
+            /// <summary>
+            /// The ID of the RAM role.
+            /// </summary>
             [NameInMap("RoleId")]
             [Validation(Required=false)]
             public string RoleId { get; set; }
+
+            /// <summary>
+            /// The name of the RAM role.
+            /// </summary>
             [NameInMap("RoleName")]
             [Validation(Required=false)]
             public string RoleName { get; set; }
+
+            /// <summary>
+            /// The time when the RAM role was modified.
+            /// </summary>
             [NameInMap("UpdateDate")]
             [Validation(Required=false)]
             public string UpdateDate { get; set; }
-        };
+
+        }
 
     }
 

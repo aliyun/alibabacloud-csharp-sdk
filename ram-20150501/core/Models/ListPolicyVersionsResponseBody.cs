@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListPolicyVersionsResponseBody : TeaModel {
+        /// <summary>
+        /// The list of the policy versions.
+        /// </summary>
         [NameInMap("PolicyVersions")]
         [Validation(Required=false)]
         public ListPolicyVersionsResponseBodyPolicyVersions PolicyVersions { get; set; }
@@ -17,13 +20,41 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion> PolicyVersion { get; set; }
             public class ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion : TeaModel {
+                /// <summary>
+                /// The time when the version was created.
+                /// </summary>
+                [NameInMap("CreateDate")]
+                [Validation(Required=false)]
                 public string CreateDate { get; set; }
-                public bool? IsDefaultVersion { get; set; }
-                public string PolicyDocument { get; set; }
-                public string VersionId { get; set; }
-            }
-        };
 
+                /// <summary>
+                /// Indicates whether the version is the default version.
+                /// </summary>
+                [NameInMap("IsDefaultVersion")]
+                [Validation(Required=false)]
+                public bool? IsDefaultVersion { get; set; }
+
+                /// <summary>
+                /// The script of the policy.
+                /// </summary>
+                [NameInMap("PolicyDocument")]
+                [Validation(Required=false)]
+                public string PolicyDocument { get; set; }
+
+                /// <summary>
+                /// The ID of the version.
+                /// </summary>
+                [NameInMap("VersionId")]
+                [Validation(Required=false)]
+                public string VersionId { get; set; }
+
+            }
+
+        }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

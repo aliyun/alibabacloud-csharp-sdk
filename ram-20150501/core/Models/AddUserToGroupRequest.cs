@@ -12,10 +12,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class AddUserToGroupRequest : TeaModel {
+        /// <summary>
+        /// The name of the RAM user group.
+        /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        /// <summary>
+        /// The name of the RAM user.
+        /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }

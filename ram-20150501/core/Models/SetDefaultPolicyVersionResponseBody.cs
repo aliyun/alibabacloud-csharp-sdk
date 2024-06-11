@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class SetDefaultPolicyVersionResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

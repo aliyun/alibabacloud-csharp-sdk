@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetAccessKeyLastUsedResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public GetAccessKeyLastUsedResponseBody Body { get; set; }
 
     }

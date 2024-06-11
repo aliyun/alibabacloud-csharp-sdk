@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
-    public class UpdateLoginProfileResponse : TeaModel {
+    public class DecodeDiagnosticMessageResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public UpdateLoginProfileResponseBody Body { get; set; }
+        public DecodeDiagnosticMessageResponseBody Body { get; set; }
 
     }
 
