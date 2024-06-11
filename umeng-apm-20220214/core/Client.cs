@@ -38,6 +38,132 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
         }
 
         /**
+         * @summary 删除符号表记录
+         *
+         * @param tmpReq DeleteSymRecordsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSymRecordsResponse
+         */
+        public DeleteSymRecordsResponse DeleteSymRecordsWithOptions(DeleteSymRecordsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteSymRecordsShrinkRequest request = new DeleteSymRecordsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AppVersions))
+            {
+                request.AppVersionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AppVersions, "appVersions", "simple");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersionsShrink))
+            {
+                body["appVersions"] = request.AppVersionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["dataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                body["fileType"] = request.FileType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSymRecords",
+                Version = "2022-02-14",
+                Protocol = "HTTPS",
+                Pathname = "/deleteSymRecords",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSymRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除符号表记录
+         *
+         * @param tmpReq DeleteSymRecordsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSymRecordsResponse
+         */
+        public async Task<DeleteSymRecordsResponse> DeleteSymRecordsWithOptionsAsync(DeleteSymRecordsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteSymRecordsShrinkRequest request = new DeleteSymRecordsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AppVersions))
+            {
+                request.AppVersionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AppVersions, "appVersions", "simple");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersionsShrink))
+            {
+                body["appVersions"] = request.AppVersionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["dataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                body["fileType"] = request.FileType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSymRecords",
+                Version = "2022-02-14",
+                Protocol = "HTTPS",
+                Pathname = "/deleteSymRecords",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSymRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除符号表记录
+         *
+         * @param request DeleteSymRecordsRequest
+         * @return DeleteSymRecordsResponse
+         */
+        public DeleteSymRecordsResponse DeleteSymRecords(DeleteSymRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteSymRecordsWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除符号表记录
+         *
+         * @param request DeleteSymRecordsRequest
+         * @return DeleteSymRecordsResponse
+         */
+        public async Task<DeleteSymRecordsResponse> DeleteSymRecordsAsync(DeleteSymRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteSymRecordsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary 获取H5页面性能统计数据
          *
          * @param request GetH5PageTrendRequest
