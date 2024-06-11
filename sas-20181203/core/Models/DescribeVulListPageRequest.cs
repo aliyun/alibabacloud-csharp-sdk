@@ -30,12 +30,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RaspDefend")]
+        [Validation(Required=false)]
+        public int? RaspDefend { get; set; }
+
         /// <summary>
         /// The name of the vulnerability.
         /// </summary>
         [NameInMap("VulNameLike")]
         [Validation(Required=false)]
         public string VulNameLike { get; set; }
+
+        [NameInMap("VulType")]
+        [Validation(Required=false)]
+        public string VulType { get; set; }
 
     }
 

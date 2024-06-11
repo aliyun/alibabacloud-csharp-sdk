@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? GroupFlag { get; set; }
 
+            [NameInMap("InstanceCoreCount")]
+            [Validation(Required=false)]
+            public long? InstanceCoreCount { get; set; }
+
             /// <summary>
             /// The total number of assets that belong to the specified type.
             /// 

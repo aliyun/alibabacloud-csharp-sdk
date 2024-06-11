@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? AzureInstanceCount { get; set; }
 
+            [NameInMap("ExposedInstanceCoreCount")]
+            [Validation(Required=false)]
+            public long? ExposedInstanceCoreCount { get; set; }
+
             /// <summary>
             /// The number of exposed servers.
             /// </summary>
@@ -79,6 +83,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? ImportantAssetCount { get; set; }
 
+            [NameInMap("InstanceCoreCount")]
+            [Validation(Required=false)]
+            public long? InstanceCoreCount { get; set; }
+
             /// <summary>
             /// The total number of assets of the specified type. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.
             /// </summary>
@@ -93,6 +101,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? InstanceSyncTaskCount { get; set; }
 
+            [NameInMap("NewInstanceCoreCount")]
+            [Validation(Required=false)]
+            public long? NewInstanceCoreCount { get; set; }
+
             /// <summary>
             /// The number of newly added servers.
             /// </summary>
@@ -106,6 +118,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("NoRiskInstanceCount")]
             [Validation(Required=false)]
             public int? NoRiskInstanceCount { get; set; }
+
+            [NameInMap("NotRunningStatusCoreCount")]
+            [Validation(Required=false)]
+            public long? NotRunningStatusCoreCount { get; set; }
 
             /// <summary>
             /// The number of servers that are shut down.
@@ -142,6 +158,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? RegionCount { get; set; }
 
+            [NameInMap("RiskInstanceCoreCount")]
+            [Validation(Required=false)]
+            public long? RiskInstanceCoreCount { get; set; }
+
             /// <summary>
             /// The number of assets that are at risk.
             /// </summary>
@@ -176,6 +196,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("UnKnowStatusInstanceCount")]
             [Validation(Required=false)]
             public int? UnKnowStatusInstanceCount { get; set; }
+
+            [NameInMap("UnprotectedInstanceCoreCount")]
+            [Validation(Required=false)]
+            public long? UnprotectedInstanceCoreCount { get; set; }
 
             /// <summary>
             /// The number of unprotected assets.

@@ -37632,6 +37632,98 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
+         * @summary 查询漏洞rasp防御统计
+         *
+         * @param request DescribeVulDefendCountStatisticsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeVulDefendCountStatisticsResponse
+         */
+        public DescribeVulDefendCountStatisticsResponse DescribeVulDefendCountStatisticsWithOptions(DescribeVulDefendCountStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulType))
+            {
+                query["VulType"] = request.VulType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVulDefendCountStatistics",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVulDefendCountStatisticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询漏洞rasp防御统计
+         *
+         * @param request DescribeVulDefendCountStatisticsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeVulDefendCountStatisticsResponse
+         */
+        public async Task<DescribeVulDefendCountStatisticsResponse> DescribeVulDefendCountStatisticsWithOptionsAsync(DescribeVulDefendCountStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulType))
+            {
+                query["VulType"] = request.VulType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVulDefendCountStatistics",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVulDefendCountStatisticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询漏洞rasp防御统计
+         *
+         * @param request DescribeVulDefendCountStatisticsRequest
+         * @return DescribeVulDefendCountStatisticsResponse
+         */
+        public DescribeVulDefendCountStatisticsResponse DescribeVulDefendCountStatistics(DescribeVulDefendCountStatisticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVulDefendCountStatisticsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询漏洞rasp防御统计
+         *
+         * @param request DescribeVulDefendCountStatisticsRequest
+         * @return DescribeVulDefendCountStatisticsResponse
+         */
+        public async Task<DescribeVulDefendCountStatisticsResponse> DescribeVulDefendCountStatisticsAsync(DescribeVulDefendCountStatisticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVulDefendCountStatisticsWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the details about a vulnerability.
          *
          * @param request DescribeVulDetailsRequest
@@ -38178,9 +38270,17 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RaspDefend))
+            {
+                query["RaspDefend"] = request.RaspDefend;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulNameLike))
             {
                 query["VulNameLike"] = request.VulNameLike;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulType))
+            {
+                query["VulType"] = request.VulType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -38224,9 +38324,17 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RaspDefend))
+            {
+                query["RaspDefend"] = request.RaspDefend;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulNameLike))
             {
                 query["VulNameLike"] = request.VulNameLike;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulType))
+            {
+                query["VulType"] = request.VulType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -38269,6 +38377,78 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVulListPageWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询漏洞库信息统计
+         *
+         * @param request DescribeVulMetaCountStatisticsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeVulMetaCountStatisticsResponse
+         */
+        public DescribeVulMetaCountStatisticsResponse DescribeVulMetaCountStatisticsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVulMetaCountStatistics",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVulMetaCountStatisticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询漏洞库信息统计
+         *
+         * @param request DescribeVulMetaCountStatisticsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeVulMetaCountStatisticsResponse
+         */
+        public async Task<DescribeVulMetaCountStatisticsResponse> DescribeVulMetaCountStatisticsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVulMetaCountStatistics",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVulMetaCountStatisticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询漏洞库信息统计
+         *
+         * @return DescribeVulMetaCountStatisticsResponse
+         */
+        public DescribeVulMetaCountStatisticsResponse DescribeVulMetaCountStatistics()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVulMetaCountStatisticsWithOptions(runtime);
+        }
+
+        /**
+         * @summary 查询漏洞库信息统计
+         *
+         * @return DescribeVulMetaCountStatisticsResponse
+         */
+        public async Task<DescribeVulMetaCountStatisticsResponse> DescribeVulMetaCountStatisticsAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVulMetaCountStatisticsWithOptionsAsync(runtime);
         }
 
         /**
@@ -50062,6 +50242,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Remark"] = request.Remark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEventIds))
             {
                 query["SecurityEventIds"] = request.SecurityEventIds;
@@ -50119,6 +50303,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEventIds))
             {

@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics> MachineInfoStatistics { get; set; }
         public class DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics : TeaModel {
+            [NameInMap("InternetIp")]
+            [Validation(Required=false)]
+            public string InternetIp { get; set; }
+
+            [NameInMap("IntranetIp")]
+            [Validation(Required=false)]
+            public string IntranetIp { get; set; }
+
             /// <summary>
             /// The instance ID.
             /// </summary>

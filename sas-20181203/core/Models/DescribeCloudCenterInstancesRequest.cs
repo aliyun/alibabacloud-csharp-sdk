@@ -95,6 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string RegionId { get; set; }
 
         /// <summary>
