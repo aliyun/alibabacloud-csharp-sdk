@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class ExportModelFeatureTrainingSetFGTableRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TrainingSetFgConfig")]
         [Validation(Required=false)]
         public ExportModelFeatureTrainingSetFGTableRequestTrainingSetFgConfig TrainingSetFgConfig { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             [Validation(Required=false)]
             public string JarName { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Partitions")]
             [Validation(Required=false)]
             public Dictionary<string, Dictionary<string, object>> Partitions { get; set; }

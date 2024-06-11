@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
-    public class ChangeProjectFeatureEntityHotIdVersionRequest : TeaModel {
+    public class ListFeatureViewOnlineFeaturesRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("Version")]
+        [NameInMap("JoinIds")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public List<string> JoinIds { get; set; }
 
     }
 

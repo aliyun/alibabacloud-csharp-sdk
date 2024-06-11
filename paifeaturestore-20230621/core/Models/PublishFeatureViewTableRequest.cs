@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string EventTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OfflineToOnline")]
         [Validation(Required=false)]
         public bool? OfflineToOnline { get; set; }

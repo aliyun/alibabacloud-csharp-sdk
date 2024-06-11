@@ -1,3 +1,7 @@
+2024-06-11 Version: 1.2.0
+- Support API ListFeatureViewOnlineFeatures.
+
+
 2024-03-25 Version: 1.1.4
 - Update API CreateFeatureView: update param body.
 - Update API GetFeatureView: update response param.
