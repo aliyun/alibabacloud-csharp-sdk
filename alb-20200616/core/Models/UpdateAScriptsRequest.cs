@@ -44,6 +44,30 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
+            [NameInMap("ExtAttributeEnabled")]
+            [Validation(Required=false)]
+            public bool? ExtAttributeEnabled { get; set; }
+
+            [NameInMap("ExtAttributes")]
+            [Validation(Required=false)]
+            public List<UpdateAScriptsRequestAScriptsExtAttributes> ExtAttributes { get; set; }
+            public class UpdateAScriptsRequestAScriptsExtAttributes : TeaModel {
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
+                [NameInMap("AttributeKey")]
+                [Validation(Required=false)]
+                public string AttributeKey { get; set; }
+
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
+                [NameInMap("AttributeValue")]
+                [Validation(Required=false)]
+                public string AttributeValue { get; set; }
+
+            }
+
             /// <summary>
             /// The content of the AScript rule.
             /// </summary>
