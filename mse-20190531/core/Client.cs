@@ -24521,6 +24521,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthEnabled))
+            {
+                query["AuthEnabled"] = request.AuthEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutopurgePurgeInterval))
             {
                 query["AutopurgePurgeInterval"] = request.AutopurgePurgeInterval;
@@ -24548,6 +24552,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsoleUIEnabled))
             {
                 query["ConsoleUIEnabled"] = request.ConsoleUIEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable4lw))
+            {
+                query["Enable4lw"] = request.Enable4lw;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EurekaSupported))
             {
@@ -24657,6 +24665,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthEnabled))
+            {
+                query["AuthEnabled"] = request.AuthEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutopurgePurgeInterval))
             {
                 query["AutopurgePurgeInterval"] = request.AutopurgePurgeInterval;
@@ -24684,6 +24696,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsoleUIEnabled))
             {
                 query["ConsoleUIEnabled"] = request.ConsoleUIEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable4lw))
+            {
+                query["Enable4lw"] = request.Enable4lw;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EurekaSupported))
             {

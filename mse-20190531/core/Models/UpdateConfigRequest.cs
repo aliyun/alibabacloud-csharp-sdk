@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("AuthEnabled")]
+        [Validation(Required=false)]
+        public bool? AuthEnabled { get; set; }
+
         /// <summary>
         /// A reserved parameter.
         /// </summary>
@@ -74,6 +78,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("ConsoleUIEnabled")]
         [Validation(Required=false)]
         public bool? ConsoleUIEnabled { get; set; }
+
+        [NameInMap("Enable4lw")]
+        [Validation(Required=false)]
+        public bool? Enable4lw { get; set; }
 
         [NameInMap("EurekaSupported")]
         [Validation(Required=false)]

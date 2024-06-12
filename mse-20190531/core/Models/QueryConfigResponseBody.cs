@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public QueryConfigResponseBodyData Data { get; set; }
         public class QueryConfigResponseBodyData : TeaModel {
+            [NameInMap("AuthEnabled")]
+            [Validation(Required=false)]
+            public bool? AuthEnabled { get; set; }
+
             /// <summary>
             /// A reserved parameter.
             /// </summary>
@@ -97,6 +101,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("ConsoleUIEnabled")]
             [Validation(Required=false)]
             public bool? ConsoleUIEnabled { get; set; }
+
+            [NameInMap("Enable4lw")]
+            [Validation(Required=false)]
+            public bool? Enable4lw { get; set; }
 
             /// <summary>
             /// Indicates whether access port 8761 was enabled for Eureka. If this port is disabled, applications cannot use the Eureka protocol for service registration and discovery.
