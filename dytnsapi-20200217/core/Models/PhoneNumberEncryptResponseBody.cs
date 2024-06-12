@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// The response code.
         /// 
         /// *   The value OK indicates that the request was successful.
-        /// *   Other values indicate that the request failed. For more information, see [Error codes](~~109196~~).
+        /// *   Other values indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

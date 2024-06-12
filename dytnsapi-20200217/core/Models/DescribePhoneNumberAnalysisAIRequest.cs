@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// The authorization code.
         /// 
         /// >  On the ****[**Labels**](https://dytns.console.aliyun.com/analysis/square) page, find the label that you want to use, click Activate Now, enter the required information, and then submit your application. After your application is approved, you can obtain an authorization code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
         /// <summary>
         /// The phone number to be queried.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]

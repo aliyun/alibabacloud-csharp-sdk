@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class DescribePhoneNumberAnalysisTransparentRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string Ip { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("NumberType")]
         [Validation(Required=false)]
         public string NumberType { get; set; }

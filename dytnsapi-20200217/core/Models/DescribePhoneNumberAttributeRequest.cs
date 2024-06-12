@@ -15,6 +15,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
         /// <summary>
         /// The phone number that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

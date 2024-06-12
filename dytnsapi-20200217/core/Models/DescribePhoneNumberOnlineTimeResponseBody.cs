@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// *   **PortabilityNumberNotSupported**: The phone number that is involved in mobile number portability is not supported.
         /// *   **RequestFrequencyLimit**: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.
         /// 
-        /// >  You are charged if the value of Code is OK and the value of VerifyResult is not -1. For more information, see [Pricing](~~154751~~).
+        /// >  You are charged if the value of Code is OK and the value of VerifyResult is not -1. For more information, see [Pricing](https://help.aliyun.com/document_detail/154751.html).
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -46,8 +46,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             /// 
             /// *   **-1**: No usage period information is available for the phone number.
             /// *   **0**: The phone number status is abnormal. For example, the phone number is a nonexistent number.
-            /// *   **1** :\[0-3) months.
-            /// *   **2** :\[3-6] months.
+            /// *   **1** :[0-3) months.
+            /// *   **2** :[3-6] months.
             /// *   **3** :(6-12] months.
             /// *   **4** :(12-24] months.
             /// *   **5** :(24,+) months.

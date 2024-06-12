@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// The authorization code.
         /// 
         /// >  On the [My Applications](https://dytns.console.aliyun.com/analysis/apply) page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/overview?spm=a2c4g.608385.0.0.79847f8b3awqUC), you can obtain the authorization code (also known as authorization ID).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
         /// <summary>
         /// The enterprise name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EpCertName")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
         /// <summary>
         /// The business license number.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EpCertNo")]
         [Validation(Required=false)]
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// The name of the legal representative.
         /// 
         /// >  If an enterprise has multiple legal representatives, separate them with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LegalPersonCertName")]
         [Validation(Required=false)]

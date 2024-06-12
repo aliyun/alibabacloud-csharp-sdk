@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class QueryPhoneTwiceTelVerifyRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Mask")]
         [Validation(Required=false)]
         public string Mask { get; set; }
@@ -33,6 +42,9 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }

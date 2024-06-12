@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class PhoneNumberConvertServiceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Mask")]
         [Validation(Required=false)]
         public string Mask { get; set; }

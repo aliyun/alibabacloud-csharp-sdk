@@ -12,14 +12,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class CertNoTwoElementVerificationRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("CertNo")]
         [Validation(Required=false)]
         public string CertNo { get; set; }

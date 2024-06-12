@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class DescribePhoneNumberAnalysisRequest : TeaModel {
+    public class UAIDCollectionRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -16,28 +16,28 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
+        [NameInMap("Carrier")]
+        [Validation(Required=false)]
+        public string Carrier { get; set; }
+
+        [NameInMap("Ip")]
+        [Validation(Required=false)]
+        public string Ip { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("InputNumber")]
+        [NameInMap("OutId")]
         [Validation(Required=false)]
-        public string InputNumber { get; set; }
-
-        [NameInMap("Mask")]
-        [Validation(Required=false)]
-        public string Mask { get; set; }
-
-        [NameInMap("NumberType")]
-        [Validation(Required=false)]
-        public long? NumberType { get; set; }
+        public string OutId { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("Rate")]
+        [NameInMap("Province")]
         [Validation(Required=false)]
-        public long? Rate { get; set; }
+        public string Province { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -46,6 +46,17 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("Token")]
+        [Validation(Required=false)]
+        public string Token { get; set; }
+
+        [NameInMap("UserGrantId")]
+        [Validation(Required=false)]
+        public string UserGrantId { get; set; }
 
     }
 

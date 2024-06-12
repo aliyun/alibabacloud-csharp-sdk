@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class DescribePhoneNumberAnalysisRequest : TeaModel {
+    public class GetUAIDConversionSignRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -19,25 +19,33 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("InputNumber")]
+        [NameInMap("Carrier")]
         [Validation(Required=false)]
-        public string InputNumber { get; set; }
+        public string Carrier { get; set; }
 
-        [NameInMap("Mask")]
+        [NameInMap("ClientType")]
         [Validation(Required=false)]
-        public string Mask { get; set; }
+        public string ClientType { get; set; }
 
-        [NameInMap("NumberType")]
+        [NameInMap("Format")]
         [Validation(Required=false)]
-        public long? NumberType { get; set; }
+        public string Format { get; set; }
+
+        [NameInMap("OutId")]
+        [Validation(Required=false)]
+        public string OutId { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("Rate")]
+        [NameInMap("ParamKey")]
         [Validation(Required=false)]
-        public long? Rate { get; set; }
+        public string ParamKey { get; set; }
+
+        [NameInMap("ParamStr")]
+        [Validation(Required=false)]
+        public string ParamStr { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -46,6 +54,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("Time")]
+        [Validation(Required=false)]
+        public string Time { get; set; }
 
     }
 

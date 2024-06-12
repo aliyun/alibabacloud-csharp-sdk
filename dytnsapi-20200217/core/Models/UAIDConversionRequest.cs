@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class DescribePhoneNumberAnalysisRequest : TeaModel {
+    public class UAIDConversionRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -19,25 +19,17 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("InputNumber")]
+        [NameInMap("Carrier")]
         [Validation(Required=false)]
-        public string InputNumber { get; set; }
+        public string Carrier { get; set; }
 
-        [NameInMap("Mask")]
+        [NameInMap("OutId")]
         [Validation(Required=false)]
-        public string Mask { get; set; }
-
-        [NameInMap("NumberType")]
-        [Validation(Required=false)]
-        public long? NumberType { get; set; }
+        public string OutId { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("Rate")]
-        [Validation(Required=false)]
-        public long? Rate { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -46,6 +38,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("UaidList")]
+        [Validation(Required=false)]
+        public string UaidList { get; set; }
 
     }
 

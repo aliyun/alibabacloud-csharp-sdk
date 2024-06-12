@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// The authorization code.
         /// 
         /// >  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// *   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.
         /// 
         /// >  Letters in the encrypted strings are not case-sensitive.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CertCode")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// *   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.
         /// 
         /// >  Letters in the encrypted strings are not case-sensitive.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
@@ -50,6 +56,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// *   **NORMAL**: The phone number is not encrypted.
         /// *   **MD5**
         /// *   **SHA256**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Mask")]
         [Validation(Required=false)]
@@ -63,6 +71,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// *   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.
         /// 
         /// >  Letters in the encrypted strings are not case-sensitive.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
