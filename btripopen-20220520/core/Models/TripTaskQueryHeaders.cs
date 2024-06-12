@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class FlightExceedApplyQueryRequest : TeaModel {
-        [NameInMap("apply_id")]
+    public class TripTaskQueryHeaders : TeaModel {
+        [NameInMap("commonHeaders")]
         [Validation(Required=false)]
-        public long? ApplyId { get; set; }
+        public Dictionary<string, string> CommonHeaders { get; set; }
 
-        [NameInMap("business_instance_id")]
+        [NameInMap("x-acs-btrip-corp-token")]
         [Validation(Required=false)]
-        public string BusinessInstanceId { get; set; }
+        public string XAcsBtripCorpToken { get; set; }
 
     }
 
