@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string ConfigCheck { get; set; }
 
+            [NameInMap("ConfigExample")]
+            [Validation(Required=false)]
+            public string ConfigExample { get; set; }
+
+            [NameInMap("DomainConfigStartIndex")]
+            [Validation(Required=false)]
+            public int? DomainConfigStartIndex { get; set; }
+
             /// <summary>
             /// The list of gateway plug-in configurations.
             /// </summary>
@@ -125,7 +133,25 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public long? PluginId { get; set; }
 
+                [NameInMap("ResourceList")]
+                [Validation(Required=false)]
+                public List<GetPluginConfigResponseBodyDataGatewayConfigListResourceList> ResourceList { get; set; }
+                public class GetPluginConfigResponseBodyDataGatewayConfigListResourceList : TeaModel {
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public long? Id { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
             }
+
+            [NameInMap("GatewayConfigStartIndex")]
+            [Validation(Required=false)]
+            public int? GatewayConfigStartIndex { get; set; }
 
             /// <summary>
             /// The ID of the plug-in.
@@ -204,6 +230,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("ReadmeEn")]
             [Validation(Required=false)]
             public string ReadmeEn { get; set; }
+
+            [NameInMap("RouteConfigStartIndex")]
+            [Validation(Required=false)]
+            public int? RouteConfigStartIndex { get; set; }
 
             /// <summary>
             /// Indicates whether the plug-in is enabled. Valid values:

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class UpdatePluginConfigRequest : TeaModel {
+    public class UpdatePluginConfigShrinkRequest : TeaModel {
         /// <summary>
         /// The language of the response. Valid values:
         /// 
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("ResourceIdList")]
         [Validation(Required=false)]
-        public List<long?> ResourceIdList { get; set; }
+        public string ResourceIdListShrink { get; set; }
 
     }
 

@@ -18027,6 +18027,98 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
+         * @summary 获取网关可用区列表
+         *
+         * @param request ListGatewayZoneRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListGatewayZoneResponse
+         */
+        public ListGatewayZoneResponse ListGatewayZoneWithOptions(ListGatewayZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGatewayZone",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGatewayZoneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取网关可用区列表
+         *
+         * @param request ListGatewayZoneRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListGatewayZoneResponse
+         */
+        public async Task<ListGatewayZoneResponse> ListGatewayZoneWithOptionsAsync(ListGatewayZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGatewayZone",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGatewayZoneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取网关可用区列表
+         *
+         * @param request ListGatewayZoneRequest
+         * @return ListGatewayZoneResponse
+         */
+        public ListGatewayZoneResponse ListGatewayZone(ListGatewayZoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListGatewayZoneWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取网关可用区列表
+         *
+         * @param request ListGatewayZoneRequest
+         * @return ListGatewayZoneResponse
+         */
+        public async Task<ListGatewayZoneResponse> ListGatewayZoneAsync(ListGatewayZoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListGatewayZoneWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Displays the number of nodes that can be deployed for an instance.
          *
          * @param request ListInstanceCountRequest
@@ -29557,13 +29649,19 @@ namespace AlibabaCloud.SDK.Mse20190531
         /**
          * @summary Updates the configuration of a plug-in.
          *
-         * @param request UpdatePluginConfigRequest
+         * @param tmpReq UpdatePluginConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdatePluginConfigResponse
          */
-        public UpdatePluginConfigResponse UpdatePluginConfigWithOptions(UpdatePluginConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdatePluginConfigResponse UpdatePluginConfigWithOptions(UpdatePluginConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePluginConfigShrinkRequest request = new UpdatePluginConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceIdList))
+            {
+                request.ResourceIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceIdList, "ResourceIdList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -29604,6 +29702,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
             {
                 query["PluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdListShrink))
+            {
+                query["ResourceIdList"] = request.ResourceIdListShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -29627,13 +29729,19 @@ namespace AlibabaCloud.SDK.Mse20190531
         /**
          * @summary Updates the configuration of a plug-in.
          *
-         * @param request UpdatePluginConfigRequest
+         * @param tmpReq UpdatePluginConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return UpdatePluginConfigResponse
          */
-        public async Task<UpdatePluginConfigResponse> UpdatePluginConfigWithOptionsAsync(UpdatePluginConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdatePluginConfigResponse> UpdatePluginConfigWithOptionsAsync(UpdatePluginConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePluginConfigShrinkRequest request = new UpdatePluginConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceIdList))
+            {
+                request.ResourceIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceIdList, "ResourceIdList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -29674,6 +29782,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
             {
                 query["PluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdListShrink))
+            {
+                query["ResourceIdList"] = request.ResourceIdListShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
