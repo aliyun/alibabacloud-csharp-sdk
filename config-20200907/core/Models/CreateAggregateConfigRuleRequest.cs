@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The rule name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleName")]
         [Validation(Required=false)]
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// *   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.
         /// *   ScheduledNotification: The rule is periodically triggered.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleTriggerTypes")]
         [Validation(Required=false)]
@@ -135,6 +141,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The type of the resource evaluated by the rule. Separate multiple resource types with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceTypesScope")]
         [Validation(Required=false)]
@@ -146,6 +154,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   1: high risk level
         /// *   2: medium risk level
         /// *   3: low risk level
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
@@ -157,7 +167,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   If you set the SourceOwner parameter to ALIYUN, set this parameter to the name of the managed rule.
         /// *   If you set the SourceOwner parameter to CUSTOM_FC, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.
         /// 
-        /// For more information about how to query the name of a managed rule, see [Managed rules](~~127404~~).
+        /// For more information about how to query the name of a managed rule, see [Managed rules](https://help.aliyun.com/document_detail/127404.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceIdentifier")]
         [Validation(Required=false)]
@@ -168,6 +180,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// *   ALIYUN: managed rule
         /// *   CUSTOM_FC: custom rule
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceOwner")]
         [Validation(Required=false)]

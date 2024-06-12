@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string ParameterValue { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the input parameter is required. Valid values:
+                    /// Indicates whether the input parameters are required. Valid values:
                     /// 
                     /// *   true
                     /// *   false
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 }
 
                 /// <summary>
-                /// The rule description.
+                /// The description of the rule.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -129,9 +129,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// The risk level of the resources that do not comply with the rule. Valid values:
                 /// 
-                /// *   1: high
-                /// *   2: medium
-                /// *   3: low
+                /// *   1: high.
+                /// *   2: medium.
+                /// *   3: low.
                 /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
@@ -218,6 +218,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.
+            /// </summary>
             [NameInMap("TemplateContent")]
             [Validation(Required=false)]
             public string TemplateContent { get; set; }

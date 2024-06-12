@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The member account ID, which indicates the Alibaba Cloud account ID of the member account.
             /// 
-            /// For more information about how to obtain the ID of a member account, see [ListAccounts](~~160016~~).
+            /// For more information about how to obtain the ID of a member account, see [ListAccounts](https://help.aliyun.com/document_detail/160016.html).
             /// 
             /// >  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.
             /// </summary>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The member account name, which indicates the name of the Alibaba Cloud account that corresponds to the member account.
             /// 
-            /// For more information about how to obtain the name of a member account, see [ListAccounts](~~160016~~).
+            /// For more information about how to obtain the name of a member account, see [ListAccounts](https://help.aliyun.com/document_detail/160016.html).
             /// 
             /// >  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.
             /// </summary>
@@ -54,7 +54,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -63,7 +65,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The name of the account group.
         /// 
-        /// For more information about how to obtain the name of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the name of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
         /// </summary>
         [NameInMap("AggregatorName")]
         [Validation(Required=false)]
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The description of the account group.
         /// 
-        /// For more information about how to obtain the description of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the description of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

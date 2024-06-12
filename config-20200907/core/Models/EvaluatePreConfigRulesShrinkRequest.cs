@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The resources that you want to evaluate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceEvaluateItems")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class ListAggregateResourceRelationsRequest : TeaModel {
         /// <summary>
         /// The ID of the account group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The ID of the region in which the resource resides.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -43,36 +47,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// Valid values:
         /// 
         /// *   IsContained: The object is included as part of the resource.
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
         /// *   IsAttachedTo: The object is added to the resource.
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
         /// *   IsAssociatedIn: The object is associated with the resource.
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// *   Contains: The actual value contains the expected value.
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// *   Contains: The object contains the resource.
         /// </summary>
         [NameInMap("RelationType")]
         [Validation(Required=false)]
@@ -80,6 +57,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The ID of the Alibaba Cloud account to which the resources in the account group belong.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]
@@ -87,6 +66,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The resource ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -94,6 +75,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The type of the resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

@@ -17,14 +17,19 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The supported resource relationships.
+        /// An array that contains the relationships.
         /// </summary>
         [NameInMap("ResourceRelationConfigList")]
         [Validation(Required=false)]
         public List<GetSupportedResourceRelationConfigResponseBodyResourceRelationConfigList> ResourceRelationConfigList { get; set; }
         public class GetSupportedResourceRelationConfigResponseBodyResourceRelationConfigList : TeaModel {
             /// <summary>
-            /// The relationship type.
+            /// The type of the relationship between the resource and the object. Valid values:
+            /// 
+            /// *   IsContained: The object is included as part of the resource.
+            /// *   IsAttachedTo: The object is added to the resource.
+            /// *   IsAssociatedIn: The object is associated with the resource.
+            /// *   Contains: The actual value contains the expected value.
             /// </summary>
             [NameInMap("RelationType")]
             [Validation(Required=false)]

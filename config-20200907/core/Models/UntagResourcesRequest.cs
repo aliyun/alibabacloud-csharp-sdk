@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The region ID of the tag.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// The resource ID.
         /// 
         /// You can remove tags from up to 50 resources at a time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   `ACS::Config::Aggregator`
         /// *   `ACS::Config::CompliancePack`
         /// *   `ACS::Config::AggregateCompliancePack`
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

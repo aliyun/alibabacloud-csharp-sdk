@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string Regions { get; set; }
 
+        [NameInMap("ResourceDeleted")]
+        [Validation(Required=false)]
+        public int? ResourceDeleted { get; set; }
+
         /// <summary>
         /// The resource types. Separate multiple resource types with commas (,).
         /// </summary>

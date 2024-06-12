@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class ListRemediationExecutionsRequest : TeaModel {
         /// <summary>
         /// The rule ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]

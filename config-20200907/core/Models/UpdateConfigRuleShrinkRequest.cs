@@ -19,7 +19,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the rule.
         /// 
-        /// For more information about how to query the ID of a rule, see [ListConfigRules](~~169607~~).
+        /// For more information about how to query the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The name of the rule.
         /// 
-        /// For more information about how to query the name of a rule, see [ListAggregateConfigRules](~~264148~~).
+        /// For more information about how to query the name of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).
         /// </summary>
         [NameInMap("ConfigRuleName")]
         [Validation(Required=false)]

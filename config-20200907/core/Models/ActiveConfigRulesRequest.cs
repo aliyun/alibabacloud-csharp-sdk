@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class ActiveConfigRulesRequest : TeaModel {
         /// <summary>
         /// The rule IDs. Separate multiple rule IDs with commas (,). You can specify a maximum of 20 rule IDs at a time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleIds")]
         [Validation(Required=false)]

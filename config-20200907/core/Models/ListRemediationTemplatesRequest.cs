@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The identifier of the managed rule.
         /// 
-        /// You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the managed rule identifier.
+        /// You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the managed rule identifier.
         /// </summary>
         [NameInMap("ManagedRuleIdentifier")]
         [Validation(Required=false)]

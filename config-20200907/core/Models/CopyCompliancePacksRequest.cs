@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group to which the compliance packages belong.
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
         /// </summary>
         [NameInMap("SrcAggregatorId")]
         [Validation(Required=false)]
@@ -30,7 +30,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The IDs of the compliance packages. Separate multiple compliance package IDs with commas (,).
         /// 
-        /// For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).
+        /// For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/263332.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SrcCompliancePackIds")]
         [Validation(Required=false)]

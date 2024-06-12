@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The rule ID.
         /// 
-        /// For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
+        /// For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The resources that are to be re-evaluated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

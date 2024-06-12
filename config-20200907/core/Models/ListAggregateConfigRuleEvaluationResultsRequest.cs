@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -21,7 +23,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the compliance package.
         /// 
-        /// For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).
+        /// For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).
         /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
@@ -32,8 +34,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// *   COMPLIANT: The resource is evaluated as compliant.
         /// *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-        /// *   NOT_APPLICABLE: The rule does not apply to the resource.
-        /// *   INSUFFICIENT_DATA: No resource data is available.
+        /// *   NOT_APPLICABLE: The rule does not apply to your resource.
+        /// *   INSUFFICIENT_DATA: No data is available.
         /// *   IGNORED: The resource is ignored during compliance evaluation.
         /// </summary>
         [NameInMap("ComplianceType")]
@@ -41,23 +43,23 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ComplianceType { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// The rule ID.
         /// 
-        /// For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+        /// For more information about how to query the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return for a single request. Valid values: 1 to 100.
+        /// The maximum number of entries to return in a request. Valid values: 1 to 100.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to initiate the next request. If the response to the current request is truncated, this token is used to initiate another request and obtain the remaining entries.``
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

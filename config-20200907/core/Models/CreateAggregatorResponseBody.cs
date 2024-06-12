@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateAggregatorResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the account group.
+        /// The account group ID.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public GetAggregatorResponseBodyAggregator Aggregator { get; set; }
         public class GetAggregatorResponseBodyAggregator : TeaModel {
             /// <summary>
-            /// The ID of the management account used to create the account group.
+            /// The ID of the management account that is used to create the account group.
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// The affiliation of the member account. The value is fixed to ResourceDirectory.
+                /// The type of the member account. Only ResourceDirectory is returned, which indicates that the account is a resource directory account.
                 /// </summary>
                 [NameInMap("AccountType")]
                 [Validation(Required=false)]
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// The status of the configuration recorder for the member account. Valid values:
                 /// 
-                /// *   REGISTRABLE: The configuration recorder has not been registered.
+                /// *   REGISTRABLE: The configuration recorder is not registered.
                 /// *   BUILDING: The configuration recorder is being deployed.
-                /// *   REGISTERED: The configuration recorder has been registered.
+                /// *   REGISTERED: The configuration recorder is registered.
                 /// *   REBUILDING: The configuration recorder is being redeployed.
                 /// </summary>
                 [NameInMap("RecorderStatus")]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The timestamp when the account group was created.
+            /// The timestamp generated when the account group was created.
             /// </summary>
             [NameInMap("AggregatorCreateTimestamp")]
             [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// The status of the account group. Valid values:
             /// 
             /// *   0: The account group is being created.
-            /// *   1: The account group has been created.
+            /// *   1: The account group was created.
             /// </summary>
             [NameInMap("AggregatorStatus")]
             [Validation(Required=false)]
@@ -106,8 +106,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The type of the account group. Valid values:
             /// 
-            /// *   RD: global account group
-            /// *   CUSTOM: custom account group
+            /// *   RD: a global account group.
+            /// *   FOLDER: an account group for a folder.
+            /// *   CUSTOM: a custom account group.
             /// </summary>
             [NameInMap("AggregatorType")]
             [Validation(Required=false)]
@@ -120,6 +121,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The ID of the attached folder of the account group.
+            /// </summary>
             [NameInMap("FolderId")]
             [Validation(Required=false)]
             public string FolderId { get; set; }
@@ -127,7 +131,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

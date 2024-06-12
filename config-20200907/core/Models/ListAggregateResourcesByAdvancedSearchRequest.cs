@@ -11,13 +11,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class ListAggregateResourcesByAdvancedSearchRequest : TeaModel {
         /// <summary>
         /// The ID of the account group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The SQL statement used to query resources.
+        /// The SQL query statement.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Sql")]
         [Validation(Required=false)]

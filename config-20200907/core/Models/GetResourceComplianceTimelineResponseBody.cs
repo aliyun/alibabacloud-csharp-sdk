@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string AccountId { get; set; }
 
                 /// <summary>
-                /// The zone where the resource resides.
+                /// The ID of the zone in which the resource resides.
                 /// </summary>
                 [NameInMap("AvailabilityZone")]
                 [Validation(Required=false)]
@@ -52,52 +52,52 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? CaptureTime { get; set; }
 
                 /// <summary>
-                /// The information about the rules that evaluated the resource and the compliance evaluation result.
+                /// The rules associated with the resource and the compliance details of the rules.
                 /// </summary>
                 [NameInMap("Configuration")]
                 [Validation(Required=false)]
                 public string Configuration { get; set; }
 
                 /// <summary>
-                /// The details of the configuration change that triggered the compliance evaluation.
+                /// The details of the resource changes that trigger the compliance evaluation.
                 /// </summary>
                 [NameInMap("ConfigurationDiff")]
                 [Validation(Required=false)]
                 public string ConfigurationDiff { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the resource resides.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
                 /// <summary>
-                /// The timestamp when the resource was created. Unit: milliseconds.
+                /// The time when the resource was created. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("ResourceCreateTime")]
                 [Validation(Required=false)]
                 public long? ResourceCreateTime { get; set; }
 
                 /// <summary>
-                /// The ID of the resource.
+                /// The resource ID.
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The name of the resource.
+                /// The resource name.
                 /// </summary>
                 [NameInMap("ResourceName")]
                 [Validation(Required=false)]
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// The status of the resource. The parameter value varies with the resource type and may be left empty. Examples:
+                /// The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:
                 /// 
-                /// *   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, valid values of this parameter include Running and Stopped.
-                /// *   If the ResourceType parameter is set to ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that does not have a specific state. In this case, this parameter is left empty.
+                /// *   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.
+                /// *   If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.
                 /// </summary>
                 [NameInMap("ResourceStatus")]
                 [Validation(Required=false)]

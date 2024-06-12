@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListSupportedProductsResponseBody : TeaModel {
         /// <summary>
-        /// The maximum number of entries returned for a single request. Valid values: 1 to 500.
+        /// The maximum number of entries to return for a single request. Valid values: 1 to 500.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<ListSupportedProductsResponseBodyProducts> Products { get; set; }
         public class ListSupportedProductsResponseBodyProducts : TeaModel {
             /// <summary>
-            /// The English name of the cloud service.
+            /// The English name of the Alibaba Cloud service.
             /// </summary>
             [NameInMap("ProductNameEn")]
             [Validation(Required=false)]
             public string ProductNameEn { get; set; }
 
             /// <summary>
-            /// The Chinese name of the cloud service.
+            /// The Chinese name of the Alibaba Cloud service.
             /// </summary>
             [NameInMap("ProductNameZh")]
             [Validation(Required=false)]

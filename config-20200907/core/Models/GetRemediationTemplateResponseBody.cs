@@ -18,13 +18,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public class GetRemediationTemplateResponseBodyRemediationTemplates : TeaModel {
             /// <summary>
             /// The ID of the supported rule template.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ManagedRuleIdentifier")]
             [Validation(Required=false)]
             public string ManagedRuleIdentifier { get; set; }
 
             /// <summary>
-            /// The type of the automatic remediation template. Valid value: OOS.
+            /// The type of the automatic remediation template. The value is set to OOS.
             /// </summary>
             [NameInMap("RemediationType")]
             [Validation(Required=false)]
@@ -39,13 +41,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             /// <summary>
             /// The description of the automatic remediation template.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("TemplateDescription")]
             [Validation(Required=false)]
             public string TemplateDescription { get; set; }
 
             /// <summary>
-            /// The identifier of the automatic remediation template.
+            /// The ID of the automatic remediation template.
             /// </summary>
             [NameInMap("TemplateIdentifier")]
             [Validation(Required=false)]

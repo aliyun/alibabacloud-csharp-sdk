@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class TagResourcesShrinkRequest : TeaModel {
         /// <summary>
         /// The region ID of the tags.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The resource IDs. You can add tags to up to 50 resources.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   `ACS::Config::Aggregator`
         /// *   `ACS::Config::CompliancePack`
         /// *   `ACS::Config::AggregateCompliancePack`
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -40,6 +46,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// The tag value of the resource.
         /// 
         /// You can specify up to 20 tag values.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the region where one or more resources you want to query reside. For example, the value `global` indicates global regions and the value `cn-hangzhou` indicates the China (Hangzhou) region.
         /// 
-        /// For more information about how to obtain the ID of the region where a resource resides, see [ListDiscoveredResources](~~169620~~).
+        /// For more information about how to obtain the ID of the region where a resource resides, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the resource.
         /// 
-        /// For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).
+        /// For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The type of the resource.
         /// 
-        /// For more information about how to query the type of a resource, see [ListDiscoveredResources](~~169620~~).
+        /// For more information about how to query the type of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

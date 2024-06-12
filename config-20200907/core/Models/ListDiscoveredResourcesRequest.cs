@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class ListDiscoveredResourcesRequest : TeaModel {
         /// <summary>
         /// The maximum number of entries returned for a single request. Valid values: 1 to 100.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -33,8 +35,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The status of the resource. Valid values:
         /// 
-        /// *   0: The resource is deleted.
-        /// *   1 (default): The resource is retained.
+        /// *   0: The resource is deleted. If a resource is deleted from the desired cloud service, **Deleted** is displayed in the resource list in the Cloud Config console.
+        /// *   1 (default): The resource is retained. If a resource is managed as expected, **Active** is displayed in the resource list in the Cloud Config console.
         /// </summary>
         [NameInMap("ResourceDeleted")]
         [Validation(Required=false)]

@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the region where one or more resources that you want to query reside. For example, the value `global` indicates global regions and the value `cn-hangzhou` indicates the China (Hangzhou) region.
         /// 
-        /// For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).
+        /// For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the resource.
         /// 
-        /// For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+        /// For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The type of the resource.
         /// 
-        /// For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+        /// For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

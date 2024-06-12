@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The name of the rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleName")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   ScheduledNotification: The rule is periodically triggered.
         /// 
         /// >  If a rule supports the preceding trigger types, separate the types with a comma (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleTriggerTypes")]
         [Validation(Required=false)]
@@ -93,17 +97,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceTypesScope")]
         [Validation(Required=false)]
         public List<string> ResourceTypesScope { get; set; }
 
         /// <summary>
-        /// The risk level of the resources that are not compliant with the rule. Valid values:
+        /// The risk level of the resources that do not comply with the rule. Valid values:
         /// 
-        /// *   1: high risk level
-        /// *   2: medium risk level
-        /// *   3: low risk level
+        /// *   1: high.
+        /// *   2: medium.
+        /// *   3: low.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
@@ -115,7 +123,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   If you set the SourceOwner parameter to ALIYUN, set this parameter to the name of the managed rule.
         /// *   If you set the SourceOwner parameter to CUSTOM_FC, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.
         /// 
-        /// For more information about how to query the name of a managed rule, see [Managed rules](~~127404~~).
+        /// For more information about how to query the name of a managed rule, see [Managed rules](https://help.aliyun.com/document_detail/127404.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceIdentifier")]
         [Validation(Required=false)]
@@ -126,34 +136,36 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// *   ALIYUN: managed rule.
         /// *   CUSTOM_FC: custom rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceOwner")]
         [Validation(Required=false)]
         public string SourceOwner { get; set; }
 
         /// <summary>
-        /// The logical relationship among the tag keys if you specify multiple tag keys for the `TagKeyScope` parameter. For example, if you set the `TagKeyScope` parameter to `ECS,OSS` and the TagKeyLogicScope parameter to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:
+        /// The logical relationship among the tag keys if you specify multiple tag keys for `TagKeyScope`. For example, if you set `TagKeyScope` to `ECS,OSS` and set TagKeyLogicScope to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:
         /// 
-        /// *   AND: logical AND
-        /// *   OR: logical OR
+        /// *   AND
+        /// *   OR
         /// </summary>
         [NameInMap("TagKeyLogicScope")]
         [Validation(Required=false)]
         public string TagKeyLogicScope { get; set; }
 
         /// <summary>
-        /// The tag key used to filter resources. The rule applies only to the resources with a specified tag key.
+        /// The tag key used to filter resources. The rule applies only to the resources with the specified tag key.
         /// 
-        /// >  This parameter applies only to managed rules. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
+        /// >  This parameter applies only to managed rules. You must specify both `TagKeyScope` and `TagValueScope`.
         /// </summary>
         [NameInMap("TagKeyScope")]
         [Validation(Required=false)]
         public string TagKeyScope { get; set; }
 
         /// <summary>
-        /// The tag key used to filter resources. The rule applies only to the resources with the specified tag key.
+        /// The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.
         /// 
-        /// >  This parameter applies only to managed rules. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
+        /// >  This parameter applies only to managed rules. You must specify both `TagKeyScope` and `TagValueScope`.
         /// </summary>
         [NameInMap("TagValueScope")]
         [Validation(Required=false)]

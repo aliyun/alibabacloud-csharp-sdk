@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// The product code of the cloud product. Valid values:
         /// 
         /// cadt: Cloud Architecture Design Tool
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]

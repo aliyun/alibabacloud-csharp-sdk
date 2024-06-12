@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The ID of the account group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -29,6 +31,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public string Regions { get; set; }
+
+        [NameInMap("ResourceDeleted")]
+        [Validation(Required=false)]
+        public int? ResourceDeleted { get; set; }
 
         /// <summary>
         /// The resource types. Separate multiple resource types with commas (,).

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListConfigRulesRequest : TeaModel {
         /// <summary>
-        /// The compliance evaluation result. Valid values:
+        /// The compliance evaluation result of the rule. Valid values:
         /// 
         /// *   COMPLIANT: The resources are evaluated as compliant.
         /// *   NON_COMPLIANT: The resources are evaluated as non-compliant.
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// *   ACTIVE: The rule is enabled.
         /// *   DELETING: The rule is being deleted.
-        /// *   EVALUATING: The rule is triggered and is being used to monitor resource configurations.
+        /// *   EVALUATING: The rule is being used to evaluate resource configurations.
         /// *   INACTIVE: The rule is disabled.
         /// </summary>
         [NameInMap("ConfigRuleState")]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The page number.
         /// 
-        /// Pages start from page 1. Default value: 1
+        /// Page numbers start from 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The number of entries per page.
         /// 
-        /// Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+        /// Valid values: 1 to 100. A minimum of 1 entry can be returned per page. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

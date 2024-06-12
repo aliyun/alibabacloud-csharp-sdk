@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -21,7 +23,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the remediation template. Separate multiple remediation template IDs with commas (,).
         /// 
-        /// For more information about how to obtain the ID of a remediation template, see [ListAggregateRemediations](~~270036~~).
+        /// For more information about how to obtain the ID of a remediation template, see [ListAggregateRemediations](https://help.aliyun.com/document_detail/270036.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RemediationIds")]
         [Validation(Required=false)]

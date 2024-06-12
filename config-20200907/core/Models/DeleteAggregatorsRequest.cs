@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class DeleteAggregatorsRequest : TeaModel {
         /// <summary>
         /// The ID of the account group. Separate multiple IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorIds")]
         [Validation(Required=false)]

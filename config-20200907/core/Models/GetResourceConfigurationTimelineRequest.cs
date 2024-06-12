@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -40,7 +42,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The resource IDs.
         /// 
-        /// For more information about how to query the ID of a resource, see [ListDiscoveredResources](~~169620~~).
+        /// For more information about how to query the ID of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -49,7 +53,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The resource type.
         /// 
-        /// For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~169620~~).
+        /// For more information about how to obtain the type of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

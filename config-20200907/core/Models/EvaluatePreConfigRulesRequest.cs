@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The resources that you want to evaluate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceEvaluateItems")]
         [Validation(Required=false)]
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// The identifier of the evaluation rule.
                 /// 
-                /// For more information about how to obtain the identifier of an evaluation rule, see [ListManagedRules](~~467810~~).
+                /// For more information about how to obtain the identifier of an evaluation rule, see [ListManagedRules](https://help.aliyun.com/document_detail/467810.html).
                 /// </summary>
                 [NameInMap("Identifier")]
                 [Validation(Required=false)]

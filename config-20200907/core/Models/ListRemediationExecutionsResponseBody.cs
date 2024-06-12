@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public ListRemediationExecutionsResponseBodyRemediationExecutionData RemediationExecutionData { get; set; }
         public class ListRemediationExecutionsResponseBodyRemediationExecutionData : TeaModel {
             /// <summary>
-            /// The maximum number of entries returned for a single request.
+            /// The maximum number of entries to return for a single request.
             /// </summary>
             [NameInMap("MaxResults")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ExecutionInvocationId { get; set; }
 
                 /// <summary>
-                /// The IDs of the remediated resources. Multiple resource IDs are separated with commas (,).
+                /// The IDs of the resources to which the remediation belongs. Separate multiple resource IDs with commas (,).
                 /// </summary>
                 [NameInMap("ExecutionResourceIds")]
                 [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ExecutionResourceType { get; set; }
 
                 /// <summary>
-                /// The status of the remediation. Valid values:
+                /// The status of the remediation record. Valid values:
                 /// 
                 /// *   Success
                 /// *   Failed

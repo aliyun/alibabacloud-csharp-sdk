@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -21,7 +23,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The rule IDs. Separate multiple rule IDs with commas (,).
         /// 
-        /// For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+        /// For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleIds")]
         [Validation(Required=false)]

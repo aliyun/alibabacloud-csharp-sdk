@@ -38,41 +38,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// The type of the relationship between the resource and the object.
-            /// 
-            /// Valid values:
-            /// 
-            /// *   IsContained: The object is included as part of the resource.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   IsAttachedTo: The object is added to the resource.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   IsAssociatedIn: The object is associated with the resource.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Contains: The actual value contains the expected value.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// An array that contains the relationships.
             /// </summary>
             [NameInMap("ResourceRelationList")]
             [Validation(Required=false)]
@@ -91,36 +57,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// Valid values:
                 /// 
                 /// *   IsContained: The object is included as part of the resource.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   IsAttachedTo: The object is added to the resource.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   IsAssociatedIn: The object is associated with the resource.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   Contains: The object contains the resource.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
                 /// </summary>
                 [NameInMap("RelationType")]
                 [Validation(Required=false)]
@@ -134,7 +73,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string SourceResourceId { get; set; }
 
                 /// <summary>
-                /// The ID of the region to which the current resource belongs.
+                /// The ID of the region in which the resource resides.
                 /// </summary>
                 [NameInMap("SourceResourceRegionId")]
                 [Validation(Required=false)]
@@ -148,14 +87,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string SourceResourceType { get; set; }
 
                 /// <summary>
-                /// The ID of the resource that is associated with the object.
+                /// The ID of the associated resource.
                 /// </summary>
                 [NameInMap("TargetResourceId")]
                 [Validation(Required=false)]
                 public string TargetResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource that is associated with the object.
+                /// The type of the associated resource.
                 /// </summary>
                 [NameInMap("TargetResourceType")]
                 [Validation(Required=false)]

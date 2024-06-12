@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class DeleteAggregateConfigDeliveryChannelRequest : TeaModel {
         /// <summary>
         /// The ID of the account group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -19,7 +21,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the delivery channel.
         /// 
-        /// For more information about how to obtain the ID of a delivery channel, see [ListAggregateConfigDeliveryChannels](~~429842~~).
+        /// For more information about how to obtain the ID of a delivery channel, see [ListAggregateConfigDeliveryChannels](https://help.aliyun.com/document_detail/429842.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DeliveryChannelId")]
         [Validation(Required=false)]

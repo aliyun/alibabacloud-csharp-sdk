@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The submission status of the evaluation results of the custom rule. Valid values:
+        /// Indicates whether the evaluation results of the custom rule are submitted. Valid values:
         /// 
         /// *   true: The evaluation results are submitted.
-        /// *   false: The evaluation results failed to be submitted.
+        /// *   false: The evaluation results fail to be submitted.
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

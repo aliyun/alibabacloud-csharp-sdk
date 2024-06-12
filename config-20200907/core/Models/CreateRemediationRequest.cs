@@ -19,7 +19,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The rule ID.
         /// 
-        /// For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
+        /// For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   AUTO_EXECUTION: The remediation template is automatically executed.
         /// *   MANUAL_EXECUTION: The remediation template is manually executed.
         /// *   NOT_CONFIG: The execution mode is not specified.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InvokeType")]
         [Validation(Required=false)]
@@ -40,7 +44,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The configuration of the remediation template.
         /// 
-        /// For more information about how to obtain the remediation template configuration, see the `TemplateDefinition` response parameter provided in [ListRemediationTemplates](~~416781~~).
+        /// For more information about how to obtain the remediation template configuration, see the `TemplateDefinition` response parameter provided in [ListRemediationTemplates](https://help.aliyun.com/document_detail/416781.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
@@ -49,8 +55,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the remediation template.
         /// 
-        /// *   If you set the `RemediationType` parameter to `OOS`, set this parameter to the identifier of the relevant official remediation template, such as `ACS-OSS-PutBucketAcl`. For more information about how to obtain the remediation template identifier, see [ListRemediationTemplates](~~416781~~).
+        /// *   If you set the `RemediationType` parameter to `OOS`, set this parameter to the identifier of the relevant official remediation template, such as `ACS-OSS-PutBucketAcl`. For more information about how to obtain the remediation template identifier, see [ListRemediationTemplates](https://help.aliyun.com/document_detail/416781.html).
         /// *   If you set the `RemediationType` parameter to `FC`, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant Function Compute resource, such as `acs:fc:cn-hangzhou:100931896542****:services/ConfigService.LATEST/functions/test-php`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RemediationTemplateId")]
         [Validation(Required=false)]
@@ -61,6 +69,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// *   OOS: Operation Orchestration Service (official remediation)
         /// *   FC: Function Compute (custom remediation)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RemediationType")]
         [Validation(Required=false)]

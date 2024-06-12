@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The ID of the rule in the account group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The resources that you want to re-evaluate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
@@ -35,7 +41,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The ID of the region where the resource resides.
             /// 
-            /// For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).
+            /// For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -45,6 +53,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// The ID of the Alibaba Cloud account to which the resource belongs.
             /// 
             /// > You must specify the ID of the current management account or a member account in the account group of the management account.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceAccountId")]
             [Validation(Required=false)]
@@ -53,7 +63,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The resource ID.
             /// 
-            /// For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+            /// For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
@@ -62,7 +74,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The type of resource.
             /// 
-            /// For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+            /// For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]

@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The callback token. When Cloud Config triggers a custom rule to evaluate resources, the token information is sent to Function Compute as an input parameter. The token must be specified when you submit the evaluation results.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResultToken")]
         [Validation(Required=false)]

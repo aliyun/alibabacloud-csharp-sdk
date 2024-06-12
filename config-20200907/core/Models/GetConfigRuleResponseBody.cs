@@ -66,59 +66,59 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus ConfigRuleEvaluationStatus { get; set; }
             public class GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus : TeaModel {
                 /// <summary>
-                /// The timestamp when the rule was first triggered. Unit: milliseconds.
+                /// The timestamp generated when the rule was first triggered. Unit: millisecond.
                 /// </summary>
                 [NameInMap("FirstActivatedTimestamp")]
                 [Validation(Required=false)]
                 public long? FirstActivatedTimestamp { get; set; }
 
                 /// <summary>
-                /// Indicates whether resources were evaluated based on the rule. Valid values:
+                /// Indicates whether resource configurations were evaluated based on the rule. Valid values:
                 /// 
-                /// *   true: Resources were evaluated based on the rule.
-                /// *   false: Resources were not evaluated based on the rule.
+                /// *   true: Resource configurations were evaluated based on the rule.
+                /// *   false: Resource configurations were not evaluated based on the rule.
                 /// </summary>
                 [NameInMap("FirstEvaluationStarted")]
                 [Validation(Required=false)]
                 public bool? FirstEvaluationStarted { get; set; }
 
                 /// <summary>
-                /// The error code returned for the last failed compliance evaluation.
+                /// The error code returned for the previous failed compliance evaluation.
                 /// </summary>
                 [NameInMap("LastErrorCode")]
                 [Validation(Required=false)]
                 public string LastErrorCode { get; set; }
 
                 /// <summary>
-                /// The error message returned for the last failed compliance evaluation.
+                /// The error message returned for the previous failed compliance evaluation.
                 /// </summary>
                 [NameInMap("LastErrorMessage")]
                 [Validation(Required=false)]
                 public string LastErrorMessage { get; set; }
 
                 /// <summary>
-                /// The timestamp when the last failed compliance evaluation of the rule ended. Unit: milliseconds.
+                /// The timestamp generated when the previous failed compliance evaluation of the rule ended. Unit: millisecond.
                 /// </summary>
                 [NameInMap("LastFailedEvaluationTimestamp")]
                 [Validation(Required=false)]
                 public long? LastFailedEvaluationTimestamp { get; set; }
 
                 /// <summary>
-                /// The timestamp when the last failed compliance evaluation of the rule started. Unit: milliseconds.
+                /// The timestamp generated when the previous failed compliance evaluation of the rule started. Unit: millisecond.
                 /// </summary>
                 [NameInMap("LastFailedInvocationTimestamp")]
                 [Validation(Required=false)]
                 public long? LastFailedInvocationTimestamp { get; set; }
 
                 /// <summary>
-                /// The timestamp when the last successful compliance evaluation of the rule ended. Unit: milliseconds.
+                /// The timestamp generated when the previous successful compliance evaluation of the rule ended. Unit: millisecond.
                 /// </summary>
                 [NameInMap("LastSuccessfulEvaluationTimestamp")]
                 [Validation(Required=false)]
                 public long? LastSuccessfulEvaluationTimestamp { get; set; }
 
                 /// <summary>
-                /// The timestamp when the last successful compliance evaluation of the rule started. Unit: milliseconds.
+                /// The timestamp generated when the previous successful compliance evaluation of the rule started. Unit: millisecond.
                 /// </summary>
                 [NameInMap("LastSuccessfulInvocationTimestamp")]
                 [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ConfigRuleId { get; set; }
 
             /// <summary>
-            /// The name of the defense rule.
+            /// The name of the rule.
             /// </summary>
             [NameInMap("ConfigRuleName")]
             [Validation(Required=false)]
@@ -143,10 +143,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The status of the rule. Valid values:
             /// 
-            /// *   ACTIVE: The rule was being used to monitor resource configurations.
-            /// *   DELETING: The rule was being deleted.
-            /// *   EVALUATING: The rule was triggered and is being used to monitor resource configurations.
-            /// *   INACTIVE: The rule was disabled.
+            /// *   ACTIVE: The rule is enabled.
+            /// *   DELETING: The rule is being deleted.
+            /// *   EVALUATING: The rule is being used to evaluate resource configurations.
+            /// *   INACTIVE: The rule is disabled.
             /// </summary>
             [NameInMap("ConfigRuleState")]
             [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public GetConfigRuleResponseBodyConfigRuleCreateBy CreateBy { get; set; }
             public class GetConfigRuleResponseBodyConfigRuleCreateBy : TeaModel {
                 /// <summary>
-                /// The ID of the compliance package.
+                /// The compliance package ID.
                 /// </summary>
                 [NameInMap("CompliancePackId")]
                 [Validation(Required=false)]
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The timestamp when the rule was created. Unit: milliseconds.
+            /// The timestamp generated when the rule was created. Unit: millisecond.
             /// </summary>
             [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ExcludeResourceIdsScope { get; set; }
 
             /// <summary>
-            /// The details of the input parameters of the rule.
+            /// The input parameters of the rule.
             /// </summary>
             [NameInMap("InputParameters")]
             [Validation(Required=false)]
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public GetConfigRuleResponseBodyConfigRuleManagedRule ManagedRule { get; set; }
             public class GetConfigRuleResponseBodyConfigRuleManagedRule : TeaModel {
                 /// <summary>
-                /// The required input parameters of the managed rule.
+                /// The settings of the required input parameters for the managed rule.
                 /// </summary>
                 [NameInMap("CompulsoryInputParameterDetails")]
                 [Validation(Required=false)]
@@ -249,14 +249,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the managed rule.
+                /// The identifier of the managed rule.
                 /// </summary>
                 [NameInMap("Identifier")]
                 [Validation(Required=false)]
                 public string Identifier { get; set; }
 
                 /// <summary>
-                /// The list of rule tags.
+                /// The rule tags.
                 /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ManagedRuleName { get; set; }
 
                 /// <summary>
-                /// The optional input parameters of the managed rule.
+                /// The settings of the optional input parameters for the managed rule.
                 /// </summary>
                 [NameInMap("OptionalInputParameterDetails")]
                 [Validation(Required=false)]
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// The event source.
                     /// 
-                    /// >  Only events related to Cloud Config are supported. Valid value: aliyun.config.
+                    /// >  Only aliyun.config is returned, which indicates that only events related to Cloud Config are supported.
                     /// </summary>
                     [NameInMap("EventSource")]
                     [Validation(Required=false)]
@@ -295,13 +295,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// The interval at which the rule is triggered. Valid values:
                     /// 
-                    /// *   One_Hour: 1 hour
-                    /// *   Three_Hours: 3 hours
-                    /// *   Six_Hours: 6 hours.
-                    /// *   Twelve_Hours: 12 hours
-                    /// *   TwentyFour_Hours: 24 hours
+                    /// *   One_Hour
+                    /// *   Three_Hours
+                    /// *   Six_Hours
+                    /// *   Twelve_Hours
+                    /// *   TwentyFour_Hours
                     /// 
-                    /// >  This parameter is returned if the managed rule is periodically triggered.
+                    /// >  This parameter is returned if the rule is periodically triggered.
                     /// </summary>
                     [NameInMap("MaximumExecutionFrequency")]
                     [Validation(Required=false)]
@@ -322,22 +322,22 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The interval at which the rule was triggered. Valid values:
+            /// The interval at which the rule is triggered. Valid values:
             /// 
-            /// *   One_Hour: 1 hour.
-            /// *   Three_Hours: 3 hours.
-            /// *   Six_Hours: 6 hours.
-            /// *   Twelve_Hours: 12 hours.
-            /// *   TwentyFour_Hours: 24 hours.
+            /// *   One_Hour
+            /// *   Three_Hours
+            /// *   Six_Hours
+            /// *   Twelve_Hours
+            /// *   TwentyFour_Hours
             /// 
-            /// > This parameter is returned if the managed rule is periodically triggered.
+            /// >  This parameter is returned if the rule is periodically triggered.
             /// </summary>
             [NameInMap("MaximumExecutionFrequency")]
             [Validation(Required=false)]
             public string MaximumExecutionFrequency { get; set; }
 
             /// <summary>
-            /// The timestamp when the rule was last updated. Unit: milliseconds.
+            /// The timestamp generated when the rule was last updated. Unit: millisecond.
             /// </summary>
             [NameInMap("ModifiedTimestamp")]
             [Validation(Required=false)]
@@ -365,11 +365,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceTypesScope { get; set; }
 
             /// <summary>
-            /// The risk level of the resources that are not compliant with the rule. Valid values:
+            /// The risk level of the resources that do not comply with the rule. Valid values:
             /// 
-            /// *   1: high
-            /// *   2: medium
-            /// *   3: low
+            /// *   1: high.
+            /// *   2: medium.
+            /// *   3: low.
             /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
@@ -399,17 +399,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public GetConfigRuleResponseBodyConfigRuleSource Source { get; set; }
             public class GetConfigRuleResponseBodyConfigRuleSource : TeaModel {
                 /// <summary>
-                /// The identifier of the evaluation rule.
+                /// The identifier of the rule.
                 /// 
-                /// *   If the rule was created based on a managed rule, the value of this parameter is the name of the managed rule.
-                /// *   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.
+                /// *   If the rule is a managed rule, the value of this parameter is the identifier of the managed rule.
+                /// *   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of a function.
                 /// </summary>
                 [NameInMap("Identifier")]
                 [Validation(Required=false)]
                 public string Identifier { get; set; }
 
                 /// <summary>
-                /// The method that is used to create the rule. Valid values:
+                /// The type of the rule. Valid values:
                 /// 
                 /// *   CUSTOM_FC: a custom rule.
                 /// *   ALIYUN: a managed rule.
@@ -428,7 +428,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// The event source.
                     /// 
-                    /// >  Only events related to Cloud Config are supported. Valid value: aliyun.config.
+                    /// >  Only aliyun.config is returned, which indicates that only events related to Cloud Config are supported.
                     /// </summary>
                     [NameInMap("EventSource")]
                     [Validation(Required=false)]
@@ -437,11 +437,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// The interval at which the rule is triggered. Valid values:
                     /// 
-                    /// *   One_Hour: 1 hour
-                    /// *   Three_Hours: 3 hours
-                    /// *   Six_Hours: 6 hours
-                    /// *   Twelve_Hours: 12 hours
-                    /// *   TwentyFour_Hours: 24 hours
+                    /// *   One_Hour
+                    /// *   Three_Hours
+                    /// *   Six_Hours
+                    /// *   Twelve_Hours
+                    /// *   TwentyFour_Hours
                     /// 
                     /// >  This parameter is returned if the rule is periodically triggered.
                     /// </summary>

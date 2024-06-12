@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -28,7 +30,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the compliance package.
         /// 
-        /// For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).
+        /// For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
@@ -37,7 +41,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The name of the compliance package.
         /// 
-        /// For more information about how to obtain the name of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).
+        /// For more information about how to obtain the name of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).
         /// </summary>
         [NameInMap("CompliancePackName")]
         [Validation(Required=false)]
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The description of the compliance package.
         /// 
-        /// For more information about how to obtain the description of a compliance package, see [ListCompliancePacks](~~262059~~).
+        /// For more information about how to obtain the description of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/262059.html).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

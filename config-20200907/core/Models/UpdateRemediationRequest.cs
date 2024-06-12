@@ -38,7 +38,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the remediation setting.
         /// 
-        /// You can call the [ListRemediations](~~270772~~) operation to obtain the ID of the remediation setting.
+        /// You can call the [ListRemediations](https://help.aliyun.com/document_detail/270772.html) operation to obtain the ID of the remediation setting.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RemediationId")]
         [Validation(Required=false)]
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the remediation template.
         /// 
-        /// You can call the [ListRemediationTemplates](~~270066~~) operation to obtain the ID of the remediation template.
+        /// You can call the [ListRemediationTemplates](https://help.aliyun.com/document_detail/270066.html) operation to obtain the ID of the remediation template.
         /// </summary>
         [NameInMap("RemediationTemplateId")]
         [Validation(Required=false)]

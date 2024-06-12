@@ -12,16 +12,24 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
+        [NameInMap("ComplianceOption")]
+        [Validation(Required=false)]
+        public int? ComplianceOption { get; set; }
+
         /// <summary>
         /// The ID of the region in which the resource resides.
         /// 
-        /// For more information about how to query the ID of a region in which the resource resides, see [ListAggregateDiscoveredResources](~~411691~~).
+        /// For more information about how to query the ID of a region in which the resource resides, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/411691.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -38,7 +46,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The resource ID.
         /// 
-        /// For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
+        /// For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/411691.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -52,7 +62,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The type of the resource.
         /// 
-        /// For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
+        /// For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/411691.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

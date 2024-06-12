@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the rule.
         /// 
-        /// For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
+        /// For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
@@ -36,6 +38,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The resources to be ignored.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
@@ -44,7 +48,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The ID of the region in which the resource resides.
             /// 
-            /// For more information about how to obtain the ID of the region in which a resource resides, see [ListDiscoveredResources](~~169620~~).
+            /// For more information about how to obtain the ID of the region in which a resource resides, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -52,6 +58,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             /// <summary>
             /// The ID of the Alibaba Cloud account to which the resources belong.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceAccountId")]
             [Validation(Required=false)]
@@ -60,7 +68,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The ID of the resource.
             /// 
-            /// For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).
+            /// For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
@@ -69,7 +79,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The type of the resource.
             /// 
-            /// For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~169620~~).
+            /// For more information about how to obtain the type of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]

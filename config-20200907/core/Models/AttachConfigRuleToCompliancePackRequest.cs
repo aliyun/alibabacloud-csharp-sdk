@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the compliance package.
         /// 
-        /// For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).
+        /// For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/263332.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
@@ -21,7 +23,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The rule ID. Separate multiple rule IDs with commas (,).
         /// 
-        /// For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
+        /// For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleIds")]
         [Validation(Required=false)]

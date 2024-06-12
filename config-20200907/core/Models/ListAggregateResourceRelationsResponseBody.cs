@@ -38,48 +38,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// The type of the relationship between the resource and the object.
-            /// 
-            /// Valid values:
-            /// 
-            /// *   IsContained: The object is included as part of the resource.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   IsAttachedTo: The object is added to the resource.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   IsAssociatedIn: The object is associated with the resource.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Contains: The actual value contains the expected value.
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// An array that contains the relationships.
             /// </summary>
             [NameInMap("ResourceRelationList")]
             [Validation(Required=false)]
             public List<ListAggregateResourceRelationsResponseBodyResourceRelationsResourceRelationList> ResourceRelationList { get; set; }
             public class ListAggregateResourceRelationsResponseBodyResourceRelationsResourceRelationList : TeaModel {
                 /// <summary>
-                /// The ID of the Alibaba Cloud account to which the resource belongs.
+                /// The Alibaba Cloud account ID of the resource owner.
                 /// </summary>
                 [NameInMap("AccountId")]
                 [Validation(Required=false)]
@@ -91,50 +57,23 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// Valid values:
                 /// 
                 /// *   IsContained: The object is included as part of the resource.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   IsAttachedTo: The object is added to the resource.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   IsAssociatedIn: The object is associated with the resource.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
                 /// *   Contains: The object contains the resource.
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
                 /// </summary>
                 [NameInMap("RelationType")]
                 [Validation(Required=false)]
                 public string RelationType { get; set; }
 
                 /// <summary>
-                /// The resource ID.
+                /// The resource ID of the current resource.
                 /// </summary>
                 [NameInMap("SourceResourceId")]
                 [Validation(Required=false)]
                 public string SourceResourceId { get; set; }
 
                 /// <summary>
-                /// The ID of the region to which the current resource belongs.
+                /// The region ID of the current resource.
                 /// </summary>
                 [NameInMap("SourceResourceRegionId")]
                 [Validation(Required=false)]
@@ -148,7 +87,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string SourceResourceType { get; set; }
 
                 /// <summary>
-                /// The ID of the resource that is associated with the object.
+                /// The resource ID of the resource that is associated with the object.
                 /// </summary>
                 [NameInMap("TargetResourceId")]
                 [Validation(Required=false)]

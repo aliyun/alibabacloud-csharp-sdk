@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -28,7 +30,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The rule ID.
         /// 
-        /// For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+        /// For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
@@ -41,6 +45,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   AUTO_EXECUTION: The remediation template is automatically executed.
         /// *   MANUAL_EXECUTION: The remediation template is manually executed.
         /// *   NOT_CONFIG: The execution mode is not specified.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InvokeType")]
         [Validation(Required=false)]
@@ -49,7 +55,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The configuration of the remediation template.
         /// 
-        /// For more information about how to obtain the configuration of the remediation template, see [ListRemediationTemplates](~~416781~~). You can view the `TemplateDefinition` response parameter to obtain the configuration of the remediation template.
+        /// For more information about how to obtain the configuration of the remediation template, see [ListRemediationTemplates](https://help.aliyun.com/document_detail/416781.html). You can view the `TemplateDefinition` response parameter to obtain the configuration of the remediation template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
@@ -58,8 +66,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the remediation template.
         /// 
-        /// *   If you set the `RemediationType` parameter to `OOS`, set this parameter to the identifier of the relevant official remediation template, such as `ACS-OSS-PutBucketAcl`. For more information about how to obtain the remediation template identifier, see [ListRemediationTemplates](~~416781~~).
+        /// *   If you set the `RemediationType` parameter to `OOS`, set this parameter to the identifier of the relevant official remediation template, such as `ACS-OSS-PutBucketAcl`. For more information about how to obtain the remediation template identifier, see [ListRemediationTemplates](https://help.aliyun.com/document_detail/416781.html).
         /// *   If you set the `RemediationType` parameter to `FC`, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant Function Compute resource, such as `acs:fc:cn-hangzhou:100931896542****:services/ConfigService.LATEST/functions/test-php`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RemediationTemplateId")]
         [Validation(Required=false)]
@@ -70,6 +80,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// *   OOS: stands for Operation Orchestration Service and indicates official remediation.
         /// *   FC: stands for Function Compute and indicates custom remediation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RemediationType")]
         [Validation(Required=false)]

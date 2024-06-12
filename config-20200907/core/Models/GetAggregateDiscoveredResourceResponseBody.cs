@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string AvailabilityZone { get; set; }
 
+            [NameInMap("ComplianceType")]
+            [Validation(Required=false)]
+            public string ComplianceType { get; set; }
+
             /// <summary>
             /// The configuration of the resource.
             /// </summary>

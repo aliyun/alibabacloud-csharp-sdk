@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The name of the compliance package.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CompliancePackName")]
         [Validation(Required=false)]
@@ -26,14 +28,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the compliance package template.
         /// 
-        /// For more information about how to obtain the ID of a compliance package template, see [ListCompliancePackTemplates](~~261176~~).
+        /// You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the ID of the compliance package.
         /// </summary>
         [NameInMap("CompliancePackTemplateId")]
         [Validation(Required=false)]
         public string CompliancePackTemplateId { get; set; }
 
         /// <summary>
-        /// The rules in the compliance package.
+        /// The rules in the compliance package. You must specify either this parameter or TemplateContent.
         /// </summary>
         [NameInMap("ConfigRules")]
         [Validation(Required=false)]
@@ -78,11 +80,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceGroupIdsScope { get; set; }
 
         /// <summary>
-        /// The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:
+        /// The risk level of the resources that are not compliant with the rules in the compliance package. Default value: 2. Valid values:
         /// 
-        /// *   1: high risk level
-        /// *   2: medium risk level
-        /// *   3: low risk level
+        /// *   1: high.
+        /// *   2: medium.
+        /// *   3: low.
         /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
@@ -104,6 +106,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string TagValueScope { get; set; }
 
+        /// <summary>
+        /// The information about the template that is used to generate the compliance package. You can call an API operation to view the details of an existing compliance package or write a compliance package template. For more information, see [Write a compliance package template in a configuration file](https://help.aliyun.com/document_detail/2659733.html). You must specify one of ConfigRules and TemplateContent.
+        /// </summary>
         [NameInMap("TemplateContent")]
         [Validation(Required=false)]
         public string TemplateContent { get; set; }

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class ListRemediationsResponseBody : TeaModel {
         /// <summary>
         /// The page number. Pages start from page 1.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The number of entries per page. Valid values: 1 to 50.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -135,6 +139,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// The total number of remediation settings.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

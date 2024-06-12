@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class UpdateConfigurationRecorderRequest : TeaModel {
         /// <summary>
         /// The resource types. Separate multiple resource types with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]

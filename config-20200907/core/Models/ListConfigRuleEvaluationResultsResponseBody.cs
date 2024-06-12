@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListConfigRuleEvaluationResultsResponseBody : TeaModel {
         /// <summary>
-        /// The compliance evaluation result returned.
+        /// The compliance evaluation results returned.
         /// </summary>
         [NameInMap("EvaluationResults")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public List<ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> EvaluationResultList { get; set; }
             public class ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList : TeaModel {
                 /// <summary>
-                /// The annotation to the resource that is evaluated as non-compliant. The following parameters may be returned:
+                /// The annotation to the resource that is evaluated as non-compliant. The following section describe the parameters that can be returned:
                 /// 
                 /// *   `configuration`: the current resource configuration that is evaluated as non-compliant.
                 /// *   `desiredValue`: the expected resource configuration that is evaluated as compliant.
@@ -37,12 +37,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Annotation { get; set; }
 
                 /// <summary>
-                /// The compliance evaluation result of the resources. Valid values:
+                /// The compliance evaluation result of the resource. Valid values:
                 /// 
                 /// *   COMPLIANT: The resources are evaluated as compliant.
                 /// *   NON_COMPLIANT: The resources are evaluated as non-compliant.
                 /// *   NOT_APPLICABLE: The rule does not apply to the resources.
-                /// *   INSUFFICIENT_DATA: No resource data is available.
+                /// *   INSUFFICIENT_DATA: No data is available.
                 /// *   IGNORED: The resource is ignored during compliance evaluation.
                 /// </summary>
                 [NameInMap("ComplianceType")]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? ConfigRuleInvokedTimestamp { get; set; }
 
                 /// <summary>
-                /// The identifier of the compliance evaluation result.
+                /// The identifying information about the compliance evaluation result.
                 /// </summary>
                 [NameInMap("EvaluationResultIdentifier")]
                 [Validation(Required=false)]
@@ -78,21 +78,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                         public string CompliancePackId { get; set; }
 
                         /// <summary>
-                        /// The Alibaba Cloud Resource Name (ARN) of the rule.
+                        /// The ARN of the rule.
                         /// </summary>
                         [NameInMap("ConfigRuleArn")]
                         [Validation(Required=false)]
                         public string ConfigRuleArn { get; set; }
 
                         /// <summary>
-                        /// The ID of the rule.
+                        /// The rule ID.
                         /// </summary>
                         [NameInMap("ConfigRuleId")]
                         [Validation(Required=false)]
                         public string ConfigRuleId { get; set; }
 
                         /// <summary>
-                        /// The name of the rule.
+                        /// The rule name.
                         /// </summary>
                         [NameInMap("ConfigRuleName")]
                         [Validation(Required=false)]
@@ -101,42 +101,42 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                         /// <summary>
                         /// The date on which the system automatically re-evaluates the ignored incompliant resources.
                         /// 
-                        /// >  If this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.
+                        /// >  If the value of this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.
                         /// </summary>
                         [NameInMap("IgnoreDate")]
                         [Validation(Required=false)]
                         public string IgnoreDate { get; set; }
 
                         /// <summary>
-                        /// The ID of the region where the resource resides.
+                        /// The ID of the region in which your resources reside.
                         /// </summary>
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// The ID of the resource.
+                        /// The resource ID.
                         /// </summary>
                         [NameInMap("ResourceId")]
                         [Validation(Required=false)]
                         public string ResourceId { get; set; }
 
                         /// <summary>
-                        /// The name of the resource.
+                        /// The resource name.
                         /// </summary>
                         [NameInMap("ResourceName")]
                         [Validation(Required=false)]
                         public string ResourceName { get; set; }
 
                         /// <summary>
-                        /// The ID of the Alibaba Cloud account to which the resources belong.
+                        /// The ID of the Alibaba Cloud account to which the resource belongs.
                         /// </summary>
                         [NameInMap("ResourceOwnerId")]
                         [Validation(Required=false)]
                         public long? ResourceOwnerId { get; set; }
 
                         /// <summary>
-                        /// The type of the resource.
+                        /// The type of the resource that is monitored by Cloud Config.
                         /// </summary>
                         [NameInMap("ResourceType")]
                         [Validation(Required=false)]
@@ -166,8 +166,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// Indicates whether the remediation template is enabled. Valid values:
                 /// 
-                /// - true: The remediation template is enabled.
-                /// - false: The remediation template is disabled.
+                /// *   true: The remediation template is enabled.
+                /// *   false: The remediation template is disabled.
                 /// </summary>
                 [NameInMap("RemediationEnabled")]
                 [Validation(Required=false)]
@@ -181,11 +181,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? ResultRecordedTimestamp { get; set; }
 
                 /// <summary>
-                /// The risk level of the resources that are not compliant with the rule. Valid values:
+                /// The risk level of the resources that do not comply with the rule. Valid values:
                 /// 
-                /// *   1: high risk level
-                /// *   2: medium risk level
-                /// *   3: low risk level
+                /// *   1: high
+                /// *   2: medium
+                /// *   3: low
                 /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// The token that was used to initiate the next request.
+            /// A pagination token. It can be used in the next request to retrieve a new page of results.
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

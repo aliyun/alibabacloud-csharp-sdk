@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListResourcesByAdvancedSearchResponseBody : TeaModel {
         /// <summary>
-        /// The result of the request.
+        /// The query result.
         /// </summary>
         [NameInMap("QueryResults")]
         [Validation(Required=false)]

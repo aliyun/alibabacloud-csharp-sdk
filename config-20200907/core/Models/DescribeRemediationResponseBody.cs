@@ -77,6 +77,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             /// <summary>
             /// The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("RemediationOriginParams")]
             [Validation(Required=false)]

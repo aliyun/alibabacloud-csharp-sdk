@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregatorsResponseBody : TeaModel {
         /// <summary>
-        /// The account groups returned.
+        /// The account groups.
         /// </summary>
         [NameInMap("AggregatorsResult")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public List<ListAggregatorsResponseBodyAggregatorsResultAggregators> Aggregators { get; set; }
             public class ListAggregatorsResponseBodyAggregatorsResultAggregators : TeaModel {
                 /// <summary>
-                /// The ID of the management account used to create the account group.
+                /// The ID of the management account that is used to create the account group.
                 /// </summary>
                 [NameInMap("AccountId")]
                 [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? AggregatorAccountCount { get; set; }
 
                 /// <summary>
-                /// The timestamp when the account group was created.
+                /// The timestamp generated when the account group was created.
                 /// </summary>
                 [NameInMap("AggregatorCreateTimestamp")]
                 [Validation(Required=false)]
@@ -61,8 +61,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// The status of the account group. Valid values:
                 /// 
-                /// *   0: being created.
-                /// *   1: created.
+                /// *   0: The account group is being created.
+                /// *   1: The account group was created.
                 /// </summary>
                 [NameInMap("AggregatorStatus")]
                 [Validation(Required=false)]
@@ -72,6 +72,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// The type of the account group. Valid values:
                 /// 
                 /// *   RD: global account group.
+                /// *   FOLDER: account group of the folder.
                 /// *   CUSTOM: custom account group.
                 /// </summary>
                 [NameInMap("AggregatorType")]
@@ -85,6 +86,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// The information about the member accounts in the account group.
+                /// </summary>
                 [NameInMap("FolderId")]
                 [Validation(Required=false)]
                 public string FolderId { get; set; }
@@ -92,7 +96,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.
+            /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
@@ -101,7 +105,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

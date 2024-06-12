@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -28,7 +30,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the compliance package.
         /// 
-        /// For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).
+        /// For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
@@ -37,7 +41,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The name of the compliance package.
         /// 
-        /// For more information about how to obtain the name of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).
+        /// For more information about how to obtain the name of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).
         /// </summary>
         [NameInMap("CompliancePackName")]
         [Validation(Required=false)]
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The ID of the rule. If you configure this parameter, Cloud Config adds the rule of the specified ID to the compliance package.
             /// 
-            /// You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+            /// You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).
             /// </summary>
             [NameInMap("ConfigRuleId")]
             [Validation(Required=false)]
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// The name of the input parameter.
                 /// 
-                /// You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).
+                /// You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).
                 /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// The value of the input parameter.
                 /// 
-                /// You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).
+                /// You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).
                 /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
@@ -105,7 +109,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The ID of the managed rule. Cloud Config automatically creates a managed rule based on the specified ID and adds the rule to the compliance package.
             /// 
-            /// You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a managed rule, see [ListCompliancePackTemplates](~~261176~~).
+            /// You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a managed rule, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).
             /// </summary>
             [NameInMap("ManagedRuleIdentifier")]
             [Validation(Required=false)]
@@ -127,7 +131,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The description of the compliance package.
         /// 
-        /// For more information about how to obtain the description of a compliance package, see [ListCompliancePacks](~~262059~~).
+        /// For more information about how to obtain the description of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/262059.html).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

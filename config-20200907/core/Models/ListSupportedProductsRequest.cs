@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListSupportedProductsRequest : TeaModel {
         /// <summary>
-        /// The maximum number of entries to return for a single request. Valid values: 1 to 500.
+        /// The maximum number of entries to return for a single request.
+        /// 
+        /// Valid values: 1 to 500. Default value: 200.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

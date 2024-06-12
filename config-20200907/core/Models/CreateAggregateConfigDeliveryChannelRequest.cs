@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -21,7 +23,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
         /// 
-        /// The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25693~~)
+        /// The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25693.html)
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -89,6 +91,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   `acs:oss:{RegionId}:{accountId}:{bucketName}` if your delivery destination is an OSS bucket. Example: `acs:oss:cn-shanghai:100931896542****:new-bucket`.
         /// *   `acs:mns:{RegionId}:{accountId}:/topics/{topicName}` if your delivery destination is an MNS topic. Example: `acs:mns:cn-shanghai:100931896542****:/topics/topic1`.
         /// *   `acs:log:{RegionId}:{accountId}:project/{projectName}/logstore/{logstoreName}` if your delivery destination is a Log Service Logstore. Example: `acs:log:cn-shanghai:100931896542****:project/project1/logstore/logstore1`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DeliveryChannelTargetArn")]
         [Validation(Required=false)]
@@ -100,6 +104,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   OSS: Object Storage Service (OSS)
         /// *   MNS: Message Service (MNS)
         /// *   SLS: Log Service
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DeliveryChannelType")]
         [Validation(Required=false)]
