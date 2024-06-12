@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? IsEnable { get; set; }
 
         /// <summary>
-        /// The name of the event-triggered task.
+        /// The metric name.
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// The type of the metric. Valid values:
+        /// The metric type. Valid values:
         /// 
         /// *   system: system metrics of CloudMonitor
-        /// *   custom: custom metrics that are reported to CloudMonitor
+        /// *   custom: custom metrics that are reported to CloudMonitor.
         /// </summary>
         [NameInMap("MetricType")]
         [Validation(Required=false)]

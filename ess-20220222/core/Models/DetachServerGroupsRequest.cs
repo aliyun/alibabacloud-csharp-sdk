@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DetachServerGroupsRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+        /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to remove the Elastic Compute Service (ECS) instances in the scaling group from the server group that you want to detach.
+        /// Specifies whether to remove the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group from the server group marked for detachment.
         /// 
         /// *   true
         /// *   false
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// Details of the server groups.
+        /// The information about the server groups.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<DetachServerGroupsRequestServerGroups> ServerGroups { get; set; }
         public class DetachServerGroupsRequestServerGroups : TeaModel {
             /// <summary>
-            /// The port number that is used by an ECS instance after Auto Scaling adds the ECS instance to the server group.
+            /// The port used by ECS instances or elastic container instances as backend servers of the server group.
             /// 
             /// This parameter is required.
             /// </summary>

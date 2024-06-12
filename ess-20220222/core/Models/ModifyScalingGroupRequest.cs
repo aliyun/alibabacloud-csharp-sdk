@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? AzBalance { get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically create pay-as-you-go instances to meet the requirements on the number of ECS instances in the scaling group when the number of preemptible instances cannot be reached due to reasons such as costs and insufficient resources. This parameter takes effect only if you set the MultiAZPolicy parameter in the CreateScalingGroup operation to COST_OPTIMIZED. Valid values:
+        /// Specifies whether to automatically create pay-as-you-go instances to meet the requirements on the number of ECS instances in the scaling group when the number of preemptible instances cannot be reached due to reasons such as cost-related issues and insufficient resources. This parameter takes effect only if you set `MultiAZPolicy` in the `CreateScalingGroup` operation to `COST_OPTIMIZED`. Valid values:
         /// 
         /// *   true
         /// *   false
@@ -58,14 +58,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string CustomPolicyARN { get; set; }
 
         /// <summary>
-        /// The default cooldown time of the scaling group. This parameter takes effect only for scaling groups that have simple scaling rules. Valid values: 0 to 86400. Unit: seconds. During the cooldown time, Auto Scaling executes only scaling activities that are triggered by event-triggered tasks associated with CloudMonitor.
+        /// The cooldown period of the scaling group. This parameter is available only if you set ScalingRuleType to SimpleScalingRule. Valid values: 0 to 86400. Unit: seconds.
+        /// 
+        /// During the cooldown period, Auto Scaling does not execute scaling activities that are triggered by CloudMonitor event-triggered tasks.
         /// </summary>
         [NameInMap("DefaultCooldown")]
         [Validation(Required=false)]
         public int? DefaultCooldown { get; set; }
 
         /// <summary>
-        /// The expected number of ECS instances in the scaling group. Auto Scaling automatically maintains the specified expected number of ECS instances. The expected number cannot be greater than the value of the MaxSize parameter and cannot be less than the value of the MinSize parameter.
+        /// The expected number of ECS instances or elastic container instances in the scaling group. Auto Scaling maintains the expected number of ECS instances or elastic container instances in the scaling group. Make sure that you adhere to the following rule when specifying this parameter: Value of MaxSize ≥ Value of DesiredCapacity ≥ Value of MinSize
+        /// 
+        /// >  If you re-enable the Expected Number of Instances feature, you must specify a value for `DesiredCapacity` again.
         /// </summary>
         [NameInMap("DesiredCapacity")]
         [Validation(Required=false)]
@@ -88,9 +92,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The health check mode of the scaling group. Valid values:
         /// 
-        /// *   NONE: Auto Scaling does not check the health status of instances in the scaling group.
-        /// *   ECS: Auto Scaling checks the health status of Elastic Compute Service (ECS) instances in the scaling group.
-        /// *   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB) instances are not supported as the health check basis of instances in the scaling group.
+        /// *   NONE: Auto Scaling does not perform health checks.
+        /// *   ECS: Auto Scaling checks the health status of ECS instances in the scaling group.
+        /// *   ECI: Auto Scaling checks the health status of elastic container instances in the scaling group.
+        /// *   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB) instances are not supported as the health check basis for instances in the scaling group.
+        /// 
+        /// >  HealthCheckType has the same effect as `HealthCheckTypes`. You can select one of them to specify based on your business requirements. If you specify `HealthCheckTypes`, `HealthCheckType` is ignored. HealthCheckType is optional.
         /// </summary>
         [NameInMap("HealthCheckType")]
         [Validation(Required=false)]
@@ -99,9 +106,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The health check modes of the scaling group. Valid values:
         /// 
-        /// *   NONE: Auto Scaling does not check the health status of instances in the scaling group.
+        /// *   NONE: Auto Scaling does not perform health checks.
         /// *   ECS: Auto Scaling checks the health status of ECS instances in the scaling group.
-        /// *   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis of instances in the scaling group.
+        /// *   ECI: Auto Scaling checks the health status of elastic container instances in the scaling group.
+        /// *   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis for instances in the scaling group.
         /// </summary>
         [NameInMap("HealthCheckTypes")]
         [Validation(Required=false)]
@@ -188,20 +196,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MaxInstanceLifetime { get; set; }
 
         /// <summary>
-        /// The maximum number of ECS instances in the scaling group. When the number of ECS instances in the scaling group is greater than the value of the MaxSize parameter, Auto Scaling automatically removes ECS instances from the scaling group until the number of instances is equal to the value of the MaxSize parameter.
+        /// The maximum number of ECS instances or elastic container instances that can be contained in the scaling group. If the total number of instances in the scaling group is greater than the value of MaxSize, Auto Scaling proactively removes the surplus instances from the scaling group to restore the total number to match the maximum limit.
         /// 
-        /// The value range of the MaxSize parameter varies based on the instance quota. You can go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas) to check the quota of **instances that can be included in a scaling group**.
+        /// The value range of MaxSize is directly correlated with the degree of dependency your business has on Auto Scaling. You can go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas) to check **the maximum number of instances that a single scaling group can contain.**
         /// 
-        /// For example, if the quota of instances that can be included in a scaling group is 2000, the valid values of the MaxSize parameter range from 0 to 2000.
+        /// For example, if a scaling group can contain up to **2,000** instances, the value range of MaxSize is 0 to 2000.
         /// </summary>
         [NameInMap("MaxSize")]
         [Validation(Required=false)]
         public int? MaxSize { get; set; }
 
         /// <summary>
-        /// The minimum number of ECS instances in the scaling group. When the number of ECS instances in the scaling group is less than the value of the MinSize parameter, Auto Scaling automatically creates ECS instances and adds the instances to the scaling group until the number of instances is equal to the value of the MinSize parameter.
+        /// The minimum number of ECS instances or elastic container instances that must be contained in the scaling group. If the total number of instances in the scaling group is less than the value of MinSize, Auto Scaling proactively adds instances to the scaling group to ensure that the total number aligns with the minimum threshold.
         /// 
-        /// > The value of the MinSize parameter must be less than or equal to the value of the MaxSize parameter.
+        /// >  The value of MinSize must be less than or equal to the value of MaxSize.
         /// </summary>
         [NameInMap("MinSize")]
         [Validation(Required=false)]

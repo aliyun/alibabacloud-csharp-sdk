@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class AttachAlbServerGroupsRequest : TeaModel {
         /// <summary>
-        /// Details of the ALB server group.
+        /// The information about the ALB server groups.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// The ID of the ALB server group.
             /// 
-            /// You can associate only a limited number of ALB server groups with a scaling group. To view the quota or manually request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+            /// You can attach only a limited number of ALB server groups to a scaling group. To view the predefined quota limit or manually request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
             /// 
             /// This parameter is required.
             /// </summary>
@@ -30,7 +30,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string AlbServerGroupId { get; set; }
 
             /// <summary>
-            /// The port number used by the ECS instance after the ECS instance is added to the ALB server group. Valid values: 1 to 65535.
+            /// The port used by ECS instances or elastic container instances after being added as backend servers to the ALB server group.
+            /// 
+            /// Valid values: 1 to 65535.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -39,9 +41,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// The weight of the ECS instance as a backend server after the instance is added to the ALB server group.
+            /// The weight of an ECS instance or elastic container instance after being added as a backend server to the ALB server group. Valid values: 0 to 100.
             /// 
-            /// If you increase the weight of an ECS instance in an ALB server group, the number of access requests that are forwarded to the ECS instance increases. If you set the Weight parameter for an ECS instance to 0, no access requests are forwarded to the ECS instance. Valid values: 0 to 100.
+            /// If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If you assign zero weight to an instance, the instance is allocated no access requests.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -52,17 +54,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](https://help.aliyun.com/document_detail/25965.html).
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to add Elastic Compute Service (ECS) instances in the scaling group to new ALB server groups. Valid values:
+        /// Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the ALB server group. Valid values:
         /// 
-        /// *   true: adds ECS instances in the scaling group to new ALB server groups and returns the value of `ScalingActivityId`. You can check whether ECS instances are added to new ALB server groups by the scaling activity ID.
-        /// *   false: does not add ECS instances in the scaling group to new ALB server groups.
+        /// *   true: adds the existing ECS instances or elastic container instances in the scaling group to the ALB server group. In this case, the system returns the value of `ScalingActivityId`.
+        /// *   false: does not add the existing ECS instances or elastic container instances in the scaling group to the ALB server group.
         /// 
         /// Default value: false.
         /// </summary>
@@ -75,7 +79,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the scaling group, such as cn-hangzhou and cn-shanghai. For more information, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).
+        /// The region ID of the scaling group.
+        /// 
+        /// Examples: `cn-hangzhou` and `cn-shanghai`. For more information about regions and zones, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).
         /// 
         /// This parameter is required.
         /// </summary>

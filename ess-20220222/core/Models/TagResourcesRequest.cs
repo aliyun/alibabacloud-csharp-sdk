@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The type of the resource. Only scaling groups are supported. Set the value to scalinggroup.
+        /// The resource type. Set the value to scalinggroup.
         /// 
         /// This parameter is required.
         /// </summary>

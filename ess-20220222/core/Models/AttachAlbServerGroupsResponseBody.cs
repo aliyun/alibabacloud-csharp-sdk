@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the scaling activity in which Auto Scaling associates the ALB server group with the scaling group and adds ECS instances in the scaling group to the ALB server group. This parameter is returned only if you set the `ForceAttach` parameter to `true`.
+        /// The ID of the scaling activity. During the scaling activity, the ALB server group is attached to the scaling group and the existing ECS instances or elastic container instances in the scaling group are added to the ALB server group.
+        /// 
+        /// >  This parameter is returned only if you set `ForceAttach` to `true`.
         /// </summary>
         [NameInMap("ScalingActivityId")]
         [Validation(Required=false)]

@@ -24,45 +24,45 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the resource and tags, such as the resource ID, the resource type, tag keys, and tag values.
+        /// An array that encompasses both the resource details and its tags, comprising elements like the resource ID, the resource type, the tag key, and the tag value.
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// Indicates whether the tag can be propagated.
+            /// Indicates whether the tags of the scaling group can be propagated to instances. Valid values:
             /// 
-            /// *   true: The tag can be propagated only to instances that are to be added to the scaling group. The tag cannot be propagated to instances that are already running in the scaling group.
-            /// *   false: The tag cannot be propagated to an instance.
+            /// *   true: The tags of the scaling group can be propagated to only instances that are newly created.
+            /// *   false: The tags of the scaling group cannot be propagated to instances.
             /// </summary>
             [NameInMap("Propagate")]
             [Validation(Required=false)]
             public bool? Propagate { get; set; }
 
             /// <summary>
-            /// The ID of the resource.
+            /// The resource ID.
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource.
+            /// The resource type.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The key of the tag.
+            /// The tag key of the resource.
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// The tag value of the resource.
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]

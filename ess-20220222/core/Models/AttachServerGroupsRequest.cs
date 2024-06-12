@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class AttachServerGroupsRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+        /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to add the Elastic Compute Service (ECS) instances in the scaling group to the new server group.
+        /// Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the server group. Valid values:
         /// 
         /// *   true
         /// *   false
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// Details of the server groups.
+        /// The information about the server groups.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -66,7 +66,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<AttachServerGroupsRequestServerGroups> ServerGroups { get; set; }
         public class AttachServerGroupsRequestServerGroups : TeaModel {
             /// <summary>
-            /// The port number that is used by an ECS instance after Auto Scaling adds the ECS instance to the server group. Valid values: 1 to 65535.
+            /// The port used by ECS instances or elastic container instances after being added as backend servers to the server group.
+            /// 
+            /// Valid values: 1 to 65535.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -96,9 +98,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// The weight of an ECS instance after Auto Scaling adds the ECS instance to the server group as a backend server.
+            /// The weight of an ECS instance or elastic container instance as a backend server of the server group. Valid values: 0 to 100.
             /// 
-            /// A higher weight specifies that a larger number of requests are forwarded to the ECS instance. If you set the Weight parameter for an ECS instance in the server group to 0, no access requests are forwarded to the ECS instance. Valid values: 0 to 100.
+            /// If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If you assign zero weight to an instance, the instance is allocated no access requests.
             /// 
             /// This parameter is required.
             /// </summary>

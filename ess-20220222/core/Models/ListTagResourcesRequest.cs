@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the Auto Scaling resource. You can call the DescribeRegions operation to query the most recent region list.
+        /// The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/2679950.html) operation to query the most recent region list.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The type of the Auto Scaling resource. Only scaling groups are supported. Set the value to scalinggroup.
+        /// The resource type. Set the value to scalinggroup.
         /// 
         /// This parameter is required.
         /// </summary>

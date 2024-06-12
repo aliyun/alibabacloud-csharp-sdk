@@ -57,7 +57,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public ScaleWithAdjustmentRequestLifecycleHookContext LifecycleHookContext { get; set; }
         public class ScaleWithAdjustmentRequestLifecycleHookContext : TeaModel {
             /// <summary>
-            /// Specifies whether to disable the lifecycle hook.
+            /// Specifies whether to disable the Lifecycle Hook feature. Valid values:
+            /// 
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("DisableLifecycleHook")]
             [Validation(Required=false)]
@@ -94,14 +97,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<ScaleWithAdjustmentRequestOverridesContainerOverrides> ContainerOverrides { get; set; }
             public class ScaleWithAdjustmentRequestOverridesContainerOverrides : TeaModel {
                 /// <summary>
-                /// The container startup arguments. You can specify up to 10 arguments.
+                /// The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.
                 /// </summary>
                 [NameInMap("Args")]
                 [Validation(Required=false)]
                 public List<string> Args { get; set; }
 
                 /// <summary>
-                /// The container startup commands. You can specify up to 20 commands. Each command contains up to 256 characters.
+                /// The startup commands of the container. You can specify up to 20 commands. Each command can contain up to 256 characters.
                 /// </summary>
                 [NameInMap("Commands")]
                 [Validation(Required=false)]
@@ -122,7 +125,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public List<ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars> EnvironmentVars { get; set; }
                 public class ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars : TeaModel {
                     /// <summary>
-                    /// The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.
+                    /// The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. It cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]

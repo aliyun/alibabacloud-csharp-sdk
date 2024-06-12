@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ScaleWithAdjustmentResponseBody : TeaModel {
+        /// <summary>
+        /// The type of the scaling activity.
+        /// 
+        /// If `ActivityType` is set to `CapacityChange`, only the expected number of instances is changed during the scaling activity specified by ScalingActivityId and no scale-out is triggered.
+        /// 
+        /// This parameter is applicable to only scaling groups that have an expected number of instances.
+        /// </summary>
         [NameInMap("ActivityType")]
         [Validation(Required=false)]
         public string ActivityType { get; set; }

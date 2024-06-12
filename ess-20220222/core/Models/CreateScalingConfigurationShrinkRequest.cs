@@ -544,6 +544,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public int? Cores { get; set; }
 
+            [NameInMap("CpuArchitectures")]
+            [Validation(Required=false)]
+            public List<string> CpuArchitectures { get; set; }
+
             /// <summary>
             /// The instance types that you want to exclude. You can use wildcard characters, such as asterisks (\\*), to exclude an instance type or an instance family. Examples:
             /// 
@@ -553,6 +557,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("ExcludedInstanceTypes")]
             [Validation(Required=false)]
             public List<string> ExcludedInstanceTypes { get; set; }
+
+            [NameInMap("GpuSpecs")]
+            [Validation(Required=false)]
+            public List<string> GpuSpecs { get; set; }
+
+            [NameInMap("InstanceCategories")]
+            [Validation(Required=false)]
+            public List<string> InstanceCategories { get; set; }
 
             /// <summary>
             /// The level of the instance type, which is used to filter instance types that meet the specified criteria. This parameter takes effect only if you set `CostOptimization` to true. Valid values:
@@ -565,6 +577,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string InstanceFamilyLevel { get; set; }
 
+            [NameInMap("InstanceTypeFamilies")]
+            [Validation(Required=false)]
+            public List<string> InstanceTypeFamilies { get; set; }
+
             /// <summary>
             /// The maximum hourly price of a pay-as-you-go or preemptible instance in intelligent configuration mode. This parameter is used to filter the available instance types that meet the specified criteria.
             /// 
@@ -574,12 +590,60 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public float? MaxPrice { get; set; }
 
+            [NameInMap("MaximumCpuCoreCount")]
+            [Validation(Required=false)]
+            public int? MaximumCpuCoreCount { get; set; }
+
+            [NameInMap("MaximumGpuAmount")]
+            [Validation(Required=false)]
+            public int? MaximumGpuAmount { get; set; }
+
+            [NameInMap("MaximumMemorySize")]
+            [Validation(Required=false)]
+            public float? MaximumMemorySize { get; set; }
+
             /// <summary>
             /// The memory size that you want to allocate to an instance type in intelligent configuration mode. Unit: GiB. This parameter is used to filter the available instance types that meet the specified criteria.
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
             public float? Memory { get; set; }
+
+            [NameInMap("MinimumBaselineCredit")]
+            [Validation(Required=false)]
+            public int? MinimumBaselineCredit { get; set; }
+
+            [NameInMap("MinimumCpuCoreCount")]
+            [Validation(Required=false)]
+            public int? MinimumCpuCoreCount { get; set; }
+
+            [NameInMap("MinimumEniIpv6AddressQuantity")]
+            [Validation(Required=false)]
+            public int? MinimumEniIpv6AddressQuantity { get; set; }
+
+            [NameInMap("MinimumEniPrivateIpAddressQuantity")]
+            [Validation(Required=false)]
+            public int? MinimumEniPrivateIpAddressQuantity { get; set; }
+
+            [NameInMap("MinimumEniQuantity")]
+            [Validation(Required=false)]
+            public int? MinimumEniQuantity { get; set; }
+
+            [NameInMap("MinimumGpuAmount")]
+            [Validation(Required=false)]
+            public int? MinimumGpuAmount { get; set; }
+
+            [NameInMap("MinimumInitialCredit")]
+            [Validation(Required=false)]
+            public int? MinimumInitialCredit { get; set; }
+
+            [NameInMap("MinimumMemorySize")]
+            [Validation(Required=false)]
+            public float? MinimumMemorySize { get; set; }
+
+            [NameInMap("PhysicalProcessorModels")]
+            [Validation(Required=false)]
+            public List<string> PhysicalProcessorModels { get; set; }
 
         }
 

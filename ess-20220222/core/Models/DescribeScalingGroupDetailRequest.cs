@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the scaling group. For more information, see the "Regions and zones" topic.
+        /// The region ID of the scaling group. For more information, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).
         /// 
         /// This parameter is required.
         /// </summary>

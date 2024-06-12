@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the scaling activity in which you detach the server group from the scaling group and Auto Scaling removes the ECS instances from the server group.
+        /// The ID of the scaling activity. During the scaling activity, the server group is detached from the scaling group and the existing servers, which are the ECS instances or elastic container instances in the scaling group, are removed from the server group.
         /// 
-        /// > This parameter is returned only if you set the ForceAttach parameter to true.
+        /// >  This parameter is returned only if you set `ForceDetach` to `true`.
         /// </summary>
         [NameInMap("ScalingActivityId")]
         [Validation(Required=false)]

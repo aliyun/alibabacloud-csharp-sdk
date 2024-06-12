@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingGroupDetailResponseBody : TeaModel {
         /// <summary>
-        /// The output details of the scaling group of the Elastic Container Instance type. The output is a Kubernetes Deployment file in the YAML format.
+        /// The output details of the scaling group of the Elastic Container Instance type. Currently, the output is displayed in a Kubernetes Deployment YAML file.
         /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the scaling group.
+        /// The information about the scaling groups.
         /// </summary>
         [NameInMap("ScalingGroup")]
         [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<DescribeScalingGroupDetailResponseBodyScalingGroupAlbServerGroups> AlbServerGroups { get; set; }
             public class DescribeScalingGroupDetailResponseBodyScalingGroupAlbServerGroups : TeaModel {
                 /// <summary>
-                /// The ID of the ALB server group.
+                /// The ID of the Application Load Balancer (ALB) server group.
                 /// </summary>
                 [NameInMap("AlbServerGroupId")]
                 [Validation(Required=false)]
                 public string AlbServerGroupId { get; set; }
 
                 /// <summary>
-                /// The port number of an ECS instance as a backend server in the ALB server group.
+                /// The port number used by an ECS instance as a backend server in the ALB server group.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? GroupDeletionProtection { get; set; }
 
             /// <summary>
-            /// The type of instances that are managed by the scaling group. Valid values:
+            /// The type of the instances that are managed by the scaling group. Valid values:
             /// 
             /// *   ECS: ECS instances
             /// *   ECI: elastic container instances
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<DescribeScalingGroupDetailResponseBodyScalingGroupLaunchTemplateOverrides> LaunchTemplateOverrides { get; set; }
             public class DescribeScalingGroupDetailResponseBodyScalingGroupLaunchTemplateOverrides : TeaModel {
                 /// <summary>
-                /// The instance type. The instance type specified by using InstanceType overrides the instance type specified in the launch template.
+                /// The instance type. The instance type that is specified by using this parameter overwrites the instance type of the launch template.
                 /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
@@ -231,14 +231,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 /// <summary>
                 /// The maximum bid price of the instance type that is specified by `LaunchTemplateOverride.InstanceType`.
                 /// 
-                /// >  This parameter takes effect only if you use `LaunchTemplateId` to specify a launch template.
+                /// >  This parameter takes effect only if you specify `LaunchTemplateId`.
                 /// </summary>
                 [NameInMap("SpotPriceLimit")]
                 [Validation(Required=false)]
                 public float? SpotPriceLimit { get; set; }
 
                 /// <summary>
-                /// The weight of the instance type. The value of this parameter indicates the capacity of a single instance of the specified instance type in the scaling group. A higher weight indicates that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.
+                /// The weight of the instance type. The value of this parameter indicates the capacity of an instance of the specified instance type in the scaling group. A higher weight indicates that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.
                 /// </summary>
                 [NameInMap("WeightedCapacity")]
                 [Validation(Required=false)]
@@ -295,9 +295,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<string> LoadBalancerIds { get; set; }
 
             /// <summary>
-            /// The maximum life span of an ECS instance in the scaling group. Unit: seconds.
+            /// The maximum life span of an instance in the scaling group. Unit: seconds.
             /// 
-            /// Valid values: 0 and `[86400, Integer.maxValue]`. A value of 0 indicates that the ECS instance has an unlimited life span in the scaling group.
+            /// Valid values: 0 or from 86400 to `Integer.maxValue`. A value of 0 for MaxInstanceLifetime indicates that any previously set limit has been removed, which effectively disables the maximum instance lifetime constraint.
             /// 
             /// Default value: null.
             /// 
@@ -432,7 +432,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ScalingGroupId { get; set; }
 
             /// <summary>
-            /// The name of the scaling group. The name of a scaling group must be unique in a region. The name must be 2 to 64 characters in length, and can contain digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or digit.
+            /// The name of the scaling group. The name of each scaling group must be unique in a region.
+            /// 
+            /// The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or digit.
             /// </summary>
             [NameInMap("ScalingGroupName")]
             [Validation(Required=false)]
@@ -444,6 +446,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// *   recycle: economical mode
             /// *   release: release mode
             /// *   forcerelease: forced release mode
+            /// *   forcerecycle: forced recycle mode
             /// 
             /// For more information, see [RemoveInstances](https://help.aliyun.com/document_detail/25955.html).
             /// </summary>
@@ -454,14 +457,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// The information about the server groups.
             /// 
-            /// >  You can use this parameter to obtain information about ALB server groups and Network Load Balancer (NLB) server groups that are associated with your scaling group.
+            /// >  You can use this parameter to obtain information about ALB server groups and Network Load Balancer (NLB) server groups attached to your scaling group.
             /// </summary>
             [NameInMap("ServerGroups")]
             [Validation(Required=false)]
             public List<DescribeScalingGroupDetailResponseBodyScalingGroupServerGroups> ServerGroups { get; set; }
             public class DescribeScalingGroupDetailResponseBodyScalingGroupServerGroups : TeaModel {
                 /// <summary>
-                /// The port number of an ECS instance as a backend server in the server group.
+                /// The port number used by an ECS instance as a backend server in the server group.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
@@ -564,8 +567,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 /// <summary>
                 /// Indicates whether the tags of the scaling group can be propagated to instances. Valid values:
                 /// 
-                /// *   true: Tags of the scaling group can be propagated to only instances that are newly created.
-                /// *   false: Tags of the scaling group cannot be propagated to instances.
+                /// *   true: The tags of the scaling group can be propagated to only instances that are newly created.
+                /// *   false: The tags of the scaling group cannot be propagated to any instances.
                 /// 
                 /// Default value: false.
                 /// </summary>
