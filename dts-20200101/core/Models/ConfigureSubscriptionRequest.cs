@@ -253,6 +253,26 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string SourceEndpointUserName { get; set; }
 
+        [NameInMap("SrcCaCertificateOssUrl")]
+        [Validation(Required=false)]
+        public string SrcCaCertificateOssUrl { get; set; }
+
+        [NameInMap("SrcCaCertificatePassword")]
+        [Validation(Required=false)]
+        public string SrcCaCertificatePassword { get; set; }
+
+        [NameInMap("SrcClientCertOssUrl")]
+        [Validation(Required=false)]
+        public string SrcClientCertOssUrl { get; set; }
+
+        [NameInMap("SrcClientKeyOssUrl")]
+        [Validation(Required=false)]
+        public string SrcClientKeyOssUrl { get; set; }
+
+        [NameInMap("SrcClientPassword")]
+        [Validation(Required=false)]
+        public string SrcClientPassword { get; set; }
+
         /// <summary>
         /// Specifies whether to track DDL statements. Default value: true. Valid values:
         /// 

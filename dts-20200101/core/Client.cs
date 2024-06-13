@@ -1320,6 +1320,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["SourceEndpointUserName"] = request.SourceEndpointUserName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCaCertificateOssUrl))
+            {
+                query["SrcCaCertificateOssUrl"] = request.SrcCaCertificateOssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCaCertificatePassword))
+            {
+                query["SrcCaCertificatePassword"] = request.SrcCaCertificatePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcClientCertOssUrl))
+            {
+                query["SrcClientCertOssUrl"] = request.SrcClientCertOssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcClientKeyOssUrl))
+            {
+                query["SrcClientKeyOssUrl"] = request.SrcClientKeyOssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcClientPassword))
+            {
+                query["SrcClientPassword"] = request.SrcClientPassword;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionDataTypeDDL))
             {
                 query["SubscriptionDataTypeDDL"] = request.SubscriptionDataTypeDDL;
@@ -1483,6 +1503,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointUserName))
             {
                 query["SourceEndpointUserName"] = request.SourceEndpointUserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCaCertificateOssUrl))
+            {
+                query["SrcCaCertificateOssUrl"] = request.SrcCaCertificateOssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCaCertificatePassword))
+            {
+                query["SrcCaCertificatePassword"] = request.SrcCaCertificatePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcClientCertOssUrl))
+            {
+                query["SrcClientCertOssUrl"] = request.SrcClientCertOssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcClientKeyOssUrl))
+            {
+                query["SrcClientKeyOssUrl"] = request.SrcClientKeyOssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcClientPassword))
+            {
+                query["SrcClientPassword"] = request.SrcClientPassword;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionDataTypeDDL))
             {
