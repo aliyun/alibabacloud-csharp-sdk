@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("OrderType")]
+            [Validation(Required=false)]
+            public string OrderType { get; set; }
+
             /// <summary>
             /// The type of resource attached to the transit router.
             /// 
