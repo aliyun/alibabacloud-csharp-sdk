@@ -2650,6 +2650,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["SuitableType"] = request.SuitableType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UiCustomUrl))
+            {
+                query["UiCustomUrl"] = request.UiCustomUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
@@ -2811,6 +2815,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuitableType))
             {
                 query["SuitableType"] = request.SuitableType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UiCustomUrl))
+            {
+                query["UiCustomUrl"] = request.UiCustomUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {

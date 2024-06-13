@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string SuitableType { get; set; }
 
+        [NameInMap("UiCustomUrl")]
+        [Validation(Required=false)]
+        public string UiCustomUrl { get; set; }
+
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
