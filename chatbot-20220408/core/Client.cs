@@ -5322,6 +5322,122 @@ namespace AlibabaCloud.SDK.Chatbot20220408
         }
 
         /**
+         * @summary 查询机器人接待人次和对话轮次
+         *
+         * @param request GetBotSessionDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetBotSessionDataResponse
+         */
+        public GetBotSessionDataResponse GetBotSessionDataWithOptions(GetBotSessionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotInstanceId))
+            {
+                query["RobotInstanceId"] = request.RobotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBotSessionData",
+                Version = "2022-04-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBotSessionDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询机器人接待人次和对话轮次
+         *
+         * @param request GetBotSessionDataRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetBotSessionDataResponse
+         */
+        public async Task<GetBotSessionDataResponse> GetBotSessionDataWithOptionsAsync(GetBotSessionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotInstanceId))
+            {
+                query["RobotInstanceId"] = request.RobotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBotSessionData",
+                Version = "2022-04-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBotSessionDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询机器人接待人次和对话轮次
+         *
+         * @param request GetBotSessionDataRequest
+         * @return GetBotSessionDataResponse
+         */
+        public GetBotSessionDataResponse GetBotSessionData(GetBotSessionDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetBotSessionDataWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询机器人接待人次和对话轮次
+         *
+         * @param request GetBotSessionDataRequest
+         * @return GetBotSessionDataResponse
+         */
+        public async Task<GetBotSessionDataResponse> GetBotSessionDataAsync(GetBotSessionDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetBotSessionDataWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 查询机器人发布进度
          *
          * @param request GetInstancePublishTaskStateRequest
