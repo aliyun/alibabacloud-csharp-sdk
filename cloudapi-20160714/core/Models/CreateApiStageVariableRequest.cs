@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string StageId { get; set; }
 
+        /// <summary>
+        /// Environmental routing model.
+        /// </summary>
         [NameInMap("StageRouteModel")]
         [Validation(Required=false)]
         [Obsolete]

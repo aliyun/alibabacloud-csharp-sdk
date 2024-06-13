@@ -528,7 +528,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string DocShow { get; set; }
 
                 /// <summary>
-                /// The hash values that can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
+                /// The hash values that are supported when **ParameterType** is set to Int, Long, Float, Double, or String. Separate values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
                 /// </summary>
                 [NameInMap("EnumValue")]
                 [Validation(Required=false)]
@@ -549,28 +549,28 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The maximum length of the parameter value if the **ParameterType** parameter is set to String.
+                /// The maximum parameter length when ParameterType is set to String.
                 /// </summary>
                 [NameInMap("MaxLength")]
                 [Validation(Required=false)]
                 public long? MaxLength { get; set; }
 
                 /// <summary>
-                /// The maximum value of the parameter if the **ParameterType** parameter is set to Int, Long, Float, or Double.
+                /// The maximum parameter value when ParameterType is set to Int, Long, Float, or Double.
                 /// </summary>
                 [NameInMap("MaxValue")]
                 [Validation(Required=false)]
                 public long? MaxValue { get; set; }
 
                 /// <summary>
-                /// The minimum length of the parameter value if the **ParameterType** parameter is set to String.
+                /// The minimum parameter length when ParameterType is set to String.
                 /// </summary>
                 [NameInMap("MinLength")]
                 [Validation(Required=false)]
                 public long? MinLength { get; set; }
 
                 /// <summary>
-                /// The minimum value of the parameter if the **ParameterType** parameter is set to Int, Long, Float, or Double.
+                /// The minimum parameter value when ParameterType is set to Int, Long, Float, or Double.
                 /// </summary>
                 [NameInMap("MinValue")]
                 [Validation(Required=false)]
@@ -584,7 +584,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ParameterType { get; set; }
 
                 /// <summary>
-                /// The regular expression that is used to validate the parameter if the **ParameterType** parameter is set to String.
+                /// The regular expression that is used for parameter validation when ParameterType is set to String.
                 /// </summary>
                 [NameInMap("RegularExpression")]
                 [Validation(Required=false)]
@@ -810,7 +810,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public List<DescribeApiResponseBodyServiceConfigMockHeadersMockHeader> MockHeader { get; set; }
                 public class DescribeApiResponseBodyServiceConfigMockHeadersMockHeader : TeaModel {
                     /// <summary>
-                    /// The name of the HTTP header.
+                    /// The HTTP header.
                     /// </summary>
                     [NameInMap("HeaderName")]
                     [Validation(Required=false)]
@@ -1022,7 +1022,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiResponseBodyServiceParametersMapServiceParameterMap> ServiceParameterMap { get; set; }
             public class DescribeApiResponseBodyServiceParametersMapServiceParameterMap : TeaModel {
                 /// <summary>
-                /// The name of the frontend parameter. The name must be included in RequestParametersObject and match ApiParameterName in RequestParameters.
+                /// The corresponding frontend parameter name. The value must be contained in RequestParametersObject and match RequestParam.ApiParameterName.
                 /// </summary>
                 [NameInMap("RequestParameterName")]
                 [Validation(Required=false)]
@@ -1072,7 +1072,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The name of the system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.
+                /// The system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.
                 /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]
@@ -1089,6 +1089,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         }
 
+        /// <summary>
+        /// Tag List.
+        /// </summary>
         [NameInMap("TagList")]
         [Validation(Required=false)]
         public DescribeApiResponseBodyTagList TagList { get; set; }
@@ -1097,10 +1100,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiResponseBodyTagListTag> Tag { get; set; }
             public class DescribeApiResponseBodyTagListTag : TeaModel {
+                /// <summary>
+                /// Label key.
+                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                /// <summary>
+                /// Label value.
+                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

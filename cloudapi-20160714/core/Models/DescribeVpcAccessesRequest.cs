@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeVpcAccessesRequest : TeaModel {
+        /// <summary>
+        /// Whether to conduct precise queries
+        /// </summary>
         [NameInMap("AccurateQuery")]
         [Validation(Required=false)]
         public bool? AccurateQuery { get; set; }
@@ -53,21 +56,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The tag of objects that match the rule. You can specify multiple tags.
+        /// The port number.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeVpcAccessesRequestTag> Tag { get; set; }
         public class DescribeVpcAccessesRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag.
+            /// The tag key.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// The tag value.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

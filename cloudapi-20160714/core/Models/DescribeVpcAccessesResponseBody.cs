@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.
+                /// The ID of an Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The list of tags.
+                /// The tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -102,14 +102,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     public List<DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo> TagInfo { get; set; }
                     public class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string VpcAccessId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The VPC ID.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

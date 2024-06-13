@@ -65,10 +65,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The name of the runtime environment. Valid values:
+        /// The environment. Valid values:
         /// 
-        /// *   **RELEASE**
-        /// *   **TEST**
+        /// *   **RELEASE**: the production environment
+        /// *   **PRE**: the staging environment
+        /// *   **TEST**: the test environment
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

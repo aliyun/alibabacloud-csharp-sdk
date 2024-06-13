@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string AclId { get; set; }
 
         /// <summary>
-        /// IP版本，可以设置为**ipv4**或者**ipv6**。
+        /// The IP version. Valid values: **ipv4** and **ipv6**.
         /// </summary>
         [NameInMap("AddressIPVersion")]
         [Validation(Required=false)]

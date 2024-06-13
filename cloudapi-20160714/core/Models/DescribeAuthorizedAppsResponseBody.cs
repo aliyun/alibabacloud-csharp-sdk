@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp> AuthorizedApp { get; set; }
             public class DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp : TeaModel {
+                /// <summary>
+                /// The description of the application.
+                /// </summary>
                 [NameInMap("AppDescription")]
                 [Validation(Required=false)]
                 public string AppDescription { get; set; }
@@ -32,14 +35,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public long? AppId { get; set; }
 
                 /// <summary>
-                /// The name of the app.
+                /// The application name
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// The name of the app.
+                /// The application name.
                 /// </summary>
                 [NameInMap("AuthVaildTime")]
                 [Validation(Required=false)]
@@ -72,26 +75,50 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 /// <summary>
                 /// The authorizer. Valid values:
                 /// 
-                /// *   **PROVIDER: API owner**
-                /// *   **CONSUMER: API caller**
+                /// *   **PROVIDER**: API owner
+                /// *   **CONSUMER**: API caller
                 /// </summary>
                 [NameInMap("Operator")]
                 [Validation(Required=false)]
                 public string Operator { get; set; }
 
+                /// <summary>
+                /// The environment alias.
+                /// </summary>
                 [NameInMap("StageAlias")]
                 [Validation(Required=false)]
                 public string StageAlias { get; set; }
 
                 /// <summary>
-                /// The name of the runtime environment. Valid values:
+                /// The environment to which the API is published. Valid values:
                 /// 
-                /// *   **RELEASE**
-                /// *   **TEST**
+                /// *   **RELEASE**: the production environment
+                /// *   **PRE**: the staging environment
+                /// *   **TEST**: the test environment
                 /// </summary>
                 [NameInMap("StageName")]
                 [Validation(Required=false)]
                 public string StageName { get; set; }
+
+                [NameInMap("Tag")]
+                [Validation(Required=false)]
+                public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTag Tag { get; set; }
+                public class DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTag : TeaModel {
+                    [NameInMap("TagInfo")]
+                    [Validation(Required=false)]
+                    public List<DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTagTagInfo> TagInfo { get; set; }
+                    public class DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTagTagInfo : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
 
             }
 
