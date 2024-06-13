@@ -3647,6 +3647,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
             {
                 query["fileUrl"] = request.FileUrl;
@@ -3654,10 +3658,6 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderId))
             {
                 query["folderId"] = request.FolderId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
-            {
-                query["ossUrl"] = request.OssUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -3695,6 +3695,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
             {
                 query["fileUrl"] = request.FileUrl;
@@ -3702,10 +3706,6 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderId))
             {
                 query["folderId"] = request.FolderId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
-            {
-                query["ossUrl"] = request.OssUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -3806,7 +3806,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
             SubmitDocumentAnalyzeJobRequest submitDocumentAnalyzeJobReq = new SubmitDocumentAnalyzeJobRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, submitDocumentAnalyzeJobReq);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrlObject))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrlObject))
             {
                 authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
                 ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
@@ -3815,7 +3815,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
                     Filename = authResponse.Body.ObjectKey,
-                    Content = request.OssUrlObject,
+                    Content = request.FileUrlObject,
                     ContentType = "",
                 };
                 ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
@@ -3833,7 +3833,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                     Header = ossHeader,
                 };
                 ossClient.PostObject(uploadRequest, ossRuntime);
-                submitDocumentAnalyzeJobReq.OssUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                submitDocumentAnalyzeJobReq.FileUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
             }
             SubmitDocumentAnalyzeJobResponse submitDocumentAnalyzeJobResp = SubmitDocumentAnalyzeJobWithOptions(submitDocumentAnalyzeJobReq, headers, runtime);
             return submitDocumentAnalyzeJobResp;
@@ -3888,7 +3888,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
             SubmitDocumentAnalyzeJobRequest submitDocumentAnalyzeJobReq = new SubmitDocumentAnalyzeJobRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, submitDocumentAnalyzeJobReq);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrlObject))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrlObject))
             {
                 authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
                 ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
@@ -3897,7 +3897,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
                     Filename = authResponse.Body.ObjectKey,
-                    Content = request.OssUrlObject,
+                    Content = request.FileUrlObject,
                     ContentType = "",
                 };
                 ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
@@ -3915,7 +3915,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                     Header = ossHeader,
                 };
                 await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                submitDocumentAnalyzeJobReq.OssUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                submitDocumentAnalyzeJobReq.FileUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
             }
             SubmitDocumentAnalyzeJobResponse submitDocumentAnalyzeJobResp = await SubmitDocumentAnalyzeJobWithOptionsAsync(submitDocumentAnalyzeJobReq, headers, runtime);
             return submitDocumentAnalyzeJobResp;

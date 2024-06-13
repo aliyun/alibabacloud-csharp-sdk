@@ -20,8 +20,6 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 
         /// <summary>
         /// Module code.
-        /// 
-        /// This parameter is required.
         /// </summary>
         [NameInMap("moduleCode")]
         [Validation(Required=false)]

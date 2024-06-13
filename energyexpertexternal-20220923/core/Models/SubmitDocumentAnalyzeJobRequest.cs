@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class SubmitDocumentAnalyzeJobRequest : TeaModel {
+        [NameInMap("fileName")]
+        [Validation(Required=false)]
+        public string FileName { get; set; }
+
         [NameInMap("fileUrl")]
         [Validation(Required=false)]
         public string FileUrl { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         [NameInMap("folderId")]
         [Validation(Required=false)]
         public string FolderId { get; set; }
-
-        [NameInMap("ossUrl")]
-        [Validation(Required=false)]
-        public string OssUrl { get; set; }
 
         /// <summary>
         /// This parameter is required.
