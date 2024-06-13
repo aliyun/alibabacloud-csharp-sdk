@@ -7628,6 +7628,112 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @summary 修改资源删除保护配置
+         *
+         * @param request DescribeResourcesDeleteProtectionRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeResourcesDeleteProtectionResponse
+         */
+        public DescribeResourcesDeleteProtectionResponse DescribeResourcesDeleteProtectionWithOptions(string ClusterId, string ResourceType, DescribeResourcesDeleteProtectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                query["resources"] = request.Resources;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeResourcesDeleteProtection",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/resources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceType) + "/protection",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "array",
+            };
+            return TeaModel.ToObject<DescribeResourcesDeleteProtectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改资源删除保护配置
+         *
+         * @param request DescribeResourcesDeleteProtectionRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeResourcesDeleteProtectionResponse
+         */
+        public async Task<DescribeResourcesDeleteProtectionResponse> DescribeResourcesDeleteProtectionWithOptionsAsync(string ClusterId, string ResourceType, DescribeResourcesDeleteProtectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                query["resources"] = request.Resources;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeResourcesDeleteProtection",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/resources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceType) + "/protection",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "array",
+            };
+            return TeaModel.ToObject<DescribeResourcesDeleteProtectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改资源删除保护配置
+         *
+         * @param request DescribeResourcesDeleteProtectionRequest
+         * @return DescribeResourcesDeleteProtectionResponse
+         */
+        public DescribeResourcesDeleteProtectionResponse DescribeResourcesDeleteProtection(string ClusterId, string ResourceType, DescribeResourcesDeleteProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeResourcesDeleteProtectionWithOptions(ClusterId, ResourceType, request, headers, runtime);
+        }
+
+        /**
+         * @summary 修改资源删除保护配置
+         *
+         * @param request DescribeResourcesDeleteProtectionRequest
+         * @return DescribeResourcesDeleteProtectionResponse
+         */
+        public async Task<DescribeResourcesDeleteProtectionResponse> DescribeResourcesDeleteProtectionAsync(string ClusterId, string ResourceType, DescribeResourcesDeleteProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeResourcesDeleteProtectionWithOptionsAsync(ClusterId, ResourceType, request, headers, runtime);
+        }
+
+        /**
          * @summary Queries or issues the kubeconfig credentials of a Resource Access Management (RAM) user or RAM role of the account. If you are the permission manager of a Container Service for Kubernetes (ACK) cluster, you can issue the kubeconfig credentials to a specific RAM user or RAM role of the account by using the Alibaba Cloud account. The kubeconfig credentials, which are used to connect to the ACK cluster, contain the identity information about the RAM user or RAM role.
          *
          * @description **
@@ -14215,6 +14321,128 @@ namespace AlibabaCloud.SDK.CS20151215
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateK8sClusterUserConfigExpireWithOptionsAsync(ClusterId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 修改资源删除保护配置
+         *
+         * @param request UpdateResourcesDeleteProtectionRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateResourcesDeleteProtectionResponse
+         */
+        public UpdateResourcesDeleteProtectionResponse UpdateResourcesDeleteProtectionWithOptions(string ClusterId, UpdateResourcesDeleteProtectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["resource_type"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                body["resources"] = request.Resources;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateResourcesDeleteProtection",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/resources/protection",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateResourcesDeleteProtectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改资源删除保护配置
+         *
+         * @param request UpdateResourcesDeleteProtectionRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateResourcesDeleteProtectionResponse
+         */
+        public async Task<UpdateResourcesDeleteProtectionResponse> UpdateResourcesDeleteProtectionWithOptionsAsync(string ClusterId, UpdateResourcesDeleteProtectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["resource_type"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                body["resources"] = request.Resources;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateResourcesDeleteProtection",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/resources/protection",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateResourcesDeleteProtectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改资源删除保护配置
+         *
+         * @param request UpdateResourcesDeleteProtectionRequest
+         * @return UpdateResourcesDeleteProtectionResponse
+         */
+        public UpdateResourcesDeleteProtectionResponse UpdateResourcesDeleteProtection(string ClusterId, UpdateResourcesDeleteProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateResourcesDeleteProtectionWithOptions(ClusterId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 修改资源删除保护配置
+         *
+         * @param request UpdateResourcesDeleteProtectionRequest
+         * @return UpdateResourcesDeleteProtectionResponse
+         */
+        public async Task<UpdateResourcesDeleteProtectionResponse> UpdateResourcesDeleteProtectionAsync(string ClusterId, UpdateResourcesDeleteProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateResourcesDeleteProtectionWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
         /**

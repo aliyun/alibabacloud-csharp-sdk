@@ -474,7 +474,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             [NameInMap("instance_patterns")]
             [Validation(Required=false)]
-            public InstancePatterns InstancePatterns { get; set; }
+            public List<InstancePatterns> InstancePatterns { get; set; }
 
             /// <summary>
             /// A list of instance types. You can select multiple instance types. When the system needs to create a node, it starts from the first instance type until the node is created. The instance type that is used to create the node varies based on the actual instance stock.

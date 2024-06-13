@@ -644,7 +644,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             [NameInMap("instance_patterns")]
             [Validation(Required=false)]
-            public InstancePatterns InstancePatterns { get; set; }
+            public List<InstancePatterns> InstancePatterns { get; set; }
 
             /// <summary>
             /// The instance types of nodes in the node pool. A node that is added to the node pool is assigned one of the specified instance types that is the most appropriate. You can specify 1 to 10 instance types.
