@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GrantPermissionsRequest : TeaModel {
         /// <summary>
-        /// The request body.
+        /// The request parameters.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<GrantPermissionsRequestBody> Body { get; set; }
         public class GrantPermissionsRequestBody : TeaModel {
             /// <summary>
-            /// The ID of the cluster that you want to manage.
+            /// The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.
             /// 
-            /// *   When the `role_type` parameter is set to `all-clusters`, this parameter is set to an empty string.
+            /// *   Set this parameter to an empty string if `role_type` is set to `all-clusters`.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -28,34 +28,34 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Cluster { get; set; }
 
             /// <summary>
-            /// Specifies whether to perform a custom authorization. To perform a custom authorization, set `role_name` to a custom cluster role.
+            /// Specifies whether to assign a custom role to the RAM user or RAM role. If you want to assign a custom role to the RAM user or RAM role, set `role_name` to the name of the custom role.
             /// </summary>
             [NameInMap("is_custom")]
             [Validation(Required=false)]
             public bool? IsCustom { get; set; }
 
             /// <summary>
-            /// Specifies whether the permissions are granted to a RAM role.
+            /// Specifies whether to use a RAM role to grant permissions.
             /// </summary>
             [NameInMap("is_ram_role")]
             [Validation(Required=false)]
             public bool? IsRamRole { get; set; }
 
             /// <summary>
-            /// The namespace to which the permissions are scoped. This parameter is required only if you set role_type to namespace.
+            /// The namespace that you want to authorize the RAM user or RAM role to manage. This parameter is required only if you set role_type to namespace.
             /// </summary>
             [NameInMap("namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The predefined role name. Valid values:
+            /// The predefined role. Valid values:
             /// 
             /// *   `admin`: administrator
             /// *   `ops`: O\\&M engineer
             /// *   `dev`: developer
             /// *   `restricted`: restricted user
-            /// *   The custom cluster role.
+            /// *   Custom role
             /// 
             /// This parameter is required.
             /// </summary>
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// The authorization type. Valid values:
             /// 
-            /// *   `cluster`: indicates that the permissions are scoped to a cluster.
-            /// *   `namespace`: specifies that the permissions are scoped to a namespace of a cluster.
-            /// *   `all-clusters`: specifies that the permissions are scoped to all clusters.
+            /// *   `cluster`: authorizes the RAM user or RAM role to manage the specified clusters.
+            /// *   `namespace`: authorizes the RAM user or RAM role to manage the specified namepsaces.
+            /// *   `all-clusters`: authorizes the RAM user or RAM role to manage all clusters.
             /// 
             /// This parameter is required.
             /// </summary>

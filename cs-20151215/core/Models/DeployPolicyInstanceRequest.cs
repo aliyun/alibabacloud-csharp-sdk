@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// The applicable scope of the policy instance. If you leave this parameter empty, the policy instance is applicable to all namespaces.
+        /// The namespaces to which the policy applies. If you leave this parameter empty, the policy is applicable to all namespaces of the cluster.
         /// </summary>
         [NameInMap("namespaces")]
         [Validation(Required=false)]
         public List<string> Namespaces { get; set; }
 
         /// <summary>
-        /// The parameters of the policy instance.
+        /// The parameter settings of the policy. For more information about the parameters supported by each policy, see [Predefined security policies of ACK](https://www.alibabacloud.com/help/doc-detail/359819.html).
         /// </summary>
         [NameInMap("parameters")]
         [Validation(Required=false)]

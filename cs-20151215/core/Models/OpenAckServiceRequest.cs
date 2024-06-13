@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class OpenAckServiceRequest : TeaModel {
         /// <summary>
-        /// The type of ACK service that you want to activate. Valid values:
+        /// The type of service that you want to activate. Valid values:
         /// 
-        /// *   `propayasgo`: ACK Pro
-        /// *   `edgepayasgo`: ACK Edge
+        /// *   `propayasgo`: professional managed Kubernetes service.
+        /// *   `edgepayasgo`: ACK Edge.
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

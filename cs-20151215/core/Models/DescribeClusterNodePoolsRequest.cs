@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterNodePoolsRequest : TeaModel {
         /// <summary>
-        /// The name of the node pool.
+        /// 节点池名称。
         /// </summary>
         [NameInMap("NodepoolName")]
         [Validation(Required=false)]

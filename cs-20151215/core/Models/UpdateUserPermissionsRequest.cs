@@ -9,36 +9,78 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateUserPermissionsRequest : TeaModel {
+        /// <summary>
+        /// The request body.
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<UpdateUserPermissionsRequestBody> Body { get; set; }
         public class UpdateUserPermissionsRequestBody : TeaModel {
+            /// <summary>
+            /// The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.
+            /// 
+            /// *   Set this parameter to an empty string if `role_type` is set to `all-clusters`.
+            /// </summary>
             [NameInMap("cluster")]
             [Validation(Required=false)]
             public string Cluster { get; set; }
 
+            /// <summary>
+            /// Specifies whether to assign a custom role to the RAM user or RAM role. If you want to assign a custom role to the RAM user or RAM role, set `role_name` to the name of the custom role.
+            /// </summary>
             [NameInMap("is_custom")]
             [Validation(Required=false)]
             public bool? IsCustom { get; set; }
 
+            /// <summary>
+            /// Specifies whether to use a RAM role to grant permissions.
+            /// </summary>
             [NameInMap("is_ram_role")]
             [Validation(Required=false)]
             public bool? IsRamRole { get; set; }
 
+            /// <summary>
+            /// The namespace that you want to authorize the RAM user or RAM role to manage. This parameter is required only if you set role_type to namespace.
+            /// </summary>
             [NameInMap("namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
+            /// <summary>
+            /// The predefined role. Valid values:
+            /// 
+            /// *   `admin`: administrator
+            /// *   `ops`: O\\&M engineer
+            /// *   `dev`: developer
+            /// *   `restricted`: restricted user
+            /// *   Custom role
+            /// </summary>
             [NameInMap("role_name")]
             [Validation(Required=false)]
             public string RoleName { get; set; }
 
+            /// <summary>
+            /// The authorization type. Valid values:
+            /// 
+            /// *   `cluster`: authorizes the RAM user or RAM role to manage the specified clusters.
+            /// *   `namespace`: authorizes the RAM user or RAM role to manage the specified namepsaces.
+            /// *   `all-clusters`: authorizes the RAM user or RAM role to manage all clusters.
+            /// </summary>
             [NameInMap("role_type")]
             [Validation(Required=false)]
             public string RoleType { get; set; }
 
         }
 
+        /// <summary>
+        /// The authorization method. Valid values:
+        /// 
+        /// *   `apply`: updates all permissions of the RAM user or RAM role. If you use this method, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.
+        /// *   `delete`: revokes the specified permissions from the RAM user or RAM role. If you use this method, only the permissions that you specify are revoked, other permissions of the RAM user or RAM role on the cluster are not affected.
+        /// *   `patch`: grants the specified permissions to the RAM user or role. If you use this method, only the permissions that you specify are granted, other permissions of the RAM user or RAM role on the cluster are not affected.
+        /// 
+        /// Default value: `apply`
+        /// </summary>
         [NameInMap("mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }

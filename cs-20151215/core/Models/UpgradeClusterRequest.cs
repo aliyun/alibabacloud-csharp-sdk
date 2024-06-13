@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpgradeClusterRequest : TeaModel {
         /// <summary>
-        /// The name of the component. Set the value to `k8s`.
+        /// This parameter is discontinued.
         /// </summary>
         [NameInMap("component_name")]
         [Validation(Required=false)]
@@ -18,24 +18,24 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ComponentName { get; set; }
 
         /// <summary>
-        /// Specifies whether to update only master nodes. Valid values:
+        /// Specifies whether to update only the master nodes. Valid values:
         /// 
-        /// *   true: update only master nodes.
-        /// *   false: update master and worker nodes.
+        /// *   true: Updates only the master nodes.
+        /// *   false: Updates the master nodes and worker nodes.
         /// </summary>
         [NameInMap("master_only")]
         [Validation(Required=false)]
         public bool? MasterOnly { get; set; }
 
         /// <summary>
-        /// The Kubernetes version to which the cluster can be updated.
+        /// The Kubernetes version to which you want to update the cluster.
         /// </summary>
         [NameInMap("next_version")]
         [Validation(Required=false)]
         public string NextVersion { get; set; }
 
         /// <summary>
-        /// The current Kubernetes version of the cluster. For more information, see [Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).
+        /// This parameter is discontinued. Specify the Kubernetes version by using the next_version parameter.
         /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]
