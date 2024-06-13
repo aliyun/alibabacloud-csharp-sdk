@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class TextTaskCreateCmd : TeaModel {
+        [NameInMap("agentId")]
+        [Validation(Required=false)]
+        public string AgentId { get; set; }
+
         [NameInMap("contentRequirement")]
         [Validation(Required=false)]
         public string ContentRequirement { get; set; }

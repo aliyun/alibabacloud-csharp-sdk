@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class TextTask : TeaModel {
+        [NameInMap("agentId")]
+        [Validation(Required=false)]
+        public string AgentId { get; set; }
+
+        [NameInMap("agentName")]
+        [Validation(Required=false)]
+        public string AgentName { get; set; }
+
         [NameInMap("contentRequirement")]
         [Validation(Required=false)]
         public string ContentRequirement { get; set; }
@@ -73,6 +81,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [NameInMap("textTaskStatus")]
         [Validation(Required=false)]
         public string TextTaskStatus { get; set; }
+
+        [NameInMap("texts")]
+        [Validation(Required=false)]
+        public Text Texts { get; set; }
 
         [NameInMap("theme")]
         [Validation(Required=false)]

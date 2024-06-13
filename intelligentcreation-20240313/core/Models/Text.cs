@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class Text : TeaModel {
+        [NameInMap("agentId")]
+        [Validation(Required=false)]
+        public string AgentId { get; set; }
+
+        [NameInMap("agentName")]
+        [Validation(Required=false)]
+        public string AgentName { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>
