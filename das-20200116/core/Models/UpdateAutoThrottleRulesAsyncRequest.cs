@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class UpdateAutoThrottleRulesAsyncRequest : TeaModel {
         /// <summary>
-        /// The duration threshold for triggering automatic SQL throttling. Set this parameter to a positive integer that is greater than or equal to 2. Unit: minutes.
+        /// The duration threshold for triggering automatic SQL throttling. Set this parameter to an integer that is greater than or equal to 2. Unit: minutes.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,10 +19,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public double? AbnormalDuration { get; set; }
 
         /// <summary>
-        /// The maximum number of active sessions.
+        /// The threshold for the number of active sessions.
         /// 
-        /// *   Specify an integer that is greater than or equal to 16 when the CPU utilization threshold and the maximum number of active sessions are in the **OR** relationship.
-        /// *   Specify an integer that is greater than or equal to 2 when the CPU utilization threshold and the maximum number of active sessions are in the **AND** relationship.
+        /// *   If this parameter and CpuUsage are in the **OR** relationship, set this parameter to an integer that is greater than or equal to 16.
+        /// *   If this parameter and CpuUsage are in the **AND** relationship, set this parameter to an integer that is greater than or equal to 2.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// Specifies whether to terminate abnormal SQL statements in execution at the same time. Valid values:
         /// 
-        /// >  Abnormal SQL statements use the same template as the SQL statements that need to be throttled.
+        /// >  Abnormal SQL statements use the same template as the SQL statements to be throttled.
         /// 
         /// *   **true**
         /// *   **false**
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string CpuSessionRelation { get; set; }
 
         /// <summary>
-        /// The CPU utilization threshold, in percentages. Valid values: 70 to 100.
+        /// The threshold for CPU utilization. Valid values: 70% to 100%.
         /// 
         /// This parameter is required.
         /// </summary>

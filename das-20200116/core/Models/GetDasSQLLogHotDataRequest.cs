@@ -202,9 +202,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SqlType { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: millisecond.
         /// 
-        /// >  You can query only the data that is generated after the new SQL Explorer and Audit feature is enabled. The start time can be up to seven days earlier than the current time.
+        /// >  You can query only the data generated after DAS Enterprise Edition V2 or V3 was enabled. The beginning of the time range to query can be up to seven days earlier than the current time.
         /// 
         /// This parameter is required.
         /// </summary>

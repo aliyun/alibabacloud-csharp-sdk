@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogStatisticRequest : TeaModel {
         /// <summary>
+        /// The ID of the database instance.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]

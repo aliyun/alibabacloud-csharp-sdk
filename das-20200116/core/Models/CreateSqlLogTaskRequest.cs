@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class CreateSqlLogTaskRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public class CreateSqlLogTaskRequestFilters : TeaModel {
             /// <summary>
             /// The name of the filter parameter.
+            /// 
+            /// >  For more information about the supported filter parameters and their valid values, see the following **supplement about the Key parameter**.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -40,14 +42,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The instance ID.
+        /// The ID of the database instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The task name.
+        /// The name of the task.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -55,23 +57,25 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// The node ID.
+        /// 
+        /// >  This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the offline tasks of a specific node. By default, if this parameter is not specified, the information about the offline tasks of the primary node is returned.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// The role of the node in the PolarDB-X 2.0 instance. Valid values:
+        /// The role of the node of the PolarDB-X 2.0 database instance. Valid values:
         /// 
-        /// *   **polarx_cn**: compute node.
-        /// *   **polarx_dn**: data node.
+        /// *   **polarx_cn**: compute node
+        /// *   **polarx_dn**: data node
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -80,8 +84,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// The type of the task. Valid values:
         /// 
-        /// *   Export
-        /// *   Query
+        /// *   **Export**
+        /// *   **Query**
+        /// *   **Insight**
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

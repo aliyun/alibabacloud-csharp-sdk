@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogTasksResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// The response code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// ListResult
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,42 +31,47 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public List<DescribeSqlLogTasksResponseBodyDataList> List { get; set; }
             public class DescribeSqlLogTasksResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// The time when the analysis task was complete.
+                /// The time when the analysis task was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("AnalysisTaskFinishTime")]
                 [Validation(Required=false)]
                 public long? AnalysisTaskFinishTime { get; set; }
 
                 /// <summary>
-                /// The status of the analysis task.
+                /// The state of the analysis task.
+                /// 
+                /// >  This parameter is a system parameter. You do not need to pay attention to the parameter.
                 /// </summary>
                 [NameInMap("AnalysisTaskStatus")]
                 [Validation(Required=false)]
                 public string AnalysisTaskStatus { get; set; }
 
                 /// <summary>
-                /// The time when the task was created.
+                /// The time when the task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The end of the time range to query.
+                /// The time when the task ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("End")]
                 [Validation(Required=false)]
                 public long? End { get; set; }
 
                 /// <summary>
-                /// Indicates whether the task expires.
+                /// Indicates whether the task expired. Valid values:
+                /// 
+                /// *   **true**
+                /// *   **false**
                 /// </summary>
                 [NameInMap("Expire")]
                 [Validation(Required=false)]
                 public bool? Expire { get; set; }
 
                 /// <summary>
-                /// The filter conditions.
+                /// The filter parameters.
                 /// </summary>
                 [NameInMap("Filters")]
                 [Validation(Required=false)]
@@ -74,6 +79,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public class DescribeSqlLogTasksResponseBodyDataListFilters : TeaModel {
                     /// <summary>
                     /// The name of the filter parameter.
+                    /// 
+                    /// >  For more information about the filter parameters, see the **Valid values of Key** section of this topic.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
@@ -89,14 +96,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 }
 
                 /// <summary>
-                /// The instance ID.
+                /// The ID of the database instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The number of log records
+                /// The number of log records.
                 /// </summary>
                 [NameInMap("LogCount")]
                 [Validation(Required=false)]
@@ -117,28 +124,36 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public int? Progress { get; set; }
 
                 /// <summary>
-                /// The Object Storage Service (OSS) URL or other information.
+                /// The URL that is returned if the value of TaskType is **Export**.
                 /// </summary>
                 [NameInMap("Result")]
                 [Validation(Required=false)]
                 public string Result { get; set; }
 
                 /// <summary>
-                /// The number of files scanned
+                /// The number of files that are scanned.
                 /// </summary>
                 [NameInMap("ScanFileSize")]
                 [Validation(Required=false)]
                 public long? ScanFileSize { get; set; }
 
                 /// <summary>
-                /// The beginning of the time range to query.
+                /// The time when the task started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("Start")]
                 [Validation(Required=false)]
                 public long? Start { get; set; }
 
                 /// <summary>
-                /// The status of the task.
+                /// The task state. Valid values:
+                /// 
+                /// *   **INIT**: The task is to be scheduled.
+                /// *   **RUNNING**: The task is running.
+                /// *   **FAILED**: The task failed.
+                /// *   **CANCELED**: The task is canceled.
+                /// *   **COMPLETED**: The task is complete.
+                /// 
+                /// >  If a task is in the **COMPLETED** state, you can view the results of the task.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -152,10 +167,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
-                /// The type of the task. Valid values:
+                /// The task type. Valid values:
                 /// 
-                /// *   Export
-                /// *   Query
+                /// *   **Export**
+                /// *   **Query**
                 /// </summary>
                 [NameInMap("TaskType")]
                 [Validation(Required=false)]
@@ -178,7 +193,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// The number of tasks.
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -189,7 +204,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// The returned message.
         /// 
-        /// >  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.
+        /// >  If the request was successful, **Successful** is returned. If the request failed, an error message is returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

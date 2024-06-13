@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// The task ID, which is returned after you call the CreateStorageAnalysisTask operation.
+        /// The task ID. You can obtain the task ID from the response of the [CreateStorageAnalysisTask](https://help.aliyun.com/document_detail/2639140.html) operation.
         /// 
         /// This parameter is required.
         /// </summary>

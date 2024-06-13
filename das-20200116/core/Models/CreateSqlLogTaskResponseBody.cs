@@ -10,56 +10,64 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class CreateSqlLogTaskResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code returned.
+        /// The response code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// SqlLogTask
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateSqlLogTaskResponseBodyData Data { get; set; }
         public class CreateSqlLogTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// The time when the task was created.
+            /// The time when the task was created. This value is a UNIX timestamp. Unit: milliseconds.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The end of the time range to query.
+            /// The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
             /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
             public long? End { get; set; }
 
             /// <summary>
-            /// The instance ID.
+            /// The ID of the database instance.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The task name.
+            /// The name of the task.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The beginning of the time range to query.
+            /// The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
             /// </summary>
             [NameInMap("Start")]
             [Validation(Required=false)]
             public long? Start { get; set; }
 
             /// <summary>
-            /// The status of the task.
+            /// The state of the task. Valid values:
+            /// 
+            /// *   **INIT**: The task is to be scheduled.
+            /// *   **RUNNING**: The task is running.
+            /// *   **FAILED**: The task failed.
+            /// *   **CANCELED**: The task is canceled.
+            /// *   **COMPLETED**: The task is complete.
+            /// 
+            /// >  You can view the result of a task that is in the **COMPLETED** state.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -77,7 +85,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// The returned message.
         /// 
-        /// >  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.
+        /// >  If the request was successful, **Successful** is returned. If the request failed, error information such as an error code is returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

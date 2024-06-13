@@ -165,6 +165,34 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
             }
 
+            [NameInMap("ExpiryKeysLevelCount")]
+            [Validation(Required=false)]
+            public DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCount ExpiryKeysLevelCount { get; set; }
+            public class DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCount : TeaModel {
+                [NameInMap("ExpiryLevel")]
+                [Validation(Required=false)]
+                public List<DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel> ExpiryLevel { get; set; }
+                public class DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel : TeaModel {
+                    [NameInMap("AnalysisTs")]
+                    [Validation(Required=false)]
+                    public long? AnalysisTs { get; set; }
+
+                    [NameInMap("Level")]
+                    [Validation(Required=false)]
+                    public int? Level { get; set; }
+
+                    [NameInMap("TotalBytes")]
+                    [Validation(Required=false)]
+                    public long? TotalBytes { get; set; }
+
+                    [NameInMap("TotalKeys")]
+                    [Validation(Required=false)]
+                    public long? TotalKeys { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// The instance ID.
             /// </summary>
