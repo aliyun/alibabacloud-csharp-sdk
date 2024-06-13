@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class ListDeploymentJobResourceRequest : TeaModel {
+    public class MoveResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// The ID of the request.
         /// </summary>
-        [NameInMap("JobId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? JobId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

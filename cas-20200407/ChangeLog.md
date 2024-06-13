@@ -1,3 +1,7 @@
+2024-06-13 Version: 1.3.0
+- Support API MoveResourceGroup.
+
+
 2024-05-06 Version: 1.2.1
 - Update SDK.
 

@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string OrganizationUnit { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ParentIdentifier")]
         [Validation(Required=false)]
         public string ParentIdentifier { get; set; }

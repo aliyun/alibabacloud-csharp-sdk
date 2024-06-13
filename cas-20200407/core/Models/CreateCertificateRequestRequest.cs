@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// The domain name that you want to bind to the certificate. You can specify only one domain name.
         /// 
         /// > The domain name must match the certificate specifications that you specify for the **ProductCode** parameter. If you apply for a single-domain certificate, you must specify a single domain name for this parameter. If you apply for a wildcard certificate, you must specify a wildcard domain name such as `*.aliyundoc.com` for this parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 
         /// <summary>
         /// The email address of the applicant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 
         /// <summary>
         /// The phone number of the applicant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Phone")]
         [Validation(Required=false)]
@@ -49,6 +55,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 
         /// <summary>
         /// The name of the applicant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]
@@ -60,7 +68,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// *   **DNS**: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.
         /// *   **FILE**: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.
         /// 
-        /// For more information about the verification methods, see [Verify the ownership of a domain name](~~48016~~).
+        /// For more information about the verification methods, see [Verify the ownership of a domain name](https://help.aliyun.com/document_detail/48016.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ValidateType")]
         [Validation(Required=false)]

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UploadCsrRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Csr")]
         [Validation(Required=false)]
         public string Csr { get; set; }

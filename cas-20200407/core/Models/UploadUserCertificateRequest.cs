@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// The name of the certificate. The name can contain up to 128 characters in length. The name can contain all types of characters, such as letters, digits, and underscores (\_).
+        /// The name of the certificate. The name can contain up to 128 characters in length. The name can contain all types of characters, such as letters, digits, and underscores (_).
         /// 
         /// >  The name must be unique within an Alibaba Cloud account.
         /// </summary>

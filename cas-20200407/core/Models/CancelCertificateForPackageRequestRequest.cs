@@ -12,6 +12,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CancelCertificateForPackageRequestRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <UploadPCACertResponse>
         ///     <RequestId>15C66C7B-671A-4297-9187-2C4477247A74</RequestId>
         /// </UploadPCACertResponse>
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Cert")]
         [Validation(Required=false)]
@@ -36,6 +38,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// {
         ///     "RequestId": "15C66C7B-671A-4297-9187-2C4477247A74"
         /// }
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WarehouseId")]
         [Validation(Required=false)]

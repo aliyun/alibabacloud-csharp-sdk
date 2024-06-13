@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
     public class GetCsrDetailRequest : TeaModel {
         /// <summary>
         /// CSR ID。
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CsrId")]
         [Validation(Required=false)]

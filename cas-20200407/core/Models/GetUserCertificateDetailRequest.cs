@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 
         /// <summary>
         /// The ID of the certificate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CertId")]
         [Validation(Required=false)]

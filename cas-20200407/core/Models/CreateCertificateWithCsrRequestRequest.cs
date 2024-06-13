@@ -10,11 +10,13 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CreateCertificateWithCsrRequestRequest : TeaModel {
         /// <summary>
-        /// The content of the existing CSR file.\
-        /// The key algorithm in the CSR file must be Rivest-Shamir-Adleman (RSA) or elliptic-curve cryptography (ECC), and the key length of the RSA algorithm must be greater than or equal to 2,048 characters. For more information about how to create a CSR file, see [How do I create a CSR file?](~~42218~~) You can also create a CSR in the [Certificate Management Service console](https://yundunnext.console.aliyun.com/?\&p=cas). For more information, see [Create a CSR](~~313297~~).\
+        /// The content of the existing CSR file.\\
+        /// The key algorithm in the CSR file must be Rivest-Shamir-Adleman (RSA) or elliptic-curve cryptography (ECC), and the key length of the RSA algorithm must be greater than or equal to 2,048 characters. For more information about how to create a CSR file, see [How do I create a CSR file?](https://help.aliyun.com/document_detail/42218.html) You can also create a CSR in the [Certificate Management Service console](https://yundunnext.console.aliyun.com/?\\&p=cas). For more information, see [Create a CSR](https://help.aliyun.com/document_detail/313297.html).\\
         /// A CSR file contains the information about your server and company. When you apply for a certificate, you must submit the CSR file to the CA. The CA signs the CSR file by using the private key of the root certificate and generates a public key file to issue your certificate.
         /// 
         /// >  The **CN** field in the CSR file specifies the domain name that is bound to the certificate.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Csr")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 
         /// <summary>
         /// The contact email address of the applicant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 
         /// <summary>
         /// The phone number of the applicant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Phone")]
         [Validation(Required=false)]
@@ -51,6 +57,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 
         /// <summary>
         /// The name of the applicant.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]
@@ -62,7 +70,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// *   **DNS**: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.
         /// *   **FILE**: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.
         /// 
-        /// For more information about the verification methods, see [Verify the ownership of a domain name](~~48016~~).
+        /// For more information about the verification methods, see [Verify the ownership of a domain name](https://help.aliyun.com/document_detail/48016.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ValidateType")]
         [Validation(Required=false)]

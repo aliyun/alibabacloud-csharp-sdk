@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// The number of certificate applications that you submitted for certificates of the specified specifications.
         /// 
-        /// > A successful call of the [CreateCertificateForPackageRequest](~~455296~~), [CreateCertificateRequest](~~455292~~), or [CreateCertificateWithCsrRequest](~~455801~~) operation is counted as one a certificate application, regardless of whether the certificate is issued.
+        /// > A successful call of the [CreateCertificateForPackageRequest](https://help.aliyun.com/document_detail/455296.html), [CreateCertificateRequest](https://help.aliyun.com/document_detail/455292.html), or [CreateCertificateWithCsrRequest](https://help.aliyun.com/document_detail/455801.html) operation is counted as one a certificate application, regardless of whether the certificate is issued.
         /// </summary>
         [NameInMap("UsedCount")]
         [Validation(Required=false)]

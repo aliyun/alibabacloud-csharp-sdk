@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// The ID of the certificate application order that is renewed.
         /// 
-        /// > You can use the ID to query the status of the certificate application. For more information, see [DescribeCertificateState](~~455800~~).
+        /// > You can use the ID to query the status of the certificate application. For more information, see [DescribeCertificateState](https://help.aliyun.com/document_detail/455800.html).
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
