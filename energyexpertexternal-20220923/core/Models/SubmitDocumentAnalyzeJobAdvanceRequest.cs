@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class SubmitDocumentAnalyzeJobAdvanceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
