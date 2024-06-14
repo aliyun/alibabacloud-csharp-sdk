@@ -43,6 +43,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// *   TagKey: the tag key.
         /// *   TagValue: the tag value.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

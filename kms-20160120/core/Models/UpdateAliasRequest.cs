@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// The alias that you want to bind.
         /// 
         /// The value must be 1 to 255 characters in length and must include the alias/ prefix.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AliasName")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The ID of the CMK. The ID must be globally unique.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]

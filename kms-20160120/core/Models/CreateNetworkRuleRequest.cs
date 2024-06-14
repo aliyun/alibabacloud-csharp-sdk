@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The name of the access control rule.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// The network type.
         /// 
         /// Only private IP addresses are supported. Set the value to Private.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

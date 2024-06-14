@@ -12,15 +12,17 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The signature algorithm. Valid values:
         /// 
-        /// *   RSA_PKCS1\_SHA\_256
+        /// *   RSA_PKCS1_SHA_256
         /// 
-        /// *   RSA_PSS_SHA\_256
+        /// *   RSA_PSS_SHA_256
         /// 
-        /// *   ECDSA_SHA\_256
+        /// *   ECDSA_SHA_256
         /// 
         /// *   SM2DSA
         /// 
-        /// > The SM2DSA signature algorithm is supported only in regions where managed hardware security modules (HSMs) are used in the Chinese mainland. For more information, see [Managed HSM overview](~~125803~~).
+        /// > The SM2DSA signature algorithm is supported only in regions where managed hardware security modules (HSMs) are used in the Chinese mainland. For more information, see [Managed HSM overview](https://help.aliyun.com/document_detail/125803.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The ID of the certificate. The ID must be globally unique in Certificates Manager.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CertificateId")]
         [Validation(Required=false)]
@@ -42,10 +46,12 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// If the size of the data is greater than 4 KB, you can set the MessageType parameter to DIGEST and set the Message parameter to the digest of the data. The digest is also called hash value. You can compute the digest of the data on an on-premises device. Certificates Manager uses the digest that you compute in your own certificate application system. The message digest algorithm that you use must match the specified signature algorithm. Comply with the following mapping between signature algorithms and message digest algorithms:
         /// 
-        /// *   If the signature algorithm is RSA_PKCS1\_SHA\_256, RSA_PSS_SHA\_256, or ECDSA_SHA\_256, the message digest algorithm must be SHA-256.
+        /// *   If the signature algorithm is RSA_PKCS1_SHA_256, RSA_PSS_SHA_256, or ECDSA_SHA_256, the message digest algorithm must be SHA-256.
         /// *   If the signature algorithm is SM2DSA, the message digest algorithm must be SM3.
         /// 
         /// >  If the key type of the certificate is EC_SM2 and the MessageType parameter is set to DIGEST, the value of the Message parameter is `e` that is described in GB/T 32918.2-2016 6.1.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -56,6 +62,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// *   RAW: the raw data. This is the default value.
         /// *   DIGEST: the message digest (hash value) of the raw data.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MessageType")]
         [Validation(Required=false)]
@@ -65,6 +73,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// The signature value.
         /// 
         /// The value is encoded in Base64.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SignatureValue")]
         [Validation(Required=false)]

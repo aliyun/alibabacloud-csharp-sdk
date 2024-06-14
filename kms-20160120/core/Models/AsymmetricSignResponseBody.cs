@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// The digest that is generated for the original message by using a hash algorithm. The hash algorithm is specified by the Algorithm parameter.
         /// 
         /// > * The value is encoded in Base64.
-        /// > * For more information about how to calculate message digests, see the **Preprocess signature: compute a message digest** section of the [Generate and verify a signature by using an asymmetric CMK](~~148146~~) topic.
+        /// > * For more information about how to calculate message digests, see the **Preprocess signature: compute a message digest** section of the [Generate and verify a signature by using an asymmetric CMK](https://help.aliyun.com/document_detail/148146.html) topic.
         /// </summary>
         [NameInMap("KeyVersionId")]
         [Validation(Required=false)]

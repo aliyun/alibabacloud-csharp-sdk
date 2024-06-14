@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
     public class UploadCertificateRequest : TeaModel {
         /// <summary>
         /// The certificate issued by the CA, which is in the Privacy Enhanced Mail (PEM) format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Certificate")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The ID of the certificate. The ID must be globally unique in Certificates Manager.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CertificateId")]
         [Validation(Required=false)]

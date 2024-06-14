@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
     public class AsymmetricVerifyRequest : TeaModel {
         /// <summary>
         /// The signature algorithm.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// The digest that is generated for the original message by using a hash algorithm. The hash algorithm is specified by the **Algorithm** parameter.
         /// 
         /// >  The value is encoded in Base64.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Digest")]
         [Validation(Required=false)]
@@ -28,7 +32,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The ID of the CMK. The ID must be globally unique.
         /// 
-        /// >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Overview of aliases](~~68522~~).
+        /// >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Overview of aliases](https://help.aliyun.com/document_detail/68522.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The version ID of the CMK. The ID must be globally unique.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyVersionId")]
         [Validation(Required=false)]
@@ -45,6 +53,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// The signature value to be verified.
         /// 
         /// >  The value is encoded in Base64.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

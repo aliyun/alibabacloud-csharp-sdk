@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The name of the access control rule.
         /// 
-        /// > For more information about how to query created access control rules, see [ListNetworkRules](~~2539433~~).
+        /// > For more information about how to query created access control rules, see [ListNetworkRules](https://help.aliyun.com/document_detail/2539433.html).
         /// </summary>
         [NameInMap("AccessControlRules")]
         [Validation(Required=false)]
@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The name of the permission policy.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// *   RbacPermission/Template/CryptoServiceSecretUser: allows you to perform secret-related operations.
         /// 
         /// You can select both.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
@@ -54,8 +58,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The key and secret that are allowed to access.
         /// 
-        /// *   Key: Enter a key in the `key/${KeyId}` format. To allow access to all keys of a KMS instance, enter key/\*.
-        /// *   Secret: Enter a secret in the `secret/${SecretName}` format. To allow access to all secrets of a KMS instance, enter secret/\*.
+        /// *   Key: Enter a key in the `key/${KeyId}` format. To allow access to all keys of a KMS instance, enter key/\\*.
+        /// *   Secret: Enter a secret in the `secret/${SecretName}` format. To allow access to all secrets of a KMS instance, enter secret/\\*.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

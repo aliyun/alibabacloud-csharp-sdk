@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// *   VpcOwnerId: the Alibaba Cloud account to which the VPC belongs.
         /// 
         /// Format: `[{"VpcId":"${VpcId}","VSwitchId":"${VSwitchId}","RegionId":"${RegionId}","VpcOwnerId":${VpcOwnerId}},..]`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BindVpcs")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The ID of the KMS instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KmsInstanceId")]
         [Validation(Required=false)]

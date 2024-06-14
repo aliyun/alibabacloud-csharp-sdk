@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The globally unique ID of the CMK.
         /// 
-        /// You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](~~68522~~).
+        /// You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](https://help.aliyun.com/document_detail/68522.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
@@ -21,7 +23,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The globally unique ID of the CMK version.
         /// 
-        /// You can call the [ListKeyVersions](~~133966~~) operation to query the versions of the CMK.
+        /// You can call the [ListKeyVersions](https://help.aliyun.com/document_detail/133966.html) operation to query the versions of the CMK.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyVersionId")]
         [Validation(Required=false)]

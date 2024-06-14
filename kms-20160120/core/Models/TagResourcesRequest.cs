@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The region ID of the resource.
         /// 
-        /// >  You can call the [DescribeRegions](~~601478~~) to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/601478.html) to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// The IDs of the resources to which you want to add tags. You can enter a maximum of 50 resource IDs.
         /// 
         /// Enter multiple resource IDs in the `["ResourceId. 1","ResourceId. 2",...]` format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// *   key
         /// *   secret
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// A list of tags. You can enter up to 20 tags.
         /// 
         /// A tag consists of a key-value pair. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -51,7 +59,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// 
             /// You can enter up to 20 tags. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.
             /// 
-            /// Each key can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\), underscores (\_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).
+            /// Each key can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\\\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).
             /// 
             /// >  The key cannot start with aliyun or acs:.
             /// </summary>
@@ -64,7 +72,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// 
             /// You can enter up to 20 tags. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.
             /// 
-            /// Each value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\), underscores (\_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).
+            /// Each value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\\\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

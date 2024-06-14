@@ -14,9 +14,11 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// You can generate the ciphertext by calling the following operations:
         /// 
-        /// *   [GenerateDataKey](~~28948~~)
-        /// *   [Encrypt](~~28949~~)
-        /// *   [GenerateDataKeyWithoutPlaintext](~~134043~~)
+        /// *   [GenerateDataKey](https://help.aliyun.com/document_detail/28948.html)
+        /// *   [Encrypt](https://help.aliyun.com/document_detail/28949.html)
+        /// *   [GenerateDataKeyWithoutPlaintext](https://help.aliyun.com/document_detail/134043.html)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CiphertextBlob")]
         [Validation(Required=false)]
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The JSON string that consists of key-value pairs.
         /// 
-        /// >  If you specify the EncryptionContext parameter when you call the [GenerateDataKey](~~28948~~), [Encrypt](~~28949~~), or [GenerateDataKeyWithoutPlaintext](~~134043~~) operation, you must specify the same context when you call the Decrypt operation. For more information, see [EncryptionContext](~~42975~~).
+        /// >  If you specify the EncryptionContext parameter when you call the [GenerateDataKey](https://help.aliyun.com/document_detail/28948.html), [Encrypt](https://help.aliyun.com/document_detail/28949.html), or [GenerateDataKeyWithoutPlaintext](https://help.aliyun.com/document_detail/134043.html) operation, you must specify the same context when you call the Decrypt operation. For more information, see [EncryptionContext](https://help.aliyun.com/document_detail/42975.html).
         /// </summary>
         [NameInMap("EncryptionContext")]
         [Validation(Required=false)]

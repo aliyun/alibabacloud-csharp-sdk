@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The access control rule.
         /// 
-        /// > For more information about how to query created access control rules, see [ListNetworkRules](~~2539433~~).
+        /// > For more information about how to query created access control rules, see [ListNetworkRules](https://help.aliyun.com/document_detail/2539433.html).
         /// </summary>
         [NameInMap("AccessControlRules")]
         [Validation(Required=false)]
@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The name of the permission policy that you want to update.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -47,8 +49,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The key and secret that are allowed to access after the update.
         /// 
-        /// *   Key: Enter a key in the `key/${KeyId}` format. To allow access to all keys of a KMS instance, enter key/\*.
-        /// *   Secret: Enter a secret in the `secret/${SecretName}` format. To allow access to all secrets of a KMS instance, enter secret/\*.
+        /// *   Key: Enter a key in the `key/${KeyId}` format. To allow access to all keys of a KMS instance, enter key/\\*.
+        /// *   Secret: Enter a secret in the `secret/${SecretName}` format. To allow access to all secrets of a KMS instance, enter secret/\\*.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

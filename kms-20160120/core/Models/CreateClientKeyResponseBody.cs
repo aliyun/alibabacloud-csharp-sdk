@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string NotBefore { get; set; }
 
         /// <summary>
-        /// The algorithm that is used to encrypt the private key of the client key. Currently, only RSA\_2048 is supported.
+        /// The algorithm that is used to encrypt the private key of the client key. Currently, only RSA_2048 is supported.
         /// </summary>
         [NameInMap("PrivateKeyData")]
         [Validation(Required=false)]

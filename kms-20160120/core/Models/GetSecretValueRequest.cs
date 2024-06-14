@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The name of the secret.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]

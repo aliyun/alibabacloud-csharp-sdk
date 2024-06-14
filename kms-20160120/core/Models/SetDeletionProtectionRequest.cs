@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// *   true: enables deletion protection.
         /// *   false: disables deletion protection.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnableDeletionProtection")]
         [Validation(Required=false)]
@@ -31,7 +33,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The ARN of the CMK for which you want to set deletion protection.
         /// 
-        /// You can call the [DescribeKey](~~28952~~) operation to query the CMK ARN.
+        /// You can call the [DescribeKey](https://help.aliyun.com/document_detail/28952.html) operation to query the CMK ARN.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProtectedResourceArn")]
         [Validation(Required=false)]

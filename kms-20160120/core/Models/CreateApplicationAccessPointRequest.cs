@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The name of the AAP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// The permission policy.
         /// 
         /// > You can bind up to three permission policies to each AAP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]

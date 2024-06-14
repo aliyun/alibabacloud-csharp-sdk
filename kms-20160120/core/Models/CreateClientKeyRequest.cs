@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
     public class CreateClientKeyRequest : TeaModel {
         /// <summary>
         /// The operation that you want to perform. Set the value to **CreateClientKey**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AapName")]
         [Validation(Required=false)]
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The name of the AAP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]

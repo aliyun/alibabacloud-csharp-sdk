@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
     public class UpdateCertificateStatusRequest : TeaModel {
         /// <summary>
         /// The ID of the certificate. The ID must be globally unique in Certificates Manager.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CertificateId")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// *   REVOKED: The certificate is revoked.
         /// 
         /// > If the certificate is in the REVOKED state, you can use the certificate only to verify a signature, but not to generate a signature.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

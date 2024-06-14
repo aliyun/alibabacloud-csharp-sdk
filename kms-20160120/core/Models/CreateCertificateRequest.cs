@@ -22,9 +22,11 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The type of the key. Valid values:
         /// 
-        /// *   RSA\_2048
+        /// *   RSA_2048
         /// *   EC_P256
         /// *   EC_SM2
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeySpec")]
         [Validation(Required=false)]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// *   OU: required. The name of the department.
         /// *   ST: optional. The name of the province, municipality, autonomous region, or special administrative region.
         /// *   L: optional. The name of the city.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Subject")]
         [Validation(Required=false)]

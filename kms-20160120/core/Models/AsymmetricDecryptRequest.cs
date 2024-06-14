@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
     public class AsymmetricDecryptRequest : TeaModel {
         /// <summary>
         /// The decryption algorithm.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
@@ -23,7 +25,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// The ciphertext that you want to decrypt.
         /// 
         /// > * The value is encoded in Base64.
-        /// > * You can call the [AsymmetricEncrypt](~~148131~~) operation to generate the ciphertext.
+        /// > * You can call the [AsymmetricEncrypt](https://help.aliyun.com/document_detail/148131.html) operation to generate the ciphertext.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CiphertextBlob")]
         [Validation(Required=false)]
@@ -32,7 +36,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The ID of the customer master key (CMK). The ID must be globally unique.
         /// 
-        /// >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](~~68522~~).
+        /// >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](https://help.aliyun.com/document_detail/68522.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
@@ -40,6 +46,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The version ID of the CMK. The ID must be globally unique.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyVersionId")]
         [Validation(Required=false)]

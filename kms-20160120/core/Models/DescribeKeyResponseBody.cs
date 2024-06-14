@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// *   Disabled
             /// *   Suspended
             /// 
-            /// For more information, see [Automatic key rotation](~~134270~~).
+            /// For more information, see [Automatic key rotation](https://help.aliyun.com/document_detail/134270.html).
             /// 
             /// >  Only symmetric CMKs support automatic key rotation.
             /// </summary>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <summary>
             /// The time at which the CMK is scheduled for deletion. The time is displayed in UTC.
             /// 
-            /// For more information, see [ScheduleKeyDeletion](~~44196~~).
+            /// For more information, see [ScheduleKeyDeletion](https://help.aliyun.com/document_detail/44196.html).
             /// 
             /// >  This parameter is returned only when the value of the KeyState parameter is PendingDeletion.
             /// </summary>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <summary>
             /// The status of the CMK.
             /// 
-            /// For more information, see [Impact of CMK status on API operations](~~44211~~).
+            /// For more information, see [Impact of CMK status on API operations](https://help.aliyun.com/document_detail/44211.html).
             /// </summary>
             [NameInMap("KeyState")]
             [Validation(Required=false)]

@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The operation that you want to perform. Set the value to **UpdateSecretVersionStage**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The name of the secret.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VersionStage")]
         [Validation(Required=false)]

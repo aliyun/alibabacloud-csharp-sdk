@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// *   true: enables automatic rotation.
         /// *   false: does not enable automatic rotation. This is the default value.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnableAutomaticRotation")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The name of the secret.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]

@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <summary>
             /// The status of the key.
             /// 
-            /// For more information, see [Impacts of key status on API operations](~~44211~~).
+            /// For more information, see [Impacts of key status on API operations](https://help.aliyun.com/document_detail/44211.html).
             /// </summary>
             [NameInMap("KeyState")]
             [Validation(Required=false)]

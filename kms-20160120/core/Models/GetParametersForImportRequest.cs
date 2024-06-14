@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// The globally unique ID of the CMK.
         /// 
         /// >  You can import key material only for CMKs whose Origin parameter is set to EXTERNAL.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The algorithm that is used to encrypt key material.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WrappingAlgorithm")]
         [Validation(Required=false)]
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The type of the public key that is used to encrypt key material.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WrappingKeySpec")]
         [Validation(Required=false)]

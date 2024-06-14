@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class SetKeyPolicyRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
         public string KeyId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public string Policy { get; set; }

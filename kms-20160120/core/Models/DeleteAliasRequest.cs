@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// The alias that you want to delete.
         /// 
         /// The value must be 1 to 255 characters in length and must include the alias/ prefix.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AliasName")]
         [Validation(Required=false)]

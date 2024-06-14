@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
     public class GetClientKeyRequest : TeaModel {
         /// <summary>
         /// The ID of the client key.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ClientKeyId")]
         [Validation(Required=false)]

@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
     public class PutSecretValueRequest : TeaModel {
         /// <summary>
         /// The secret value. The value is encrypted and then stored in the new version.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecretData")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The name of the secret.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The new version of the secret value. Version numbers must be unique in each secret.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]

@@ -21,7 +21,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The region ID of the resource.
         /// 
-        /// >  You can call the [DescribeRegions](~~601478~~) to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/601478.html) to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// *   key
         /// *   secret
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

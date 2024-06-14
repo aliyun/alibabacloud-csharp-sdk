@@ -68,6 +68,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The tags of the secret.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecretData")]
         [Validation(Required=false)]
@@ -127,6 +129,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         ///     *   `{"UserName":"","Password": ""}`: In the format, `UserName` specifies the username that is used to log on to the ECS instance, and `Password` specifies the password that is used to log on to the ECS instance.
         ///     *   `{"UserName":"","PublicKey": "", "PrivateKey": ""}`: In the format, `PublicKey` indicates the SSH public key that is used to log on to the ECS instance, and `PrivateKey` specifies the SSH private key that is used to log on to the ECS instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
@@ -159,6 +163,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// *   binary
         /// 
         /// >  If you set the SecretType parameter to Rds, RAMCredentials, or ECS, the SecretDataType parameter must be set to text.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]

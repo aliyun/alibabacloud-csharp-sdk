@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
     public class ImportKeyMaterialRequest : TeaModel {
         /// <summary>
         /// Use **GetParametersForImport** the Returned public key and the base64-encoded key material.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EncryptedKeyMaterial")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// By calling **GetParametersForImport** the import token.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImportToken")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The ID of the CMK to be imported.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// If this parameter is not specified or set this parameter to 0, the key material does not expire.
         /// 
         /// >  The value cannot be earlier than the time when the API is called (based on the server time).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyMaterialExpireUnix")]
         [Validation(Required=false)]

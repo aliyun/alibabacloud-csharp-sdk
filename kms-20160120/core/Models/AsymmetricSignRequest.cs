@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
     public class AsymmetricSignRequest : TeaModel {
         /// <summary>
         /// The version ID of the CMK. The ID must be globally unique.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The signature algorithm.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Digest")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         /// <summary>
         /// The operation that you want to perform. Set the value to **AsymmetricSign**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
@@ -33,7 +39,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The ID of the customer master key (CMK). The ID must be globally unique.
         /// 
-        /// >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](~~68522~~).
+        /// >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](https://help.aliyun.com/document_detail/68522.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyVersionId")]
         [Validation(Required=false)]

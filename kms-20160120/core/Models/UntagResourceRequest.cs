@@ -24,6 +24,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string SecretName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
         public string TagKeys { get; set; }

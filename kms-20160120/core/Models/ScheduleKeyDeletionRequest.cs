@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
     public class ScheduleKeyDeletionRequest : TeaModel {
         /// <summary>
         /// The ID of the customer master key (CMK). The ID must be globally unique.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// Valid values: 7 to 366.
         /// 
         /// Unit: days.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PendingWindowInDays")]
         [Validation(Required=false)]

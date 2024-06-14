@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// - true
         /// - false (default)
         /// 
-        /// This parameter is valid only when the key belongs to an instance type that supports automatic rotation. For more information, see [Key rotation](~~2358146~~).
+        /// This parameter is valid only when the key belongs to an instance type that supports automatic rotation. For more information, see [Key rotation](https://help.aliyun.com/document_detail/2358146.html).
         /// </summary>
         [NameInMap("EnableAutomaticRotation")]
         [Validation(Required=false)]
         public bool? EnableAutomaticRotation { get; set; }
 
         /// <summary>
-        /// The key specification. The valid values vary based on the KMS instance type. For more information, see [Overview](~~480159~~).
+        /// The key specification. The valid values vary based on the KMS instance type. For more information, see [Overview](https://help.aliyun.com/document_detail/480159.html).
         /// 
         /// > If you do not specify a value for this parameter, the default key specification is Aliyun_AES_256.
         /// </summary>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// > - The value of this parameter is case-sensitive.
         /// > - Default keys of the customer master key (CMK) type support Aliyun_KMS and EXTERNAL. Keys in instances of the software key management type support only Aliyun_KMS. Keys in instances of the hardware key management type support Aliyun_KMS and EXTERNAL.
-        /// > - If you set Origin to EXTERNAL, you must import key material. For more information, see [Import key material into a symmetric key](~~607841~~) or [Import key material into an asymmetric key](~~608827~~).
+        /// > - If you set Origin to EXTERNAL, you must import key material. For more information, see [Import key material into a symmetric key](https://help.aliyun.com/document_detail/607841.html) or [Import key material into an asymmetric key](https://help.aliyun.com/document_detail/608827.html).
         /// </summary>
         [NameInMap("Origin")]
         [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// You can enter up to 20 tags. Enter multiple tags in the [{"TagKey":"key1","TagValue":"value1"},{"TagKey":"key2","TagValue":"value2"},..] format.
         /// 
-        /// Each tag key or tag value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).
+        /// Each tag key or tag value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).
         /// 
         /// > The tag key cannot start with aliyun or acs:.
         /// </summary>
