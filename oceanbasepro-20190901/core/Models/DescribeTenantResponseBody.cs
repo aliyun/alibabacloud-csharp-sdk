@@ -312,6 +312,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
             }
 
+            [NameInMap("RecycleBinStatus")]
+            [Validation(Required=false)]
+            public string RecycleBinStatus { get; set; }
+
             /// <summary>
             /// <DescribeTenantResponse>
             ///     <RequestId>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</RequestId>
@@ -399,6 +403,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public string AddressType { get; set; }
 
+                [NameInMap("ConnectionLogicalZones")]
+                [Validation(Required=false)]
+                public List<string> ConnectionLogicalZones { get; set; }
+
                 [NameInMap("ConnectionReplicaType")]
                 [Validation(Required=false)]
                 public string ConnectionReplicaType { get; set; }
@@ -428,12 +436,24 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public string InternetAddressStatus { get; set; }
 
+                [NameInMap("InternetMaxConnectionLimit")]
+                [Validation(Required=false)]
+                public long? InternetMaxConnectionLimit { get; set; }
+
+                [NameInMap("InternetMaxConnectionNum")]
+                [Validation(Required=false)]
+                public long? InternetMaxConnectionNum { get; set; }
+
                 /// <summary>
                 /// 实例类型
                 /// </summary>
                 [NameInMap("InternetPort")]
                 [Validation(Required=false)]
                 public int? InternetPort { get; set; }
+
+                [NameInMap("InternetRpcPort")]
+                [Validation(Required=false)]
+                public int? InternetRpcPort { get; set; }
 
                 /// <summary>
                 /// The deployment type of the cluster. Valid values:  
@@ -473,6 +493,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public int? IntranetPort { get; set; }
 
+                [NameInMap("IntranetRpcPort")]
+                [Validation(Required=false)]
+                public int? IntranetRpcPort { get; set; }
+
+                [NameInMap("MaxConnectionLimit")]
+                [Validation(Required=false)]
+                public long? MaxConnectionLimit { get; set; }
+
                 [NameInMap("MaxConnectionNum")]
                 [Validation(Required=false)]
                 public long? MaxConnectionNum { get; set; }
@@ -480,6 +508,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [NameInMap("ParallelQueryDegree")]
                 [Validation(Required=false)]
                 public long? ParallelQueryDegree { get; set; }
+
+                [NameInMap("ProxyClusterId")]
+                [Validation(Required=false)]
+                public string ProxyClusterId { get; set; }
 
                 [NameInMap("TenantEndpointId")]
                 [Validation(Required=false)]

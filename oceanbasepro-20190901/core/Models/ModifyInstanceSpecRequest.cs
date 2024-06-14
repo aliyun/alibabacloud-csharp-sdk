@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("UpgradeSpecNative")]
+        [Validation(Required=false)]
+        public bool? UpgradeSpecNative { get; set; }
+
     }
 
 }

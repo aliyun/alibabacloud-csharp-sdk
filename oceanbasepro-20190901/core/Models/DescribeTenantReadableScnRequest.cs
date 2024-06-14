@@ -8,26 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
-    public class DescribeInstanceRequest : TeaModel {
+    public class DescribeTenantReadableScnRequest : TeaModel {
         /// <summary>
-        /// The size of the data disk, in GB.
-        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("MaxConnectionLimit")]
-        [Validation(Required=false)]
-        public string MaxConnectionLimit { get; set; }
-
         /// <summary>
-        /// The information about the storage resources of the cluster.
+        /// This parameter is required.
         /// </summary>
-        [NameInMap("PageNumber")]
+        [NameInMap("TenantId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string TenantId { get; set; }
 
     }
 

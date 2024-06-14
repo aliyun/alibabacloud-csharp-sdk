@@ -16,6 +16,88 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public DescribeInstanceTopologyResponseBodyInstanceTopology InstanceTopology { get; set; }
         public class DescribeInstanceTopologyResponseBodyInstanceTopology : TeaModel {
+            [NameInMap("Replicas")]
+            [Validation(Required=false)]
+            public List<DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas> Replicas { get; set; }
+            public class DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas : TeaModel {
+                [NameInMap("LogicalZone")]
+                [Validation(Required=false)]
+                public string LogicalZone { get; set; }
+
+                [NameInMap("NodeNum")]
+                [Validation(Required=false)]
+                public int? NodeNum { get; set; }
+
+                [NameInMap("ReplicaResource")]
+                [Validation(Required=false)]
+                public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResource ReplicaResource { get; set; }
+                public class DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResource : TeaModel {
+                    [NameInMap("Cpu")]
+                    [Validation(Required=false)]
+                    public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceCpu Cpu { get; set; }
+                    public class DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceCpu : TeaModel {
+                        [NameInMap("TotalCpu")]
+                        [Validation(Required=false)]
+                        public int? TotalCpu { get; set; }
+
+                        [NameInMap("UsedCpu")]
+                        [Validation(Required=false)]
+                        public int? UsedCpu { get; set; }
+
+                    }
+
+                    [NameInMap("DiskSize")]
+                    [Validation(Required=false)]
+                    public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceDiskSize DiskSize { get; set; }
+                    public class DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceDiskSize : TeaModel {
+                        [NameInMap("TotalDiskSize")]
+                        [Validation(Required=false)]
+                        public long? TotalDiskSize { get; set; }
+
+                        [NameInMap("UsedDiskSize")]
+                        [Validation(Required=false)]
+                        public float? UsedDiskSize { get; set; }
+
+                    }
+
+                    [NameInMap("Memory")]
+                    [Validation(Required=false)]
+                    public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceMemory Memory { get; set; }
+                    public class DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceMemory : TeaModel {
+                        [NameInMap("TotalMemory")]
+                        [Validation(Required=false)]
+                        public long? TotalMemory { get; set; }
+
+                        [NameInMap("UsedMemory")]
+                        [Validation(Required=false)]
+                        public long? UsedMemory { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("ReplicaType")]
+                [Validation(Required=false)]
+                public string ReplicaType { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("ZoneLogicalId")]
+                [Validation(Required=false)]
+                public int? ZoneLogicalId { get; set; }
+
+                [NameInMap("ZoneLogicalName")]
+                [Validation(Required=false)]
+                public string ZoneLogicalName { get; set; }
+
+                [NameInMap("ZoneRegionName")]
+                [Validation(Required=false)]
+                public string ZoneRegionName { get; set; }
+
+            }
+
             /// <summary>
             /// The total number of CPU cores for the node.
             /// </summary>
@@ -43,6 +125,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [NameInMap("TenantDeployType")]
                 [Validation(Required=false)]
                 public string TenantDeployType { get; set; }
+
+                [NameInMap("TenantDiskSize")]
+                [Validation(Required=false)]
+                public float? TenantDiskSize { get; set; }
 
                 /// <summary>
                 /// The size of used memory of the node, in GB.
@@ -79,6 +165,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public string TenantStatus { get; set; }
 
+                [NameInMap("TenantUnitCpu")]
+                [Validation(Required=false)]
+                public float? TenantUnitCpu { get; set; }
+
+                [NameInMap("TenantUnitMemory")]
+                [Validation(Required=false)]
+                public float? TenantUnitMemory { get; set; }
+
                 /// <summary>
                 /// The number of CPU cores of the tenant.
                 /// </summary>
@@ -99,6 +193,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     [NameInMap("IsPrimaryTenantZone")]
                     [Validation(Required=false)]
                     public bool? IsPrimaryTenantZone { get; set; }
+
+                    [NameInMap("LogicalZone")]
+                    [Validation(Required=false)]
+                    public string LogicalZone { get; set; }
+
+                    [NameInMap("ReplicaType")]
+                    [Validation(Required=false)]
+                    public string ReplicaType { get; set; }
 
                     /// <summary>
                     /// The server with the highest disk usage.
@@ -213,6 +315,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     [NameInMap("FullCopyId")]
                     [Validation(Required=false)]
                     public long? FullCopyId { get; set; }
+
+                    [NameInMap("LogicalZone")]
+                    [Validation(Required=false)]
+                    public string LogicalZone { get; set; }
 
                     /// <summary>
                     /// The information of zones.

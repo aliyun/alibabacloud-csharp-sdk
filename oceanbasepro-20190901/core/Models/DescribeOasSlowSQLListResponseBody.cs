@@ -386,14 +386,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode4012Count")]
             [Validation(Required=false)]
-            public double? RetCode4012Count { get; set; }
+            public long? RetCode4012Count { get; set; }
 
             /// <summary>
             /// Number of occurrences of code 4013 during the execution period.
             /// </summary>
             [NameInMap("RetCode4013Count")]
             [Validation(Required=false)]
-            public double? RetCode4013Count { get; set; }
+            public long? RetCode4013Count { get; set; }
 
             /// <summary>
             /// Number of occurrences of code 5001 during the execution period.

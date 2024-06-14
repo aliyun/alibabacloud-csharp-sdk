@@ -2126,6 +2126,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
+         * @summary You can call this operation to create a tag.
+         *
          * @param request CreateTagValueRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateTagValueResponse
@@ -2166,6 +2168,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
+         * @summary You can call this operation to create a tag.
+         *
          * @param request CreateTagValueRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateTagValueResponse
@@ -2206,6 +2210,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
+         * @summary You can call this operation to create a tag.
+         *
          * @param request CreateTagValueRequest
          * @return CreateTagValueResponse
          */
@@ -2216,6 +2222,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
+         * @summary You can call this operation to create a tag.
+         *
          * @param request CreateTagValueRequest
          * @return CreateTagValueResponse
          */
@@ -5060,6 +5068,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             {
                 body["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConnectionLimit))
+            {
+                body["MaxConnectionLimit"] = request.MaxConnectionLimit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 body["PageNumber"] = request.PageNumber;
@@ -5097,6 +5109,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConnectionLimit))
+            {
+                body["MaxConnectionLimit"] = request.MaxConnectionLimit;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -9966,6 +9982,106 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
+         * @summary 查询租户同步位点信息
+         *
+         * @param request DescribeTenantReadableScnRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTenantReadableScnResponse
+         */
+        public DescribeTenantReadableScnResponse DescribeTenantReadableScnWithOptions(DescribeTenantReadableScnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTenantReadableScn",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTenantReadableScnResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询租户同步位点信息
+         *
+         * @param request DescribeTenantReadableScnRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTenantReadableScnResponse
+         */
+        public async Task<DescribeTenantReadableScnResponse> DescribeTenantReadableScnWithOptionsAsync(DescribeTenantReadableScnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTenantReadableScn",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTenantReadableScnResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询租户同步位点信息
+         *
+         * @param request DescribeTenantReadableScnRequest
+         * @return DescribeTenantReadableScnResponse
+         */
+        public DescribeTenantReadableScnResponse DescribeTenantReadableScn(DescribeTenantReadableScnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTenantReadableScnWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询租户同步位点信息
+         *
+         * @param request DescribeTenantReadableScnRequest
+         * @return DescribeTenantReadableScnResponse
+         */
+        public async Task<DescribeTenantReadableScnResponse> DescribeTenantReadableScnAsync(DescribeTenantReadableScnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTenantReadableScnWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary You can call this operation to query security check items of an OceanBase Database tenant.
          *
          * @param request DescribeTenantSecurityConfigsRequest
@@ -10174,7 +10290,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary You can call this operation to view tenant tags.
+         * @summary You can call this operation to query the tags of tenants in a cluster.
          *
          * @param request DescribeTenantTagsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10216,7 +10332,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary You can call this operation to view tenant tags.
+         * @summary You can call this operation to query the tags of tenants in a cluster.
          *
          * @param request DescribeTenantTagsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10258,7 +10374,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary You can call this operation to view tenant tags.
+         * @summary You can call this operation to query the tags of tenants in a cluster.
          *
          * @param request DescribeTenantTagsRequest
          * @return DescribeTenantTagsResponse
@@ -10270,7 +10386,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary You can call this operation to view tenant tags.
+         * @summary You can call this operation to query the tags of tenants in a cluster.
          *
          * @param request DescribeTenantTagsRequest
          * @return DescribeTenantTagsResponse
@@ -12602,6 +12718,114 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
+         * @summary You can call this operation to modify the Secure Sockets Layer (SSL) setting for an OceanBase cluster instance.
+         *
+         * @description There is currently no authorization information disclosed in the API.
+         *
+         * @param request ModifyInstanceSSLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceSSLResponse
+         */
+        public ModifyInstanceSSLResponse ModifyInstanceSSLWithOptions(ModifyInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSL))
+            {
+                body["EnableSSL"] = request.EnableSSL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceSSL",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceSSLResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call this operation to modify the Secure Sockets Layer (SSL) setting for an OceanBase cluster instance.
+         *
+         * @description There is currently no authorization information disclosed in the API.
+         *
+         * @param request ModifyInstanceSSLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceSSLResponse
+         */
+        public async Task<ModifyInstanceSSLResponse> ModifyInstanceSSLWithOptionsAsync(ModifyInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSL))
+            {
+                body["EnableSSL"] = request.EnableSSL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceSSL",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary You can call this operation to modify the Secure Sockets Layer (SSL) setting for an OceanBase cluster instance.
+         *
+         * @description There is currently no authorization information disclosed in the API.
+         *
+         * @param request ModifyInstanceSSLRequest
+         * @return ModifyInstanceSSLResponse
+         */
+        public ModifyInstanceSSLResponse ModifyInstanceSSL(ModifyInstanceSSLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyInstanceSSLWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary You can call this operation to modify the Secure Sockets Layer (SSL) setting for an OceanBase cluster instance.
+         *
+         * @description There is currently no authorization information disclosed in the API.
+         *
+         * @param request ModifyInstanceSSLRequest
+         * @return ModifyInstanceSSLResponse
+         */
+        public async Task<ModifyInstanceSSLResponse> ModifyInstanceSSLAsync(ModifyInstanceSSLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyInstanceSSLWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary You can call this operation to modify the cluster specifications and storage space.
          *
          * @param request ModifyInstanceSpecRequest
@@ -12631,6 +12855,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpgradeSpecNative))
+            {
+                body["UpgradeSpecNative"] = request.UpgradeSpecNative;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -12682,6 +12910,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             {
                 body["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpgradeSpecNative))
+            {
+                body["UpgradeSpecNative"] = request.UpgradeSpecNative;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -12726,7 +12958,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary The returned response.
+         * @summary You can call this operation to modify the tags of a cluster.
          *
          * @param request ModifyInstanceTagsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12764,7 +12996,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary The returned response.
+         * @summary You can call this operation to modify the tags of a cluster.
          *
          * @param request ModifyInstanceTagsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12802,7 +13034,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary The returned response.
+         * @summary You can call this operation to modify the tags of a cluster.
          *
          * @param request ModifyInstanceTagsRequest
          * @return ModifyInstanceTagsResponse
@@ -12814,7 +13046,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary The returned response.
+         * @summary You can call this operation to modify the tags of a cluster.
          *
          * @param request ModifyInstanceTagsRequest
          * @return ModifyInstanceTagsResponse
@@ -13894,7 +14126,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary You can call this operation to modify tenant tags.
+         * @summary You can call this operation to modify the tags of a tenant.
          *
          * @param request ModifyTenantTagsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13936,7 +14168,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary You can call this operation to modify tenant tags.
+         * @summary You can call this operation to modify the tags of a tenant.
          *
          * @param request ModifyTenantTagsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13978,7 +14210,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary You can call this operation to modify tenant tags.
+         * @summary You can call this operation to modify the tags of a tenant.
          *
          * @param request ModifyTenantTagsRequest
          * @return ModifyTenantTagsResponse
@@ -13990,7 +14222,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary You can call this operation to modify tenant tags.
+         * @summary You can call this operation to modify the tags of a tenant.
          *
          * @param request ModifyTenantTagsRequest
          * @return ModifyTenantTagsResponse

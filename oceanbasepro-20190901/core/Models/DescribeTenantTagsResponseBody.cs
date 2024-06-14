@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public List<DescribeTenantTagsResponseBodyTagResources> TagResources { get; set; }
         public class DescribeTenantTagsResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// The resource ID.
+            /// The ID of the resource.
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]

@@ -426,6 +426,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string Series { get; set; }
 
+            [NameInMap("SpecType")]
+            [Validation(Required=false)]
+            public string SpecType { get; set; }
+
             /// <summary>
             /// The status of the cluster. Valid values:   
             /// - ONLINE: The cluster is running.  

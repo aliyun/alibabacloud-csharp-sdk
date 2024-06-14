@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public DescribeInstanceResponseBodyInstance Instance { get; set; }
         public class DescribeInstanceResponseBodyInstance : TeaModel {
+            [NameInMap("AllowModifyInternetAddressConnectionLimit")]
+            [Validation(Required=false)]
+            public bool? AllowModifyInternetAddressConnectionLimit { get; set; }
+
             /// <summary>
             /// The operation that you want to perform. <br>Set the value to **DescribeInstance**.
             /// </summary>
@@ -597,6 +601,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("SharedUnitNumLimit")]
             [Validation(Required=false)]
             public int? SharedUnitNumLimit { get; set; }
+
+            [NameInMap("SpecType")]
+            [Validation(Required=false)]
+            public string SpecType { get; set; }
 
             /// <summary>
             /// The information about cluster resources.
