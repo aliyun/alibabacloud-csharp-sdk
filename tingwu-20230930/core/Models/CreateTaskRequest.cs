@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public CreateTaskRequestParametersExtraParams ExtraParams { get; set; }
             public class CreateTaskRequestParametersExtraParams : TeaModel {
+                [NameInMap("DomainEducationEnabled")]
+                [Validation(Required=false)]
+                public bool? DomainEducationEnabled { get; set; }
+
                 [NameInMap("MaxKeywords")]
                 [Validation(Required=false)]
                 public int? MaxKeywords { get; set; }
@@ -118,6 +122,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [NameInMap("NfixEnabled")]
                 [Validation(Required=false)]
                 public bool? NfixEnabled { get; set; }
+
+                [NameInMap("OcrAuxiliaryEnabled")]
+                [Validation(Required=false)]
+                public bool? OcrAuxiliaryEnabled { get; set; }
 
             }
 
