@@ -6021,6 +6021,114 @@ namespace AlibabaCloud.SDK.Ess20220222
         }
 
         /**
+         * @param request DescribeAlertConfigurationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAlertConfigurationResponse
+         */
+        public DescribeAlertConfigurationResponse DescribeAlertConfigurationWithOptions(DescribeAlertConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroupId))
+            {
+                query["ScalingGroupId"] = request.ScalingGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAlertConfiguration",
+                Version = "2022-02-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAlertConfigurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeAlertConfigurationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAlertConfigurationResponse
+         */
+        public async Task<DescribeAlertConfigurationResponse> DescribeAlertConfigurationWithOptionsAsync(DescribeAlertConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroupId))
+            {
+                query["ScalingGroupId"] = request.ScalingGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAlertConfiguration",
+                Version = "2022-02-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAlertConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request DescribeAlertConfigurationRequest
+         * @return DescribeAlertConfigurationResponse
+         */
+        public DescribeAlertConfigurationResponse DescribeAlertConfiguration(DescribeAlertConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAlertConfigurationWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request DescribeAlertConfigurationRequest
+         * @return DescribeAlertConfigurationResponse
+         */
+        public async Task<DescribeAlertConfigurationResponse> DescribeAlertConfigurationAsync(DescribeAlertConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAlertConfigurationWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries scaling configurations of the Elastic Container Instance type to learn the scaling configuration details. This allows you to select an appropriate template when you create elastic container instances. If you set OutputFormat to yaml, the output is a Kubernetes Deployment file in the YAML format.
          *
          * @param request DescribeEciScalingConfigurationDetailRequest
@@ -11230,6 +11338,122 @@ namespace AlibabaCloud.SDK.Ess20220222
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAlarmWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @param request ModifyAlertConfigurationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAlertConfigurationResponse
+         */
+        public ModifyAlertConfigurationResponse ModifyAlertConfigurationWithOptions(ModifyAlertConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleStatuses))
+            {
+                query["ScaleStatuses"] = request.ScaleStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroupId))
+            {
+                query["ScalingGroupId"] = request.ScalingGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAlertConfiguration",
+                Version = "2022-02-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAlertConfigurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request ModifyAlertConfigurationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAlertConfigurationResponse
+         */
+        public async Task<ModifyAlertConfigurationResponse> ModifyAlertConfigurationWithOptionsAsync(ModifyAlertConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleStatuses))
+            {
+                query["ScaleStatuses"] = request.ScaleStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingGroupId))
+            {
+                query["ScalingGroupId"] = request.ScalingGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAlertConfiguration",
+                Version = "2022-02-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAlertConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request ModifyAlertConfigurationRequest
+         * @return ModifyAlertConfigurationResponse
+         */
+        public ModifyAlertConfigurationResponse ModifyAlertConfiguration(ModifyAlertConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAlertConfigurationWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request ModifyAlertConfigurationRequest
+         * @return ModifyAlertConfigurationResponse
+         */
+        public async Task<ModifyAlertConfigurationResponse> ModifyAlertConfigurationAsync(ModifyAlertConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAlertConfigurationWithOptionsAsync(request, runtime);
         }
 
         /**
