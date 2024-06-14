@@ -22586,6 +22586,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetMode))
+            {
+                query["InternetMode"] = request.InternetMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4GatewayId))
             {
                 query["Ipv4GatewayId"] = request.Ipv4GatewayId;
@@ -22658,6 +22662,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetMode))
+            {
+                query["InternetMode"] = request.InternetMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4GatewayId))
             {
@@ -35685,12 +35693,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @deprecated OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.
+         *
          * @summary Queries route tables.
          *
          * @param request DescribeRouteTablesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeRouteTablesResponse
          */
+        // Deprecated
         public DescribeRouteTablesResponse DescribeRouteTablesWithOptions(DescribeRouteTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -35771,12 +35782,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @deprecated OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.
+         *
          * @summary Queries route tables.
          *
          * @param request DescribeRouteTablesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeRouteTablesResponse
          */
+        // Deprecated
         public async Task<DescribeRouteTablesResponse> DescribeRouteTablesWithOptionsAsync(DescribeRouteTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -35857,11 +35871,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @deprecated OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.
+         *
          * @summary Queries route tables.
          *
          * @param request DescribeRouteTablesRequest
          * @return DescribeRouteTablesResponse
          */
+        // Deprecated
         public DescribeRouteTablesResponse DescribeRouteTables(DescribeRouteTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -35869,11 +35886,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @deprecated OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.
+         *
          * @summary Queries route tables.
          *
          * @param request DescribeRouteTablesRequest
          * @return DescribeRouteTablesResponse
          */
+        // Deprecated
         public async Task<DescribeRouteTablesResponse> DescribeRouteTablesAsync(DescribeRouteTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

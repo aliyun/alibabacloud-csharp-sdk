@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("InternetMode")]
+        [Validation(Required=false)]
+        public string InternetMode { get; set; }
+
         /// <summary>
         /// The ID of the IPv4 gateway that you want to delete.
         /// 
