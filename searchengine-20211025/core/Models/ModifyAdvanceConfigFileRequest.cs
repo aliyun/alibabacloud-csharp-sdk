@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
         /// <summary>
         /// The name of the file.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]

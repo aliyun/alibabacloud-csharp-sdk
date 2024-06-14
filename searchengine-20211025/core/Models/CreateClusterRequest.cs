@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public int? Number { get; set; }
 
+            [NameInMap("partition")]
+            [Validation(Required=false)]
+            public string Partition { get; set; }
+
         }
 
         /// <summary>

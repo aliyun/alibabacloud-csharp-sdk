@@ -23,12 +23,20 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public GetClusterResponseBodyResult Result { get; set; }
         public class GetClusterResponseBodyResult : TeaModel {
+            [NameInMap("config")]
+            [Validation(Required=false)]
+            public Dictionary<string, Dictionary<string, object>> Config { get; set; }
+
             /// <summary>
             /// The time when the cluster was updated.
             /// </summary>
             [NameInMap("configUpdateTime")]
             [Validation(Required=false)]
             public string ConfigUpdateTime { get; set; }
+
+            [NameInMap("createTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
 
             /// <summary>
             /// The effective advanced configuration version.

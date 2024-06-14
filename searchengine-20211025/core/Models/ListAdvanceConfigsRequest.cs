@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public string IndexName { get; set; }
 
+        [NameInMap("newMode")]
+        [Validation(Required=false)]
+        public bool? NewMode { get; set; }
+
         /// <summary>
         /// The type of the advanced configurations. Valid values: online and offline. - online The default value is offline.
         /// </summary>

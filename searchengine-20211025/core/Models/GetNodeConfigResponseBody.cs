@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result set.
+        /// The configurations of the node.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public int? DataFragmentNumber { get; set; }
 
+            /// <summary>
+            /// The traffic percentage.
+            /// </summary>
             [NameInMap("flowRatio")]
             [Validation(Required=false)]
             public int? FlowRatio { get; set; }

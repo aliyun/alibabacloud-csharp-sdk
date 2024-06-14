@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateIndexRequest : TeaModel {
+        [NameInMap("buildParallelNum")]
+        [Validation(Required=false)]
+        public int? BuildParallelNum { get; set; }
+
         /// <summary>
         /// The content of the index.
         /// </summary>
@@ -125,6 +129,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("processParallelNum")]
+            [Validation(Required=false)]
+            public int? ProcessParallelNum { get; set; }
+
             /// <summary>
             /// The number of resources used for data update.
             /// </summary>
@@ -168,6 +176,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [NameInMap("extend")]
         [Validation(Required=false)]
         public Dictionary<string, object> Extend { get; set; }
+
+        [NameInMap("mergeParallelNum")]
+        [Validation(Required=false)]
+        public int? MergeParallelNum { get; set; }
 
         /// <summary>
         /// The name of the index.

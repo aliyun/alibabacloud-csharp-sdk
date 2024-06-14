@@ -23,6 +23,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public GetIndexResponseBodyResult Result { get; set; }
         public class GetIndexResponseBodyResult : TeaModel {
+            [NameInMap("cluster")]
+            [Validation(Required=false)]
+            public Dictionary<string, ResultClusterValue> Cluster { get; set; }
+
+            [NameInMap("config")]
+            [Validation(Required=false)]
+            public Dictionary<string, Dictionary<string, object>> Config { get; set; }
+
+            [NameInMap("configWhenBuild")]
+            [Validation(Required=false)]
+            public Dictionary<string, Dictionary<string, object>> ConfigWhenBuild { get; set; }
+
             /// <summary>
             /// The content of the index.
             /// </summary>
@@ -125,6 +137,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("processParallelNum")]
+                [Validation(Required=false)]
+                public int? ProcessParallelNum { get; set; }
 
                 /// <summary>
                 /// The number of resources used for data update.

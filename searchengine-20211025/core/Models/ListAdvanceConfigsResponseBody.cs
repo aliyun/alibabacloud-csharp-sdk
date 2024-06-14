@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public List<ListAdvanceConfigsResponseBodyResult> Result { get; set; }
         public class ListAdvanceConfigsResponseBodyResult : TeaModel {
+            [NameInMap("advanceConfigType")]
+            [Validation(Required=false)]
+            public string AdvanceConfigType { get; set; }
+
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
@@ -30,6 +34,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [NameInMap("contentType")]
             [Validation(Required=false)]
             public string ContentType { get; set; }
+
+            [NameInMap("creator")]
+            [Validation(Required=false)]
+            public string Creator { get; set; }
 
             /// <summary>
             /// The description.

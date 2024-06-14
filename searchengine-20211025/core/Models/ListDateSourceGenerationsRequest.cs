@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
     public class ListDateSourceGenerationsRequest : TeaModel {
         /// <summary>
         /// The data center where the data source is deployed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("domainName")]
         [Validation(Required=false)]

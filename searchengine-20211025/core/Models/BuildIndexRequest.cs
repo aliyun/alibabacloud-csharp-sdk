@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// The timestamp in seconds. It is of the INT type. This parameter is required for the API-pushed data source.
+        /// The timestamp in seconds. The value must be of the INTEGER type. This parameter is required if you specify an API data source.
         /// </summary>
         [NameInMap("dataTimeSec")]
         [Validation(Required=false)]
         public int? DataTimeSec { get; set; }
 
         /// <summary>
-        /// The data center where the data source is deployed.
+        /// The data center in which the data source resides.
         /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public long? Generation { get; set; }
 
         /// <summary>
-        /// This parameter is required for the odps data source.
+        /// The data partition. This parameter is required if dataSourceType is set to odps.
         /// </summary>
         [NameInMap("partition")]
         [Validation(Required=false)]

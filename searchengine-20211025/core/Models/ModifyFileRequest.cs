@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// The data partition. This parameter is required if the dataSourceType parameter is set to odps.
+        /// This parameter is required when index building for full data in a MaxCompute data source is triggered.
         /// </summary>
         [NameInMap("partition")]
         [Validation(Required=false)]
@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
         /// <summary>
         /// The name of the file in the full path
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]

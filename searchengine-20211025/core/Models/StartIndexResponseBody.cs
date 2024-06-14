@@ -8,19 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
-    public class DeleteIndexRequest : TeaModel {
+    public class StartIndexResponseBody : TeaModel {
         /// <summary>
-        /// The data source
-        /// 
-        /// This parameter is required.
+        /// id of request
         /// </summary>
-        [NameInMap("dataSource")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
-        public string DataSource { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("deleteDataSource")]
+        /// <summary>
+        /// Map
+        /// </summary>
+        [NameInMap("result")]
         [Validation(Required=false)]
-        public bool? DeleteDataSource { get; set; }
+        public Dictionary<string, object> Result { get; set; }
 
     }
 
