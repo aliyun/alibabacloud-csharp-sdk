@@ -9659,6 +9659,114 @@ namespace AlibabaCloud.SDK.Mse20190531
         }
 
         /**
+         * @summary Proxy Protocol开关
+         *
+         * @param request EnableProxyProtocolRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableProxyProtocolResponse
+         */
+        public EnableProxyProtocolResponse EnableProxyProtocolWithOptions(EnableProxyProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableProxyProtocol))
+            {
+                query["EnableProxyProtocol"] = request.EnableProxyProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableProxyProtocol",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableProxyProtocolResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Proxy Protocol开关
+         *
+         * @param request EnableProxyProtocolRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableProxyProtocolResponse
+         */
+        public async Task<EnableProxyProtocolResponse> EnableProxyProtocolWithOptionsAsync(EnableProxyProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableProxyProtocol))
+            {
+                query["EnableProxyProtocol"] = request.EnableProxyProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableProxyProtocol",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableProxyProtocolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Proxy Protocol开关
+         *
+         * @param request EnableProxyProtocolRequest
+         * @return EnableProxyProtocolResponse
+         */
+        public EnableProxyProtocolResponse EnableProxyProtocol(EnableProxyProtocolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableProxyProtocolWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Proxy Protocol开关
+         *
+         * @param request EnableProxyProtocolRequest
+         * @return EnableProxyProtocolResponse
+         */
+        public async Task<EnableProxyProtocolResponse> EnableProxyProtocolAsync(EnableProxyProtocolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableProxyProtocolWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Exports specified Nacos configurations.
          *
          * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
