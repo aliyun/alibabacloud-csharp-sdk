@@ -3301,6 +3301,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitEnvironment))
+            {
+                query["InitEnvironment"] = request.InitEnvironment;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedType))
             {
                 query["ManagedType"] = request.ManagedType;
@@ -3378,6 +3382,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
             {
                 query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitEnvironment))
+            {
+                query["InitEnvironment"] = request.InitEnvironment;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedType))
             {

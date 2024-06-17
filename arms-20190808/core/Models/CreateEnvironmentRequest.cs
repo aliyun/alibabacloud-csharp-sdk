@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string GrafanaWorkspaceId { get; set; }
 
+        [NameInMap("InitEnvironment")]
+        [Validation(Required=false)]
+        public bool? InitEnvironment { get; set; }
+
         /// <summary>
         /// Specifies whether agents or exporters are managed. Valid values:
         /// 
