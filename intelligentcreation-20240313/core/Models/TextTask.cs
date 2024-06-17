@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 
         [NameInMap("texts")]
         [Validation(Required=false)]
-        public Text Texts { get; set; }
+        public List<Text> Texts { get; set; }
 
         [NameInMap("theme")]
         [Validation(Required=false)]
