@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The resources that you want to import into a stack in the scenario.
+        /// The resources that you want to import into a stack in the resource management scenario.
         /// 
-        /// > This parameter is returned only if the scenario is of the Resource Management type.
+        /// > This parameter is returned only for a resource management scenario.
         /// </summary>
         [NameInMap("ResourcesToImport")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The template content of the scenario.
+        /// The template content of the resource scenario.
         /// </summary>
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]

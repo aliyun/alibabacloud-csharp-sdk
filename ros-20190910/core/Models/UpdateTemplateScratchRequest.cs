@@ -106,6 +106,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The source resource group.
+        /// 
+        /// >  You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.
         /// </summary>
         [NameInMap("SourceResourceGroup")]
         [Validation(Required=false)]
@@ -121,7 +123,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The resource types.
+            /// The resource types for filtering resources.
             /// </summary>
             [NameInMap("ResourceTypeFilter")]
             [Validation(Required=false)]
@@ -132,9 +134,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The source resources.
         /// 
-        /// If you specify SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the architecture of all resources that are associated with the specified source resources. For example, if you set the value of SourceResources to an ID of a Classic Load Balancer (CLB) instance, the system detects the architecture of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and virtual private clouds (VPCs), that are associated with the CLB instance.
-        /// 
-        /// If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources for SourceResources. In other cases, you can specify up to 200 source resources.
+        /// >  You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.
         /// </summary>
         [NameInMap("SourceResources")]
         [Validation(Required=false)]
@@ -162,17 +162,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The source tag.
+        /// 
+        /// >  You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.
         /// </summary>
         [NameInMap("SourceTag")]
         [Validation(Required=false)]
         public UpdateTemplateScratchRequestSourceTag SourceTag { get; set; }
         public class UpdateTemplateScratchRequestSourceTag : TeaModel {
             /// <summary>
-            /// The source tags that consist of key-value pairs.
+            /// The source tags. A tag contains a tag key and a tag value.
             /// 
-            /// If you want to specify only the tag key, you must set the tag value to an empty string. Example: {"TagKey": ""}.
+            /// If you want to specify only the tag key, you must leave the tag value empty. Example: {"TagKey": ""}.
             /// 
-            /// If you set TemplateScratchType to ArchitectureDetection, you can add up to five source tags. In other cases, you can add up to 10 source tags.
+            /// If you set TemplateScratchType to ArchitectureDetection, you can add up to 5 source tags. In other cases, you can add up to 10 source tags.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -190,7 +192,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The ID of the scenario.
+        /// The ID of the resource scenario.
+        /// 
+        /// The valid values of the ParameterKey and ParameterValue request parameters vary based on the IDs of different types of resource scenarios. For more information, see the "Additional information about request parameters" section of this topic.
+        /// 
+        /// >  You can call the [ListTemplateScratches](https://help.aliyun.com/document_detail/610832.html) operation to query the ID of a resource scenario.
         /// 
         /// This parameter is required.
         /// </summary>

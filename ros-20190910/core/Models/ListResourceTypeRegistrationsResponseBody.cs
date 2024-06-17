@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The registration records.
+        /// The registration records of the resource.
         /// </summary>
         [NameInMap("Registrations")]
         [Validation(Required=false)]
         public List<ListResourceTypeRegistrationsResponseBodyRegistrations> Registrations { get; set; }
         public class ListResourceTypeRegistrationsResponseBodyRegistrations : TeaModel {
             /// <summary>
-            /// The time when the version was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.
+            /// The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The registration state. Valid values:
             /// 
-            /// *   IN_PROGRESS
-            /// *   COMPLETE
-            /// *   FAILED
+            /// *   IN_PROGRESS: The registration is in progress.
+            /// *   COMPLETE: The registration is successful.
+            /// *   FAILED: The registration failed.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

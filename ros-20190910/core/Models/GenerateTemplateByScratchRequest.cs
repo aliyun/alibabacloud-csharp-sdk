@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ProvisionRegionId { get; set; }
 
         /// <summary>
-        /// The region ID of the scenario.
+        /// The region ID of the resource scenario.
         /// 
         /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.
         /// 
@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the scenario.
+        /// The ID of the resource scenario.
         /// 
-        /// For more information about how to query the IDs of scenarios, see [ListTemplateScratches](https://help.aliyun.com/document_detail/363050.html).
+        /// For more information about how to query the IDs of resource scenarios, see [ListTemplateScratches](https://help.aliyun.com/document_detail/363050.html).
         /// 
         /// This parameter is required.
         /// </summary>

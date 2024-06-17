@@ -77,6 +77,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The source resource group.
+        /// 
+        /// >  You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.
         /// </summary>
         [NameInMap("SourceResourceGroup")]
         [Validation(Required=false)]
@@ -85,9 +87,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The source resources.
         /// 
-        /// If you specify SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the architecture of all resources that are associated with the specified source resources. For example, if you set the value of SourceResources to an ID of a Classic Load Balancer (CLB) instance, the system detects the architecture of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and virtual private clouds (VPCs), that are associated with the CLB instance.
-        /// 
-        /// If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources for SourceResources. In other cases, you can specify up to 200 source resources.
+        /// >  You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.
         /// </summary>
         [NameInMap("SourceResources")]
         [Validation(Required=false)]
@@ -95,13 +95,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// The source tag.
+        /// 
+        /// >  You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.
         /// </summary>
         [NameInMap("SourceTag")]
         [Validation(Required=false)]
         public string SourceTagShrink { get; set; }
 
         /// <summary>
-        /// The ID of the scenario.
+        /// The ID of the resource scenario.
+        /// 
+        /// The valid values of the ParameterKey and ParameterValue request parameters vary based on the IDs of different types of resource scenarios. For more information, see the "Additional information about request parameters" section of this topic.
+        /// 
+        /// >  You can call the [ListTemplateScratches](https://help.aliyun.com/document_detail/610832.html) operation to query the ID of a resource scenario.
         /// 
         /// This parameter is required.
         /// </summary>
