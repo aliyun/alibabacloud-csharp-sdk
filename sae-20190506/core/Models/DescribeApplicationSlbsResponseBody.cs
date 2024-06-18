@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public List<DescribeApplicationSlbsResponseBodyDataInternet> Internet { get; set; }
             public class DescribeApplicationSlbsResponseBodyDataInternet : TeaModel {
+                [NameInMap("Cookie")]
+                [Validation(Required=false)]
+                public string Cookie { get; set; }
+
+                [NameInMap("CookieTimeout")]
+                [Validation(Required=false)]
+                public int? CookieTimeout { get; set; }
+
                 [NameInMap("HttpsCaCertId")]
                 [Validation(Required=false)]
                 public string HttpsCaCertId { get; set; }
@@ -57,6 +65,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
+
+                [NameInMap("StickySession")]
+                [Validation(Required=false)]
+                public bool? StickySession { get; set; }
+
+                [NameInMap("StickySessionType")]
+                [Validation(Required=false)]
+                public string StickySessionType { get; set; }
 
                 /// <summary>
                 /// The port specified for the SLB listener.
@@ -92,6 +108,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public List<DescribeApplicationSlbsResponseBodyDataIntranet> Intranet { get; set; }
             public class DescribeApplicationSlbsResponseBodyDataIntranet : TeaModel {
+                [NameInMap("Cookie")]
+                [Validation(Required=false)]
+                public string Cookie { get; set; }
+
+                [NameInMap("CookieTimeout")]
+                [Validation(Required=false)]
+                public int? CookieTimeout { get; set; }
+
                 [NameInMap("HttpsCaCertId")]
                 [Validation(Required=false)]
                 public string HttpsCaCertId { get; set; }
@@ -116,6 +140,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
+
+                [NameInMap("StickySession")]
+                [Validation(Required=false)]
+                public bool? StickySession { get; set; }
+
+                [NameInMap("StickySessionType")]
+                [Validation(Required=false)]
+                public string StickySessionType { get; set; }
 
                 /// <summary>
                 /// The port specified for the SLB listener.

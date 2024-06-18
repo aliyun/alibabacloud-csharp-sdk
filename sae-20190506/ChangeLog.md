@@ -1,3 +1,7 @@
+2024-06-18 Version: 1.21.10
+- Update API DescribeApplicationSlbs: update response param.
+
+
 2024-05-30 Version: 1.21.9
 - Update API DescribeApplicationSlbs: update response param.
 
