@@ -745,6 +745,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceAttributeAction))
+            {
+                body["DeviceAttributeAction"] = request.DeviceAttributeAction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceAttributeId))
             {
                 body["DeviceAttributeId"] = request.DeviceAttributeId;
@@ -828,6 +832,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceAttributeAction))
+            {
+                body["DeviceAttributeAction"] = request.DeviceAttributeAction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceAttributeId))
             {
@@ -6637,6 +6645,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceAttributeAction))
+            {
+                body["DeviceAttributeAction"] = request.DeviceAttributeAction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceAttributeId))
             {
                 body["DeviceAttributeId"] = request.DeviceAttributeId;
@@ -6724,6 +6736,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceAttributeAction))
+            {
+                body["DeviceAttributeAction"] = request.DeviceAttributeAction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceAttributeId))
             {
