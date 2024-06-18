@@ -1,3 +1,10 @@
+2024-06-18 Version: 2.1.0
+- Support API RestartServiceInstance.
+- Support API StartServiceInstance.
+- Support API StopServiceInstance.
+- Update API GetService: update param ServiceVersion.
+
+
 2024-05-30 Version: 2.0.0
 - Support API AddServiceSharedAccounts.
 - Support API GetServiceTemplateParameterConstraints.
