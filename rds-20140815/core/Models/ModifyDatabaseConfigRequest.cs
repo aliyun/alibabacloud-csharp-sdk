@@ -30,7 +30,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// The name of the database property that you want to modify.
+        /// The database property that you want to modify.
+        /// 
+        /// *   **If you want to modify a property of the database**, set this parameter to the name of the database property.
+        /// *   **If you want to archive data from the database to an OSS bucket**, specify the database status. If you set this parameter to `covert_online_db_to_cold_storage`, the system converts an online database to a cold storage database. If you set this parameter to `convert_cold_storage_db_to_online`, the system converts a cold storage database to an online database.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -40,6 +43,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The value of the database property that you want to modify.
+        /// 
+        /// *   **If you want to modify a property of the database**, set this parameter to the property value.
+        /// *   **If you want to archive data from the database to an OSS bucket**, set this parameter to **1**. The system converts a database to a cold storage database or an online database.
         /// 
         /// This parameter is required.
         /// </summary>

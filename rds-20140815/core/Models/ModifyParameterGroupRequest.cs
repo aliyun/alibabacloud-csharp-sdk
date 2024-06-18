@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   **Collectivity** (default): adds new parameters or modifies parameters in the original parameter template.
         /// 
-        /// > If ModifyMode is set to Collectivity, the system adds the value of **Parameters** to the parameter template or modifies the corresponding parameters in the parameter template. Other parameters in the original parameter template are not affected.
+        /// >  If you set the ModifyMode parameter to Collectivity, the system adds the value of the **Parameters** parameter to the original parameter template or modifies the corresponding parameters in the original parameter template. Other parameters in the original parameter template are not affected.
         /// 
         /// *   **Individual**: overwrites original parameters.
         /// 
-        /// > If ModifyMode is set to Individual, the system uses the value of **Parameters** to overwrite the original parameter in the parameter template.
+        /// >  If you set the ModifyMode parameter to Individual, the system uses the value of the **Parameters** parameter to overwrite the parameter settings in the original parameter template.
         /// </summary>
         [NameInMap("ModifyMode")]
         [Validation(Required=false)]

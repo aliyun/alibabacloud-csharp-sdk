@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**. Valid values: any non-zero positive integer.
+        /// The page number. Default value: **1**. Pages start from page 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

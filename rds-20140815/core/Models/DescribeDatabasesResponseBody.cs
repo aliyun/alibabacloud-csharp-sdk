@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDatabasesResponseBody : TeaModel {
         /// <summary>
-        /// The information about the database.
+        /// The information about the databases.
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CharacterSetName { get; set; }
 
                 /// <summary>
-                /// The collation of the character set. The example value C stands for localization.
+                /// The collation of the character set. The example value C indicates localization.
                 /// 
                 /// >  This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
@@ -152,6 +152,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// *   **Creating**
                 /// *   **Running**
                 /// *   **Deleting**
+                /// *   **Cold**
                 /// </summary>
                 [NameInMap("DBStatus")]
                 [Validation(Required=false)]
@@ -165,7 +166,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The page number.
+                /// The page number of the page to return.
                 /// </summary>
                 [NameInMap("PageNumber")]
                 [Validation(Required=false)]

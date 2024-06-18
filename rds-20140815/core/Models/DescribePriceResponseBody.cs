@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// Order parameters.
+        /// The order parameters.
+        /// 
+        /// >  If the **OrderParamOut** parameter is set to **true**, the value of the OrderParams parameter is returned.
         /// </summary>
         [NameInMap("OrderParams")]
         [Validation(Required=false)]
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? DiscountPrice { get; set; }
 
             /// <summary>
-            /// Order Information
+            /// The order information.
             /// </summary>
             [NameInMap("OrderLines")]
             [Validation(Required=false)]
@@ -138,14 +140,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// Estimated hourly cost calculated based on the maximum RCU selected by the user.
+            /// The estimated hourly cost that is calculated based on the maximum number of RCUs you specify.
             /// </summary>
             [NameInMap("TradeMaxRCUAmount")]
             [Validation(Required=false)]
             public float? TradeMaxRCUAmount { get; set; }
 
             /// <summary>
-            /// Estimated hourly cost calculated based on the minimum RCU selected by the user.
+            /// The estimated hourly cost that is calculated based on the minimum number of RCUs you specify.
             /// </summary>
             [NameInMap("TradeMinRCUAmount")]
             [Validation(Required=false)]
@@ -204,49 +206,49 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// Serverless price information.
+        /// The pricing information about a serverless RDS instance.
         /// </summary>
         [NameInMap("ServerlessPrice")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyServerlessPrice ServerlessPrice { get; set; }
         public class DescribePriceResponseBodyServerlessPrice : TeaModel {
             /// <summary>
-            /// MaxRCU discount amount.
+            /// The discount amount of the maximum number of RCUs.
             /// </summary>
             [NameInMap("RCUDiscountMaxAmount")]
             [Validation(Required=false)]
             public float? RCUDiscountMaxAmount { get; set; }
 
             /// <summary>
-            /// MinRCU discount amount.
+            /// The discount amount of the minimum number of RCUs.
             /// </summary>
             [NameInMap("RCUDiscountMinAmount")]
             [Validation(Required=false)]
             public float? RCUDiscountMinAmount { get; set; }
 
             /// <summary>
-            /// MaxRCU price.
+            /// The price of the maximum number of RCUs.
             /// </summary>
             [NameInMap("RCUOriginalMaxAmount")]
             [Validation(Required=false)]
             public float? RCUOriginalMaxAmount { get; set; }
 
             /// <summary>
-            /// MinRCU price.
+            /// The price of the minimum number of RCUs.
             /// </summary>
             [NameInMap("RCUOriginalMinAmount")]
             [Validation(Required=false)]
             public float? RCUOriginalMinAmount { get; set; }
 
             /// <summary>
-            /// Original price of the disk.
+            /// The original price of the disk capacity.
             /// </summary>
             [NameInMap("StorageOriginalAmount")]
             [Validation(Required=false)]
             public float? StorageOriginalAmount { get; set; }
 
             /// <summary>
-            /// Maximum total price before discount.
+            /// The maximum total price before the discount.
             /// </summary>
             [NameInMap("TotalOriginalMaxAmount")]
             [Validation(Required=false)]
@@ -260,21 +262,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TotalOriginalMinAmount { get; set; }
 
             /// <summary>
-            /// MaxRCU transaction price.
+            /// The transaction price of the maximum number of RCUs.
             /// </summary>
             [NameInMap("TradeMaxRCUAmount")]
             [Validation(Required=false)]
             public float? TradeMaxRCUAmount { get; set; }
 
             /// <summary>
-            /// MinRCU transaction price.
+            /// The transaction price of the minimum number of RCUs.
             /// </summary>
             [NameInMap("TradeMinRCUAmount")]
             [Validation(Required=false)]
             public float? TradeMinRCUAmount { get; set; }
 
             /// <summary>
-            /// Disk discount price.
+            /// The discounted price of the disk capacity.
             /// </summary>
             [NameInMap("storageDiscountAmount")]
             [Validation(Required=false)]

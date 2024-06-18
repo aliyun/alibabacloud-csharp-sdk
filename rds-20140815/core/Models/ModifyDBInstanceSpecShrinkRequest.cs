@@ -199,6 +199,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// The specifications that you want to change for a serverless instance.
+        /// 
+        /// >  This parameter is available only on the China site (aliyun.com).
         /// </summary>
         [NameInMap("ServerlessConfiguration")]
         [Validation(Required=false)]

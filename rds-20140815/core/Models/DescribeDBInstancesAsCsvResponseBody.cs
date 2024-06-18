@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// The connection mode of the instance. Valid values:
                 /// 
                 /// *   **Performance**: standard mode.
-                /// *   **Safety**: safe mode.
+                /// *   **Safety**: enhanced mode
                 /// </summary>
                 [NameInMap("ConnectionMode")]
                 [Validation(Required=false)]
                 public string ConnectionMode { get; set; }
 
                 /// <summary>
-                /// The internal endpoint of the instance.
+                /// The internal endpoint.
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceClassType { get; set; }
 
                 /// <summary>
-                /// The description of the instance.
+                /// The instance description.
                 /// </summary>
                 [NameInMap("DBInstanceDescription")]
                 [Validation(Required=false)]
@@ -117,15 +117,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The network type of the instance. Valid values:
                 /// 
-                /// *   **Internet**: Internet
-                /// *   **Intranet**: internal network
+                /// *   **Internet**
+                /// *   **Intranet**
                 /// </summary>
                 [NameInMap("DBInstanceNetType")]
                 [Validation(Required=false)]
                 public string DBInstanceNetType { get; set; }
 
                 /// <summary>
-                /// The status of the instance.
+                /// The instance status.
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]
@@ -139,10 +139,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? DBInstanceStorage { get; set; }
 
                 /// <summary>
-                /// The type of the instance. Valid values:
+                /// The instance type. Valid values:
                 /// 
                 /// *   **Primary**: primary instance
-                /// *   **Readonly**: read-only instance
+                /// *   **ReadOnly**: read-only instance
                 /// *   **Guard**: disaster recovery instance
                 /// *   **Temp**: temporary instance
                 /// </summary>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The engine version of the instance.
+                /// The engine version.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -179,21 +179,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// A deprecated parameter. You do not need to configure this parameter.
+                /// A deprecated parameter. You do not need to specify this parameter.
                 /// </summary>
                 [NameInMap("ExportKey")]
                 [Validation(Required=false)]
                 public string ExportKey { get; set; }
 
                 /// <summary>
-                /// The ID of the disaster recovery instance that is attached to the instance.
+                /// The ID of the disaster recovery instance that is attached to the primary instance.
                 /// </summary>
                 [NameInMap("GuardDBInstanceId")]
                 [Validation(Required=false)]
                 public string GuardDBInstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
+                /// The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance comes from its primary instance. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
                 /// </summary>
                 [NameInMap("IncrementSourceDBInstanceId")]
                 [Validation(Required=false)]
@@ -221,14 +221,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// The maintenance window of the instance. The time is displayed in UTC. Take note that the maintenance window that is displayed in the ApsaraDB RDS console is equal to the value of this parameter plus 8 hours.
+                /// The maintenance window of the instance. The time follows the ISO 8601 standard and is displayed in UTC. In the ApsaraDB RDS console, the maintenance window is displayed in UTC+8.
                 /// </summary>
                 [NameInMap("MaintainTime")]
                 [Validation(Required=false)]
                 public string MaintainTime { get; set; }
 
                 /// <summary>
-                /// The ID of the primary instance.
+                /// The primary instance ID.
                 /// </summary>
                 [NameInMap("MasterInstanceId")]
                 [Validation(Required=false)]
@@ -277,14 +277,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The IP address whitelist.
+                /// The IP addresses in the whitelist.
                 /// </summary>
                 [NameInMap("SecurityIPList")]
                 [Validation(Required=false)]
                 public string SecurityIPList { get; set; }
 
                 /// <summary>
-                /// A deprecated parameter. You do not need to configure this parameter.
+                /// A deprecated parameter. You do not need to specify this parameter.
                 /// </summary>
                 [NameInMap("SlaveZones")]
                 [Validation(Required=false)]
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// The ID of the temporary instance that is attached to the instance.
+                /// The ID of the temporary instance that is attached to the primary instance.
                 /// </summary>
                 [NameInMap("TempDBInstanceId")]
                 [Validation(Required=false)]
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the virtual private cloud (VPC).
+                /// The virtual private cloud (VPC) ID.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

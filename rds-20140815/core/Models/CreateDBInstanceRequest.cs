@@ -23,12 +23,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically complete the payment. Default value: true. Valid values:
+        /// Specifies whether to enable the automatic payment feature. Valid values:
         /// 
         /// *   **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
         /// *   **false**: does not automatically complete the payment. An unpaid order is generated.
         /// 
-        /// >  Default value: true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can pay for the order in the ApsaraDB RDS console.
+        /// >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -282,21 +282,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// Specifies whether to perform a dry run. Valid values:
         /// 
-        /// *   **true**: performs a dry run but does not perform the actual request. The system checks items such as the request parameters, request format, service limits, and available resources.
-        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is created.
+        /// *   **true**: performs a dry run but does not create the instance. The system checks items such as the request parameters, request format, service limits, and available resources.
+        /// *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, the instance is created.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The ID of the key that was used to encrypt the disk in the region where the disk is deployed. If this parameter is specified, disk encryption is enabled and you must also specify the **RoleARN** parameter. Disk encryption cannot be disabled after it is enabled.
+        /// The ID of the key that is used for cloud disk encryption in the region in which the instance is deployed. If this parameter is specified, cloud disk encryption is enabled and you must also specify the **RoleARN** parameter. Cloud disk encryption cannot be disabled after it is enabled.
         /// 
-        /// You can obtain the ID of the key in the Key Management Service (KMS) console or create a key. For more information, see [Create a CMK](https://help.aliyun.com/document_detail/181610.html).
+        /// You can obtain the ID of the key in the Key Management Service (KMS) console or create a key. For more information, see [Create a key](https://help.aliyun.com/document_detail/181610.html).
         /// 
-        /// > *   This parameter is not required when you create an RDS instance that runs MySQL, PostgreSQL, or SQL Server. You need to only specify the **RoleARN** parameter to create an instance that has cloud disk encryption enabled by using the obtained key ID.
+        /// > *   This parameter is not required when you create an instance that runs MySQL, PostgreSQL, or SQL Server. You need to only specify the **RoleARN** parameter to create an instance that has cloud disk encryption enabled by using the obtained key ID.
         /// > *   You can configure RAM authorization to require a RAM user to enable cloud disk encryption when the RAM user is used to create an instance. If cloud disk encryption is disabled during the instance creation, the creation operation fails. To complete the configuration, you can attach the following policy to the RAM user: `{"Version":"1","Statement":[{"Effect":"Deny","Action":"rds:CreateDBInstance","Resource":"*","Condition":{"StringEquals":{"rds:DiskEncryptionRequired":"false"}}}]}`
-        /// 
         /// 
         /// 
         /// >Warning: The configuration also affects the CreateOrder operation that is called to create instances in the console.
@@ -327,7 +326,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         ///     *   Valid values when you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**
         ///     *   Valid values when you set Engine to SQLServer: **08r2_ent_ha** (cloud disks, discontinued), **2008r2** (local disks, discontinued), **2012** (SQL Server EE Basic), **2012_ent_ha**, **2012_std_ha**, **2012_web**, **2014_ent_ha**, **2014_std_ha**, **2016_ent_ha**, **2016_std_ha**, **2016_web**, **2017_ent**, **2017_std_ha**, **2017_web**, **2019_ent**, **2019_std_ha**, **2019_web**, **2022_ent**, **2022_std_ha**, and **2022_web**
         ///     *   Valid values when you set Engine to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, **15.0**, and **16.0**
-        ///     *   Valid values when you set Engine to MariaDB: **10.3**
+        ///     *   Valid value if you set Engine to MariaDB: **10.3**
         /// 
         /// *   Serverless instance
         /// 
@@ -343,7 +342,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).
         /// 
-        /// *   Babelfish is supported only for ApsaraDB RDS for PostgreSQL instances that run PostgreSQL 15.
+        /// *   Babelfish is supported only for RDS instances that run PostgreSQL 15.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -354,12 +353,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The network type of the instance. Valid values:
         /// 
-        /// *   **VPC**: virtual private cloud (VPC).
+        /// *   **VPC**: virtual private cloud (VPC)
         /// *   **Classic**: the classic network
         /// 
-        /// > *   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.
-        /// > *   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.
-        /// > *   RDS instances that run SQL Server Basic and SQL Server Web can reside in the classic network and virtual private clouds (VPCs). If the instance runs other database engines, you must set this parameter to **VPC**.
+        /// > 
+        /// 
+        /// *   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.
+        /// 
+        /// *   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.
+        /// 
+        /// *   If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to **VPC**.
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
@@ -393,7 +396,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   **Year**
         /// *   **Month**
         /// 
-        /// >  If you set the PayType parameter to **Prepaid**, you must specify the UsedTime parameter.
+        /// >  If you set the PayType parameter to **Prepaid**, you must specify this parameter.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -508,8 +511,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// *   **true**
             /// *   **false** (default)
             /// 
-            /// > *   This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.
-            /// > *   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.
+            /// > 
+            /// 
+            /// *   This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.
+            /// 
+            /// *   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.
             /// </summary>
             [NameInMap("SwitchForce")]
             [Validation(Required=false)]
@@ -518,19 +524,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// Specifies whether to enable the automatic storage expansion feature for the instance. This feature is supported if your RDS instance runs MySQL or PostgreSQL. Valid values:
+        /// Specifies whether to enable the automatic storage expansion feature for the instance. This feature is supported if the instance runs MySQL or PostgreSQL. Valid values:
         /// 
         /// *   **Enable**
         /// *   **Disable** (default)
         /// 
-        /// >  After the instance is created, you can call the ModifyDasInstanceConfig operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion](https://help.aliyun.com/document_detail/173826.html).
+        /// >  After the instance is created, you can call the ModifyDasInstanceConfig operation to adjust the settings. For more information, see [Configure automatic storage expansion](https://help.aliyun.com/document_detail/173826.html).
         /// </summary>
         [NameInMap("StorageAutoScale")]
         [Validation(Required=false)]
         public string StorageAutoScale { get; set; }
 
         /// <summary>
-        /// The threshold in percentage based on which automatic storage expansion is triggered.
+        /// The threshold in percentage based on which automatic storage expansion is triggered. Valid values:
         /// 
         /// *   **10**
         /// *   **20**
@@ -657,7 +663,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// *   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from **1 to 5**.
         /// *   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from **1 to 11**.
         /// 
-        /// >  If you set the PayType parameter to **Prepaid**, you must specify the UsedTime parameter.
+        /// >  If you set the PayType parameter to **Prepaid**, you must specify this parameter.
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]
@@ -697,7 +703,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The whitelists. If you enter more than one IP address or CIDR block, you must separate these IP addresses or CIDR blocks with commas (,). Do not add spaces preceding or following the commas. Example: `192.168.0.1,172.16.213.9`.
+        /// The entries in the whitelist. If you enter multiple IP addresses or CIDR blocks, you must separate the IP addresses or CIDR blocks with commas (,). Do not add spaces preceding or following the commas. Example: `192.168.0.1,172.16.213.9`.
         /// </summary>
         [NameInMap("WhitelistTemplateList")]
         [Validation(Required=false)]
