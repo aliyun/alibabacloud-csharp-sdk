@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180208.Models
 {
     public class SelectedDomainListRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ListDate")]
         [Validation(Required=false)]
         public string ListDate { get; set; }

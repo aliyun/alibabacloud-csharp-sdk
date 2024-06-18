@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180208.Models
 {
     public class FailDemandRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }

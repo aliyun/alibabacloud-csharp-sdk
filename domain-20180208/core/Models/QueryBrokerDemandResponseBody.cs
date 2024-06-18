@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             [Validation(Required=false)]
             public float? ServicePayPrice { get; set; }
 
+            [NameInMap("SettleBasePrice")]
+            [Validation(Required=false)]
+            public float? SettleBasePrice { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }

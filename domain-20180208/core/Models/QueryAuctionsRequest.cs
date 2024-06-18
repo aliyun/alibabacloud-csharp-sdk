@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180208.Models
 {
     public class QueryAuctionsRequest : TeaModel {
+        [NameInMap("AuctionEndTimeOrder")]
+        [Validation(Required=false)]
+        public string AuctionEndTimeOrder { get; set; }
+
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("Statuses")]
+        [Validation(Required=false)]
+        public string Statuses { get; set; }
 
     }
 
