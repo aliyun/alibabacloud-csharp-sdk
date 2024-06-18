@@ -5,6 +5,13 @@
 - Update API UpdatePrivateAccessPolicy: add param DeviceAttributeAction.
 
 
+2024-06-18 Version: 1.7.2
+- Update API CreatePrivateAccessPolicy: add param DeviceAttributeAction.
+- Update API GetPrivateAccessPolicy: update response param.
+- Update API ListPrivateAccessPolices: update response param.
+- Update API UpdatePrivateAccessPolicy: add param DeviceAttributeAction.
+
+
 2024-06-11 Version: 1.7.1
 - Generated csharp 2023-01-20 for csas.
 
