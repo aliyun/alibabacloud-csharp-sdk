@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateLoadBalancerRequest : TeaModel {
         /// <summary>
-        /// The mode used to assign IP addresses to zones of the ALB instance. Default value: Dynamic. Valid values:
+        /// The mode in which IP addresses are allocated. Valid values:
         /// 
-        /// *   **Fixed:** assigns a static IP address to the ALB instance.
-        /// *   **Dynamic:** dynamically assigns an IP address to each zone of the ALB instance.
+        /// *   **Fixed**: The ALB instance uses a static IP address.
+        /// *   **Dynamic**: dynamically allocates an IP address to each zone of the ALB instance.
         /// </summary>
         [NameInMap("AddressAllocatedMode")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The configuration of the billing method of the ALB instance.
+        /// The billing method of the ALB instance.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public CreateLoadBalancerRequestLoadBalancerBillingConfig LoadBalancerBillingConfig { get; set; }
         public class CreateLoadBalancerRequestLoadBalancerBillingConfig : TeaModel {
             /// <summary>
-            /// The ID of the Elastic IP Address (EIP) bandwidth plan that is associated with the ALB instance if the ALB instance uses a public IP address.
+            /// The ID of the Internet Shared Bandwidth instance that is associated with the Internet-facing ALB instance.
             /// </summary>
             [NameInMap("BandwidthPackageId")]
             [Validation(Required=false)]
@@ -201,9 +201,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public List<CreateLoadBalancerRequestZoneMappings> ZoneMappings { get; set; }
         public class CreateLoadBalancerRequestZoneMappings : TeaModel {
-            /// <summary>
-            /// 公网实例绑定的EIP实例ID。至少需要添加2个可用区，最多支持添加10个可用区。
-            /// </summary>
             [NameInMap("AllocationId")]
             [Validation(Required=false)]
             public string AllocationId { get; set; }

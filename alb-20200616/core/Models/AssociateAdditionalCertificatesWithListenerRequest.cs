@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class AssociateAdditionalCertificatesWithListenerRequest : TeaModel {
         /// <summary>
-        /// The additional certificates.
+        /// The extended validation certificates that you want to add to the listener.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<AssociateAdditionalCertificatesWithListenerRequestCertificates> Certificates { get; set; }
         public class AssociateAdditionalCertificatesWithListenerRequestCertificates : TeaModel {
             /// <summary>
-            /// The certificate ID. Only server certificates are supported.
+            /// The ID of the certificate. Only server certificates are supported.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The listener ID. You must specify the ID of an HTTPS listener or a QUIC listener.
+        /// The listener ID. This parameter is supported only by HTTPS and QUIC listeners.
         /// 
         /// This parameter is required.
         /// </summary>

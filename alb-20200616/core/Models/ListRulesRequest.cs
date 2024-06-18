@@ -62,14 +62,23 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public List<string> RuleIds { get; set; }
 
+        /// <summary>
+        /// The tag.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListRulesRequestTag> Tag { get; set; }
         public class ListRulesRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

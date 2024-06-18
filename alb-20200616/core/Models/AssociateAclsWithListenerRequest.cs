@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class AssociateAclsWithListenerRequest : TeaModel {
         /// <summary>
-        /// The ACL IDs. You can specify up to three IDs in each call.
+        /// The IDs of the ACLs. You can specify up to three IDs in each call.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The listener ID.
+        /// The ID of the listener.
         /// 
         /// This parameter is required.
         /// </summary>

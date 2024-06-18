@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not specify this parameter, the system automatically uses the value of RequestId as the value of ClientToken. The request ID may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The HTTP status codes that are used to indicate whether the backend server passes the health check.
+        /// The HTTP status codes that indicate healthy backend servers.
         /// </summary>
         [NameInMap("HealthCheckCodes")]
         [Validation(Required=false)]
@@ -49,16 +49,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? HealthCheckConnectPort { get; set; }
 
         /// <summary>
-        /// The domain name that you want to use for the health check.
+        /// The domain name that is used for health checks. Valid values:
         /// 
-        /// Default value: **$SERVER_IP**. The domain name must be 1 to 80 characters in length. The domain name must meet the following requirements:
+        /// *   **$SERVER_IP**: the private IP addresses of backend servers. If an IP address is specified, or this parameter is not specified, the ALB instance uses the private IP addresses of backend servers as domain names for health checks.
+        /// *   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
         /// 
-        /// *   The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).
-        /// *   The domain name must contain at least one period (.) but cannot start or end with a period (.).
-        /// *   The rightmost domain label can contain only letters but cannot contain digits or hyphens (-).
-        /// *   Other fields cannot start or end with a hyphen (-).
-        /// 
-        /// This parameter is required only if the **HealthCheckProtocol** parameter is set to **HTTP**.
+        /// >  This parameter takes effect only when `HealthCheckProtocol` is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPS.
         /// </summary>
         [NameInMap("HealthCheckHost")]
         [Validation(Required=false)]

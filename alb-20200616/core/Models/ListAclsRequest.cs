@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListAclsRequest : TeaModel {
         /// <summary>
-        /// The ID of the network ACL. You can specify at most 20 network ACL IDs in each request.
+        /// Filter access control lists (ACLs) by ACL ID.
         /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]

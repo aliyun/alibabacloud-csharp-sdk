@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string Ipv6AddressType { get; set; }
 
         /// <summary>
-        /// The configuration of the billing method of the ALB instance.
+        /// The billing method of the ALB instance.
         /// </summary>
         [NameInMap("LoadBalancerBillingConfig")]
         [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The billing method.
             /// 
-            /// Only **PostPay** may be returned. The value indicates the pay-as-you-go billing method.
+            /// Set the value to **PostPay**, which indicates the pay-as-you-go billing method.
             /// </summary>
             [NameInMap("PayType")]
             [Validation(Required=false)]
@@ -187,16 +187,19 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<GetLoadBalancerAttributeResponseBodyLoadBalancerOperationLocks> LoadBalancerOperationLocks { get; set; }
         public class GetLoadBalancerAttributeResponseBodyLoadBalancerOperationLocks : TeaModel {
             /// <summary>
-            /// The configuration of the configuration read-only mode.
+            /// The reason why the ALB instance is locked. This parameter is valid only if **LoadBalancerBussinessStatus** is set to **Abnormal**.
             /// </summary>
             [NameInMap("LockReason")]
             [Validation(Required=false)]
             public string LockReason { get; set; }
 
             /// <summary>
-            /// The reason why the configuration read-only mode was enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.
+            /// The type of the lock. Valid values:
             /// 
-            /// This parameter is valid only if you set the **ModificationProtectionStatus** parameter to **ConsoleProtection**.
+            /// *   **SecurityLocked**: The ALB instance is locked due to security reasons.
+            /// *   **RelatedResourceLocked**: The ALB instance is locked due to other resources that are associated with the ALB instance.
+            /// *   **FinancialLocked**: The ALB instance is locked due to overdue payments.
+            /// *   **ResidualLocked**: The ALB instance is locked because the associated resources have overdue payments and the resources are released.
             /// </summary>
             [NameInMap("LockType")]
             [Validation(Required=false)]
@@ -268,6 +271,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("SecurityGroupIds")]
+        [Validation(Required=false)]
+        public List<string> SecurityGroupIds { get; set; }
+
         /// <summary>
         /// The tag value.
         /// 
@@ -278,14 +285,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<GetLoadBalancerAttributeResponseBodyTags> Tags { get; set; }
         public class GetLoadBalancerAttributeResponseBodyTags : TeaModel {
             /// <summary>
-            /// The zones and the vSwitches. You must specify at least two zones.
+            /// The tag key.
+            /// 
+            /// The tag key can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The IP addresses that are used by the ALB instance.
+            /// The tag value.
+            /// 
+            /// The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -310,38 +321,51 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<GetLoadBalancerAttributeResponseBodyZoneMappings> ZoneMappings { get; set; }
         public class GetLoadBalancerAttributeResponseBodyZoneMappings : TeaModel {
             /// <summary>
-            /// The ID of the vSwitch in the zone. Each zone can contain only one vSwitch and one subnet.
+            /// The IP address of the ALB instance.
             /// </summary>
             [NameInMap("LoadBalancerAddresses")]
             [Validation(Required=false)]
             public List<GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses> LoadBalancerAddresses { get; set; }
             public class GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses : TeaModel {
                 /// <summary>
-                /// The ID of the zone where the ALB instance was deployed.
+                /// An IPv4 address.
                 /// 
-                /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the zones of the ALB instance.
+                /// This parameter takes effect when **AddressIPVersion** is set to **IPv4** or **DualStack**. The network type is determined by the value of **AddressType**.
                 /// </summary>
                 [NameInMap("Address")]
                 [Validation(Required=false)]
                 public string Address { get; set; }
 
+                /// <summary>
+                /// The elastic IP address (EIP).
+                /// </summary>
                 [NameInMap("AllocationId")]
                 [Validation(Required=false)]
                 public string AllocationId { get; set; }
 
+                /// <summary>
+                /// The type of EIP. Valid values:
+                /// 
+                /// *   **Common**: an EIP.
+                /// *   **Anycast**: an Anycast EIP.
+                /// 
+                /// >  For more information about the regions in which ALB supports Anycast EIPs, see [Limits](https://help.aliyun.com/document_detail/460727.html).
+                /// </summary>
                 [NameInMap("EipType")]
                 [Validation(Required=false)]
                 public string EipType { get; set; }
 
+                /// <summary>
+                /// The private IPv4 address.
+                /// </summary>
                 [NameInMap("IntranetAddress")]
                 [Validation(Required=false)]
                 public string IntranetAddress { get; set; }
 
                 /// <summary>
-                /// The protocol version. Valid values:
+                /// An IPv6 address.
                 /// 
-                /// *   **IPv4:** IPv4.
-                /// *   **DualStack:** dual stack.
+                /// This parameter takes effect only when **AddressIPVersion** is set to **DualStack**. The network type is determined by the value of **Ipv6AddressType**.
                 /// </summary>
                 [NameInMap("Ipv6Address")]
                 [Validation(Required=false)]
@@ -350,15 +374,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// The type of IPv6 address that is used by the ALB instance. Valid values:
-            /// 
-            /// *   **Internet:** The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
-            /// *   **Intranet:** The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.
+            /// The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
+            /// <summary>
+            /// The zone ID of the ALB instance.
+            /// 
+            /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the most recent zone list.
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }

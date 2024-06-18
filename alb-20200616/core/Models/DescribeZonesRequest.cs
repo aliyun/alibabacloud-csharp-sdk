@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// *   **zh-CN**: Chinese
+        /// *   **zh-CN** (default): Chinese
         /// *   **en-US**: English
         /// *   **ja**: Japanese
         /// </summary>

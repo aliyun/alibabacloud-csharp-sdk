@@ -7738,6 +7738,238 @@ namespace AlibabaCloud.SDK.Alb20200616
         }
 
         /**
+         * @summary 创建访问控制信息
+         *
+         * @param request LoadBalancerJoinSecurityGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return LoadBalancerJoinSecurityGroupResponse
+         */
+        public LoadBalancerJoinSecurityGroupResponse LoadBalancerJoinSecurityGroupWithOptions(LoadBalancerJoinSecurityGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
+            {
+                query["LoadBalancerId"] = request.LoadBalancerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupIds))
+            {
+                query["SecurityGroupIds"] = request.SecurityGroupIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LoadBalancerJoinSecurityGroup",
+                Version = "2020-06-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LoadBalancerJoinSecurityGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建访问控制信息
+         *
+         * @param request LoadBalancerJoinSecurityGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return LoadBalancerJoinSecurityGroupResponse
+         */
+        public async Task<LoadBalancerJoinSecurityGroupResponse> LoadBalancerJoinSecurityGroupWithOptionsAsync(LoadBalancerJoinSecurityGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
+            {
+                query["LoadBalancerId"] = request.LoadBalancerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupIds))
+            {
+                query["SecurityGroupIds"] = request.SecurityGroupIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LoadBalancerJoinSecurityGroup",
+                Version = "2020-06-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LoadBalancerJoinSecurityGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建访问控制信息
+         *
+         * @param request LoadBalancerJoinSecurityGroupRequest
+         * @return LoadBalancerJoinSecurityGroupResponse
+         */
+        public LoadBalancerJoinSecurityGroupResponse LoadBalancerJoinSecurityGroup(LoadBalancerJoinSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LoadBalancerJoinSecurityGroupWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建访问控制信息
+         *
+         * @param request LoadBalancerJoinSecurityGroupRequest
+         * @return LoadBalancerJoinSecurityGroupResponse
+         */
+        public async Task<LoadBalancerJoinSecurityGroupResponse> LoadBalancerJoinSecurityGroupAsync(LoadBalancerJoinSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LoadBalancerJoinSecurityGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 创建访问控制信息
+         *
+         * @param request LoadBalancerLeaveSecurityGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return LoadBalancerLeaveSecurityGroupResponse
+         */
+        public LoadBalancerLeaveSecurityGroupResponse LoadBalancerLeaveSecurityGroupWithOptions(LoadBalancerLeaveSecurityGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
+            {
+                query["LoadBalancerId"] = request.LoadBalancerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupIds))
+            {
+                query["SecurityGroupIds"] = request.SecurityGroupIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LoadBalancerLeaveSecurityGroup",
+                Version = "2020-06-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LoadBalancerLeaveSecurityGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建访问控制信息
+         *
+         * @param request LoadBalancerLeaveSecurityGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return LoadBalancerLeaveSecurityGroupResponse
+         */
+        public async Task<LoadBalancerLeaveSecurityGroupResponse> LoadBalancerLeaveSecurityGroupWithOptionsAsync(LoadBalancerLeaveSecurityGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
+            {
+                query["LoadBalancerId"] = request.LoadBalancerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupIds))
+            {
+                query["SecurityGroupIds"] = request.SecurityGroupIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LoadBalancerLeaveSecurityGroup",
+                Version = "2020-06-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LoadBalancerLeaveSecurityGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建访问控制信息
+         *
+         * @param request LoadBalancerLeaveSecurityGroupRequest
+         * @return LoadBalancerLeaveSecurityGroupResponse
+         */
+        public LoadBalancerLeaveSecurityGroupResponse LoadBalancerLeaveSecurityGroup(LoadBalancerLeaveSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LoadBalancerLeaveSecurityGroupWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建访问控制信息
+         *
+         * @param request LoadBalancerLeaveSecurityGroupRequest
+         * @return LoadBalancerLeaveSecurityGroupResponse
+         */
+        public async Task<LoadBalancerLeaveSecurityGroupResponse> LoadBalancerLeaveSecurityGroupAsync(LoadBalancerLeaveSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LoadBalancerLeaveSecurityGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Moves a resource to another resource group.
          *
          * @param request MoveResourceGroupRequest

@@ -10,56 +10,56 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListAclsResponseBody : TeaModel {
         /// <summary>
-        /// The network ACLs.
+        /// A list of ACLs.
         /// </summary>
         [NameInMap("Acls")]
         [Validation(Required=false)]
         public List<ListAclsResponseBodyAcls> Acls { get; set; }
         public class ListAclsResponseBodyAcls : TeaModel {
             /// <summary>
-            /// The ID of the network ACL.
+            /// The ACL ID.
             /// </summary>
             [NameInMap("AclId")]
             [Validation(Required=false)]
             public string AclId { get; set; }
 
             /// <summary>
-            /// The name of the network ACL.
+            /// The name of the ACL.
             /// </summary>
             [NameInMap("AclName")]
             [Validation(Required=false)]
             public string AclName { get; set; }
 
             /// <summary>
-            /// The status of the network ACL. Valid values:
+            /// The status of the ACL. Valid values:
             /// 
             /// *   **Creating**: The network ACL is being created.
             /// *   **Available**: The network ACL is available.
-            /// *   **Configuring**: The network ACL is being configured.
+            /// *   **Configuring**
             /// </summary>
             [NameInMap("AclStatus")]
             [Validation(Required=false)]
             public string AclStatus { get; set; }
 
             /// <summary>
-            /// The IP version. **IPv4** is returned.
+            /// The IP version of the ACL. Only **IPv4** may be returned.
             /// </summary>
             [NameInMap("AddressIPVersion")]
             [Validation(Required=false)]
             public string AddressIPVersion { get; set; }
 
             /// <summary>
-            /// The status of configuration management. Valid values:
+            /// Indicates whether configuration management is enabled. Valid values:
             /// 
-            /// *   **true**: configuration management is enabled.
-            /// *   **false**: configuration management is disabled.
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("ConfigManagedEnabled")]
             [Validation(Required=false)]
             public bool? ConfigManagedEnabled { get; set; }
 
             /// <summary>
-            /// The time when the resource was created.
+            /// The time when the ACL was created. The follows the `YYYY-MM-DDThh:mm:ssZ` format.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public List<ListAclsResponseBodyAclsTags> Tags { get; set; }
             public class ListAclsResponseBodyAclsTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

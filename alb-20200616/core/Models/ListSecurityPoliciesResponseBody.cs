@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public List<string> Ciphers { get; set; }
 
             /// <summary>
-            /// The time when the resource was created.
+            /// The time when the ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -100,14 +100,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public List<ListSecurityPoliciesResponseBodySecurityPoliciesTags> Tags { get; set; }
             public class ListSecurityPoliciesResponseBodySecurityPoliciesTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

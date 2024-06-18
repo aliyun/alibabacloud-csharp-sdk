@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<DissociateAdditionalCertificatesFromListenerRequestCertificates> Certificates { get; set; }
         public class DissociateAdditionalCertificatesFromListenerRequestCertificates : TeaModel {
             /// <summary>
-            /// The certificate ID. Only server certificates are supported. You can specify up to 20 IDs.
+            /// The certificate ID. Only server certificates are supported. A maximum of 20 certificate IDs are supported.
             /// 
             /// This parameter is required.
             /// </summary>

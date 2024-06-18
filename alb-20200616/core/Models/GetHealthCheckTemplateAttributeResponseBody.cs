@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class GetHealthCheckTemplateAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status codes that are used to determine whether the backend server passes the health check.
-        /// 
-        /// *   If **HealthCheckProtocol** is set to **HTTP**, **HealthCheckCodes** can be set to **http_2xx** (default), **http_3xx**, **http_4xx**, and **http_5xx**. Separate multiple HTTP status codes with a comma (,).
-        /// *   If **HealthCheckProtocol** is set to **gRPC**, **HealthCheckCodes** can be set to **0 to 99**. Default value: **0**. Value ranges are supported. You can enter up to 20 value ranges and separate them with a comma (,).
-        /// 
-        /// > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
+        /// The HTTP status codes that indicate healthy backend servers.
         /// </summary>
         [NameInMap("HealthCheckCodes")]
         [Validation(Required=false)]
@@ -146,14 +141,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<GetHealthCheckTemplateAttributeResponseBodyTags> Tags { get; set; }
         public class GetHealthCheckTemplateAttributeResponseBodyTags : TeaModel {
             /// <summary>
-            /// The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The tag key. The tag key can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The tag value. The tag value can be up to 128 characters in length, and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

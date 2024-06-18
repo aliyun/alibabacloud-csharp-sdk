@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The security policy IDs. You can specify up to 20 IDs.
+        /// The security policy IDs. You can specify at most 20 security policies.
         /// </summary>
         [NameInMap("SecurityPolicyIds")]
         [Validation(Required=false)]

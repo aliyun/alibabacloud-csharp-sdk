@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListListenersRequest : TeaModel {
         /// <summary>
-        /// The listener IDs. You can specify up to 20 IDs.
+        /// The listener IDs. You can specify at most 20 listener IDs.
         /// </summary>
         [NameInMap("ListenerIds")]
         [Validation(Required=false)]

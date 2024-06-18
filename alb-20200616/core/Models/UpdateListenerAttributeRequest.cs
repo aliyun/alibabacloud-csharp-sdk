@@ -10,12 +10,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateListenerAttributeRequest : TeaModel {
         /// <summary>
-        /// The certificate authority (CA) certificates.
+        /// The information about the CA certificate.
         /// </summary>
         [NameInMap("CaCertificates")]
         [Validation(Required=false)]
         public List<UpdateListenerAttributeRequestCaCertificates> CaCertificates { get; set; }
         public class UpdateListenerAttributeRequestCaCertificates : TeaModel {
+            /// <summary>
+            /// The ID of the CA certificate. You can specify only one CA certificate.
+            /// 
+            /// >  This parameter is required if **CaEnabled** is set to **true**.
+            /// </summary>
             [NameInMap("CertificateId")]
             [Validation(Required=false)]
             public string CertificateId { get; set; }
@@ -33,14 +38,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? CaEnabled { get; set; }
 
         /// <summary>
-        /// The certificates.
+        /// The details about the certificates.
         /// </summary>
         [NameInMap("Certificates")]
         [Validation(Required=false)]
         public List<UpdateListenerAttributeRequestCertificates> Certificates { get; set; }
         public class UpdateListenerAttributeRequestCertificates : TeaModel {
             /// <summary>
-            /// The certificate ID. Only server certificates are supported. You can specify up to 20 certificate IDs.
+            /// The ID of the certificate. Only server certificates are supported. You can specify at most 20 certificate IDs.
             /// </summary>
             [NameInMap("CertificateId")]
             [Validation(Required=false)]
@@ -53,21 +58,21 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The default actions in the forwarding rules.
+        /// The actions of the default forwarding rule.
         /// </summary>
         [NameInMap("DefaultActions")]
         [Validation(Required=false)]
         public List<UpdateListenerAttributeRequestDefaultActions> DefaultActions { get; set; }
         public class UpdateListenerAttributeRequestDefaultActions : TeaModel {
             /// <summary>
-            /// The configuration of the action. This parameter is required and takes effect when the **Type** parameter is set to **FowardGroup**. You can specify configurations for up to 20 forwarding actions.
+            /// The forwarding action. This parameter takes effect only when you set **Type** to **ForwardGroup**. You can specify at most 20 actions.
             /// </summary>
             [NameInMap("ForwardGroupConfig")]
             [Validation(Required=false)]
@@ -83,7 +88,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public List<UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
                 public class UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples : TeaModel {
                     /// <summary>
-                    /// The server group to which requests are forwarded.
+                    /// The ID of the server group to which requests are forwarded.
                     /// 
                     /// This parameter is required.
                     /// </summary>
@@ -96,9 +101,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// The type of the action. You can specify only one action type.
+            /// The action type. You can specify only one type.
             /// 
-            /// Set the value to **ForwardGroup** to forward requests to multiple vServer groups.
+            /// Set the value to **ForwardGroup**, which specifies that requests are forwarded to multiple server groups.
             /// 
             /// This parameter is required.
             /// </summary>
@@ -159,7 +164,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ListenerDescription { get; set; }
 
         /// <summary>
-        /// The ID of the Application Load Balancer (ALB) listener.
+        /// The ID of the Application Load Balancer (ALB) instance.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -216,18 +221,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string SecurityPolicyId { get; set; }
 
         /// <summary>
-        /// The configuration of the XForwardFor headers.
+        /// The configurations of the X-Forwarded-For header.
         /// </summary>
         [NameInMap("XForwardedForConfig")]
         [Validation(Required=false)]
         public UpdateListenerAttributeRequestXForwardedForConfig XForwardedForConfig { get; set; }
         public class UpdateListenerAttributeRequestXForwardedForConfig : TeaModel {
             /// <summary>
-            /// The name of the custom header. This parameter takes effect only when the **XForwardedForClientCertClientVerifyEnabled** parameter is set to **true**.
+            /// The name of the custom header. The header takes effect only when you set **XForwardedForClientCertClientVerifyEnabled** to **true**.
             /// 
-            /// The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (_), and digits.
+            /// The name must be 1 to 40 characters in length. The name can contain lowercase letters, digits, hyphens (-), and underscores (-).
             /// 
-            /// > This parameter is available only when you create an HTTPS listener.
+            /// >  Only HTTPS listeners support this parameter.
             /// </summary>
             [NameInMap("XForwardedForClientCertClientVerifyAlias")]
             [Validation(Required=false)]
@@ -239,88 +244,88 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// *   **true**
             /// *   **false**
             /// 
-            /// > This parameter is available only when you create an HTTPS listener.
+            /// >  Only HTTPS listeners support this parameter.
             /// </summary>
             [NameInMap("XForwardedForClientCertClientVerifyEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForClientCertClientVerifyEnabled { get; set; }
 
             /// <summary>
-            /// The name of the custom header. This parameter takes effect only when the **XForwardedForClientCertFingerprintEnabled** parameter is set to **true**.
+            /// The name of the custom header. The header takes effect only when you set **XForwardedForClientCertFingerprintEnabled** to **true**.
             /// 
-            /// The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (_), and digits.
+            /// The name must be 1 to 40 characters in length. The name can contain lowercase letters, digits, hyphens (-), and underscores (-).
             /// 
-            /// > This parameter is available only when you create an HTTPS listener.
+            /// >  Only HTTPS listeners support this parameter.
             /// </summary>
             [NameInMap("XForwardedForClientCertFingerprintAlias")]
             [Validation(Required=false)]
             public string XForwardedForClientCertFingerprintAlias { get; set; }
 
             /// <summary>
-            /// Indicates whether the `X-Forwarded-Clientcert-fingerprint` header is used to retrieve the fingerprint of the client certificate. Valid values:
+            /// Specifies whether to use the `X-Forwarded-Clientcert-fingerprint` header to retrieve the fingerprint of the client certificate. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
             /// 
-            /// > This parameter is available only when you create an HTTPS listener.
+            /// >  Only HTTPS listeners support this parameter.
             /// </summary>
             [NameInMap("XForwardedForClientCertFingerprintEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForClientCertFingerprintEnabled { get; set; }
 
             /// <summary>
-            /// The name of the custom header. This parameter takes effect only when **XForwardedForClientCertIssuerDNEnabled** is set to **true**.
+            /// The name of the custom header. The header takes effect only when you set **XForwardedForClientCertIssuerDNEnabled** to **true**.
             /// 
-            /// The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (_), and digits.
+            /// The name must be 1 to 40 characters in length. The name can contain lowercase letters, digits, hyphens (-), and underscores (-).
             /// 
-            /// > This parameter is available only when you create an HTTPS listener.
+            /// >  Only HTTPS listeners support this parameter.
             /// </summary>
             [NameInMap("XForwardedForClientCertIssuerDNAlias")]
             [Validation(Required=false)]
             public string XForwardedForClientCertIssuerDNAlias { get; set; }
 
             /// <summary>
-            /// Indicates whether the `X-Forwarded-Clientcert-issuerdn` header is used to retrieve information about the authority that issues the client certificate. Valid values:
+            /// Specifies whether to use the `X-Forwarded-Clientcert-issuerdn` header to retrieve information about the authority that issues the client certificate. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
             /// 
-            /// > This parameter is available only when you create an HTTPS listener.
+            /// >  Only HTTPS listeners support this parameter.
             /// </summary>
             [NameInMap("XForwardedForClientCertIssuerDNEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForClientCertIssuerDNEnabled { get; set; }
 
             /// <summary>
-            /// The name of the custom header. This parameter takes effect only when **XForwardedForClientCertSubjectDNEnabled** is set to **true**.
+            /// The name of the custom header. This parameter is valid only if the **XForwardedForClientCertSubjectDNEnabled** parameter is set to true.****
             /// 
-            /// The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (_), and digits.
+            /// The name must be 1 to 40 characters in length, The name can contain lowercase letters, digits, hyphens (-), and underscores (-).
             /// 
-            /// > This parameter is available only when you create an HTTPS listener.
+            /// >  Only HTTPS listeners support this parameter.
             /// </summary>
             [NameInMap("XForwardedForClientCertSubjectDNAlias")]
             [Validation(Required=false)]
             public string XForwardedForClientCertSubjectDNAlias { get; set; }
 
             /// <summary>
-            /// Indicates whether the `X-Forwarded-Clientcert-subjectdn` header is used to retrieve information about the owner of the client certificate. Valid values:
+            /// Specifies whether to use the `X-Forwarded-Clientcert-subjectdn` header to retrieve information about the owner of the client certificate. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
             /// 
-            /// > This parameter is available only when you create an HTTPS listener.
+            /// >  Only HTTPS listeners support this parameter.
             /// </summary>
             [NameInMap("XForwardedForClientCertSubjectDNEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForClientCertSubjectDNEnabled { get; set; }
 
             /// <summary>
-            /// Specifies whether to use the `X-Forwarded-Client-Ip` header to retrieve the source IP addresses. Valid values:
+            /// Specifies whether to use the X-Forwarded-For header to preserve client IP addresses. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
             /// 
-            /// > HTTP, HTTPS, and QUIC listeners support this parameter. By default, the feature that corresponds to this parameter is unavailable. If you want to use this feature, contact your account manager.
+            /// >  This parameter is returned only for HTTP and HTTPS listeners.
             /// </summary>
             [NameInMap("XForwardedForClientSourceIpsEnabled")]
             [Validation(Required=false)]
@@ -329,43 +334,43 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// The trusted proxy IP address.
             /// 
-            /// ALB traverses `X-Forwarded-For` backward and selects the first IP address that is not in the trusted IP address list as the real IP address of the client. The IP address is used in source IP address throttling.
+            /// ALB instances traverse the IP addresses in the `X-Forwarded-For` header from the rightmost IP address to the leftmost IP address. The first IP address that is not on the trusted IP address list is considered the client IP address. Requests from the client IP address are throttled.
             /// </summary>
             [NameInMap("XForwardedForClientSourceIpsTrusted")]
             [Validation(Required=false)]
             public string XForwardedForClientSourceIpsTrusted { get; set; }
 
             /// <summary>
-            /// Indicates whether the `X-Forwarded-Client-Port` header is used to retrieve the client port. Valid values:
+            /// Specifies whether to use the `X-Forwarded-Client-Port` header to retrieve the client port. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
             /// 
-            /// > This parameter is available only when you create an HTTP or HTTPS listener.
+            /// >  This parameter is returned only for HTTP and HTTPS listeners.
             /// </summary>
             [NameInMap("XForwardedForClientSrcPortEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForClientSrcPortEnabled { get; set; }
 
             /// <summary>
-            /// Indicates whether the `X-Forwarded-For` header is used to retrieve the client IP address. Valid values:
+            /// Specifies whether to use the `X-Forwarded-For` header to retrieve client IP addresses. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
             /// 
-            /// > This parameter is available only when you create an HTTP or HTTPS listener.
+            /// >  This parameter is returned only for HTTP and HTTPS listeners.
             /// </summary>
             [NameInMap("XForwardedForEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForEnabled { get; set; }
 
             /// <summary>
-            /// Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol of the ALB instance. Valid values:
+            /// Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
             /// 
-            /// > HTTP, HTTPS, and QUIC listeners support this parameter.
+            /// >  This parameter is supported by HTTP, HTTPS, and QUIC listeners.
             /// </summary>
             [NameInMap("XForwardedForProtoEnabled")]
             [Validation(Required=false)]
@@ -377,19 +382,19 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// *   **true**
             /// *   **false**
             /// 
-            /// > HTTP, HTTPS, and QUIC listeners support this parameter.
+            /// >  This parameter is supported by HTTP, HTTPS, and QUIC listeners.
             /// </summary>
             [NameInMap("XForwardedForSLBIdEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForSLBIdEnabled { get; set; }
 
             /// <summary>
-            /// Specifies whether to use the `X-Forwarded-Port` header to retrieve the listening port. Valid values:
+            /// Specifies whether to use the `X-Forwarded-Port` header to retrieve the listener port of the ALB instance. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
             /// 
-            /// > HTTP, HTTPS, and QUIC listeners support this parameter.
+            /// >  This parameter is supported by HTTP, HTTPS, and QUIC listeners.
             /// </summary>
             [NameInMap("XForwardedForSLBPortEnabled")]
             [Validation(Required=false)]
