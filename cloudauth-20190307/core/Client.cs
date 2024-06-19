@@ -1414,6 +1414,126 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         }
 
         /**
+         * @summary 人脸凭证核验服务
+         *
+         * @param request DeepfakeDetectRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeepfakeDetectResponse
+         */
+        public DeepfakeDetectResponse DeepfakeDetectWithOptions(DeepfakeDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceInputType))
+            {
+                query["FaceInputType"] = request.FaceInputType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceUrl))
+            {
+                query["FaceUrl"] = request.FaceUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterOrderNo))
+            {
+                query["OuterOrderNo"] = request.OuterOrderNo;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceBase64))
+            {
+                body["FaceBase64"] = request.FaceBase64;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeepfakeDetect",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeepfakeDetectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 人脸凭证核验服务
+         *
+         * @param request DeepfakeDetectRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeepfakeDetectResponse
+         */
+        public async Task<DeepfakeDetectResponse> DeepfakeDetectWithOptionsAsync(DeepfakeDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceInputType))
+            {
+                query["FaceInputType"] = request.FaceInputType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceUrl))
+            {
+                query["FaceUrl"] = request.FaceUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterOrderNo))
+            {
+                query["OuterOrderNo"] = request.OuterOrderNo;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceBase64))
+            {
+                body["FaceBase64"] = request.FaceBase64;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeepfakeDetect",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeepfakeDetectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 人脸凭证核验服务
+         *
+         * @param request DeepfakeDetectRequest
+         * @return DeepfakeDetectResponse
+         */
+        public DeepfakeDetectResponse DeepfakeDetect(DeepfakeDetectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeepfakeDetectWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 人脸凭证核验服务
+         *
+         * @param request DeepfakeDetectRequest
+         * @return DeepfakeDetectResponse
+         */
+        public async Task<DeepfakeDetectResponse> DeepfakeDetectAsync(DeepfakeDetectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeepfakeDetectWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @param request DescribeDeviceInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeDeviceInfoResponse
