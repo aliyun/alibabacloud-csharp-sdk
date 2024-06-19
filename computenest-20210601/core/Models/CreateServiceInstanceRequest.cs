@@ -9,16 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class CreateServiceInstanceRequest : TeaModel {
-        [NameInMap("BusinessInfo")]
-        [Validation(Required=false)]
-        public CreateServiceInstanceRequestBusinessInfo BusinessInfo { get; set; }
-        public class CreateServiceInstanceRequestBusinessInfo : TeaModel {
-            [NameInMap("OrderParams")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> OrderParams { get; set; }
-
-        }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -27,6 +17,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public CreateServiceInstanceRequestCommodity Commodity { get; set; }
         public class CreateServiceInstanceRequestCommodity : TeaModel {
+            [NameInMap("AutoPay")]
+            [Validation(Required=false)]
+            public bool? AutoPay { get; set; }
+
+            [NameInMap("AutoRenew")]
+            [Validation(Required=false)]
+            public bool? AutoRenew { get; set; }
+
             [NameInMap("PayPeriod")]
             [Validation(Required=false)]
             public long? PayPeriod { get; set; }
@@ -97,6 +95,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Parameters { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -105,6 +106,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }

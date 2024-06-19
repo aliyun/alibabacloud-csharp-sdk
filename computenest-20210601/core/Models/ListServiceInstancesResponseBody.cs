@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string OperationStartTime { get; set; }
 
+            [NameInMap("OrderId")]
+            [Validation(Required=false)]
+            public string OrderId { get; set; }
+
             [NameInMap("Outputs")]
             [Validation(Required=false)]
             public string Outputs { get; set; }
@@ -89,6 +93,20 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public ListServiceInstancesResponseBodyServiceInstancesService Service { get; set; }
             public class ListServiceInstancesResponseBodyServiceInstancesService : TeaModel {
+                [NameInMap("Commodity")]
+                [Validation(Required=false)]
+                public ListServiceInstancesResponseBodyServiceInstancesServiceCommodity Commodity { get; set; }
+                public class ListServiceInstancesResponseBodyServiceInstancesServiceCommodity : TeaModel {
+                    [NameInMap("SaasBoostMetadata")]
+                    [Validation(Required=false)]
+                    public string SaasBoostMetadata { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
                 [NameInMap("DeployType")]
                 [Validation(Required=false)]
                 public string DeployType { get; set; }

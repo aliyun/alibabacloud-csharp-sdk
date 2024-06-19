@@ -37,6 +37,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * @summary 资源组转组
+         *
+         * @param request ChangeResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ChangeResourceGroupResponse
+         */
         public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -76,6 +83,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 资源组转组
+         *
+         * @param request ChangeResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ChangeResourceGroupResponse
+         */
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupWithOptionsAsync(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -115,18 +129,37 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 资源组转组
+         *
+         * @param request ChangeResourceGroupRequest
+         * @return ChangeResourceGroupResponse
+         */
         public ChangeResourceGroupResponse ChangeResourceGroup(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeResourceGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 资源组转组
+         *
+         * @param request ChangeResourceGroupRequest
+         * @return ChangeResourceGroupResponse
+         */
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupAsync(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ChangeResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 继续部署服务实例
+         *
+         * @param request ContinueDeployServiceInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ContinueDeployServiceInstanceResponse
+         */
         public ContinueDeployServiceInstanceResponse ContinueDeployServiceInstanceWithOptions(ContinueDeployServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -174,6 +207,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ContinueDeployServiceInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 继续部署服务实例
+         *
+         * @param request ContinueDeployServiceInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ContinueDeployServiceInstanceResponse
+         */
         public async Task<ContinueDeployServiceInstanceResponse> ContinueDeployServiceInstanceWithOptionsAsync(ContinueDeployServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -221,36 +261,45 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ContinueDeployServiceInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 继续部署服务实例
+         *
+         * @param request ContinueDeployServiceInstanceRequest
+         * @return ContinueDeployServiceInstanceResponse
+         */
         public ContinueDeployServiceInstanceResponse ContinueDeployServiceInstance(ContinueDeployServiceInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ContinueDeployServiceInstanceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 继续部署服务实例
+         *
+         * @param request ContinueDeployServiceInstanceRequest
+         * @return ContinueDeployServiceInstanceResponse
+         */
         public async Task<ContinueDeployServiceInstanceResponse> ContinueDeployServiceInstanceAsync(ContinueDeployServiceInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ContinueDeployServiceInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param tmpReq CreateServiceInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateServiceInstanceResponse
+         */
         public CreateServiceInstanceResponse CreateServiceInstanceWithOptions(CreateServiceInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateServiceInstanceShrinkRequest request = new CreateServiceInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BusinessInfo))
-            {
-                request.BusinessInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BusinessInfo, "BusinessInfo", "json");
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Parameters))
             {
                 request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessInfoShrink))
-            {
-                query["BusinessInfo"] = request.BusinessInfoShrink;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -342,24 +391,21 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<CreateServiceInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param tmpReq CreateServiceInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateServiceInstanceResponse
+         */
         public async Task<CreateServiceInstanceResponse> CreateServiceInstanceWithOptionsAsync(CreateServiceInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateServiceInstanceShrinkRequest request = new CreateServiceInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BusinessInfo))
-            {
-                request.BusinessInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BusinessInfo, "BusinessInfo", "json");
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Parameters))
             {
                 request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessInfoShrink))
-            {
-                query["BusinessInfo"] = request.BusinessInfoShrink;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -451,18 +497,33 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<CreateServiceInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request CreateServiceInstanceRequest
+         * @return CreateServiceInstanceResponse
+         */
         public CreateServiceInstanceResponse CreateServiceInstance(CreateServiceInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateServiceInstanceWithOptions(request, runtime);
         }
 
+        /**
+         * @param request CreateServiceInstanceRequest
+         * @return CreateServiceInstanceResponse
+         */
         public async Task<CreateServiceInstanceResponse> CreateServiceInstanceAsync(CreateServiceInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateServiceInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 删除服务实例
+         *
+         * @param request DeleteServiceInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteServiceInstancesResponse
+         */
         public DeleteServiceInstancesResponse DeleteServiceInstancesWithOptions(DeleteServiceInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -498,6 +559,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<DeleteServiceInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除服务实例
+         *
+         * @param request DeleteServiceInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteServiceInstancesResponse
+         */
         public async Task<DeleteServiceInstancesResponse> DeleteServiceInstancesWithOptionsAsync(DeleteServiceInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -533,18 +601,37 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<DeleteServiceInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 删除服务实例
+         *
+         * @param request DeleteServiceInstancesRequest
+         * @return DeleteServiceInstancesResponse
+         */
         public DeleteServiceInstancesResponse DeleteServiceInstances(DeleteServiceInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteServiceInstancesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 删除服务实例
+         *
+         * @param request DeleteServiceInstancesRequest
+         * @return DeleteServiceInstancesResponse
+         */
         public async Task<DeleteServiceInstancesResponse> DeleteServiceInstancesAsync(DeleteServiceInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteServiceInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询服务实例详情
+         *
+         * @param request GetServiceInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetServiceInstanceResponse
+         */
         public GetServiceInstanceResponse GetServiceInstanceWithOptions(GetServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -580,6 +667,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<GetServiceInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询服务实例详情
+         *
+         * @param request GetServiceInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetServiceInstanceResponse
+         */
         public async Task<GetServiceInstanceResponse> GetServiceInstanceWithOptionsAsync(GetServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -615,18 +709,37 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<GetServiceInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询服务实例详情
+         *
+         * @param request GetServiceInstanceRequest
+         * @return GetServiceInstanceResponse
+         */
         public GetServiceInstanceResponse GetServiceInstance(GetServiceInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetServiceInstanceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询服务实例详情
+         *
+         * @param request GetServiceInstanceRequest
+         * @return GetServiceInstanceResponse
+         */
         public async Task<GetServiceInstanceResponse> GetServiceInstanceAsync(GetServiceInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetServiceInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取ROS参数限制
+         *
+         * @param request GetServiceTemplateParameterConstraintsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetServiceTemplateParameterConstraintsResponse
+         */
         public GetServiceTemplateParameterConstraintsResponse GetServiceTemplateParameterConstraintsWithOptions(GetServiceTemplateParameterConstraintsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -694,6 +807,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<GetServiceTemplateParameterConstraintsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取ROS参数限制
+         *
+         * @param request GetServiceTemplateParameterConstraintsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetServiceTemplateParameterConstraintsResponse
+         */
         public async Task<GetServiceTemplateParameterConstraintsResponse> GetServiceTemplateParameterConstraintsWithOptionsAsync(GetServiceTemplateParameterConstraintsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -761,18 +881,37 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<GetServiceTemplateParameterConstraintsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 获取ROS参数限制
+         *
+         * @param request GetServiceTemplateParameterConstraintsRequest
+         * @return GetServiceTemplateParameterConstraintsResponse
+         */
         public GetServiceTemplateParameterConstraintsResponse GetServiceTemplateParameterConstraints(GetServiceTemplateParameterConstraintsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetServiceTemplateParameterConstraintsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 获取ROS参数限制
+         *
+         * @param request GetServiceTemplateParameterConstraintsRequest
+         * @return GetServiceTemplateParameterConstraintsResponse
+         */
         public async Task<GetServiceTemplateParameterConstraintsResponse> GetServiceTemplateParameterConstraintsAsync(GetServiceTemplateParameterConstraintsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetServiceTemplateParameterConstraintsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 查询服务实例部署升级以及应用日志
+         *
+         * @param request ListServiceInstanceLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListServiceInstanceLogsResponse
+         */
         public ListServiceInstanceLogsResponse ListServiceInstanceLogsWithOptions(ListServiceInstanceLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -820,6 +959,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ListServiceInstanceLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询服务实例部署升级以及应用日志
+         *
+         * @param request ListServiceInstanceLogsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListServiceInstanceLogsResponse
+         */
         public async Task<ListServiceInstanceLogsResponse> ListServiceInstanceLogsWithOptionsAsync(ListServiceInstanceLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -867,18 +1013,37 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ListServiceInstanceLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 查询服务实例部署升级以及应用日志
+         *
+         * @param request ListServiceInstanceLogsRequest
+         * @return ListServiceInstanceLogsResponse
+         */
         public ListServiceInstanceLogsResponse ListServiceInstanceLogs(ListServiceInstanceLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListServiceInstanceLogsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 查询服务实例部署升级以及应用日志
+         *
+         * @param request ListServiceInstanceLogsRequest
+         * @return ListServiceInstanceLogsResponse
+         */
         public async Task<ListServiceInstanceLogsResponse> ListServiceInstanceLogsAsync(ListServiceInstanceLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListServiceInstanceLogsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 展示实例资源
+         *
+         * @param request ListServiceInstanceResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListServiceInstanceResourcesResponse
+         */
         public ListServiceInstanceResourcesResponse ListServiceInstanceResourcesWithOptions(ListServiceInstanceResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -942,6 +1107,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ListServiceInstanceResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 展示实例资源
+         *
+         * @param request ListServiceInstanceResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListServiceInstanceResourcesResponse
+         */
         public async Task<ListServiceInstanceResourcesResponse> ListServiceInstanceResourcesWithOptionsAsync(ListServiceInstanceResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1005,18 +1177,35 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ListServiceInstanceResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 展示实例资源
+         *
+         * @param request ListServiceInstanceResourcesRequest
+         * @return ListServiceInstanceResourcesResponse
+         */
         public ListServiceInstanceResourcesResponse ListServiceInstanceResources(ListServiceInstanceResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListServiceInstanceResourcesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 展示实例资源
+         *
+         * @param request ListServiceInstanceResourcesRequest
+         * @return ListServiceInstanceResourcesResponse
+         */
         public async Task<ListServiceInstanceResourcesResponse> ListServiceInstanceResourcesAsync(ListServiceInstanceResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListServiceInstanceResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @param request ListServiceInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListServiceInstancesResponse
+         */
         public ListServiceInstancesResponse ListServiceInstancesWithOptions(ListServiceInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1064,6 +1253,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ListServiceInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request ListServiceInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListServiceInstancesResponse
+         */
         public async Task<ListServiceInstancesResponse> ListServiceInstancesWithOptionsAsync(ListServiceInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1111,16 +1305,348 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ListServiceInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request ListServiceInstancesRequest
+         * @return ListServiceInstancesResponse
+         */
         public ListServiceInstancesResponse ListServiceInstances(ListServiceInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListServiceInstancesWithOptions(request, runtime);
         }
 
+        /**
+         * @param request ListServiceInstancesRequest
+         * @return ListServiceInstancesResponse
+         */
         public async Task<ListServiceInstancesResponse> ListServiceInstancesAsync(ListServiceInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListServiceInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 重启服务实例
+         *
+         * @param request RestartServiceInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RestartServiceInstanceResponse
+         */
+        public RestartServiceInstanceResponse RestartServiceInstanceWithOptions(RestartServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RestartServiceInstance",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RestartServiceInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 重启服务实例
+         *
+         * @param request RestartServiceInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RestartServiceInstanceResponse
+         */
+        public async Task<RestartServiceInstanceResponse> RestartServiceInstanceWithOptionsAsync(RestartServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RestartServiceInstance",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RestartServiceInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 重启服务实例
+         *
+         * @param request RestartServiceInstanceRequest
+         * @return RestartServiceInstanceResponse
+         */
+        public RestartServiceInstanceResponse RestartServiceInstance(RestartServiceInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RestartServiceInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 重启服务实例
+         *
+         * @param request RestartServiceInstanceRequest
+         * @return RestartServiceInstanceResponse
+         */
+        public async Task<RestartServiceInstanceResponse> RestartServiceInstanceAsync(RestartServiceInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RestartServiceInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 启动服务实例
+         *
+         * @param request StartServiceInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartServiceInstanceResponse
+         */
+        public StartServiceInstanceResponse StartServiceInstanceWithOptions(StartServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartServiceInstance",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartServiceInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 启动服务实例
+         *
+         * @param request StartServiceInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StartServiceInstanceResponse
+         */
+        public async Task<StartServiceInstanceResponse> StartServiceInstanceWithOptionsAsync(StartServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartServiceInstance",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartServiceInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 启动服务实例
+         *
+         * @param request StartServiceInstanceRequest
+         * @return StartServiceInstanceResponse
+         */
+        public StartServiceInstanceResponse StartServiceInstance(StartServiceInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartServiceInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 启动服务实例
+         *
+         * @param request StartServiceInstanceRequest
+         * @return StartServiceInstanceResponse
+         */
+        public async Task<StartServiceInstanceResponse> StartServiceInstanceAsync(StartServiceInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartServiceInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 停止服务实例
+         *
+         * @param request StopServiceInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopServiceInstanceResponse
+         */
+        public StopServiceInstanceResponse StopServiceInstanceWithOptions(StopServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopServiceInstance",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopServiceInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止服务实例
+         *
+         * @param request StopServiceInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return StopServiceInstanceResponse
+         */
+        public async Task<StopServiceInstanceResponse> StopServiceInstanceWithOptionsAsync(StopServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopServiceInstance",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopServiceInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 停止服务实例
+         *
+         * @param request StopServiceInstanceRequest
+         * @return StopServiceInstanceResponse
+         */
+        public StopServiceInstanceResponse StopServiceInstance(StopServiceInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopServiceInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 停止服务实例
+         *
+         * @param request StopServiceInstanceRequest
+         * @return StopServiceInstanceResponse
+         */
+        public async Task<StopServiceInstanceResponse> StopServiceInstanceAsync(StopServiceInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopServiceInstanceWithOptionsAsync(request, runtime);
         }
 
     }

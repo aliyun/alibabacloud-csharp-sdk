@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("GrafanaDashBoardUrl")]
+        [Validation(Required=false)]
+        public string GrafanaDashBoardUrl { get; set; }
+
         [NameInMap("IsOperated")]
         [Validation(Required=false)]
         public bool? IsOperated { get; set; }

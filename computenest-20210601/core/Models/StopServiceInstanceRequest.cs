@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
-    public class DeleteServiceInstancesRequest : TeaModel {
+    public class StopServiceInstanceRequest : TeaModel {
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// </summary>
         [NameInMap("ServiceInstanceId")]
         [Validation(Required=false)]
-        public List<string> ServiceInstanceId { get; set; }
+        public string ServiceInstanceId { get; set; }
 
     }
 
