@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateAggregateConfigRuleShrinkRequest : TeaModel {
+        [NameInMap("AccountIdsScope")]
+        [Validation(Required=false)]
+        public string AccountIdsScope { get; set; }
+
         /// <summary>
         /// The ID of the account group.
         /// 
@@ -86,6 +90,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ExcludeFolderIdsScope { get; set; }
 
+        [NameInMap("ExcludeRegionIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeRegionIdsScope { get; set; }
+
+        [NameInMap("ExcludeResourceGroupIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeResourceGroupIdsScope { get; set; }
+
         /// <summary>
         /// The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).
         /// 
@@ -94,6 +106,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("ExcludeResourceIdsScope")]
         [Validation(Required=false)]
         public string ExcludeResourceIdsScope { get; set; }
+
+        [NameInMap("ExcludeTagsScope")]
+        [Validation(Required=false)]
+        public List<UpdateAggregateConfigRuleShrinkRequestExcludeTagsScope> ExcludeTagsScope { get; set; }
+        public class UpdateAggregateConfigRuleShrinkRequestExcludeTagsScope : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
         /// <summary>
         /// The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.
@@ -146,6 +172,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ResourceGroupIdsScope { get; set; }
 
+        [NameInMap("ResourceIdsScope")]
+        [Validation(Required=false)]
+        public string ResourceIdsScope { get; set; }
+
         /// <summary>
         /// The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).
         /// </summary>
@@ -191,6 +221,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("TagValueScope")]
         [Validation(Required=false)]
         public string TagValueScope { get; set; }
+
+        [NameInMap("TagsScope")]
+        [Validation(Required=false)]
+        public List<UpdateAggregateConfigRuleShrinkRequestTagsScope> TagsScope { get; set; }
+        public class UpdateAggregateConfigRuleShrinkRequestTagsScope : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
     }
 

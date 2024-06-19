@@ -930,9 +930,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
             {
@@ -941,6 +954,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
             {
@@ -954,10 +971,19 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateContent))
             {
                 body["TemplateContent"] = request.TemplateContent;
             }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1025,9 +1051,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
             {
@@ -1036,6 +1075,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
             {
@@ -1049,10 +1092,19 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateContent))
             {
                 body["TemplateContent"] = request.TemplateContent;
             }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1316,6 +1368,10 @@ namespace AlibabaCloud.SDK.Config20200907
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIdsScope))
+            {
+                body["AccountIdsScope"] = request.AccountIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
             {
                 body["AggregatorId"] = request.AggregatorId;
@@ -1344,9 +1400,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["ExcludeFolderIdsScope"] = request.ExcludeFolderIdsScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderIdsScope))
             {
@@ -1367,6 +1436,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
             {
@@ -1396,6 +1469,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1441,6 +1523,10 @@ namespace AlibabaCloud.SDK.Config20200907
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIdsScope))
+            {
+                body["AccountIdsScope"] = request.AccountIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
             {
                 body["AggregatorId"] = request.AggregatorId;
@@ -1469,9 +1555,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["ExcludeFolderIdsScope"] = request.ExcludeFolderIdsScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderIdsScope))
             {
@@ -1492,6 +1591,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
             {
@@ -1521,6 +1624,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1950,9 +2062,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
             {
@@ -1961,6 +2086,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
             {
@@ -1974,10 +2103,19 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateContent))
             {
                 body["TemplateContent"] = request.TemplateContent;
             }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -2041,9 +2179,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
             {
@@ -2052,6 +2203,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
             {
@@ -2065,10 +2220,19 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateContent))
             {
                 body["TemplateContent"] = request.TemplateContent;
             }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -2338,9 +2502,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
             {
@@ -2357,6 +2534,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
             {
@@ -2386,6 +2567,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -2445,9 +2635,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
             {
@@ -2464,6 +2667,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
             {
@@ -2493,6 +2700,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -5887,6 +6103,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
+         * @summary 获取账号组规则详情
+         *
          * @description This example shows how to query the details of the `cr-7f7d626622af0041****` rule in the `ca-7f00626622af0041****` account group.
          *
          * @param request GetAggregateConfigRuleRequest
@@ -5925,6 +6143,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
+         * @summary 获取账号组规则详情
+         *
          * @description This example shows how to query the details of the `cr-7f7d626622af0041****` rule in the `ca-7f00626622af0041****` account group.
          *
          * @param request GetAggregateConfigRuleRequest
@@ -5963,6 +6183,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
+         * @summary 获取账号组规则详情
+         *
          * @description This example shows how to query the details of the `cr-7f7d626622af0041****` rule in the `ca-7f00626622af0041****` account group.
          *
          * @param request GetAggregateConfigRuleRequest
@@ -5975,6 +6197,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
+         * @summary 获取账号组规则详情
+         *
          * @description This example shows how to query the details of the `cr-7f7d626622af0041****` rule in the `ca-7f00626622af0041****` account group.
          *
          * @param request GetAggregateConfigRuleRequest
@@ -15045,9 +15269,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
             {
@@ -15056,6 +15293,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
             {
@@ -15069,6 +15310,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -15131,9 +15381,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
             {
@@ -15142,6 +15405,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
             {
@@ -15155,6 +15422,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -15421,6 +15697,10 @@ namespace AlibabaCloud.SDK.Config20200907
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIdsScope))
+            {
+                body["AccountIdsScope"] = request.AccountIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
             {
                 body["AggregatorId"] = request.AggregatorId;
@@ -15453,9 +15733,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["ExcludeFolderIdsScope"] = request.ExcludeFolderIdsScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderIdsScope))
             {
@@ -15477,6 +15770,10 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
             {
                 body["ResourceTypesScope"] = request.ResourceTypesScopeShrink;
@@ -15497,6 +15794,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -15539,6 +15845,10 @@ namespace AlibabaCloud.SDK.Config20200907
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIdsScope))
+            {
+                body["AccountIdsScope"] = request.AccountIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
             {
                 body["AggregatorId"] = request.AggregatorId;
@@ -15571,9 +15881,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["ExcludeFolderIdsScope"] = request.ExcludeFolderIdsScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderIdsScope))
             {
@@ -15595,6 +15918,10 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
             {
                 body["ResourceTypesScope"] = request.ResourceTypesScopeShrink;
@@ -15615,6 +15942,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -15993,9 +16329,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
             {
@@ -16004,6 +16353,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
             {
@@ -16017,6 +16370,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -16075,9 +16437,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
             {
@@ -16086,6 +16461,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
             {
@@ -16099,6 +16478,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -16377,9 +16765,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
             {
@@ -16396,6 +16797,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
             {
@@ -16417,6 +16822,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -16479,9 +16893,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeRegionIdsScope))
+            {
+                body["ExcludeRegionIdsScope"] = request.ExcludeRegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceGroupIdsScope))
+            {
+                body["ExcludeResourceGroupIdsScope"] = request.ExcludeResourceGroupIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeTagsScope))
+            {
+                bodyFlat["ExcludeTagsScope"] = request.ExcludeTagsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
             {
@@ -16498,6 +16925,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
             {
                 body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsScope))
+            {
+                body["ResourceIdsScope"] = request.ResourceIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
             {
@@ -16519,6 +16950,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["TagValueScope"] = request.TagValueScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsScope))
+            {
+                bodyFlat["TagsScope"] = request.TagsScope;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),

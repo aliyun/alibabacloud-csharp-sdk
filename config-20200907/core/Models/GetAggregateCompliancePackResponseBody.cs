@@ -171,12 +171,34 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public GetAggregateCompliancePackResponseBodyCompliancePackScope Scope { get; set; }
             public class GetAggregateCompliancePackResponseBodyCompliancePackScope : TeaModel {
+                [NameInMap("ExcludeRegionIdsScope")]
+                [Validation(Required=false)]
+                public string ExcludeRegionIdsScope { get; set; }
+
+                [NameInMap("ExcludeResourceGroupIdsScope")]
+                [Validation(Required=false)]
+                public string ExcludeResourceGroupIdsScope { get; set; }
+
                 /// <summary>
                 /// The ID of the resource that is not evaluated by using the compliance package.
                 /// </summary>
                 [NameInMap("ExcludeResourceIdsScope")]
                 [Validation(Required=false)]
                 public string ExcludeResourceIdsScope { get; set; }
+
+                [NameInMap("ExcludeTagsScope")]
+                [Validation(Required=false)]
+                public List<GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope> ExcludeTagsScope { get; set; }
+                public class GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope : TeaModel {
+                    [NameInMap("TagKey")]
+                    [Validation(Required=false)]
+                    public string TagKey { get; set; }
+
+                    [NameInMap("TagValue")]
+                    [Validation(Required=false)]
+                    public string TagValue { get; set; }
+
+                }
 
                 /// <summary>
                 /// The ID of the region whose resources were evaluated by using the compliance package.
@@ -192,6 +214,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public string ResourceGroupIdsScope { get; set; }
 
+                [NameInMap("ResourceIdsScope")]
+                [Validation(Required=false)]
+                public string ResourceIdsScope { get; set; }
+
                 /// <summary>
                 /// The tag key of the resource that is evaluated by using the compliance package.
                 /// </summary>
@@ -205,6 +231,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [NameInMap("TagValueScope")]
                 [Validation(Required=false)]
                 public string TagValueScope { get; set; }
+
+                [NameInMap("TagsScope")]
+                [Validation(Required=false)]
+                public List<GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope> TagsScope { get; set; }
+                public class GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope : TeaModel {
+                    [NameInMap("TagKey")]
+                    [Validation(Required=false)]
+                    public string TagKey { get; set; }
+
+                    [NameInMap("TagValue")]
+                    [Validation(Required=false)]
+                    public string TagValue { get; set; }
+
+                }
 
             }
 

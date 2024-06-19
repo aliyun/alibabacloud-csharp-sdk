@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("ExcludeRegionIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeRegionIdsScope { get; set; }
+
+        [NameInMap("ExcludeResourceGroupIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeResourceGroupIdsScope { get; set; }
+
         /// <summary>
         /// The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).
         /// 
@@ -63,6 +71,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("ExcludeResourceIdsScope")]
         [Validation(Required=false)]
         public string ExcludeResourceIdsScope { get; set; }
+
+        [NameInMap("ExcludeTagsScope")]
+        [Validation(Required=false)]
+        public List<UpdateConfigRuleShrinkRequestExcludeTagsScope> ExcludeTagsScope { get; set; }
+        public class UpdateConfigRuleShrinkRequestExcludeTagsScope : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
         /// <summary>
         /// The input parameters of the rule.
@@ -103,6 +125,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("ResourceGroupIdsScope")]
         [Validation(Required=false)]
         public string ResourceGroupIdsScope { get; set; }
+
+        [NameInMap("ResourceIdsScope")]
+        [Validation(Required=false)]
+        public string ResourceIdsScope { get; set; }
 
         /// <summary>
         /// The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).
@@ -149,6 +175,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("TagValueScope")]
         [Validation(Required=false)]
         public string TagValueScope { get; set; }
+
+        [NameInMap("TagsScope")]
+        [Validation(Required=false)]
+        public List<UpdateConfigRuleShrinkRequestTagsScope> TagsScope { get; set; }
+        public class UpdateConfigRuleShrinkRequestTagsScope : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
     }
 

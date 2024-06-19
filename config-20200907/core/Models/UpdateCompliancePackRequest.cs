@@ -126,12 +126,34 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("ExcludeRegionIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeRegionIdsScope { get; set; }
+
+        [NameInMap("ExcludeResourceGroupIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeResourceGroupIdsScope { get; set; }
+
         /// <summary>
         /// The ID of the resource that you do not want to evaluate by using the compliance package. Separate multiple resource IDs with commas (,).
         /// </summary>
         [NameInMap("ExcludeResourceIdsScope")]
         [Validation(Required=false)]
         public string ExcludeResourceIdsScope { get; set; }
+
+        [NameInMap("ExcludeTagsScope")]
+        [Validation(Required=false)]
+        public List<UpdateCompliancePackRequestExcludeTagsScope> ExcludeTagsScope { get; set; }
+        public class UpdateCompliancePackRequestExcludeTagsScope : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
         /// <summary>
         /// The ID of the region whose resources you want to evaluate by using the compliance package. Separate multiple region IDs with commas (,).
@@ -146,6 +168,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("ResourceGroupIdsScope")]
         [Validation(Required=false)]
         public string ResourceGroupIdsScope { get; set; }
+
+        [NameInMap("ResourceIdsScope")]
+        [Validation(Required=false)]
+        public string ResourceIdsScope { get; set; }
 
         /// <summary>
         /// The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:
@@ -173,6 +199,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("TagValueScope")]
         [Validation(Required=false)]
         public string TagValueScope { get; set; }
+
+        [NameInMap("TagsScope")]
+        [Validation(Required=false)]
+        public List<UpdateCompliancePackRequestTagsScope> TagsScope { get; set; }
+        public class UpdateCompliancePackRequestTagsScope : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
     }
 
