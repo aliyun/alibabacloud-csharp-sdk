@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
             [NameInMap("BackupSetId")]
             [Validation(Required=false)]
-            public long? BackupSetId { get; set; }
+            public string BackupSetId { get; set; }
 
             [NameInMap("BackupSetSize")]
             [Validation(Required=false)]

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeScaleOutMigrateTaskListRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
@@ -20,6 +23,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

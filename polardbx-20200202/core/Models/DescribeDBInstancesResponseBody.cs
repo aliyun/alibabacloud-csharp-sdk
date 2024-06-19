@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public bool? ContainBinlogX { get; set; }
 
+            [NameInMap("CpuType")]
+            [Validation(Required=false)]
+            public string CpuType { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -137,6 +141,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
             /// <summary>
             /// 主可用区。
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("PrimaryZone")]
             [Validation(Required=false)]
@@ -203,6 +209,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// 
             /// - **3azones**：三可用区；
             /// - **1azone**：单可用区。
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("TopologyType")]
             [Validation(Required=false)]
@@ -222,6 +230,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
+
+            [NameInMap("gdnRole")]
+            [Validation(Required=false)]
+            public string GdnRole { get; set; }
+
+            [NameInMap("isInGdn")]
+            [Validation(Required=false)]
+            public bool? IsInGdn { get; set; }
 
         }
 

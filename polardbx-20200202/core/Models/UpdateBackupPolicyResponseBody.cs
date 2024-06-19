@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
     public class UpdateBackupPolicyResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<UpdateBackupPolicyResponseBodyData> Data { get; set; }
+        public UpdateBackupPolicyResponseBodyData Data { get; set; }
         public class UpdateBackupPolicyResponseBodyData : TeaModel {
             [NameInMap("BackupPeriod")]
             [Validation(Required=false)]

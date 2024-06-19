@@ -227,6 +227,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
+                    [NameInMap("StorageUsed")]
+                    [Validation(Required=false)]
+                    public string StorageUsed { get; set; }
+
                     [NameInMap("Version")]
                     [Validation(Required=false)]
                     public string Version { get; set; }

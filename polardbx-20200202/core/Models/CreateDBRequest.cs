@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateDBRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
@@ -17,10 +20,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string AccountPrivilege { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Charset")]
         [Validation(Required=false)]
         public string Charset { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
@@ -29,6 +38,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DbDescription { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
@@ -37,6 +49,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string Mode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

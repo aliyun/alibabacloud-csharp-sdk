@@ -148,6 +148,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public int? KindCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("LTSVersions")]
             [Validation(Required=false)]
             public List<string> LTSVersions { get; set; }

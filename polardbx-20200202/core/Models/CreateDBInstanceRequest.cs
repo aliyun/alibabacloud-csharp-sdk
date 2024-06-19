@@ -41,6 +41,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DnClass { get; set; }
 
+        [NameInMap("DnStorageSpace")]
+        [Validation(Required=false)]
+        public string DnStorageSpace { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
@@ -57,6 +64,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string NetworkType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
@@ -73,6 +83,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string PrimaryZone { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -85,10 +98,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string SecondaryZone { get; set; }
 
+        [NameInMap("Series")]
+        [Validation(Required=false)]
+        public string Series { get; set; }
+
         [NameInMap("TertiaryZone")]
         [Validation(Required=false)]
         public string TertiaryZone { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TopologyType")]
         [Validation(Required=false)]
         public string TopologyType { get; set; }

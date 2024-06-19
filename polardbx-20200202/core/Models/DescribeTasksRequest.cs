@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeTasksRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -45,6 +54,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }

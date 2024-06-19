@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string CertCommonName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EnableSSL")]
         [Validation(Required=false)]
         public bool? EnableSSL { get; set; }

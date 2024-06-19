@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeActiveOperationMaintainConfRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

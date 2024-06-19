@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string Product { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

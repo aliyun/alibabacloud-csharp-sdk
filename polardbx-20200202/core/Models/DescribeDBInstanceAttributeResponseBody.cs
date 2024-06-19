@@ -164,6 +164,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public int? KindCode { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("LTSVersions")]
             [Validation(Required=false)]
             public List<string> LTSVersions { get; set; }
@@ -202,6 +205,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
             /// <summary>
             /// 主可用区。
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("PrimaryZone")]
             [Validation(Required=false)]
@@ -238,6 +243,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string Series { get; set; }
 
+            [NameInMap("SpecCategory")]
+            [Validation(Required=false)]
+            public string SpecCategory { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -272,6 +281,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// 
             /// - **3azones**：三可用区；
             /// - **1azone**：单可用区。
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("TopologyType")]
             [Validation(Required=false)]

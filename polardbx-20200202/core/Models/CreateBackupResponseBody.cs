@@ -11,11 +11,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
     public class CreateBackupResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<CreateBackupResponseBodyData> Data { get; set; }
+        public CreateBackupResponseBodyData Data { get; set; }
         public class CreateBackupResponseBodyData : TeaModel {
             [NameInMap("BackupSetId")]
             [Validation(Required=false)]
-            public long? BackupSetId { get; set; }
+            public string BackupSetId { get; set; }
 
         }
 

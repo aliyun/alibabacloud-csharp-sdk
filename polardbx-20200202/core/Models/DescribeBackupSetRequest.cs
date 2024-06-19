@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeBackupSetRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BackupSetId")]
         [Validation(Required=false)]
         public string BackupSetId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
