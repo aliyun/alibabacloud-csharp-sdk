@@ -8,27 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eci20180808.Models
 {
-    public class DescribeInstanceOpsRecordsRequest : TeaModel {
-        /// <summary>
-        /// The ID of the elastic container instance.
-        /// 
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("ContainerGroupId")]
+    public class UntagResourcesRequest : TeaModel {
+        [NameInMap("All")]
         [Validation(Required=false)]
-        public string ContainerGroupId { get; set; }
+        public bool? All { get; set; }
 
-        /// <summary>
-        /// The type of the O\\&M task. Valid values:
-        /// 
-        /// *   coredump
-        /// *   tcpdump
-        /// 
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("OpsType")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string OpsType { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -39,13 +26,18 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
-        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -54,6 +46,17 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        [NameInMap("TagKey")]
+        [Validation(Required=false)]
+        public List<string> TagKey { get; set; }
 
     }
 

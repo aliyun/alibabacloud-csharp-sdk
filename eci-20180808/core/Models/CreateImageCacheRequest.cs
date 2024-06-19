@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class CreateImageCacheRequest : TeaModel {
         /// <summary>
-        /// Information about the Container Registry Enterprise Edition instance. For more information, see [Pull images from a Container Registry Enterprise Edition instance without using secrets](~~194250~~).
+        /// Information about the Container Registry Enterprise Edition instance. For more information, see [Pull images from a Container Registry Enterprise Edition instance without using secrets](https://help.aliyun.com/document_detail/194250.html).
         /// </summary>
         [NameInMap("AcrRegistryInfo")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public bool? AutoMatchImageCache { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](https://help.aliyun.com/document_detail/25693.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -125,6 +125,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// Container image N that is used to create the image cache.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Image")]
         [Validation(Required=false)]
@@ -132,6 +134,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The name of the image cache.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageCacheName")]
         [Validation(Required=false)]
@@ -200,6 +204,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The region ID of the image cache.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
     public class CreateInstanceOpsTaskRequest : TeaModel {
         /// <summary>
         /// The ID of the container group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContainerGroupId")]
         [Validation(Required=false)]
@@ -21,13 +23,15 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         /// 
         /// *   coredump
         /// *   tcpdump
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OpsType")]
         [Validation(Required=false)]
         public string OpsType { get; set; }
 
         /// <summary>
-        /// The value of the O\&M task. You can set this parameter based on the value of OpsType.
+        /// The value of the O\\&M task. You can set this parameter based on the value of OpsType.
         /// 
         /// *   If OpsType is set to coredump, the valid values of OpsValue are:
         /// 
@@ -49,6 +53,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         ///     *   Duration: the captured period. Unit: seconds.
         ///     *   PacketNum: the number of packets to be captured.
         ///     *   FileSize: the size of the destination files on packets. Unit: bytes. Maximum value: 1073741824. 1073741824 bytes is equal to 1 GB.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OpsValue")]
         [Validation(Required=false)]
@@ -64,6 +70,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The region ID of the O&M task.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

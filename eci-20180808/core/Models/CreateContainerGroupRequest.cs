@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public CreateContainerGroupRequestDnsConfig DnsConfig { get; set; }
         public class CreateContainerGroupRequestDnsConfig : TeaModel {
             /// <summary>
-            /// The IP addresses of the DNS servers.
+            /// The IP addresses of DNS servers.
             /// </summary>
             [NameInMap("NameServer")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The search domains of the DNS server.
+            /// The search domains of DNS servers.
             /// </summary>
             [NameInMap("Search")]
             [Validation(Required=false)]
@@ -57,19 +57,20 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public CreateContainerGroupRequestHostSecurityContext HostSecurityContext { get; set; }
         public class CreateContainerGroupRequestHostSecurityContext : TeaModel {
             /// <summary>
-            /// Configure a security context to modify unsafe sysctls. For more information, see [Configure a security context](~~462313~~).
+            /// Configure a security context to modify unsafe sysctls. For more information, see [Configure a security context](https://help.aliyun.com/document_detail/462313.html).
             /// </summary>
             [NameInMap("Sysctl")]
             [Validation(Required=false)]
             public List<CreateContainerGroupRequestHostSecurityContextSysctl> Sysctl { get; set; }
             public class CreateContainerGroupRequestHostSecurityContextSysctl : TeaModel {
                 /// <summary>
-                /// The key of the unsafe sysctl when you modify sysctls by configuring a security context. Valid values:
+                /// The name of the unsafe sysctl when you modify sysctls by configuring a security context. Valid values:
                 /// 
-                /// *   kernel.shm \* (except kernel.shm_rmid_forced)
-                /// *   kernel.msg\*kernel.sem
-                /// *   fs.mqueue.\*
-                /// *   net.\*(except net.ipv4.tcp_syncookies, net.ipv4.ping_group_range, and net.ipv4.ip_unprivileged_port_start)
+                /// *   kernel.shm \\* (except kernel.shm_rmid_forced)
+                /// *   kernel.msg\\*
+                /// *   kernel.sem
+                /// *   fs.mqueue.\\*
+                /// *   net.\\*(except net.ipv4.tcp_syncookies, net.ipv4.ping_group_range, and net.ipv4.ip_unprivileged_port_start)
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -91,14 +92,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public CreateContainerGroupRequestSecurityContext SecurityContext { get; set; }
         public class CreateContainerGroupRequestSecurityContext : TeaModel {
             /// <summary>
-            /// Configure a security context to modify sysctls. For more information, see [Configure a security context](~~462313~~)
+            /// Configure a security context to modify safe sysctls. For more information, see [Configure a security context](https://help.aliyun.com/document_detail/462313.html).
             /// </summary>
             [NameInMap("Sysctl")]
             [Validation(Required=false)]
             public List<CreateContainerGroupRequestSecurityContextSysctl> Sysctl { get; set; }
             public class CreateContainerGroupRequestSecurityContextSysctl : TeaModel {
                 /// <summary>
-                /// The name of the safe sysctl when you configure a security context to modify sysctls. Valid values:
+                /// The name of the safe sysctl when you modify sysctls by configuring a security context. Valid values:
                 /// 
                 /// *   net.ipv4.ping_group_range
                 /// *   net.ipv4.ip_unprivileged_port_start
@@ -108,7 +109,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The value of the safe sysctl when you configure a security context to modify sysctls.
+                /// The value of the safe sysctl when you modify sysctls by configuring a security context.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -119,21 +120,21 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The information about the Container Registry Enterprise Edition instance. For more information, see [Pull images from a Container Registry Enterprise Edition instance without using secrets](~~194250~~).
+        /// The information about the Container Registry Enterprise Edition instance that provides the image for the creation of the elastic container instance. For more information, see [Pull images from a Container Registry Enterprise Edition instance without using a secret](https://help.aliyun.com/document_detail/194250.html).
         /// </summary>
         [NameInMap("AcrRegistryInfo")]
         [Validation(Required=false)]
         public List<CreateContainerGroupRequestAcrRegistryInfo> AcrRegistryInfo { get; set; }
         public class CreateContainerGroupRequestAcrRegistryInfo : TeaModel {
             /// <summary>
-            /// The Alibaba Cloud Resource Name (ARN) of the RAM roles in the Alibaba Cloud account to which the elastic container instance belongs.
+            /// The Alibaba Cloud Resource Name (ARN) of the RAM role in the Alibaba Cloud account to which the elastic container instance belongs.
             /// </summary>
             [NameInMap("ArnService")]
             [Validation(Required=false)]
             public string ArnService { get; set; }
 
             /// <summary>
-            /// The ARN of the RAM roles in the Alibaba Cloud account to which the Container Registry instance belongs.
+            /// The ARN of the RAM role in the Alibaba Cloud account to which the Container Registry Enterprise Edition instance belongs.
             /// </summary>
             [NameInMap("ArnUser")]
             [Validation(Required=false)]
@@ -170,7 +171,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The validity period of the elastic container instance. When this period expires, the instance is forced to exit. Unit: seconds.
+        /// The active period of the elastic container instance. After this period expires, the instance is forced to exit. Unit: seconds.
         /// </summary>
         [NameInMap("ActiveDeadlineSeconds")]
         [Validation(Required=false)]
@@ -191,21 +192,23 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public bool? AutoMatchImageCache { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency of requests?](~~25693~~)
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency](https://help.aliyun.com/document_detail/25693.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The computing power type of the instance.
+        /// The computing power type of the instance. For more information, see [Set the computing power type to economy when you create an elastic container instance](https://help.aliyun.com/document_detail/2638061.html).
         /// </summary>
         [NameInMap("ComputeCategory")]
         [Validation(Required=false)]
         public List<string> ComputeCategory { get; set; }
 
         /// <summary>
-        /// The information about the containers.
+        /// The information about the container.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Container")]
         [Validation(Required=false)]
@@ -371,21 +374,23 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public List<string> Arg { get; set; }
 
             /// <summary>
-            /// The commands that you want to run to perform health checks on containers.
+            /// The commands to be executed in containers when you use a CLI to perform health checks.
+            /// 
+            /// >  When you configure ReadinessProbe-related parameters, you can select only one of the HttpGet, Exec, and TcpSocket check methods.
             /// </summary>
             [NameInMap("Command")]
             [Validation(Required=false)]
             public List<string> Command { get; set; }
 
             /// <summary>
-            /// The number of vCPUs that you want to allocate to the container.
+            /// The number of vCPUs that are allocated to the container.
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public float? Cpu { get; set; }
 
             /// <summary>
-            /// The value of the environment variable for the container.
+            /// The environment variables of the container.
             /// </summary>
             [NameInMap("EnvironmentVar")]
             [Validation(Required=false)]
@@ -402,14 +407,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The name of the environment variable. The name must be 1 to 128 bits in length and can contain letters, digits, and underscores (\_). It cannot start with a digit.``
+                /// The name of the environment variable. The name must be 1 to 128 bits in length and can contain letters, digits, and underscores (_). It cannot start with a digit.``
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the environment variable. The value must be 0 to 256 bits in length.
+                /// The value of the environment variable. The value can be up to 256 characters in length.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -418,7 +423,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// Specifies whether to hide the information about environment variables when you query the details of an elastic container instance. Default value: false. Valid values:
+            /// Specifies whether to hide the information about environment variables when you query the details of an elastic container instance. Valid values:
             /// 
             /// *   false
             /// *   true If environment variables contain sensitive information, you can set this parameter to true to improve security of the information.
@@ -436,13 +441,15 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
             /// <summary>
             /// The image of the container.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public string Image { get; set; }
 
             /// <summary>
-            /// The policy that you want to use to pull an image. Valid values:
+            /// The policy that you want to use to pull images. Valid values:
             /// 
             /// *   Always: Each time instances are created, image pulling is performed.
             /// *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
@@ -453,14 +460,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string ImagePullPolicy { get; set; }
 
             /// <summary>
-            /// The commands to be executed in containers when you use a CLI to specify the postStart callback function.
+            /// The commands to be executed in containers when you use a CLI to specify a postStart hook.
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerExec")]
             [Validation(Required=false)]
             public List<string> LifecyclePostStartHandlerExec { get; set; }
 
             /// <summary>
-            /// The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the postStart callback function.
+            /// The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify a postStart hook.
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetHost")]
             [Validation(Required=false)]
@@ -474,14 +481,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public List<CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader> LifecyclePostStartHandlerHttpGetHttpHeader { get; set; }
             public class CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader : TeaModel {
                 /// <summary>
-                /// The name of the custom field in the HTTP GET request header when you use HTTP requests to specify the postStart callback function.
+                /// The name of the custom field in the HTTP GET request header when you use HTTP requests to specify a postStart hook.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The value of the custom field in the HTTP GET request header when you use HTTP requests to specify the postStart callback function.
+                /// The value of the custom field in the HTTP GET request header when you use HTTP requests to specify a postStart hook.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -490,21 +497,21 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the postStart callback function.
+            /// The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify a postStart hook.
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetPath")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerHttpGetPath { get; set; }
 
             /// <summary>
-            /// The port to which the system sends an HTTP GET request when you use an HTTP request to specify the postStart callback function.
+            /// The port to which the system sends an HTTP GET request when you use an HTTP request to specify a postStart hook.
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerHttpGetPort")]
             [Validation(Required=false)]
             public int? LifecyclePostStartHandlerHttpGetPort { get; set; }
 
             /// <summary>
-            /// The protocol type of HTTP GET requests when you use HTTP requests to specify the postStart callback function. Valid values:
+            /// The protocol type of HTTP GET requests when you use HTTP requests to specify a postStart hook. Valid values:
             /// 
             /// *   HTTP
             /// *   HTTPS
@@ -514,28 +521,28 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string LifecyclePostStartHandlerHttpGetScheme { get; set; }
 
             /// <summary>
-            /// The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the postStart callback function.
+            /// The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify a postStart hook.
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerTcpSocketHost")]
             [Validation(Required=false)]
             public string LifecyclePostStartHandlerTcpSocketHost { get; set; }
 
             /// <summary>
-            /// The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the postStart callback function.
+            /// The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify a postStart hook.
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerTcpSocketPort")]
             [Validation(Required=false)]
             public int? LifecyclePostStartHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// The commands to be executed in containers when you use a CLI to specify the preStop callback function.
+            /// The commands to be executed in containers when you use a CLI to specify a preStop hook.
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerExec")]
             [Validation(Required=false)]
             public List<string> LifecyclePreStopHandlerExec { get; set; }
 
             /// <summary>
-            /// The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the preStop callback function.
+            /// The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify a preStop hook.
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetHost")]
             [Validation(Required=false)]
@@ -549,14 +556,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public List<CreateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader> LifecyclePreStopHandlerHttpGetHttpHeader { get; set; }
             public class CreateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader : TeaModel {
                 /// <summary>
-                /// The key of the custom field in the HTTP GET request header when you use HTTP requests to specify the preStop callback function.
+                /// The name of the custom field in the HTTP GET request header when you use HTTP requests to specify a presto hook.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The value of the custom field in the HTTP GET request header when you use HTTP requests to specify the preStop callback function.
+                /// The value of the custom field in the HTTP GET request header when you use HTTP requests to specify a preStop hook.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -565,21 +572,21 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             }
 
             /// <summary>
-            /// The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the preSop callback function.
+            /// The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify a preSop hook.
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetPath")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerHttpGetPath { get; set; }
 
             /// <summary>
-            /// The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to specify the preStop callback function.
+            /// The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to specify a preStop hook.
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerHttpGetPort")]
             [Validation(Required=false)]
             public int? LifecyclePreStopHandlerHttpGetPort { get; set; }
 
             /// <summary>
-            /// The protocol type of the HTTP GET request when you use an HTTP request to specify the preStop callback function. Valid values:
+            /// The protocol type of the HTTP GET request when you use an HTTP request to specify a preStop hook. Valid values:
             /// 
             /// *   HTTP
             /// *   HTTPS
@@ -589,21 +596,21 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string LifecyclePreStopHandlerHttpGetScheme { get; set; }
 
             /// <summary>
-            /// The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify the preStop callback function.
+            /// The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify a preStop hook.
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerTcpSocketHost")]
             [Validation(Required=false)]
             public string LifecyclePreStopHandlerTcpSocketHost { get; set; }
 
             /// <summary>
-            /// The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the preStop callback function.
+            /// The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify a preStop hook.
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerTcpSocketPort")]
             [Validation(Required=false)]
             public int? LifecyclePreStopHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// The memory size that you want to allocate to the container. Unit: GiB
+            /// The memory size of the container. Unit: GiB.
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
@@ -611,6 +618,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
             /// <summary>
             /// The name of the container.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -618,6 +627,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
             /// <summary>
             /// The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to perform health checks.
+            /// 
+            /// >  When you configure LivenessProbe-related parameters, you can select only one of the HttpGet, Exec, and TcpSocket check methods.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
@@ -631,7 +642,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The protocol type. Valid values:
+                /// The type of the protocol. Valid values:
                 /// 
                 /// *   TCP
                 /// *   UDP
@@ -641,6 +652,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public string Protocol { get; set; }
 
             }
+
+            [NameInMap("SecurityContextPrivileged")]
+            [Validation(Required=false)]
+            public bool? SecurityContextPrivileged { get; set; }
 
             /// <summary>
             /// The user group that runs the container.
@@ -664,7 +679,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public bool? Stdin { get; set; }
 
             /// <summary>
-            /// Specifies whether standard input streams are disconnected from multiple sessions after a client is disconnected.\
+            /// Specifies whether standard input streams are disconnected from multiple sessions after a client is disconnected.\\
             /// If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, standard input streams are also disconnected, and remain disconnected until the container restarts.
             /// </summary>
             [NameInMap("StdinOnce")]
@@ -695,7 +710,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public bool? Tty { get; set; }
 
             /// <summary>
-            /// The information about the volume that you want to mount to the container.
+            /// The information about the volume that you want to mount on the container.
             /// </summary>
             [NameInMap("VolumeMount")]
             [Validation(Required=false)]
@@ -724,7 +739,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public string MountPropagation { get; set; }
 
                 /// <summary>
-                /// The name of the volume. The name of this parameter is the same as the name of the volume that is mounted to the containers.
+                /// The name of the volume. The value of this parameter is the same as the value of Volume.N.Name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -756,10 +771,12 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The name of the elastic container instance. Format requirements:
+        /// The name of the elastic container instance (container group). The name must meet the following requirements:
         /// 
-        /// *   The name must be 2 to 128 characters in length
+        /// *   The name must be 2 to 128 characters in length.
         /// *   The name can contain lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContainerGroupName")]
         [Validation(Required=false)]
@@ -773,16 +790,16 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public bool? ContainerResourceView { get; set; }
 
         /// <summary>
-        /// The path to store core dump files. For more information, see [Save core files to volumes](~~167801~~).
+        /// The path to core dump files. For more information, see [Save core files to volumes](https://help.aliyun.com/document_detail/167801.html).
         /// 
-        /// > The path cannot start with a vertical bar (`|`). You cannot use core dump files to configure executable programs.
+        /// >  The path cannot start with |. You cannot use core dump files to configure executable programs.``
         /// </summary>
         [NameInMap("CorePattern")]
         [Validation(Required=false)]
         public string CorePattern { get; set; }
 
         /// <summary>
-        /// The number of vCPUs that you want to allocate to the elastic container instance.
+        /// The number of vCPUs that you want to allocate to the instance.
         /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]
@@ -799,7 +816,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string CpuArchitecture { get; set; }
 
         /// <summary>
-        /// The number of physical CPU cores. You can specify this parameter only for specific instance types. For more information, see [Specify custom CPU options](~~197781~~).
+        /// The number of physical CPU cores. You can specify this parameter for only specific ECS instance types.
         /// </summary>
         [NameInMap("CpuOptionsCore")]
         [Validation(Required=false)]
@@ -813,38 +830,38 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string CpuOptionsNuma { get; set; }
 
         /// <summary>
-        /// The number of threads per core. You can specify this parameter only for specific instance types. If you set this parameter to 1, Hyper-Threading is disabled. For more information, see [Specify custom CPU options](~~197781~~).
+        /// The number of threads per core. You can specify this parameter for only specific ECS instance types. A value of 1 specifies that Hyper-Threading is disabled.
         /// </summary>
         [NameInMap("CpuOptionsThreadsPerCore")]
         [Validation(Required=false)]
         public int? CpuOptionsThreadsPerCore { get; set; }
 
         /// <summary>
-        /// The bucket to store data caches.
+        /// The bucket that stores the data cache.
         /// </summary>
         [NameInMap("DataCacheBucket")]
         [Validation(Required=false)]
         public string DataCacheBucket { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the performance burst feature when ESSDs AutoPL are used for data caching. For more information, see [ESSDs AutoPL](~~368372~~).
+        /// Specifies whether to enable the performance burst feature when ESSDs AutoPL are used to store data caches. For more information, see [ESSDs AutoPL](https://help.aliyun.com/document_detail/368372.html).
         /// </summary>
         [NameInMap("DataCacheBurstingEnabled")]
         [Validation(Required=false)]
         public bool? DataCacheBurstingEnabled { get; set; }
 
         /// <summary>
-        /// The performance level of the disk used by data caches.\
-        /// Enhanced SSDs (ESSDs) are preferentially used. The default performance level is PL1.
+        /// The performance level (PL) of the disk that you want to use to store data caches.\\
+        /// Enhanced SSDs (ESSDs) are preferentially used to store data caches. The default performance level is PL1.
         /// </summary>
         [NameInMap("DataCachePL")]
         [Validation(Required=false)]
         public string DataCachePL { get; set; }
 
         /// <summary>
-        /// The input/output operations per second (IOPS) provisioned for ESSDs AutoPL when ESSDs AutoPL are used for data caching.\
-        /// Valid values: 0 to min{50000, 1000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.\
-        /// For more information, see [ESSDs AutoPL](~~368372~~).
+        /// The input/output operations per second (IOPS) provisioned for ESSDs AutoPL when ESSDs AutoPL are used to store data caches.\\
+        /// Valid values: 0 to min{50000, 1000 × Storage capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Storage capacity, 50,000}.\\
+        /// For more information, see [ESSDs AutoPL](https://help.aliyun.com/document_detail/368372.html).
         /// </summary>
         [NameInMap("DataCacheProvisionedIops")]
         [Validation(Required=false)]
@@ -853,7 +870,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         /// <summary>
         /// The Domain Name System (DNS) policy. Valid values:
         /// 
-        /// *   None: uses the DNS that is specified for DnsConfig-related parameters.
+        /// *   None: uses the DNS that is specified by DnsConfig.
         /// *   Default: uses the DNS that is specified for the runtime environment.
         /// </summary>
         [NameInMap("DnsPolicy")]
@@ -861,42 +878,42 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string DnsPolicy { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run without performing the actual request. Valid values:
+        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
         /// 
-        /// *   true: performs only a dry run without creating an elastic container instance. The check items include the request format, service limits, resource inventory, and whether the required parameters are specified. If the request fails the dry run, an error is returned. If the request passes the dry run, the DryRun.Success error code is returned.
-        /// *   false (default): performs a dry run, and creates an elastic container instance after the request passes the dry run.
+        /// *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and available resources. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.
+        /// *   false (default): performs a dry run and performs the actual request. If the request passes the dry run, the elastic container instance is created.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The maximum outbound bandwidth. Unit: bytes.
+        /// The maximum outbound bandwidth. Unit: bit/s.
         /// </summary>
         [NameInMap("EgressBandwidth")]
         [Validation(Required=false)]
         public long? EgressBandwidth { get; set; }
 
         /// <summary>
-        /// The bandwidth of the EIP. Unit: Mbit/s. Default value: 5.\
-        /// You can specify this parameter when you set AutoCreateEip to true.
+        /// The maximum bandwidth value for the EIP. Unit: Mbit/s. Default value: 5.\\
+        /// This parameter is valid only when AutoCreateEip is set to true.
         /// </summary>
         [NameInMap("EipBandwidth")]
         [Validation(Required=false)]
         public int? EipBandwidth { get; set; }
 
         /// <summary>
-        /// Specifies the EIP bandwidth plan that you want to use.
+        /// The EIP bandwidth plan that you want to associate with the instance.
         /// </summary>
         [NameInMap("EipCommonBandwidthPackage")]
         [Validation(Required=false)]
         public string EipCommonBandwidthPackage { get; set; }
 
         /// <summary>
-        /// The line type of the elastic IP address (EIP). Valid values:
+        /// The line type of the EIP. Default value: BGP. Valid values:
         /// 
-        /// *   BGP: BGP (Multi-ISP) lines
-        /// *   BGP_PRO: BGP (Multi-ISP) Pro lines
+        /// *   BGP: BGP (Multi-ISP) line
+        /// *   BGP_PRO: BGP (Multi-ISP) Pro line
         /// </summary>
         [NameInMap("EipISP")]
         [Validation(Required=false)]
@@ -910,15 +927,15 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string EipInstanceId { get; set; }
 
         /// <summary>
-        /// The increased storage capacity of the temporary storage space. Unit: GiB.\
-        /// For more information, see [Increase the storage capacity of the temporary storage space](~~204066~~).
+        /// The increased capacity of the temporary storage space. Unit: GiB.\\
+        /// For more information, see [Increase the size of the temporary storage space](https://help.aliyun.com/document_detail/204066.html).
         /// </summary>
         [NameInMap("EphemeralStorage")]
         [Validation(Required=false)]
         public int? EphemeralStorage { get; set; }
 
         /// <summary>
-        /// Specifies whether to configure the instance to use a fixed IP address. For more information, see [Configure an elastic container instance to use a fixed IP address](~~2381086~~).
+        /// Specifies whether to configure the instance to use a fixed IP address. For more information, see [Configure an elastic container instance to use a fixed IP address](https://help.aliyun.com/document_detail/2381086.html).
         /// </summary>
         [NameInMap("FixedIp")]
         [Validation(Required=false)]
@@ -931,6 +948,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public int? FixedIpRetainHour { get; set; }
 
+        /// <summary>
+        /// The version of the GPU driver. Default value: tesla=470.82.01. Valid values:
+        /// 
+        /// *   tesla=470.82.01
+        /// *   tesla=525.85.12
+        /// 
+        /// >  You can switch the GPU driver version only for a few Elastic Compute Service (ECS) instance types. For more information, see [Specify GPU-accelerated ECS instance types to create an elastic container instance](https://help.aliyun.com/document_detail/2579486.html).
+        /// </summary>
         [NameInMap("GpuDriverVersion")]
         [Validation(Required=false)]
         public string GpuDriverVersion { get; set; }
@@ -943,14 +968,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public List<CreateContainerGroupRequestHostAliase> HostAliase { get; set; }
         public class CreateContainerGroupRequestHostAliase : TeaModel {
             /// <summary>
-            /// The hostname of the elastic container instance.
+            /// The hostnames of the elastic container instance.
             /// </summary>
             [NameInMap("Hostname")]
             [Validation(Required=false)]
             public List<string> Hostname { get; set; }
 
             /// <summary>
-            /// The IP address of the host.
+            /// The IP address of the elastic container instance.
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
@@ -959,7 +984,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The hostname of the instance.
+        /// The hostname.
         /// </summary>
         [NameInMap("HostName")]
         [Validation(Required=false)]
@@ -968,17 +993,17 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         /// <summary>
         /// The image acceleration mode. Valid values:
         /// 
-        /// *   nydus: Nydus is used to accelerate image pulling. The images must support Nydus.
-        /// *   dadi: DADI is used to accelerate image pulling. The images must support DADI.
-        /// *   p2p: P2P is used to accelerate image pulling. The images must support P2P.
-        /// *   imc: Image caches are used to accelerate image pulling.
+        /// *   nydus: uses Nydus to accelerate image pulling. The images must support Nydus.
+        /// *   dadi: uses DADI to accelerate image pulling. The images must support DADI.
+        /// *   p2p: uses P2P to accelerate image pulling. The images must support p2p.
+        /// *   imc: uses image caches to accelerate image pulling.
         /// </summary>
         [NameInMap("ImageAccelerateMode")]
         [Validation(Required=false)]
         public string ImageAccelerateMode { get; set; }
 
         /// <summary>
-        /// The information about the image repository.
+        /// The information about the logon credentials.
         /// </summary>
         [NameInMap("ImageRegistryCredential")]
         [Validation(Required=false)]
@@ -1008,14 +1033,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The ID of the image cache. For more information, see [Use image caches to accelerate the creation of instances](~~141281~~).
+        /// The ID of the image cache. For more information, see [Use image caches to accelerate the creation of instances](https://help.aliyun.com/document_detail/141281.html).
         /// </summary>
         [NameInMap("ImageSnapshotId")]
         [Validation(Required=false)]
         public string ImageSnapshotId { get; set; }
 
         /// <summary>
-        /// The maximum inbound bandwidth. Unit: bytes.
+        /// The maximum inbound bandwidth. Unit: bit/s.
         /// </summary>
         [NameInMap("IngressBandwidth")]
         [Validation(Required=false)]
@@ -1067,7 +1092,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public List<string> Command { get; set; }
 
             /// <summary>
-            /// The number of vCPUs that you want to allocate to the init container. Unit: cores.
+            /// The number of vCPUs that you want to allocate to the init container.
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
@@ -1091,14 +1116,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The name of the environment variable. The name must be 1 to 128 characters in length, and can contain letters, digits, and underscores (\_). It cannot start with a digit.``
+                /// The name of the environment variable. The name must be 1 to 128 bits in length and can contain letters, digits, and underscores (_). It cannot start with a digit.``
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the environment variable. The value can be up to 256 characters in length.
+                /// The value of the environment variable. The value must be 0 to 256 bits in length.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -1121,7 +1146,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string Image { get; set; }
 
             /// <summary>
-            /// The policy for image pulling. Valid values:
+            /// The policy that you want to use to pull images. Valid values:
             /// 
             /// *   Always: Each time instances are created, image pulling is performed.
             /// *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
@@ -1132,21 +1157,21 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string ImagePullPolicy { get; set; }
 
             /// <summary>
-            /// The memory size of the init container. Unit: GiB.
+            /// The memory size that you want to allocate to the init container. Unit: GiB.
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
             public float? Memory { get; set; }
 
             /// <summary>
-            /// The container name.
+            /// The name of the init container.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The port number of the init container.
+            /// The information about the port.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
@@ -1186,7 +1211,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string TerminationMessagePolicy { get; set; }
 
             /// <summary>
-            /// The information about the volume that you want to mount on the init container.
+            /// The information about the volumes that you want to mount to the init containers.
             /// </summary>
             [NameInMap("VolumeMount")]
             [Validation(Required=false)]
@@ -1200,11 +1225,11 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+                /// The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one init container to be shared with other init containers in the same pod, or even with other pods on the same node. Valid values:
                 /// 
-                /// *   None: The volume mount does not receive subsequent mounts that are mounted to the volume or to the subdirectories of the volume.
-                /// *   HostToCotainer: The volume mount receives subsequent mounts that are mounted to the volume or to the subdirectories of the volume.
-                /// *   Bidirectional: The volume mount behaves the same as the HostToCotainer mount. The volume mount receives subsequent mounts that are mounted to the volume or to the subdirectories of the volume. In addition, all volume mounts created by the container are propagated back to the host and to all containers of all pods that use the same volume.
+                /// *   None: The volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.
+                /// *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.
+                /// *   Bidirectional: This value is similar to HostToContainer. The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume. In addition, all volume mounts that are mounted on the init container are propagated back to the host and all init containers of all pods that use the same volume.
                 /// 
                 /// Default value: None.
                 /// </summary>
@@ -1213,7 +1238,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public string MountPropagation { get; set; }
 
                 /// <summary>
-                /// The volume name.
+                /// The name of the volume.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -1227,7 +1252,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public bool? ReadOnly { get; set; }
 
                 /// <summary>
-                /// The subdirectory of the volume. The pod can mount different directories of the same volume to different directories of the init container.
+                /// The subdirectory of the volume. The pod can mount different directories of the same volume to different subdirectories of init containers.
                 /// </summary>
                 [NameInMap("SubPath")]
                 [Validation(Required=false)]
@@ -1252,29 +1277,29 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string InsecureRegistry { get; set; }
 
         /// <summary>
-        /// The ECS instance type. Different instance types are supported. For more information, see [Specify an ECS instance type to create an elastic container instance](~~114664~~).
+        /// The ECS instance types that you specify to create the elastic container instance. Multiple instance types are supported. For more information, see [Specify ECS instance types to create an elastic container instance](https://help.aliyun.com/document_detail/114664.html).
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The number of IPv6 addresses. Set the value to 1. You can assign only one IPv6 address to an elastic container instance.
+        /// The number of IPv6 addresses that are assigned to the instance. Set the value to 1. You can assign only one IPv6 address to an elastic container instance.
         /// </summary>
         [NameInMap("Ipv6AddressCount")]
         [Validation(Required=false)]
         public int? Ipv6AddressCount { get; set; }
 
         /// <summary>
-        /// The peak Internet bandwidth of the IPv6 address when the Ipv6GatewayBandwidthEnable parameter is set to true. Valid values:
+        /// The maximum IPv6 Internet bandwidth when you set Ipv6GatewayBandwidthEnable to true. Valid values:
         /// 
-        /// *   If the billing method for the Internet bandwidth of the IPv6 gateway is pay-by-bandwidth, the Internet bandwidth of the IPv6 address ranges from 1 to 2,000 Mbit/s.
+        /// *   If the billing method for IPv6 network usage is pay-by-bandwidth, the maximum IPv6 Internet bandwidth ranges from 1 to 2,000 Mbit/s.
         /// 
-        /// *   If the billing method for the Internet bandwidth of the IPv6 gateway is pay-by-traffic, the Internet bandwidth range of the IPv6 address is based on the edition of the IPv6 gateway.
+        /// *   If the billing method for IPv6 network usage is pay-by-traffic, the maximum IPv6 Internet bandwidth varies based on the edition of the IPv6 gateway.
         /// 
-        ///     *   If the IPv6 gateway is of Free Edition, the Internet bandwidth of the IPv6 address ranges from 1 to 200 Mbit/s.
-        ///     *   If the IPv6 gateway is of Enterprise Edition, the Internet bandwidth of the IPv6 address ranges from 1 to 500 Mbit/s.
-        ///     *   If the IPv6 gateway is of Enhanced Enterprise Edition, the Internet bandwidth of the IPv6 address ranges from 1 to 1,000 Mbit/s.
+        ///     *   If the IPv6 gateway is of Free Edition, the maximum IPv6 Internet bandwidth ranges from 1 to 200 Mbit/s.
+        ///     *   If the IPv6 gateway is of Enterprise Edition, the maximum IPv6 Internet bandwidth ranges from 1 to 500 Mbit/s.
+        ///     *   If the IPv6 gateway is of Enhanced Enterprise Edition, the maximum IPv6 Internet bandwidth ranges from 1 to 1000 Mbit/s.
         /// 
         /// The default value is the maximum value in the Internet bandwidth range of the IPv6 gateway.
         /// </summary>
@@ -1283,21 +1308,21 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string Ipv6GatewayBandwidth { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable IPv6 Internet access for the elastic container instance.
+        /// Specifies whether to enable Internet access to the elastic container instance over IPv6 addresses.
         /// </summary>
         [NameInMap("Ipv6GatewayBandwidthEnable")]
         [Validation(Required=false)]
         public bool? Ipv6GatewayBandwidthEnable { get; set; }
 
         /// <summary>
-        /// The memory size that you want to allocate to the elastic container instance. Unit: GiB.
+        /// The memory size that you want to allocate to the instance. Unit: GiB.
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public float? Memory { get; set; }
 
         /// <summary>
-        /// The domain names of the NTP server.
+        /// The endpoints of the Network Time Protocol (NTP) servers.
         /// </summary>
         [NameInMap("NtpServer")]
         [Validation(Required=false)]
@@ -1340,7 +1365,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The address of the self-managed image repository. When you create an elastic container instance by using an image in a self-managed image repository that uses the HTTP protocol, you must specify this parameter. This allows Elastic Container Instance to pull the image over the HTTP protocol instead over the default HTTPS protocol. This prevents image pull failures caused by different protocols.
+        /// The address of the self-managed image repository. When you create an elastic container instance by using an image in a self-managed image repository that uses the HTTP protocol, you must specify this parameter. This way, Elastic Container Instance pulls the image over the HTTP protocol instead of the default HTTPS protocol. This prevents image pull failures caused by different protocols.
         /// </summary>
         [NameInMap("PlainHttpRegistry")]
         [Validation(Required=false)]
@@ -1354,7 +1379,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// The name of the RAM role that you want to associate with the elastic container instance. You can use the RAM role to access elastic container instances and ECS instances. For more information, see [Use an instance RAM role by calling API operations](~~61178~~).
+        /// The name of the instance Resource Access Management (RAM) role. You can use the same RAM role to access elastic container instances and ECS instances. For more information, see [Use an instance RAM role by calling API operations](https://help.aliyun.com/document_detail/61178.html).
         /// </summary>
         [NameInMap("RamRoleName")]
         [Validation(Required=false)]
@@ -1362,13 +1387,15 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs.
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -1383,11 +1410,11 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The restart policy of the elastic container instance. Valid values:
+        /// The restart policy of the instance. Valid values:
         /// 
-        /// *   Always: Always restarts the instance.
-        /// *   Never: Never restarts the instance.
-        /// *   OnFailure: Restarts the instance when the last start failed.
+        /// *   Always: Always restarts the instance if a container in the instance exits upon termination.
+        /// *   Never: Never restarts the instance if a container in the instance exits upon termination.
+        /// *   OnFailure: Restarts the instance only if a container in the instance exists upon failure with a status code of non-zero.
         /// 
         /// Default value: Always.
         /// </summary>
@@ -1401,14 +1428,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         /// *   VSwitchOrdered: The system schedules resources in the sequence of the vSwitches.
         /// *   VSwitchRandom: The system schedules resources at random.
         /// 
-        /// For more information, see [Specify multiple zones to create an elastic container instance](~~157290~~).
+        /// For more information, see [Specify multiple zones to create an elastic container instance](https://help.aliyun.com/document_detail/157290.html).
         /// </summary>
         [NameInMap("ScheduleStrategy")]
         [Validation(Required=false)]
         public string ScheduleStrategy { get; set; }
 
         /// <summary>
-        /// The ID of the security group to which the instance is assigned. Instances within the same security group can access each other.
+        /// The ID of the security group to which the instance belongs. Instances in the same security group can access each other.
         /// 
         /// If you do not specify a security group, the system automatically uses the default security group in the region that you selected. Make sure that the inbound rules of the security group contain the container protocols and port numbers that you want to expose. If you do not have a default security group in the region, the system creates a default security group, and then adds the container protocols and port numbers that you specified to the inbound rules of the security group.
         /// </summary>
@@ -1424,27 +1451,27 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public bool? ShareProcessNamespace { get; set; }
 
         /// <summary>
-        /// The protection period of the preemptible instance. Unit: hours. Default value: 1. A value of 0 indicates no protection period.
+        /// The protection period of the preemptible elastic container instance. Unit: hours. Default value: 1. A value of 0 indicates no protection period.
         /// </summary>
         [NameInMap("SpotDuration")]
         [Validation(Required=false)]
         public long? SpotDuration { get; set; }
 
         /// <summary>
-        /// The maximum hourly price of the preemptible elastic container instance. The value can contain up to three decimal places.
+        /// The maximum hourly price of the preemptible elastic container instance. The value can be accurate to three decimal places.
         /// 
-        /// If you set SpotStrategy to SpotWithPriceLimit, you must specify SpotPriceLimit.
+        /// If you set SpotStrategy to SpotWithPriceLimit, you must specify the SpotPriceLimit parameter.
         /// </summary>
         [NameInMap("SpotPriceLimit")]
         [Validation(Required=false)]
         public float? SpotPriceLimit { get; set; }
 
         /// <summary>
-        /// The bidding policy for the instance. Valid values:
+        /// The bid policy for the instance. Valid values:
         /// 
-        /// *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-        /// *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-        /// *   SpotAsPriceGo: The instance is created as a preemptible instance whose bidding price is based on the market price at the time of purchase.
+        /// *   NoSpot: The instance is created as a pay-as-you-go instance.
+        /// *   SpotWithPriceLimit: The instance is created as a preemptible instance for which you specify the maximum hourly price.
+        /// *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
         /// 
         /// Default value: NoSpot.
         /// </summary>
@@ -1463,21 +1490,21 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public bool? StrictSpot { get; set; }
 
         /// <summary>
-        /// The tags that you want to bind with the instance. You can bind a maximum of 20 tags. For more information, see [Use tags to manage elastic container instances](~~146608~~).
+        /// The tags that you want to add to the instance. You can bind a maximum of 20 tags. For more information, see [Use tags to manage elastic container instances](https://help.aliyun.com/document_detail/146608.html).
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateContainerGroupRequestTag> Tag { get; set; }
         public class CreateContainerGroupRequestTag : TeaModel {
             /// <summary>
-            /// The key of a tag. The tag key cannot be an empty string and must be unique. The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+            /// The tag key. The tag key cannot be an empty string and must be unique. The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of a tag. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
+            /// The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -1486,25 +1513,25 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The buffer time during which the program handles operations before the program stops. Unit: seconds.
+        /// The buffer period of time during which the program handles operations before the program is stopped. Unit: seconds.
         /// </summary>
         [NameInMap("TerminationGracePeriodSeconds")]
         [Validation(Required=false)]
         public long? TerminationGracePeriodSeconds { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch to which the instance is connected. You can specify up to 10 vSwitch IDs. Separate multiple vSwitch IDs with commas (,). Example: `vsw-***,vsw-***`.
+        /// The IDs of the vSwitches that connect to the instance. You can specify up to 10 vSwitch IDs at a time. Separate multiple vSwitch IDs with commas (,). Example: `vsw-***,vsw-***`.
         /// 
-        /// If no vSwitch is specified, the system automatically uses the default vSwitch in the default VPC in the region that you selected. If you do not have a default VPC or a default vSwitch in the region, the system automatically creates a default VPC and a default vSwitch.
+        /// If you do not specify a vSwitch, the system automatically uses the default vSwitch in the default VPC in the region that you selected. If you do not have a default VPC or a default vSwitch in the region, the system automatically creates a default VPC and a default vSwitch.
         /// 
-        /// > The number of IP addresses in the vSwitch CIDR block determines the maximum number of elastic container instances that can be created for the vSwitch. Before you create elastic container instances, plan the CIDR block of the vSwitch.
+        /// >  The number of IP addresses in the vSwitch CIDR block determines the maximum number of elastic container instances that you can create for the vSwitch. Before you create elastic container instances, you must plan the CIDR block of the vSwitch.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// Information about volumes.
+        /// The information about the volume that you want to mount to the container.
         /// </summary>
         [NameInMap("Volume")]
         [Validation(Required=false)]
@@ -1628,10 +1655,12 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The type of the volume when you set the Type parameter to HostPathVolume. Valid values:
+            /// The type of the HostPath volume. Valid values:
             /// 
             /// *   Directory
             /// *   File
+            /// 
+            /// >  Only users in the whitelist can mount HostPath volumes.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -1640,7 +1669,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The ID of the zone in which the elastic container instance is deployed. If you do not specify this parameter, the system selects a zone.
+        /// The zone ID of the instance. If you do not specify this parameter, the system selects a zone.
         /// 
         /// This parameter is empty by default.
         /// </summary>

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
     public class DescribeContainerGroupMetricRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContainerGroupId")]
         [Validation(Required=false)]

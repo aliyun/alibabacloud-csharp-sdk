@@ -13,22 +13,23 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class CommitContainerRequest : TeaModel {
         /// <summary>
-        /// The access credential configurations of the Container Registry Enterprise Edition instance.\
-        /// If you use a Container Registry Personal Edition instance, you can leave this parameter empty.
+        /// The access credential configurations of the Container Registry Enterprise Edition instance.
+        /// 
+        /// >  If you use a Container Registry Personal Edition instance, you do not need to configure this parameter. If you use a Container Registry Enterprise Edition instance, you must configure this parameter.
         /// </summary>
         [NameInMap("AcrRegistryInfo")]
         [Validation(Required=false)]
         public CommitContainerRequestAcrRegistryInfo AcrRegistryInfo { get; set; }
         public class CommitContainerRequestAcrRegistryInfo : TeaModel {
             /// <summary>
-            /// The RAM role ARN of the account to which permissions are granted during a cross-account authorization.
+            /// The Alibaba Cloud Resource Access (ARN) of the RAM role that is assigned to the user (the authorized account) in cross-account authorization scenarios.
             /// </summary>
             [NameInMap("ArnService")]
             [Validation(Required=false)]
             public string ArnService { get; set; }
 
             /// <summary>
-            /// The RAM role ARN of the account that is used to grant permissions during a cross-account authorization.
+            /// The ARN of the RAM role that is assigned to the authorizer in cross-account authorization scenarios.
             /// </summary>
             [NameInMap("ArnUser")]
             [Validation(Required=false)]
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The ID of the region where the Container Registry Enterprise Edition instance resides.
+            /// The region ID of the Container Registry Enterprise Edition instance.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -51,21 +52,21 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         }
 
         /// <summary>
-        /// The ARN that is required for authorization.
+        /// The details about the ARN that is required for authorization.
         /// </summary>
         [NameInMap("Arn")]
         [Validation(Required=false)]
         public CommitContainerRequestArn Arn { get; set; }
         public class CommitContainerRequestArn : TeaModel {
             /// <summary>
-            /// The ARN of the RAM role of the Container Registry Enterprise Edition instance.
+            /// The ARN of the authorized role.
             /// </summary>
             [NameInMap("RoleArn")]
             [Validation(Required=false)]
             public string RoleArn { get; set; }
 
             /// <summary>
-            /// The type of the authorization.
+            /// The authorization type. A value of service indicates that RAM roles are used for authorization.
             /// </summary>
             [NameInMap("RoleType")]
             [Validation(Required=false)]
@@ -75,6 +76,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The ID of the container group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContainerGroupId")]
         [Validation(Required=false)]
@@ -82,6 +85,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The name of the container.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContainerName")]
         [Validation(Required=false)]
@@ -110,6 +115,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
             /// <summary>
             /// The image repository.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Repository")]
             [Validation(Required=false)]
@@ -117,6 +124,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
             /// <summary>
             /// The tag of the image. This parameter is empty by default, which indicates that the tag is not modified.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
@@ -134,6 +143,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

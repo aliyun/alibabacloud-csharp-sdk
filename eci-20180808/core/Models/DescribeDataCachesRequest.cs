@@ -54,6 +54,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The region ID of the data caches that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

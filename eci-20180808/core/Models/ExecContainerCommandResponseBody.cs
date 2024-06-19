@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class ExecContainerCommandResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP URL. You can use this URL to enter the container within 30 seconds after this operation is called. For more information, see [Use and integrate the Elastic Container Instance terminal](~~202846~~).
+        /// The HTTP URL. You can use this URL to enter the container within 30 seconds after this operation is called. For more information, see [Use and integrate the Elastic Container Instance terminal](https://help.aliyun.com/document_detail/202846.html).
         /// </summary>
         [NameInMap("HttpUrl")]
         [Validation(Required=false)]

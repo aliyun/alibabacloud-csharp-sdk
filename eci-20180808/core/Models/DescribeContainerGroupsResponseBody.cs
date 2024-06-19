@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class DescribeContainerGroupsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the elastic container instances.
+        /// Details about the queried elastic container instances.
         /// </summary>
         [NameInMap("ContainerGroups")]
         [Validation(Required=false)]
         public List<DescribeContainerGroupsResponseBodyContainerGroups> ContainerGroups { get; set; }
         public class DescribeContainerGroupsResponseBodyContainerGroups : TeaModel {
             /// <summary>
-            /// The computing power type of the elastic container instance. A value of economy indicates economic instances.
+            /// The computing power type of the elastic container instance. Valid values:
+            /// 
+            /// *   economy: economic computing power.
+            /// *   general: general-purpose computing power.
             /// </summary>
             [NameInMap("ComputeCategory")]
             [Validation(Required=false)]
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public string Message { get; set; }
 
                     /// <summary>
-                    /// The reason why the container is in this state.
+                    /// The reason why the container is in this status.
                     /// </summary>
                     [NameInMap("Reason")]
                     [Validation(Required=false)]
@@ -156,7 +159,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public string Value { get; set; }
 
                     /// <summary>
-                    /// The source of the environment variable value. This parameter has a value only when the Value parameter is not empty.
+                    /// The source of the environment variable value. This parameter has a value only when the Value parameter is left empty.
                     /// </summary>
                     [NameInMap("ValueFrom")]
                     [Validation(Required=false)]
@@ -200,7 +203,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 /// The image pulling policy. Valid values:
                 /// 
                 /// *   Always: Each time the instance is updated, image pulling is performed.
-                /// *   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.
+                /// *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
                 /// *   Never: On-premises images are always used. Image pulling is not performed.
                 /// </summary>
                 [NameInMap("ImagePullPolicy")]
@@ -229,7 +232,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public int? FailureThreshold { get; set; }
 
                     /// <summary>
-                    /// The HTTP GET method used to check the container.
+                    /// The HTTP GET method that is used to check the container.
                     /// </summary>
                     [NameInMap("HttpGet")]
                     [Validation(Required=false)]
@@ -266,14 +269,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public int? InitialDelaySeconds { get; set; }
 
                     /// <summary>
-                    /// The interval at which the health check is performed. Unit: seconds. Default value: 10. Minimum value: 1.
+                    /// The interval at which the health check is performed. Default value: 10. Minimum value: 1. Unit: seconds.
                     /// </summary>
                     [NameInMap("PeriodSeconds")]
                     [Validation(Required=false)]
                     public int? PeriodSeconds { get; set; }
 
                     /// <summary>
-                    /// The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.
+                    /// The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. The value must be 1.
                     /// </summary>
                     [NameInMap("SuccessThreshold")]
                     [Validation(Required=false)]
@@ -326,7 +329,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The exposed ports and protocols of the container.
+                /// The exposed port and protocol of the container.
                 /// </summary>
                 [NameInMap("Ports")]
                 [Validation(Required=false)]
@@ -349,7 +352,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The previous status of the container.
+                /// The previous state of the container.
                 /// </summary>
                 [NameInMap("PreviousState")]
                 [Validation(Required=false)]
@@ -384,7 +387,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public string Message { get; set; }
 
                     /// <summary>
-                    /// The reason why the container is in this state.
+                    /// The reason why the container is in this status.
                     /// </summary>
                     [NameInMap("Reason")]
                     [Validation(Required=false)]
@@ -476,14 +479,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public int? InitialDelaySeconds { get; set; }
 
                     /// <summary>
-                    /// The interval at which the health check is performed. Unit: seconds. Default value: 10. Minimum value: 1.
+                    /// The interval at which the health check is performed. Default value: 10. Minimum value: 1. Unit: seconds.
                     /// </summary>
                     [NameInMap("PeriodSeconds")]
                     [Validation(Required=false)]
                     public int? PeriodSeconds { get; set; }
 
                     /// <summary>
-                    /// The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.
+                    /// The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. The value must be 1.
                     /// </summary>
                     [NameInMap("SuccessThreshold")]
                     [Validation(Required=false)]
@@ -550,7 +553,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContextCapability Capability { get; set; }
                     public class DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContextCapability : TeaModel {
                         /// <summary>
-                        /// The permissions specific to the processes in the container.
+                        /// The permissions specific to the process in the container.
                         /// </summary>
                         [NameInMap("Adds")]
                         [Validation(Required=false)]
@@ -559,7 +562,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     }
 
                     /// <summary>
-                    /// Indicates whether permissions on the root file system are read-only.
+                    /// Indicates whether permissions on the root file system are read-only. Valid value: true.
                     /// </summary>
                     [NameInMap("ReadOnlyRootFilesystem")]
                     [Validation(Required=false)]
@@ -610,11 +613,11 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public string MountPath { get; set; }
 
                     /// <summary>
-                    /// The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+                    /// The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
                     /// 
-                    /// *   None: The volume mount does not receive subsequent mounts that are performed on the volume or on the subdirectories of the volume.
-                    /// *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.
-                    /// *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
+                    /// *   None: The volume mount does not receive subsequent mounts that are performed on this volume or on the subdirectories of this volume.
+                    /// *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or on the subdirectories of this volume.
+                    /// *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives subsequent mounts that are performed on this volume or on the subdirectories of this volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
                     /// </summary>
                     [NameInMap("MountPropagation")]
                     [Validation(Required=false)]
@@ -660,7 +663,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public float? Cpu { get; set; }
 
             /// <summary>
-            /// The time when the system created the elastic container instance after the system received the request. The time follows the RFC 3339 standard. The time is displayed in UTC.
+            /// The time when the instance was created. The time follows the RFC 3339 standard. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -711,7 +714,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The search domain of the DNS server.
+                /// The search domains of DNS servers.
                 /// </summary>
                 [NameInMap("Searches")]
                 [Validation(Required=false)]
@@ -927,7 +930,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public string Message { get; set; }
 
                     /// <summary>
-                    /// The reason why the container is in this state.
+                    /// The reason why the container is in this status.
                     /// </summary>
                     [NameInMap("Reason")]
                     [Validation(Required=false)]
@@ -961,7 +964,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The environment variables of the container.
+                /// The environment variables of the init container.
                 /// </summary>
                 [NameInMap("EnvironmentVars")]
                 [Validation(Required=false)]
@@ -982,7 +985,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public string Value { get; set; }
 
                     /// <summary>
-                    /// The source of the environment variable value. This parameter has a value only when the Value parameter is not empty.
+                    /// The source of the environment variable value. This parameter has a value only when the Value parameter is left empty.
                     /// </summary>
                     [NameInMap("ValueFrom")]
                     [Validation(Required=false)]
@@ -1026,7 +1029,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 /// The image pulling policy. Valid values:
                 /// 
                 /// *   Always: Each time the instance is updated, image pulling is performed.
-                /// *   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.
+                /// *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
                 /// *   Never: On-premises images are always used. Image pulling is not performed.
                 /// </summary>
                 [NameInMap("ImagePullPolicy")]
@@ -1048,7 +1051,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The exposed ports and protocols of the container.
+                /// The exposed port and protocol of the container.
                 /// </summary>
                 [NameInMap("Ports")]
                 [Validation(Required=false)]
@@ -1106,7 +1109,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public string Message { get; set; }
 
                     /// <summary>
-                    /// The reason why the container is in this state.
+                    /// The reason why the container is in this status.
                     /// </summary>
                     [NameInMap("Reason")]
                     [Validation(Required=false)]
@@ -1143,7 +1146,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public bool? Ready { get; set; }
 
                 /// <summary>
-                /// The number of times the container restarted.
+                /// The number of times that the container restarted.
                 /// </summary>
                 [NameInMap("RestartCount")]
                 [Validation(Required=false)]
@@ -1180,7 +1183,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public bool? ReadOnlyRootFilesystem { get; set; }
 
                     /// <summary>
-                    /// The UID this is used to run the entry point of the container process.
+                    /// The UID that is used to run the entry point of the container process.
                     /// </summary>
                     [NameInMap("RunAsUser")]
                     [Validation(Required=false)]
@@ -1203,11 +1206,11 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public string MountPath { get; set; }
 
                     /// <summary>
-                    /// The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+                    /// The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
                     /// 
-                    /// *   None: The volume mount does not receive subsequent mounts that are performed on the volume or on the subdirectories of the volume.
-                    /// *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.
-                    /// *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
+                    /// *   None: The volume mount does not receive subsequent mounts that are performed on this volume or on the subdirectories of this volume.
+                    /// *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or on the subdirectories of this volume.
+                    /// *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives subsequent mounts that are performed on this volume or on the subdirectories of this volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
                     /// </summary>
                     [NameInMap("MountPropagation")]
                     [Validation(Required=false)]
@@ -1221,7 +1224,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// Default value: false.
+                    /// Indicates whether the volume is read-only.
                     /// </summary>
                     [NameInMap("ReadOnly")]
                     [Validation(Required=false)]
@@ -1274,7 +1277,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public float? Memory { get; set; }
 
             /// <summary>
-            /// The name of the instance RAM role. The elastic container instance and the ECS instance share a RAM role. For more information, see [Use an instance RAM role by calling API operations](~~61178~~).
+            /// The name of the instance RAM role. The elastic container instance and the ECS instance share a RAM role. For more information, see [Use an instance RAM role by calling API operations](https://help.aliyun.com/document_detail/61178.html).
             /// </summary>
             [NameInMap("RamRoleName")]
             [Validation(Required=false)]
@@ -1288,7 +1291,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// The resource group ID.
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
@@ -1297,8 +1300,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             /// <summary>
             /// The restart policy of the elastic container instance. Valid values:
             /// 
-            /// *   Never: Never restarts the instance if a container in the instance exits.
-            /// *   Always: Always restarts the instance if a container in the instance exits.
+            /// *   Never: Never restarts the instance if a container in the instance exits upon termination.
+            /// *   Always: Always restarts the instance if a container in the instance exits upon termination.
             /// *   OnFailure: Restarts the instance only if a container in the instance exists upon failure with a status code of non-zero.
             /// </summary>
             [NameInMap("RestartPolicy")]
@@ -1306,7 +1309,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string RestartPolicy { get; set; }
 
             /// <summary>
-            /// The security group ID.
+            /// The ID of the security group to which the instances belong.
             /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
@@ -1325,15 +1328,15 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             /// The bid policy for the instance. Default value: NoSpot. Valid values:
             /// 
             /// *   NoSpot: The instance is a regular pay-as-you-go instance.
-            /// *   SpotWithPriceLimit: The instance is a preemptible instance that has a maximum price.
-            /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.
+            /// *   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.
+            /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
             /// </summary>
             [NameInMap("SpotStrategy")]
             [Validation(Required=false)]
             public string SpotStrategy { get; set; }
 
             /// <summary>
-            /// The state of the instance. Valid values:
+            /// The status of the instance. Valid values:
             /// 
             /// *   Pending: The instance is being started.
             /// *   Running: The instance is running.
@@ -1358,7 +1361,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string SucceededTime { get; set; }
 
             /// <summary>
-            /// The tags of the instance.
+            /// The tags that are added to the instance.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -1416,7 +1419,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// Information about the volumes.
+            /// The information about the volumes.
             /// </summary>
             [NameInMap("Volumes")]
             [Validation(Required=false)]
@@ -1446,7 +1449,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 }
 
                 /// <summary>
-                /// The ID of the disk when you set the Type parameter to DiskVolume.
+                /// The ID of the disk when you set Type to DiskVolume.
                 /// </summary>
                 [NameInMap("DiskVolumeDiskId")]
                 [Validation(Required=false)]
@@ -1463,7 +1466,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 /// The storage media for the emptyDir volume. This parameter is empty by default, indicating that the node file system is used as the storage media. Valid values:
                 /// 
                 /// *   Memory: Memory is used as the storage media.
-                /// *   LocalRaid0: Local disks are formed into RAID 0. This value is valid only if an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](~~114664~~).
+                /// *   LocalRaid0: Local disks are formed into RAID 0. This value is valid only if an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](https://help.aliyun.com/document_detail/114664.html).
                 /// </summary>
                 [NameInMap("EmptyDirVolumeMedium")]
                 [Validation(Required=false)]
@@ -1512,7 +1515,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public bool? NFSVolumeReadOnly { get; set; }
 
                 /// <summary>
-                /// The endpoint of the server when you set the Type parameter to NFSVolume.
+                /// The address of the NFS server.
                 /// </summary>
                 [NameInMap("NFSVolumeServer")]
                 [Validation(Required=false)]

@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class ExecContainerCommandRequest : TeaModel {
         /// <summary>
-        /// The commands to run in the container. You can specify up to 20 commands. Each command can be up to 256 characters in length.\
+        /// The commands to run in the container. You can specify up to 20 commands. Each command can be up to 256 characters in length.\\
         /// The strings must be in the JSON format. Example: `["/bin/sh", "-c", "ls -a"]`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Command")]
         [Validation(Required=false)]
@@ -19,6 +21,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The ID of the elastic container instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContainerGroupId")]
         [Validation(Required=false)]
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The name of the container.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContainerName")]
         [Validation(Required=false)]
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -62,16 +70,16 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public bool? Stdin { get; set; }
 
         /// <summary>
-        /// Specifies whether to run the command immediately and return the result. Default value: false.\
-        /// If you set this parameter to true, set the value of TTY to false.
+        /// Specifies whether to immediately run the command and synchronously return the result. Default value: false.\\
+        /// If this parameter is set to true, TTY must be set to false. Command cannot be set to `/bin/bash`.
         /// </summary>
         [NameInMap("Sync")]
         [Validation(Required=false)]
         public bool? Sync { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable interaction. Default value: false.\
-        /// If the command is a /bin/bash command, set the value to true.
+        /// Specifies whether to enable interaction. Default value: false.\\
+        /// If the Command parameter is set to `/bin/bash`, set this parameter to true.
         /// </summary>
         [NameInMap("TTY")]
         [Validation(Required=false)]

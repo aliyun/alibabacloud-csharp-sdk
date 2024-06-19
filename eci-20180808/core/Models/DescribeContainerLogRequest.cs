@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
     public class DescribeContainerLogRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContainerGroupId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The name of the container.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContainerName")]
         [Validation(Required=false)]
@@ -80,7 +84,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The number of log entries that you want to query. Default value: 500. Maximum value: 2000. A maximum of 1 MB of logs can be returned.
+        /// The number of the most recent log entries that you want to query. Default value: 500. Maximum value: 2000.\\
+        /// A maximum of 1 MB log data can be returned.
         /// </summary>
         [NameInMap("Tail")]
         [Validation(Required=false)]

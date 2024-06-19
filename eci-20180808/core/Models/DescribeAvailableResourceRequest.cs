@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
     public class DescribeAvailableResourceRequest : TeaModel {
         /// <summary>
         /// The information about the resource that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DestinationResource")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             /// 
             /// *   InstanceTypeFamily: queries instance families. If you use this parameter value, you must also specify the Value parameter.
             /// *   InstanceType: queries instance types. If you use this parameter value, you must also specify the Value, Cores, and Memory parameters.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -63,7 +67,9 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         /// <summary>
         /// The region ID of the ECS instance families.
         /// 
-        /// You can call the [DescribeRegions](~~146965~~) operation to query the most recent list of regions.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/146965.html) operation to query the most recent list of regions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

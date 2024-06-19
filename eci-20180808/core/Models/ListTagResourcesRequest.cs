@@ -8,13 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eci20180808.Models
 {
-    public class DeleteVirtualNodeRequest : TeaModel {
-        /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency of requests](https://help.aliyun.com/document_detail/25693.html).
-        /// </summary>
-        [NameInMap("ClientToken")]
+    public class ListTagResourcesRequest : TeaModel {
+        [NameInMap("Limit")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string Limit { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -25,13 +26,15 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the virtual node.
-        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -42,13 +45,25 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the virtual node.
-        /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("VirtualNodeId")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string VirtualNodeId { get; set; }
+        public string ResourceType { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListTagResourcesRequestTag> Tag { get; set; }
+        public class ListTagResourcesRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

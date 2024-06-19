@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class CreateContainerGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the elastic container instance.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("ContainerGroupId")]
         [Validation(Required=false)]
         public string ContainerGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

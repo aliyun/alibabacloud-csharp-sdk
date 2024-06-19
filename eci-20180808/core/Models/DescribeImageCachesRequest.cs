@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string ImageCacheName { get; set; }
 
         /// <summary>
-        /// Specifies whether the image layers of the image caches must contain all image layers of the container image.\
+        /// Specifies whether the image layers of the image caches must contain all image layers of the container image.\\
         /// If you configure MatchImage, you can configure this parameter to further filter query results.
         /// </summary>
         [NameInMap("ImageFullMatch")]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public bool? ImageFullMatch { get; set; }
 
         /// <summary>
-        /// The quantity of image caches whose image layers contain all image layers of the container image.\
+        /// The quantity of image caches whose image layers contain all image layers of the container image.\\
         /// If you configure MatchImage, you can configure this parameter to further filter query results.
         /// </summary>
         [NameInMap("ImageMatchCountRequest")]
@@ -77,6 +77,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The region ID of the image caches.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

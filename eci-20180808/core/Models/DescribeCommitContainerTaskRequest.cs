@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class DescribeCommitContainerTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the elastic container instance on which the CommitContainer task is executed.\
+        /// The ID of the elastic container instance on which the CommitContainer task is executed.\\
         /// You must enter the instance ID, the task ID, or both for the request.
         /// </summary>
         [NameInMap("ContainerGroupId")]
@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         public string ContainerGroupId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.\
-        /// Maximum value: 50.\
+        /// The number of entries to return on each page.\\
+        /// Maximum value: 50.\\
         /// Default value: 10.
         /// </summary>
         [NameInMap("MaxResults")]
@@ -43,6 +43,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

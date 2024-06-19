@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
     public class DescribeMultiContainerGroupMetricRequest : TeaModel {
         /// <summary>
         /// The instance ID. The value is a JSON array. You can specify up to 20 instance IDs at a time.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ContainerGroupIds")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         /// <summary>
         /// The region ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
