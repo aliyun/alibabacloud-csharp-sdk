@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class RestoreInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup file. You can call the [DescribeBackups](~~61081~~) operation to query the IDs of backup files.
+        /// The ID of the backup file. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/61081.html) operation to query the IDs of backup files.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// 
         /// > 
         /// 
-        /// *   If the [data flashback](~~148479~~) feature is enabled for the instance, you can specify this parameter and the **FilterKey** parameter to restore the data of the specified key to the specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
+        /// *   If the [data flashback](https://help.aliyun.com/document_detail/148479.html) feature is enabled for the instance, you can specify this parameter and the **FilterKey** parameter to restore the data of the specified key to the specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
         /// 
         /// *   This parameter is available only if you set the **RestoreType** parameter to **1**.
         /// </summary>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// The restoration mode. Default value: 0. Valid values:
         /// 
         /// *   **0**: restores data from the specified backup set.
-        /// *   **1**: restores data to a specified point in time. You can specify this value only if the [data flashback](~~148479~~) feature is enabled for the instance. If you specify this value, you must also specify the **RestoreTime** parameter.
+        /// *   **1**: restores data to a specified point in time. You can specify this value only if the [data flashback](https://help.aliyun.com/document_detail/148479.html) feature is enabled for the instance. If you specify this value, you must also specify the **RestoreTime** parameter.
         /// </summary>
         [NameInMap("RestoreType")]
         [Validation(Required=false)]

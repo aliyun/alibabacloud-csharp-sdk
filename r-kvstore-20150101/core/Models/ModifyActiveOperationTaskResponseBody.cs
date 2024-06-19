@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyActiveOperationTaskResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the O\&M task. IDs are separated by commas (,).
+        /// The ID of the O\\&M task. IDs are separated by commas (,).
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]

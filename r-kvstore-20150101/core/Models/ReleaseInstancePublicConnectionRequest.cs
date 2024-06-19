@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class ReleaseInstancePublicConnectionRequest : TeaModel {
         /// <summary>
         /// The public endpoint to be released.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentConnectionString")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance for which you want to release a public endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

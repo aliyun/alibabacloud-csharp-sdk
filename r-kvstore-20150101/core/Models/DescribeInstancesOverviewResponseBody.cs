@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// Instance\"s secondary zone id.
+            /// Instance\\"s secondary zone id.
             /// > This parameter is only returned when the instance has a secondary zone ID.
             /// </summary>
             [NameInMap("SecondaryZoneId")]

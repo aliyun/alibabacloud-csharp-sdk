@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
         /// <summary>
         /// The current endpoint of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CurrentConnectionString")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

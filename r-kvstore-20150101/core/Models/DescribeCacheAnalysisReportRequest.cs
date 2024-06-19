@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class DescribeCacheAnalysisReportRequest : TeaModel {
         /// <summary>
         /// The type of analytics. Set the value to **BigKey**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AnalysisType")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The date to query. You can query the report for one day each time. Specify the date in the *yyyy-MM-dd*Z format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Date")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

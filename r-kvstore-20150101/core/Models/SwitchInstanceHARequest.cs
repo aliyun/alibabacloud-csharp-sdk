@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class SwitchInstanceHARequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+        /// The ID of the instance. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/60933.html) operation to query the ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the data shard. You can call the [DescribeRoleZoneInfo](~~190794~~) operation to obtain the value of the CustinsId parameter. Separate multiple data shard IDs with commas (,). `all` indicates that all data shards are specified.
+        /// The ID of the data shard. You can call the [DescribeRoleZoneInfo](https://help.aliyun.com/document_detail/190794.html) operation to obtain the value of the CustinsId parameter. Separate multiple data shard IDs with commas (,). `all` indicates that all data shards are specified.
         /// 
         /// > This parameter is available and required only for read/write splitting and cluster instances.
         /// </summary>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// *   **0**: immediately performs the switchover.
         /// *   **1**: performs the switchover during the maintenance window.
         /// 
-        /// > You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+        /// > You can call the [ModifyInstanceMaintainTime](https://help.aliyun.com/document_detail/61000.html) operation to modify the maintenance window of an ApsaraDB for Redis instance.
         /// </summary>
         [NameInMap("SwitchMode")]
         [Validation(Required=false)]

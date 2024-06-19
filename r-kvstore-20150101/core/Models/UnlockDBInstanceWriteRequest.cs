@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class UnlockDBInstanceWriteRequest : TeaModel {
         /// <summary>
         /// The instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

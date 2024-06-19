@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// Specifies whether to enable automatic payment. Valid values:
         /// 
         /// *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-        /// *   **false**: disables automatic payment. In this case, you must manually renew the instance in the console before the instance expires. For more information, see [Renewal](~~26352~~).
+        /// *   **false**: disables automatic payment. In this case, you must manually renew the instance in the console before the instance expires. For more information, see [Renewal](https://help.aliyun.com/document_detail/26352.html).
         /// 
         /// > The default value is **true**.
         /// </summary>
@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

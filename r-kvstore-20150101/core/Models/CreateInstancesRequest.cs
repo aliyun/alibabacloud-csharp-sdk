@@ -64,6 +64,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The JSON-formatted configurations of the instance. For more information, see the "Description of the Instances parameter" section of this topic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]

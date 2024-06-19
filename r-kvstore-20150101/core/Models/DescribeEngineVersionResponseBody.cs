@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// *   **true**: The major version can be upgraded.
         /// *   **false**: The major version is the latest version and cannot be upgraded.
         /// 
-        /// >  To upgrade the major version, call the [ModifyInstanceMajorVersion](~~95259~~) operation.
+        /// >  To upgrade the major version, call the [ModifyInstanceMajorVersion](https://help.aliyun.com/document_detail/95259.html) operation.
         /// </summary>
         [NameInMap("EnableUpgradeMajorVersion")]
         [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// *   **true**: The minor version can be updated.
         /// *   **false**: The minor version is the latest version and cannot be updated.
         /// 
-        /// >  To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.
+        /// >  To update the minor version, call the [ModifyInstanceMinorVersion](https://help.aliyun.com/document_detail/129381.html) operation.
         /// </summary>
         [NameInMap("EnableUpgradeMinorVersion")]
         [Validation(Required=false)]

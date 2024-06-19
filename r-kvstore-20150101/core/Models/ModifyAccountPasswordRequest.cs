@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyAccountPasswordRequest : TeaModel {
         /// <summary>
-        /// The username of the account for which you want to change the password. You can call the [DescribeAccounts](~~95802~~) operation to query the username of the account.
+        /// The username of the account for which you want to change the password. You can call the [DescribeAccounts](https://help.aliyun.com/document_detail/95802.html) operation to query the username of the account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The new password to be set for the account. The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewAccountPassword")]
         [Validation(Required=false)]
@@ -33,7 +39,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// The current password of the account.
         /// 
-        /// > If you forget your password, you can call the [ResetAccountPassword](~~95941~~) operation to reset your password.
+        /// > If you forget your password, you can call the [ResetAccountPassword](https://help.aliyun.com/document_detail/95941.html) operation to reset your password.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OldAccountPassword")]
         [Validation(Required=false)]

@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
         /// 
         /// > We recommend that you specify a time range of 10 minutes or less because audit logs contain a great number of entries. Do not specify a time range that is longer than one day.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// 
         /// *   This parameter is available only for read/write splitting or cluster instances of ApsaraDB for Redis.
         /// 
-        /// *   You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query node IDs.
+        /// *   You can call the [DescribeLogicInstanceTopology](https://help.aliyun.com/document_detail/94665.html) operation to query node IDs.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -104,6 +108,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

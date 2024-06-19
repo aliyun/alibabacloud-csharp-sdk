@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// 
         /// **To view the instance type, perform the following steps:**
         /// 
-        /// 1.  In the [Overview](~~26350~~) topic, click the link in the **Reference** column corresponding to the instance type that you want to view.
+        /// 1.  In the [Overview](https://help.aliyun.com/document_detail/26350.html) topic, click the link in the **Reference** column corresponding to the instance type that you want to view.
         /// 2.  In the instance type table of the page that appears, find the instance type in the **InstanceClass** column.
         /// 
         /// When you query cloud-native cluster instances, you must set this parameter to one of the following values and use the Instances parameter to specify the instance type that you want to query.
@@ -113,6 +113,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// *   **UPGRADE**: The order is used to change the configurations of instances.
         /// *   **RENEW**: The order is used to renew instances.
         /// *   **CONVERT**: The order is used to change the billing methods of instances.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -141,7 +143,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Quantity { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61012.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -160,7 +162,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance. You can call the [DescribeZones](~~94527~~) operation to query the most recent zone list.
+        /// The zone ID of the instance. You can call the [DescribeZones](https://help.aliyun.com/document_detail/94527.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

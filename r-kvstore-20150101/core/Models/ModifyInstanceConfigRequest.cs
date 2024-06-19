@@ -14,7 +14,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// 
         /// **
         /// 
-        /// **Description** For more information, see [Supported parameters](~~259681~~).
+        /// **Description** For more information, see [Supported parameters](https://help.aliyun.com/document_detail/259681.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

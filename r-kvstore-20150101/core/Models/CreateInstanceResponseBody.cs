@@ -104,6 +104,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the order.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// *   **Immediately**: immediately upgrades the major version. This is the default value.
         /// *   **MaintainTime**: upgrades the major version in the maintenance window.
         /// 
-        /// >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+        /// >  You can call the [ModifyInstanceMaintainTime](https://help.aliyun.com/document_detail/61000.html) operation to modify the maintenance window of an ApsaraDB for Redis instance.
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The major version to which you want to upgrade the instance. Valid values: **4.0** and **5.0**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MajorVersion")]
         [Validation(Required=false)]

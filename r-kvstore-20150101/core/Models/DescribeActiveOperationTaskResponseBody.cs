@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeActiveOperationTaskResponseBody : TeaModel {
         /// <summary>
-        /// Details of O\&M tasks.
+        /// Details of O\\&M tasks.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeActiveOperationTaskResponseBodyItems> Items { get; set; }
         public class DescribeActiveOperationTaskResponseBodyItems : TeaModel {
             /// <summary>
-            /// The time when the O\&M task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the O\\&M task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreatedTime")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InsName { get; set; }
 
             /// <summary>
-            /// The time when the O\&M task was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the O\\&M task was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// The time when the O\&M task was preformed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the O\\&M task was preformed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]

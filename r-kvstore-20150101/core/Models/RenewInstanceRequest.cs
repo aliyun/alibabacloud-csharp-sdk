@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string FromApp { get; set; }
 
         /// <summary>
-        /// The instance type code. For more information, see [Instance specifications overview](~~26350~~). When you renew the instance, you can specify this parameter to change specifications of the instance.
+        /// The instance type code. For more information, see [Instance specifications overview](https://help.aliyun.com/document_detail/26350.html). When you renew the instance, you can specify this parameter to change specifications of the instance.
         /// 
         /// > To change the specifications when you renew the instance, you must specify at least one of the `Capacity` and `InstanceClass` parameters.
         /// </summary>
@@ -79,6 +79,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -94,6 +96,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The renewal period. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**. Unit: months.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]

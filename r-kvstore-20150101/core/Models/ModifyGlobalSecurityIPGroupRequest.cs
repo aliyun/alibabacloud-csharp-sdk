@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class ModifyGlobalSecurityIPGroupRequest : TeaModel {
         /// <summary>
         /// The IP addresses in the IP whitelist template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GIpList")]
         [Validation(Required=false)]
@@ -19,9 +21,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// The name of the IP whitelist template. The name must meet the following requirements:
         /// 
-        /// *   The name can contain lowercase letters, digits, and underscores (\_).
+        /// *   The name can contain lowercase letters, digits, and underscores (_).
         /// *   The name must start with a letter and end with a letter or a digit.
         /// *   The name must be 2 to 120 characters in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GlobalIgName")]
         [Validation(Required=false)]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the IP whitelist template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GlobalSecurityGroupId")]
         [Validation(Required=false)]
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The region ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

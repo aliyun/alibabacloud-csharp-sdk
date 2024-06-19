@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// The specifications of the data node. For more information, see [Community Edition instances that use cloud disks](~~164477~~).
+            /// The specifications of the data node. For more information, see [Community Edition instances that use cloud disks](https://help.aliyun.com/document_detail/164477.html).
             /// </summary>
             [NameInMap("ClassCode")]
             [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? CurrentBandWidth { get; set; }
 
             /// <summary>
-            /// The storage capacity of the [enhanced SSD (ESSD)](~~122389~~) that is used by the data node. Unit: MB.
+            /// The storage capacity of the [enhanced SSD (ESSD)](https://help.aliyun.com/document_detail/122389.html) that is used by the data node. Unit: MB.
             /// 
             /// > The ESSD is used only to store system operating data, such as Persistent Memory (PMEM). It is not used as a medium to write and read data.
             /// </summary>

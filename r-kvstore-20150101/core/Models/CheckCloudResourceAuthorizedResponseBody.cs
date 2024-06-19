@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// 
         /// *   **0**: The instance is authorized to use KMS.
         /// *   **1**: The instance is not authorized to use KMS.
-        /// *   **2**: KMS is not activated. For more information, see [Activate KMS](~~153781~~).
+        /// *   **2**: KMS is not activated. For more information, see [Activate KMS](https://help.aliyun.com/document_detail/153781.html).
         /// </summary>
         [NameInMap("AuthorizationState")]
         [Validation(Required=false)]

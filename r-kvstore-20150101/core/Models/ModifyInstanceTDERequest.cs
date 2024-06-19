@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceTDERequest : TeaModel {
         /// <summary>
-        /// The ID of the custom key. You can call the [DescribeEncryptionKeyList](~~302339~~) operation to query the key ID.
+        /// The ID of the custom key. You can call the [DescribeEncryptionKeyList](https://help.aliyun.com/document_detail/302339.html) operation to query the key ID.
         /// 
         /// > 
         /// 
-        /// *   If you do not specify this parameter, [Key Management Service (KMS)](~~28935~~) automatically generates a key.
+        /// *   If you do not specify this parameter, [Key Management Service (KMS)](https://help.aliyun.com/document_detail/28935.html) automatically generates a key.
         /// 
-        /// *   To create a custom key, you can call the [CreateKey](~~28947~~) operation of the KMS API.
+        /// *   To create a custom key, you can call the [CreateKey](https://help.aliyun.com/document_detail/28947.html) operation of the KMS API.
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
@@ -32,7 +32,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EncryptionName { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+        /// The ID of the instance. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/60933.html) operation to query the ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -74,7 +76,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// Specifies whether to enable TDE. Set the value to **Enabled**.
         /// 
-        /// > TDE cannot be disabled after it is enabled. Before you enable it, evaluate whether this feature affects your business. For more information, see [Enable TDE](~~265913~~).
+        /// > TDE cannot be disabled after it is enabled. Before you enable it, evaluate whether this feature affects your business. For more information, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TDEStatus")]
         [Validation(Required=false)]

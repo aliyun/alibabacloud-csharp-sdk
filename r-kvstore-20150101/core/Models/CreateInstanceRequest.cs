@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// The ID of the backup file of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter after you specify the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup file that is specified by this parameter. You can call the [DescribeBackups](~~61081~~) operation to query the IDs of backup files.
+        /// The ID of the backup file of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter after you specify the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup file that is specified by this parameter. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/61081.html) operation to query the IDs of backup files.
         /// 
         /// > After you specify the **SrcDBInstanceId** parameter, you must use the **BackupId** or **RestoreTime** parameter to specify the backup file.
         /// </summary>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string GlobalSecurityGroupIds { get; set; }
 
         /// <summary>
-        /// The instance type. For example, redis.master.small.default indicates a Community Edition standard master-replica instance that has 1 GB of memory. For more information, see [Overview](~~26350~~).
+        /// The instance type. For example, redis.master.small.default indicates a Community Edition standard master-replica instance that has 1 GB of memory. For more information, see [Overview](https://help.aliyun.com/document_detail/26350.html).
         /// 
         /// **
         /// 
@@ -266,8 +266,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? ReadOnlyCount { get; set; }
 
+        [NameInMap("RecoverConfigMode")]
+        [Validation(Required=false)]
+        public string RecoverConfigMode { get; set; }
+
         /// <summary>
-        /// The ID of the region where you want to create the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
+        /// The ID of the region where you want to create the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61012.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -298,7 +304,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// The secondary zone ID of the instance. You can call the [DescribeZones](~~472448~~) operation to query the most recent zone list.
+        /// The secondary zone ID of the instance. You can call the [DescribeZones](https://help.aliyun.com/document_detail/472448.html) operation to query the most recent zone list.
         /// 
         /// > If you specify this parameter, the master node and replica node of the instance can be deployed in different zones and disaster recovery is implemented across zones. The instance can withstand failures in data centers.
         /// </summary>
@@ -319,6 +325,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("ShardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }
+
+        [NameInMap("SlaveReadOnlyCount")]
+        [Validation(Required=false)]
+        public int? SlaveReadOnlyCount { get; set; }
 
         /// <summary>
         /// The ID of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter and use the **BackupId** or **RestoreTime** parameter to specify the backup file.
@@ -380,7 +390,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The primary zone ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent zone list.
+        /// The primary zone ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61012.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

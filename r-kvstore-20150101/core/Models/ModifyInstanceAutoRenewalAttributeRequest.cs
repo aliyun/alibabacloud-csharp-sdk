@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// The ID of the instance. Separate multiple instance IDs with commas (,).
         /// 
         /// > You can specify up to 30 instance IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

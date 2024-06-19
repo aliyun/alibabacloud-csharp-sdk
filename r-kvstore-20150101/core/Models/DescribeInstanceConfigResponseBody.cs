@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstanceConfigResponseBody : TeaModel {
         /// <summary>
-        /// The parameter settings of the instance. For more information, see [Parameter overview and configuration guide](~~43885~~).
+        /// The parameter settings of the instance. For more information, see [Parameter overview and configuration guide](https://help.aliyun.com/document_detail/43885.html).
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]

@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string CloudType { get; set; }
 
                 /// <summary>
-                /// The parameter configurations of the instance. For more information, see [Modify parameters of an instance](~~43885~~).
+                /// The parameter configurations of the instance. For more information, see [Modify parameters of an instance](https://help.aliyun.com/document_detail/43885.html).
                 /// </summary>
                 [NameInMap("Config")]
                 [Validation(Required=false)]
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string SecondaryZoneId { get; set; }
 
                 /// <summary>
-                /// The shard class. For more information about shard classes, see [Overview](~~26350~~).
+                /// The shard class. For more information about shard classes, see [Overview](https://help.aliyun.com/document_detail/26350.html).
                 /// 
                 /// >  The overall performance of a cluster instance is calculated by multiplying the class of a single shard (ShardClass) by the number of shards (ShardCount).
                 /// </summary>

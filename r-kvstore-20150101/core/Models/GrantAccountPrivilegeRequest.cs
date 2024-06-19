@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class GrantAccountPrivilegeRequest : TeaModel {
         /// <summary>
         /// The name of the account. You can call the [DescribeAccounts](~~DescribeAccounts~~) operation to obtain the name of the account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// 
         /// *   RoleReadOnly: The account has the read-only permissions.
         /// *   RoleReadWrite: The account has the read and write permissions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AccountPrivilege")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance to which the account belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

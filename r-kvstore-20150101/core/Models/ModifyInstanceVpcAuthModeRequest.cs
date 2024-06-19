@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class ModifyInstanceVpcAuthModeRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -45,6 +47,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// **
         /// 
         /// **Description** Default value: **Open**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcAuthMode")]
         [Validation(Required=false)]

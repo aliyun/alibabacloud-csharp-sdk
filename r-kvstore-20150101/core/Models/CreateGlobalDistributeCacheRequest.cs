@@ -44,6 +44,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the existing instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SeedSubInstanceId")]
         [Validation(Required=false)]

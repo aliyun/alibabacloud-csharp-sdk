@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The details of the backup tasks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -26,7 +28,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// The backup mode. Valid values:
         /// 
-        /// *   **Automated**: automatic backup. You can call the [DescribeBackupPolicy](~~61078~~) operation to query the automatic backup policy.
+        /// *   **Automated**: automatic backup. You can call the [DescribeBackupPolicy](https://help.aliyun.com/document_detail/61078.html) operation to query the automatic backup policy.
         /// *   **Manual**: manual backup.
         /// 
         /// > By default, the information about backup tasks in both modes is returned.

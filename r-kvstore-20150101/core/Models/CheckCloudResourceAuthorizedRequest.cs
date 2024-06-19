@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CheckCloudResourceAuthorizedRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+        /// The ID of the instance. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/60933.html) operation to query the ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string ParameterDescription { get; set; }
 
                 /// <summary>
-                /// The name of the parameter. For more information about the parameters and the parameter settings, see [Parameters](~~259681~~).
+                /// The name of the parameter. For more information about the parameters and the parameter settings, see [Parameters](https://help.aliyun.com/document_detail/259681.html).
                 /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]

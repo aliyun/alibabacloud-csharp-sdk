@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The detailed configurations of the instance. The value is a JSON string. For more information about the parameter description, see [Modify the parameters of an ApsaraDB for Redis instance](~~43885~~).
+        /// The detailed configurations of the instance. The value is a JSON string. For more information about the parameter description, see [Modify the parameters of an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/43885.html).
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// The ID of the order.
+        /// The order ID.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

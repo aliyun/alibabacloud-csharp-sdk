@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParameterTemplatesRequest : TeaModel {
         /// <summary>
-        /// The architecture of the instance. For more information, see [Overview](~~86132~~). Valid values:
+        /// The architecture of the instance. For more information, see [Overview](https://help.aliyun.com/document_detail/86132.html). Valid values:
         /// 
         /// *   **logic**: The instance is a cluster master-replica instance or a read/write splitting instance.
         /// *   **normal**: The instance is a standard master-replica instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CharacterType")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The database engine that is run on the instance. Set the value to **Redis**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The major version that is run on the instance. Valid values: **2.8**, **4.0**, and **5.0**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -49,9 +55,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.
+        /// The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the IDs of resource groups.
         /// 
-        /// >  You can also query the ID of a resource group in the Resource Management console. For more information, see [View the basic information of a resource group](~~151181~~).
+        /// >  You can also query the ID of a resource group in the Resource Management console. For more information, see [View the basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.
         /// 
         /// >  The endpoint is in the `<prefix>.redis.rds.aliyuncs.com` format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The service port number of the instance. Valid values: **1024** to **65535**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]

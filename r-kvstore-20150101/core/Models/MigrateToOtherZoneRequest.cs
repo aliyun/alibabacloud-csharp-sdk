@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class MigrateToOtherZoneRequest : TeaModel {
         /// <summary>
         /// The ID of the ApsaraDB for Redis instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -70,7 +72,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the destination primary zone. You can call the [DescribeZones](~~94527~~) operation to query zone IDs.
+        /// The ID of the destination primary zone. You can call the [DescribeZones](https://help.aliyun.com/document_detail/94527.html) operation to query zone IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

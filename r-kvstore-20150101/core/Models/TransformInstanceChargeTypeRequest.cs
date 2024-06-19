@@ -43,6 +43,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// 
         /// *   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also specify the **Period** parameter.
         /// *   **PostPaid**: pay-as-you-go
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -50,6 +52,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

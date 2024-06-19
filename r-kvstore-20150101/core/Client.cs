@@ -30,7 +30,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 {"cn-heyuan", "r-kvstore.aliyuncs.com"},
                 {"cn-guangzhou", "r-kvstore.aliyuncs.com"},
                 {"cn-hongkong", "r-kvstore.aliyuncs.com"},
-                {"ap-southeast-1", "r-kvstore.aliyuncs.com"},
                 {"cn-hangzhou-finance", "r-kvstore.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "r-kvstore.aliyuncs.com"},
                 {"cn-shenzhen-finance-1", "r-kvstore.aliyuncs.com"},
@@ -86,11 +85,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is available only for cluster instances that use cloud disks.
-          *
-          * @param request AddShardingNodeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddShardingNodeResponse
+         * @summary Adds one or more data shards to an ApsaraDB for Redis cluster instance.
+         *
+         * @description This operation is available only for cluster instances that use cloud disks.
+         *
+         * @param request AddShardingNodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddShardingNodeResponse
          */
         public AddShardingNodeResponse AddShardingNodeWithOptions(AddShardingNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -168,11 +169,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is available only for cluster instances that use cloud disks.
-          *
-          * @param request AddShardingNodeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddShardingNodeResponse
+         * @summary Adds one or more data shards to an ApsaraDB for Redis cluster instance.
+         *
+         * @description This operation is available only for cluster instances that use cloud disks.
+         *
+         * @param request AddShardingNodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddShardingNodeResponse
          */
         public async Task<AddShardingNodeResponse> AddShardingNodeWithOptionsAsync(AddShardingNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -250,10 +253,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is available only for cluster instances that use cloud disks.
-          *
-          * @param request AddShardingNodeRequest
-          * @return AddShardingNodeResponse
+         * @summary Adds one or more data shards to an ApsaraDB for Redis cluster instance.
+         *
+         * @description This operation is available only for cluster instances that use cloud disks.
+         *
+         * @param request AddShardingNodeRequest
+         * @return AddShardingNodeResponse
          */
         public AddShardingNodeResponse AddShardingNode(AddShardingNodeRequest request)
         {
@@ -262,10 +267,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is available only for cluster instances that use cloud disks.
-          *
-          * @param request AddShardingNodeRequest
-          * @return AddShardingNodeResponse
+         * @summary Adds one or more data shards to an ApsaraDB for Redis cluster instance.
+         *
+         * @description This operation is available only for cluster instances that use cloud disks.
+         *
+         * @param request AddShardingNodeRequest
+         * @return AddShardingNodeResponse
          */
         public async Task<AddShardingNodeResponse> AddShardingNodeAsync(AddShardingNodeRequest request)
         {
@@ -274,17 +281,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * In direct connection mode, you can use private endpoints to bypass proxy nodes and connect to ApsaraDB for Redis instances from clients in the same manner as you connect to native Redis clusters. The direct connection mode can reduce communication overheads and accelerate the response speed. For more information, see [Enable the direct connection mode](~~146901~~).
-          * To call this operation, the instance must meet the following requirements:
-          * *   The instance is an ApsaraDB for Redis cluster instance.
-          * *   The instance is a Community Edition instance that runs Redis 4.0 or 5.0, or an Enhanced Edition instance (Tair) that runs Redis 5.0.
-          * *   The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the [SwitchNetwork](~~61005~~) operation to change the network type to VPC.
-          * *   SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the [ModifyInstanceSSL](~~96194~~) operation to disable it.
-          * *   The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see [Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected](~~183151~~).
-          *
-          * @param request AllocateDirectConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AllocateDirectConnectionResponse
+         * @summary Applies for a private endpoint for an ApsaraDB for Redis cluster instance.
+         *
+         * @description In direct connection mode, you can use private endpoints to bypass proxy nodes and connect to ApsaraDB for Redis instances from clients in the same manner as you connect to native Redis clusters. The direct connection mode can reduce communication overheads and accelerate the response speed. For more information, see [Enable the direct connection mode](https://help.aliyun.com/document_detail/146901.html).
+         * To call this operation, the instance must meet the following requirements:
+         * *   The instance is an ApsaraDB for Redis cluster instance.
+         * *   The instance is a Community Edition instance that runs Redis 4.0 or 5.0, or an Enhanced Edition instance (Tair) that runs Redis 5.0.
+         * *   The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the [SwitchNetwork](https://help.aliyun.com/document_detail/61005.html) operation to change the network type to VPC.
+         * *   SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the [ModifyInstanceSSL](https://help.aliyun.com/document_detail/96194.html) operation to disable it.
+         * *   The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see [Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected](https://help.aliyun.com/document_detail/183151.html).
+         *
+         * @param request AllocateDirectConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AllocateDirectConnectionResponse
          */
         public AllocateDirectConnectionResponse AllocateDirectConnectionWithOptions(AllocateDirectConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -342,17 +351,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * In direct connection mode, you can use private endpoints to bypass proxy nodes and connect to ApsaraDB for Redis instances from clients in the same manner as you connect to native Redis clusters. The direct connection mode can reduce communication overheads and accelerate the response speed. For more information, see [Enable the direct connection mode](~~146901~~).
-          * To call this operation, the instance must meet the following requirements:
-          * *   The instance is an ApsaraDB for Redis cluster instance.
-          * *   The instance is a Community Edition instance that runs Redis 4.0 or 5.0, or an Enhanced Edition instance (Tair) that runs Redis 5.0.
-          * *   The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the [SwitchNetwork](~~61005~~) operation to change the network type to VPC.
-          * *   SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the [ModifyInstanceSSL](~~96194~~) operation to disable it.
-          * *   The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see [Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected](~~183151~~).
-          *
-          * @param request AllocateDirectConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AllocateDirectConnectionResponse
+         * @summary Applies for a private endpoint for an ApsaraDB for Redis cluster instance.
+         *
+         * @description In direct connection mode, you can use private endpoints to bypass proxy nodes and connect to ApsaraDB for Redis instances from clients in the same manner as you connect to native Redis clusters. The direct connection mode can reduce communication overheads and accelerate the response speed. For more information, see [Enable the direct connection mode](https://help.aliyun.com/document_detail/146901.html).
+         * To call this operation, the instance must meet the following requirements:
+         * *   The instance is an ApsaraDB for Redis cluster instance.
+         * *   The instance is a Community Edition instance that runs Redis 4.0 or 5.0, or an Enhanced Edition instance (Tair) that runs Redis 5.0.
+         * *   The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the [SwitchNetwork](https://help.aliyun.com/document_detail/61005.html) operation to change the network type to VPC.
+         * *   SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the [ModifyInstanceSSL](https://help.aliyun.com/document_detail/96194.html) operation to disable it.
+         * *   The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see [Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected](https://help.aliyun.com/document_detail/183151.html).
+         *
+         * @param request AllocateDirectConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AllocateDirectConnectionResponse
          */
         public async Task<AllocateDirectConnectionResponse> AllocateDirectConnectionWithOptionsAsync(AllocateDirectConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -410,16 +421,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * In direct connection mode, you can use private endpoints to bypass proxy nodes and connect to ApsaraDB for Redis instances from clients in the same manner as you connect to native Redis clusters. The direct connection mode can reduce communication overheads and accelerate the response speed. For more information, see [Enable the direct connection mode](~~146901~~).
-          * To call this operation, the instance must meet the following requirements:
-          * *   The instance is an ApsaraDB for Redis cluster instance.
-          * *   The instance is a Community Edition instance that runs Redis 4.0 or 5.0, or an Enhanced Edition instance (Tair) that runs Redis 5.0.
-          * *   The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the [SwitchNetwork](~~61005~~) operation to change the network type to VPC.
-          * *   SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the [ModifyInstanceSSL](~~96194~~) operation to disable it.
-          * *   The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see [Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected](~~183151~~).
-          *
-          * @param request AllocateDirectConnectionRequest
-          * @return AllocateDirectConnectionResponse
+         * @summary Applies for a private endpoint for an ApsaraDB for Redis cluster instance.
+         *
+         * @description In direct connection mode, you can use private endpoints to bypass proxy nodes and connect to ApsaraDB for Redis instances from clients in the same manner as you connect to native Redis clusters. The direct connection mode can reduce communication overheads and accelerate the response speed. For more information, see [Enable the direct connection mode](https://help.aliyun.com/document_detail/146901.html).
+         * To call this operation, the instance must meet the following requirements:
+         * *   The instance is an ApsaraDB for Redis cluster instance.
+         * *   The instance is a Community Edition instance that runs Redis 4.0 or 5.0, or an Enhanced Edition instance (Tair) that runs Redis 5.0.
+         * *   The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the [SwitchNetwork](https://help.aliyun.com/document_detail/61005.html) operation to change the network type to VPC.
+         * *   SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the [ModifyInstanceSSL](https://help.aliyun.com/document_detail/96194.html) operation to disable it.
+         * *   The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see [Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected](https://help.aliyun.com/document_detail/183151.html).
+         *
+         * @param request AllocateDirectConnectionRequest
+         * @return AllocateDirectConnectionResponse
          */
         public AllocateDirectConnectionResponse AllocateDirectConnection(AllocateDirectConnectionRequest request)
         {
@@ -428,16 +441,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * In direct connection mode, you can use private endpoints to bypass proxy nodes and connect to ApsaraDB for Redis instances from clients in the same manner as you connect to native Redis clusters. The direct connection mode can reduce communication overheads and accelerate the response speed. For more information, see [Enable the direct connection mode](~~146901~~).
-          * To call this operation, the instance must meet the following requirements:
-          * *   The instance is an ApsaraDB for Redis cluster instance.
-          * *   The instance is a Community Edition instance that runs Redis 4.0 or 5.0, or an Enhanced Edition instance (Tair) that runs Redis 5.0.
-          * *   The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the [SwitchNetwork](~~61005~~) operation to change the network type to VPC.
-          * *   SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the [ModifyInstanceSSL](~~96194~~) operation to disable it.
-          * *   The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see [Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected](~~183151~~).
-          *
-          * @param request AllocateDirectConnectionRequest
-          * @return AllocateDirectConnectionResponse
+         * @summary Applies for a private endpoint for an ApsaraDB for Redis cluster instance.
+         *
+         * @description In direct connection mode, you can use private endpoints to bypass proxy nodes and connect to ApsaraDB for Redis instances from clients in the same manner as you connect to native Redis clusters. The direct connection mode can reduce communication overheads and accelerate the response speed. For more information, see [Enable the direct connection mode](https://help.aliyun.com/document_detail/146901.html).
+         * To call this operation, the instance must meet the following requirements:
+         * *   The instance is an ApsaraDB for Redis cluster instance.
+         * *   The instance is a Community Edition instance that runs Redis 4.0 or 5.0, or an Enhanced Edition instance (Tair) that runs Redis 5.0.
+         * *   The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the [SwitchNetwork](https://help.aliyun.com/document_detail/61005.html) operation to change the network type to VPC.
+         * *   SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the [ModifyInstanceSSL](https://help.aliyun.com/document_detail/96194.html) operation to disable it.
+         * *   The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see [Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected](https://help.aliyun.com/document_detail/183151.html).
+         *
+         * @param request AllocateDirectConnectionRequest
+         * @return AllocateDirectConnectionResponse
          */
         public async Task<AllocateDirectConnectionResponse> AllocateDirectConnectionAsync(AllocateDirectConnectionRequest request)
         {
@@ -446,11 +461,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](~~43850~~).
-          *
-          * @param request AllocateInstancePublicConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AllocateInstancePublicConnectionResponse
+         * @summary Applies for a public endpoint for an ApsaraDB for Redis instance.
+         *
+         * @description You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/43850.html).
+         *
+         * @param request AllocateInstancePublicConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AllocateInstancePublicConnectionResponse
          */
         public AllocateInstancePublicConnectionResponse AllocateInstancePublicConnectionWithOptions(AllocateInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -508,11 +525,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](~~43850~~).
-          *
-          * @param request AllocateInstancePublicConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AllocateInstancePublicConnectionResponse
+         * @summary Applies for a public endpoint for an ApsaraDB for Redis instance.
+         *
+         * @description You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/43850.html).
+         *
+         * @param request AllocateInstancePublicConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AllocateInstancePublicConnectionResponse
          */
         public async Task<AllocateInstancePublicConnectionResponse> AllocateInstancePublicConnectionWithOptionsAsync(AllocateInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -570,10 +589,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](~~43850~~).
-          *
-          * @param request AllocateInstancePublicConnectionRequest
-          * @return AllocateInstancePublicConnectionResponse
+         * @summary Applies for a public endpoint for an ApsaraDB for Redis instance.
+         *
+         * @description You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/43850.html).
+         *
+         * @param request AllocateInstancePublicConnectionRequest
+         * @return AllocateInstancePublicConnectionResponse
          */
         public AllocateInstancePublicConnectionResponse AllocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request)
         {
@@ -582,10 +603,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](~~43850~~).
-          *
-          * @param request AllocateInstancePublicConnectionRequest
-          * @return AllocateInstancePublicConnectionResponse
+         * @summary Applies for a public endpoint for an ApsaraDB for Redis instance.
+         *
+         * @description You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/43850.html).
+         *
+         * @param request AllocateInstancePublicConnectionRequest
+         * @return AllocateInstancePublicConnectionResponse
          */
         public async Task<AllocateInstancePublicConnectionResponse> AllocateInstancePublicConnectionAsync(AllocateInstancePublicConnectionRequest request)
         {
@@ -594,12 +617,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see [Enable TDE](~~265913~~).
-          * *   If the ApsaraDB for Redis instance is authorized to use KMS, you can call the [ModifyInstanceTDE](~~302337~~) operation to enable TDE.
-          *
-          * @param request CheckCloudResourceAuthorizedRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CheckCloudResourceAuthorizedResponse
+         * @summary Queries whether an ApsaraDB for Redis instance is authorized to use Key Management Service (KMS).
+         *
+         * @description *   For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         * *   If the ApsaraDB for Redis instance is authorized to use KMS, you can call the [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html) operation to enable TDE.
+         *
+         * @param request CheckCloudResourceAuthorizedRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckCloudResourceAuthorizedResponse
          */
         public CheckCloudResourceAuthorizedResponse CheckCloudResourceAuthorizedWithOptions(CheckCloudResourceAuthorizedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -653,12 +678,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see [Enable TDE](~~265913~~).
-          * *   If the ApsaraDB for Redis instance is authorized to use KMS, you can call the [ModifyInstanceTDE](~~302337~~) operation to enable TDE.
-          *
-          * @param request CheckCloudResourceAuthorizedRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CheckCloudResourceAuthorizedResponse
+         * @summary Queries whether an ApsaraDB for Redis instance is authorized to use Key Management Service (KMS).
+         *
+         * @description *   For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         * *   If the ApsaraDB for Redis instance is authorized to use KMS, you can call the [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html) operation to enable TDE.
+         *
+         * @param request CheckCloudResourceAuthorizedRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CheckCloudResourceAuthorizedResponse
          */
         public async Task<CheckCloudResourceAuthorizedResponse> CheckCloudResourceAuthorizedWithOptionsAsync(CheckCloudResourceAuthorizedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -712,11 +739,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see [Enable TDE](~~265913~~).
-          * *   If the ApsaraDB for Redis instance is authorized to use KMS, you can call the [ModifyInstanceTDE](~~302337~~) operation to enable TDE.
-          *
-          * @param request CheckCloudResourceAuthorizedRequest
-          * @return CheckCloudResourceAuthorizedResponse
+         * @summary Queries whether an ApsaraDB for Redis instance is authorized to use Key Management Service (KMS).
+         *
+         * @description *   For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         * *   If the ApsaraDB for Redis instance is authorized to use KMS, you can call the [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html) operation to enable TDE.
+         *
+         * @param request CheckCloudResourceAuthorizedRequest
+         * @return CheckCloudResourceAuthorizedResponse
          */
         public CheckCloudResourceAuthorizedResponse CheckCloudResourceAuthorized(CheckCloudResourceAuthorizedRequest request)
         {
@@ -725,11 +754,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see [Enable TDE](~~265913~~).
-          * *   If the ApsaraDB for Redis instance is authorized to use KMS, you can call the [ModifyInstanceTDE](~~302337~~) operation to enable TDE.
-          *
-          * @param request CheckCloudResourceAuthorizedRequest
-          * @return CheckCloudResourceAuthorizedResponse
+         * @summary Queries whether an ApsaraDB for Redis instance is authorized to use Key Management Service (KMS).
+         *
+         * @description *   For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         * *   If the ApsaraDB for Redis instance is authorized to use KMS, you can call the [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html) operation to enable TDE.
+         *
+         * @param request CheckCloudResourceAuthorizedRequest
+         * @return CheckCloudResourceAuthorizedResponse
          */
         public async Task<CheckCloudResourceAuthorizedResponse> CheckCloudResourceAuthorizedAsync(CheckCloudResourceAuthorizedRequest request)
         {
@@ -738,15 +769,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > 
-          * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0 or later.
-          * *   The ApsaraDB for Redis instance for which you want to call this operation must be in the running state.
-          * *   You can create up to 18 accounts for an ApsaraDB for Redis instance.
-          * You can also create an account in the ApsaraDB for Redis console. For more information, see [Manage database accounts](~~92665~~).
-          *
-          * @param request CreateAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateAccountResponse
+         * @summary Creates an account that has specific permissions for an ApsaraDB for Redis instance.
+         *
+         * @description > 
+         * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0 or later.
+         * *   The ApsaraDB for Redis instance for which you want to call this operation must be in the running state.
+         * *   You can create up to 18 accounts for an ApsaraDB for Redis instance.
+         * You can also create an account in the ApsaraDB for Redis console. For more information, see [Manage database accounts](https://help.aliyun.com/document_detail/92665.html).
+         *
+         * @param request CreateAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAccountResponse
          */
         public CreateAccountResponse CreateAccountWithOptions(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -816,15 +849,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > 
-          * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0 or later.
-          * *   The ApsaraDB for Redis instance for which you want to call this operation must be in the running state.
-          * *   You can create up to 18 accounts for an ApsaraDB for Redis instance.
-          * You can also create an account in the ApsaraDB for Redis console. For more information, see [Manage database accounts](~~92665~~).
-          *
-          * @param request CreateAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateAccountResponse
+         * @summary Creates an account that has specific permissions for an ApsaraDB for Redis instance.
+         *
+         * @description > 
+         * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0 or later.
+         * *   The ApsaraDB for Redis instance for which you want to call this operation must be in the running state.
+         * *   You can create up to 18 accounts for an ApsaraDB for Redis instance.
+         * You can also create an account in the ApsaraDB for Redis console. For more information, see [Manage database accounts](https://help.aliyun.com/document_detail/92665.html).
+         *
+         * @param request CreateAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAccountResponse
          */
         public async Task<CreateAccountResponse> CreateAccountWithOptionsAsync(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -894,14 +929,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > 
-          * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0 or later.
-          * *   The ApsaraDB for Redis instance for which you want to call this operation must be in the running state.
-          * *   You can create up to 18 accounts for an ApsaraDB for Redis instance.
-          * You can also create an account in the ApsaraDB for Redis console. For more information, see [Manage database accounts](~~92665~~).
-          *
-          * @param request CreateAccountRequest
-          * @return CreateAccountResponse
+         * @summary Creates an account that has specific permissions for an ApsaraDB for Redis instance.
+         *
+         * @description > 
+         * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0 or later.
+         * *   The ApsaraDB for Redis instance for which you want to call this operation must be in the running state.
+         * *   You can create up to 18 accounts for an ApsaraDB for Redis instance.
+         * You can also create an account in the ApsaraDB for Redis console. For more information, see [Manage database accounts](https://help.aliyun.com/document_detail/92665.html).
+         *
+         * @param request CreateAccountRequest
+         * @return CreateAccountResponse
          */
         public CreateAccountResponse CreateAccount(CreateAccountRequest request)
         {
@@ -910,14 +947,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > 
-          * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0 or later.
-          * *   The ApsaraDB for Redis instance for which you want to call this operation must be in the running state.
-          * *   You can create up to 18 accounts for an ApsaraDB for Redis instance.
-          * You can also create an account in the ApsaraDB for Redis console. For more information, see [Manage database accounts](~~92665~~).
-          *
-          * @param request CreateAccountRequest
-          * @return CreateAccountResponse
+         * @summary Creates an account that has specific permissions for an ApsaraDB for Redis instance.
+         *
+         * @description > 
+         * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0 or later.
+         * *   The ApsaraDB for Redis instance for which you want to call this operation must be in the running state.
+         * *   You can create up to 18 accounts for an ApsaraDB for Redis instance.
+         * You can also create an account in the ApsaraDB for Redis console. For more information, see [Manage database accounts](https://help.aliyun.com/document_detail/92665.html).
+         *
+         * @param request CreateAccountRequest
+         * @return CreateAccountResponse
          */
         public async Task<CreateAccountResponse> CreateAccountAsync(CreateAccountRequest request)
         {
@@ -926,11 +965,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also back up an instance in the ApsaraDB for Redis console. For more information, see [Backup and recovery](~~43886~~).
-          *
-          * @param request CreateBackupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateBackupResponse
+         * @summary Backs up an ApsaraDB for Redis instance.
+         *
+         * @description You can also back up an instance in the ApsaraDB for Redis console. For more information, see [Backup and recovery](https://help.aliyun.com/document_detail/43886.html).
+         *
+         * @param request CreateBackupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateBackupResponse
          */
         public CreateBackupResponse CreateBackupWithOptions(CreateBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -980,11 +1021,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also back up an instance in the ApsaraDB for Redis console. For more information, see [Backup and recovery](~~43886~~).
-          *
-          * @param request CreateBackupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateBackupResponse
+         * @summary Backs up an ApsaraDB for Redis instance.
+         *
+         * @description You can also back up an instance in the ApsaraDB for Redis console. For more information, see [Backup and recovery](https://help.aliyun.com/document_detail/43886.html).
+         *
+         * @param request CreateBackupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateBackupResponse
          */
         public async Task<CreateBackupResponse> CreateBackupWithOptionsAsync(CreateBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1034,10 +1077,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also back up an instance in the ApsaraDB for Redis console. For more information, see [Backup and recovery](~~43886~~).
-          *
-          * @param request CreateBackupRequest
-          * @return CreateBackupResponse
+         * @summary Backs up an ApsaraDB for Redis instance.
+         *
+         * @description You can also back up an instance in the ApsaraDB for Redis console. For more information, see [Backup and recovery](https://help.aliyun.com/document_detail/43886.html).
+         *
+         * @param request CreateBackupRequest
+         * @return CreateBackupResponse
          */
         public CreateBackupResponse CreateBackup(CreateBackupRequest request)
         {
@@ -1046,10 +1091,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also back up an instance in the ApsaraDB for Redis console. For more information, see [Backup and recovery](~~43886~~).
-          *
-          * @param request CreateBackupRequest
-          * @return CreateBackupResponse
+         * @summary Backs up an ApsaraDB for Redis instance.
+         *
+         * @description You can also back up an instance in the ApsaraDB for Redis console. For more information, see [Backup and recovery](https://help.aliyun.com/document_detail/43886.html).
+         *
+         * @param request CreateBackupRequest
+         * @return CreateBackupResponse
          */
         public async Task<CreateBackupResponse> CreateBackupAsync(CreateBackupRequest request)
         {
@@ -1058,17 +1105,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](~~186019~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The instance is a Community Edition instance or an Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-          * This feature is unavailable for cloud disk-based cluster instances. For more information, see [Comparison between ApsaraDB for Redis instances that use local disks and those that use cloud disks](~~188068~~).
-          * *   The instance is of the latest minor version. For more information about whether you must update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-          * After you call this operation, you can call the [DescribeCacheAnalysisReport](~~128808~~) operation to view the analytic results.
-          *
-          * @param request CreateCacheAnalysisTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateCacheAnalysisTaskResponse
+         * @summary Manually creates a cache analytics task.
+         *
+         * @description This operation is no longer available. Use the new operation. For more information, see [Real-time key statistics and offline key analysis](https://help.aliyun.com/document_detail/184226.html).
+         *
+         * @param request CreateCacheAnalysisTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCacheAnalysisTaskResponse
          */
         public CreateCacheAnalysisTaskResponse CreateCacheAnalysisTaskWithOptions(CreateCacheAnalysisTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1118,17 +1161,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](~~186019~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The instance is a Community Edition instance or an Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-          * This feature is unavailable for cloud disk-based cluster instances. For more information, see [Comparison between ApsaraDB for Redis instances that use local disks and those that use cloud disks](~~188068~~).
-          * *   The instance is of the latest minor version. For more information about whether you must update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-          * After you call this operation, you can call the [DescribeCacheAnalysisReport](~~128808~~) operation to view the analytic results.
-          *
-          * @param request CreateCacheAnalysisTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateCacheAnalysisTaskResponse
+         * @summary Manually creates a cache analytics task.
+         *
+         * @description This operation is no longer available. Use the new operation. For more information, see [Real-time key statistics and offline key analysis](https://help.aliyun.com/document_detail/184226.html).
+         *
+         * @param request CreateCacheAnalysisTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateCacheAnalysisTaskResponse
          */
         public async Task<CreateCacheAnalysisTaskResponse> CreateCacheAnalysisTaskWithOptionsAsync(CreateCacheAnalysisTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1178,16 +1217,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](~~186019~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The instance is a Community Edition instance or an Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-          * This feature is unavailable for cloud disk-based cluster instances. For more information, see [Comparison between ApsaraDB for Redis instances that use local disks and those that use cloud disks](~~188068~~).
-          * *   The instance is of the latest minor version. For more information about whether you must update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-          * After you call this operation, you can call the [DescribeCacheAnalysisReport](~~128808~~) operation to view the analytic results.
-          *
-          * @param request CreateCacheAnalysisTaskRequest
-          * @return CreateCacheAnalysisTaskResponse
+         * @summary Manually creates a cache analytics task.
+         *
+         * @description This operation is no longer available. Use the new operation. For more information, see [Real-time key statistics and offline key analysis](https://help.aliyun.com/document_detail/184226.html).
+         *
+         * @param request CreateCacheAnalysisTaskRequest
+         * @return CreateCacheAnalysisTaskResponse
          */
         public CreateCacheAnalysisTaskResponse CreateCacheAnalysisTask(CreateCacheAnalysisTaskRequest request)
         {
@@ -1196,16 +1231,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](~~186019~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The instance is a Community Edition instance or an Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-          * This feature is unavailable for cloud disk-based cluster instances. For more information, see [Comparison between ApsaraDB for Redis instances that use local disks and those that use cloud disks](~~188068~~).
-          * *   The instance is of the latest minor version. For more information about whether you must update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-          * After you call this operation, you can call the [DescribeCacheAnalysisReport](~~128808~~) operation to view the analytic results.
-          *
-          * @param request CreateCacheAnalysisTaskRequest
-          * @return CreateCacheAnalysisTaskResponse
+         * @summary Manually creates a cache analytics task.
+         *
+         * @description This operation is no longer available. Use the new operation. For more information, see [Real-time key statistics and offline key analysis](https://help.aliyun.com/document_detail/184226.html).
+         *
+         * @param request CreateCacheAnalysisTaskRequest
+         * @return CreateCacheAnalysisTaskResponse
          */
         public async Task<CreateCacheAnalysisTaskResponse> CreateCacheAnalysisTaskAsync(CreateCacheAnalysisTaskRequest request)
         {
@@ -1214,14 +1245,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
-          * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
-          * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
-          * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
-          *
-          * @param request CreateGlobalDistributeCacheRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateGlobalDistributeCacheResponse
+         * @summary Converts an existing ApsaraDB for Redis instance to the first child instance of a distributed ApsaraDB for Redis instance.
+         *
+         * @description You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
+         * *   A [DRAM-based instance](https://help.aliyun.com/document_detail/126164.html) of Enhanced Edition is used.
+         * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](https://help.aliyun.com/document_detail/150047.html).
+         * > You can also call the [CreateInstance](https://help.aliyun.com/document_detail/60873.html) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
+         *
+         * @param request CreateGlobalDistributeCacheRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateGlobalDistributeCacheResponse
          */
         public CreateGlobalDistributeCacheResponse CreateGlobalDistributeCacheWithOptions(CreateGlobalDistributeCacheRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1279,14 +1312,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
-          * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
-          * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
-          * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
-          *
-          * @param request CreateGlobalDistributeCacheRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateGlobalDistributeCacheResponse
+         * @summary Converts an existing ApsaraDB for Redis instance to the first child instance of a distributed ApsaraDB for Redis instance.
+         *
+         * @description You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
+         * *   A [DRAM-based instance](https://help.aliyun.com/document_detail/126164.html) of Enhanced Edition is used.
+         * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](https://help.aliyun.com/document_detail/150047.html).
+         * > You can also call the [CreateInstance](https://help.aliyun.com/document_detail/60873.html) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
+         *
+         * @param request CreateGlobalDistributeCacheRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateGlobalDistributeCacheResponse
          */
         public async Task<CreateGlobalDistributeCacheResponse> CreateGlobalDistributeCacheWithOptionsAsync(CreateGlobalDistributeCacheRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1344,13 +1379,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
-          * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
-          * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
-          * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
-          *
-          * @param request CreateGlobalDistributeCacheRequest
-          * @return CreateGlobalDistributeCacheResponse
+         * @summary Converts an existing ApsaraDB for Redis instance to the first child instance of a distributed ApsaraDB for Redis instance.
+         *
+         * @description You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
+         * *   A [DRAM-based instance](https://help.aliyun.com/document_detail/126164.html) of Enhanced Edition is used.
+         * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](https://help.aliyun.com/document_detail/150047.html).
+         * > You can also call the [CreateInstance](https://help.aliyun.com/document_detail/60873.html) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
+         *
+         * @param request CreateGlobalDistributeCacheRequest
+         * @return CreateGlobalDistributeCacheResponse
          */
         public CreateGlobalDistributeCacheResponse CreateGlobalDistributeCache(CreateGlobalDistributeCacheRequest request)
         {
@@ -1359,13 +1396,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
-          * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
-          * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
-          * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
-          *
-          * @param request CreateGlobalDistributeCacheRequest
-          * @return CreateGlobalDistributeCacheResponse
+         * @summary Converts an existing ApsaraDB for Redis instance to the first child instance of a distributed ApsaraDB for Redis instance.
+         *
+         * @description You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
+         * *   A [DRAM-based instance](https://help.aliyun.com/document_detail/126164.html) of Enhanced Edition is used.
+         * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](https://help.aliyun.com/document_detail/150047.html).
+         * > You can also call the [CreateInstance](https://help.aliyun.com/document_detail/60873.html) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
+         *
+         * @param request CreateGlobalDistributeCacheRequest
+         * @return CreateGlobalDistributeCacheResponse
          */
         public async Task<CreateGlobalDistributeCacheResponse> CreateGlobalDistributeCacheAsync(CreateGlobalDistributeCacheRequest request)
         {
@@ -1373,6 +1412,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await CreateGlobalDistributeCacheWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Creates a global IP whitelist template.
+         *
+         * @param request CreateGlobalSecurityIPGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateGlobalSecurityIPGroupResponse
+         */
         public CreateGlobalSecurityIPGroupResponse CreateGlobalSecurityIPGroupWithOptions(CreateGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1432,6 +1478,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a global IP whitelist template.
+         *
+         * @param request CreateGlobalSecurityIPGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateGlobalSecurityIPGroupResponse
+         */
         public async Task<CreateGlobalSecurityIPGroupResponse> CreateGlobalSecurityIPGroupWithOptionsAsync(CreateGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1491,12 +1544,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<CreateGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a global IP whitelist template.
+         *
+         * @param request CreateGlobalSecurityIPGroupRequest
+         * @return CreateGlobalSecurityIPGroupResponse
+         */
         public CreateGlobalSecurityIPGroupResponse CreateGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateGlobalSecurityIPGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Creates a global IP whitelist template.
+         *
+         * @param request CreateGlobalSecurityIPGroupRequest
+         * @return CreateGlobalSecurityIPGroupResponse
+         */
         public async Task<CreateGlobalSecurityIPGroupResponse> CreateGlobalSecurityIPGroupAsync(CreateGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1504,13 +1569,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the [CreateTairInstance](~~208271~~) operation.
-          * > For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
-          *
-          * @param request CreateInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateInstanceResponse
+         * @summary Creates an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the [CreateTairInstance](https://help.aliyun.com/document_detail/208271.html) operation.
+         * > For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/26351.html).
+         *
+         * @param request CreateInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateInstanceResponse
          */
         public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1636,6 +1703,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["ReadOnlyCount"] = request.ReadOnlyCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecoverConfigMode))
+            {
+                query["RecoverConfigMode"] = request.RecoverConfigMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -1667,6 +1738,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
                 query["ShardCount"] = request.ShardCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveReadOnlyCount))
+            {
+                query["SlaveReadOnlyCount"] = request.SlaveReadOnlyCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcDBInstanceId))
             {
@@ -1712,13 +1787,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the [CreateTairInstance](~~208271~~) operation.
-          * > For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
-          *
-          * @param request CreateInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateInstanceResponse
+         * @summary Creates an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the [CreateTairInstance](https://help.aliyun.com/document_detail/208271.html) operation.
+         * > For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/26351.html).
+         *
+         * @param request CreateInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateInstanceResponse
          */
         public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1844,6 +1921,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["ReadOnlyCount"] = request.ReadOnlyCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecoverConfigMode))
+            {
+                query["RecoverConfigMode"] = request.RecoverConfigMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -1875,6 +1956,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
                 query["ShardCount"] = request.ShardCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveReadOnlyCount))
+            {
+                query["SlaveReadOnlyCount"] = request.SlaveReadOnlyCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcDBInstanceId))
             {
@@ -1920,12 +2005,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the [CreateTairInstance](~~208271~~) operation.
-          * > For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
-          *
-          * @param request CreateInstanceRequest
-          * @return CreateInstanceResponse
+         * @summary Creates an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the [CreateTairInstance](https://help.aliyun.com/document_detail/208271.html) operation.
+         * > For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/26351.html).
+         *
+         * @param request CreateInstanceRequest
+         * @return CreateInstanceResponse
          */
         public CreateInstanceResponse CreateInstance(CreateInstanceRequest request)
         {
@@ -1934,12 +2021,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the [CreateTairInstance](~~208271~~) operation.
-          * > For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
-          *
-          * @param request CreateInstanceRequest
-          * @return CreateInstanceResponse
+         * @summary Creates an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the [CreateTairInstance](https://help.aliyun.com/document_detail/208271.html) operation.
+         * > For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/26351.html).
+         *
+         * @param request CreateInstanceRequest
+         * @return CreateInstanceResponse
          */
         public async Task<CreateInstanceResponse> CreateInstanceAsync(CreateInstanceRequest request)
         {
@@ -1948,13 +2037,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see Step 1: Create an ApsaraDB for Redis instance.[](~~26351~~)
-          * This operation can only be used to create ApsaraDB for Redis Community Edition instances and ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based classic instances.
-          *
-          * @param request CreateInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateInstancesResponse
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * >  You can call this operation to create an ApsaraDB for Redis classic instance or a Tair DRAM-based classic instance. We recommend that you use an API operation for creating a single instance:
+         * *   [CreateInstance](https://help.aliyun.com/document_detail/473757.html): creates an ApsaraDB for Redis instance or a Tair DRAM-based classic instance.
+         * *   [CreateTairInstance](https://help.aliyun.com/document_detail/473770.html): creates a Tair cloud-native instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.
+         *
+         * @param request CreateInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateInstancesResponse
          */
         public CreateInstancesResponse CreateInstancesWithOptions(CreateInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2036,13 +2126,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see Step 1: Create an ApsaraDB for Redis instance.[](~~26351~~)
-          * This operation can only be used to create ApsaraDB for Redis Community Edition instances and ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based classic instances.
-          *
-          * @param request CreateInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateInstancesResponse
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * >  You can call this operation to create an ApsaraDB for Redis classic instance or a Tair DRAM-based classic instance. We recommend that you use an API operation for creating a single instance:
+         * *   [CreateInstance](https://help.aliyun.com/document_detail/473757.html): creates an ApsaraDB for Redis instance or a Tair DRAM-based classic instance.
+         * *   [CreateTairInstance](https://help.aliyun.com/document_detail/473770.html): creates a Tair cloud-native instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.
+         *
+         * @param request CreateInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateInstancesResponse
          */
         public async Task<CreateInstancesResponse> CreateInstancesWithOptionsAsync(CreateInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2124,12 +2215,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see Step 1: Create an ApsaraDB for Redis instance.[](~~26351~~)
-          * This operation can only be used to create ApsaraDB for Redis Community Edition instances and ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based classic instances.
-          *
-          * @param request CreateInstancesRequest
-          * @return CreateInstancesResponse
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * >  You can call this operation to create an ApsaraDB for Redis classic instance or a Tair DRAM-based classic instance. We recommend that you use an API operation for creating a single instance:
+         * *   [CreateInstance](https://help.aliyun.com/document_detail/473757.html): creates an ApsaraDB for Redis instance or a Tair DRAM-based classic instance.
+         * *   [CreateTairInstance](https://help.aliyun.com/document_detail/473770.html): creates a Tair cloud-native instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.
+         *
+         * @param request CreateInstancesRequest
+         * @return CreateInstancesResponse
          */
         public CreateInstancesResponse CreateInstances(CreateInstancesRequest request)
         {
@@ -2138,12 +2230,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see Step 1: Create an ApsaraDB for Redis instance.[](~~26351~~)
-          * This operation can only be used to create ApsaraDB for Redis Community Edition instances and ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based classic instances.
-          *
-          * @param request CreateInstancesRequest
-          * @return CreateInstancesResponse
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * >  You can call this operation to create an ApsaraDB for Redis classic instance or a Tair DRAM-based classic instance. We recommend that you use an API operation for creating a single instance:
+         * *   [CreateInstance](https://help.aliyun.com/document_detail/473757.html): creates an ApsaraDB for Redis instance or a Tair DRAM-based classic instance.
+         * *   [CreateTairInstance](https://help.aliyun.com/document_detail/473770.html): creates a Tair cloud-native instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.
+         *
+         * @param request CreateInstancesRequest
+         * @return CreateInstancesResponse
          */
         public async Task<CreateInstancesResponse> CreateInstancesAsync(CreateInstancesRequest request)
         {
@@ -2152,14 +2245,196 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
-          * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * *   For information about how to create a Tair instance in the Tair console, see [Create a Tair instance](~~443863~~).
-          * *   If you want to create other types of instances, such as Community Edition instances or [Tair DRAM-based](~~126164~~) instances, you can call the [CreateInstance](~~60873~~) operation.
-          *
-          * @param request CreateTairInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateTairInstanceResponse
+         * @summary 创建实例参数模板。
+         *
+         * @param request CreateParameterGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateParameterGroupResponse
+         */
+        public CreateParameterGroupResponse CreateParameterGroupWithOptions(CreateParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineType))
+            {
+                query["EngineType"] = request.EngineType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupDesc))
+            {
+                query["ParameterGroupDesc"] = request.ParameterGroupDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupName))
+            {
+                query["ParameterGroupName"] = request.ParameterGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateParameterGroup",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateParameterGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建实例参数模板。
+         *
+         * @param request CreateParameterGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateParameterGroupResponse
+         */
+        public async Task<CreateParameterGroupResponse> CreateParameterGroupWithOptionsAsync(CreateParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineType))
+            {
+                query["EngineType"] = request.EngineType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupDesc))
+            {
+                query["ParameterGroupDesc"] = request.ParameterGroupDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupName))
+            {
+                query["ParameterGroupName"] = request.ParameterGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateParameterGroup",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建实例参数模板。
+         *
+         * @param request CreateParameterGroupRequest
+         * @return CreateParameterGroupResponse
+         */
+        public CreateParameterGroupResponse CreateParameterGroup(CreateParameterGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateParameterGroupWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建实例参数模板。
+         *
+         * @param request CreateParameterGroupRequest
+         * @return CreateParameterGroupResponse
+         */
+        public async Task<CreateParameterGroupResponse> CreateParameterGroupAsync(CreateParameterGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateParameterGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Creates a Tair instance.
+         *
+         * @description For information about instance selection, see [Select an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/223808.html).
+         * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * *   For information about how to create a Tair instance in the Tair console, see [Create a Tair instance](https://help.aliyun.com/document_detail/443863.html).
+         * *   If you want to create other types of instances, such as Community Edition instances or [Tair DRAM-based](https://help.aliyun.com/document_detail/126164.html) instances, you can call the [CreateInstance](https://help.aliyun.com/document_detail/60873.html) operation.
+         *
+         * @param request CreateTairInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTairInstanceResponse
          */
         public CreateTairInstanceResponse CreateTairInstanceWithOptions(CreateTairInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2265,6 +2540,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["ReadOnlyCount"] = request.ReadOnlyCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecoverConfigMode))
+            {
+                query["RecoverConfigMode"] = request.RecoverConfigMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2353,14 +2632,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
-          * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * *   For information about how to create a Tair instance in the Tair console, see [Create a Tair instance](~~443863~~).
-          * *   If you want to create other types of instances, such as Community Edition instances or [Tair DRAM-based](~~126164~~) instances, you can call the [CreateInstance](~~60873~~) operation.
-          *
-          * @param request CreateTairInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateTairInstanceResponse
+         * @summary Creates a Tair instance.
+         *
+         * @description For information about instance selection, see [Select an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/223808.html).
+         * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * *   For information about how to create a Tair instance in the Tair console, see [Create a Tair instance](https://help.aliyun.com/document_detail/443863.html).
+         * *   If you want to create other types of instances, such as Community Edition instances or [Tair DRAM-based](https://help.aliyun.com/document_detail/126164.html) instances, you can call the [CreateInstance](https://help.aliyun.com/document_detail/60873.html) operation.
+         *
+         * @param request CreateTairInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateTairInstanceResponse
          */
         public async Task<CreateTairInstanceResponse> CreateTairInstanceWithOptionsAsync(CreateTairInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2466,6 +2747,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["ReadOnlyCount"] = request.ReadOnlyCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecoverConfigMode))
+            {
+                query["RecoverConfigMode"] = request.RecoverConfigMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2554,13 +2839,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
-          * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * *   For information about how to create a Tair instance in the Tair console, see [Create a Tair instance](~~443863~~).
-          * *   If you want to create other types of instances, such as Community Edition instances or [Tair DRAM-based](~~126164~~) instances, you can call the [CreateInstance](~~60873~~) operation.
-          *
-          * @param request CreateTairInstanceRequest
-          * @return CreateTairInstanceResponse
+         * @summary Creates a Tair instance.
+         *
+         * @description For information about instance selection, see [Select an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/223808.html).
+         * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * *   For information about how to create a Tair instance in the Tair console, see [Create a Tair instance](https://help.aliyun.com/document_detail/443863.html).
+         * *   If you want to create other types of instances, such as Community Edition instances or [Tair DRAM-based](https://help.aliyun.com/document_detail/126164.html) instances, you can call the [CreateInstance](https://help.aliyun.com/document_detail/60873.html) operation.
+         *
+         * @param request CreateTairInstanceRequest
+         * @return CreateTairInstanceResponse
          */
         public CreateTairInstanceResponse CreateTairInstance(CreateTairInstanceRequest request)
         {
@@ -2569,13 +2856,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
-          * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * *   For information about how to create a Tair instance in the Tair console, see [Create a Tair instance](~~443863~~).
-          * *   If you want to create other types of instances, such as Community Edition instances or [Tair DRAM-based](~~126164~~) instances, you can call the [CreateInstance](~~60873~~) operation.
-          *
-          * @param request CreateTairInstanceRequest
-          * @return CreateTairInstanceResponse
+         * @summary Creates a Tair instance.
+         *
+         * @description For information about instance selection, see [Select an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/223808.html).
+         * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * *   For information about how to create a Tair instance in the Tair console, see [Create a Tair instance](https://help.aliyun.com/document_detail/443863.html).
+         * *   If you want to create other types of instances, such as Community Edition instances or [Tair DRAM-based](https://help.aliyun.com/document_detail/126164.html) instances, you can call the [CreateInstance](https://help.aliyun.com/document_detail/60873.html) operation.
+         *
+         * @param request CreateTairInstanceRequest
+         * @return CreateTairInstanceResponse
          */
         public async Task<CreateTairInstanceResponse> CreateTairInstanceAsync(CreateTairInstanceRequest request)
         {
@@ -2584,12 +2873,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
-          * *   The ApsaraDB for Redis instance must be in the Running state.
-          *
-          * @param request DeleteAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteAccountResponse
+         * @summary Deletes an account from an ApsaraDB for Redis instance.
+         *
+         * @description *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
+         * *   The ApsaraDB for Redis instance must be in the Running state.
+         *
+         * @param request DeleteAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAccountResponse
          */
         public DeleteAccountResponse DeleteAccountWithOptions(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2643,12 +2934,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
-          * *   The ApsaraDB for Redis instance must be in the Running state.
-          *
-          * @param request DeleteAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteAccountResponse
+         * @summary Deletes an account from an ApsaraDB for Redis instance.
+         *
+         * @description *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
+         * *   The ApsaraDB for Redis instance must be in the Running state.
+         *
+         * @param request DeleteAccountRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAccountResponse
          */
         public async Task<DeleteAccountResponse> DeleteAccountWithOptionsAsync(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2702,11 +2995,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
-          * *   The ApsaraDB for Redis instance must be in the Running state.
-          *
-          * @param request DeleteAccountRequest
-          * @return DeleteAccountResponse
+         * @summary Deletes an account from an ApsaraDB for Redis instance.
+         *
+         * @description *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
+         * *   The ApsaraDB for Redis instance must be in the Running state.
+         *
+         * @param request DeleteAccountRequest
+         * @return DeleteAccountResponse
          */
         public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request)
         {
@@ -2715,11 +3010,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
-          * *   The ApsaraDB for Redis instance must be in the Running state.
-          *
-          * @param request DeleteAccountRequest
-          * @return DeleteAccountResponse
+         * @summary Deletes an account from an ApsaraDB for Redis instance.
+         *
+         * @description *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
+         * *   The ApsaraDB for Redis instance must be in the Running state.
+         *
+         * @param request DeleteAccountRequest
+         * @return DeleteAccountResponse
          */
         public async Task<DeleteAccountResponse> DeleteAccountAsync(DeleteAccountRequest request)
         {
@@ -2728,11 +3025,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.
-          *
-          * @param request DeleteGlobalSecurityIPGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteGlobalSecurityIPGroupResponse
+         * @summary Deletes a global IP whitelist template.
+         *
+         * @description Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.
+         *
+         * @param request DeleteGlobalSecurityIPGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteGlobalSecurityIPGroupResponse
          */
         public DeleteGlobalSecurityIPGroupResponse DeleteGlobalSecurityIPGroupWithOptions(DeleteGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2794,11 +3093,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.
-          *
-          * @param request DeleteGlobalSecurityIPGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteGlobalSecurityIPGroupResponse
+         * @summary Deletes a global IP whitelist template.
+         *
+         * @description Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.
+         *
+         * @param request DeleteGlobalSecurityIPGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteGlobalSecurityIPGroupResponse
          */
         public async Task<DeleteGlobalSecurityIPGroupResponse> DeleteGlobalSecurityIPGroupWithOptionsAsync(DeleteGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2860,10 +3161,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.
-          *
-          * @param request DeleteGlobalSecurityIPGroupRequest
-          * @return DeleteGlobalSecurityIPGroupResponse
+         * @summary Deletes a global IP whitelist template.
+         *
+         * @description Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.
+         *
+         * @param request DeleteGlobalSecurityIPGroupRequest
+         * @return DeleteGlobalSecurityIPGroupResponse
          */
         public DeleteGlobalSecurityIPGroupResponse DeleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request)
         {
@@ -2872,10 +3175,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.
-          *
-          * @param request DeleteGlobalSecurityIPGroupRequest
-          * @return DeleteGlobalSecurityIPGroupResponse
+         * @summary Deletes a global IP whitelist template.
+         *
+         * @description Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.
+         *
+         * @param request DeleteGlobalSecurityIPGroupRequest
+         * @return DeleteGlobalSecurityIPGroupResponse
          */
         public async Task<DeleteGlobalSecurityIPGroupResponse> DeleteGlobalSecurityIPGroupAsync(DeleteGlobalSecurityIPGroupRequest request)
         {
@@ -2884,15 +3189,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to perform the corresponding operation in the console, see [Release an instance](~~43882~~).
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   The instance is in the running state.
-          * *   The instance is charged on a pay-as-you-go basis.
-          * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
-          *
-          * @param request DeleteInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteInstanceResponse
+         * @summary Release the Redis instance.
+         *
+         * @description For more information about how to perform the corresponding operation in the console, see [Release an instance](https://help.aliyun.com/document_detail/43882.html).
+         * Before you call this operation, make sure that the following requirements are met:
+         * *   The instance is in the running state.
+         * *   The instance is charged on a pay-as-you-go basis.
+         * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
+         *
+         * @param request DeleteInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteInstanceResponse
          */
         public DeleteInstanceResponse DeleteInstanceWithOptions(DeleteInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2946,15 +3253,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to perform the corresponding operation in the console, see [Release an instance](~~43882~~).
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   The instance is in the running state.
-          * *   The instance is charged on a pay-as-you-go basis.
-          * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
-          *
-          * @param request DeleteInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteInstanceResponse
+         * @summary Release the Redis instance.
+         *
+         * @description For more information about how to perform the corresponding operation in the console, see [Release an instance](https://help.aliyun.com/document_detail/43882.html).
+         * Before you call this operation, make sure that the following requirements are met:
+         * *   The instance is in the running state.
+         * *   The instance is charged on a pay-as-you-go basis.
+         * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
+         *
+         * @param request DeleteInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteInstanceResponse
          */
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(DeleteInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3008,14 +3317,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to perform the corresponding operation in the console, see [Release an instance](~~43882~~).
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   The instance is in the running state.
-          * *   The instance is charged on a pay-as-you-go basis.
-          * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
-          *
-          * @param request DeleteInstanceRequest
-          * @return DeleteInstanceResponse
+         * @summary Release the Redis instance.
+         *
+         * @description For more information about how to perform the corresponding operation in the console, see [Release an instance](https://help.aliyun.com/document_detail/43882.html).
+         * Before you call this operation, make sure that the following requirements are met:
+         * *   The instance is in the running state.
+         * *   The instance is charged on a pay-as-you-go basis.
+         * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
+         *
+         * @param request DeleteInstanceRequest
+         * @return DeleteInstanceResponse
          */
         public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest request)
         {
@@ -3024,14 +3335,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to perform the corresponding operation in the console, see [Release an instance](~~43882~~).
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   The instance is in the running state.
-          * *   The instance is charged on a pay-as-you-go basis.
-          * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
-          *
-          * @param request DeleteInstanceRequest
-          * @return DeleteInstanceResponse
+         * @summary Release the Redis instance.
+         *
+         * @description For more information about how to perform the corresponding operation in the console, see [Release an instance](https://help.aliyun.com/document_detail/43882.html).
+         * Before you call this operation, make sure that the following requirements are met:
+         * *   The instance is in the running state.
+         * *   The instance is charged on a pay-as-you-go basis.
+         * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
+         *
+         * @param request DeleteInstanceRequest
+         * @return DeleteInstanceResponse
          */
         public async Task<DeleteInstanceResponse> DeleteInstanceAsync(DeleteInstanceRequest request)
         {
@@ -3040,14 +3353,148 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](~~198082~~).\\
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](~~183956~~).
-          * *   The instance has more than one data shard.
-          *
-          * @param request DeleteShardingNodeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteShardingNodeResponse
+         * @summary Deletes a parameter template.
+         *
+         * @param request DeleteParameterGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteParameterGroupResponse
+         */
+        public DeleteParameterGroupResponse DeleteParameterGroupWithOptions(DeleteParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupId))
+            {
+                query["ParameterGroupId"] = request.ParameterGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteParameterGroup",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteParameterGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Deletes a parameter template.
+         *
+         * @param request DeleteParameterGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteParameterGroupResponse
+         */
+        public async Task<DeleteParameterGroupResponse> DeleteParameterGroupWithOptionsAsync(DeleteParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupId))
+            {
+                query["ParameterGroupId"] = request.ParameterGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteParameterGroup",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Deletes a parameter template.
+         *
+         * @param request DeleteParameterGroupRequest
+         * @return DeleteParameterGroupResponse
+         */
+        public DeleteParameterGroupResponse DeleteParameterGroup(DeleteParameterGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteParameterGroupWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Deletes a parameter template.
+         *
+         * @param request DeleteParameterGroupRequest
+         * @return DeleteParameterGroupResponse
+         */
+        public async Task<DeleteParameterGroupResponse> DeleteParameterGroupAsync(DeleteParameterGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteParameterGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Removes one or more data shards from an ApsaraDB for Redis cluster instance.
+         *
+         * @description You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](https://help.aliyun.com/document_detail/198082.html).\\
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](https://help.aliyun.com/document_detail/183956.html).
+         * *   The instance has more than one data shard.
+         *
+         * @param request DeleteShardingNodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteShardingNodeResponse
          */
         public DeleteShardingNodeResponse DeleteShardingNodeWithOptions(DeleteShardingNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3109,14 +3556,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](~~198082~~).\\
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](~~183956~~).
-          * *   The instance has more than one data shard.
-          *
-          * @param request DeleteShardingNodeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteShardingNodeResponse
+         * @summary Removes one or more data shards from an ApsaraDB for Redis cluster instance.
+         *
+         * @description You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](https://help.aliyun.com/document_detail/198082.html).\\
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](https://help.aliyun.com/document_detail/183956.html).
+         * *   The instance has more than one data shard.
+         *
+         * @param request DeleteShardingNodeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteShardingNodeResponse
          */
         public async Task<DeleteShardingNodeResponse> DeleteShardingNodeWithOptionsAsync(DeleteShardingNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3178,13 +3627,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](~~198082~~).\\
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](~~183956~~).
-          * *   The instance has more than one data shard.
-          *
-          * @param request DeleteShardingNodeRequest
-          * @return DeleteShardingNodeResponse
+         * @summary Removes one or more data shards from an ApsaraDB for Redis cluster instance.
+         *
+         * @description You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](https://help.aliyun.com/document_detail/198082.html).\\
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](https://help.aliyun.com/document_detail/183956.html).
+         * *   The instance has more than one data shard.
+         *
+         * @param request DeleteShardingNodeRequest
+         * @return DeleteShardingNodeResponse
          */
         public DeleteShardingNodeResponse DeleteShardingNode(DeleteShardingNodeRequest request)
         {
@@ -3193,13 +3644,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](~~198082~~).\\
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](~~183956~~).
-          * *   The instance has more than one data shard.
-          *
-          * @param request DeleteShardingNodeRequest
-          * @return DeleteShardingNodeResponse
+         * @summary Removes one or more data shards from an ApsaraDB for Redis cluster instance.
+         *
+         * @description You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](https://help.aliyun.com/document_detail/198082.html).\\
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](https://help.aliyun.com/document_detail/183956.html).
+         * *   The instance has more than one data shard.
+         *
+         * @param request DeleteShardingNodeRequest
+         * @return DeleteShardingNodeResponse
          */
         public async Task<DeleteShardingNodeResponse> DeleteShardingNodeAsync(DeleteShardingNodeRequest request)
         {
@@ -3208,11 +3661,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-          *
-          * @param request DescribeAccountsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAccountsResponse
+         * @summary Queries all accounts or a specified account of an ApsaraDB for Redis instance.
+         *
+         * @description >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+         *
+         * @param request DescribeAccountsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAccountsResponse
          */
         public DescribeAccountsResponse DescribeAccountsWithOptions(DescribeAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3266,11 +3721,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-          *
-          * @param request DescribeAccountsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAccountsResponse
+         * @summary Queries all accounts or a specified account of an ApsaraDB for Redis instance.
+         *
+         * @description >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+         *
+         * @param request DescribeAccountsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAccountsResponse
          */
         public async Task<DescribeAccountsResponse> DescribeAccountsWithOptionsAsync(DescribeAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3324,10 +3781,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-          *
-          * @param request DescribeAccountsRequest
-          * @return DescribeAccountsResponse
+         * @summary Queries all accounts or a specified account of an ApsaraDB for Redis instance.
+         *
+         * @description >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+         *
+         * @param request DescribeAccountsRequest
+         * @return DescribeAccountsResponse
          */
         public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest request)
         {
@@ -3336,10 +3795,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-          *
-          * @param request DescribeAccountsRequest
-          * @return DescribeAccountsResponse
+         * @summary Queries all accounts or a specified account of an ApsaraDB for Redis instance.
+         *
+         * @description >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+         *
+         * @param request DescribeAccountsRequest
+         * @return DescribeAccountsResponse
          */
         public async Task<DescribeAccountsResponse> DescribeAccountsAsync(DescribeAccountsRequest request)
         {
@@ -3348,11 +3809,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
-          *
-          * @param request DescribeActiveOperationTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeActiveOperationTaskResponse
+         * @summary Queries the detailed information about O&M tasks of an ApsaraDB for Redis instance.
+         *
+         * @description After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
+         *
+         * @param request DescribeActiveOperationTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeActiveOperationTaskResponse
          */
         public DescribeActiveOperationTaskResponse DescribeActiveOperationTaskWithOptions(DescribeActiveOperationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3418,11 +3881,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
-          *
-          * @param request DescribeActiveOperationTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeActiveOperationTaskResponse
+         * @summary Queries the detailed information about O&M tasks of an ApsaraDB for Redis instance.
+         *
+         * @description After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
+         *
+         * @param request DescribeActiveOperationTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeActiveOperationTaskResponse
          */
         public async Task<DescribeActiveOperationTaskResponse> DescribeActiveOperationTaskWithOptionsAsync(DescribeActiveOperationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3488,10 +3953,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
-          *
-          * @param request DescribeActiveOperationTaskRequest
-          * @return DescribeActiveOperationTaskResponse
+         * @summary Queries the detailed information about O&M tasks of an ApsaraDB for Redis instance.
+         *
+         * @description After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
+         *
+         * @param request DescribeActiveOperationTaskRequest
+         * @return DescribeActiveOperationTaskResponse
          */
         public DescribeActiveOperationTaskResponse DescribeActiveOperationTask(DescribeActiveOperationTaskRequest request)
         {
@@ -3500,10 +3967,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
-          *
-          * @param request DescribeActiveOperationTaskRequest
-          * @return DescribeActiveOperationTaskResponse
+         * @summary Queries the detailed information about O&M tasks of an ApsaraDB for Redis instance.
+         *
+         * @description After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
+         *
+         * @param request DescribeActiveOperationTaskRequest
+         * @return DescribeActiveOperationTaskResponse
          */
         public async Task<DescribeActiveOperationTaskResponse> DescribeActiveOperationTaskAsync(DescribeActiveOperationTaskRequest request)
         {
@@ -3512,15 +3981,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](~~102015~~).
-          * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-          * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-          * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest minor version.
-          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
-          *
-          * @param request DescribeAuditLogConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAuditLogConfigResponse
+         * @summary Queries the audit log configurations of an ApsaraDB for Redis instance. The configurations include whether the audit log feature is enabled and the retention period of audit logs.
+         *
+         * @description > You can call the [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](https://help.aliyun.com/document_detail/102015.html).
+         * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+         * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](https://help.aliyun.com/document_detail/126164.html).
+         * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](https://help.aliyun.com/document_detail/95268.html) operation to check whether the instance uses the latest minor version.
+         * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html).
+         *
+         * @param request DescribeAuditLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAuditLogConfigResponse
          */
         public DescribeAuditLogConfigResponse DescribeAuditLogConfigWithOptions(DescribeAuditLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3574,15 +4045,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](~~102015~~).
-          * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-          * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-          * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest minor version.
-          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
-          *
-          * @param request DescribeAuditLogConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAuditLogConfigResponse
+         * @summary Queries the audit log configurations of an ApsaraDB for Redis instance. The configurations include whether the audit log feature is enabled and the retention period of audit logs.
+         *
+         * @description > You can call the [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](https://help.aliyun.com/document_detail/102015.html).
+         * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+         * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](https://help.aliyun.com/document_detail/126164.html).
+         * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](https://help.aliyun.com/document_detail/95268.html) operation to check whether the instance uses the latest minor version.
+         * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html).
+         *
+         * @param request DescribeAuditLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAuditLogConfigResponse
          */
         public async Task<DescribeAuditLogConfigResponse> DescribeAuditLogConfigWithOptionsAsync(DescribeAuditLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3636,14 +4109,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](~~102015~~).
-          * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-          * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-          * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest minor version.
-          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
-          *
-          * @param request DescribeAuditLogConfigRequest
-          * @return DescribeAuditLogConfigResponse
+         * @summary Queries the audit log configurations of an ApsaraDB for Redis instance. The configurations include whether the audit log feature is enabled and the retention period of audit logs.
+         *
+         * @description > You can call the [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](https://help.aliyun.com/document_detail/102015.html).
+         * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+         * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](https://help.aliyun.com/document_detail/126164.html).
+         * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](https://help.aliyun.com/document_detail/95268.html) operation to check whether the instance uses the latest minor version.
+         * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html).
+         *
+         * @param request DescribeAuditLogConfigRequest
+         * @return DescribeAuditLogConfigResponse
          */
         public DescribeAuditLogConfigResponse DescribeAuditLogConfig(DescribeAuditLogConfigRequest request)
         {
@@ -3652,14 +4127,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](~~102015~~).
-          * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-          * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-          * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest minor version.
-          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
-          *
-          * @param request DescribeAuditLogConfigRequest
-          * @return DescribeAuditLogConfigResponse
+         * @summary Queries the audit log configurations of an ApsaraDB for Redis instance. The configurations include whether the audit log feature is enabled and the retention period of audit logs.
+         *
+         * @description > You can call the [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](https://help.aliyun.com/document_detail/102015.html).
+         * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+         * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](https://help.aliyun.com/document_detail/126164.html).
+         * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](https://help.aliyun.com/document_detail/95268.html) operation to check whether the instance uses the latest minor version.
+         * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html).
+         *
+         * @param request DescribeAuditLogConfigRequest
+         * @return DescribeAuditLogConfigResponse
          */
         public async Task<DescribeAuditLogConfigResponse> DescribeAuditLogConfigAsync(DescribeAuditLogConfigRequest request)
         {
@@ -3668,15 +4145,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](~~101937~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
-          *
-          * @param request DescribeAuditRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAuditRecordsResponse
+         * @summary Queries the audit logs of an ApsaraDB for Redis instance.
+         *
+         * @description This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](https://help.aliyun.com/document_detail/101937.html).
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
+         * *   The engine version of the instance is Redis 4.0 or later.
+         * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html).
+         *
+         * @param request DescribeAuditRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAuditRecordsResponse
          */
         public DescribeAuditRecordsResponse DescribeAuditRecordsWithOptions(DescribeAuditRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3762,15 +4241,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](~~101937~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
-          *
-          * @param request DescribeAuditRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAuditRecordsResponse
+         * @summary Queries the audit logs of an ApsaraDB for Redis instance.
+         *
+         * @description This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](https://help.aliyun.com/document_detail/101937.html).
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
+         * *   The engine version of the instance is Redis 4.0 or later.
+         * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html).
+         *
+         * @param request DescribeAuditRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAuditRecordsResponse
          */
         public async Task<DescribeAuditRecordsResponse> DescribeAuditRecordsWithOptionsAsync(DescribeAuditRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3856,14 +4337,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](~~101937~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
-          *
-          * @param request DescribeAuditRecordsRequest
-          * @return DescribeAuditRecordsResponse
+         * @summary Queries the audit logs of an ApsaraDB for Redis instance.
+         *
+         * @description This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](https://help.aliyun.com/document_detail/101937.html).
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
+         * *   The engine version of the instance is Redis 4.0 or later.
+         * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html).
+         *
+         * @param request DescribeAuditRecordsRequest
+         * @return DescribeAuditRecordsResponse
          */
         public DescribeAuditRecordsResponse DescribeAuditRecords(DescribeAuditRecordsRequest request)
         {
@@ -3872,14 +4355,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](~~101937~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
-          *
-          * @param request DescribeAuditRecordsRequest
-          * @return DescribeAuditRecordsResponse
+         * @summary Queries the audit logs of an ApsaraDB for Redis instance.
+         *
+         * @description This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](https://help.aliyun.com/document_detail/101937.html).
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
+         * *   The engine version of the instance is Redis 4.0 or later.
+         * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html).
+         *
+         * @param request DescribeAuditRecordsRequest
+         * @return DescribeAuditRecordsResponse
          */
         public async Task<DescribeAuditRecordsResponse> DescribeAuditRecordsAsync(DescribeAuditRecordsRequest request)
         {
@@ -3887,6 +4372,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeAuditRecordsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the types of ApsaraDB for Redis instances that can be created in a specified zone.
+         *
+         * @param request DescribeAvailableResourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAvailableResourceResponse
+         */
         public DescribeAvailableResourceResponse DescribeAvailableResourceWithOptions(DescribeAvailableResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3974,6 +4466,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeAvailableResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the types of ApsaraDB for Redis instances that can be created in a specified zone.
+         *
+         * @param request DescribeAvailableResourceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAvailableResourceResponse
+         */
         public async Task<DescribeAvailableResourceResponse> DescribeAvailableResourceWithOptionsAsync(DescribeAvailableResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4061,18 +4560,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeAvailableResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the types of ApsaraDB for Redis instances that can be created in a specified zone.
+         *
+         * @param request DescribeAvailableResourceRequest
+         * @return DescribeAvailableResourceResponse
+         */
         public DescribeAvailableResourceResponse DescribeAvailableResource(DescribeAvailableResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAvailableResourceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the types of ApsaraDB for Redis instances that can be created in a specified zone.
+         *
+         * @param request DescribeAvailableResourceRequest
+         * @return DescribeAvailableResourceResponse
+         */
         public async Task<DescribeAvailableResourceResponse> DescribeAvailableResourceAsync(DescribeAvailableResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAvailableResourceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the backup policy of an ApsaraDB for Redis instance, including the backup cycle and backup time.
+         *
+         * @param request DescribeBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackupPolicyResponse
+         */
         public DescribeBackupPolicyResponse DescribeBackupPolicyWithOptions(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4120,6 +4638,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the backup policy of an ApsaraDB for Redis instance, including the backup cycle and backup time.
+         *
+         * @param request DescribeBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackupPolicyResponse
+         */
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyWithOptionsAsync(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4167,18 +4692,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the backup policy of an ApsaraDB for Redis instance, including the backup cycle and backup time.
+         *
+         * @param request DescribeBackupPolicyRequest
+         * @return DescribeBackupPolicyResponse
+         */
         public DescribeBackupPolicyResponse DescribeBackupPolicy(DescribeBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupPolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the backup policy of an ApsaraDB for Redis instance, including the backup cycle and backup time.
+         *
+         * @param request DescribeBackupPolicyRequest
+         * @return DescribeBackupPolicyResponse
+         */
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyAsync(DescribeBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackupPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the states of backup tasks for an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeBackupTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackupTasksResponse
+         */
         public DescribeBackupTasksResponse DescribeBackupTasksWithOptions(DescribeBackupTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4234,6 +4778,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeBackupTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the states of backup tasks for an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeBackupTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackupTasksResponse
+         */
         public async Task<DescribeBackupTasksResponse> DescribeBackupTasksWithOptionsAsync(DescribeBackupTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4289,18 +4840,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeBackupTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the states of backup tasks for an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeBackupTasksRequest
+         * @return DescribeBackupTasksResponse
+         */
         public DescribeBackupTasksResponse DescribeBackupTasks(DescribeBackupTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupTasksWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the states of backup tasks for an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeBackupTasksRequest
+         * @return DescribeBackupTasksResponse
+         */
         public async Task<DescribeBackupTasksResponse> DescribeBackupTasksAsync(DescribeBackupTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackupTasksWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the backup files of the ApsaraDB for Redis instance.
+         *
+         * @param request DescribeBackupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackupsResponse
+         */
         public DescribeBackupsResponse DescribeBackupsWithOptions(DescribeBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4376,6 +4946,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeBackupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the backup files of the ApsaraDB for Redis instance.
+         *
+         * @param request DescribeBackupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeBackupsResponse
+         */
         public async Task<DescribeBackupsResponse> DescribeBackupsWithOptionsAsync(DescribeBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4451,12 +5028,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeBackupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the backup files of the ApsaraDB for Redis instance.
+         *
+         * @param request DescribeBackupsRequest
+         * @return DescribeBackupsResponse
+         */
         public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the backup files of the ApsaraDB for Redis instance.
+         *
+         * @param request DescribeBackupsRequest
+         * @return DescribeBackupsResponse
+         */
         public async Task<DescribeBackupsResponse> DescribeBackupsAsync(DescribeBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4464,14 +5053,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](~~186019~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-          *
-          * @param request DescribeCacheAnalysisReportRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCacheAnalysisReportResponse
+         * @summary Queries the cache analytics report that is generated on a specified date for an ApsaraDB for Redis instance.
+         *
+         * @description > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](https://help.aliyun.com/document_detail/186019.html).
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The engine version of the instance is Redis 4.0 or later.
+         * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](https://help.aliyun.com/document_detail/129203.html)
+         *
+         * @param request DescribeCacheAnalysisReportRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCacheAnalysisReportResponse
          */
         public DescribeCacheAnalysisReportResponse DescribeCacheAnalysisReportWithOptions(DescribeCacheAnalysisReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4541,14 +5132,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](~~186019~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-          *
-          * @param request DescribeCacheAnalysisReportRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCacheAnalysisReportResponse
+         * @summary Queries the cache analytics report that is generated on a specified date for an ApsaraDB for Redis instance.
+         *
+         * @description > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](https://help.aliyun.com/document_detail/186019.html).
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The engine version of the instance is Redis 4.0 or later.
+         * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](https://help.aliyun.com/document_detail/129203.html)
+         *
+         * @param request DescribeCacheAnalysisReportRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCacheAnalysisReportResponse
          */
         public async Task<DescribeCacheAnalysisReportResponse> DescribeCacheAnalysisReportWithOptionsAsync(DescribeCacheAnalysisReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4618,13 +5211,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](~~186019~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-          *
-          * @param request DescribeCacheAnalysisReportRequest
-          * @return DescribeCacheAnalysisReportResponse
+         * @summary Queries the cache analytics report that is generated on a specified date for an ApsaraDB for Redis instance.
+         *
+         * @description > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](https://help.aliyun.com/document_detail/186019.html).
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The engine version of the instance is Redis 4.0 or later.
+         * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](https://help.aliyun.com/document_detail/129203.html)
+         *
+         * @param request DescribeCacheAnalysisReportRequest
+         * @return DescribeCacheAnalysisReportResponse
          */
         public DescribeCacheAnalysisReportResponse DescribeCacheAnalysisReport(DescribeCacheAnalysisReportRequest request)
         {
@@ -4633,13 +5228,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](~~186019~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-          *
-          * @param request DescribeCacheAnalysisReportRequest
-          * @return DescribeCacheAnalysisReportResponse
+         * @summary Queries the cache analytics report that is generated on a specified date for an ApsaraDB for Redis instance.
+         *
+         * @description > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](https://help.aliyun.com/document_detail/186019.html).
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The engine version of the instance is Redis 4.0 or later.
+         * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](https://help.aliyun.com/document_detail/129203.html)
+         *
+         * @param request DescribeCacheAnalysisReportRequest
+         * @return DescribeCacheAnalysisReportResponse
          */
         public async Task<DescribeCacheAnalysisReportResponse> DescribeCacheAnalysisReportAsync(DescribeCacheAnalysisReportRequest request)
         {
@@ -4648,14 +5245,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](~~186019~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-          *
-          * @param request DescribeCacheAnalysisReportListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCacheAnalysisReportListResponse
+         * @summary Queries the cache analytics reports of an ApsaraDB for Redis instance.
+         *
+         * @description > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](https://help.aliyun.com/document_detail/186019.html).
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The engine version of the instance is Redis 4.0 or later.
+         * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](https://help.aliyun.com/document_detail/129203.html)
+         *
+         * @param request DescribeCacheAnalysisReportListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCacheAnalysisReportListResponse
          */
         public DescribeCacheAnalysisReportListResponse DescribeCacheAnalysisReportListWithOptions(DescribeCacheAnalysisReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4721,14 +5320,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](~~186019~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-          *
-          * @param request DescribeCacheAnalysisReportListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeCacheAnalysisReportListResponse
+         * @summary Queries the cache analytics reports of an ApsaraDB for Redis instance.
+         *
+         * @description > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](https://help.aliyun.com/document_detail/186019.html).
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The engine version of the instance is Redis 4.0 or later.
+         * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](https://help.aliyun.com/document_detail/129203.html)
+         *
+         * @param request DescribeCacheAnalysisReportListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeCacheAnalysisReportListResponse
          */
         public async Task<DescribeCacheAnalysisReportListResponse> DescribeCacheAnalysisReportListWithOptionsAsync(DescribeCacheAnalysisReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4794,13 +5395,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](~~186019~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-          *
-          * @param request DescribeCacheAnalysisReportListRequest
-          * @return DescribeCacheAnalysisReportListResponse
+         * @summary Queries the cache analytics reports of an ApsaraDB for Redis instance.
+         *
+         * @description > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](https://help.aliyun.com/document_detail/186019.html).
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The engine version of the instance is Redis 4.0 or later.
+         * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](https://help.aliyun.com/document_detail/129203.html)
+         *
+         * @param request DescribeCacheAnalysisReportListRequest
+         * @return DescribeCacheAnalysisReportListResponse
          */
         public DescribeCacheAnalysisReportListResponse DescribeCacheAnalysisReportList(DescribeCacheAnalysisReportListRequest request)
         {
@@ -4809,13 +5412,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](~~186019~~).
-          * Before you call this operation, make sure that the instance meets the following requirements:
-          * *   The engine version of the instance is Redis 4.0 or later.
-          * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](~~129203~~)
-          *
-          * @param request DescribeCacheAnalysisReportListRequest
-          * @return DescribeCacheAnalysisReportListResponse
+         * @summary Queries the cache analytics reports of an ApsaraDB for Redis instance.
+         *
+         * @description > ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see [API operations for cache analytics are upgraded](https://help.aliyun.com/document_detail/186019.html).
+         * Before you call this operation, make sure that the instance meets the following requirements:
+         * *   The engine version of the instance is Redis 4.0 or later.
+         * *   The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see [How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?](https://help.aliyun.com/document_detail/129203.html)
+         *
+         * @param request DescribeCacheAnalysisReportListRequest
+         * @return DescribeCacheAnalysisReportListResponse
          */
         public async Task<DescribeCacheAnalysisReportListResponse> DescribeCacheAnalysisReportListAsync(DescribeCacheAnalysisReportListRequest request)
         {
@@ -4823,6 +5428,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeCacheAnalysisReportListWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the backup sets of an ApsaraDB for Redis or Tair cluster instance.
+         *
+         * @param request DescribeClusterBackupListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterBackupListResponse
+         */
         public DescribeClusterBackupListResponse DescribeClusterBackupListWithOptions(DescribeClusterBackupListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4846,6 +5458,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeClusterBackupListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the backup sets of an ApsaraDB for Redis or Tair cluster instance.
+         *
+         * @param request DescribeClusterBackupListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterBackupListResponse
+         */
         public async Task<DescribeClusterBackupListResponse> DescribeClusterBackupListWithOptionsAsync(DescribeClusterBackupListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4869,12 +5488,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeClusterBackupListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the backup sets of an ApsaraDB for Redis or Tair cluster instance.
+         *
+         * @param request DescribeClusterBackupListRequest
+         * @return DescribeClusterBackupListResponse
+         */
         public DescribeClusterBackupListResponse DescribeClusterBackupList(DescribeClusterBackupListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClusterBackupListWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the backup sets of an ApsaraDB for Redis or Tair cluster instance.
+         *
+         * @param request DescribeClusterBackupListRequest
+         * @return DescribeClusterBackupListResponse
+         */
         public async Task<DescribeClusterBackupListResponse> DescribeClusterBackupListAsync(DescribeClusterBackupListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4882,11 +5513,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](~~188068~~) and the [cluster architecture](~~52228~~).
-          *
-          * @param request DescribeClusterMemberInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterMemberInfoResponse
+         * @summary Queries the configuration information of nodes in an ApsaraDB for Redis cluster instance, such as the specifications and the maximum number of connections.
+         *
+         * @description > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](https://help.aliyun.com/document_detail/188068.html) and the [cluster architecture](https://help.aliyun.com/document_detail/52228.html).
+         *
+         * @param request DescribeClusterMemberInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterMemberInfoResponse
          */
         public DescribeClusterMemberInfoResponse DescribeClusterMemberInfoWithOptions(DescribeClusterMemberInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4944,11 +5577,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](~~188068~~) and the [cluster architecture](~~52228~~).
-          *
-          * @param request DescribeClusterMemberInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeClusterMemberInfoResponse
+         * @summary Queries the configuration information of nodes in an ApsaraDB for Redis cluster instance, such as the specifications and the maximum number of connections.
+         *
+         * @description > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](https://help.aliyun.com/document_detail/188068.html) and the [cluster architecture](https://help.aliyun.com/document_detail/52228.html).
+         *
+         * @param request DescribeClusterMemberInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeClusterMemberInfoResponse
          */
         public async Task<DescribeClusterMemberInfoResponse> DescribeClusterMemberInfoWithOptionsAsync(DescribeClusterMemberInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5006,10 +5641,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](~~188068~~) and the [cluster architecture](~~52228~~).
-          *
-          * @param request DescribeClusterMemberInfoRequest
-          * @return DescribeClusterMemberInfoResponse
+         * @summary Queries the configuration information of nodes in an ApsaraDB for Redis cluster instance, such as the specifications and the maximum number of connections.
+         *
+         * @description > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](https://help.aliyun.com/document_detail/188068.html) and the [cluster architecture](https://help.aliyun.com/document_detail/52228.html).
+         *
+         * @param request DescribeClusterMemberInfoRequest
+         * @return DescribeClusterMemberInfoResponse
          */
         public DescribeClusterMemberInfoResponse DescribeClusterMemberInfo(DescribeClusterMemberInfoRequest request)
         {
@@ -5018,10 +5655,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](~~188068~~) and the [cluster architecture](~~52228~~).
-          *
-          * @param request DescribeClusterMemberInfoRequest
-          * @return DescribeClusterMemberInfoResponse
+         * @summary Queries the configuration information of nodes in an ApsaraDB for Redis cluster instance, such as the specifications and the maximum number of connections.
+         *
+         * @description > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](https://help.aliyun.com/document_detail/188068.html) and the [cluster architecture](https://help.aliyun.com/document_detail/52228.html).
+         *
+         * @param request DescribeClusterMemberInfoRequest
+         * @return DescribeClusterMemberInfoResponse
          */
         public async Task<DescribeClusterMemberInfoResponse> DescribeClusterMemberInfoAsync(DescribeClusterMemberInfoRequest request)
         {
@@ -5029,6 +5668,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeClusterMemberInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the network information of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeDBInstanceNetInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceNetInfoResponse
+         */
         public DescribeDBInstanceNetInfoResponse DescribeDBInstanceNetInfoWithOptions(DescribeDBInstanceNetInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5076,6 +5722,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeDBInstanceNetInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the network information of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeDBInstanceNetInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceNetInfoResponse
+         */
         public async Task<DescribeDBInstanceNetInfoResponse> DescribeDBInstanceNetInfoWithOptionsAsync(DescribeDBInstanceNetInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5123,12 +5776,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeDBInstanceNetInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the network information of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeDBInstanceNetInfoRequest
+         * @return DescribeDBInstanceNetInfoResponse
+         */
         public DescribeDBInstanceNetInfoResponse DescribeDBInstanceNetInfo(DescribeDBInstanceNetInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceNetInfoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the network information of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeDBInstanceNetInfoRequest
+         * @return DescribeDBInstanceNetInfoResponse
+         */
         public async Task<DescribeDBInstanceNetInfoResponse> DescribeDBInstanceNetInfoAsync(DescribeDBInstanceNetInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5136,11 +5801,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > Only instances that use cloud disks support this operation.
-          *
-          * @param request DescribeDBNodeDirectVipInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBNodeDirectVipInfoResponse
+         * @summary Queries the information about virtual IP addresses (VIPs) of child instances of a cluster instance in direct connection mode.
+         *
+         * @description > Only instances that use cloud disks support this operation.
+         *
+         * @param request DescribeDBNodeDirectVipInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBNodeDirectVipInfoResponse
          */
         public DescribeDBNodeDirectVipInfoResponse DescribeDBNodeDirectVipInfoWithOptions(DescribeDBNodeDirectVipInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5186,11 +5853,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > Only instances that use cloud disks support this operation.
-          *
-          * @param request DescribeDBNodeDirectVipInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDBNodeDirectVipInfoResponse
+         * @summary Queries the information about virtual IP addresses (VIPs) of child instances of a cluster instance in direct connection mode.
+         *
+         * @description > Only instances that use cloud disks support this operation.
+         *
+         * @param request DescribeDBNodeDirectVipInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBNodeDirectVipInfoResponse
          */
         public async Task<DescribeDBNodeDirectVipInfoResponse> DescribeDBNodeDirectVipInfoWithOptionsAsync(DescribeDBNodeDirectVipInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5236,10 +5905,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > Only instances that use cloud disks support this operation.
-          *
-          * @param request DescribeDBNodeDirectVipInfoRequest
-          * @return DescribeDBNodeDirectVipInfoResponse
+         * @summary Queries the information about virtual IP addresses (VIPs) of child instances of a cluster instance in direct connection mode.
+         *
+         * @description > Only instances that use cloud disks support this operation.
+         *
+         * @param request DescribeDBNodeDirectVipInfoRequest
+         * @return DescribeDBNodeDirectVipInfoResponse
          */
         public DescribeDBNodeDirectVipInfoResponse DescribeDBNodeDirectVipInfo(DescribeDBNodeDirectVipInfoRequest request)
         {
@@ -5248,10 +5919,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > Only instances that use cloud disks support this operation.
-          *
-          * @param request DescribeDBNodeDirectVipInfoRequest
-          * @return DescribeDBNodeDirectVipInfoResponse
+         * @summary Queries the information about virtual IP addresses (VIPs) of child instances of a cluster instance in direct connection mode.
+         *
+         * @description > Only instances that use cloud disks support this operation.
+         *
+         * @param request DescribeDBNodeDirectVipInfoRequest
+         * @return DescribeDBNodeDirectVipInfoResponse
          */
         public async Task<DescribeDBNodeDirectVipInfoResponse> DescribeDBNodeDirectVipInfoAsync(DescribeDBNodeDirectVipInfoRequest request)
         {
@@ -5260,11 +5933,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](~~60996~~) operation.
-          *
-          * @param request DescribeDedicatedClusterInstanceListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDedicatedClusterInstanceListResponse
+         * @summary Queries the information of an ApsaraDB for Redis instance deployed in a dedicated cluster.
+         *
+         * @description > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](https://help.aliyun.com/document_detail/60996.html) operation.
+         *
+         * @param request DescribeDedicatedClusterInstanceListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDedicatedClusterInstanceListResponse
          */
         public DescribeDedicatedClusterInstanceListResponse DescribeDedicatedClusterInstanceListWithOptions(DescribeDedicatedClusterInstanceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5354,11 +6029,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](~~60996~~) operation.
-          *
-          * @param request DescribeDedicatedClusterInstanceListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDedicatedClusterInstanceListResponse
+         * @summary Queries the information of an ApsaraDB for Redis instance deployed in a dedicated cluster.
+         *
+         * @description > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](https://help.aliyun.com/document_detail/60996.html) operation.
+         *
+         * @param request DescribeDedicatedClusterInstanceListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDedicatedClusterInstanceListResponse
          */
         public async Task<DescribeDedicatedClusterInstanceListResponse> DescribeDedicatedClusterInstanceListWithOptionsAsync(DescribeDedicatedClusterInstanceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5448,10 +6125,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](~~60996~~) operation.
-          *
-          * @param request DescribeDedicatedClusterInstanceListRequest
-          * @return DescribeDedicatedClusterInstanceListResponse
+         * @summary Queries the information of an ApsaraDB for Redis instance deployed in a dedicated cluster.
+         *
+         * @description > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](https://help.aliyun.com/document_detail/60996.html) operation.
+         *
+         * @param request DescribeDedicatedClusterInstanceListRequest
+         * @return DescribeDedicatedClusterInstanceListResponse
          */
         public DescribeDedicatedClusterInstanceListResponse DescribeDedicatedClusterInstanceList(DescribeDedicatedClusterInstanceListRequest request)
         {
@@ -5460,10 +6139,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](~~60996~~) operation.
-          *
-          * @param request DescribeDedicatedClusterInstanceListRequest
-          * @return DescribeDedicatedClusterInstanceListResponse
+         * @summary Queries the information of an ApsaraDB for Redis instance deployed in a dedicated cluster.
+         *
+         * @description > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](https://help.aliyun.com/document_detail/60996.html) operation.
+         *
+         * @param request DescribeDedicatedClusterInstanceListRequest
+         * @return DescribeDedicatedClusterInstanceListResponse
          */
         public async Task<DescribeDedicatedClusterInstanceListResponse> DescribeDedicatedClusterInstanceListAsync(DescribeDedicatedClusterInstanceListRequest request)
         {
@@ -5472,12 +6153,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](~~302337~~).
-          * > For more information about TDE, see [Enable TDE](~~265913~~).
-          *
-          * @param request DescribeEncryptionKeyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeEncryptionKeyResponse
+         * @summary Queries the details of a Transparent Data Encryption (TDE) custom key for an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html).
+         * > For more information about TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         *
+         * @param request DescribeEncryptionKeyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEncryptionKeyResponse
          */
         public DescribeEncryptionKeyResponse DescribeEncryptionKeyWithOptions(DescribeEncryptionKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5531,12 +6214,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](~~302337~~).
-          * > For more information about TDE, see [Enable TDE](~~265913~~).
-          *
-          * @param request DescribeEncryptionKeyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeEncryptionKeyResponse
+         * @summary Queries the details of a Transparent Data Encryption (TDE) custom key for an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html).
+         * > For more information about TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         *
+         * @param request DescribeEncryptionKeyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEncryptionKeyResponse
          */
         public async Task<DescribeEncryptionKeyResponse> DescribeEncryptionKeyWithOptionsAsync(DescribeEncryptionKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5590,11 +6275,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](~~302337~~).
-          * > For more information about TDE, see [Enable TDE](~~265913~~).
-          *
-          * @param request DescribeEncryptionKeyRequest
-          * @return DescribeEncryptionKeyResponse
+         * @summary Queries the details of a Transparent Data Encryption (TDE) custom key for an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html).
+         * > For more information about TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         *
+         * @param request DescribeEncryptionKeyRequest
+         * @return DescribeEncryptionKeyResponse
          */
         public DescribeEncryptionKeyResponse DescribeEncryptionKey(DescribeEncryptionKeyRequest request)
         {
@@ -5603,11 +6290,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](~~302337~~).
-          * > For more information about TDE, see [Enable TDE](~~265913~~).
-          *
-          * @param request DescribeEncryptionKeyRequest
-          * @return DescribeEncryptionKeyResponse
+         * @summary Queries the details of a Transparent Data Encryption (TDE) custom key for an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html).
+         * > For more information about TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         *
+         * @param request DescribeEncryptionKeyRequest
+         * @return DescribeEncryptionKeyResponse
          */
         public async Task<DescribeEncryptionKeyResponse> DescribeEncryptionKeyAsync(DescribeEncryptionKeyRequest request)
         {
@@ -5616,12 +6305,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   You can specify a custom key when you call the [ModifyInstanceTDE](~~302337~~) operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the [CreateKey](~~28947~~) operation of Key Management Service (KMS).
-          * *   For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
-          *
-          * @param request DescribeEncryptionKeyListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeEncryptionKeyListResponse
+         * @summary Queries the custom keys used by an ApsaraDB for Redis instance.
+         *
+         * @description *   You can specify a custom key when you call the [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html) operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the [CreateKey](https://help.aliyun.com/document_detail/28947.html) operation of Key Management Service (KMS).
+         * *   For more information about TDE and the usage notes of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         *
+         * @param request DescribeEncryptionKeyListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEncryptionKeyListResponse
          */
         public DescribeEncryptionKeyListResponse DescribeEncryptionKeyListWithOptions(DescribeEncryptionKeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5671,12 +6362,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   You can specify a custom key when you call the [ModifyInstanceTDE](~~302337~~) operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the [CreateKey](~~28947~~) operation of Key Management Service (KMS).
-          * *   For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
-          *
-          * @param request DescribeEncryptionKeyListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeEncryptionKeyListResponse
+         * @summary Queries the custom keys used by an ApsaraDB for Redis instance.
+         *
+         * @description *   You can specify a custom key when you call the [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html) operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the [CreateKey](https://help.aliyun.com/document_detail/28947.html) operation of Key Management Service (KMS).
+         * *   For more information about TDE and the usage notes of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         *
+         * @param request DescribeEncryptionKeyListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEncryptionKeyListResponse
          */
         public async Task<DescribeEncryptionKeyListResponse> DescribeEncryptionKeyListWithOptionsAsync(DescribeEncryptionKeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5726,11 +6419,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   You can specify a custom key when you call the [ModifyInstanceTDE](~~302337~~) operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the [CreateKey](~~28947~~) operation of Key Management Service (KMS).
-          * *   For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
-          *
-          * @param request DescribeEncryptionKeyListRequest
-          * @return DescribeEncryptionKeyListResponse
+         * @summary Queries the custom keys used by an ApsaraDB for Redis instance.
+         *
+         * @description *   You can specify a custom key when you call the [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html) operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the [CreateKey](https://help.aliyun.com/document_detail/28947.html) operation of Key Management Service (KMS).
+         * *   For more information about TDE and the usage notes of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         *
+         * @param request DescribeEncryptionKeyListRequest
+         * @return DescribeEncryptionKeyListResponse
          */
         public DescribeEncryptionKeyListResponse DescribeEncryptionKeyList(DescribeEncryptionKeyListRequest request)
         {
@@ -5739,11 +6434,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   You can specify a custom key when you call the [ModifyInstanceTDE](~~302337~~) operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the [CreateKey](~~28947~~) operation of Key Management Service (KMS).
-          * *   For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
-          *
-          * @param request DescribeEncryptionKeyListRequest
-          * @return DescribeEncryptionKeyListResponse
+         * @summary Queries the custom keys used by an ApsaraDB for Redis instance.
+         *
+         * @description *   You can specify a custom key when you call the [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html) operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the [CreateKey](https://help.aliyun.com/document_detail/28947.html) operation of Key Management Service (KMS).
+         * *   For more information about TDE and the usage notes of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         *
+         * @param request DescribeEncryptionKeyListRequest
+         * @return DescribeEncryptionKeyListResponse
          */
         public async Task<DescribeEncryptionKeyListResponse> DescribeEncryptionKeyListAsync(DescribeEncryptionKeyListRequest request)
         {
@@ -5752,12 +6449,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeEngineVersion\\&type=RPC\\&version=2015-01-01)
-          *
-          * @param request DescribeEngineVersionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeEngineVersionResponse
+         * @summary Queries the major version and minor version of an ApsaraDB for Redis instance and the release notes for minor versions.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeEngineVersion\\&type=RPC\\&version=2015-01-01)
+         *
+         * @param request DescribeEngineVersionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEngineVersionResponse
          */
         public DescribeEngineVersionResponse DescribeEngineVersionWithOptions(DescribeEngineVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5807,12 +6506,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeEngineVersion\\&type=RPC\\&version=2015-01-01)
-          *
-          * @param request DescribeEngineVersionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeEngineVersionResponse
+         * @summary Queries the major version and minor version of an ApsaraDB for Redis instance and the release notes for minor versions.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeEngineVersion\\&type=RPC\\&version=2015-01-01)
+         *
+         * @param request DescribeEngineVersionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeEngineVersionResponse
          */
         public async Task<DescribeEngineVersionResponse> DescribeEngineVersionWithOptionsAsync(DescribeEngineVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5862,11 +6563,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeEngineVersion\\&type=RPC\\&version=2015-01-01)
-          *
-          * @param request DescribeEngineVersionRequest
-          * @return DescribeEngineVersionResponse
+         * @summary Queries the major version and minor version of an ApsaraDB for Redis instance and the release notes for minor versions.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeEngineVersion\\&type=RPC\\&version=2015-01-01)
+         *
+         * @param request DescribeEngineVersionRequest
+         * @return DescribeEngineVersionResponse
          */
         public DescribeEngineVersionResponse DescribeEngineVersion(DescribeEngineVersionRequest request)
         {
@@ -5875,11 +6578,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeEngineVersion\\&type=RPC\\&version=2015-01-01)
-          *
-          * @param request DescribeEngineVersionRequest
-          * @return DescribeEngineVersionResponse
+         * @summary Queries the major version and minor version of an ApsaraDB for Redis instance and the release notes for minor versions.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeEngineVersion\\&type=RPC\\&version=2015-01-01)
+         *
+         * @param request DescribeEngineVersionRequest
+         * @return DescribeEngineVersionResponse
          */
         public async Task<DescribeEngineVersionResponse> DescribeEngineVersionAsync(DescribeEngineVersionRequest request)
         {
@@ -5888,12 +6593,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeGlobalDistributeCache\\&type=RPC\\&version=2015-01-01)
-          *
-          * @param request DescribeGlobalDistributeCacheRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeGlobalDistributeCacheResponse
+         * @summary Queries the details of a distributed ApsaraDB for Redis instance.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeGlobalDistributeCache\\&type=RPC\\&version=2015-01-01)
+         *
+         * @param request DescribeGlobalDistributeCacheRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeGlobalDistributeCacheResponse
          */
         public DescribeGlobalDistributeCacheResponse DescribeGlobalDistributeCacheWithOptions(DescribeGlobalDistributeCacheRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5955,12 +6662,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeGlobalDistributeCache\\&type=RPC\\&version=2015-01-01)
-          *
-          * @param request DescribeGlobalDistributeCacheRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeGlobalDistributeCacheResponse
+         * @summary Queries the details of a distributed ApsaraDB for Redis instance.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeGlobalDistributeCache\\&type=RPC\\&version=2015-01-01)
+         *
+         * @param request DescribeGlobalDistributeCacheRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeGlobalDistributeCacheResponse
          */
         public async Task<DescribeGlobalDistributeCacheResponse> DescribeGlobalDistributeCacheWithOptionsAsync(DescribeGlobalDistributeCacheRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6022,11 +6731,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeGlobalDistributeCache\\&type=RPC\\&version=2015-01-01)
-          *
-          * @param request DescribeGlobalDistributeCacheRequest
-          * @return DescribeGlobalDistributeCacheResponse
+         * @summary Queries the details of a distributed ApsaraDB for Redis instance.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeGlobalDistributeCache\\&type=RPC\\&version=2015-01-01)
+         *
+         * @param request DescribeGlobalDistributeCacheRequest
+         * @return DescribeGlobalDistributeCacheResponse
          */
         public DescribeGlobalDistributeCacheResponse DescribeGlobalDistributeCache(DescribeGlobalDistributeCacheRequest request)
         {
@@ -6035,11 +6746,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * ## Debugging
-          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeGlobalDistributeCache\\&type=RPC\\&version=2015-01-01)
-          *
-          * @param request DescribeGlobalDistributeCacheRequest
-          * @return DescribeGlobalDistributeCacheResponse
+         * @summary Queries the details of a distributed ApsaraDB for Redis instance.
+         *
+         * @description ## Debugging
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeGlobalDistributeCache\\&type=RPC\\&version=2015-01-01)
+         *
+         * @param request DescribeGlobalDistributeCacheRequest
+         * @return DescribeGlobalDistributeCacheResponse
          */
         public async Task<DescribeGlobalDistributeCacheResponse> DescribeGlobalDistributeCacheAsync(DescribeGlobalDistributeCacheRequest request)
         {
@@ -6047,6 +6760,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeGlobalDistributeCacheWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries global IP whitelist templates.
+         *
+         * @param request DescribeGlobalSecurityIPGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeGlobalSecurityIPGroupResponse
+         */
         public DescribeGlobalSecurityIPGroupResponse DescribeGlobalSecurityIPGroupWithOptions(DescribeGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6070,6 +6790,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries global IP whitelist templates.
+         *
+         * @param request DescribeGlobalSecurityIPGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeGlobalSecurityIPGroupResponse
+         */
         public async Task<DescribeGlobalSecurityIPGroupResponse> DescribeGlobalSecurityIPGroupWithOptionsAsync(DescribeGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6093,18 +6820,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries global IP whitelist templates.
+         *
+         * @param request DescribeGlobalSecurityIPGroupRequest
+         * @return DescribeGlobalSecurityIPGroupResponse
+         */
         public DescribeGlobalSecurityIPGroupResponse DescribeGlobalSecurityIPGroup(DescribeGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGlobalSecurityIPGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries global IP whitelist templates.
+         *
+         * @param request DescribeGlobalSecurityIPGroupRequest
+         * @return DescribeGlobalSecurityIPGroupResponse
+         */
         public async Task<DescribeGlobalSecurityIPGroupResponse> DescribeGlobalSecurityIPGroupAsync(DescribeGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGlobalSecurityIPGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries information about the global IP whitelist templates associated with an instance.
+         *
+         * @param request DescribeGlobalSecurityIPGroupRelationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeGlobalSecurityIPGroupRelationResponse
+         */
         public DescribeGlobalSecurityIPGroupRelationResponse DescribeGlobalSecurityIPGroupRelationWithOptions(DescribeGlobalSecurityIPGroupRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6128,6 +6874,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeGlobalSecurityIPGroupRelationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries information about the global IP whitelist templates associated with an instance.
+         *
+         * @param request DescribeGlobalSecurityIPGroupRelationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeGlobalSecurityIPGroupRelationResponse
+         */
         public async Task<DescribeGlobalSecurityIPGroupRelationResponse> DescribeGlobalSecurityIPGroupRelationWithOptionsAsync(DescribeGlobalSecurityIPGroupRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6151,12 +6904,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeGlobalSecurityIPGroupRelationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries information about the global IP whitelist templates associated with an instance.
+         *
+         * @param request DescribeGlobalSecurityIPGroupRelationRequest
+         * @return DescribeGlobalSecurityIPGroupRelationResponse
+         */
         public DescribeGlobalSecurityIPGroupRelationResponse DescribeGlobalSecurityIPGroupRelation(DescribeGlobalSecurityIPGroupRelationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGlobalSecurityIPGroupRelationWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries information about the global IP whitelist templates associated with an instance.
+         *
+         * @param request DescribeGlobalSecurityIPGroupRelationRequest
+         * @return DescribeGlobalSecurityIPGroupRelationResponse
+         */
         public async Task<DescribeGlobalSecurityIPGroupRelationResponse> DescribeGlobalSecurityIPGroupRelationAsync(DescribeGlobalSecurityIPGroupRelationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6164,11 +6929,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](~~43887~~).
-          *
-          * @param request DescribeHistoryMonitorValuesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeHistoryMonitorValuesResponse
+         * @summary Queries the performance monitoring data of an ApsaraDB for Redis instance.
+         *
+         * @description You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](https://help.aliyun.com/document_detail/43887.html).
+         *
+         * @param request DescribeHistoryMonitorValuesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHistoryMonitorValuesResponse
          */
         public DescribeHistoryMonitorValuesResponse DescribeHistoryMonitorValuesWithOptions(DescribeHistoryMonitorValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6242,11 +7009,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](~~43887~~).
-          *
-          * @param request DescribeHistoryMonitorValuesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeHistoryMonitorValuesResponse
+         * @summary Queries the performance monitoring data of an ApsaraDB for Redis instance.
+         *
+         * @description You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](https://help.aliyun.com/document_detail/43887.html).
+         *
+         * @param request DescribeHistoryMonitorValuesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHistoryMonitorValuesResponse
          */
         public async Task<DescribeHistoryMonitorValuesResponse> DescribeHistoryMonitorValuesWithOptionsAsync(DescribeHistoryMonitorValuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6320,10 +7089,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](~~43887~~).
-          *
-          * @param request DescribeHistoryMonitorValuesRequest
-          * @return DescribeHistoryMonitorValuesResponse
+         * @summary Queries the performance monitoring data of an ApsaraDB for Redis instance.
+         *
+         * @description You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](https://help.aliyun.com/document_detail/43887.html).
+         *
+         * @param request DescribeHistoryMonitorValuesRequest
+         * @return DescribeHistoryMonitorValuesResponse
          */
         public DescribeHistoryMonitorValuesResponse DescribeHistoryMonitorValues(DescribeHistoryMonitorValuesRequest request)
         {
@@ -6332,10 +7103,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](~~43887~~).
-          *
-          * @param request DescribeHistoryMonitorValuesRequest
-          * @return DescribeHistoryMonitorValuesResponse
+         * @summary Queries the performance monitoring data of an ApsaraDB for Redis instance.
+         *
+         * @description You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](https://help.aliyun.com/document_detail/43887.html).
+         *
+         * @param request DescribeHistoryMonitorValuesRequest
+         * @return DescribeHistoryMonitorValuesResponse
          */
         public async Task<DescribeHistoryMonitorValuesResponse> DescribeHistoryMonitorValuesAsync(DescribeHistoryMonitorValuesRequest request)
         {
@@ -6343,6 +7116,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeHistoryMonitorValuesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of tasks in the task center.
+         *
+         * @param request DescribeHistoryTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHistoryTasksResponse
+         */
         public DescribeHistoryTasksResponse DescribeHistoryTasksWithOptions(DescribeHistoryTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6426,6 +7206,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeHistoryTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of tasks in the task center.
+         *
+         * @param request DescribeHistoryTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeHistoryTasksResponse
+         */
         public async Task<DescribeHistoryTasksResponse> DescribeHistoryTasksWithOptionsAsync(DescribeHistoryTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6509,18 +7296,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeHistoryTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of tasks in the task center.
+         *
+         * @param request DescribeHistoryTasksRequest
+         * @return DescribeHistoryTasksResponse
+         */
         public DescribeHistoryTasksResponse DescribeHistoryTasks(DescribeHistoryTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHistoryTasksWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries a list of tasks in the task center.
+         *
+         * @param request DescribeHistoryTasksRequest
+         * @return DescribeHistoryTasksResponse
+         */
         public async Task<DescribeHistoryTasksResponse> DescribeHistoryTasksAsync(DescribeHistoryTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHistoryTasksWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeInstanceAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceAttributeResponse
+         */
         public DescribeInstanceAttributeResponse DescribeInstanceAttributeWithOptions(DescribeInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6568,6 +7374,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstanceAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeInstanceAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceAttributeResponse
+         */
         public async Task<DescribeInstanceAttributeResponse> DescribeInstanceAttributeWithOptionsAsync(DescribeInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6615,18 +7428,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the details of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeInstanceAttributeRequest
+         * @return DescribeInstanceAttributeResponse
+         */
         public DescribeInstanceAttributeResponse DescribeInstanceAttribute(DescribeInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceAttributeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the details of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeInstanceAttributeRequest
+         * @return DescribeInstanceAttributeResponse
+         */
         public async Task<DescribeInstanceAttributeResponse> DescribeInstanceAttributeAsync(DescribeInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries whether auto-renewal is enabled for an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeInstanceAutoRenewalAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceAutoRenewalAttributeResponse
+         */
         public DescribeInstanceAutoRenewalAttributeResponse DescribeInstanceAutoRenewalAttributeWithOptions(DescribeInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6686,6 +7518,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstanceAutoRenewalAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries whether auto-renewal is enabled for an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeInstanceAutoRenewalAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceAutoRenewalAttributeResponse
+         */
         public async Task<DescribeInstanceAutoRenewalAttributeResponse> DescribeInstanceAutoRenewalAttributeWithOptionsAsync(DescribeInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6745,12 +7584,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstanceAutoRenewalAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries whether auto-renewal is enabled for an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeInstanceAutoRenewalAttributeRequest
+         * @return DescribeInstanceAutoRenewalAttributeResponse
+         */
         public DescribeInstanceAutoRenewalAttributeResponse DescribeInstanceAutoRenewalAttribute(DescribeInstanceAutoRenewalAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceAutoRenewalAttributeWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries whether auto-renewal is enabled for an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeInstanceAutoRenewalAttributeRequest
+         * @return DescribeInstanceAutoRenewalAttributeResponse
+         */
         public async Task<DescribeInstanceAutoRenewalAttributeResponse> DescribeInstanceAutoRenewalAttributeAsync(DescribeInstanceAutoRenewalAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6758,12 +7609,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is available only for instances that use cloud disks.
-          * > You can call the [DescribeParameters](~~473847~~) operation to query the parameter settings of instances that use local disks.
-          *
-          * @param request DescribeInstanceConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceConfigResponse
+         * @summary Queries the parameter settings of an ApsaraDB for Redis instance.
+         *
+         * @description This operation is available only for instances that use cloud disks.
+         * > You can call the [DescribeParameters](https://help.aliyun.com/document_detail/473847.html) operation to query the parameter settings of instances that use local disks.
+         *
+         * @param request DescribeInstanceConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceConfigResponse
          */
         public DescribeInstanceConfigResponse DescribeInstanceConfigWithOptions(DescribeInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6813,12 +7666,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is available only for instances that use cloud disks.
-          * > You can call the [DescribeParameters](~~473847~~) operation to query the parameter settings of instances that use local disks.
-          *
-          * @param request DescribeInstanceConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceConfigResponse
+         * @summary Queries the parameter settings of an ApsaraDB for Redis instance.
+         *
+         * @description This operation is available only for instances that use cloud disks.
+         * > You can call the [DescribeParameters](https://help.aliyun.com/document_detail/473847.html) operation to query the parameter settings of instances that use local disks.
+         *
+         * @param request DescribeInstanceConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceConfigResponse
          */
         public async Task<DescribeInstanceConfigResponse> DescribeInstanceConfigWithOptionsAsync(DescribeInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6868,11 +7723,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is available only for instances that use cloud disks.
-          * > You can call the [DescribeParameters](~~473847~~) operation to query the parameter settings of instances that use local disks.
-          *
-          * @param request DescribeInstanceConfigRequest
-          * @return DescribeInstanceConfigResponse
+         * @summary Queries the parameter settings of an ApsaraDB for Redis instance.
+         *
+         * @description This operation is available only for instances that use cloud disks.
+         * > You can call the [DescribeParameters](https://help.aliyun.com/document_detail/473847.html) operation to query the parameter settings of instances that use local disks.
+         *
+         * @param request DescribeInstanceConfigRequest
+         * @return DescribeInstanceConfigResponse
          */
         public DescribeInstanceConfigResponse DescribeInstanceConfig(DescribeInstanceConfigRequest request)
         {
@@ -6881,11 +7738,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is available only for instances that use cloud disks.
-          * > You can call the [DescribeParameters](~~473847~~) operation to query the parameter settings of instances that use local disks.
-          *
-          * @param request DescribeInstanceConfigRequest
-          * @return DescribeInstanceConfigResponse
+         * @summary Queries the parameter settings of an ApsaraDB for Redis instance.
+         *
+         * @description This operation is available only for instances that use cloud disks.
+         * > You can call the [DescribeParameters](https://help.aliyun.com/document_detail/473847.html) operation to query the parameter settings of instances that use local disks.
+         *
+         * @param request DescribeInstanceConfigRequest
+         * @return DescribeInstanceConfigResponse
          */
         public async Task<DescribeInstanceConfigResponse> DescribeInstanceConfigAsync(DescribeInstanceConfigRequest request)
         {
@@ -6894,15 +7753,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
-          * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
-          * *   Call the [ModifyInstanceSSL](~~96194~~) operation.
-          * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
-          * > After SSL encryption is enabled, the instance may respond slower.
-          *
-          * @param request DescribeInstanceSSLRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceSSLResponse
+         * @summary Queries whether TLS (SSL) encryption is enabled for an instance.
+         *
+         * @description SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+         * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
+         * *   Call the [ModifyInstanceSSL](https://help.aliyun.com/document_detail/96194.html) operation.
+         * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](https://help.aliyun.com/document_detail/84898.html).
+         * > After SSL encryption is enabled, the instance may respond slower.
+         *
+         * @param request DescribeInstanceSSLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceSSLResponse
          */
         public DescribeInstanceSSLResponse DescribeInstanceSSLWithOptions(DescribeInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6952,15 +7813,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
-          * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
-          * *   Call the [ModifyInstanceSSL](~~96194~~) operation.
-          * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
-          * > After SSL encryption is enabled, the instance may respond slower.
-          *
-          * @param request DescribeInstanceSSLRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceSSLResponse
+         * @summary Queries whether TLS (SSL) encryption is enabled for an instance.
+         *
+         * @description SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+         * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
+         * *   Call the [ModifyInstanceSSL](https://help.aliyun.com/document_detail/96194.html) operation.
+         * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](https://help.aliyun.com/document_detail/84898.html).
+         * > After SSL encryption is enabled, the instance may respond slower.
+         *
+         * @param request DescribeInstanceSSLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceSSLResponse
          */
         public async Task<DescribeInstanceSSLResponse> DescribeInstanceSSLWithOptionsAsync(DescribeInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7010,14 +7873,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
-          * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
-          * *   Call the [ModifyInstanceSSL](~~96194~~) operation.
-          * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
-          * > After SSL encryption is enabled, the instance may respond slower.
-          *
-          * @param request DescribeInstanceSSLRequest
-          * @return DescribeInstanceSSLResponse
+         * @summary Queries whether TLS (SSL) encryption is enabled for an instance.
+         *
+         * @description SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+         * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
+         * *   Call the [ModifyInstanceSSL](https://help.aliyun.com/document_detail/96194.html) operation.
+         * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](https://help.aliyun.com/document_detail/84898.html).
+         * > After SSL encryption is enabled, the instance may respond slower.
+         *
+         * @param request DescribeInstanceSSLRequest
+         * @return DescribeInstanceSSLResponse
          */
         public DescribeInstanceSSLResponse DescribeInstanceSSL(DescribeInstanceSSLRequest request)
         {
@@ -7026,14 +7891,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
-          * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
-          * *   Call the [ModifyInstanceSSL](~~96194~~) operation.
-          * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
-          * > After SSL encryption is enabled, the instance may respond slower.
-          *
-          * @param request DescribeInstanceSSLRequest
-          * @return DescribeInstanceSSLResponse
+         * @summary Queries whether TLS (SSL) encryption is enabled for an instance.
+         *
+         * @description SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+         * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
+         * *   Call the [ModifyInstanceSSL](https://help.aliyun.com/document_detail/96194.html) operation.
+         * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](https://help.aliyun.com/document_detail/84898.html).
+         * > After SSL encryption is enabled, the instance may respond slower.
+         *
+         * @param request DescribeInstanceSSLRequest
+         * @return DescribeInstanceSSLResponse
          */
         public async Task<DescribeInstanceSSLResponse> DescribeInstanceSSLAsync(DescribeInstanceSSLRequest request)
         {
@@ -7042,12 +7909,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
-          * >  You can call the [ModifyInstanceTDE](~~302337~~) to enable or disable TDE.
-          *
-          * @param request DescribeInstanceTDEStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceTDEStatusResponse
+         * @summary Queries whether transparent data encryption (TDE) is enabled for an ApsaraDB for Redis instance.
+         *
+         * @description For more information about TDE and the usage notes of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         * >  You can call the [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html) to enable or disable TDE.
+         *
+         * @param request DescribeInstanceTDEStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceTDEStatusResponse
          */
         public DescribeInstanceTDEStatusResponse DescribeInstanceTDEStatusWithOptions(DescribeInstanceTDEStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7097,12 +7966,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
-          * >  You can call the [ModifyInstanceTDE](~~302337~~) to enable or disable TDE.
-          *
-          * @param request DescribeInstanceTDEStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceTDEStatusResponse
+         * @summary Queries whether transparent data encryption (TDE) is enabled for an ApsaraDB for Redis instance.
+         *
+         * @description For more information about TDE and the usage notes of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         * >  You can call the [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html) to enable or disable TDE.
+         *
+         * @param request DescribeInstanceTDEStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstanceTDEStatusResponse
          */
         public async Task<DescribeInstanceTDEStatusResponse> DescribeInstanceTDEStatusWithOptionsAsync(DescribeInstanceTDEStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7152,11 +8023,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
-          * >  You can call the [ModifyInstanceTDE](~~302337~~) to enable or disable TDE.
-          *
-          * @param request DescribeInstanceTDEStatusRequest
-          * @return DescribeInstanceTDEStatusResponse
+         * @summary Queries whether transparent data encryption (TDE) is enabled for an ApsaraDB for Redis instance.
+         *
+         * @description For more information about TDE and the usage notes of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         * >  You can call the [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html) to enable or disable TDE.
+         *
+         * @param request DescribeInstanceTDEStatusRequest
+         * @return DescribeInstanceTDEStatusResponse
          */
         public DescribeInstanceTDEStatusResponse DescribeInstanceTDEStatus(DescribeInstanceTDEStatusRequest request)
         {
@@ -7165,11 +8038,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about TDE and the usage notes of TDE, see [Enable TDE](~~265913~~).
-          * >  You can call the [ModifyInstanceTDE](~~302337~~) to enable or disable TDE.
-          *
-          * @param request DescribeInstanceTDEStatusRequest
-          * @return DescribeInstanceTDEStatusResponse
+         * @summary Queries whether transparent data encryption (TDE) is enabled for an ApsaraDB for Redis instance.
+         *
+         * @description For more information about TDE and the usage notes of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         * >  You can call the [ModifyInstanceTDE](https://help.aliyun.com/document_detail/302337.html) to enable or disable TDE.
+         *
+         * @param request DescribeInstanceTDEStatusRequest
+         * @return DescribeInstanceTDEStatusResponse
          */
         public async Task<DescribeInstanceTDEStatusResponse> DescribeInstanceTDEStatusAsync(DescribeInstanceTDEStatusRequest request)
         {
@@ -7177,6 +8052,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeInstanceTDEStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about one or more ApsaraDB for Redis instances.
+         *
+         * @param request DescribeInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstancesResponse
+         */
         public DescribeInstancesResponse DescribeInstancesWithOptions(DescribeInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7304,6 +8186,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about one or more ApsaraDB for Redis instances.
+         *
+         * @param request DescribeInstancesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstancesResponse
+         */
         public async Task<DescribeInstancesResponse> DescribeInstancesWithOptionsAsync(DescribeInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7431,12 +8320,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about one or more ApsaraDB for Redis instances.
+         *
+         * @param request DescribeInstancesRequest
+         * @return DescribeInstancesResponse
+         */
         public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstancesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the information about one or more ApsaraDB for Redis instances.
+         *
+         * @param request DescribeInstancesRequest
+         * @return DescribeInstancesResponse
+         */
         public async Task<DescribeInstancesResponse> DescribeInstancesAsync(DescribeInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7444,12 +8345,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
-          * > This operation returns non-paged results.
-          *
-          * @param request DescribeInstancesOverviewRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstancesOverviewResponse
+         * @summary Queries the overview information of one or more ApsaraDB for Redis instances.
+         *
+         * @description If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
+         * > This operation returns non-paged results.
+         *
+         * @param request DescribeInstancesOverviewRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstancesOverviewResponse
          */
         public DescribeInstancesOverviewResponse DescribeInstancesOverviewWithOptions(DescribeInstancesOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7559,12 +8462,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
-          * > This operation returns non-paged results.
-          *
-          * @param request DescribeInstancesOverviewRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstancesOverviewResponse
+         * @summary Queries the overview information of one or more ApsaraDB for Redis instances.
+         *
+         * @description If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
+         * > This operation returns non-paged results.
+         *
+         * @param request DescribeInstancesOverviewRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeInstancesOverviewResponse
          */
         public async Task<DescribeInstancesOverviewResponse> DescribeInstancesOverviewWithOptionsAsync(DescribeInstancesOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7674,11 +8579,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
-          * > This operation returns non-paged results.
-          *
-          * @param request DescribeInstancesOverviewRequest
-          * @return DescribeInstancesOverviewResponse
+         * @summary Queries the overview information of one or more ApsaraDB for Redis instances.
+         *
+         * @description If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
+         * > This operation returns non-paged results.
+         *
+         * @param request DescribeInstancesOverviewRequest
+         * @return DescribeInstancesOverviewResponse
          */
         public DescribeInstancesOverviewResponse DescribeInstancesOverview(DescribeInstancesOverviewRequest request)
         {
@@ -7687,11 +8594,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
-          * > This operation returns non-paged results.
-          *
-          * @param request DescribeInstancesOverviewRequest
-          * @return DescribeInstancesOverviewResponse
+         * @summary Queries the overview information of one or more ApsaraDB for Redis instances.
+         *
+         * @description If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
+         * > This operation returns non-paged results.
+         *
+         * @param request DescribeInstancesOverviewRequest
+         * @return DescribeInstancesOverviewResponse
          */
         public async Task<DescribeInstancesOverviewResponse> DescribeInstancesOverviewAsync(DescribeInstancesOverviewRequest request)
         {
@@ -7700,11 +8609,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can call the [EnableAdditionalBandwidth](~~206173~~) operation to increase the internal bandwidth of an instance.
-          *
-          * @param request DescribeIntranetAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeIntranetAttributeResponse
+         * @summary Queries the internal bandwidth of an ApsaraDB for Redis instance. If you have purchased extra internal bandwidth, the expiration time of the purchased bandwidth is also returned.
+         *
+         * @description You can call the [EnableAdditionalBandwidth](https://help.aliyun.com/document_detail/206173.html) operation to increase the internal bandwidth of an instance.
+         *
+         * @param request DescribeIntranetAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeIntranetAttributeResponse
          */
         public DescribeIntranetAttributeResponse DescribeIntranetAttributeWithOptions(DescribeIntranetAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7758,11 +8669,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can call the [EnableAdditionalBandwidth](~~206173~~) operation to increase the internal bandwidth of an instance.
-          *
-          * @param request DescribeIntranetAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeIntranetAttributeResponse
+         * @summary Queries the internal bandwidth of an ApsaraDB for Redis instance. If you have purchased extra internal bandwidth, the expiration time of the purchased bandwidth is also returned.
+         *
+         * @description You can call the [EnableAdditionalBandwidth](https://help.aliyun.com/document_detail/206173.html) operation to increase the internal bandwidth of an instance.
+         *
+         * @param request DescribeIntranetAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeIntranetAttributeResponse
          */
         public async Task<DescribeIntranetAttributeResponse> DescribeIntranetAttributeWithOptionsAsync(DescribeIntranetAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7816,10 +8729,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can call the [EnableAdditionalBandwidth](~~206173~~) operation to increase the internal bandwidth of an instance.
-          *
-          * @param request DescribeIntranetAttributeRequest
-          * @return DescribeIntranetAttributeResponse
+         * @summary Queries the internal bandwidth of an ApsaraDB for Redis instance. If you have purchased extra internal bandwidth, the expiration time of the purchased bandwidth is also returned.
+         *
+         * @description You can call the [EnableAdditionalBandwidth](https://help.aliyun.com/document_detail/206173.html) operation to increase the internal bandwidth of an instance.
+         *
+         * @param request DescribeIntranetAttributeRequest
+         * @return DescribeIntranetAttributeResponse
          */
         public DescribeIntranetAttributeResponse DescribeIntranetAttribute(DescribeIntranetAttributeRequest request)
         {
@@ -7828,10 +8743,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can call the [EnableAdditionalBandwidth](~~206173~~) operation to increase the internal bandwidth of an instance.
-          *
-          * @param request DescribeIntranetAttributeRequest
-          * @return DescribeIntranetAttributeResponse
+         * @summary Queries the internal bandwidth of an ApsaraDB for Redis instance. If you have purchased extra internal bandwidth, the expiration time of the purchased bandwidth is also returned.
+         *
+         * @description You can call the [EnableAdditionalBandwidth](https://help.aliyun.com/document_detail/206173.html) operation to increase the internal bandwidth of an instance.
+         *
+         * @param request DescribeIntranetAttributeRequest
+         * @return DescribeIntranetAttributeResponse
          */
         public async Task<DescribeIntranetAttributeResponse> DescribeIntranetAttributeAsync(DescribeIntranetAttributeRequest request)
         {
@@ -7840,11 +8757,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This parameter is supported only for cluster and read/write splitting instances.
-          *
-          * @param request DescribeLogicInstanceTopologyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeLogicInstanceTopologyResponse
+         * @summary Queries the logical topology of an ApsaraDB for Redis instance.
+         *
+         * @description This parameter is supported only for cluster and read/write splitting instances.
+         *
+         * @param request DescribeLogicInstanceTopologyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeLogicInstanceTopologyResponse
          */
         public DescribeLogicInstanceTopologyResponse DescribeLogicInstanceTopologyWithOptions(DescribeLogicInstanceTopologyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7894,11 +8813,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This parameter is supported only for cluster and read/write splitting instances.
-          *
-          * @param request DescribeLogicInstanceTopologyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeLogicInstanceTopologyResponse
+         * @summary Queries the logical topology of an ApsaraDB for Redis instance.
+         *
+         * @description This parameter is supported only for cluster and read/write splitting instances.
+         *
+         * @param request DescribeLogicInstanceTopologyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeLogicInstanceTopologyResponse
          */
         public async Task<DescribeLogicInstanceTopologyResponse> DescribeLogicInstanceTopologyWithOptionsAsync(DescribeLogicInstanceTopologyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7948,10 +8869,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This parameter is supported only for cluster and read/write splitting instances.
-          *
-          * @param request DescribeLogicInstanceTopologyRequest
-          * @return DescribeLogicInstanceTopologyResponse
+         * @summary Queries the logical topology of an ApsaraDB for Redis instance.
+         *
+         * @description This parameter is supported only for cluster and read/write splitting instances.
+         *
+         * @param request DescribeLogicInstanceTopologyRequest
+         * @return DescribeLogicInstanceTopologyResponse
          */
         public DescribeLogicInstanceTopologyResponse DescribeLogicInstanceTopology(DescribeLogicInstanceTopologyRequest request)
         {
@@ -7960,10 +8883,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This parameter is supported only for cluster and read/write splitting instances.
-          *
-          * @param request DescribeLogicInstanceTopologyRequest
-          * @return DescribeLogicInstanceTopologyResponse
+         * @summary Queries the logical topology of an ApsaraDB for Redis instance.
+         *
+         * @description This parameter is supported only for cluster and read/write splitting instances.
+         *
+         * @param request DescribeLogicInstanceTopologyRequest
+         * @return DescribeLogicInstanceTopologyResponse
          */
         public async Task<DescribeLogicInstanceTopologyResponse> DescribeLogicInstanceTopologyAsync(DescribeLogicInstanceTopologyRequest request)
         {
@@ -7972,12 +8897,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
-          * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~DescribeHistoryMonitorValues~~) operation to query monitoring history of the instance.
-          *
-          * @param request DescribeMonitorItemsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeMonitorItemsResponse
+         * @summary Queries the metrics of an ApsaraDB for Redis instance.
+         *
+         * @description >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](https://help.aliyun.com/document_detail/189893.html).
+         * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~DescribeHistoryMonitorValues~~) operation to query monitoring history of the instance.
+         *
+         * @param request DescribeMonitorItemsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeMonitorItemsResponse
          */
         public DescribeMonitorItemsResponse DescribeMonitorItemsWithOptions(DescribeMonitorItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8023,12 +8950,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
-          * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~DescribeHistoryMonitorValues~~) operation to query monitoring history of the instance.
-          *
-          * @param request DescribeMonitorItemsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeMonitorItemsResponse
+         * @summary Queries the metrics of an ApsaraDB for Redis instance.
+         *
+         * @description >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](https://help.aliyun.com/document_detail/189893.html).
+         * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~DescribeHistoryMonitorValues~~) operation to query monitoring history of the instance.
+         *
+         * @param request DescribeMonitorItemsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeMonitorItemsResponse
          */
         public async Task<DescribeMonitorItemsResponse> DescribeMonitorItemsWithOptionsAsync(DescribeMonitorItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8074,11 +9003,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
-          * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~DescribeHistoryMonitorValues~~) operation to query monitoring history of the instance.
-          *
-          * @param request DescribeMonitorItemsRequest
-          * @return DescribeMonitorItemsResponse
+         * @summary Queries the metrics of an ApsaraDB for Redis instance.
+         *
+         * @description >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](https://help.aliyun.com/document_detail/189893.html).
+         * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~DescribeHistoryMonitorValues~~) operation to query monitoring history of the instance.
+         *
+         * @param request DescribeMonitorItemsRequest
+         * @return DescribeMonitorItemsResponse
          */
         public DescribeMonitorItemsResponse DescribeMonitorItems(DescribeMonitorItemsRequest request)
         {
@@ -8087,11 +9018,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
-          * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~DescribeHistoryMonitorValues~~) operation to query monitoring history of the instance.
-          *
-          * @param request DescribeMonitorItemsRequest
-          * @return DescribeMonitorItemsResponse
+         * @summary Queries the metrics of an ApsaraDB for Redis instance.
+         *
+         * @description >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](https://help.aliyun.com/document_detail/189893.html).
+         * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~DescribeHistoryMonitorValues~~) operation to query monitoring history of the instance.
+         *
+         * @param request DescribeMonitorItemsRequest
+         * @return DescribeMonitorItemsResponse
          */
         public async Task<DescribeMonitorItemsResponse> DescribeMonitorItemsAsync(DescribeMonitorItemsRequest request)
         {
@@ -8099,6 +9032,525 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeMonitorItemsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the basic information about a parameter template.
+         *
+         * @param request DescribeParameterGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParameterGroupResponse
+         */
+        public DescribeParameterGroupResponse DescribeParameterGroupWithOptions(DescribeParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupId))
+            {
+                query["ParameterGroupId"] = request.ParameterGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParameterGroup",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParameterGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Queries the basic information about a parameter template.
+         *
+         * @param request DescribeParameterGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParameterGroupResponse
+         */
+        public async Task<DescribeParameterGroupResponse> DescribeParameterGroupWithOptionsAsync(DescribeParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupId))
+            {
+                query["ParameterGroupId"] = request.ParameterGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParameterGroup",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Queries the basic information about a parameter template.
+         *
+         * @param request DescribeParameterGroupRequest
+         * @return DescribeParameterGroupResponse
+         */
+        public DescribeParameterGroupResponse DescribeParameterGroup(DescribeParameterGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeParameterGroupWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Queries the basic information about a parameter template.
+         *
+         * @param request DescribeParameterGroupRequest
+         * @return DescribeParameterGroupResponse
+         */
+        public async Task<DescribeParameterGroupResponse> DescribeParameterGroupAsync(DescribeParameterGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeParameterGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Queries a list of parameters that can be configured for different versions of parameter templates.
+         *
+         * @param request DescribeParameterGroupSupportParamRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParameterGroupSupportParamResponse
+         */
+        public DescribeParameterGroupSupportParamResponse DescribeParameterGroupSupportParamWithOptions(DescribeParameterGroupSupportParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineType))
+            {
+                query["EngineType"] = request.EngineType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParameterGroupSupportParam",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParameterGroupSupportParamResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Queries a list of parameters that can be configured for different versions of parameter templates.
+         *
+         * @param request DescribeParameterGroupSupportParamRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParameterGroupSupportParamResponse
+         */
+        public async Task<DescribeParameterGroupSupportParamResponse> DescribeParameterGroupSupportParamWithOptionsAsync(DescribeParameterGroupSupportParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineType))
+            {
+                query["EngineType"] = request.EngineType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParameterGroupSupportParam",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParameterGroupSupportParamResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Queries a list of parameters that can be configured for different versions of parameter templates.
+         *
+         * @param request DescribeParameterGroupSupportParamRequest
+         * @return DescribeParameterGroupSupportParamResponse
+         */
+        public DescribeParameterGroupSupportParamResponse DescribeParameterGroupSupportParam(DescribeParameterGroupSupportParamRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeParameterGroupSupportParamWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Queries a list of parameters that can be configured for different versions of parameter templates.
+         *
+         * @param request DescribeParameterGroupSupportParamRequest
+         * @return DescribeParameterGroupSupportParamResponse
+         */
+        public async Task<DescribeParameterGroupSupportParamResponse> DescribeParameterGroupSupportParamAsync(DescribeParameterGroupSupportParamRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeParameterGroupSupportParamWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询参数模板支持设置的参数列表
+         *
+         * @param request DescribeParameterGroupTemplateListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParameterGroupTemplateListResponse
+         */
+        public DescribeParameterGroupTemplateListResponse DescribeParameterGroupTemplateListWithOptions(DescribeParameterGroupTemplateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParameterGroupTemplateList",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParameterGroupTemplateListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询参数模板支持设置的参数列表
+         *
+         * @param request DescribeParameterGroupTemplateListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParameterGroupTemplateListResponse
+         */
+        public async Task<DescribeParameterGroupTemplateListResponse> DescribeParameterGroupTemplateListWithOptionsAsync(DescribeParameterGroupTemplateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParameterGroupTemplateList",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParameterGroupTemplateListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询参数模板支持设置的参数列表
+         *
+         * @param request DescribeParameterGroupTemplateListRequest
+         * @return DescribeParameterGroupTemplateListResponse
+         */
+        public DescribeParameterGroupTemplateListResponse DescribeParameterGroupTemplateList(DescribeParameterGroupTemplateListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeParameterGroupTemplateListWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询参数模板支持设置的参数列表
+         *
+         * @param request DescribeParameterGroupTemplateListRequest
+         * @return DescribeParameterGroupTemplateListResponse
+         */
+        public async Task<DescribeParameterGroupTemplateListResponse> DescribeParameterGroupTemplateListAsync(DescribeParameterGroupTemplateListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeParameterGroupTemplateListWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Queries a list of available parameter templates.
+         *
+         * @param request DescribeParameterGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParameterGroupsResponse
+         */
+        public DescribeParameterGroupsResponse DescribeParameterGroupsWithOptions(DescribeParameterGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParameterGroups",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParameterGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Queries a list of available parameter templates.
+         *
+         * @param request DescribeParameterGroupsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParameterGroupsResponse
+         */
+        public async Task<DescribeParameterGroupsResponse> DescribeParameterGroupsWithOptionsAsync(DescribeParameterGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParameterGroups",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParameterGroupsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Queries a list of available parameter templates.
+         *
+         * @param request DescribeParameterGroupsRequest
+         * @return DescribeParameterGroupsResponse
+         */
+        public DescribeParameterGroupsResponse DescribeParameterGroups(DescribeParameterGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeParameterGroupsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Queries a list of available parameter templates.
+         *
+         * @param request DescribeParameterGroupsRequest
+         * @return DescribeParameterGroupsResponse
+         */
+        public async Task<DescribeParameterGroupsResponse> DescribeParameterGroupsAsync(DescribeParameterGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeParameterGroupsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Queries the parameter modification history of a Tair or ApsaraDB for Redis instance.
+         *
+         * @param request DescribeParameterModificationHistoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParameterModificationHistoryResponse
+         */
         public DescribeParameterModificationHistoryResponse DescribeParameterModificationHistoryWithOptions(DescribeParameterModificationHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8162,6 +9614,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeParameterModificationHistoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the parameter modification history of a Tair or ApsaraDB for Redis instance.
+         *
+         * @param request DescribeParameterModificationHistoryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParameterModificationHistoryResponse
+         */
         public async Task<DescribeParameterModificationHistoryResponse> DescribeParameterModificationHistoryWithOptionsAsync(DescribeParameterModificationHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8225,12 +9684,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeParameterModificationHistoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the parameter modification history of a Tair or ApsaraDB for Redis instance.
+         *
+         * @param request DescribeParameterModificationHistoryRequest
+         * @return DescribeParameterModificationHistoryResponse
+         */
         public DescribeParameterModificationHistoryResponse DescribeParameterModificationHistory(DescribeParameterModificationHistoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParameterModificationHistoryWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the parameter modification history of a Tair or ApsaraDB for Redis instance.
+         *
+         * @param request DescribeParameterModificationHistoryRequest
+         * @return DescribeParameterModificationHistoryResponse
+         */
         public async Task<DescribeParameterModificationHistoryResponse> DescribeParameterModificationHistoryAsync(DescribeParameterModificationHistoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8238,11 +9709,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](~~61113~~) operation to reconfigure the parameters of the instance.
-          *
-          * @param request DescribeParameterTemplatesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeParameterTemplatesResponse
+         * @summary Queries the parameters and their default values that are supported by ApsaraDB for Redis instances of different architectures and major versions.
+         *
+         * @description After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](https://help.aliyun.com/document_detail/61113.html) operation to reconfigure the parameters of the instance.
+         *
+         * @param request DescribeParameterTemplatesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParameterTemplatesResponse
          */
         public DescribeParameterTemplatesResponse DescribeParameterTemplatesWithOptions(DescribeParameterTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8308,11 +9781,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](~~61113~~) operation to reconfigure the parameters of the instance.
-          *
-          * @param request DescribeParameterTemplatesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeParameterTemplatesResponse
+         * @summary Queries the parameters and their default values that are supported by ApsaraDB for Redis instances of different architectures and major versions.
+         *
+         * @description After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](https://help.aliyun.com/document_detail/61113.html) operation to reconfigure the parameters of the instance.
+         *
+         * @param request DescribeParameterTemplatesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParameterTemplatesResponse
          */
         public async Task<DescribeParameterTemplatesResponse> DescribeParameterTemplatesWithOptionsAsync(DescribeParameterTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8378,10 +9853,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](~~61113~~) operation to reconfigure the parameters of the instance.
-          *
-          * @param request DescribeParameterTemplatesRequest
-          * @return DescribeParameterTemplatesResponse
+         * @summary Queries the parameters and their default values that are supported by ApsaraDB for Redis instances of different architectures and major versions.
+         *
+         * @description After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](https://help.aliyun.com/document_detail/61113.html) operation to reconfigure the parameters of the instance.
+         *
+         * @param request DescribeParameterTemplatesRequest
+         * @return DescribeParameterTemplatesResponse
          */
         public DescribeParameterTemplatesResponse DescribeParameterTemplates(DescribeParameterTemplatesRequest request)
         {
@@ -8390,10 +9867,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](~~61113~~) operation to reconfigure the parameters of the instance.
-          *
-          * @param request DescribeParameterTemplatesRequest
-          * @return DescribeParameterTemplatesResponse
+         * @summary Queries the parameters and their default values that are supported by ApsaraDB for Redis instances of different architectures and major versions.
+         *
+         * @description After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](https://help.aliyun.com/document_detail/61113.html) operation to reconfigure the parameters of the instance.
+         *
+         * @param request DescribeParameterTemplatesRequest
+         * @return DescribeParameterTemplatesResponse
          */
         public async Task<DescribeParameterTemplatesResponse> DescribeParameterTemplatesAsync(DescribeParameterTemplatesRequest request)
         {
@@ -8402,12 +9881,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is available only for instances that use local disks.
-          * > You can call the [DescribeInstanceConfig](~~473846~~) operation to query the parameter settings of instances that use cloud disks.
-          *
-          * @param request DescribeParametersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeParametersResponse
+         * @summary Queries the configuration parameters and running parameters of an ApsaraDB for Redis instance.
+         *
+         * @description This operation is available only for instances that use local disks.
+         * > You can call the [DescribeInstanceConfig](https://help.aliyun.com/document_detail/473846.html) operation to query the parameter settings of instances that use cloud disks.
+         *
+         * @param request DescribeParametersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParametersResponse
          */
         public DescribeParametersResponse DescribeParametersWithOptions(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8465,12 +9946,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is available only for instances that use local disks.
-          * > You can call the [DescribeInstanceConfig](~~473846~~) operation to query the parameter settings of instances that use cloud disks.
-          *
-          * @param request DescribeParametersRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeParametersResponse
+         * @summary Queries the configuration parameters and running parameters of an ApsaraDB for Redis instance.
+         *
+         * @description This operation is available only for instances that use local disks.
+         * > You can call the [DescribeInstanceConfig](https://help.aliyun.com/document_detail/473846.html) operation to query the parameter settings of instances that use cloud disks.
+         *
+         * @param request DescribeParametersRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeParametersResponse
          */
         public async Task<DescribeParametersResponse> DescribeParametersWithOptionsAsync(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8528,11 +10011,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is available only for instances that use local disks.
-          * > You can call the [DescribeInstanceConfig](~~473846~~) operation to query the parameter settings of instances that use cloud disks.
-          *
-          * @param request DescribeParametersRequest
-          * @return DescribeParametersResponse
+         * @summary Queries the configuration parameters and running parameters of an ApsaraDB for Redis instance.
+         *
+         * @description This operation is available only for instances that use local disks.
+         * > You can call the [DescribeInstanceConfig](https://help.aliyun.com/document_detail/473846.html) operation to query the parameter settings of instances that use cloud disks.
+         *
+         * @param request DescribeParametersRequest
+         * @return DescribeParametersResponse
          */
         public DescribeParametersResponse DescribeParameters(DescribeParametersRequest request)
         {
@@ -8541,11 +10026,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is available only for instances that use local disks.
-          * > You can call the [DescribeInstanceConfig](~~473846~~) operation to query the parameter settings of instances that use cloud disks.
-          *
-          * @param request DescribeParametersRequest
-          * @return DescribeParametersResponse
+         * @summary Queries the configuration parameters and running parameters of an ApsaraDB for Redis instance.
+         *
+         * @description This operation is available only for instances that use local disks.
+         * > You can call the [DescribeInstanceConfig](https://help.aliyun.com/document_detail/473846.html) operation to query the parameter settings of instances that use cloud disks.
+         *
+         * @param request DescribeParametersRequest
+         * @return DescribeParametersResponse
          */
         public async Task<DescribeParametersResponse> DescribeParametersAsync(DescribeParametersRequest request)
         {
@@ -8553,6 +10040,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeParametersWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the fees that you must pay when you create, upgrade, or renew an ApsaraDB for Redis instance.
+         *
+         * @param request DescribePriceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePriceResponse
+         */
         public DescribePriceResponse DescribePriceWithOptions(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8656,6 +10150,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribePriceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the fees that you must pay when you create, upgrade, or renew an ApsaraDB for Redis instance.
+         *
+         * @param request DescribePriceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePriceResponse
+         */
         public async Task<DescribePriceResponse> DescribePriceWithOptionsAsync(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8759,18 +10260,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribePriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the fees that you must pay when you create, upgrade, or renew an ApsaraDB for Redis instance.
+         *
+         * @param request DescribePriceRequest
+         * @return DescribePriceResponse
+         */
         public DescribePriceResponse DescribePrice(DescribePriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePriceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the fees that you must pay when you create, upgrade, or renew an ApsaraDB for Redis instance.
+         *
+         * @param request DescribePriceRequest
+         * @return DescribePriceResponse
+         */
         public async Task<DescribePriceResponse> DescribePriceAsync(DescribePriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePriceWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the regions in which ApsaraDB for Redis instances can be created.
+         *
+         * @param request DescribeRegionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRegionsResponse
+         */
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8818,6 +10338,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the regions in which ApsaraDB for Redis instances can be created.
+         *
+         * @param request DescribeRegionsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRegionsResponse
+         */
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8865,18 +10392,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the regions in which ApsaraDB for Redis instances can be created.
+         *
+         * @param request DescribeRegionsRequest
+         * @return DescribeRegionsResponse
+         */
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the regions in which ApsaraDB for Redis instances can be created.
+         *
+         * @param request DescribeRegionsRequest
+         * @return DescribeRegionsResponse
+         */
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the role, type, minor version, and zone of each node in an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeRoleZoneInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRoleZoneInfoResponse
+         */
         public DescribeRoleZoneInfoResponse DescribeRoleZoneInfoWithOptions(DescribeRoleZoneInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8936,6 +10482,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeRoleZoneInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the role, type, minor version, and zone of each node in an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeRoleZoneInfoRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRoleZoneInfoResponse
+         */
         public async Task<DescribeRoleZoneInfoResponse> DescribeRoleZoneInfoWithOptionsAsync(DescribeRoleZoneInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8995,12 +10548,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeRoleZoneInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the role, type, minor version, and zone of each node in an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeRoleZoneInfoRequest
+         * @return DescribeRoleZoneInfoResponse
+         */
         public DescribeRoleZoneInfoResponse DescribeRoleZoneInfo(DescribeRoleZoneInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRoleZoneInfoWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the role, type, minor version, and zone of each node in an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeRoleZoneInfoRequest
+         * @return DescribeRoleZoneInfoResponse
+         */
         public async Task<DescribeRoleZoneInfoResponse> DescribeRoleZoneInfoAsync(DescribeRoleZoneInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9008,12 +10573,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](~~101713~~).
-          * This operation can be called up to 100 times per minute.
-          *
-          * @param request DescribeRunningLogRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRunningLogRecordsResponse
+         * @summary Queries the active logs of an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](https://help.aliyun.com/document_detail/101713.html).
+         * This operation can be called up to 100 times per minute.
+         *
+         * @param request DescribeRunningLogRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRunningLogRecordsResponse
          */
         public DescribeRunningLogRecordsResponse DescribeRunningLogRecordsWithOptions(DescribeRunningLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9107,12 +10674,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](~~101713~~).
-          * This operation can be called up to 100 times per minute.
-          *
-          * @param request DescribeRunningLogRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRunningLogRecordsResponse
+         * @summary Queries the active logs of an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](https://help.aliyun.com/document_detail/101713.html).
+         * This operation can be called up to 100 times per minute.
+         *
+         * @param request DescribeRunningLogRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeRunningLogRecordsResponse
          */
         public async Task<DescribeRunningLogRecordsResponse> DescribeRunningLogRecordsWithOptionsAsync(DescribeRunningLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9206,11 +10775,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](~~101713~~).
-          * This operation can be called up to 100 times per minute.
-          *
-          * @param request DescribeRunningLogRecordsRequest
-          * @return DescribeRunningLogRecordsResponse
+         * @summary Queries the active logs of an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](https://help.aliyun.com/document_detail/101713.html).
+         * This operation can be called up to 100 times per minute.
+         *
+         * @param request DescribeRunningLogRecordsRequest
+         * @return DescribeRunningLogRecordsResponse
          */
         public DescribeRunningLogRecordsResponse DescribeRunningLogRecords(DescribeRunningLogRecordsRequest request)
         {
@@ -9219,11 +10790,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](~~101713~~).
-          * This operation can be called up to 100 times per minute.
-          *
-          * @param request DescribeRunningLogRecordsRequest
-          * @return DescribeRunningLogRecordsResponse
+         * @summary Queries the active logs of an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](https://help.aliyun.com/document_detail/101713.html).
+         * This operation can be called up to 100 times per minute.
+         *
+         * @param request DescribeRunningLogRecordsRequest
+         * @return DescribeRunningLogRecordsResponse
          */
         public async Task<DescribeRunningLogRecordsResponse> DescribeRunningLogRecordsAsync(DescribeRunningLogRecordsRequest request)
         {
@@ -9231,6 +10804,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeRunningLogRecordsWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the security groups that are added to the whitelists of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeSecurityGroupConfigurationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSecurityGroupConfigurationResponse
+         */
         public DescribeSecurityGroupConfigurationResponse DescribeSecurityGroupConfigurationWithOptions(DescribeSecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9278,6 +10858,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeSecurityGroupConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the security groups that are added to the whitelists of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeSecurityGroupConfigurationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSecurityGroupConfigurationResponse
+         */
         public async Task<DescribeSecurityGroupConfigurationResponse> DescribeSecurityGroupConfigurationWithOptionsAsync(DescribeSecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9325,18 +10912,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeSecurityGroupConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the security groups that are added to the whitelists of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeSecurityGroupConfigurationRequest
+         * @return DescribeSecurityGroupConfigurationResponse
+         */
         public DescribeSecurityGroupConfigurationResponse DescribeSecurityGroupConfiguration(DescribeSecurityGroupConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSecurityGroupConfigurationWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the security groups that are added to the whitelists of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeSecurityGroupConfigurationRequest
+         * @return DescribeSecurityGroupConfigurationResponse
+         */
         public async Task<DescribeSecurityGroupConfigurationResponse> DescribeSecurityGroupConfigurationAsync(DescribeSecurityGroupConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSecurityGroupConfigurationWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the IP address whitelists of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeSecurityIpsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSecurityIpsResponse
+         */
         public DescribeSecurityIpsResponse DescribeSecurityIpsWithOptions(DescribeSecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9384,6 +10990,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeSecurityIpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the IP address whitelists of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeSecurityIpsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSecurityIpsResponse
+         */
         public async Task<DescribeSecurityIpsResponse> DescribeSecurityIpsWithOptionsAsync(DescribeSecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9431,12 +11044,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeSecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the IP address whitelists of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeSecurityIpsRequest
+         * @return DescribeSecurityIpsResponse
+         */
         public DescribeSecurityIpsResponse DescribeSecurityIps(DescribeSecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSecurityIpsWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the IP address whitelists of an ApsaraDB for Redis instance.
+         *
+         * @param request DescribeSecurityIpsRequest
+         * @return DescribeSecurityIpsResponse
+         */
         public async Task<DescribeSecurityIpsResponse> DescribeSecurityIpsAsync(DescribeSecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9444,11 +11069,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~). This operation can be called up to 100 times per minute.
-          *
-          * @param request DescribeSlowLogRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSlowLogRecordsResponse
+         * @summary Queries the slow logs of an ApsaraDB for Redis instance that are generated within a specified period of time.
+         *
+         * @description You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](https://help.aliyun.com/document_detail/95874.html). This operation can be called up to 100 times per minute.
+         *
+         * @param request DescribeSlowLogRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSlowLogRecordsResponse
          */
         public DescribeSlowLogRecordsResponse DescribeSlowLogRecordsWithOptions(DescribeSlowLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9538,11 +11165,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~). This operation can be called up to 100 times per minute.
-          *
-          * @param request DescribeSlowLogRecordsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSlowLogRecordsResponse
+         * @summary Queries the slow logs of an ApsaraDB for Redis instance that are generated within a specified period of time.
+         *
+         * @description You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](https://help.aliyun.com/document_detail/95874.html). This operation can be called up to 100 times per minute.
+         *
+         * @param request DescribeSlowLogRecordsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSlowLogRecordsResponse
          */
         public async Task<DescribeSlowLogRecordsResponse> DescribeSlowLogRecordsWithOptionsAsync(DescribeSlowLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9632,10 +11261,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~). This operation can be called up to 100 times per minute.
-          *
-          * @param request DescribeSlowLogRecordsRequest
-          * @return DescribeSlowLogRecordsResponse
+         * @summary Queries the slow logs of an ApsaraDB for Redis instance that are generated within a specified period of time.
+         *
+         * @description You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](https://help.aliyun.com/document_detail/95874.html). This operation can be called up to 100 times per minute.
+         *
+         * @param request DescribeSlowLogRecordsRequest
+         * @return DescribeSlowLogRecordsResponse
          */
         public DescribeSlowLogRecordsResponse DescribeSlowLogRecords(DescribeSlowLogRecordsRequest request)
         {
@@ -9644,10 +11275,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~). This operation can be called up to 100 times per minute.
-          *
-          * @param request DescribeSlowLogRecordsRequest
-          * @return DescribeSlowLogRecordsResponse
+         * @summary Queries the slow logs of an ApsaraDB for Redis instance that are generated within a specified period of time.
+         *
+         * @description You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](https://help.aliyun.com/document_detail/95874.html). This operation can be called up to 100 times per minute.
+         *
+         * @param request DescribeSlowLogRecordsRequest
+         * @return DescribeSlowLogRecordsResponse
          */
         public async Task<DescribeSlowLogRecordsResponse> DescribeSlowLogRecordsAsync(DescribeSlowLogRecordsRequest request)
         {
@@ -9656,11 +11289,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
-          *
-          * @param request DescribeTasksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTasksResponse
+         * @summary Queries all tasks that are performed on an ApsaraDB for Redis instance within a specified period of time.
+         *
+         * @description You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
+         *
+         * @param request DescribeTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTasksResponse
          */
         public DescribeTasksResponse DescribeTasksWithOptions(DescribeTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9730,11 +11365,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
-          *
-          * @param request DescribeTasksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTasksResponse
+         * @summary Queries all tasks that are performed on an ApsaraDB for Redis instance within a specified period of time.
+         *
+         * @description You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
+         *
+         * @param request DescribeTasksRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeTasksResponse
          */
         public async Task<DescribeTasksResponse> DescribeTasksWithOptionsAsync(DescribeTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9804,10 +11441,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
-          *
-          * @param request DescribeTasksRequest
-          * @return DescribeTasksResponse
+         * @summary Queries all tasks that are performed on an ApsaraDB for Redis instance within a specified period of time.
+         *
+         * @description You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
+         *
+         * @param request DescribeTasksRequest
+         * @return DescribeTasksResponse
          */
         public DescribeTasksResponse DescribeTasks(DescribeTasksRequest request)
         {
@@ -9816,10 +11455,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
-          *
-          * @param request DescribeTasksRequest
-          * @return DescribeTasksResponse
+         * @summary Queries all tasks that are performed on an ApsaraDB for Redis instance within a specified period of time.
+         *
+         * @description You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
+         *
+         * @param request DescribeTasksRequest
+         * @return DescribeTasksResponse
          */
         public async Task<DescribeTasksResponse> DescribeTasksAsync(DescribeTasksRequest request)
         {
@@ -9827,6 +11468,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await DescribeTasksWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the zones available for ApsaraDB for Redis.
+         *
+         * @param request DescribeZonesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeZonesResponse
+         */
         public DescribeZonesResponse DescribeZonesWithOptions(DescribeZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9878,6 +11526,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeZonesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the zones available for ApsaraDB for Redis.
+         *
+         * @param request DescribeZonesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeZonesResponse
+         */
         public async Task<DescribeZonesResponse> DescribeZonesWithOptionsAsync(DescribeZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9929,12 +11584,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<DescribeZonesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the zones available for ApsaraDB for Redis.
+         *
+         * @param request DescribeZonesRequest
+         * @return DescribeZonesResponse
+         */
         public DescribeZonesResponse DescribeZones(DescribeZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeZonesWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the zones available for ApsaraDB for Redis.
+         *
+         * @param request DescribeZonesRequest
+         * @return DescribeZonesResponse
+         */
         public async Task<DescribeZonesResponse> DescribeZonesAsync(DescribeZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9942,12 +11609,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see [Adjust the bandwidth of an instance](~~102588~~).
-          * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the current bandwidth of each data node in an instance.
-          *
-          * @param request EnableAdditionalBandwidthRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return EnableAdditionalBandwidthResponse
+         * @summary Adjusts the bandwidth of an ApsaraDB for Redis instance.
+         *
+         * @description If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see [Adjust the bandwidth of an instance](https://help.aliyun.com/document_detail/102588.html).
+         * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](https://help.aliyun.com/document_detail/190794.html) operation to query the current bandwidth of each data node in an instance.
+         *
+         * @param request EnableAdditionalBandwidthRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableAdditionalBandwidthResponse
          */
         public EnableAdditionalBandwidthResponse EnableAdditionalBandwidthWithOptions(EnableAdditionalBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10033,12 +11702,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see [Adjust the bandwidth of an instance](~~102588~~).
-          * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the current bandwidth of each data node in an instance.
-          *
-          * @param request EnableAdditionalBandwidthRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return EnableAdditionalBandwidthResponse
+         * @summary Adjusts the bandwidth of an ApsaraDB for Redis instance.
+         *
+         * @description If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see [Adjust the bandwidth of an instance](https://help.aliyun.com/document_detail/102588.html).
+         * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](https://help.aliyun.com/document_detail/190794.html) operation to query the current bandwidth of each data node in an instance.
+         *
+         * @param request EnableAdditionalBandwidthRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return EnableAdditionalBandwidthResponse
          */
         public async Task<EnableAdditionalBandwidthResponse> EnableAdditionalBandwidthWithOptionsAsync(EnableAdditionalBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10124,11 +11795,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see [Adjust the bandwidth of an instance](~~102588~~).
-          * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the current bandwidth of each data node in an instance.
-          *
-          * @param request EnableAdditionalBandwidthRequest
-          * @return EnableAdditionalBandwidthResponse
+         * @summary Adjusts the bandwidth of an ApsaraDB for Redis instance.
+         *
+         * @description If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see [Adjust the bandwidth of an instance](https://help.aliyun.com/document_detail/102588.html).
+         * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](https://help.aliyun.com/document_detail/190794.html) operation to query the current bandwidth of each data node in an instance.
+         *
+         * @param request EnableAdditionalBandwidthRequest
+         * @return EnableAdditionalBandwidthResponse
          */
         public EnableAdditionalBandwidthResponse EnableAdditionalBandwidth(EnableAdditionalBandwidthRequest request)
         {
@@ -10137,11 +11810,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see [Adjust the bandwidth of an instance](~~102588~~).
-          * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the current bandwidth of each data node in an instance.
-          *
-          * @param request EnableAdditionalBandwidthRequest
-          * @return EnableAdditionalBandwidthResponse
+         * @summary Adjusts the bandwidth of an ApsaraDB for Redis instance.
+         *
+         * @description If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see [Adjust the bandwidth of an instance](https://help.aliyun.com/document_detail/102588.html).
+         * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](https://help.aliyun.com/document_detail/190794.html) operation to query the current bandwidth of each data node in an instance.
+         *
+         * @param request EnableAdditionalBandwidthRequest
+         * @return EnableAdditionalBandwidthResponse
          */
         public async Task<EnableAdditionalBandwidthResponse> EnableAdditionalBandwidthAsync(EnableAdditionalBandwidthRequest request)
         {
@@ -10150,12 +11825,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](~~43881~~).
-          * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
-          *
-          * @param request FlushExpireKeysRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return FlushExpireKeysResponse
+         * @summary Deletes the expired keys from an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](https://help.aliyun.com/document_detail/43881.html).
+         * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
+         *
+         * @param request FlushExpireKeysRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlushExpireKeysResponse
          */
         public FlushExpireKeysResponse FlushExpireKeysWithOptions(FlushExpireKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10209,12 +11886,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](~~43881~~).
-          * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
-          *
-          * @param request FlushExpireKeysRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return FlushExpireKeysResponse
+         * @summary Deletes the expired keys from an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](https://help.aliyun.com/document_detail/43881.html).
+         * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
+         *
+         * @param request FlushExpireKeysRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlushExpireKeysResponse
          */
         public async Task<FlushExpireKeysResponse> FlushExpireKeysWithOptionsAsync(FlushExpireKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10268,11 +11947,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](~~43881~~).
-          * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
-          *
-          * @param request FlushExpireKeysRequest
-          * @return FlushExpireKeysResponse
+         * @summary Deletes the expired keys from an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](https://help.aliyun.com/document_detail/43881.html).
+         * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
+         *
+         * @param request FlushExpireKeysRequest
+         * @return FlushExpireKeysResponse
          */
         public FlushExpireKeysResponse FlushExpireKeys(FlushExpireKeysRequest request)
         {
@@ -10281,11 +11962,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](~~43881~~).
-          * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
-          *
-          * @param request FlushExpireKeysRequest
-          * @return FlushExpireKeysResponse
+         * @summary Deletes the expired keys from an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](https://help.aliyun.com/document_detail/43881.html).
+         * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
+         *
+         * @param request FlushExpireKeysRequest
+         * @return FlushExpireKeysResponse
          */
         public async Task<FlushExpireKeysResponse> FlushExpireKeysAsync(FlushExpireKeysRequest request)
         {
@@ -10293,6 +11976,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await FlushExpireKeysWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Clears the data of an ApsaraDB for Redis instance. The cleared data cannot be restored.
+         *
+         * @param request FlushInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlushInstanceResponse
+         */
         public FlushInstanceResponse FlushInstanceWithOptions(FlushInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10340,6 +12030,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<FlushInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Clears the data of an ApsaraDB for Redis instance. The cleared data cannot be restored.
+         *
+         * @param request FlushInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlushInstanceResponse
+         */
         public async Task<FlushInstanceResponse> FlushInstanceWithOptionsAsync(FlushInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10387,12 +12084,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<FlushInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Clears the data of an ApsaraDB for Redis instance. The cleared data cannot be restored.
+         *
+         * @param request FlushInstanceRequest
+         * @return FlushInstanceResponse
+         */
         public FlushInstanceResponse FlushInstance(FlushInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FlushInstanceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Clears the data of an ApsaraDB for Redis instance. The cleared data cannot be restored.
+         *
+         * @param request FlushInstanceRequest
+         * @return FlushInstanceResponse
+         */
         public async Task<FlushInstanceResponse> FlushInstanceAsync(FlushInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10400,12 +12109,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Each ApsaraDB for Redis or Tair instance can contain up to 256 databases. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the `SELECT` statement to switch between databases. For more information, see [What is the size of each database on an ApsaraDB for Redis instance, and how can I choose databases?](~~38688~~)
-          * >  This operation is available only for cloud-native instances that use cloud disks.
-          *
-          * @param request FlushInstanceForDBRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return FlushInstanceForDBResponse
+         * @summary Cleans the data of specified databases in an instance.
+         *
+         * @description Each ApsaraDB for Redis or Tair instance can contain up to 256 databases. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the `SELECT` statement to switch between databases. For more information, see [What is the size of each database on an ApsaraDB for Redis instance, and how can I choose databases?](https://help.aliyun.com/document_detail/38688.html)
+         * >  This operation is available only for cloud-native instances that use cloud disks.
+         *
+         * @param request FlushInstanceForDBRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlushInstanceForDBResponse
          */
         public FlushInstanceForDBResponse FlushInstanceForDBWithOptions(FlushInstanceForDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10455,12 +12166,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Each ApsaraDB for Redis or Tair instance can contain up to 256 databases. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the `SELECT` statement to switch between databases. For more information, see [What is the size of each database on an ApsaraDB for Redis instance, and how can I choose databases?](~~38688~~)
-          * >  This operation is available only for cloud-native instances that use cloud disks.
-          *
-          * @param request FlushInstanceForDBRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return FlushInstanceForDBResponse
+         * @summary Cleans the data of specified databases in an instance.
+         *
+         * @description Each ApsaraDB for Redis or Tair instance can contain up to 256 databases. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the `SELECT` statement to switch between databases. For more information, see [What is the size of each database on an ApsaraDB for Redis instance, and how can I choose databases?](https://help.aliyun.com/document_detail/38688.html)
+         * >  This operation is available only for cloud-native instances that use cloud disks.
+         *
+         * @param request FlushInstanceForDBRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FlushInstanceForDBResponse
          */
         public async Task<FlushInstanceForDBResponse> FlushInstanceForDBWithOptionsAsync(FlushInstanceForDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10510,11 +12223,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Each ApsaraDB for Redis or Tair instance can contain up to 256 databases. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the `SELECT` statement to switch between databases. For more information, see [What is the size of each database on an ApsaraDB for Redis instance, and how can I choose databases?](~~38688~~)
-          * >  This operation is available only for cloud-native instances that use cloud disks.
-          *
-          * @param request FlushInstanceForDBRequest
-          * @return FlushInstanceForDBResponse
+         * @summary Cleans the data of specified databases in an instance.
+         *
+         * @description Each ApsaraDB for Redis or Tair instance can contain up to 256 databases. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the `SELECT` statement to switch between databases. For more information, see [What is the size of each database on an ApsaraDB for Redis instance, and how can I choose databases?](https://help.aliyun.com/document_detail/38688.html)
+         * >  This operation is available only for cloud-native instances that use cloud disks.
+         *
+         * @param request FlushInstanceForDBRequest
+         * @return FlushInstanceForDBResponse
          */
         public FlushInstanceForDBResponse FlushInstanceForDB(FlushInstanceForDBRequest request)
         {
@@ -10523,11 +12238,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Each ApsaraDB for Redis or Tair instance can contain up to 256 databases. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the `SELECT` statement to switch between databases. For more information, see [What is the size of each database on an ApsaraDB for Redis instance, and how can I choose databases?](~~38688~~)
-          * >  This operation is available only for cloud-native instances that use cloud disks.
-          *
-          * @param request FlushInstanceForDBRequest
-          * @return FlushInstanceForDBResponse
+         * @summary Cleans the data of specified databases in an instance.
+         *
+         * @description Each ApsaraDB for Redis or Tair instance can contain up to 256 databases. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the `SELECT` statement to switch between databases. For more information, see [What is the size of each database on an ApsaraDB for Redis instance, and how can I choose databases?](https://help.aliyun.com/document_detail/38688.html)
+         * >  This operation is available only for cloud-native instances that use cloud disks.
+         *
+         * @param request FlushInstanceForDBRequest
+         * @return FlushInstanceForDBResponse
          */
         public async Task<FlushInstanceForDBResponse> FlushInstanceForDBAsync(FlushInstanceForDBRequest request)
         {
@@ -10536,13 +12253,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > 
-          * *   Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-          * *   The ApsaraDB for Redis instance must be in the running state.
-          *
-          * @param request GrantAccountPrivilegeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GrantAccountPrivilegeResponse
+         * @summary Modifies the permissions of an account for an ApsaraDB for Redis instance.
+         *
+         * @description > 
+         * *   Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+         * *   The ApsaraDB for Redis instance must be in the running state.
+         *
+         * @param request GrantAccountPrivilegeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GrantAccountPrivilegeResponse
          */
         public GrantAccountPrivilegeResponse GrantAccountPrivilegeWithOptions(GrantAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10600,13 +12319,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > 
-          * *   Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-          * *   The ApsaraDB for Redis instance must be in the running state.
-          *
-          * @param request GrantAccountPrivilegeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GrantAccountPrivilegeResponse
+         * @summary Modifies the permissions of an account for an ApsaraDB for Redis instance.
+         *
+         * @description > 
+         * *   Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+         * *   The ApsaraDB for Redis instance must be in the running state.
+         *
+         * @param request GrantAccountPrivilegeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GrantAccountPrivilegeResponse
          */
         public async Task<GrantAccountPrivilegeResponse> GrantAccountPrivilegeWithOptionsAsync(GrantAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10664,12 +12385,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > 
-          * *   Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-          * *   The ApsaraDB for Redis instance must be in the running state.
-          *
-          * @param request GrantAccountPrivilegeRequest
-          * @return GrantAccountPrivilegeResponse
+         * @summary Modifies the permissions of an account for an ApsaraDB for Redis instance.
+         *
+         * @description > 
+         * *   Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+         * *   The ApsaraDB for Redis instance must be in the running state.
+         *
+         * @param request GrantAccountPrivilegeRequest
+         * @return GrantAccountPrivilegeResponse
          */
         public GrantAccountPrivilegeResponse GrantAccountPrivilege(GrantAccountPrivilegeRequest request)
         {
@@ -10678,12 +12401,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > 
-          * *   Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-          * *   The ApsaraDB for Redis instance must be in the running state.
-          *
-          * @param request GrantAccountPrivilegeRequest
-          * @return GrantAccountPrivilegeResponse
+         * @summary Modifies the permissions of an account for an ApsaraDB for Redis instance.
+         *
+         * @description > 
+         * *   Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+         * *   The ApsaraDB for Redis instance must be in the running state.
+         *
+         * @param request GrantAccountPrivilegeRequest
+         * @return GrantAccountPrivilegeResponse
          */
         public async Task<GrantAccountPrivilegeResponse> GrantAccountPrivilegeAsync(GrantAccountPrivilegeRequest request)
         {
@@ -10692,11 +12417,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
-          *
-          * @param request InitializeKvstorePermissionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InitializeKvstorePermissionResponse
+         * @summary Assigns a service-linked role to ApsaraDB for Redis.
+         *
+         * @description The log management feature of ApsaraDB for Redis requires the resources of [Log Service](https://help.aliyun.com/document_detail/48869.html). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](https://help.aliyun.com/document_detail/184337.html).
+         *
+         * @param request InitializeKvstorePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InitializeKvstorePermissionResponse
          */
         public InitializeKvstorePermissionResponse InitializeKvstorePermissionWithOptions(InitializeKvstorePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10746,11 +12473,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
-          *
-          * @param request InitializeKvstorePermissionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InitializeKvstorePermissionResponse
+         * @summary Assigns a service-linked role to ApsaraDB for Redis.
+         *
+         * @description The log management feature of ApsaraDB for Redis requires the resources of [Log Service](https://help.aliyun.com/document_detail/48869.html). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](https://help.aliyun.com/document_detail/184337.html).
+         *
+         * @param request InitializeKvstorePermissionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return InitializeKvstorePermissionResponse
          */
         public async Task<InitializeKvstorePermissionResponse> InitializeKvstorePermissionWithOptionsAsync(InitializeKvstorePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10800,10 +12529,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
-          *
-          * @param request InitializeKvstorePermissionRequest
-          * @return InitializeKvstorePermissionResponse
+         * @summary Assigns a service-linked role to ApsaraDB for Redis.
+         *
+         * @description The log management feature of ApsaraDB for Redis requires the resources of [Log Service](https://help.aliyun.com/document_detail/48869.html). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](https://help.aliyun.com/document_detail/184337.html).
+         *
+         * @param request InitializeKvstorePermissionRequest
+         * @return InitializeKvstorePermissionResponse
          */
         public InitializeKvstorePermissionResponse InitializeKvstorePermission(InitializeKvstorePermissionRequest request)
         {
@@ -10812,10 +12543,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
-          *
-          * @param request InitializeKvstorePermissionRequest
-          * @return InitializeKvstorePermissionResponse
+         * @summary Assigns a service-linked role to ApsaraDB for Redis.
+         *
+         * @description The log management feature of ApsaraDB for Redis requires the resources of [Log Service](https://help.aliyun.com/document_detail/48869.html). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](https://help.aliyun.com/document_detail/184337.html).
+         *
+         * @param request InitializeKvstorePermissionRequest
+         * @return InitializeKvstorePermissionResponse
          */
         public async Task<InitializeKvstorePermissionResponse> InitializeKvstorePermissionAsync(InitializeKvstorePermissionRequest request)
         {
@@ -10824,11 +12557,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](~~119160~~) and [View tags bound to an instance](~~134038~~).
-          *
-          * @param request ListTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagResourcesResponse
+         * @summary Queries the relationships between ApsaraDB for Redis instances and tags.
+         *
+         * @description You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](https://help.aliyun.com/document_detail/119160.html) and [View tags bound to an instance](https://help.aliyun.com/document_detail/134038.html).
+         *
+         * @param request ListTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTagResourcesResponse
          */
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10890,11 +12625,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](~~119160~~) and [View tags bound to an instance](~~134038~~).
-          *
-          * @param request ListTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagResourcesResponse
+         * @summary Queries the relationships between ApsaraDB for Redis instances and tags.
+         *
+         * @description You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](https://help.aliyun.com/document_detail/119160.html) and [View tags bound to an instance](https://help.aliyun.com/document_detail/134038.html).
+         *
+         * @param request ListTagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTagResourcesResponse
          */
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10956,10 +12693,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](~~119160~~) and [View tags bound to an instance](~~134038~~).
-          *
-          * @param request ListTagResourcesRequest
-          * @return ListTagResourcesResponse
+         * @summary Queries the relationships between ApsaraDB for Redis instances and tags.
+         *
+         * @description You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](https://help.aliyun.com/document_detail/119160.html) and [View tags bound to an instance](https://help.aliyun.com/document_detail/134038.html).
+         *
+         * @param request ListTagResourcesRequest
+         * @return ListTagResourcesResponse
          */
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
@@ -10968,10 +12707,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](~~119160~~) and [View tags bound to an instance](~~134038~~).
-          *
-          * @param request ListTagResourcesRequest
-          * @return ListTagResourcesResponse
+         * @summary Queries the relationships between ApsaraDB for Redis instances and tags.
+         *
+         * @description You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](https://help.aliyun.com/document_detail/119160.html) and [View tags bound to an instance](https://help.aliyun.com/document_detail/134038.html).
+         *
+         * @param request ListTagResourcesRequest
+         * @return ListTagResourcesResponse
          */
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
@@ -10979,6 +12720,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Places a write lock on an instance. After the instance is locked, it supports only read operations.
+         *
+         * @param request LockDBInstanceWriteRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return LockDBInstanceWriteResponse
+         */
         public LockDBInstanceWriteResponse LockDBInstanceWriteWithOptions(LockDBInstanceWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11030,6 +12778,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<LockDBInstanceWriteResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Places a write lock on an instance. After the instance is locked, it supports only read operations.
+         *
+         * @param request LockDBInstanceWriteRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return LockDBInstanceWriteResponse
+         */
         public async Task<LockDBInstanceWriteResponse> LockDBInstanceWriteWithOptionsAsync(LockDBInstanceWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11081,12 +12836,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<LockDBInstanceWriteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Places a write lock on an instance. After the instance is locked, it supports only read operations.
+         *
+         * @param request LockDBInstanceWriteRequest
+         * @return LockDBInstanceWriteResponse
+         */
         public LockDBInstanceWriteResponse LockDBInstanceWrite(LockDBInstanceWriteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return LockDBInstanceWriteWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Places a write lock on an instance. After the instance is locked, it supports only read operations.
+         *
+         * @param request LockDBInstanceWriteRequest
+         * @return LockDBInstanceWriteResponse
+         */
         public async Task<LockDBInstanceWriteResponse> LockDBInstanceWriteAsync(LockDBInstanceWriteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11094,13 +12861,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to migrate an instance across zones in the ApsaraDB for Redis console, see [Migrate an instance across zones](~~106272~~).
-          * > *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the endpoint of the classic network is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
-          * > *   After the data is migrated, the endpoint of an instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
-          *
-          * @param request MigrateToOtherZoneRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return MigrateToOtherZoneResponse
+         * @summary Migrates an ApsaraDB for Redis instance to another zone in the same region.
+         *
+         * @description Before you call this operation, you must release the public endpoint (if any) of the instance. For more information, see [Migrate an instance across zones](https://help.aliyun.com/document_detail/106272.html).
+         * > 
+         * *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
+         * *   After the instance is migrated, the endpoint of the instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
+         *
+         * @param request MigrateToOtherZoneRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MigrateToOtherZoneResponse
          */
         public MigrateToOtherZoneResponse MigrateToOtherZoneWithOptions(MigrateToOtherZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11166,13 +12936,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to migrate an instance across zones in the ApsaraDB for Redis console, see [Migrate an instance across zones](~~106272~~).
-          * > *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the endpoint of the classic network is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
-          * > *   After the data is migrated, the endpoint of an instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
-          *
-          * @param request MigrateToOtherZoneRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return MigrateToOtherZoneResponse
+         * @summary Migrates an ApsaraDB for Redis instance to another zone in the same region.
+         *
+         * @description Before you call this operation, you must release the public endpoint (if any) of the instance. For more information, see [Migrate an instance across zones](https://help.aliyun.com/document_detail/106272.html).
+         * > 
+         * *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
+         * *   After the instance is migrated, the endpoint of the instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
+         *
+         * @param request MigrateToOtherZoneRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return MigrateToOtherZoneResponse
          */
         public async Task<MigrateToOtherZoneResponse> MigrateToOtherZoneWithOptionsAsync(MigrateToOtherZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11238,12 +13011,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to migrate an instance across zones in the ApsaraDB for Redis console, see [Migrate an instance across zones](~~106272~~).
-          * > *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the endpoint of the classic network is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
-          * > *   After the data is migrated, the endpoint of an instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
-          *
-          * @param request MigrateToOtherZoneRequest
-          * @return MigrateToOtherZoneResponse
+         * @summary Migrates an ApsaraDB for Redis instance to another zone in the same region.
+         *
+         * @description Before you call this operation, you must release the public endpoint (if any) of the instance. For more information, see [Migrate an instance across zones](https://help.aliyun.com/document_detail/106272.html).
+         * > 
+         * *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
+         * *   After the instance is migrated, the endpoint of the instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
+         *
+         * @param request MigrateToOtherZoneRequest
+         * @return MigrateToOtherZoneResponse
          */
         public MigrateToOtherZoneResponse MigrateToOtherZone(MigrateToOtherZoneRequest request)
         {
@@ -11252,12 +13028,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to migrate an instance across zones in the ApsaraDB for Redis console, see [Migrate an instance across zones](~~106272~~).
-          * > *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the endpoint of the classic network is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
-          * > *   After the data is migrated, the endpoint of an instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
-          *
-          * @param request MigrateToOtherZoneRequest
-          * @return MigrateToOtherZoneResponse
+         * @summary Migrates an ApsaraDB for Redis instance to another zone in the same region.
+         *
+         * @description Before you call this operation, you must release the public endpoint (if any) of the instance. For more information, see [Migrate an instance across zones](https://help.aliyun.com/document_detail/106272.html).
+         * > 
+         * *   If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.
+         * *   After the instance is migrated, the endpoint of the instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.
+         *
+         * @param request MigrateToOtherZoneRequest
+         * @return MigrateToOtherZoneResponse
          */
         public async Task<MigrateToOtherZoneResponse> MigrateToOtherZoneAsync(MigrateToOtherZoneRequest request)
         {
@@ -11266,11 +13045,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > This operation is supported only for instances that run Redis 4.0 or later.
-          *
-          * @param request ModifyAccountDescriptionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyAccountDescriptionResponse
+         * @summary Modifies the description of an account for an ApsaraDB for Redis instance.
+         *
+         * @description > This operation is supported only for instances that run Redis 4.0 or later.
+         *
+         * @param request ModifyAccountDescriptionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAccountDescriptionResponse
          */
         public ModifyAccountDescriptionResponse ModifyAccountDescriptionWithOptions(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11328,11 +13109,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > This operation is supported only for instances that run Redis 4.0 or later.
-          *
-          * @param request ModifyAccountDescriptionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyAccountDescriptionResponse
+         * @summary Modifies the description of an account for an ApsaraDB for Redis instance.
+         *
+         * @description > This operation is supported only for instances that run Redis 4.0 or later.
+         *
+         * @param request ModifyAccountDescriptionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAccountDescriptionResponse
          */
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionWithOptionsAsync(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11390,10 +13173,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > This operation is supported only for instances that run Redis 4.0 or later.
-          *
-          * @param request ModifyAccountDescriptionRequest
-          * @return ModifyAccountDescriptionResponse
+         * @summary Modifies the description of an account for an ApsaraDB for Redis instance.
+         *
+         * @description > This operation is supported only for instances that run Redis 4.0 or later.
+         *
+         * @param request ModifyAccountDescriptionRequest
+         * @return ModifyAccountDescriptionResponse
          */
         public ModifyAccountDescriptionResponse ModifyAccountDescription(ModifyAccountDescriptionRequest request)
         {
@@ -11402,10 +13187,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > This operation is supported only for instances that run Redis 4.0 or later.
-          *
-          * @param request ModifyAccountDescriptionRequest
-          * @return ModifyAccountDescriptionResponse
+         * @summary Modifies the description of an account for an ApsaraDB for Redis instance.
+         *
+         * @description > This operation is supported only for instances that run Redis 4.0 or later.
+         *
+         * @param request ModifyAccountDescriptionRequest
+         * @return ModifyAccountDescriptionResponse
          */
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionAsync(ModifyAccountDescriptionRequest request)
         {
@@ -11413,6 +13200,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await ModifyAccountDescriptionWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Changes the password of a specific account for an ApsaraDB for Redis instance.
+         *
+         * @param request ModifyAccountPasswordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAccountPasswordResponse
+         */
         public ModifyAccountPasswordResponse ModifyAccountPasswordWithOptions(ModifyAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11472,6 +13266,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyAccountPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the password of a specific account for an ApsaraDB for Redis instance.
+         *
+         * @param request ModifyAccountPasswordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAccountPasswordResponse
+         */
         public async Task<ModifyAccountPasswordResponse> ModifyAccountPasswordWithOptionsAsync(ModifyAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11531,12 +13332,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the password of a specific account for an ApsaraDB for Redis instance.
+         *
+         * @param request ModifyAccountPasswordRequest
+         * @return ModifyAccountPasswordResponse
+         */
         public ModifyAccountPasswordResponse ModifyAccountPassword(ModifyAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAccountPasswordWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Changes the password of a specific account for an ApsaraDB for Redis instance.
+         *
+         * @param request ModifyAccountPasswordRequest
+         * @return ModifyAccountPasswordResponse
+         */
         public async Task<ModifyAccountPasswordResponse> ModifyAccountPasswordAsync(ModifyAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11544,11 +13357,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can receive notifications for ApsaraDB for Redis events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the ApsaraDB for Redis console. You can also change the scheduled switchover time of a task in the ApsaraDB for Redis console. For more information, see [Query or manage pending events](~~187022~~).
-          *
-          * @param request ModifyActiveOperationTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyActiveOperationTaskResponse
+         * @summary Changes the scheduled switchover time of an O&M task.
+         *
+         * @description You can receive notifications for ApsaraDB for Redis events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the ApsaraDB for Redis console. You can also change the scheduled switchover time of a task in the ApsaraDB for Redis console. For more information, see [Query or manage pending events](https://help.aliyun.com/document_detail/187022.html).
+         *
+         * @param request ModifyActiveOperationTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyActiveOperationTaskResponse
          */
         public ModifyActiveOperationTaskResponse ModifyActiveOperationTaskWithOptions(ModifyActiveOperationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11602,11 +13417,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can receive notifications for ApsaraDB for Redis events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the ApsaraDB for Redis console. You can also change the scheduled switchover time of a task in the ApsaraDB for Redis console. For more information, see [Query or manage pending events](~~187022~~).
-          *
-          * @param request ModifyActiveOperationTaskRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyActiveOperationTaskResponse
+         * @summary Changes the scheduled switchover time of an O&M task.
+         *
+         * @description You can receive notifications for ApsaraDB for Redis events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the ApsaraDB for Redis console. You can also change the scheduled switchover time of a task in the ApsaraDB for Redis console. For more information, see [Query or manage pending events](https://help.aliyun.com/document_detail/187022.html).
+         *
+         * @param request ModifyActiveOperationTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyActiveOperationTaskResponse
          */
         public async Task<ModifyActiveOperationTaskResponse> ModifyActiveOperationTaskWithOptionsAsync(ModifyActiveOperationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11660,10 +13477,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can receive notifications for ApsaraDB for Redis events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the ApsaraDB for Redis console. You can also change the scheduled switchover time of a task in the ApsaraDB for Redis console. For more information, see [Query or manage pending events](~~187022~~).
-          *
-          * @param request ModifyActiveOperationTaskRequest
-          * @return ModifyActiveOperationTaskResponse
+         * @summary Changes the scheduled switchover time of an O&M task.
+         *
+         * @description You can receive notifications for ApsaraDB for Redis events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the ApsaraDB for Redis console. You can also change the scheduled switchover time of a task in the ApsaraDB for Redis console. For more information, see [Query or manage pending events](https://help.aliyun.com/document_detail/187022.html).
+         *
+         * @param request ModifyActiveOperationTaskRequest
+         * @return ModifyActiveOperationTaskResponse
          */
         public ModifyActiveOperationTaskResponse ModifyActiveOperationTask(ModifyActiveOperationTaskRequest request)
         {
@@ -11672,10 +13491,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can receive notifications for ApsaraDB for Redis events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the ApsaraDB for Redis console. You can also change the scheduled switchover time of a task in the ApsaraDB for Redis console. For more information, see [Query or manage pending events](~~187022~~).
-          *
-          * @param request ModifyActiveOperationTaskRequest
-          * @return ModifyActiveOperationTaskResponse
+         * @summary Changes the scheduled switchover time of an O&M task.
+         *
+         * @description You can receive notifications for ApsaraDB for Redis events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the ApsaraDB for Redis console. You can also change the scheduled switchover time of a task in the ApsaraDB for Redis console. For more information, see [Query or manage pending events](https://help.aliyun.com/document_detail/187022.html).
+         *
+         * @param request ModifyActiveOperationTaskRequest
+         * @return ModifyActiveOperationTaskResponse
          */
         public async Task<ModifyActiveOperationTaskResponse> ModifyActiveOperationTaskAsync(ModifyActiveOperationTaskRequest request)
         {
@@ -11684,14 +13505,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of the audit log feature.
-          * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-          * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-          * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest major version and minor version.
-          *
-          * @param request ModifyAuditLogConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyAuditLogConfigResponse
+         * @summary Modifies the audit log settings of an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of the audit log feature.
+         * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+         * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](https://help.aliyun.com/document_detail/126164.html).
+         * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](https://help.aliyun.com/document_detail/95268.html) operation to check whether the instance uses the latest major version and minor version.
+         *
+         * @param request ModifyAuditLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAuditLogConfigResponse
          */
         public ModifyAuditLogConfigResponse ModifyAuditLogConfigWithOptions(ModifyAuditLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11749,14 +13572,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of the audit log feature.
-          * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-          * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-          * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest major version and minor version.
-          *
-          * @param request ModifyAuditLogConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyAuditLogConfigResponse
+         * @summary Modifies the audit log settings of an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of the audit log feature.
+         * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+         * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](https://help.aliyun.com/document_detail/126164.html).
+         * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](https://help.aliyun.com/document_detail/95268.html) operation to check whether the instance uses the latest major version and minor version.
+         *
+         * @param request ModifyAuditLogConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAuditLogConfigResponse
          */
         public async Task<ModifyAuditLogConfigResponse> ModifyAuditLogConfigWithOptionsAsync(ModifyAuditLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11814,13 +13639,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of the audit log feature.
-          * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-          * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-          * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest major version and minor version.
-          *
-          * @param request ModifyAuditLogConfigRequest
-          * @return ModifyAuditLogConfigResponse
+         * @summary Modifies the audit log settings of an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of the audit log feature.
+         * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+         * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](https://help.aliyun.com/document_detail/126164.html).
+         * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](https://help.aliyun.com/document_detail/95268.html) operation to check whether the instance uses the latest major version and minor version.
+         *
+         * @param request ModifyAuditLogConfigRequest
+         * @return ModifyAuditLogConfigResponse
          */
         public ModifyAuditLogConfigResponse ModifyAuditLogConfig(ModifyAuditLogConfigRequest request)
         {
@@ -11829,13 +13656,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of the audit log feature.
-          * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
-          * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](~~126164~~).
-          * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest major version and minor version.
-          *
-          * @param request ModifyAuditLogConfigRequest
-          * @return ModifyAuditLogConfigResponse
+         * @summary Modifies the audit log settings of an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of the audit log feature.
+         * Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+         * *   The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) [DRAM-based instance](https://help.aliyun.com/document_detail/126164.html).
+         * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](https://help.aliyun.com/document_detail/95268.html) operation to check whether the instance uses the latest major version and minor version.
+         *
+         * @param request ModifyAuditLogConfigRequest
+         * @return ModifyAuditLogConfigResponse
          */
         public async Task<ModifyAuditLogConfigResponse> ModifyAuditLogConfigAsync(ModifyAuditLogConfigRequest request)
         {
@@ -11843,6 +13672,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await ModifyAuditLogConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the automatic backup policy of an ApsaraDB for Redis instance.
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBackupPolicyResponse
+         */
         public ModifyBackupPolicyResponse ModifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11906,6 +13742,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the automatic backup policy of an ApsaraDB for Redis instance.
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyBackupPolicyResponse
+         */
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyWithOptionsAsync(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11969,12 +13812,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the automatic backup policy of an ApsaraDB for Redis instance.
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @return ModifyBackupPolicyResponse
+         */
         public ModifyBackupPolicyResponse ModifyBackupPolicy(ModifyBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyBackupPolicyWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the automatic backup policy of an ApsaraDB for Redis instance.
+         *
+         * @param request ModifyBackupPolicyRequest
+         * @return ModifyBackupPolicyResponse
+         */
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyAsync(ModifyBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11982,11 +13837,153 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](~~85683~~).
-          *
-          * @param request ModifyDBInstanceConnectionStringRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBInstanceConnectionStringResponse
+         * @summary 修改小版本自动升级开关
+         *
+         * @param request ModifyDBInstanceAutoUpgradeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceAutoUpgradeResponse
+         */
+        public ModifyDBInstanceAutoUpgradeResponse ModifyDBInstanceAutoUpgradeWithOptions(ModifyDBInstanceAutoUpgradeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                query["Value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBInstanceAutoUpgrade",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBInstanceAutoUpgradeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改小版本自动升级开关
+         *
+         * @param request ModifyDBInstanceAutoUpgradeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceAutoUpgradeResponse
+         */
+        public async Task<ModifyDBInstanceAutoUpgradeResponse> ModifyDBInstanceAutoUpgradeWithOptionsAsync(ModifyDBInstanceAutoUpgradeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                query["Value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBInstanceAutoUpgrade",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBInstanceAutoUpgradeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改小版本自动升级开关
+         *
+         * @param request ModifyDBInstanceAutoUpgradeRequest
+         * @return ModifyDBInstanceAutoUpgradeResponse
+         */
+        public ModifyDBInstanceAutoUpgradeResponse ModifyDBInstanceAutoUpgrade(ModifyDBInstanceAutoUpgradeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDBInstanceAutoUpgradeWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 修改小版本自动升级开关
+         *
+         * @param request ModifyDBInstanceAutoUpgradeRequest
+         * @return ModifyDBInstanceAutoUpgradeResponse
+         */
+        public async Task<ModifyDBInstanceAutoUpgradeResponse> ModifyDBInstanceAutoUpgradeAsync(ModifyDBInstanceAutoUpgradeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDBInstanceAutoUpgradeWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Changes the endpoint or port number of an ApsaraDB for Redis instance.
+         *
+         * @description You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](https://help.aliyun.com/document_detail/85683.html).
+         *
+         * @param request ModifyDBInstanceConnectionStringRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceConnectionStringResponse
          */
         public ModifyDBInstanceConnectionStringResponse ModifyDBInstanceConnectionStringWithOptions(ModifyDBInstanceConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12052,11 +14049,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](~~85683~~).
-          *
-          * @param request ModifyDBInstanceConnectionStringRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDBInstanceConnectionStringResponse
+         * @summary Changes the endpoint or port number of an ApsaraDB for Redis instance.
+         *
+         * @description You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](https://help.aliyun.com/document_detail/85683.html).
+         *
+         * @param request ModifyDBInstanceConnectionStringRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceConnectionStringResponse
          */
         public async Task<ModifyDBInstanceConnectionStringResponse> ModifyDBInstanceConnectionStringWithOptionsAsync(ModifyDBInstanceConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12122,10 +14121,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](~~85683~~).
-          *
-          * @param request ModifyDBInstanceConnectionStringRequest
-          * @return ModifyDBInstanceConnectionStringResponse
+         * @summary Changes the endpoint or port number of an ApsaraDB for Redis instance.
+         *
+         * @description You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](https://help.aliyun.com/document_detail/85683.html).
+         *
+         * @param request ModifyDBInstanceConnectionStringRequest
+         * @return ModifyDBInstanceConnectionStringResponse
          */
         public ModifyDBInstanceConnectionStringResponse ModifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request)
         {
@@ -12134,10 +14135,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](~~85683~~).
-          *
-          * @param request ModifyDBInstanceConnectionStringRequest
-          * @return ModifyDBInstanceConnectionStringResponse
+         * @summary Changes the endpoint or port number of an ApsaraDB for Redis instance.
+         *
+         * @description You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](https://help.aliyun.com/document_detail/85683.html).
+         *
+         * @param request ModifyDBInstanceConnectionStringRequest
+         * @return ModifyDBInstanceConnectionStringResponse
          */
         public async Task<ModifyDBInstanceConnectionStringResponse> ModifyDBInstanceConnectionStringAsync(ModifyDBInstanceConnectionStringRequest request)
         {
@@ -12145,6 +14148,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await ModifyDBInstanceConnectionStringWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies a global IP whitelist template.
+         *
+         * @param request ModifyGlobalSecurityIPGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyGlobalSecurityIPGroupResponse
+         */
         public ModifyGlobalSecurityIPGroupResponse ModifyGlobalSecurityIPGroupWithOptions(ModifyGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12208,6 +14218,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies a global IP whitelist template.
+         *
+         * @param request ModifyGlobalSecurityIPGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyGlobalSecurityIPGroupResponse
+         */
         public async Task<ModifyGlobalSecurityIPGroupResponse> ModifyGlobalSecurityIPGroupWithOptionsAsync(ModifyGlobalSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12271,18 +14288,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies a global IP whitelist template.
+         *
+         * @param request ModifyGlobalSecurityIPGroupRequest
+         * @return ModifyGlobalSecurityIPGroupResponse
+         */
         public ModifyGlobalSecurityIPGroupResponse ModifyGlobalSecurityIPGroup(ModifyGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyGlobalSecurityIPGroupWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies a global IP whitelist template.
+         *
+         * @param request ModifyGlobalSecurityIPGroupRequest
+         * @return ModifyGlobalSecurityIPGroupResponse
+         */
         public async Task<ModifyGlobalSecurityIPGroupResponse> ModifyGlobalSecurityIPGroupAsync(ModifyGlobalSecurityIPGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyGlobalSecurityIPGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the name of a global IP whitelist template.
+         *
+         * @param request ModifyGlobalSecurityIPGroupNameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyGlobalSecurityIPGroupNameResponse
+         */
         public ModifyGlobalSecurityIPGroupNameResponse ModifyGlobalSecurityIPGroupNameWithOptions(ModifyGlobalSecurityIPGroupNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12342,6 +14378,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyGlobalSecurityIPGroupNameResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the name of a global IP whitelist template.
+         *
+         * @param request ModifyGlobalSecurityIPGroupNameRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyGlobalSecurityIPGroupNameResponse
+         */
         public async Task<ModifyGlobalSecurityIPGroupNameResponse> ModifyGlobalSecurityIPGroupNameWithOptionsAsync(ModifyGlobalSecurityIPGroupNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12401,18 +14444,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyGlobalSecurityIPGroupNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the name of a global IP whitelist template.
+         *
+         * @param request ModifyGlobalSecurityIPGroupNameRequest
+         * @return ModifyGlobalSecurityIPGroupNameResponse
+         */
         public ModifyGlobalSecurityIPGroupNameResponse ModifyGlobalSecurityIPGroupName(ModifyGlobalSecurityIPGroupNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyGlobalSecurityIPGroupNameWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the name of a global IP whitelist template.
+         *
+         * @param request ModifyGlobalSecurityIPGroupNameRequest
+         * @return ModifyGlobalSecurityIPGroupNameResponse
+         */
         public async Task<ModifyGlobalSecurityIPGroupNameResponse> ModifyGlobalSecurityIPGroupNameAsync(ModifyGlobalSecurityIPGroupNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyGlobalSecurityIPGroupNameWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Adds a specified instance to a specified IP whitelist template.
+         *
+         * @param request ModifyGlobalSecurityIPGroupRelationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyGlobalSecurityIPGroupRelationResponse
+         */
         public ModifyGlobalSecurityIPGroupRelationResponse ModifyGlobalSecurityIPGroupRelationWithOptions(ModifyGlobalSecurityIPGroupRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12472,6 +14534,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyGlobalSecurityIPGroupRelationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Adds a specified instance to a specified IP whitelist template.
+         *
+         * @param request ModifyGlobalSecurityIPGroupRelationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyGlobalSecurityIPGroupRelationResponse
+         */
         public async Task<ModifyGlobalSecurityIPGroupRelationResponse> ModifyGlobalSecurityIPGroupRelationWithOptionsAsync(ModifyGlobalSecurityIPGroupRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12531,12 +14600,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyGlobalSecurityIPGroupRelationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Adds a specified instance to a specified IP whitelist template.
+         *
+         * @param request ModifyGlobalSecurityIPGroupRelationRequest
+         * @return ModifyGlobalSecurityIPGroupRelationResponse
+         */
         public ModifyGlobalSecurityIPGroupRelationResponse ModifyGlobalSecurityIPGroupRelation(ModifyGlobalSecurityIPGroupRelationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyGlobalSecurityIPGroupRelationWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Adds a specified instance to a specified IP whitelist template.
+         *
+         * @param request ModifyGlobalSecurityIPGroupRelationRequest
+         * @return ModifyGlobalSecurityIPGroupRelationResponse
+         */
         public async Task<ModifyGlobalSecurityIPGroupRelationResponse> ModifyGlobalSecurityIPGroupRelationAsync(ModifyGlobalSecurityIPGroupRelationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12544,11 +14625,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see [Change or reset the password](~~43874~~).
-          *
-          * @param request ModifyInstanceAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceAttributeResponse
+         * @summary Changes the information of an ApsaraDB for Redis instance, such as the name and password.
+         *
+         * @description You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see [Change or reset the password](https://help.aliyun.com/document_detail/43874.html).
+         *
+         * @param request ModifyInstanceAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceAttributeResponse
          */
         public ModifyInstanceAttributeResponse ModifyInstanceAttributeWithOptions(ModifyInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12610,11 +14693,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see [Change or reset the password](~~43874~~).
-          *
-          * @param request ModifyInstanceAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceAttributeResponse
+         * @summary Changes the information of an ApsaraDB for Redis instance, such as the name and password.
+         *
+         * @description You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see [Change or reset the password](https://help.aliyun.com/document_detail/43874.html).
+         *
+         * @param request ModifyInstanceAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceAttributeResponse
          */
         public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttributeWithOptionsAsync(ModifyInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12676,10 +14761,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see [Change or reset the password](~~43874~~).
-          *
-          * @param request ModifyInstanceAttributeRequest
-          * @return ModifyInstanceAttributeResponse
+         * @summary Changes the information of an ApsaraDB for Redis instance, such as the name and password.
+         *
+         * @description You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see [Change or reset the password](https://help.aliyun.com/document_detail/43874.html).
+         *
+         * @param request ModifyInstanceAttributeRequest
+         * @return ModifyInstanceAttributeResponse
          */
         public ModifyInstanceAttributeResponse ModifyInstanceAttribute(ModifyInstanceAttributeRequest request)
         {
@@ -12688,10 +14775,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see [Change or reset the password](~~43874~~).
-          *
-          * @param request ModifyInstanceAttributeRequest
-          * @return ModifyInstanceAttributeResponse
+         * @summary Changes the information of an ApsaraDB for Redis instance, such as the name and password.
+         *
+         * @description You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see [Change or reset the password](https://help.aliyun.com/document_detail/43874.html).
+         *
+         * @param request ModifyInstanceAttributeRequest
+         * @return ModifyInstanceAttributeResponse
          */
         public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttributeAsync(ModifyInstanceAttributeRequest request)
         {
@@ -12700,11 +14789,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > Auto-renewal is triggered seven days before the expiration date of the instance.
-          *
-          * @param request ModifyInstanceAutoRenewalAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceAutoRenewalAttributeResponse
+         * @summary Enables or disables auto-renewal for an ApsaraDB for Redis instance.
+         *
+         * @description > Auto-renewal is triggered seven days before the expiration date of the instance.
+         *
+         * @param request ModifyInstanceAutoRenewalAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceAutoRenewalAttributeResponse
          */
         public ModifyInstanceAutoRenewalAttributeResponse ModifyInstanceAutoRenewalAttributeWithOptions(ModifyInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12762,11 +14853,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > Auto-renewal is triggered seven days before the expiration date of the instance.
-          *
-          * @param request ModifyInstanceAutoRenewalAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceAutoRenewalAttributeResponse
+         * @summary Enables or disables auto-renewal for an ApsaraDB for Redis instance.
+         *
+         * @description > Auto-renewal is triggered seven days before the expiration date of the instance.
+         *
+         * @param request ModifyInstanceAutoRenewalAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceAutoRenewalAttributeResponse
          */
         public async Task<ModifyInstanceAutoRenewalAttributeResponse> ModifyInstanceAutoRenewalAttributeWithOptionsAsync(ModifyInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12824,10 +14917,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > Auto-renewal is triggered seven days before the expiration date of the instance.
-          *
-          * @param request ModifyInstanceAutoRenewalAttributeRequest
-          * @return ModifyInstanceAutoRenewalAttributeResponse
+         * @summary Enables or disables auto-renewal for an ApsaraDB for Redis instance.
+         *
+         * @description > Auto-renewal is triggered seven days before the expiration date of the instance.
+         *
+         * @param request ModifyInstanceAutoRenewalAttributeRequest
+         * @return ModifyInstanceAutoRenewalAttributeResponse
          */
         public ModifyInstanceAutoRenewalAttributeResponse ModifyInstanceAutoRenewalAttribute(ModifyInstanceAutoRenewalAttributeRequest request)
         {
@@ -12836,10 +14931,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > Auto-renewal is triggered seven days before the expiration date of the instance.
-          *
-          * @param request ModifyInstanceAutoRenewalAttributeRequest
-          * @return ModifyInstanceAutoRenewalAttributeResponse
+         * @summary Enables or disables auto-renewal for an ApsaraDB for Redis instance.
+         *
+         * @description > Auto-renewal is triggered seven days before the expiration date of the instance.
+         *
+         * @param request ModifyInstanceAutoRenewalAttributeRequest
+         * @return ModifyInstanceAutoRenewalAttributeResponse
          */
         public async Task<ModifyInstanceAutoRenewalAttributeResponse> ModifyInstanceAutoRenewalAttributeAsync(ModifyInstanceAutoRenewalAttributeRequest request)
         {
@@ -12847,6 +14944,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await ModifyInstanceAutoRenewalAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Modifies the parameter settings of an ApsaraDB for Redis instance.
+         *
+         * @param request ModifyInstanceConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceConfigResponse
+         */
         public ModifyInstanceConfigResponse ModifyInstanceConfigWithOptions(ModifyInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12898,6 +15002,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the parameter settings of an ApsaraDB for Redis instance.
+         *
+         * @param request ModifyInstanceConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceConfigResponse
+         */
         public async Task<ModifyInstanceConfigResponse> ModifyInstanceConfigWithOptionsAsync(ModifyInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12949,12 +15060,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the parameter settings of an ApsaraDB for Redis instance.
+         *
+         * @param request ModifyInstanceConfigRequest
+         * @return ModifyInstanceConfigResponse
+         */
         public ModifyInstanceConfigResponse ModifyInstanceConfig(ModifyInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceConfigWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Modifies the parameter settings of an ApsaraDB for Redis instance.
+         *
+         * @param request ModifyInstanceConfigRequest
+         * @return ModifyInstanceConfigResponse
+         */
         public async Task<ModifyInstanceConfigResponse> ModifyInstanceConfigAsync(ModifyInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12962,11 +15085,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see [Set a maintenance window](~~55252~~).
-          *
-          * @param request ModifyInstanceMaintainTimeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceMaintainTimeResponse
+         * @summary Modifies the maintenance window of an ApsaraDB for Redis instance. Alibaba Cloud maintains ApsaraDB for Redis instances during the specified maintenance window.
+         *
+         * @description You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see [Set a maintenance window](https://help.aliyun.com/document_detail/55252.html).
+         *
+         * @param request ModifyInstanceMaintainTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceMaintainTimeResponse
          */
         public ModifyInstanceMaintainTimeResponse ModifyInstanceMaintainTimeWithOptions(ModifyInstanceMaintainTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13024,11 +15149,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see [Set a maintenance window](~~55252~~).
-          *
-          * @param request ModifyInstanceMaintainTimeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceMaintainTimeResponse
+         * @summary Modifies the maintenance window of an ApsaraDB for Redis instance. Alibaba Cloud maintains ApsaraDB for Redis instances during the specified maintenance window.
+         *
+         * @description You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see [Set a maintenance window](https://help.aliyun.com/document_detail/55252.html).
+         *
+         * @param request ModifyInstanceMaintainTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceMaintainTimeResponse
          */
         public async Task<ModifyInstanceMaintainTimeResponse> ModifyInstanceMaintainTimeWithOptionsAsync(ModifyInstanceMaintainTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13086,10 +15213,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see [Set a maintenance window](~~55252~~).
-          *
-          * @param request ModifyInstanceMaintainTimeRequest
-          * @return ModifyInstanceMaintainTimeResponse
+         * @summary Modifies the maintenance window of an ApsaraDB for Redis instance. Alibaba Cloud maintains ApsaraDB for Redis instances during the specified maintenance window.
+         *
+         * @description You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see [Set a maintenance window](https://help.aliyun.com/document_detail/55252.html).
+         *
+         * @param request ModifyInstanceMaintainTimeRequest
+         * @return ModifyInstanceMaintainTimeResponse
          */
         public ModifyInstanceMaintainTimeResponse ModifyInstanceMaintainTime(ModifyInstanceMaintainTimeRequest request)
         {
@@ -13098,10 +15227,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see [Set a maintenance window](~~55252~~).
-          *
-          * @param request ModifyInstanceMaintainTimeRequest
-          * @return ModifyInstanceMaintainTimeResponse
+         * @summary Modifies the maintenance window of an ApsaraDB for Redis instance. Alibaba Cloud maintains ApsaraDB for Redis instances during the specified maintenance window.
+         *
+         * @description You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see [Set a maintenance window](https://help.aliyun.com/document_detail/55252.html).
+         *
+         * @param request ModifyInstanceMaintainTimeRequest
+         * @return ModifyInstanceMaintainTimeResponse
          */
         public async Task<ModifyInstanceMaintainTimeResponse> ModifyInstanceMaintainTimeAsync(ModifyInstanceMaintainTimeRequest request)
         {
@@ -13110,11 +15241,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to perform the corresponding operation in the console, see [Upgrade the major version](~~101764~~).
-          *
-          * @param request ModifyInstanceMajorVersionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceMajorVersionResponse
+         * @summary Upgrades the major version of an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to perform the corresponding operation in the console, see [Upgrade the major version](https://help.aliyun.com/document_detail/101764.html).
+         *
+         * @param request ModifyInstanceMajorVersionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceMajorVersionResponse
          */
         public ModifyInstanceMajorVersionResponse ModifyInstanceMajorVersionWithOptions(ModifyInstanceMajorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13172,11 +15305,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to perform the corresponding operation in the console, see [Upgrade the major version](~~101764~~).
-          *
-          * @param request ModifyInstanceMajorVersionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceMajorVersionResponse
+         * @summary Upgrades the major version of an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to perform the corresponding operation in the console, see [Upgrade the major version](https://help.aliyun.com/document_detail/101764.html).
+         *
+         * @param request ModifyInstanceMajorVersionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceMajorVersionResponse
          */
         public async Task<ModifyInstanceMajorVersionResponse> ModifyInstanceMajorVersionWithOptionsAsync(ModifyInstanceMajorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13234,10 +15369,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to perform the corresponding operation in the console, see [Upgrade the major version](~~101764~~).
-          *
-          * @param request ModifyInstanceMajorVersionRequest
-          * @return ModifyInstanceMajorVersionResponse
+         * @summary Upgrades the major version of an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to perform the corresponding operation in the console, see [Upgrade the major version](https://help.aliyun.com/document_detail/101764.html).
+         *
+         * @param request ModifyInstanceMajorVersionRequest
+         * @return ModifyInstanceMajorVersionResponse
          */
         public ModifyInstanceMajorVersionResponse ModifyInstanceMajorVersion(ModifyInstanceMajorVersionRequest request)
         {
@@ -13246,10 +15383,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to perform the corresponding operation in the console, see [Upgrade the major version](~~101764~~).
-          *
-          * @param request ModifyInstanceMajorVersionRequest
-          * @return ModifyInstanceMajorVersionResponse
+         * @summary Upgrades the major version of an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to perform the corresponding operation in the console, see [Upgrade the major version](https://help.aliyun.com/document_detail/101764.html).
+         *
+         * @param request ModifyInstanceMajorVersionRequest
+         * @return ModifyInstanceMajorVersionResponse
          */
         public async Task<ModifyInstanceMajorVersionResponse> ModifyInstanceMajorVersionAsync(ModifyInstanceMajorVersionRequest request)
         {
@@ -13258,14 +15397,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see [Upgrade the minor version](~~56450~~).
-          * > 
-          * *   Before you call this operation, you can call the [DescribeEngineVersion](~~95268~~) operation to query the minor version of the current instance.
-          * *   When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.
-          *
-          * @param request ModifyInstanceMinorVersionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceMinorVersionResponse
+         * @summary Updates the minor version of an ApsaraDB for Redis instance.
+         *
+         * @description The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see [Upgrade the minor version](https://help.aliyun.com/document_detail/56450.html).
+         * > 
+         * *   Before you call this operation, you can call the [DescribeEngineVersion](https://help.aliyun.com/document_detail/95268.html) operation to query the minor version of the current instance.
+         * *   When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.
+         *
+         * @param request ModifyInstanceMinorVersionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceMinorVersionResponse
          */
         public ModifyInstanceMinorVersionResponse ModifyInstanceMinorVersionWithOptions(ModifyInstanceMinorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13323,14 +15464,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see [Upgrade the minor version](~~56450~~).
-          * > 
-          * *   Before you call this operation, you can call the [DescribeEngineVersion](~~95268~~) operation to query the minor version of the current instance.
-          * *   When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.
-          *
-          * @param request ModifyInstanceMinorVersionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceMinorVersionResponse
+         * @summary Updates the minor version of an ApsaraDB for Redis instance.
+         *
+         * @description The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see [Upgrade the minor version](https://help.aliyun.com/document_detail/56450.html).
+         * > 
+         * *   Before you call this operation, you can call the [DescribeEngineVersion](https://help.aliyun.com/document_detail/95268.html) operation to query the minor version of the current instance.
+         * *   When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.
+         *
+         * @param request ModifyInstanceMinorVersionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceMinorVersionResponse
          */
         public async Task<ModifyInstanceMinorVersionResponse> ModifyInstanceMinorVersionWithOptionsAsync(ModifyInstanceMinorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13388,13 +15531,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see [Upgrade the minor version](~~56450~~).
-          * > 
-          * *   Before you call this operation, you can call the [DescribeEngineVersion](~~95268~~) operation to query the minor version of the current instance.
-          * *   When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.
-          *
-          * @param request ModifyInstanceMinorVersionRequest
-          * @return ModifyInstanceMinorVersionResponse
+         * @summary Updates the minor version of an ApsaraDB for Redis instance.
+         *
+         * @description The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see [Upgrade the minor version](https://help.aliyun.com/document_detail/56450.html).
+         * > 
+         * *   Before you call this operation, you can call the [DescribeEngineVersion](https://help.aliyun.com/document_detail/95268.html) operation to query the minor version of the current instance.
+         * *   When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.
+         *
+         * @param request ModifyInstanceMinorVersionRequest
+         * @return ModifyInstanceMinorVersionResponse
          */
         public ModifyInstanceMinorVersionResponse ModifyInstanceMinorVersion(ModifyInstanceMinorVersionRequest request)
         {
@@ -13403,13 +15548,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see [Upgrade the minor version](~~56450~~).
-          * > 
-          * *   Before you call this operation, you can call the [DescribeEngineVersion](~~95268~~) operation to query the minor version of the current instance.
-          * *   When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.
-          *
-          * @param request ModifyInstanceMinorVersionRequest
-          * @return ModifyInstanceMinorVersionResponse
+         * @summary Updates the minor version of an ApsaraDB for Redis instance.
+         *
+         * @description The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see [Upgrade the minor version](https://help.aliyun.com/document_detail/56450.html).
+         * > 
+         * *   Before you call this operation, you can call the [DescribeEngineVersion](https://help.aliyun.com/document_detail/95268.html) operation to query the minor version of the current instance.
+         * *   When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.
+         *
+         * @param request ModifyInstanceMinorVersionRequest
+         * @return ModifyInstanceMinorVersionResponse
          */
         public async Task<ModifyInstanceMinorVersionResponse> ModifyInstanceMinorVersionAsync(ModifyInstanceMinorVersionRequest request)
         {
@@ -13418,12 +15565,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
-          * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
-          *
-          * @param request ModifyInstanceNetExpireTimeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceNetExpireTimeResponse
+         * @summary Extends the retention period of the classic network endpoint of an ApsaraDB for Redis instance. You can call this operation after you change the network type of the ApsaraDB for Redis instance from classic network to Virtual Private Cloud (VPC) with the classic network endpoint retained.
+         *
+         * @description You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](https://help.aliyun.com/document_detail/60062.html).
+         * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](https://help.aliyun.com/document_detail/61005.html).
+         *
+         * @param request ModifyInstanceNetExpireTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceNetExpireTimeResponse
          */
         public ModifyInstanceNetExpireTimeResponse ModifyInstanceNetExpireTimeWithOptions(ModifyInstanceNetExpireTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13481,12 +15630,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
-          * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
-          *
-          * @param request ModifyInstanceNetExpireTimeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceNetExpireTimeResponse
+         * @summary Extends the retention period of the classic network endpoint of an ApsaraDB for Redis instance. You can call this operation after you change the network type of the ApsaraDB for Redis instance from classic network to Virtual Private Cloud (VPC) with the classic network endpoint retained.
+         *
+         * @description You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](https://help.aliyun.com/document_detail/60062.html).
+         * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](https://help.aliyun.com/document_detail/61005.html).
+         *
+         * @param request ModifyInstanceNetExpireTimeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceNetExpireTimeResponse
          */
         public async Task<ModifyInstanceNetExpireTimeResponse> ModifyInstanceNetExpireTimeWithOptionsAsync(ModifyInstanceNetExpireTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13544,11 +15695,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
-          * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
-          *
-          * @param request ModifyInstanceNetExpireTimeRequest
-          * @return ModifyInstanceNetExpireTimeResponse
+         * @summary Extends the retention period of the classic network endpoint of an ApsaraDB for Redis instance. You can call this operation after you change the network type of the ApsaraDB for Redis instance from classic network to Virtual Private Cloud (VPC) with the classic network endpoint retained.
+         *
+         * @description You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](https://help.aliyun.com/document_detail/60062.html).
+         * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](https://help.aliyun.com/document_detail/61005.html).
+         *
+         * @param request ModifyInstanceNetExpireTimeRequest
+         * @return ModifyInstanceNetExpireTimeResponse
          */
         public ModifyInstanceNetExpireTimeResponse ModifyInstanceNetExpireTime(ModifyInstanceNetExpireTimeRequest request)
         {
@@ -13557,11 +15710,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
-          * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
-          *
-          * @param request ModifyInstanceNetExpireTimeRequest
-          * @return ModifyInstanceNetExpireTimeResponse
+         * @summary Extends the retention period of the classic network endpoint of an ApsaraDB for Redis instance. You can call this operation after you change the network type of the ApsaraDB for Redis instance from classic network to Virtual Private Cloud (VPC) with the classic network endpoint retained.
+         *
+         * @description You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](https://help.aliyun.com/document_detail/60062.html).
+         * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](https://help.aliyun.com/document_detail/61005.html).
+         *
+         * @param request ModifyInstanceNetExpireTimeRequest
+         * @return ModifyInstanceNetExpireTimeResponse
          */
         public async Task<ModifyInstanceNetExpireTimeResponse> ModifyInstanceNetExpireTimeAsync(ModifyInstanceNetExpireTimeRequest request)
         {
@@ -13569,6 +15724,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await ModifyInstanceNetExpireTimeWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 修改实例参数
+         *
+         * @param request ModifyInstanceParameterRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceParameterResponse
+         */
         public ModifyInstanceParameterResponse ModifyInstanceParameterWithOptions(ModifyInstanceParameterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13624,6 +15786,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceParameterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改实例参数
+         *
+         * @param request ModifyInstanceParameterRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceParameterResponse
+         */
         public async Task<ModifyInstanceParameterResponse> ModifyInstanceParameterWithOptionsAsync(ModifyInstanceParameterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13679,12 +15848,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<ModifyInstanceParameterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary 修改实例参数
+         *
+         * @param request ModifyInstanceParameterRequest
+         * @return ModifyInstanceParameterResponse
+         */
         public ModifyInstanceParameterResponse ModifyInstanceParameter(ModifyInstanceParameterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceParameterWithOptions(request, runtime);
         }
 
+        /**
+         * @summary 修改实例参数
+         *
+         * @param request ModifyInstanceParameterRequest
+         * @return ModifyInstanceParameterResponse
+         */
         public async Task<ModifyInstanceParameterResponse> ModifyInstanceParameterAsync(ModifyInstanceParameterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13692,12 +15873,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
-          * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~ModifyInstanceConfig~~) operation to modify the required parameter.
-          *
-          * @param request ModifyInstanceSSLRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceSSLResponse
+         * @summary Modifies the SSL settings of an ApsaraDB for Redis instance.
+         *
+         * @description You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](https://help.aliyun.com/document_detail/84898.html).
+         * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~ModifyInstanceConfig~~) operation to modify the required parameter.
+         *
+         * @param request ModifyInstanceSSLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceSSLResponse
          */
         public ModifyInstanceSSLResponse ModifyInstanceSSLWithOptions(ModifyInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13751,12 +15934,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
-          * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~ModifyInstanceConfig~~) operation to modify the required parameter.
-          *
-          * @param request ModifyInstanceSSLRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceSSLResponse
+         * @summary Modifies the SSL settings of an ApsaraDB for Redis instance.
+         *
+         * @description You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](https://help.aliyun.com/document_detail/84898.html).
+         * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~ModifyInstanceConfig~~) operation to modify the required parameter.
+         *
+         * @param request ModifyInstanceSSLRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceSSLResponse
          */
         public async Task<ModifyInstanceSSLResponse> ModifyInstanceSSLWithOptionsAsync(ModifyInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13810,11 +15995,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
-          * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~ModifyInstanceConfig~~) operation to modify the required parameter.
-          *
-          * @param request ModifyInstanceSSLRequest
-          * @return ModifyInstanceSSLResponse
+         * @summary Modifies the SSL settings of an ApsaraDB for Redis instance.
+         *
+         * @description You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](https://help.aliyun.com/document_detail/84898.html).
+         * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~ModifyInstanceConfig~~) operation to modify the required parameter.
+         *
+         * @param request ModifyInstanceSSLRequest
+         * @return ModifyInstanceSSLResponse
          */
         public ModifyInstanceSSLResponse ModifyInstanceSSL(ModifyInstanceSSLRequest request)
         {
@@ -13823,11 +16010,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
-          * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~ModifyInstanceConfig~~) operation to modify the required parameter.
-          *
-          * @param request ModifyInstanceSSLRequest
-          * @return ModifyInstanceSSLResponse
+         * @summary Modifies the SSL settings of an ApsaraDB for Redis instance.
+         *
+         * @description You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](https://help.aliyun.com/document_detail/84898.html).
+         * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~ModifyInstanceConfig~~) operation to modify the required parameter.
+         *
+         * @param request ModifyInstanceSSLRequest
+         * @return ModifyInstanceSSLResponse
          */
         public async Task<ModifyInstanceSSLResponse> ModifyInstanceSSLAsync(ModifyInstanceSSLRequest request)
         {
@@ -13836,11 +16025,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  For more information about the procedure, impacts, limits, and fees of this operation, see [Change the configurations of an instance](~~26353~~).
-          *
-          * @param request ModifyInstanceSpecRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceSpecResponse
+         * @summary Changes the specifications of an ApsaraDB for Redis instance.
+         *
+         * @description >  For more information about the procedure, impacts, limits, and fees of this operation, see [Change the configurations of an instance](https://help.aliyun.com/document_detail/26353.html).
+         *
+         * @param request ModifyInstanceSpecRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceSpecResponse
          */
         public ModifyInstanceSpecResponse ModifyInstanceSpecWithOptions(ModifyInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13954,11 +16145,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  For more information about the procedure, impacts, limits, and fees of this operation, see [Change the configurations of an instance](~~26353~~).
-          *
-          * @param request ModifyInstanceSpecRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceSpecResponse
+         * @summary Changes the specifications of an ApsaraDB for Redis instance.
+         *
+         * @description >  For more information about the procedure, impacts, limits, and fees of this operation, see [Change the configurations of an instance](https://help.aliyun.com/document_detail/26353.html).
+         *
+         * @param request ModifyInstanceSpecRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceSpecResponse
          */
         public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpecWithOptionsAsync(ModifyInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14072,10 +16265,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  For more information about the procedure, impacts, limits, and fees of this operation, see [Change the configurations of an instance](~~26353~~).
-          *
-          * @param request ModifyInstanceSpecRequest
-          * @return ModifyInstanceSpecResponse
+         * @summary Changes the specifications of an ApsaraDB for Redis instance.
+         *
+         * @description >  For more information about the procedure, impacts, limits, and fees of this operation, see [Change the configurations of an instance](https://help.aliyun.com/document_detail/26353.html).
+         *
+         * @param request ModifyInstanceSpecRequest
+         * @return ModifyInstanceSpecResponse
          */
         public ModifyInstanceSpecResponse ModifyInstanceSpec(ModifyInstanceSpecRequest request)
         {
@@ -14084,10 +16279,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  For more information about the procedure, impacts, limits, and fees of this operation, see [Change the configurations of an instance](~~26353~~).
-          *
-          * @param request ModifyInstanceSpecRequest
-          * @return ModifyInstanceSpecResponse
+         * @summary Changes the specifications of an ApsaraDB for Redis instance.
+         *
+         * @description >  For more information about the procedure, impacts, limits, and fees of this operation, see [Change the configurations of an instance](https://help.aliyun.com/document_detail/26353.html).
+         *
+         * @param request ModifyInstanceSpecRequest
+         * @return ModifyInstanceSpecResponse
          */
         public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpecAsync(ModifyInstanceSpecRequest request)
         {
@@ -14096,11 +16293,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > For more information about TDE and the impact of TDE, see [Enable TDE](~~265913~~).
-          *
-          * @param request ModifyInstanceTDERequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceTDEResponse
+         * @summary Enables transparent data encryption (TDE) for an ApsaraDB for Redis instance. You can use existing custom keys.
+         *
+         * @description > For more information about TDE and the impact of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         *
+         * @param request ModifyInstanceTDERequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceTDEResponse
          */
         public ModifyInstanceTDEResponse ModifyInstanceTDEWithOptions(ModifyInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14166,11 +16365,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > For more information about TDE and the impact of TDE, see [Enable TDE](~~265913~~).
-          *
-          * @param request ModifyInstanceTDERequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceTDEResponse
+         * @summary Enables transparent data encryption (TDE) for an ApsaraDB for Redis instance. You can use existing custom keys.
+         *
+         * @description > For more information about TDE and the impact of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         *
+         * @param request ModifyInstanceTDERequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceTDEResponse
          */
         public async Task<ModifyInstanceTDEResponse> ModifyInstanceTDEWithOptionsAsync(ModifyInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14236,10 +16437,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > For more information about TDE and the impact of TDE, see [Enable TDE](~~265913~~).
-          *
-          * @param request ModifyInstanceTDERequest
-          * @return ModifyInstanceTDEResponse
+         * @summary Enables transparent data encryption (TDE) for an ApsaraDB for Redis instance. You can use existing custom keys.
+         *
+         * @description > For more information about TDE and the impact of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         *
+         * @param request ModifyInstanceTDERequest
+         * @return ModifyInstanceTDEResponse
          */
         public ModifyInstanceTDEResponse ModifyInstanceTDE(ModifyInstanceTDERequest request)
         {
@@ -14248,10 +16451,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > For more information about TDE and the impact of TDE, see [Enable TDE](~~265913~~).
-          *
-          * @param request ModifyInstanceTDERequest
-          * @return ModifyInstanceTDEResponse
+         * @summary Enables transparent data encryption (TDE) for an ApsaraDB for Redis instance. You can use existing custom keys.
+         *
+         * @description > For more information about TDE and the impact of TDE, see [Enable TDE](https://help.aliyun.com/document_detail/265913.html).
+         *
+         * @param request ModifyInstanceTDERequest
+         * @return ModifyInstanceTDEResponse
          */
         public async Task<ModifyInstanceTDEResponse> ModifyInstanceTDEAsync(ModifyInstanceTDERequest request)
         {
@@ -14260,12 +16465,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can connect to the ApsaraDB for Redis instance without a password. You can also use the username and password to connect to the ApsaraDB for Redis instance.
-          * > The ApsaraDB for Redis instance is deployed in a VPC. For more information, see [Enable password-free access](~~85168~~).
-          *
-          * @param request ModifyInstanceVpcAuthModeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceVpcAuthModeResponse
+         * @summary Enables or disables password-free access for an ApsaraDB for Redis instance. This way, you can connect to a database in a convenient and secure manner.
+         *
+         * @description When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can connect to the ApsaraDB for Redis instance without a password. You can also use the username and password to connect to the ApsaraDB for Redis instance.
+         * > The ApsaraDB for Redis instance is deployed in a VPC. For more information, see [Enable password-free access](https://help.aliyun.com/document_detail/85168.html).
+         *
+         * @param request ModifyInstanceVpcAuthModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceVpcAuthModeResponse
          */
         public ModifyInstanceVpcAuthModeResponse ModifyInstanceVpcAuthModeWithOptions(ModifyInstanceVpcAuthModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14319,12 +16526,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can connect to the ApsaraDB for Redis instance without a password. You can also use the username and password to connect to the ApsaraDB for Redis instance.
-          * > The ApsaraDB for Redis instance is deployed in a VPC. For more information, see [Enable password-free access](~~85168~~).
-          *
-          * @param request ModifyInstanceVpcAuthModeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceVpcAuthModeResponse
+         * @summary Enables or disables password-free access for an ApsaraDB for Redis instance. This way, you can connect to a database in a convenient and secure manner.
+         *
+         * @description When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can connect to the ApsaraDB for Redis instance without a password. You can also use the username and password to connect to the ApsaraDB for Redis instance.
+         * > The ApsaraDB for Redis instance is deployed in a VPC. For more information, see [Enable password-free access](https://help.aliyun.com/document_detail/85168.html).
+         *
+         * @param request ModifyInstanceVpcAuthModeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyInstanceVpcAuthModeResponse
          */
         public async Task<ModifyInstanceVpcAuthModeResponse> ModifyInstanceVpcAuthModeWithOptionsAsync(ModifyInstanceVpcAuthModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14378,11 +16587,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can connect to the ApsaraDB for Redis instance without a password. You can also use the username and password to connect to the ApsaraDB for Redis instance.
-          * > The ApsaraDB for Redis instance is deployed in a VPC. For more information, see [Enable password-free access](~~85168~~).
-          *
-          * @param request ModifyInstanceVpcAuthModeRequest
-          * @return ModifyInstanceVpcAuthModeResponse
+         * @summary Enables or disables password-free access for an ApsaraDB for Redis instance. This way, you can connect to a database in a convenient and secure manner.
+         *
+         * @description When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can connect to the ApsaraDB for Redis instance without a password. You can also use the username and password to connect to the ApsaraDB for Redis instance.
+         * > The ApsaraDB for Redis instance is deployed in a VPC. For more information, see [Enable password-free access](https://help.aliyun.com/document_detail/85168.html).
+         *
+         * @param request ModifyInstanceVpcAuthModeRequest
+         * @return ModifyInstanceVpcAuthModeResponse
          */
         public ModifyInstanceVpcAuthModeResponse ModifyInstanceVpcAuthMode(ModifyInstanceVpcAuthModeRequest request)
         {
@@ -14391,11 +16602,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can connect to the ApsaraDB for Redis instance without a password. You can also use the username and password to connect to the ApsaraDB for Redis instance.
-          * > The ApsaraDB for Redis instance is deployed in a VPC. For more information, see [Enable password-free access](~~85168~~).
-          *
-          * @param request ModifyInstanceVpcAuthModeRequest
-          * @return ModifyInstanceVpcAuthModeResponse
+         * @summary Enables or disables password-free access for an ApsaraDB for Redis instance. This way, you can connect to a database in a convenient and secure manner.
+         *
+         * @description When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can connect to the ApsaraDB for Redis instance without a password. You can also use the username and password to connect to the ApsaraDB for Redis instance.
+         * > The ApsaraDB for Redis instance is deployed in a VPC. For more information, see [Enable password-free access](https://help.aliyun.com/document_detail/85168.html).
+         *
+         * @param request ModifyInstanceVpcAuthModeRequest
+         * @return ModifyInstanceVpcAuthModeResponse
          */
         public async Task<ModifyInstanceVpcAuthModeResponse> ModifyInstanceVpcAuthModeAsync(ModifyInstanceVpcAuthModeRequest request)
         {
@@ -14404,12 +16617,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > 
-          * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
-          *
-          * @param request ModifyIntranetAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyIntranetAttributeResponse
+         * @summary Temporarily adjusts the internal bandwidth of an ApsaraDB for Redis instance that is deployed in a dedicated cluster.
+         *
+         * @description > 
+         * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](https://help.aliyun.com/document_detail/206173.html) operation.
+         *
+         * @param request ModifyIntranetAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyIntranetAttributeResponse
          */
         public ModifyIntranetAttributeResponse ModifyIntranetAttributeWithOptions(ModifyIntranetAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14467,12 +16682,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > 
-          * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
-          *
-          * @param request ModifyIntranetAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyIntranetAttributeResponse
+         * @summary Temporarily adjusts the internal bandwidth of an ApsaraDB for Redis instance that is deployed in a dedicated cluster.
+         *
+         * @description > 
+         * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](https://help.aliyun.com/document_detail/206173.html) operation.
+         *
+         * @param request ModifyIntranetAttributeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyIntranetAttributeResponse
          */
         public async Task<ModifyIntranetAttributeResponse> ModifyIntranetAttributeWithOptionsAsync(ModifyIntranetAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14530,11 +16747,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > 
-          * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
-          *
-          * @param request ModifyIntranetAttributeRequest
-          * @return ModifyIntranetAttributeResponse
+         * @summary Temporarily adjusts the internal bandwidth of an ApsaraDB for Redis instance that is deployed in a dedicated cluster.
+         *
+         * @description > 
+         * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](https://help.aliyun.com/document_detail/206173.html) operation.
+         *
+         * @param request ModifyIntranetAttributeRequest
+         * @return ModifyIntranetAttributeResponse
          */
         public ModifyIntranetAttributeResponse ModifyIntranetAttribute(ModifyIntranetAttributeRequest request)
         {
@@ -14543,11 +16762,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > 
-          * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
-          *
-          * @param request ModifyIntranetAttributeRequest
-          * @return ModifyIntranetAttributeResponse
+         * @summary Temporarily adjusts the internal bandwidth of an ApsaraDB for Redis instance that is deployed in a dedicated cluster.
+         *
+         * @description > 
+         * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](https://help.aliyun.com/document_detail/206173.html) operation.
+         *
+         * @param request ModifyIntranetAttributeRequest
+         * @return ModifyIntranetAttributeResponse
          */
         public async Task<ModifyIntranetAttributeResponse> ModifyIntranetAttributeAsync(ModifyIntranetAttributeRequest request)
         {
@@ -14556,12 +16777,186 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
-          * > For more information about resource group API operations, see [Resource Management API overview](~~160024~~).
-          *
-          * @param request ModifyResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyResourceGroupResponse
+         * @summary Modifies the settings of a parameter template.
+         *
+         * @param request ModifyParameterGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyParameterGroupResponse
+         */
+        public ModifyParameterGroupResponse ModifyParameterGroupWithOptions(ModifyParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupDesc))
+            {
+                query["ParameterGroupDesc"] = request.ParameterGroupDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupId))
+            {
+                query["ParameterGroupId"] = request.ParameterGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupName))
+            {
+                query["ParameterGroupName"] = request.ParameterGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyParameterGroup",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyParameterGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Modifies the settings of a parameter template.
+         *
+         * @param request ModifyParameterGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyParameterGroupResponse
+         */
+        public async Task<ModifyParameterGroupResponse> ModifyParameterGroupWithOptionsAsync(ModifyParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupDesc))
+            {
+                query["ParameterGroupDesc"] = request.ParameterGroupDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupId))
+            {
+                query["ParameterGroupId"] = request.ParameterGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupName))
+            {
+                query["ParameterGroupName"] = request.ParameterGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyParameterGroup",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Modifies the settings of a parameter template.
+         *
+         * @param request ModifyParameterGroupRequest
+         * @return ModifyParameterGroupResponse
+         */
+        public ModifyParameterGroupResponse ModifyParameterGroup(ModifyParameterGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyParameterGroupWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Modifies the settings of a parameter template.
+         *
+         * @param request ModifyParameterGroupRequest
+         * @return ModifyParameterGroupResponse
+         */
+        public async Task<ModifyParameterGroupResponse> ModifyParameterGroupAsync(ModifyParameterGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyParameterGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Changes the resource group to which an ApsaraDB for Redis instance belongs.
+         *
+         * @description Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
+         * > For more information about resource group API operations, see [Resource Management API overview](https://help.aliyun.com/document_detail/160024.html).
+         *
+         * @param request ModifyResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyResourceGroupResponse
          */
         public ModifyResourceGroupResponse ModifyResourceGroupWithOptions(ModifyResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14619,12 +17014,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
-          * > For more information about resource group API operations, see [Resource Management API overview](~~160024~~).
-          *
-          * @param request ModifyResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyResourceGroupResponse
+         * @summary Changes the resource group to which an ApsaraDB for Redis instance belongs.
+         *
+         * @description Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
+         * > For more information about resource group API operations, see [Resource Management API overview](https://help.aliyun.com/document_detail/160024.html).
+         *
+         * @param request ModifyResourceGroupRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyResourceGroupResponse
          */
         public async Task<ModifyResourceGroupResponse> ModifyResourceGroupWithOptionsAsync(ModifyResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14682,11 +17079,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
-          * > For more information about resource group API operations, see [Resource Management API overview](~~160024~~).
-          *
-          * @param request ModifyResourceGroupRequest
-          * @return ModifyResourceGroupResponse
+         * @summary Changes the resource group to which an ApsaraDB for Redis instance belongs.
+         *
+         * @description Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
+         * > For more information about resource group API operations, see [Resource Management API overview](https://help.aliyun.com/document_detail/160024.html).
+         *
+         * @param request ModifyResourceGroupRequest
+         * @return ModifyResourceGroupResponse
          */
         public ModifyResourceGroupResponse ModifyResourceGroup(ModifyResourceGroupRequest request)
         {
@@ -14695,11 +17094,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
-          * > For more information about resource group API operations, see [Resource Management API overview](~~160024~~).
-          *
-          * @param request ModifyResourceGroupRequest
-          * @return ModifyResourceGroupResponse
+         * @summary Changes the resource group to which an ApsaraDB for Redis instance belongs.
+         *
+         * @description Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)
+         * > For more information about resource group API operations, see [Resource Management API overview](https://help.aliyun.com/document_detail/160024.html).
+         *
+         * @param request ModifyResourceGroupRequest
+         * @return ModifyResourceGroupResponse
          */
         public async Task<ModifyResourceGroupResponse> ModifyResourceGroupAsync(ModifyResourceGroupRequest request)
         {
@@ -14708,11 +17109,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
-          *
-          * @param request ModifySecurityGroupConfigurationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifySecurityGroupConfigurationResponse
+         * @summary Resets the security groups that are added to the whitelists of an ApsaraDB for Redis instance.
+         *
+         * @description > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](https://help.aliyun.com/document_detail/148267.html).
+         *
+         * @param request ModifySecurityGroupConfigurationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifySecurityGroupConfigurationResponse
          */
         public ModifySecurityGroupConfigurationResponse ModifySecurityGroupConfigurationWithOptions(ModifySecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14766,11 +17169,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
-          *
-          * @param request ModifySecurityGroupConfigurationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifySecurityGroupConfigurationResponse
+         * @summary Resets the security groups that are added to the whitelists of an ApsaraDB for Redis instance.
+         *
+         * @description > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](https://help.aliyun.com/document_detail/148267.html).
+         *
+         * @param request ModifySecurityGroupConfigurationRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifySecurityGroupConfigurationResponse
          */
         public async Task<ModifySecurityGroupConfigurationResponse> ModifySecurityGroupConfigurationWithOptionsAsync(ModifySecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14824,10 +17229,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
-          *
-          * @param request ModifySecurityGroupConfigurationRequest
-          * @return ModifySecurityGroupConfigurationResponse
+         * @summary Resets the security groups that are added to the whitelists of an ApsaraDB for Redis instance.
+         *
+         * @description > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](https://help.aliyun.com/document_detail/148267.html).
+         *
+         * @param request ModifySecurityGroupConfigurationRequest
+         * @return ModifySecurityGroupConfigurationResponse
          */
         public ModifySecurityGroupConfigurationResponse ModifySecurityGroupConfiguration(ModifySecurityGroupConfigurationRequest request)
         {
@@ -14836,10 +17243,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
-          *
-          * @param request ModifySecurityGroupConfigurationRequest
-          * @return ModifySecurityGroupConfigurationResponse
+         * @summary Resets the security groups that are added to the whitelists of an ApsaraDB for Redis instance.
+         *
+         * @description > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](https://help.aliyun.com/document_detail/148267.html).
+         *
+         * @param request ModifySecurityGroupConfigurationRequest
+         * @return ModifySecurityGroupConfigurationResponse
          */
         public async Task<ModifySecurityGroupConfigurationResponse> ModifySecurityGroupConfigurationAsync(ModifySecurityGroupConfigurationRequest request)
         {
@@ -14848,11 +17257,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the whitelists of an instance in the ApsaraDB for Redis console. For more information, see [Configure a whitelist for an instance](~~56464~~).
-          *
-          * @param request ModifySecurityIpsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifySecurityIpsResponse
+         * @summary Modifies the IP address whitelists of an ApsaraDB for Redis instance.
+         *
+         * @description You can also modify the whitelists of an instance in the ApsaraDB for Redis console. For more information, see [Configure a whitelist for an instance](https://help.aliyun.com/document_detail/56464.html).
+         *
+         * @param request ModifySecurityIpsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifySecurityIpsResponse
          */
         public ModifySecurityIpsResponse ModifySecurityIpsWithOptions(ModifySecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14918,11 +17329,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the whitelists of an instance in the ApsaraDB for Redis console. For more information, see [Configure a whitelist for an instance](~~56464~~).
-          *
-          * @param request ModifySecurityIpsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifySecurityIpsResponse
+         * @summary Modifies the IP address whitelists of an ApsaraDB for Redis instance.
+         *
+         * @description You can also modify the whitelists of an instance in the ApsaraDB for Redis console. For more information, see [Configure a whitelist for an instance](https://help.aliyun.com/document_detail/56464.html).
+         *
+         * @param request ModifySecurityIpsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifySecurityIpsResponse
          */
         public async Task<ModifySecurityIpsResponse> ModifySecurityIpsWithOptionsAsync(ModifySecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -14988,10 +17401,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the whitelists of an instance in the ApsaraDB for Redis console. For more information, see [Configure a whitelist for an instance](~~56464~~).
-          *
-          * @param request ModifySecurityIpsRequest
-          * @return ModifySecurityIpsResponse
+         * @summary Modifies the IP address whitelists of an ApsaraDB for Redis instance.
+         *
+         * @description You can also modify the whitelists of an instance in the ApsaraDB for Redis console. For more information, see [Configure a whitelist for an instance](https://help.aliyun.com/document_detail/56464.html).
+         *
+         * @param request ModifySecurityIpsRequest
+         * @return ModifySecurityIpsResponse
          */
         public ModifySecurityIpsResponse ModifySecurityIps(ModifySecurityIpsRequest request)
         {
@@ -15000,10 +17415,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * You can also modify the whitelists of an instance in the ApsaraDB for Redis console. For more information, see [Configure a whitelist for an instance](~~56464~~).
-          *
-          * @param request ModifySecurityIpsRequest
-          * @return ModifySecurityIpsResponse
+         * @summary Modifies the IP address whitelists of an ApsaraDB for Redis instance.
+         *
+         * @description You can also modify the whitelists of an instance in the ApsaraDB for Redis console. For more information, see [Configure a whitelist for an instance](https://help.aliyun.com/document_detail/56464.html).
+         *
+         * @param request ModifySecurityIpsRequest
+         * @return ModifySecurityIpsResponse
          */
         public async Task<ModifySecurityIpsResponse> ModifySecurityIpsAsync(ModifySecurityIpsRequest request)
         {
@@ -15012,11 +17429,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](~~146901~~).
-          *
-          * @param request ReleaseDirectConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReleaseDirectConnectionResponse
+         * @summary Releases the private endpoint of an ApsaraDB for Redis cluster instance.
+         *
+         * @description In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](https://help.aliyun.com/document_detail/146901.html).
+         *
+         * @param request ReleaseDirectConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReleaseDirectConnectionResponse
          */
         public ReleaseDirectConnectionResponse ReleaseDirectConnectionWithOptions(ReleaseDirectConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15066,11 +17485,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](~~146901~~).
-          *
-          * @param request ReleaseDirectConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReleaseDirectConnectionResponse
+         * @summary Releases the private endpoint of an ApsaraDB for Redis cluster instance.
+         *
+         * @description In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](https://help.aliyun.com/document_detail/146901.html).
+         *
+         * @param request ReleaseDirectConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReleaseDirectConnectionResponse
          */
         public async Task<ReleaseDirectConnectionResponse> ReleaseDirectConnectionWithOptionsAsync(ReleaseDirectConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15120,10 +17541,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](~~146901~~).
-          *
-          * @param request ReleaseDirectConnectionRequest
-          * @return ReleaseDirectConnectionResponse
+         * @summary Releases the private endpoint of an ApsaraDB for Redis cluster instance.
+         *
+         * @description In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](https://help.aliyun.com/document_detail/146901.html).
+         *
+         * @param request ReleaseDirectConnectionRequest
+         * @return ReleaseDirectConnectionResponse
          */
         public ReleaseDirectConnectionResponse ReleaseDirectConnection(ReleaseDirectConnectionRequest request)
         {
@@ -15132,10 +17555,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](~~146901~~).
-          *
-          * @param request ReleaseDirectConnectionRequest
-          * @return ReleaseDirectConnectionResponse
+         * @summary Releases the private endpoint of an ApsaraDB for Redis cluster instance.
+         *
+         * @description In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](https://help.aliyun.com/document_detail/146901.html).
+         *
+         * @param request ReleaseDirectConnectionRequest
+         * @return ReleaseDirectConnectionResponse
          */
         public async Task<ReleaseDirectConnectionResponse> ReleaseDirectConnectionAsync(ReleaseDirectConnectionRequest request)
         {
@@ -15144,11 +17569,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](~~125424~~).
-          *
-          * @param request ReleaseInstancePublicConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReleaseInstancePublicConnectionResponse
+         * @summary Releases the public endpoint of an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](https://help.aliyun.com/document_detail/125424.html).
+         *
+         * @param request ReleaseInstancePublicConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReleaseInstancePublicConnectionResponse
          */
         public ReleaseInstancePublicConnectionResponse ReleaseInstancePublicConnectionWithOptions(ReleaseInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15202,11 +17629,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](~~125424~~).
-          *
-          * @param request ReleaseInstancePublicConnectionRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReleaseInstancePublicConnectionResponse
+         * @summary Releases the public endpoint of an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](https://help.aliyun.com/document_detail/125424.html).
+         *
+         * @param request ReleaseInstancePublicConnectionRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReleaseInstancePublicConnectionResponse
          */
         public async Task<ReleaseInstancePublicConnectionResponse> ReleaseInstancePublicConnectionWithOptionsAsync(ReleaseInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15260,10 +17689,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](~~125424~~).
-          *
-          * @param request ReleaseInstancePublicConnectionRequest
-          * @return ReleaseInstancePublicConnectionResponse
+         * @summary Releases the public endpoint of an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](https://help.aliyun.com/document_detail/125424.html).
+         *
+         * @param request ReleaseInstancePublicConnectionRequest
+         * @return ReleaseInstancePublicConnectionResponse
          */
         public ReleaseInstancePublicConnectionResponse ReleaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request)
         {
@@ -15272,10 +17703,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](~~125424~~).
-          *
-          * @param request ReleaseInstancePublicConnectionRequest
-          * @return ReleaseInstancePublicConnectionResponse
+         * @summary Releases the public endpoint of an ApsaraDB for Redis instance.
+         *
+         * @description For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](https://help.aliyun.com/document_detail/125424.html).
+         *
+         * @param request ReleaseInstancePublicConnectionRequest
+         * @return ReleaseInstancePublicConnectionResponse
          */
         public async Task<ReleaseInstancePublicConnectionResponse> ReleaseInstancePublicConnectionAsync(ReleaseInstancePublicConnectionRequest request)
         {
@@ -15284,11 +17717,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The operation that you want to perform. Set the value to **RemoveSubInstance**.
-          *
-          * @param request RemoveSubInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RemoveSubInstanceResponse
+         * @summary Removes a child instance from a distributed instance.
+         *
+         * @description The operation that you want to perform. Set the value to **RemoveSubInstance**.
+         *
+         * @param request RemoveSubInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveSubInstanceResponse
          */
         public RemoveSubInstanceResponse RemoveSubInstanceWithOptions(RemoveSubInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15338,11 +17773,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The operation that you want to perform. Set the value to **RemoveSubInstance**.
-          *
-          * @param request RemoveSubInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RemoveSubInstanceResponse
+         * @summary Removes a child instance from a distributed instance.
+         *
+         * @description The operation that you want to perform. Set the value to **RemoveSubInstance**.
+         *
+         * @param request RemoveSubInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RemoveSubInstanceResponse
          */
         public async Task<RemoveSubInstanceResponse> RemoveSubInstanceWithOptionsAsync(RemoveSubInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15392,10 +17829,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The operation that you want to perform. Set the value to **RemoveSubInstance**.
-          *
-          * @param request RemoveSubInstanceRequest
-          * @return RemoveSubInstanceResponse
+         * @summary Removes a child instance from a distributed instance.
+         *
+         * @description The operation that you want to perform. Set the value to **RemoveSubInstance**.
+         *
+         * @param request RemoveSubInstanceRequest
+         * @return RemoveSubInstanceResponse
          */
         public RemoveSubInstanceResponse RemoveSubInstance(RemoveSubInstanceRequest request)
         {
@@ -15404,10 +17843,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * The operation that you want to perform. Set the value to **RemoveSubInstance**.
-          *
-          * @param request RemoveSubInstanceRequest
-          * @return RemoveSubInstanceResponse
+         * @summary Removes a child instance from a distributed instance.
+         *
+         * @description The operation that you want to perform. Set the value to **RemoveSubInstance**.
+         *
+         * @param request RemoveSubInstanceRequest
+         * @return RemoveSubInstanceResponse
          */
         public async Task<RemoveSubInstanceResponse> RemoveSubInstanceAsync(RemoveSubInstanceRequest request)
         {
@@ -15416,13 +17857,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
-          * > Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
-          *
-          * @param request RenewAdditionalBandwidthRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RenewAdditionalBandwidthResponse
+         * @summary Renews the purchased bandwidth for an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/102588.html). You can also call the [EnableAdditionalBandwidth](https://help.aliyun.com/document_detail/206173.html) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
+         * > Before you call this operation, you can call the [DescribeIntranetAttribute](https://help.aliyun.com/document_detail/128715.html) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
+         *
+         * @param request RenewAdditionalBandwidthRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenewAdditionalBandwidthResponse
          */
         public RenewAdditionalBandwidthResponse RenewAdditionalBandwidthWithOptions(RenewAdditionalBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15488,13 +17931,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
-          * > Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
-          *
-          * @param request RenewAdditionalBandwidthRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RenewAdditionalBandwidthResponse
+         * @summary Renews the purchased bandwidth for an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/102588.html). You can also call the [EnableAdditionalBandwidth](https://help.aliyun.com/document_detail/206173.html) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
+         * > Before you call this operation, you can call the [DescribeIntranetAttribute](https://help.aliyun.com/document_detail/128715.html) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
+         *
+         * @param request RenewAdditionalBandwidthRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenewAdditionalBandwidthResponse
          */
         public async Task<RenewAdditionalBandwidthResponse> RenewAdditionalBandwidthWithOptionsAsync(RenewAdditionalBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15560,12 +18005,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
-          * > Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
-          *
-          * @param request RenewAdditionalBandwidthRequest
-          * @return RenewAdditionalBandwidthResponse
+         * @summary Renews the purchased bandwidth for an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/102588.html). You can also call the [EnableAdditionalBandwidth](https://help.aliyun.com/document_detail/206173.html) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
+         * > Before you call this operation, you can call the [DescribeIntranetAttribute](https://help.aliyun.com/document_detail/128715.html) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
+         *
+         * @param request RenewAdditionalBandwidthRequest
+         * @return RenewAdditionalBandwidthResponse
          */
         public RenewAdditionalBandwidthResponse RenewAdditionalBandwidth(RenewAdditionalBandwidthRequest request)
         {
@@ -15574,12 +18021,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-          * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
-          * > Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
-          *
-          * @param request RenewAdditionalBandwidthRequest
-          * @return RenewAdditionalBandwidthResponse
+         * @summary Renews the purchased bandwidth for an ApsaraDB for Redis instance.
+         *
+         * @description Before you call this operation, make sure that you understand the billing methods and [pricing](https://help.aliyun.com/document_detail/54532.html) of ApsaraDB for Redis.
+         * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](https://help.aliyun.com/document_detail/102588.html). You can also call the [EnableAdditionalBandwidth](https://help.aliyun.com/document_detail/206173.html) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
+         * > Before you call this operation, you can call the [DescribeIntranetAttribute](https://help.aliyun.com/document_detail/128715.html) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
+         *
+         * @param request RenewAdditionalBandwidthRequest
+         * @return RenewAdditionalBandwidthResponse
          */
         public async Task<RenewAdditionalBandwidthResponse> RenewAdditionalBandwidthAsync(RenewAdditionalBandwidthRequest request)
         {
@@ -15588,11 +18037,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is applicable only to subscription instances.
-          *
-          * @param request RenewInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RenewInstanceResponse
+         * @summary Renews an ApsaraDB for Redis instance.
+         *
+         * @description This operation is applicable only to subscription instances.
+         *
+         * @param request RenewInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenewInstanceResponse
          */
         public RenewInstanceResponse RenewInstanceWithOptions(RenewInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15678,11 +18129,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is applicable only to subscription instances.
-          *
-          * @param request RenewInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RenewInstanceResponse
+         * @summary Renews an ApsaraDB for Redis instance.
+         *
+         * @description This operation is applicable only to subscription instances.
+         *
+         * @param request RenewInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenewInstanceResponse
          */
         public async Task<RenewInstanceResponse> RenewInstanceWithOptionsAsync(RenewInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15768,10 +18221,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is applicable only to subscription instances.
-          *
-          * @param request RenewInstanceRequest
-          * @return RenewInstanceResponse
+         * @summary Renews an ApsaraDB for Redis instance.
+         *
+         * @description This operation is applicable only to subscription instances.
+         *
+         * @param request RenewInstanceRequest
+         * @return RenewInstanceResponse
          */
         public RenewInstanceResponse RenewInstance(RenewInstanceRequest request)
         {
@@ -15780,10 +18235,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * This operation is applicable only to subscription instances.
-          *
-          * @param request RenewInstanceRequest
-          * @return RenewInstanceResponse
+         * @summary Renews an ApsaraDB for Redis instance.
+         *
+         * @description This operation is applicable only to subscription instances.
+         *
+         * @param request RenewInstanceRequest
+         * @return RenewInstanceResponse
          */
         public async Task<RenewInstanceResponse> RenewInstanceAsync(RenewInstanceRequest request)
         {
@@ -15792,11 +18249,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-          *
-          * @param request ResetAccountPasswordRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResetAccountPasswordResponse
+         * @summary Resets the password of an account for an ApsaraDB for Redis instance.
+         *
+         * @description >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+         *
+         * @param request ResetAccountPasswordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetAccountPasswordResponse
          */
         public ResetAccountPasswordResponse ResetAccountPasswordWithOptions(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15854,11 +18313,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-          *
-          * @param request ResetAccountPasswordRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResetAccountPasswordResponse
+         * @summary Resets the password of an account for an ApsaraDB for Redis instance.
+         *
+         * @description >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+         *
+         * @param request ResetAccountPasswordRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ResetAccountPasswordResponse
          */
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordWithOptionsAsync(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15916,10 +18377,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-          *
-          * @param request ResetAccountPasswordRequest
-          * @return ResetAccountPasswordResponse
+         * @summary Resets the password of an account for an ApsaraDB for Redis instance.
+         *
+         * @description >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+         *
+         * @param request ResetAccountPasswordRequest
+         * @return ResetAccountPasswordResponse
          */
         public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest request)
         {
@@ -15928,10 +18391,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
-          *
-          * @param request ResetAccountPasswordRequest
-          * @return ResetAccountPasswordResponse
+         * @summary Resets the password of an account for an ApsaraDB for Redis instance.
+         *
+         * @description >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+         *
+         * @param request ResetAccountPasswordRequest
+         * @return ResetAccountPasswordResponse
          */
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordAsync(ResetAccountPasswordRequest request)
         {
@@ -15939,6 +18404,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await ResetAccountPasswordWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Restarts a running ApsaraDB for Redis instance.
+         *
+         * @param request RestartInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RestartInstanceResponse
+         */
         public RestartInstanceResponse RestartInstanceWithOptions(RestartInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15994,6 +18466,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<RestartInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Restarts a running ApsaraDB for Redis instance.
+         *
+         * @param request RestartInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RestartInstanceResponse
+         */
         public async Task<RestartInstanceResponse> RestartInstanceWithOptionsAsync(RestartInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16049,12 +18528,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<RestartInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Restarts a running ApsaraDB for Redis instance.
+         *
+         * @param request RestartInstanceRequest
+         * @return RestartInstanceResponse
+         */
         public RestartInstanceResponse RestartInstance(RestartInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RestartInstanceWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Restarts a running ApsaraDB for Redis instance.
+         *
+         * @param request RestartInstanceRequest
+         * @return RestartInstanceResponse
+         */
         public async Task<RestartInstanceResponse> RestartInstanceAsync(RestartInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16062,12 +18553,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   If your instance is a [persistent memory-optimized instance](~~443828~~) or [DRAM-based instance](~~443827~~) that is compatible with Redis 5.0 and the [data flashback](~~443784~~) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
-          * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](~~60873~~) operation to create an instance. Then, you can restore data to the new instance.
-          *
-          * @param request RestoreInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RestoreInstanceResponse
+         * @summary Restores the data in a backup file to a specified ApsaraDB for Redis instance.
+         *
+         * @description *   If your instance is a [persistent memory-optimized instance](https://help.aliyun.com/document_detail/443828.html) or [DRAM-based instance](https://help.aliyun.com/document_detail/443827.html) that is compatible with Redis 5.0 and the [data flashback](https://help.aliyun.com/document_detail/443784.html) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
+         * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](https://help.aliyun.com/document_detail/60873.html) operation to create an instance. Then, you can restore data to the new instance.
+         *
+         * @param request RestoreInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RestoreInstanceResponse
          */
         public RestoreInstanceResponse RestoreInstanceWithOptions(RestoreInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16137,12 +18630,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   If your instance is a [persistent memory-optimized instance](~~443828~~) or [DRAM-based instance](~~443827~~) that is compatible with Redis 5.0 and the [data flashback](~~443784~~) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
-          * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](~~60873~~) operation to create an instance. Then, you can restore data to the new instance.
-          *
-          * @param request RestoreInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RestoreInstanceResponse
+         * @summary Restores the data in a backup file to a specified ApsaraDB for Redis instance.
+         *
+         * @description *   If your instance is a [persistent memory-optimized instance](https://help.aliyun.com/document_detail/443828.html) or [DRAM-based instance](https://help.aliyun.com/document_detail/443827.html) that is compatible with Redis 5.0 and the [data flashback](https://help.aliyun.com/document_detail/443784.html) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
+         * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](https://help.aliyun.com/document_detail/60873.html) operation to create an instance. Then, you can restore data to the new instance.
+         *
+         * @param request RestoreInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RestoreInstanceResponse
          */
         public async Task<RestoreInstanceResponse> RestoreInstanceWithOptionsAsync(RestoreInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16212,11 +18707,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   If your instance is a [persistent memory-optimized instance](~~443828~~) or [DRAM-based instance](~~443827~~) that is compatible with Redis 5.0 and the [data flashback](~~443784~~) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
-          * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](~~60873~~) operation to create an instance. Then, you can restore data to the new instance.
-          *
-          * @param request RestoreInstanceRequest
-          * @return RestoreInstanceResponse
+         * @summary Restores the data in a backup file to a specified ApsaraDB for Redis instance.
+         *
+         * @description *   If your instance is a [persistent memory-optimized instance](https://help.aliyun.com/document_detail/443828.html) or [DRAM-based instance](https://help.aliyun.com/document_detail/443827.html) that is compatible with Redis 5.0 and the [data flashback](https://help.aliyun.com/document_detail/443784.html) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
+         * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](https://help.aliyun.com/document_detail/60873.html) operation to create an instance. Then, you can restore data to the new instance.
+         *
+         * @param request RestoreInstanceRequest
+         * @return RestoreInstanceResponse
          */
         public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest request)
         {
@@ -16225,11 +18722,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   If your instance is a [persistent memory-optimized instance](~~443828~~) or [DRAM-based instance](~~443827~~) that is compatible with Redis 5.0 and the [data flashback](~~443784~~) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
-          * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](~~60873~~) operation to create an instance. Then, you can restore data to the new instance.
-          *
-          * @param request RestoreInstanceRequest
-          * @return RestoreInstanceResponse
+         * @summary Restores the data in a backup file to a specified ApsaraDB for Redis instance.
+         *
+         * @description *   If your instance is a [persistent memory-optimized instance](https://help.aliyun.com/document_detail/443828.html) or [DRAM-based instance](https://help.aliyun.com/document_detail/443827.html) that is compatible with Redis 5.0 and the [data flashback](https://help.aliyun.com/document_detail/443784.html) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
+         * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](https://help.aliyun.com/document_detail/60873.html) operation to create an instance. Then, you can restore data to the new instance.
+         *
+         * @param request RestoreInstanceRequest
+         * @return RestoreInstanceResponse
          */
         public async Task<RestoreInstanceResponse> RestoreInstanceAsync(RestoreInstanceRequest request)
         {
@@ -16238,15 +18737,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](~~164222~~).
-          * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](~~126164~~) instance that uses local disks.
-          * A call to this operation has the following impacts on your instance:
-          * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
-          * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
-          *
-          * @param request SwitchInstanceHARequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SwitchInstanceHAResponse
+         * @summary Performs a master-replica switchover to switch node roles. This operation is applicable to disaster recovery drills and nearby access to applications that are deployed across zones.
+         *
+         * @description > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](https://help.aliyun.com/document_detail/164222.html).
+         * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](https://help.aliyun.com/document_detail/126164.html) instance that uses local disks.
+         * A call to this operation has the following impacts on your instance:
+         * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
+         * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
+         *
+         * @param request SwitchInstanceHARequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SwitchInstanceHAResponse
          */
         public SwitchInstanceHAResponse SwitchInstanceHAWithOptions(SwitchInstanceHARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16308,15 +18809,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](~~164222~~).
-          * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](~~126164~~) instance that uses local disks.
-          * A call to this operation has the following impacts on your instance:
-          * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
-          * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
-          *
-          * @param request SwitchInstanceHARequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SwitchInstanceHAResponse
+         * @summary Performs a master-replica switchover to switch node roles. This operation is applicable to disaster recovery drills and nearby access to applications that are deployed across zones.
+         *
+         * @description > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](https://help.aliyun.com/document_detail/164222.html).
+         * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](https://help.aliyun.com/document_detail/126164.html) instance that uses local disks.
+         * A call to this operation has the following impacts on your instance:
+         * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
+         * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
+         *
+         * @param request SwitchInstanceHARequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SwitchInstanceHAResponse
          */
         public async Task<SwitchInstanceHAResponse> SwitchInstanceHAWithOptionsAsync(SwitchInstanceHARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16378,14 +18881,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](~~164222~~).
-          * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](~~126164~~) instance that uses local disks.
-          * A call to this operation has the following impacts on your instance:
-          * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
-          * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
-          *
-          * @param request SwitchInstanceHARequest
-          * @return SwitchInstanceHAResponse
+         * @summary Performs a master-replica switchover to switch node roles. This operation is applicable to disaster recovery drills and nearby access to applications that are deployed across zones.
+         *
+         * @description > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](https://help.aliyun.com/document_detail/164222.html).
+         * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](https://help.aliyun.com/document_detail/126164.html) instance that uses local disks.
+         * A call to this operation has the following impacts on your instance:
+         * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
+         * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
+         *
+         * @param request SwitchInstanceHARequest
+         * @return SwitchInstanceHAResponse
          */
         public SwitchInstanceHAResponse SwitchInstanceHA(SwitchInstanceHARequest request)
         {
@@ -16394,14 +18899,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](~~164222~~).
-          * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](~~126164~~) instance that uses local disks.
-          * A call to this operation has the following impacts on your instance:
-          * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
-          * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
-          *
-          * @param request SwitchInstanceHARequest
-          * @return SwitchInstanceHAResponse
+         * @summary Performs a master-replica switchover to switch node roles. This operation is applicable to disaster recovery drills and nearby access to applications that are deployed across zones.
+         *
+         * @description > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](https://help.aliyun.com/document_detail/164222.html).
+         * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](https://help.aliyun.com/document_detail/126164.html) instance that uses local disks.
+         * A call to this operation has the following impacts on your instance:
+         * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
+         * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
+         *
+         * @param request SwitchInstanceHARequest
+         * @return SwitchInstanceHAResponse
          */
         public async Task<SwitchInstanceHAResponse> SwitchInstanceHAAsync(SwitchInstanceHARequest request)
         {
@@ -16410,14 +18917,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about the proxy mode, see [Features of proxy nodes](~~142959~~). Before you call this operation, make sure that the following requirements are met:
-          * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
-          * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
-          * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](~~229522~~) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
-          *
-          * @param request SwitchInstanceProxyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SwitchInstanceProxyResponse
+         * @summary Enables or disables the proxy mode for an ApsaraDB for Redis cluster instance in a dedicated cluster.
+         *
+         * @description For more information about the proxy mode, see [Features of proxy nodes](https://help.aliyun.com/document_detail/142959.html). Before you call this operation, make sure that the following requirements are met:
+         * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
+         * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](https://help.aliyun.com/document_detail/52228.html).
+         * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](https://help.aliyun.com/document_detail/229522.html) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
+         *
+         * @param request SwitchInstanceProxyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SwitchInstanceProxyResponse
          */
         public SwitchInstanceProxyResponse SwitchInstanceProxyWithOptions(SwitchInstanceProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16467,14 +18976,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about the proxy mode, see [Features of proxy nodes](~~142959~~). Before you call this operation, make sure that the following requirements are met:
-          * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
-          * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
-          * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](~~229522~~) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
-          *
-          * @param request SwitchInstanceProxyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SwitchInstanceProxyResponse
+         * @summary Enables or disables the proxy mode for an ApsaraDB for Redis cluster instance in a dedicated cluster.
+         *
+         * @description For more information about the proxy mode, see [Features of proxy nodes](https://help.aliyun.com/document_detail/142959.html). Before you call this operation, make sure that the following requirements are met:
+         * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
+         * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](https://help.aliyun.com/document_detail/52228.html).
+         * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](https://help.aliyun.com/document_detail/229522.html) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
+         *
+         * @param request SwitchInstanceProxyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SwitchInstanceProxyResponse
          */
         public async Task<SwitchInstanceProxyResponse> SwitchInstanceProxyWithOptionsAsync(SwitchInstanceProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16524,13 +19035,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about the proxy mode, see [Features of proxy nodes](~~142959~~). Before you call this operation, make sure that the following requirements are met:
-          * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
-          * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
-          * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](~~229522~~) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
-          *
-          * @param request SwitchInstanceProxyRequest
-          * @return SwitchInstanceProxyResponse
+         * @summary Enables or disables the proxy mode for an ApsaraDB for Redis cluster instance in a dedicated cluster.
+         *
+         * @description For more information about the proxy mode, see [Features of proxy nodes](https://help.aliyun.com/document_detail/142959.html). Before you call this operation, make sure that the following requirements are met:
+         * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
+         * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](https://help.aliyun.com/document_detail/52228.html).
+         * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](https://help.aliyun.com/document_detail/229522.html) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
+         *
+         * @param request SwitchInstanceProxyRequest
+         * @return SwitchInstanceProxyResponse
          */
         public SwitchInstanceProxyResponse SwitchInstanceProxy(SwitchInstanceProxyRequest request)
         {
@@ -16539,13 +19052,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about the proxy mode, see [Features of proxy nodes](~~142959~~). Before you call this operation, make sure that the following requirements are met:
-          * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
-          * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
-          * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](~~229522~~) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
-          *
-          * @param request SwitchInstanceProxyRequest
-          * @return SwitchInstanceProxyResponse
+         * @summary Enables or disables the proxy mode for an ApsaraDB for Redis cluster instance in a dedicated cluster.
+         *
+         * @description For more information about the proxy mode, see [Features of proxy nodes](https://help.aliyun.com/document_detail/142959.html). Before you call this operation, make sure that the following requirements are met:
+         * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
+         * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](https://help.aliyun.com/document_detail/52228.html).
+         * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](https://help.aliyun.com/document_detail/229522.html) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
+         *
+         * @param request SwitchInstanceProxyRequest
+         * @return SwitchInstanceProxyResponse
          */
         public async Task<SwitchInstanceProxyResponse> SwitchInstanceProxyAsync(SwitchInstanceProxyRequest request)
         {
@@ -16553,6 +19068,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await SwitchInstanceProxyWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Changes the virtual private cloud (VPC) or vSwitch of an ApsaraDB for Redis instance. If the instance is deployed in the classic network, the network type of the instance is changed from the classic network to VPC.
+         *
+         * @param request SwitchNetworkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SwitchNetworkResponse
+         */
         public SwitchNetworkResponse SwitchNetworkWithOptions(SwitchNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16620,6 +19142,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<SwitchNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the virtual private cloud (VPC) or vSwitch of an ApsaraDB for Redis instance. If the instance is deployed in the classic network, the network type of the instance is changed from the classic network to VPC.
+         *
+         * @param request SwitchNetworkRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SwitchNetworkResponse
+         */
         public async Task<SwitchNetworkResponse> SwitchNetworkWithOptionsAsync(SwitchNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16687,18 +19216,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<SwitchNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Changes the virtual private cloud (VPC) or vSwitch of an ApsaraDB for Redis instance. If the instance is deployed in the classic network, the network type of the instance is changed from the classic network to VPC.
+         *
+         * @param request SwitchNetworkRequest
+         * @return SwitchNetworkResponse
+         */
         public SwitchNetworkResponse SwitchNetwork(SwitchNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchNetworkWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Changes the virtual private cloud (VPC) or vSwitch of an ApsaraDB for Redis instance. If the instance is deployed in the classic network, the network type of the instance is changed from the classic network to VPC.
+         *
+         * @param request SwitchNetworkRequest
+         * @return SwitchNetworkResponse
+         */
         public async Task<SwitchNetworkResponse> SwitchNetworkAsync(SwitchNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchNetworkWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Disables configuration changes for an ApsaraDB for Redis instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to the configuration change.
+         *
+         * @param request SyncDtsStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SyncDtsStatusResponse
+         */
         public SyncDtsStatusResponse SyncDtsStatusWithOptions(SyncDtsStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16758,6 +19306,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<SyncDtsStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Disables configuration changes for an ApsaraDB for Redis instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to the configuration change.
+         *
+         * @param request SyncDtsStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SyncDtsStatusResponse
+         */
         public async Task<SyncDtsStatusResponse> SyncDtsStatusWithOptionsAsync(SyncDtsStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16817,12 +19372,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<SyncDtsStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Disables configuration changes for an ApsaraDB for Redis instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to the configuration change.
+         *
+         * @param request SyncDtsStatusRequest
+         * @return SyncDtsStatusResponse
+         */
         public SyncDtsStatusResponse SyncDtsStatus(SyncDtsStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SyncDtsStatusWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Disables configuration changes for an ApsaraDB for Redis instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to the configuration change.
+         *
+         * @param request SyncDtsStatusRequest
+         * @return SyncDtsStatusResponse
+         */
         public async Task<SyncDtsStatusResponse> SyncDtsStatusAsync(SyncDtsStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16830,17 +19397,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
-          * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-          * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
-          * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
-          * *   You can add up to 20 tags to each instance.
-          * *   You can add tags to up to 50 instances in each request.
-          * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](~~118779~~).
-          *
-          * @param request TagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TagResourcesResponse
+         * @summary Adds specified tags to one or more ApsaraDB for Redis instances.
+         *
+         * @description If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
+         * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+         * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+         * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+         * *   You can add up to 20 tags to each instance.
+         * *   You can add tags to up to 50 instances in each request.
+         * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](https://help.aliyun.com/document_detail/118779.html).
+         *
+         * @param request TagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TagResourcesResponse
          */
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16898,17 +19467,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
-          * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-          * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
-          * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
-          * *   You can add up to 20 tags to each instance.
-          * *   You can add tags to up to 50 instances in each request.
-          * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](~~118779~~).
-          *
-          * @param request TagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TagResourcesResponse
+         * @summary Adds specified tags to one or more ApsaraDB for Redis instances.
+         *
+         * @description If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
+         * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+         * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+         * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+         * *   You can add up to 20 tags to each instance.
+         * *   You can add tags to up to 50 instances in each request.
+         * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](https://help.aliyun.com/document_detail/118779.html).
+         *
+         * @param request TagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TagResourcesResponse
          */
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16966,16 +19537,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
-          * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-          * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
-          * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
-          * *   You can add up to 20 tags to each instance.
-          * *   You can add tags to up to 50 instances in each request.
-          * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](~~118779~~).
-          *
-          * @param request TagResourcesRequest
-          * @return TagResourcesResponse
+         * @summary Adds specified tags to one or more ApsaraDB for Redis instances.
+         *
+         * @description If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
+         * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+         * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+         * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+         * *   You can add up to 20 tags to each instance.
+         * *   You can add tags to up to 50 instances in each request.
+         * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](https://help.aliyun.com/document_detail/118779.html).
+         *
+         * @param request TagResourcesRequest
+         * @return TagResourcesResponse
          */
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
@@ -16984,16 +19557,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
-          * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-          * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
-          * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
-          * *   You can add up to 20 tags to each instance.
-          * *   You can add tags to up to 50 instances in each request.
-          * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](~~118779~~).
-          *
-          * @param request TagResourcesRequest
-          * @return TagResourcesResponse
+         * @summary Adds specified tags to one or more ApsaraDB for Redis instances.
+         *
+         * @description If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
+         * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+         * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+         * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+         * *   You can add up to 20 tags to each instance.
+         * *   You can add tags to up to 50 instances in each request.
+         * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](https://help.aliyun.com/document_detail/118779.html).
+         *
+         * @param request TagResourcesRequest
+         * @return TagResourcesResponse
          */
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
@@ -17002,13 +19577,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
-          * *   [Change the billing method to subscription](~~54542~~).
-          * *   [Change the billing method to pay-as-you-go](~~211549~~).
-          *
-          * @param request TransformInstanceChargeTypeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TransformInstanceChargeTypeResponse
+         * @summary Changes the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.
+         *
+         * @description Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
+         * *   [Change the billing method to subscription](https://help.aliyun.com/document_detail/54542.html).
+         * *   [Change the billing method to pay-as-you-go](https://help.aliyun.com/document_detail/211549.html).
+         *
+         * @param request TransformInstanceChargeTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TransformInstanceChargeTypeResponse
          */
         public TransformInstanceChargeTypeResponse TransformInstanceChargeTypeWithOptions(TransformInstanceChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17078,13 +19655,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
-          * *   [Change the billing method to subscription](~~54542~~).
-          * *   [Change the billing method to pay-as-you-go](~~211549~~).
-          *
-          * @param request TransformInstanceChargeTypeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TransformInstanceChargeTypeResponse
+         * @summary Changes the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.
+         *
+         * @description Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
+         * *   [Change the billing method to subscription](https://help.aliyun.com/document_detail/54542.html).
+         * *   [Change the billing method to pay-as-you-go](https://help.aliyun.com/document_detail/211549.html).
+         *
+         * @param request TransformInstanceChargeTypeRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TransformInstanceChargeTypeResponse
          */
         public async Task<TransformInstanceChargeTypeResponse> TransformInstanceChargeTypeWithOptionsAsync(TransformInstanceChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17154,12 +19733,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
-          * *   [Change the billing method to subscription](~~54542~~).
-          * *   [Change the billing method to pay-as-you-go](~~211549~~).
-          *
-          * @param request TransformInstanceChargeTypeRequest
-          * @return TransformInstanceChargeTypeResponse
+         * @summary Changes the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.
+         *
+         * @description Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
+         * *   [Change the billing method to subscription](https://help.aliyun.com/document_detail/54542.html).
+         * *   [Change the billing method to pay-as-you-go](https://help.aliyun.com/document_detail/211549.html).
+         *
+         * @param request TransformInstanceChargeTypeRequest
+         * @return TransformInstanceChargeTypeResponse
          */
         public TransformInstanceChargeTypeResponse TransformInstanceChargeType(TransformInstanceChargeTypeRequest request)
         {
@@ -17168,12 +19749,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
-          * *   [Change the billing method to subscription](~~54542~~).
-          * *   [Change the billing method to pay-as-you-go](~~211549~~).
-          *
-          * @param request TransformInstanceChargeTypeRequest
-          * @return TransformInstanceChargeTypeResponse
+         * @summary Changes the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.
+         *
+         * @description Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
+         * *   [Change the billing method to subscription](https://help.aliyun.com/document_detail/54542.html).
+         * *   [Change the billing method to pay-as-you-go](https://help.aliyun.com/document_detail/211549.html).
+         *
+         * @param request TransformInstanceChargeTypeRequest
+         * @return TransformInstanceChargeTypeResponse
          */
         public async Task<TransformInstanceChargeTypeResponse> TransformInstanceChargeTypeAsync(TransformInstanceChargeTypeRequest request)
         {
@@ -17182,12 +19765,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](~~54542~~).
-          * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
-          *
-          * @param request TransformToPrePaidRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TransformToPrePaidResponse
+         * @summary Changes the billing method of an ApsaraDB for Redis instance from pay-as-you-go to subscription.
+         *
+         * @description For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](https://help.aliyun.com/document_detail/54542.html).
+         * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
+         *
+         * @param request TransformToPrePaidRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TransformToPrePaidResponse
          */
         public TransformToPrePaidResponse TransformToPrePaidWithOptions(TransformToPrePaidRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17245,12 +19830,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](~~54542~~).
-          * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
-          *
-          * @param request TransformToPrePaidRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TransformToPrePaidResponse
+         * @summary Changes the billing method of an ApsaraDB for Redis instance from pay-as-you-go to subscription.
+         *
+         * @description For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](https://help.aliyun.com/document_detail/54542.html).
+         * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
+         *
+         * @param request TransformToPrePaidRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return TransformToPrePaidResponse
          */
         public async Task<TransformToPrePaidResponse> TransformToPrePaidWithOptionsAsync(TransformToPrePaidRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17308,11 +19895,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](~~54542~~).
-          * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
-          *
-          * @param request TransformToPrePaidRequest
-          * @return TransformToPrePaidResponse
+         * @summary Changes the billing method of an ApsaraDB for Redis instance from pay-as-you-go to subscription.
+         *
+         * @description For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](https://help.aliyun.com/document_detail/54542.html).
+         * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
+         *
+         * @param request TransformToPrePaidRequest
+         * @return TransformToPrePaidResponse
          */
         public TransformToPrePaidResponse TransformToPrePaid(TransformToPrePaidRequest request)
         {
@@ -17321,11 +19910,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](~~54542~~).
-          * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
-          *
-          * @param request TransformToPrePaidRequest
-          * @return TransformToPrePaidResponse
+         * @summary Changes the billing method of an ApsaraDB for Redis instance from pay-as-you-go to subscription.
+         *
+         * @description For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](https://help.aliyun.com/document_detail/54542.html).
+         * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
+         *
+         * @param request TransformToPrePaidRequest
+         * @return TransformToPrePaidResponse
          */
         public async Task<TransformToPrePaidResponse> TransformToPrePaidAsync(TransformToPrePaidRequest request)
         {
@@ -17333,6 +19924,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await TransformToPrePaidWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Removes the write lock from an instance. After the instance is unlocked, it supports both read and write operations.
+         *
+         * @param request UnlockDBInstanceWriteRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnlockDBInstanceWriteResponse
+         */
         public UnlockDBInstanceWriteResponse UnlockDBInstanceWriteWithOptions(UnlockDBInstanceWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17380,6 +19978,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<UnlockDBInstanceWriteResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes the write lock from an instance. After the instance is unlocked, it supports both read and write operations.
+         *
+         * @param request UnlockDBInstanceWriteRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UnlockDBInstanceWriteResponse
+         */
         public async Task<UnlockDBInstanceWriteResponse> UnlockDBInstanceWriteWithOptionsAsync(UnlockDBInstanceWriteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17427,12 +20032,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return TeaModel.ToObject<UnlockDBInstanceWriteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Removes the write lock from an instance. After the instance is unlocked, it supports both read and write operations.
+         *
+         * @param request UnlockDBInstanceWriteRequest
+         * @return UnlockDBInstanceWriteResponse
+         */
         public UnlockDBInstanceWriteResponse UnlockDBInstanceWrite(UnlockDBInstanceWriteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnlockDBInstanceWriteWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Removes the write lock from an instance. After the instance is unlocked, it supports both read and write operations.
+         *
+         * @param request UnlockDBInstanceWriteRequest
+         * @return UnlockDBInstanceWriteResponse
+         */
         public async Task<UnlockDBInstanceWriteResponse> UnlockDBInstanceWriteAsync(UnlockDBInstanceWriteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17440,13 +20057,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   You can remove up to 20 tags at a time.
-          * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
-          * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](~~119157~~).
-          *
-          * @param request UntagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UntagResourcesResponse
+         * @summary Removes tags from one or more ApsaraDB for Redis instances.
+         *
+         * @description *   You can remove up to 20 tags at a time.
+         * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
+         * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](https://help.aliyun.com/document_detail/119157.html).
+         *
+         * @param request UntagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UntagResourcesResponse
          */
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17508,13 +20127,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   You can remove up to 20 tags at a time.
-          * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
-          * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](~~119157~~).
-          *
-          * @param request UntagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UntagResourcesResponse
+         * @summary Removes tags from one or more ApsaraDB for Redis instances.
+         *
+         * @description *   You can remove up to 20 tags at a time.
+         * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
+         * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](https://help.aliyun.com/document_detail/119157.html).
+         *
+         * @param request UntagResourcesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UntagResourcesResponse
          */
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17576,12 +20197,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   You can remove up to 20 tags at a time.
-          * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
-          * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](~~119157~~).
-          *
-          * @param request UntagResourcesRequest
-          * @return UntagResourcesResponse
+         * @summary Removes tags from one or more ApsaraDB for Redis instances.
+         *
+         * @description *   You can remove up to 20 tags at a time.
+         * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
+         * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](https://help.aliyun.com/document_detail/119157.html).
+         *
+         * @param request UntagResourcesRequest
+         * @return UntagResourcesResponse
          */
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
@@ -17590,12 +20213,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         }
 
         /**
-          * *   You can remove up to 20 tags at a time.
-          * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
-          * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](~~119157~~).
-          *
-          * @param request UntagResourcesRequest
-          * @return UntagResourcesResponse
+         * @summary Removes tags from one or more ApsaraDB for Redis instances.
+         *
+         * @description *   You can remove up to 20 tags at a time.
+         * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
+         * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](https://help.aliyun.com/document_detail/119157.html).
+         *
+         * @param request UntagResourcesRequest
+         * @return UntagResourcesResponse
          */
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {

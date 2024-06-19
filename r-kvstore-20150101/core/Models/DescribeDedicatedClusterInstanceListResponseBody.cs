@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// 
             /// *   If the return value is **0**, the proxy mode is disabled for the instance. If the return value is an integer greater than **0**, such as **1**, the proxy mode is enabled for the instance.
             /// 
-            /// *   This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see [Cluster master-replica instances](~~52228~~).
+            /// *   This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see [Cluster master-replica instances](https://help.aliyun.com/document_detail/52228.html).
             /// </summary>
             [NameInMap("ProxyCount")]
             [Validation(Required=false)]
@@ -242,14 +242,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// The number of shards.
             /// 
-            /// >  This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see [Cluster master-replica instances](~~52228~~).
+            /// >  This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see [Cluster master-replica instances](https://help.aliyun.com/document_detail/52228.html).
             /// </summary>
             [NameInMap("ShardCount")]
             [Validation(Required=false)]
             public int? ShardCount { get; set; }
 
             /// <summary>
-            /// The storage type of the instance. The return value is LOCAL_SSD, which indicates [enhanced SSDs (ESSDs)](~~122389~~).
+            /// The storage type of the instance. The return value is LOCAL_SSD, which indicates [enhanced SSDs (ESSDs)](https://help.aliyun.com/document_detail/122389.html).
             /// </summary>
             [NameInMap("StorageType")]
             [Validation(Required=false)]

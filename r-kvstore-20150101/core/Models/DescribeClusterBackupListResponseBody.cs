@@ -124,6 +124,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string IsAvail { get; set; }
 
+                [NameInMap("RecoverConfigMode")]
+                [Validation(Required=false)]
+                public string RecoverConfigMode { get; set; }
+
             }
 
             /// <summary>

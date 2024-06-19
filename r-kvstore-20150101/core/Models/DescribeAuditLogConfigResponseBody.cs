@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// *   **true**: enabled
         /// *   **false**: disabled
         /// 
-        /// > You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance.
+        /// > You can call the [ModifyAuditLogConfig](https://help.aliyun.com/document_detail/130206.html) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance.
         /// </summary>
         [NameInMap("DbAudit")]
         [Validation(Required=false)]

@@ -16,14 +16,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// 
         /// *   This parameter is available and required only when the **RetainClassic** parameter is set to **True**.
         /// 
-        /// *   After you complete the switchover operation, you can also call the [ModifyInstanceNetExpireTime](~~61010~~) operation to modify the retention period of the classic network endpoint.
+        /// *   After you complete the switchover operation, you can also call the [ModifyInstanceNetExpireTime](https://help.aliyun.com/document_detail/61010.html) operation to modify the retention period of the classic network endpoint.
         /// </summary>
         [NameInMap("ClassicExpiredDays")]
         [Validation(Required=false)]
         public string ClassicExpiredDays { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+        /// The ID of the instance. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/60933.html) operation to query the ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string TargetNetworkType { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query the VPC ID.
+        /// The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the [DescribeVpcs](https://help.aliyun.com/document_detail/35739.html) operation to query the VPC ID.
         /// 
         /// > The vSwitch and the ApsaraDB for Redis instance must be deployed in the same zone.
         /// </summary>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query the VPC ID.
+        /// The ID of the VPC to which you want to switch. You can call the [DescribeVpcs](https://help.aliyun.com/document_detail/35739.html) operation to query the VPC ID.
         /// 
         /// > 
         /// 

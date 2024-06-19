@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// The number of days for which data backup files are retained. Valid values: 7 to 730. Default value: 7.
+        /// The number of days for which you want to retain data backup files. Valid values: 7 to 730. Default value: 7.
         /// </summary>
         [NameInMap("BackupRetentionPeriod")]
         [Validation(Required=false)]
         public int? BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable incremental data backup. Default value: 0. Valid values:
+        /// Enables or disables the data flashback feature for the instance. Valid values:
         /// 
-        /// *   **1**: enables incremental data backup.
-        /// *   **0**: disables incremental data backup.
-        /// >This parameter is available only for ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).
+        /// *   **1**: enables the data flashback feature. You must also enable AOF persistence by setting `appendonly` to `yes` in the parameter settings of the instance. Then, you can use the data flashback feature.
+        /// *   **0** (default): disables the data flashback feature.
+        /// 
+        /// >  This parameter is available only for ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](https://help.aliyun.com/document_detail/443784.html).
         /// </summary>
         [NameInMap("EnableBackupLog")]
         [Validation(Required=false)]
@@ -29,6 +30,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -54,6 +57,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// *   **Sunday**
         /// 
         /// > Separate multiple options with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PreferredBackupPeriod")]
         [Validation(Required=false)]
@@ -63,6 +68,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// The time range to back up data. Specify the time in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.
         /// 
         /// > The beginning and end of the time range must be on the hour. The duration must be an hour.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PreferredBackupTime")]
         [Validation(Required=false)]
