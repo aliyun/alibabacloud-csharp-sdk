@@ -2841,6 +2841,114 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
+         * @summary 获取API安全日志订阅列表
+         *
+         * @param request DescribeApisecLogDeliveriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeApisecLogDeliveriesResponse
+         */
+        public DescribeApisecLogDeliveriesResponse DescribeApisecLogDeliveriesWithOptions(DescribeApisecLogDeliveriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecLogDeliveries",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecLogDeliveriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取API安全日志订阅列表
+         *
+         * @param request DescribeApisecLogDeliveriesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeApisecLogDeliveriesResponse
+         */
+        public async Task<DescribeApisecLogDeliveriesResponse> DescribeApisecLogDeliveriesWithOptionsAsync(DescribeApisecLogDeliveriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecLogDeliveries",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecLogDeliveriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取API安全日志订阅列表
+         *
+         * @param request DescribeApisecLogDeliveriesRequest
+         * @return DescribeApisecLogDeliveriesResponse
+         */
+        public DescribeApisecLogDeliveriesResponse DescribeApisecLogDeliveries(DescribeApisecLogDeliveriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecLogDeliveriesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取API安全日志订阅列表
+         *
+         * @param request DescribeApisecLogDeliveriesRequest
+         * @return DescribeApisecLogDeliveriesResponse
+         */
+        public async Task<DescribeApisecLogDeliveriesResponse> DescribeApisecLogDeliveriesAsync(DescribeApisecLogDeliveriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecLogDeliveriesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 查询API安全敏感数据类型统计
          *
          * @param request DescribeApisecSensitiveDomainStatisticRequest
@@ -3010,6 +3118,246 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeApisecSensitiveDomainStatisticWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询日志服务SLS的LogStore列表
+         *
+         * @param request DescribeApisecSlsLogStoresRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeApisecSlsLogStoresResponse
+         */
+        public DescribeApisecSlsLogStoresResponse DescribeApisecSlsLogStoresWithOptions(DescribeApisecSlsLogStoresRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogRegionId))
+            {
+                query["LogRegionId"] = request.LogRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecSlsLogStores",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecSlsLogStoresResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询日志服务SLS的LogStore列表
+         *
+         * @param request DescribeApisecSlsLogStoresRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeApisecSlsLogStoresResponse
+         */
+        public async Task<DescribeApisecSlsLogStoresResponse> DescribeApisecSlsLogStoresWithOptionsAsync(DescribeApisecSlsLogStoresRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogRegionId))
+            {
+                query["LogRegionId"] = request.LogRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecSlsLogStores",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecSlsLogStoresResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询日志服务SLS的LogStore列表
+         *
+         * @param request DescribeApisecSlsLogStoresRequest
+         * @return DescribeApisecSlsLogStoresResponse
+         */
+        public DescribeApisecSlsLogStoresResponse DescribeApisecSlsLogStores(DescribeApisecSlsLogStoresRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecSlsLogStoresWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询日志服务SLS的LogStore列表
+         *
+         * @param request DescribeApisecSlsLogStoresRequest
+         * @return DescribeApisecSlsLogStoresResponse
+         */
+        public async Task<DescribeApisecSlsLogStoresResponse> DescribeApisecSlsLogStoresAsync(DescribeApisecSlsLogStoresRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecSlsLogStoresWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询日志服务SLS的Project列表
+         *
+         * @param request DescribeApisecSlsProjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeApisecSlsProjectsResponse
+         */
+        public DescribeApisecSlsProjectsResponse DescribeApisecSlsProjectsWithOptions(DescribeApisecSlsProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogRegionId))
+            {
+                query["LogRegionId"] = request.LogRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecSlsProjects",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecSlsProjectsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询日志服务SLS的Project列表
+         *
+         * @param request DescribeApisecSlsProjectsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeApisecSlsProjectsResponse
+         */
+        public async Task<DescribeApisecSlsProjectsResponse> DescribeApisecSlsProjectsWithOptionsAsync(DescribeApisecSlsProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogRegionId))
+            {
+                query["LogRegionId"] = request.LogRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisecSlsProjects",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisecSlsProjectsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询日志服务SLS的Project列表
+         *
+         * @param request DescribeApisecSlsProjectsRequest
+         * @return DescribeApisecSlsProjectsResponse
+         */
+        public DescribeApisecSlsProjectsResponse DescribeApisecSlsProjects(DescribeApisecSlsProjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApisecSlsProjectsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询日志服务SLS的Project列表
+         *
+         * @param request DescribeApisecSlsProjectsRequest
+         * @return DescribeApisecSlsProjectsResponse
+         */
+        public async Task<DescribeApisecSlsProjectsResponse> DescribeApisecSlsProjectsAsync(DescribeApisecSlsProjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApisecSlsProjectsWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -10242,6 +10590,270 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagValuesWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 修改API安全日志订阅
+         *
+         * @param request ModifyApisecLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyApisecLogDeliveryResponse
+         */
+        public ModifyApisecLogDeliveryResponse ModifyApisecLogDeliveryWithOptions(ModifyApisecLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssertKey))
+            {
+                query["AssertKey"] = request.AssertKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogRegionId))
+            {
+                query["LogRegionId"] = request.LogRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStoreName))
+            {
+                query["LogStoreName"] = request.LogStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecLogDelivery",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecLogDeliveryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改API安全日志订阅
+         *
+         * @param request ModifyApisecLogDeliveryRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyApisecLogDeliveryResponse
+         */
+        public async Task<ModifyApisecLogDeliveryResponse> ModifyApisecLogDeliveryWithOptionsAsync(ModifyApisecLogDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssertKey))
+            {
+                query["AssertKey"] = request.AssertKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogRegionId))
+            {
+                query["LogRegionId"] = request.LogRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStoreName))
+            {
+                query["LogStoreName"] = request.LogStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecLogDelivery",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecLogDeliveryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改API安全日志订阅
+         *
+         * @param request ModifyApisecLogDeliveryRequest
+         * @return ModifyApisecLogDeliveryResponse
+         */
+        public ModifyApisecLogDeliveryResponse ModifyApisecLogDelivery(ModifyApisecLogDeliveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyApisecLogDeliveryWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 修改API安全日志订阅
+         *
+         * @param request ModifyApisecLogDeliveryRequest
+         * @return ModifyApisecLogDeliveryResponse
+         */
+        public async Task<ModifyApisecLogDeliveryResponse> ModifyApisecLogDeliveryAsync(ModifyApisecLogDeliveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyApisecLogDeliveryWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 修改API安全日志订阅状态
+         *
+         * @param request ModifyApisecLogDeliveryStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyApisecLogDeliveryStatusResponse
+         */
+        public ModifyApisecLogDeliveryStatusResponse ModifyApisecLogDeliveryStatusWithOptions(ModifyApisecLogDeliveryStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssertKey))
+            {
+                query["AssertKey"] = request.AssertKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecLogDeliveryStatus",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecLogDeliveryStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改API安全日志订阅状态
+         *
+         * @param request ModifyApisecLogDeliveryStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyApisecLogDeliveryStatusResponse
+         */
+        public async Task<ModifyApisecLogDeliveryStatusResponse> ModifyApisecLogDeliveryStatusWithOptionsAsync(ModifyApisecLogDeliveryStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssertKey))
+            {
+                query["AssertKey"] = request.AssertKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApisecLogDeliveryStatus",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApisecLogDeliveryStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改API安全日志订阅状态
+         *
+         * @param request ModifyApisecLogDeliveryStatusRequest
+         * @return ModifyApisecLogDeliveryStatusResponse
+         */
+        public ModifyApisecLogDeliveryStatusResponse ModifyApisecLogDeliveryStatus(ModifyApisecLogDeliveryStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyApisecLogDeliveryStatusWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 修改API安全日志订阅状态
+         *
+         * @param request ModifyApisecLogDeliveryStatusRequest
+         * @return ModifyApisecLogDeliveryStatusResponse
+         */
+        public async Task<ModifyApisecLogDeliveryStatusResponse> ModifyApisecLogDeliveryStatusAsync(ModifyApisecLogDeliveryStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyApisecLogDeliveryStatusWithOptionsAsync(request, runtime);
         }
 
         /**

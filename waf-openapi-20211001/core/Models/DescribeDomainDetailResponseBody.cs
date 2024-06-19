@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </summary>
             [NameInMap("SM2CertId")]
             [Validation(Required=false)]
-            public bool? SM2CertId { get; set; }
+            public string SM2CertId { get; set; }
 
             /// <summary>
             /// Indicates whether SM certificate-based verification is enabled. Valid values:
