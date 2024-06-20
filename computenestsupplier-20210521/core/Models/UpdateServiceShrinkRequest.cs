@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string AlarmMetadata { get; set; }
 
+        [NameInMap("ApprovalType")]
+        [Validation(Required=false)]
+        public string ApprovalType { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -114,6 +118,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("ServiceVersion")]
         [Validation(Required=false)]
         public string ServiceVersion { get; set; }
+
+        [NameInMap("ShareType")]
+        [Validation(Required=false)]
+        public string ShareType { get; set; }
 
         [NameInMap("TenantType")]
         [Validation(Required=false)]

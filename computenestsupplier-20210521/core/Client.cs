@@ -3908,6 +3908,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             {
                 query["AlarmMetadata"] = request.AlarmMetadata;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalType))
+            {
+                query["ApprovalType"] = request.ApprovalType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -3967,6 +3971,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
             {
                 query["ServiceVersion"] = request.ServiceVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareType))
+            {
+                query["ShareType"] = request.ShareType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantType))
             {
@@ -4026,6 +4034,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             {
                 query["AlarmMetadata"] = request.AlarmMetadata;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalType))
+            {
+                query["ApprovalType"] = request.ApprovalType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -4085,6 +4097,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
             {
                 query["ServiceVersion"] = request.ServiceVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareType))
+            {
+                query["ShareType"] = request.ShareType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantType))
             {
