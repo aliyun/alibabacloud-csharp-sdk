@@ -1342,6 +1342,586 @@ namespace AlibabaCloud.SDK.Csas20230120
         }
 
         /**
+         * @summary 创建数字水印暗水印透明底图
+         *
+         * @param request CreateWmBaseImageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWmBaseImageResponse
+         */
+        public CreateWmBaseImageResponse CreateWmBaseImageWithOptions(CreateWmBaseImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
+            {
+                body["Height"] = request.Height;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Opacity))
+            {
+                body["Opacity"] = request.Opacity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scale))
+            {
+                body["Scale"] = request.Scale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Width))
+            {
+                body["Width"] = request.Width;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoBytesB64))
+            {
+                body["WmInfoBytesB64"] = request.WmInfoBytesB64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoSize))
+            {
+                body["WmInfoSize"] = request.WmInfoSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoUint))
+            {
+                body["WmInfoUint"] = request.WmInfoUint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmType))
+            {
+                body["WmType"] = request.WmType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWmBaseImage",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWmBaseImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建数字水印暗水印透明底图
+         *
+         * @param request CreateWmBaseImageRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWmBaseImageResponse
+         */
+        public async Task<CreateWmBaseImageResponse> CreateWmBaseImageWithOptionsAsync(CreateWmBaseImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
+            {
+                body["Height"] = request.Height;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Opacity))
+            {
+                body["Opacity"] = request.Opacity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scale))
+            {
+                body["Scale"] = request.Scale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Width))
+            {
+                body["Width"] = request.Width;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoBytesB64))
+            {
+                body["WmInfoBytesB64"] = request.WmInfoBytesB64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoSize))
+            {
+                body["WmInfoSize"] = request.WmInfoSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoUint))
+            {
+                body["WmInfoUint"] = request.WmInfoUint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmType))
+            {
+                body["WmType"] = request.WmType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWmBaseImage",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWmBaseImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建数字水印暗水印透明底图
+         *
+         * @param request CreateWmBaseImageRequest
+         * @return CreateWmBaseImageResponse
+         */
+        public CreateWmBaseImageResponse CreateWmBaseImage(CreateWmBaseImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateWmBaseImageWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建数字水印暗水印透明底图
+         *
+         * @param request CreateWmBaseImageRequest
+         * @return CreateWmBaseImageResponse
+         */
+        public async Task<CreateWmBaseImageResponse> CreateWmBaseImageAsync(CreateWmBaseImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateWmBaseImageWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 创建嵌入水印任务
+         *
+         * @param tmpReq CreateWmEmbedTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWmEmbedTaskResponse
+         */
+        public CreateWmEmbedTaskResponse CreateWmEmbedTaskWithOptions(CreateWmEmbedTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateWmEmbedTaskShrinkRequest request = new CreateWmEmbedTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DocumentControl))
+            {
+                request.DocumentControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentControl, "DocumentControl", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentControlShrink))
+            {
+                body["DocumentControl"] = request.DocumentControlShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
+            {
+                body["Filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageEmbedJpegQuality))
+            {
+                body["ImageEmbedJpegQuality"] = request.ImageEmbedJpegQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageEmbedLevel))
+            {
+                body["ImageEmbedLevel"] = request.ImageEmbedLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoBitrate))
+            {
+                body["VideoBitrate"] = request.VideoBitrate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoIsLong))
+            {
+                body["VideoIsLong"] = request.VideoIsLong;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoBytesB64))
+            {
+                body["WmInfoBytesB64"] = request.WmInfoBytesB64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoSize))
+            {
+                body["WmInfoSize"] = request.WmInfoSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoUint))
+            {
+                body["WmInfoUint"] = request.WmInfoUint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmType))
+            {
+                body["WmType"] = request.WmType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWmEmbedTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWmEmbedTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建嵌入水印任务
+         *
+         * @param tmpReq CreateWmEmbedTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWmEmbedTaskResponse
+         */
+        public async Task<CreateWmEmbedTaskResponse> CreateWmEmbedTaskWithOptionsAsync(CreateWmEmbedTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateWmEmbedTaskShrinkRequest request = new CreateWmEmbedTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DocumentControl))
+            {
+                request.DocumentControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentControl, "DocumentControl", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentControlShrink))
+            {
+                body["DocumentControl"] = request.DocumentControlShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
+            {
+                body["Filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageEmbedJpegQuality))
+            {
+                body["ImageEmbedJpegQuality"] = request.ImageEmbedJpegQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageEmbedLevel))
+            {
+                body["ImageEmbedLevel"] = request.ImageEmbedLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoBitrate))
+            {
+                body["VideoBitrate"] = request.VideoBitrate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoIsLong))
+            {
+                body["VideoIsLong"] = request.VideoIsLong;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoBytesB64))
+            {
+                body["WmInfoBytesB64"] = request.WmInfoBytesB64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoSize))
+            {
+                body["WmInfoSize"] = request.WmInfoSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoUint))
+            {
+                body["WmInfoUint"] = request.WmInfoUint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmType))
+            {
+                body["WmType"] = request.WmType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWmEmbedTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWmEmbedTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建嵌入水印任务
+         *
+         * @param request CreateWmEmbedTaskRequest
+         * @return CreateWmEmbedTaskResponse
+         */
+        public CreateWmEmbedTaskResponse CreateWmEmbedTask(CreateWmEmbedTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateWmEmbedTaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建嵌入水印任务
+         *
+         * @param request CreateWmEmbedTaskRequest
+         * @return CreateWmEmbedTaskResponse
+         */
+        public async Task<CreateWmEmbedTaskResponse> CreateWmEmbedTaskAsync(CreateWmEmbedTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateWmEmbedTaskWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 创建文件水印提取任务
+         *
+         * @param request CreateWmExtractTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWmExtractTaskResponse
+         */
+        public CreateWmExtractTaskResponse CreateWmExtractTaskWithOptions(CreateWmExtractTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIsCapture))
+            {
+                body["DocumentIsCapture"] = request.DocumentIsCapture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
+            {
+                body["Filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoIsLong))
+            {
+                body["VideoIsLong"] = request.VideoIsLong;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoSpeed))
+            {
+                body["VideoSpeed"] = request.VideoSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoSize))
+            {
+                body["WmInfoSize"] = request.WmInfoSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmType))
+            {
+                body["WmType"] = request.WmType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWmExtractTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWmExtractTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建文件水印提取任务
+         *
+         * @param request CreateWmExtractTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWmExtractTaskResponse
+         */
+        public async Task<CreateWmExtractTaskResponse> CreateWmExtractTaskWithOptionsAsync(CreateWmExtractTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIsCapture))
+            {
+                body["DocumentIsCapture"] = request.DocumentIsCapture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
+            {
+                body["Filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoIsLong))
+            {
+                body["VideoIsLong"] = request.VideoIsLong;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoSpeed))
+            {
+                body["VideoSpeed"] = request.VideoSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoSize))
+            {
+                body["WmInfoSize"] = request.WmInfoSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmType))
+            {
+                body["WmType"] = request.WmType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWmExtractTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWmExtractTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建文件水印提取任务
+         *
+         * @param request CreateWmExtractTaskRequest
+         * @return CreateWmExtractTaskResponse
+         */
+        public CreateWmExtractTaskResponse CreateWmExtractTask(CreateWmExtractTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateWmExtractTaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建文件水印提取任务
+         *
+         * @param request CreateWmExtractTaskRequest
+         * @return CreateWmExtractTaskResponse
+         */
+        public async Task<CreateWmExtractTaskResponse> CreateWmExtractTaskAsync(CreateWmExtractTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateWmExtractTaskWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 创建一条字符串水印信息到数字水印信息的映射记录
+         *
+         * @param request CreateWmInfoMappingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWmInfoMappingResponse
+         */
+        public CreateWmInfoMappingResponse CreateWmInfoMappingWithOptions(CreateWmInfoMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoBytesB64))
+            {
+                body["WmInfoBytesB64"] = request.WmInfoBytesB64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoSize))
+            {
+                body["WmInfoSize"] = request.WmInfoSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmType))
+            {
+                body["WmType"] = request.WmType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWmInfoMapping",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWmInfoMappingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建一条字符串水印信息到数字水印信息的映射记录
+         *
+         * @param request CreateWmInfoMappingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateWmInfoMappingResponse
+         */
+        public async Task<CreateWmInfoMappingResponse> CreateWmInfoMappingWithOptionsAsync(CreateWmInfoMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoBytesB64))
+            {
+                body["WmInfoBytesB64"] = request.WmInfoBytesB64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmInfoSize))
+            {
+                body["WmInfoSize"] = request.WmInfoSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WmType))
+            {
+                body["WmType"] = request.WmType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWmInfoMapping",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWmInfoMappingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建一条字符串水印信息到数字水印信息的映射记录
+         *
+         * @param request CreateWmInfoMappingRequest
+         * @return CreateWmInfoMappingResponse
+         */
+        public CreateWmInfoMappingResponse CreateWmInfoMapping(CreateWmInfoMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateWmInfoMappingWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建一条字符串水印信息到数字水印信息的映射记录
+         *
+         * @param request CreateWmInfoMappingRequest
+         * @return CreateWmInfoMappingResponse
+         */
+        public async Task<CreateWmInfoMappingResponse> CreateWmInfoMappingAsync(CreateWmInfoMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateWmInfoMappingWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 删除自定义身份源指定用户
          *
          * @param request DeleteClientUserRequest
@@ -3271,6 +3851,174 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUserGroupWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询嵌入水印任务
+         *
+         * @param request GetWmEmbedTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetWmEmbedTaskResponse
+         */
+        public GetWmEmbedTaskResponse GetWmEmbedTaskWithOptions(GetWmEmbedTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWmEmbedTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWmEmbedTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询嵌入水印任务
+         *
+         * @param request GetWmEmbedTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetWmEmbedTaskResponse
+         */
+        public async Task<GetWmEmbedTaskResponse> GetWmEmbedTaskWithOptionsAsync(GetWmEmbedTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWmEmbedTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWmEmbedTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询嵌入水印任务
+         *
+         * @param request GetWmEmbedTaskRequest
+         * @return GetWmEmbedTaskResponse
+         */
+        public GetWmEmbedTaskResponse GetWmEmbedTask(GetWmEmbedTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetWmEmbedTaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询嵌入水印任务
+         *
+         * @param request GetWmEmbedTaskRequest
+         * @return GetWmEmbedTaskResponse
+         */
+        public async Task<GetWmEmbedTaskResponse> GetWmEmbedTaskAsync(GetWmEmbedTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetWmEmbedTaskWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询文件水印提取任务详情
+         *
+         * @param request GetWmExtractTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetWmExtractTaskResponse
+         */
+        public GetWmExtractTaskResponse GetWmExtractTaskWithOptions(GetWmExtractTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWmExtractTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWmExtractTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询文件水印提取任务详情
+         *
+         * @param request GetWmExtractTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetWmExtractTaskResponse
+         */
+        public async Task<GetWmExtractTaskResponse> GetWmExtractTaskWithOptionsAsync(GetWmExtractTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWmExtractTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWmExtractTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询文件水印提取任务详情
+         *
+         * @param request GetWmExtractTaskRequest
+         * @return GetWmExtractTaskResponse
+         */
+        public GetWmExtractTaskResponse GetWmExtractTask(GetWmExtractTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetWmExtractTaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询文件水印提取任务详情
+         *
+         * @param request GetWmExtractTaskRequest
+         * @return GetWmExtractTaskResponse
+         */
+        public async Task<GetWmExtractTaskResponse> GetWmExtractTaskAsync(GetWmExtractTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetWmExtractTaskWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -5611,6 +6359,90 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUsersWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 根据数字水印信息查询字符串水印信息
+         *
+         * @param request LookupWmInfoMappingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return LookupWmInfoMappingResponse
+         */
+        public LookupWmInfoMappingResponse LookupWmInfoMappingWithOptions(LookupWmInfoMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LookupWmInfoMapping",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LookupWmInfoMappingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 根据数字水印信息查询字符串水印信息
+         *
+         * @param request LookupWmInfoMappingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return LookupWmInfoMappingResponse
+         */
+        public async Task<LookupWmInfoMappingResponse> LookupWmInfoMappingWithOptionsAsync(LookupWmInfoMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LookupWmInfoMapping",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LookupWmInfoMappingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 根据数字水印信息查询字符串水印信息
+         *
+         * @param request LookupWmInfoMappingRequest
+         * @return LookupWmInfoMappingResponse
+         */
+        public LookupWmInfoMappingResponse LookupWmInfoMapping(LookupWmInfoMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LookupWmInfoMappingWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 根据数字水印信息查询字符串水印信息
+         *
+         * @param request LookupWmInfoMappingRequest
+         * @return LookupWmInfoMappingResponse
+         */
+        public async Task<LookupWmInfoMappingResponse> LookupWmInfoMappingAsync(LookupWmInfoMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LookupWmInfoMappingWithOptionsAsync(request, runtime);
         }
 
         /**
