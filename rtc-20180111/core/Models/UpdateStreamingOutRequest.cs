@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
-    public class StartStreamingOutRequest : TeaModel {
+    public class UpdateStreamingOutRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("ClockWidgets")]
         [Validation(Required=false)]
-        public List<StartStreamingOutRequestClockWidgets> ClockWidgets { get; set; }
-        public class StartStreamingOutRequestClockWidgets : TeaModel {
+        public List<UpdateStreamingOutRequestClockWidgets> ClockWidgets { get; set; }
+        public class UpdateStreamingOutRequestClockWidgets : TeaModel {
             [NameInMap("Alpha")]
             [Validation(Required=false)]
             public double? Alpha { get; set; }
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("BoxColor")]
             [Validation(Required=false)]
-            public StartStreamingOutRequestClockWidgetsBoxColor BoxColor { get; set; }
-            public class StartStreamingOutRequestClockWidgetsBoxColor : TeaModel {
+            public UpdateStreamingOutRequestClockWidgetsBoxColor BoxColor { get; set; }
+            public class UpdateStreamingOutRequestClockWidgetsBoxColor : TeaModel {
                 [NameInMap("B")]
                 [Validation(Required=false)]
                 public int? B { get; set; }
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("FontColor")]
             [Validation(Required=false)]
-            public StartStreamingOutRequestClockWidgetsFontColor FontColor { get; set; }
-            public class StartStreamingOutRequestClockWidgetsFontColor : TeaModel {
+            public UpdateStreamingOutRequestClockWidgetsFontColor FontColor { get; set; }
+            public class UpdateStreamingOutRequestClockWidgetsFontColor : TeaModel {
                 [NameInMap("B")]
                 [Validation(Required=false)]
                 public int? B { get; set; }
@@ -111,14 +111,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
-        [NameInMap("CropMode")]
-        [Validation(Required=false)]
-        public int? CropMode { get; set; }
-
         [NameInMap("Images")]
         [Validation(Required=false)]
-        public List<StartStreamingOutRequestImages> Images { get; set; }
-        public class StartStreamingOutRequestImages : TeaModel {
+        public List<UpdateStreamingOutRequestImages> Images { get; set; }
+        public class UpdateStreamingOutRequestImages : TeaModel {
             [NameInMap("Alpha")]
             [Validation(Required=false)]
             public double? Alpha { get; set; }
@@ -170,12 +166,12 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("Panes")]
         [Validation(Required=false)]
-        public List<StartStreamingOutRequestPanes> Panes { get; set; }
-        public class StartStreamingOutRequestPanes : TeaModel {
+        public List<UpdateStreamingOutRequestPanes> Panes { get; set; }
+        public class UpdateStreamingOutRequestPanes : TeaModel {
             [NameInMap("Images")]
             [Validation(Required=false)]
-            public List<StartStreamingOutRequestPanesImages> Images { get; set; }
-            public class StartStreamingOutRequestPanesImages : TeaModel {
+            public List<UpdateStreamingOutRequestPanesImages> Images { get; set; }
+            public class UpdateStreamingOutRequestPanesImages : TeaModel {
                 [NameInMap("Alpha")]
                 [Validation(Required=false)]
                 public double? Alpha { get; set; }
@@ -229,12 +225,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public int? PaneCropMode { get; set; }
 
-            /// <summary>
-            /// This parameter is required.
-            /// </summary>
             [NameInMap("PaneId")]
             [Validation(Required=false)]
-            public string PaneId { get; set; }
+            public int? PaneId { get; set; }
 
             [NameInMap("Source")]
             [Validation(Required=false)]
@@ -246,8 +239,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("Texts")]
             [Validation(Required=false)]
-            public List<StartStreamingOutRequestPanesTexts> Texts { get; set; }
-            public class StartStreamingOutRequestPanesTexts : TeaModel {
+            public List<UpdateStreamingOutRequestPanesTexts> Texts { get; set; }
+            public class UpdateStreamingOutRequestPanesTexts : TeaModel {
                 [NameInMap("Alpha")]
                 [Validation(Required=false)]
                 public double? Alpha { get; set; }
@@ -262,8 +255,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
                 [NameInMap("BoxColor")]
                 [Validation(Required=false)]
-                public StartStreamingOutRequestPanesTextsBoxColor BoxColor { get; set; }
-                public class StartStreamingOutRequestPanesTextsBoxColor : TeaModel {
+                public UpdateStreamingOutRequestPanesTextsBoxColor BoxColor { get; set; }
+                public class UpdateStreamingOutRequestPanesTextsBoxColor : TeaModel {
                     [NameInMap("B")]
                     [Validation(Required=false)]
                     public int? B { get; set; }
@@ -284,8 +277,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
                 [NameInMap("FontColor")]
                 [Validation(Required=false)]
-                public StartStreamingOutRequestPanesTextsFontColor FontColor { get; set; }
-                public class StartStreamingOutRequestPanesTextsFontColor : TeaModel {
+                public UpdateStreamingOutRequestPanesTextsFontColor FontColor { get; set; }
+                public class UpdateStreamingOutRequestPanesTextsFontColor : TeaModel {
                     [NameInMap("B")]
                     [Validation(Required=false)]
                     public int? B { get; set; }
@@ -337,6 +330,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
@@ -350,8 +346,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("Texts")]
         [Validation(Required=false)]
-        public List<StartStreamingOutRequestTexts> Texts { get; set; }
-        public class StartStreamingOutRequestTexts : TeaModel {
+        public List<UpdateStreamingOutRequestTexts> Texts { get; set; }
+        public class UpdateStreamingOutRequestTexts : TeaModel {
             [NameInMap("Alpha")]
             [Validation(Required=false)]
             public double? Alpha { get; set; }
@@ -366,8 +362,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("BoxColor")]
             [Validation(Required=false)]
-            public StartStreamingOutRequestTextsBoxColor BoxColor { get; set; }
-            public class StartStreamingOutRequestTextsBoxColor : TeaModel {
+            public UpdateStreamingOutRequestTextsBoxColor BoxColor { get; set; }
+            public class UpdateStreamingOutRequestTextsBoxColor : TeaModel {
                 [NameInMap("B")]
                 [Validation(Required=false)]
                 public int? B { get; set; }
@@ -388,8 +384,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("FontColor")]
             [Validation(Required=false)]
-            public StartStreamingOutRequestTextsFontColor FontColor { get; set; }
-            public class StartStreamingOutRequestTextsFontColor : TeaModel {
+            public UpdateStreamingOutRequestTextsFontColor FontColor { get; set; }
+            public class UpdateStreamingOutRequestTextsFontColor : TeaModel {
                 [NameInMap("B")]
                 [Validation(Required=false)]
                 public int? B { get; set; }
@@ -438,13 +434,6 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public double? Y { get; set; }
 
         }
-
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("Url")]
-        [Validation(Required=false)]
-        public string Url { get; set; }
 
     }
 

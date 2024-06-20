@@ -27,6 +27,151 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string ChannelId { get; set; }
 
+        [NameInMap("ClockWidgets")]
+        [Validation(Required=false)]
+        public List<StartCloudRecordRequestClockWidgets> ClockWidgets { get; set; }
+        public class StartCloudRecordRequestClockWidgets : TeaModel {
+            [NameInMap("Alpha")]
+            [Validation(Required=false)]
+            public double? Alpha { get; set; }
+
+            [NameInMap("BoxAlpha")]
+            [Validation(Required=false)]
+            public double? BoxAlpha { get; set; }
+
+            [NameInMap("BoxBorderw")]
+            [Validation(Required=false)]
+            public int? BoxBorderw { get; set; }
+
+            [NameInMap("BoxColor")]
+            [Validation(Required=false)]
+            public StartCloudRecordRequestClockWidgetsBoxColor BoxColor { get; set; }
+            public class StartCloudRecordRequestClockWidgetsBoxColor : TeaModel {
+                [NameInMap("B")]
+                [Validation(Required=false)]
+                public int? B { get; set; }
+
+                [NameInMap("G")]
+                [Validation(Required=false)]
+                public int? G { get; set; }
+
+                [NameInMap("R")]
+                [Validation(Required=false)]
+                public int? R { get; set; }
+
+            }
+
+            [NameInMap("Font")]
+            [Validation(Required=false)]
+            public int? Font { get; set; }
+
+            [NameInMap("FontColor")]
+            [Validation(Required=false)]
+            public StartCloudRecordRequestClockWidgetsFontColor FontColor { get; set; }
+            public class StartCloudRecordRequestClockWidgetsFontColor : TeaModel {
+                [NameInMap("B")]
+                [Validation(Required=false)]
+                public int? B { get; set; }
+
+                [NameInMap("G")]
+                [Validation(Required=false)]
+                public int? G { get; set; }
+
+                [NameInMap("R")]
+                [Validation(Required=false)]
+                public int? R { get; set; }
+
+            }
+
+            [NameInMap("FontSize")]
+            [Validation(Required=false)]
+            public int? FontSize { get; set; }
+
+            [NameInMap("HasBox")]
+            [Validation(Required=false)]
+            public bool? HasBox { get; set; }
+
+            [NameInMap("Layer")]
+            [Validation(Required=false)]
+            public int? Layer { get; set; }
+
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("X")]
+            [Validation(Required=false)]
+            public double? X { get; set; }
+
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("Y")]
+            [Validation(Required=false)]
+            public double? Y { get; set; }
+
+            [NameInMap("Zone")]
+            [Validation(Required=false)]
+            public int? Zone { get; set; }
+
+        }
+
+        [NameInMap("CropMode")]
+        [Validation(Required=false)]
+        public int? CropMode { get; set; }
+
+        [NameInMap("Images")]
+        [Validation(Required=false)]
+        public List<StartCloudRecordRequestImages> Images { get; set; }
+        public class StartCloudRecordRequestImages : TeaModel {
+            [NameInMap("Alpha")]
+            [Validation(Required=false)]
+            public double? Alpha { get; set; }
+
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("Height")]
+            [Validation(Required=false)]
+            public double? Height { get; set; }
+
+            [NameInMap("ImageCropMode")]
+            [Validation(Required=false)]
+            public int? ImageCropMode { get; set; }
+
+            [NameInMap("Layer")]
+            [Validation(Required=false)]
+            public int? Layer { get; set; }
+
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("Url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("Width")]
+            [Validation(Required=false)]
+            public double? Width { get; set; }
+
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("X")]
+            [Validation(Required=false)]
+            public double? X { get; set; }
+
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("Y")]
+            [Validation(Required=false)]
+            public double? Y { get; set; }
+
+        }
+
         /// <summary>
         /// panes
         /// </summary>
@@ -34,6 +179,63 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public List<StartCloudRecordRequestPanes> Panes { get; set; }
         public class StartCloudRecordRequestPanes : TeaModel {
+            [NameInMap("Images")]
+            [Validation(Required=false)]
+            public List<StartCloudRecordRequestPanesImages> Images { get; set; }
+            public class StartCloudRecordRequestPanesImages : TeaModel {
+                [NameInMap("Alpha")]
+                [Validation(Required=false)]
+                public double? Alpha { get; set; }
+
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
+                [NameInMap("Height")]
+                [Validation(Required=false)]
+                public double? Height { get; set; }
+
+                [NameInMap("Layer")]
+                [Validation(Required=false)]
+                public int? Layer { get; set; }
+
+                [NameInMap("PaneImageCropMode")]
+                [Validation(Required=false)]
+                public int? PaneImageCropMode { get; set; }
+
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
+                [NameInMap("Width")]
+                [Validation(Required=false)]
+                public double? Width { get; set; }
+
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
+                [NameInMap("X")]
+                [Validation(Required=false)]
+                public double? X { get; set; }
+
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
+                [NameInMap("Y")]
+                [Validation(Required=false)]
+                public double? Y { get; set; }
+
+            }
+
+            [NameInMap("PaneCropMode")]
+            [Validation(Required=false)]
+            public int? PaneCropMode { get; set; }
+
             /// <summary>
             /// paneId
             /// 
@@ -44,11 +246,109 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? PaneId { get; set; }
 
             /// <summary>
+            /// source
+            /// </summary>
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
+            /// <summary>
             /// sourceType
             /// </summary>
             [NameInMap("SourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
+
+            [NameInMap("Texts")]
+            [Validation(Required=false)]
+            public List<StartCloudRecordRequestPanesTexts> Texts { get; set; }
+            public class StartCloudRecordRequestPanesTexts : TeaModel {
+                [NameInMap("Alpha")]
+                [Validation(Required=false)]
+                public double? Alpha { get; set; }
+
+                [NameInMap("BoxAlpha")]
+                [Validation(Required=false)]
+                public double? BoxAlpha { get; set; }
+
+                [NameInMap("BoxBorderw")]
+                [Validation(Required=false)]
+                public int? BoxBorderw { get; set; }
+
+                [NameInMap("BoxColor")]
+                [Validation(Required=false)]
+                public StartCloudRecordRequestPanesTextsBoxColor BoxColor { get; set; }
+                public class StartCloudRecordRequestPanesTextsBoxColor : TeaModel {
+                    [NameInMap("B")]
+                    [Validation(Required=false)]
+                    public int? B { get; set; }
+
+                    [NameInMap("G")]
+                    [Validation(Required=false)]
+                    public int? G { get; set; }
+
+                    [NameInMap("R")]
+                    [Validation(Required=false)]
+                    public int? R { get; set; }
+
+                }
+
+                [NameInMap("Font")]
+                [Validation(Required=false)]
+                public int? Font { get; set; }
+
+                [NameInMap("FontColor")]
+                [Validation(Required=false)]
+                public StartCloudRecordRequestPanesTextsFontColor FontColor { get; set; }
+                public class StartCloudRecordRequestPanesTextsFontColor : TeaModel {
+                    [NameInMap("B")]
+                    [Validation(Required=false)]
+                    public int? B { get; set; }
+
+                    [NameInMap("G")]
+                    [Validation(Required=false)]
+                    public int? G { get; set; }
+
+                    [NameInMap("R")]
+                    [Validation(Required=false)]
+                    public int? R { get; set; }
+
+                }
+
+                [NameInMap("FontSize")]
+                [Validation(Required=false)]
+                public int? FontSize { get; set; }
+
+                [NameInMap("HasBox")]
+                [Validation(Required=false)]
+                public bool? HasBox { get; set; }
+
+                [NameInMap("Layer")]
+                [Validation(Required=false)]
+                public int? Layer { get; set; }
+
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
+                [NameInMap("Texture")]
+                [Validation(Required=false)]
+                public string Texture { get; set; }
+
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
+                [NameInMap("X")]
+                [Validation(Required=false)]
+                public double? X { get; set; }
+
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
+                [NameInMap("Y")]
+                [Validation(Required=false)]
+                public double? Y { get; set; }
+
+            }
 
         }
 
@@ -123,6 +423,97 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
+
+        [NameInMap("Texts")]
+        [Validation(Required=false)]
+        public List<StartCloudRecordRequestTexts> Texts { get; set; }
+        public class StartCloudRecordRequestTexts : TeaModel {
+            [NameInMap("Alpha")]
+            [Validation(Required=false)]
+            public double? Alpha { get; set; }
+
+            [NameInMap("BoxAlpha")]
+            [Validation(Required=false)]
+            public double? BoxAlpha { get; set; }
+
+            [NameInMap("BoxBorderw")]
+            [Validation(Required=false)]
+            public int? BoxBorderw { get; set; }
+
+            [NameInMap("BoxColor")]
+            [Validation(Required=false)]
+            public StartCloudRecordRequestTextsBoxColor BoxColor { get; set; }
+            public class StartCloudRecordRequestTextsBoxColor : TeaModel {
+                [NameInMap("B")]
+                [Validation(Required=false)]
+                public int? B { get; set; }
+
+                [NameInMap("G")]
+                [Validation(Required=false)]
+                public int? G { get; set; }
+
+                [NameInMap("R")]
+                [Validation(Required=false)]
+                public int? R { get; set; }
+
+            }
+
+            [NameInMap("Font")]
+            [Validation(Required=false)]
+            public int? Font { get; set; }
+
+            [NameInMap("FontColor")]
+            [Validation(Required=false)]
+            public StartCloudRecordRequestTextsFontColor FontColor { get; set; }
+            public class StartCloudRecordRequestTextsFontColor : TeaModel {
+                [NameInMap("B")]
+                [Validation(Required=false)]
+                public int? B { get; set; }
+
+                [NameInMap("G")]
+                [Validation(Required=false)]
+                public int? G { get; set; }
+
+                [NameInMap("R")]
+                [Validation(Required=false)]
+                public int? R { get; set; }
+
+            }
+
+            [NameInMap("FontSize")]
+            [Validation(Required=false)]
+            public int? FontSize { get; set; }
+
+            [NameInMap("HasBox")]
+            [Validation(Required=false)]
+            public bool? HasBox { get; set; }
+
+            [NameInMap("Layer")]
+            [Validation(Required=false)]
+            public int? Layer { get; set; }
+
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("Texture")]
+            [Validation(Required=false)]
+            public string Texture { get; set; }
+
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("X")]
+            [Validation(Required=false)]
+            public double? X { get; set; }
+
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
+            [NameInMap("Y")]
+            [Validation(Required=false)]
+            public double? Y { get; set; }
+
+        }
 
     }
 
