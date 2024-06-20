@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class CheckFabricOrganizationDomainResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public int? ErrorCode { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -28,13 +24,20 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
-            [NameInMap("Valid")]
-            [Validation(Required=false)]
-            public bool? Valid { get; set; }
+
             [NameInMap("Prompt")]
             [Validation(Required=false)]
             public string Prompt { get; set; }
-        };
+
+            [NameInMap("Valid")]
+            [Validation(Required=false)]
+            public bool? Valid { get; set; }
+
+        }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -17,9 +17,6 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [Validation(Required=false)]
         public ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResult Result { get; set; }
         public class ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResult : TeaModel {
-            [NameInMap("PrivateKey")]
-            [Validation(Required=false)]
-            public string PrivateKey { get; set; }
             [NameInMap("DownloadPath")]
             [Validation(Required=false)]
             public ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResultDownloadPath DownloadPath { get; set; }
@@ -28,20 +25,25 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
                 [Validation(Required=false)]
                 public string CaCrtUrl { get; set; }
 
-                [NameInMap("SdkUrl")]
-                [Validation(Required=false)]
-                public string SdkUrl { get; set; }
-
                 [NameInMap("ClientCrtUrl")]
                 [Validation(Required=false)]
                 public string ClientCrtUrl { get; set; }
+
+                [NameInMap("SdkUrl")]
+                [Validation(Required=false)]
+                public string SdkUrl { get; set; }
 
                 [NameInMap("TrustCaUrl")]
                 [Validation(Required=false)]
                 public string TrustCaUrl { get; set; }
 
             }
-        };
+
+            [NameInMap("PrivateKey")]
+            [Validation(Required=false)]
+            public string PrivateKey { get; set; }
+
+        }
 
     }
 

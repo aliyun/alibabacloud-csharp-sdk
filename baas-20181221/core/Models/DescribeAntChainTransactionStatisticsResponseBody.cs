@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [Validation(Required=false)]
         public List<DescribeAntChainTransactionStatisticsResponseBodyResult> Result { get; set; }
         public class DescribeAntChainTransactionStatisticsResponseBodyResult : TeaModel {
+            [NameInMap("AntChainId")]
+            [Validation(Required=false)]
+            public string AntChainId { get; set; }
+
             [NameInMap("CreatTime")]
             [Validation(Required=false)]
             public long? CreatTime { get; set; }
-
-            [NameInMap("TransCount")]
-            [Validation(Required=false)]
-            public long? TransCount { get; set; }
 
             [NameInMap("Dt")]
             [Validation(Required=false)]
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
             [Validation(Required=false)]
             public long? LastSumBlockHeight { get; set; }
 
-            [NameInMap("AntChainId")]
+            [NameInMap("TransCount")]
             [Validation(Required=false)]
-            public string AntChainId { get; set; }
+            public long? TransCount { get; set; }
 
         }
 

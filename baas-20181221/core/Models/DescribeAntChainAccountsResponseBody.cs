@@ -17,34 +17,51 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [Validation(Required=false)]
         public DescribeAntChainAccountsResponseBodyResult Result { get; set; }
         public class DescribeAntChainAccountsResponseBodyResult : TeaModel {
+            [NameInMap("Accounts")]
+            [Validation(Required=false)]
+            public List<DescribeAntChainAccountsResponseBodyResultAccounts> Accounts { get; set; }
+            public class DescribeAntChainAccountsResponseBodyResultAccounts : TeaModel {
+                [NameInMap("Account")]
+                [Validation(Required=false)]
+                public string Account { get; set; }
+
+                [NameInMap("AccountPublicKey")]
+                [Validation(Required=false)]
+                public string AccountPublicKey { get; set; }
+
+                [NameInMap("AccountRecoveryKey")]
+                [Validation(Required=false)]
+                public string AccountRecoveryKey { get; set; }
+
+                [NameInMap("AccountStatus")]
+                [Validation(Required=false)]
+                public string AccountStatus { get; set; }
+
+                [NameInMap("AntChainId")]
+                [Validation(Required=false)]
+                public string AntChainId { get; set; }
+
+            }
+
             [NameInMap("Pagination")]
             [Validation(Required=false)]
             public DescribeAntChainAccountsResponseBodyResultPagination Pagination { get; set; }
             public class DescribeAntChainAccountsResponseBodyResultPagination : TeaModel {
-                [NameInMap("PageSize")]
-                [Validation(Required=false)]
-                public int? PageSize { get; set; }
-
                 [NameInMap("PageNumber")]
                 [Validation(Required=false)]
                 public int? PageNumber { get; set; }
+
+                [NameInMap("PageSize")]
+                [Validation(Required=false)]
+                public int? PageSize { get; set; }
 
                 [NameInMap("TotalCount")]
                 [Validation(Required=false)]
                 public int? TotalCount { get; set; }
 
             }
-            [NameInMap("Accounts")]
-            [Validation(Required=false)]
-            public List<DescribeAntChainAccountsResponseBodyResultAccounts> Accounts { get; set; }
-            public class DescribeAntChainAccountsResponseBodyResultAccounts : TeaModel {
-                public string AccountPublicKey { get; set; }
-                public string Account { get; set; }
-                public string AccountStatus { get; set; }
-                public string AccountRecoveryKey { get; set; }
-                public string AntChainId { get; set; }
-            }
-        };
+
+        }
 
     }
 

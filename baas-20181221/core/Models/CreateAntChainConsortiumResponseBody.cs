@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
             [NameInMap("ConsortiumId")]
             [Validation(Required=false)]
             public string ConsortiumId { get; set; }
-        };
+
+        }
 
     }
 

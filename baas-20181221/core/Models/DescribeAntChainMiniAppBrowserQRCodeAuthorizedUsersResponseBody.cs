@@ -17,9 +17,28 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [Validation(Required=false)]
         public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult Result { get; set; }
         public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult : TeaModel {
-            [NameInMap("QRCodeType")]
+            [NameInMap("AntChainId")]
             [Validation(Required=false)]
-            public string QRCodeType { get; set; }
+            public string AntChainId { get; set; }
+
+            [NameInMap("AuthorizationType")]
+            [Validation(Required=false)]
+            public string AuthorizationType { get; set; }
+
+            [NameInMap("AuthorizedUserList")]
+            [Validation(Required=false)]
+            public List<DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList> AuthorizedUserList { get; set; }
+            public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList : TeaModel {
+                [NameInMap("GmtAuthorized")]
+                [Validation(Required=false)]
+                public string GmtAuthorized { get; set; }
+
+                [NameInMap("Phone")]
+                [Validation(Required=false)]
+                public string Phone { get; set; }
+
+            }
+
             [NameInMap("Pagination")]
             [Validation(Required=false)]
             public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultPagination Pagination { get; set; }
@@ -37,20 +56,12 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
                 public int? TotalCount { get; set; }
 
             }
-            [NameInMap("AuthorizationType")]
+
+            [NameInMap("QRCodeType")]
             [Validation(Required=false)]
-            public string AuthorizationType { get; set; }
-            [NameInMap("AuthorizedUserList")]
-            [Validation(Required=false)]
-            public List<DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList> AuthorizedUserList { get; set; }
-            public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList : TeaModel {
-                public string GmtAuthorized { get; set; }
-                public string Phone { get; set; }
-            }
-            [NameInMap("AntChainId")]
-            [Validation(Required=false)]
-            public string AntChainId { get; set; }
-        };
+            public string QRCodeType { get; set; }
+
+        }
 
     }
 

@@ -9,13 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class SynchronizeFabricChaincodeRequest : TeaModel {
-        [NameInMap("OrganizationId")]
-        [Validation(Required=false)]
-        public string OrganizationId { get; set; }
-
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChaincodeId")]
         [Validation(Required=false)]
         public string ChaincodeId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("OrganizationId")]
+        [Validation(Required=false)]
+        public string OrganizationId { get; set; }
 
     }
 

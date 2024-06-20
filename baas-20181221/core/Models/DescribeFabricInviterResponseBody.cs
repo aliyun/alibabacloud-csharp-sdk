@@ -9,38 +9,43 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class DescribeFabricInviterResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public int? ErrorCode { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DescribeFabricInviterResponseBodyResult Result { get; set; }
         public class DescribeFabricInviterResponseBodyResult : TeaModel {
-            [NameInMap("InviterId")]
-            [Validation(Required=false)]
-            public long? InviterId { get; set; }
-            [NameInMap("ExpireTime")]
-            [Validation(Required=false)]
-            public string ExpireTime { get; set; }
             [NameInMap("ConsortiumId")]
             [Validation(Required=false)]
             public string ConsortiumId { get; set; }
-            [NameInMap("InviterName")]
-            [Validation(Required=false)]
-            public string InviterName { get; set; }
+
             [NameInMap("ConsortiumName")]
             [Validation(Required=false)]
             public string ConsortiumName { get; set; }
-        };
+
+            [NameInMap("ExpireTime")]
+            [Validation(Required=false)]
+            public string ExpireTime { get; set; }
+
+            [NameInMap("InviterId")]
+            [Validation(Required=false)]
+            public long? InviterId { get; set; }
+
+            [NameInMap("InviterName")]
+            [Validation(Required=false)]
+            public string InviterName { get; set; }
+
+        }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

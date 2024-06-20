@@ -17,19 +17,23 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [Validation(Required=false)]
         public DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult Result { get; set; }
         public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult : TeaModel {
-            [NameInMap("Base64QRCodePNG")]
-            [Validation(Required=false)]
-            public string Base64QRCodePNG { get; set; }
-            [NameInMap("TransactionHash")]
-            [Validation(Required=false)]
-            public string TransactionHash { get; set; }
-            [NameInMap("QRCodeContent")]
-            [Validation(Required=false)]
-            public string QRCodeContent { get; set; }
             [NameInMap("AntChainId")]
             [Validation(Required=false)]
             public string AntChainId { get; set; }
-        };
+
+            [NameInMap("Base64QRCodePNG")]
+            [Validation(Required=false)]
+            public string Base64QRCodePNG { get; set; }
+
+            [NameInMap("QRCodeContent")]
+            [Validation(Required=false)]
+            public string QRCodeContent { get; set; }
+
+            [NameInMap("TransactionHash")]
+            [Validation(Required=false)]
+            public string TransactionHash { get; set; }
+
+        }
 
     }
 

@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [Validation(Required=false)]
         public List<DescribeFabricOrganizationsRequestTag> Tag { get; set; }
         public class DescribeFabricOrganizationsRequestTag : TeaModel {
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class DescribeFabricChannelMembersRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChannelId")]
         [Validation(Required=false)]
         public string ChannelId { get; set; }

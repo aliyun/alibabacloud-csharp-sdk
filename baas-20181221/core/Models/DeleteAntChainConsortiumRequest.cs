@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class DeleteAntChainConsortiumRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ConsortiumId")]
         [Validation(Required=false)]
         public string ConsortiumId { get; set; }

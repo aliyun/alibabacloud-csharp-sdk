@@ -17,16 +17,19 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [Validation(Required=false)]
         public DescribeAntChainQRCodeAuthorizationResponseBodyResult Result { get; set; }
         public class DescribeAntChainQRCodeAuthorizationResponseBodyResult : TeaModel {
-            [NameInMap("QRCodeType")]
-            [Validation(Required=false)]
-            public string QRCodeType { get; set; }
-            [NameInMap("AuthorizationType")]
-            [Validation(Required=false)]
-            public string AuthorizationType { get; set; }
             [NameInMap("AntChainId")]
             [Validation(Required=false)]
             public string AntChainId { get; set; }
-        };
+
+            [NameInMap("AuthorizationType")]
+            [Validation(Required=false)]
+            public string AuthorizationType { get; set; }
+
+            [NameInMap("QRCodeType")]
+            [Validation(Required=false)]
+            public string QRCodeType { get; set; }
+
+        }
 
     }
 

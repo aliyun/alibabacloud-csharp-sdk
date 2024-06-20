@@ -17,13 +17,15 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [Validation(Required=false)]
         public DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBodyResult Result { get; set; }
         public class DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBodyResult : TeaModel {
-            [NameInMap("AccessCount")]
-            [Validation(Required=false)]
-            public long? AccessCount { get; set; }
             [NameInMap("AccessAlipayAccountCount")]
             [Validation(Required=false)]
             public long? AccessAlipayAccountCount { get; set; }
-        };
+
+            [NameInMap("AccessCount")]
+            [Validation(Required=false)]
+            public long? AccessCount { get; set; }
+
+        }
 
     }
 

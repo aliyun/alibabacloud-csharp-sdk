@@ -9,17 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class DescribeAntChainContractProjectsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ConsortiumId")]
         [Validation(Required=false)]
         public string ConsortiumId { get; set; }
 
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 

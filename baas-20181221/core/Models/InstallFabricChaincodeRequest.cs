@@ -9,10 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class InstallFabricChaincodeRequest : TeaModel {
-        [NameInMap("OrganizationId")]
-        [Validation(Required=false)]
-        public string OrganizationId { get; set; }
-
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChaincodeId")]
         [Validation(Required=false)]
         public string ChaincodeId { get; set; }
@@ -20,6 +19,13 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [NameInMap("Location")]
         [Validation(Required=false)]
         public string Location { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("OrganizationId")]
+        [Validation(Required=false)]
+        public string OrganizationId { get; set; }
 
     }
 

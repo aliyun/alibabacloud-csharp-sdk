@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class DescribeEthereumDeletableResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public DescribeEthereumDeletableResponseBody Body { get; set; }
 
     }

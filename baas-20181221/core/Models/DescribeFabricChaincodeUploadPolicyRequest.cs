@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class DescribeFabricChaincodeUploadPolicyRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OrganizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }

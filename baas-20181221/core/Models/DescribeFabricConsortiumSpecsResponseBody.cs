@@ -9,22 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class DescribeFabricConsortiumSpecsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public int? ErrorCode { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<DescribeFabricConsortiumSpecsResponseBodyResult> Result { get; set; }
         public class DescribeFabricConsortiumSpecsResponseBodyResult : TeaModel {
+            [NameInMap("Enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
+
             [NameInMap("SpecName")]
             [Validation(Required=false)]
             public string SpecName { get; set; }
@@ -33,11 +33,11 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
             [Validation(Required=false)]
             public string SpecTitle { get; set; }
 
-            [NameInMap("Enable")]
-            [Validation(Required=false)]
-            public bool? Enable { get; set; }
-
         }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

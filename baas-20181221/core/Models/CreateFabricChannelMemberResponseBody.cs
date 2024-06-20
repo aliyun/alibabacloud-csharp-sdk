@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class CreateFabricChannelMemberResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public int? ErrorCode { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
         public bool? Result { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

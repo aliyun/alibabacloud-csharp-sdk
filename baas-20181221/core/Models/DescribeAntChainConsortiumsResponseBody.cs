@@ -21,33 +21,59 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
             [Validation(Required=false)]
             public List<DescribeAntChainConsortiumsResponseBodyResultAntConsortiums> AntConsortiums { get; set; }
             public class DescribeAntChainConsortiumsResponseBodyResultAntConsortiums : TeaModel {
-                public string ConsortiumDescription { get; set; }
-                public string Status { get; set; }
-                public string ConsortiumId { get; set; }
-                public long? CreateTime { get; set; }
-                public long? MemberNum { get; set; }
-                public string Role { get; set; }
-                public string ConsortiumName { get; set; }
+                [NameInMap("ChainNum")]
+                [Validation(Required=false)]
                 public long? ChainNum { get; set; }
+
+                [NameInMap("ConsortiumDescription")]
+                [Validation(Required=false)]
+                public string ConsortiumDescription { get; set; }
+
+                [NameInMap("ConsortiumId")]
+                [Validation(Required=false)]
+                public string ConsortiumId { get; set; }
+
+                [NameInMap("ConsortiumName")]
+                [Validation(Required=false)]
+                public string ConsortiumName { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public long? CreateTime { get; set; }
+
+                [NameInMap("MemberNum")]
+                [Validation(Required=false)]
+                public long? MemberNum { get; set; }
+
+                [NameInMap("Role")]
+                [Validation(Required=false)]
+                public string Role { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
             }
+
             [NameInMap("Pagination")]
             [Validation(Required=false)]
             public DescribeAntChainConsortiumsResponseBodyResultPagination Pagination { get; set; }
             public class DescribeAntChainConsortiumsResponseBodyResultPagination : TeaModel {
-                [NameInMap("PageSize")]
-                [Validation(Required=false)]
-                public int? PageSize { get; set; }
-
                 [NameInMap("PageNumber")]
                 [Validation(Required=false)]
                 public int? PageNumber { get; set; }
+
+                [NameInMap("PageSize")]
+                [Validation(Required=false)]
+                public int? PageSize { get; set; }
 
                 [NameInMap("TotalCount")]
                 [Validation(Required=false)]
                 public int? TotalCount { get; set; }
 
             }
-        };
+
+        }
 
     }
 

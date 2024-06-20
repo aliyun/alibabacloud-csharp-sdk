@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class UpdateAntChainContractProjectRequest : TeaModel {
+        [NameInMap("ProjectDescription")]
+        [Validation(Required=false)]
+        public string ProjectDescription { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
@@ -20,10 +27,6 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [NameInMap("ProjectVersion")]
         [Validation(Required=false)]
         public string ProjectVersion { get; set; }
-
-        [NameInMap("ProjectDescription")]
-        [Validation(Required=false)]
-        public string ProjectDescription { get; set; }
 
     }
 

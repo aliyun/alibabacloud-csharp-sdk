@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? ErrorCode { get; set; }
 
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
 
         }
 
-        [NameInMap("ErrorCode")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? ErrorCode { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

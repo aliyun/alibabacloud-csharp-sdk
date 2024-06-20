@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class UntagResourcesRequest : TeaModel {
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
@@ -20,6 +16,13 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
         [NameInMap("TagKey")]
         [Validation(Required=false)]

@@ -9,61 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class DescribeFabricOrganizationChaincodesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public int? ErrorCode { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<DescribeFabricOrganizationChaincodesResponseBodyResult> Result { get; set; }
         public class DescribeFabricOrganizationChaincodesResponseBodyResult : TeaModel {
-            [NameInMap("EndorsePolicy")]
-            [Validation(Required=false)]
-            public string EndorsePolicy { get; set; }
-
-            [NameInMap("State")]
-            [Validation(Required=false)]
-            public string State { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
             [NameInMap("ChaincodeId")]
             [Validation(Required=false)]
             public string ChaincodeId { get; set; }
-
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
 
             [NameInMap("ChaincodeName")]
             [Validation(Required=false)]
             public string ChaincodeName { get; set; }
 
-            [NameInMap("Installed")]
-            [Validation(Required=false)]
-            public string Installed { get; set; }
-
-            [NameInMap("Creator")]
-            [Validation(Required=false)]
-            public string Creator { get; set; }
-
-            [NameInMap("DeployTime")]
-            [Validation(Required=false)]
-            public string DeployTime { get; set; }
-
             [NameInMap("ChaincodeVersion")]
             [Validation(Required=false)]
             public string ChaincodeVersion { get; set; }
+
+            [NameInMap("ChannelId")]
+            [Validation(Required=false)]
+            public string ChannelId { get; set; }
 
             [NameInMap("ChannelName")]
             [Validation(Required=false)]
@@ -73,11 +45,39 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
             [Validation(Required=false)]
             public string ConsortiumId { get; set; }
 
-            [NameInMap("ChannelId")]
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string ChannelId { get; set; }
+            public string CreateTime { get; set; }
+
+            [NameInMap("Creator")]
+            [Validation(Required=false)]
+            public string Creator { get; set; }
+
+            [NameInMap("DeployTime")]
+            [Validation(Required=false)]
+            public string DeployTime { get; set; }
+
+            [NameInMap("EndorsePolicy")]
+            [Validation(Required=false)]
+            public string EndorsePolicy { get; set; }
+
+            [NameInMap("Installed")]
+            [Validation(Required=false)]
+            public string Installed { get; set; }
+
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+            [NameInMap("State")]
+            [Validation(Required=false)]
+            public string State { get; set; }
 
         }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

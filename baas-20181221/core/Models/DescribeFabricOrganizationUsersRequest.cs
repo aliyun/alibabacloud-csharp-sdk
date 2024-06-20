@@ -9,13 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class DescribeFabricOrganizationUsersRequest : TeaModel {
-        [NameInMap("OrganizationId")]
-        [Validation(Required=false)]
-        public string OrganizationId { get; set; }
-
         [NameInMap("Location")]
         [Validation(Required=false)]
         public string Location { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("OrganizationId")]
+        [Validation(Required=false)]
+        public string OrganizationId { get; set; }
 
     }
 

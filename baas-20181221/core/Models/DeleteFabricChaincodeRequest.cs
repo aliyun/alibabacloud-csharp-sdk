@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class DeleteFabricChaincodeRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChaincodeId")]
         [Validation(Required=false)]
         public string ChaincodeId { get; set; }

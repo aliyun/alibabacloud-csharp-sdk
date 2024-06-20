@@ -9,21 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class CreateAntChainAccountRequest : TeaModel {
-        [NameInMap("AntChainId")]
-        [Validation(Required=false)]
-        public string AntChainId { get; set; }
-
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Account")]
         [Validation(Required=false)]
         public string Account { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccountPubKey")]
         [Validation(Required=false)]
         public string AccountPubKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AccountRecoverPubKey")]
         [Validation(Required=false)]
         public string AccountRecoverPubKey { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("AntChainId")]
+        [Validation(Required=false)]
+        public string AntChainId { get; set; }
 
     }
 

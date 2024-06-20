@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
             [NameInMap("CaCrtUrl")]
             [Validation(Required=false)]
             public string CaCrtUrl { get; set; }
-            [NameInMap("SdkUrl")]
-            [Validation(Required=false)]
-            public string SdkUrl { get; set; }
+
             [NameInMap("ClientCrtUrl")]
             [Validation(Required=false)]
             public string ClientCrtUrl { get; set; }
+
+            [NameInMap("SdkUrl")]
+            [Validation(Required=false)]
+            public string SdkUrl { get; set; }
+
             [NameInMap("TrustCaUrl")]
             [Validation(Required=false)]
             public string TrustCaUrl { get; set; }
-        };
+
+        }
 
     }
 

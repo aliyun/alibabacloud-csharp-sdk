@@ -17,35 +17,58 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [Validation(Required=false)]
         public DescribeAntChainCertificateApplicationsResponseBodyResult Result { get; set; }
         public class DescribeAntChainCertificateApplicationsResponseBodyResult : TeaModel {
+            [NameInMap("CertificateApplications")]
+            [Validation(Required=false)]
+            public List<DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications> CertificateApplications { get; set; }
+            public class DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications : TeaModel {
+                [NameInMap("AntChainId")]
+                [Validation(Required=false)]
+                public string AntChainId { get; set; }
+
+                /// <summary>
+                /// Bid
+                /// </summary>
+                [NameInMap("Bid")]
+                [Validation(Required=false)]
+                public string Bid { get; set; }
+
+                [NameInMap("Createtime")]
+                [Validation(Required=false)]
+                public long? Createtime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("Updatetime")]
+                [Validation(Required=false)]
+                public long? Updatetime { get; set; }
+
+                [NameInMap("Username")]
+                [Validation(Required=false)]
+                public string Username { get; set; }
+
+            }
+
             [NameInMap("Pagination")]
             [Validation(Required=false)]
             public DescribeAntChainCertificateApplicationsResponseBodyResultPagination Pagination { get; set; }
             public class DescribeAntChainCertificateApplicationsResponseBodyResultPagination : TeaModel {
-                [NameInMap("PageSize")]
-                [Validation(Required=false)]
-                public int? PageSize { get; set; }
-
                 [NameInMap("PageNumber")]
                 [Validation(Required=false)]
                 public int? PageNumber { get; set; }
+
+                [NameInMap("PageSize")]
+                [Validation(Required=false)]
+                public int? PageSize { get; set; }
 
                 [NameInMap("TotalCount")]
                 [Validation(Required=false)]
                 public int? TotalCount { get; set; }
 
             }
-            [NameInMap("CertificateApplications")]
-            [Validation(Required=false)]
-            public List<DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications> CertificateApplications { get; set; }
-            public class DescribeAntChainCertificateApplicationsResponseBodyResultCertificateApplications : TeaModel {
-                public string Status { get; set; }
-                public long? Updatetime { get; set; }
-                public long? Createtime { get; set; }
-                public string Bid { get; set; }
-                public string AntChainId { get; set; }
-                public string Username { get; set; }
-            }
-        };
+
+        }
 
     }
 

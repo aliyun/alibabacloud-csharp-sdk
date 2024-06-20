@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class CreateFabricConsortiumResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public int? ErrorCode { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -28,58 +24,80 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
             [NameInMap("ChannelCount")]
             [Validation(Required=false)]
             public int? ChannelCount { get; set; }
-            [NameInMap("Domain")]
-            [Validation(Required=false)]
-            public string Domain { get; set; }
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-            [NameInMap("SpecName")]
-            [Validation(Required=false)]
-            public string SpecName { get; set; }
-            [NameInMap("OrdererCount")]
-            [Validation(Required=false)]
-            public int? OrdererCount { get; set; }
-            [NameInMap("ServiceState")]
-            [Validation(Required=false)]
-            public string ServiceState { get; set; }
-            [NameInMap("OwnerUid")]
-            [Validation(Required=false)]
-            public long? OwnerUid { get; set; }
-            [NameInMap("ClusterState")]
-            [Validation(Required=false)]
-            public string ClusterState { get; set; }
-            [NameInMap("CodeName")]
-            [Validation(Required=false)]
-            public string CodeName { get; set; }
-            [NameInMap("OwnerBid")]
-            [Validation(Required=false)]
-            public string OwnerBid { get; set; }
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-            [NameInMap("MemberCount")]
-            [Validation(Required=false)]
-            public int? MemberCount { get; set; }
+
             [NameInMap("ChannelPolicy")]
             [Validation(Required=false)]
             public string ChannelPolicy { get; set; }
-            [NameInMap("OrdererType")]
+
+            [NameInMap("ClusterState")]
             [Validation(Required=false)]
-            public string OrdererType { get; set; }
-            [NameInMap("Description")]
+            public string ClusterState { get; set; }
+
+            [NameInMap("CodeName")]
             [Validation(Required=false)]
-            public string Description { get; set; }
+            public string CodeName { get; set; }
+
             [NameInMap("ConsortiumId")]
             [Validation(Required=false)]
             public string ConsortiumId { get; set; }
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
+
             [NameInMap("ConsortiumName")]
             [Validation(Required=false)]
             public string ConsortiumName { get; set; }
-        };
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("Domain")]
+            [Validation(Required=false)]
+            public string Domain { get; set; }
+
+            [NameInMap("MemberCount")]
+            [Validation(Required=false)]
+            public int? MemberCount { get; set; }
+
+            [NameInMap("OrdererCount")]
+            [Validation(Required=false)]
+            public int? OrdererCount { get; set; }
+
+            [NameInMap("OrdererType")]
+            [Validation(Required=false)]
+            public string OrdererType { get; set; }
+
+            [NameInMap("OwnerBid")]
+            [Validation(Required=false)]
+            public string OwnerBid { get; set; }
+
+            [NameInMap("OwnerUid")]
+            [Validation(Required=false)]
+            public long? OwnerUid { get; set; }
+
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            [NameInMap("ServiceState")]
+            [Validation(Required=false)]
+            public string ServiceState { get; set; }
+
+            [NameInMap("SpecName")]
+            [Validation(Required=false)]
+            public string SpecName { get; set; }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
+        }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -9,26 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class CreateFabricChannelRequest : TeaModel {
-        [NameInMap("ConsortiumId")]
+        [NameInMap("BatchTimeout")]
         [Validation(Required=false)]
-        public string ConsortiumId { get; set; }
+        public int? BatchTimeout { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChannelName")]
         [Validation(Required=false)]
         public string ChannelName { get; set; }
 
-        [NameInMap("BatchTimeout")]
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ConsortiumId")]
         [Validation(Required=false)]
-        public int? BatchTimeout { get; set; }
+        public string ConsortiumId { get; set; }
 
         [NameInMap("MaxMessageCount")]
         [Validation(Required=false)]
         public int? MaxMessageCount { get; set; }
 
-        [NameInMap("PreferredMaxBytes")]
-        [Validation(Required=false)]
-        public int? PreferredMaxBytes { get; set; }
-
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Organization")]
         [Validation(Required=false)]
         public List<CreateFabricChannelRequestOrganization> Organization { get; set; }
@@ -38,6 +43,10 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
             public string Id { get; set; }
 
         }
+
+        [NameInMap("PreferredMaxBytes")]
+        [Validation(Required=false)]
+        public int? PreferredMaxBytes { get; set; }
 
     }
 

@@ -9,25 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class CreateFabricChaincodeRequest : TeaModel {
-        [NameInMap("OrganizationId")]
-        [Validation(Required=false)]
-        public string OrganizationId { get; set; }
-
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChannelId")]
         [Validation(Required=false)]
         public string ChannelId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ConsortiumId")]
         [Validation(Required=false)]
         public string ConsortiumId { get; set; }
-
-        [NameInMap("OssBucket")]
-        [Validation(Required=false)]
-        public string OssBucket { get; set; }
-
-        [NameInMap("OssUrl")]
-        [Validation(Required=false)]
-        public string OssUrl { get; set; }
 
         [NameInMap("EndorsePolicy")]
         [Validation(Required=false)]
@@ -36,6 +30,27 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
         [NameInMap("Location")]
         [Validation(Required=false)]
         public string Location { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("OrganizationId")]
+        [Validation(Required=false)]
+        public string OrganizationId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("OssBucket")]
+        [Validation(Required=false)]
+        public string OssBucket { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("OssUrl")]
+        [Validation(Required=false)]
+        public string OssUrl { get; set; }
 
     }
 

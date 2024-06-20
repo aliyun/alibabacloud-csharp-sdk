@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class CheckFabricConsortiumDomainRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DomainCode")]
         [Validation(Required=false)]
         public string DomainCode { get; set; }

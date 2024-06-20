@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class ResetAntChainCertificateRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AntChainId")]
         [Validation(Required=false)]
         public string AntChainId { get; set; }

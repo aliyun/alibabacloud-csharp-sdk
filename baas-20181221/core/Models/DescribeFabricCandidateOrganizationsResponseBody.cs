@@ -9,30 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20181221.Models
 {
     public class DescribeFabricCandidateOrganizationsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public int? ErrorCode { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<DescribeFabricCandidateOrganizationsResponseBodyResult> Result { get; set; }
         public class DescribeFabricCandidateOrganizationsResponseBodyResult : TeaModel {
-            [NameInMap("ServiceState")]
-            [Validation(Required=false)]
-            public string ServiceState { get; set; }
-
-            [NameInMap("OrganizationName")]
-            [Validation(Required=false)]
-            public string OrganizationName { get; set; }
-
             [NameInMap("ClusterState")]
             [Validation(Required=false)]
             public string ClusterState { get; set; }
@@ -41,7 +29,19 @@ namespace AlibabaCloud.SDK.Baas20181221.Models
             [Validation(Required=false)]
             public string OrganizationId { get; set; }
 
+            [NameInMap("OrganizationName")]
+            [Validation(Required=false)]
+            public string OrganizationName { get; set; }
+
+            [NameInMap("ServiceState")]
+            [Validation(Required=false)]
+            public string ServiceState { get; set; }
+
         }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 
