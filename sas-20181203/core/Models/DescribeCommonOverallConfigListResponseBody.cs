@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeCommonOverallConfigListResponseBodyOverallList> OverallList { get; set; }
         public class DescribeCommonOverallConfigListResponseBodyOverallList : TeaModel {
+            [NameInMap("AuthVersionList")]
+            [Validation(Required=false)]
+            public List<string> AuthVersionList { get; set; }
+
             /// <summary>
             /// Indicates the status of the switch. Valid values:
             /// 
