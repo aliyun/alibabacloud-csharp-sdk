@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string DocType { get; set; }
 
+        [NameInMap("ExperienceCode")]
+        [Validation(Required=false)]
+        public string ExperienceCode { get; set; }
+
         [NameInMap("FacePictureBase64")]
         [Validation(Required=false)]
         public string FacePictureBase64 { get; set; }

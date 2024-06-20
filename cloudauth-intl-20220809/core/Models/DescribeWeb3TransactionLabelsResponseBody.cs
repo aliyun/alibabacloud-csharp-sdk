@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             }
 
             /// <summary>
-            /// the method name of contract call. For external transaction method: [\"CALL\",\"CALLCODE\",\"DELEGATECALL\",\"STATICCALL\"]; for internal transaction method: the first 4 bytes of the hash of the method name
+            /// the method name of contract call. For external transaction method: [\\"CALL\\",\\"CALLCODE\\",\\"DELEGATECALL\\",\\"STATICCALL\\"]; for internal transaction method: the first 4 bytes of the hash of the method name
             /// </summary>
             [NameInMap("MethodId")]
             [Validation(Required=false)]

@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public int? Depth { get; set; }
 
         /// <summary>
-        /// A unique business ID for tracing purpose. For example，the sequence ID from the merchant\"s business-related database.
+        /// A unique business ID for tracing purpose. For example，the sequence ID from the merchant\\"s business-related database.
         /// </summary>
         [NameInMap("MerchantBizId")]
         [Validation(Required=false)]
