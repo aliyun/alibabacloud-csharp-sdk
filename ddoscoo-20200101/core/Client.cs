@@ -526,6 +526,114 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @summary 配置安全概要属性
+         *
+         * @param request ConfigDomainSecurityProfileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigDomainSecurityProfileResponse
+         */
+        public ConfigDomainSecurityProfileResponse ConfigDomainSecurityProfileWithOptions(ConfigDomainSecurityProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
+            {
+                query["Cluster"] = request.Cluster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfigDomainSecurityProfile",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfigDomainSecurityProfileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 配置安全概要属性
+         *
+         * @param request ConfigDomainSecurityProfileRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigDomainSecurityProfileResponse
+         */
+        public async Task<ConfigDomainSecurityProfileResponse> ConfigDomainSecurityProfileWithOptionsAsync(ConfigDomainSecurityProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
+            {
+                query["Cluster"] = request.Cluster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfigDomainSecurityProfile",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfigDomainSecurityProfileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 配置安全概要属性
+         *
+         * @param request ConfigDomainSecurityProfileRequest
+         * @return ConfigDomainSecurityProfileResponse
+         */
+        public ConfigDomainSecurityProfileResponse ConfigDomainSecurityProfile(ConfigDomainSecurityProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ConfigDomainSecurityProfileWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 配置安全概要属性
+         *
+         * @param request ConfigDomainSecurityProfileRequest
+         * @return ConfigDomainSecurityProfileResponse
+         */
+        public async Task<ConfigDomainSecurityProfileResponse> ConfigDomainSecurityProfileAsync(ConfigDomainSecurityProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ConfigDomainSecurityProfileWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Configures a back-to-origin policy for the forwarding rule of a website.
          *
          * @description If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
@@ -647,6 +755,106 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigL7RsPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 配置长连接
+         *
+         * @param request ConfigL7UsKeepaliveRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigL7UsKeepaliveResponse
+         */
+        public ConfigL7UsKeepaliveResponse ConfigL7UsKeepaliveWithOptions(ConfigL7UsKeepaliveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamKeepalive))
+            {
+                query["UpstreamKeepalive"] = request.UpstreamKeepalive;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfigL7UsKeepalive",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfigL7UsKeepaliveResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 配置长连接
+         *
+         * @param request ConfigL7UsKeepaliveRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ConfigL7UsKeepaliveResponse
+         */
+        public async Task<ConfigL7UsKeepaliveResponse> ConfigL7UsKeepaliveWithOptionsAsync(ConfigL7UsKeepaliveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamKeepalive))
+            {
+                query["UpstreamKeepalive"] = request.UpstreamKeepalive;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfigL7UsKeepalive",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfigL7UsKeepaliveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 配置长连接
+         *
+         * @param request ConfigL7UsKeepaliveRequest
+         * @return ConfigL7UsKeepaliveResponse
+         */
+        public ConfigL7UsKeepaliveResponse ConfigL7UsKeepalive(ConfigL7UsKeepaliveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ConfigL7UsKeepaliveWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 配置长连接
+         *
+         * @param request ConfigL7UsKeepaliveRequest
+         * @return ConfigL7UsKeepaliveResponse
+         */
+        public async Task<ConfigL7UsKeepaliveResponse> ConfigL7UsKeepaliveAsync(ConfigL7UsKeepaliveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ConfigL7UsKeepaliveWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -9563,6 +9771,98 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeL7RsPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询长连接
+         *
+         * @param request DescribeL7UsKeepaliveRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeL7UsKeepaliveResponse
+         */
+        public DescribeL7UsKeepaliveResponse DescribeL7UsKeepaliveWithOptions(DescribeL7UsKeepaliveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeL7UsKeepalive",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeL7UsKeepaliveResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询长连接
+         *
+         * @param request DescribeL7UsKeepaliveRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeL7UsKeepaliveResponse
+         */
+        public async Task<DescribeL7UsKeepaliveResponse> DescribeL7UsKeepaliveWithOptionsAsync(DescribeL7UsKeepaliveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeL7UsKeepalive",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeL7UsKeepaliveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询长连接
+         *
+         * @param request DescribeL7UsKeepaliveRequest
+         * @return DescribeL7UsKeepaliveResponse
+         */
+        public DescribeL7UsKeepaliveResponse DescribeL7UsKeepalive(DescribeL7UsKeepaliveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeL7UsKeepaliveWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询长连接
+         *
+         * @param request DescribeL7UsKeepaliveRequest
+         * @return DescribeL7UsKeepaliveResponse
+         */
+        public async Task<DescribeL7UsKeepaliveResponse> DescribeL7UsKeepaliveAsync(DescribeL7UsKeepaliveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeL7UsKeepaliveWithOptionsAsync(request, runtime);
         }
 
         /**

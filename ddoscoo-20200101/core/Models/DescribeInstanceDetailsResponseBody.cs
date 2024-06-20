@@ -23,12 +23,20 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public List<DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos> EipInfos { get; set; }
             public class DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos : TeaModel {
+                [NameInMap("CertConfigured")]
+                [Validation(Required=false)]
+                public bool? CertConfigured { get; set; }
+
                 /// <summary>
                 /// The IP address of the instance.
                 /// </summary>
                 [NameInMap("Eip")]
                 [Validation(Required=false)]
                 public string Eip { get; set; }
+
+                [NameInMap("FunctionVersion")]
+                [Validation(Required=false)]
+                public string FunctionVersion { get; set; }
 
                 /// <summary>
                 /// The IP address-based forwarding mode of the instance. Valid values:
@@ -50,6 +58,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 [Validation(Required=false)]
                 public string IpVersion { get; set; }
 
+                [NameInMap("Ssl13Enabled")]
+                [Validation(Required=false)]
+                public bool? Ssl13Enabled { get; set; }
+
                 /// <summary>
                 /// The status of the instance. Valid values:
                 /// 
@@ -62,6 +74,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("TlsVersion")]
+                [Validation(Required=false)]
+                public string TlsVersion { get; set; }
 
             }
 
