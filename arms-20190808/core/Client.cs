@@ -4721,6 +4721,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 body["SendRecoverMessage"] = request.SendRecoverMessage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                body["State"] = request.State;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -4802,6 +4806,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendRecoverMessage))
             {
                 body["SendRecoverMessage"] = request.SendRecoverMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                body["State"] = request.State;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15337,6 +15345,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcemapType))
+            {
+                query["SourcemapType"] = request.SourcemapType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -15386,6 +15398,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcemapType))
+            {
+                query["SourcemapType"] = request.SourcemapType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -16560,6 +16576,98 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTraceAppWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 获取应用监控自定义配置
+         *
+         * @param request GetTraceAppConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTraceAppConfigResponse
+         */
+        public GetTraceAppConfigResponse GetTraceAppConfigWithOptions(GetTraceAppConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pid))
+            {
+                query["Pid"] = request.Pid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTraceAppConfig",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTraceAppConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取应用监控自定义配置
+         *
+         * @param request GetTraceAppConfigRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTraceAppConfigResponse
+         */
+        public async Task<GetTraceAppConfigResponse> GetTraceAppConfigWithOptionsAsync(GetTraceAppConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pid))
+            {
+                query["Pid"] = request.Pid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTraceAppConfig",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTraceAppConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取应用监控自定义配置
+         *
+         * @param request GetTraceAppConfigRequest
+         * @return GetTraceAppConfigResponse
+         */
+        public GetTraceAppConfigResponse GetTraceAppConfig(GetTraceAppConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTraceAppConfigWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取应用监控自定义配置
+         *
+         * @param request GetTraceAppConfigRequest
+         * @return GetTraceAppConfigResponse
+         */
+        public async Task<GetTraceAppConfigResponse> GetTraceAppConfigAsync(GetTraceAppConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTraceAppConfigWithOptionsAsync(request, runtime);
         }
 
         /**

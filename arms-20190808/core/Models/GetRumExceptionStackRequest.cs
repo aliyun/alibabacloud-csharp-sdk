@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("SourcemapType")]
+        [Validation(Required=false)]
+        public string SourcemapType { get; set; }
+
     }
 
 }

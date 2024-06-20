@@ -8,17 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class GetCommercialStatusRequest : TeaModel {
+    public class GetTraceAppConfigRequest : TeaModel {
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("CommodityCode")]
+        [NameInMap("Pid")]
         [Validation(Required=false)]
-        public string CommodityCode { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Pid { get; set; }
 
     }
 

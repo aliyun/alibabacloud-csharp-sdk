@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// - rum: Real User Monitoring
         /// - prometheus: Managed Service for Prometheus
         /// - xtrace: Managed Service for OpenTelemetry
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Service")]
         [Validation(Required=false)]

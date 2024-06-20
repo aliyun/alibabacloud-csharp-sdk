@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// The content of the SourceMap file.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("File")]
         [Validation(Required=false)]
