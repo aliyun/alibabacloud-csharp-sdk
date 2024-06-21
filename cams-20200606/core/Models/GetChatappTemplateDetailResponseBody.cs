@@ -197,6 +197,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     [Validation(Required=false)]
                     public string SignatureHash { get; set; }
 
+                    [NameInMap("SupportedApps")]
+                    [Validation(Required=false)]
+                    public List<GetChatappTemplateDetailResponseBodyDataComponentsButtonsSupportedApps> SupportedApps { get; set; }
+                    public class GetChatappTemplateDetailResponseBodyDataComponentsButtonsSupportedApps : TeaModel {
+                        [NameInMap("PackageName")]
+                        [Validation(Required=false)]
+                        public string PackageName { get; set; }
+
+                        [NameInMap("SignatureHash")]
+                        [Validation(Required=false)]
+                        public string SignatureHash { get; set; }
+
+                    }
+
                     /// <summary>
                     /// The display name of the button.
                     /// </summary>

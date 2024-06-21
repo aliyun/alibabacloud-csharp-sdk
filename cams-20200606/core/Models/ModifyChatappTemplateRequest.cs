@@ -98,6 +98,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// </summary>
                 [NameInMap("PackageName")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string PackageName { get; set; }
 
                 /// <summary>
@@ -112,7 +113,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// </summary>
                 [NameInMap("SignatureHash")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string SignatureHash { get; set; }
+
+                [NameInMap("SupportedApps")]
+                [Validation(Required=false)]
+                public List<ModifyChatappTemplateRequestComponentsButtonsSupportedApps> SupportedApps { get; set; }
+                public class ModifyChatappTemplateRequestComponentsButtonsSupportedApps : TeaModel {
+                    [NameInMap("PackageName")]
+                    [Validation(Required=false)]
+                    public string PackageName { get; set; }
+
+                    [NameInMap("SignatureHash")]
+                    [Validation(Required=false)]
+                    public string SignatureHash { get; set; }
+
+                }
 
                 /// <summary>
                 /// The text of the button.
