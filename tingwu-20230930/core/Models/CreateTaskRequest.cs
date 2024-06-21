@@ -127,6 +127,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public bool? OcrAuxiliaryEnabled { get; set; }
 
+                [NameInMap("TranslateLlmSceneEnabled")]
+                [Validation(Required=false)]
+                public bool? TranslateLlmSceneEnabled { get; set; }
+
             }
 
             [NameInMap("MeetingAssistance")]
