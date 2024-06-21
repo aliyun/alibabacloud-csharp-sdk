@@ -31,7 +31,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// The region ID of the endpoint service to which you want to add the service resource.
         /// 
-        /// You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/120468.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The service resource ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// *   **slb**: a Classic Load Balancer (CLB) instance
         /// *   **alb**: an Application Load Balancer (ALB) instance
         /// *   **nlb**: a Network Load Balancer (NLB) instance
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -57,6 +63,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The ID of the endpoint service to which you want to add the service resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]

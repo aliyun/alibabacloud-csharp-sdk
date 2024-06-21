@@ -47,7 +47,24 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
+            /// <summary>
+            /// The associate status of the security group, valid values:
+            /// - Attaching: The security group is being attached.
+            /// - Attached: The security group is attached.
+            /// - Detaching: The security group is being detached.
+            /// </summary>
+            [NameInMap("SecurityGroupStatus")]
+            [Validation(Required=false)]
+            public string SecurityGroupStatus { get; set; }
+
         }
+
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

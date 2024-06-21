@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The ID of the endpoint to which you want to add the zone.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
@@ -38,7 +40,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// The region ID of the endpoint.
         /// 
-        /// You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/120468.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The ID of the vSwitch in the zone that you want to add. The system automatically creates an endpoint ENI in the vSwitch.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
@@ -53,6 +59,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The ID of the zone that you want to add.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

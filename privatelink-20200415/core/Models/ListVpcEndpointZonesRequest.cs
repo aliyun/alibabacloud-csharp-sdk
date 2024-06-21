@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// The ID of the endpoint for which you want to query zones.
         /// 
         /// After you specify an endpoint ID, the system queries the zones of the specified endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
@@ -38,7 +40,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// The region ID of the endpoint.
         /// 
-        /// You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/120468.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

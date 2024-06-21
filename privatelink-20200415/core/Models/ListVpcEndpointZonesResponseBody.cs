@@ -34,6 +34,13 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+        /// <summary>
         /// The information about the zones.
         /// </summary>
         [NameInMap("Zones")]

@@ -30,13 +30,17 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The ID of the endpoint with which you want to associate the security group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// The region ID of the endpoint with which you want to associate with the security group. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+        /// The region ID of the endpoint with which you want to associate with the security group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/120468.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The ID of the security group with which you want to associate the endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

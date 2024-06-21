@@ -29,7 +29,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region where the resource resides. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+        /// The ID of the region where the resource resides. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/120468.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -47,6 +49,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// 
         /// *   **vpcendpoint**: endpoint
         /// *   **vpcendpointservice**: endpoint service
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             /// <summary>
             /// The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
             /// 
-            /// The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The tag key must start with a letter but cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.
+            /// The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The tag key must start with a letter but cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -71,7 +75,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             /// <summary>
             /// The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
             /// 
-            /// The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The tag value must start with a letter but cannot start with `aliyun` or `acs:`. The tag value cannot contain `http://` or `https://`.
+            /// The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The tag value must start with a letter but cannot start with `aliyun` or `acs:`. The tag value cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

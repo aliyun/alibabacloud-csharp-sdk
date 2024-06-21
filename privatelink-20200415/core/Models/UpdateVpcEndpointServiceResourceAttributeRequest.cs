@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// 
         /// *   **true**
         /// *   **false**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AutoAllocatedEnabled")]
         [Validation(Required=false)]
@@ -41,7 +43,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// The ID of the region where the service resource is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/120468.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -49,6 +53,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The service resource ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -56,6 +62,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The endpoint service ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]

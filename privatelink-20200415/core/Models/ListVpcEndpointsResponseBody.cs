@@ -104,6 +104,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public string EndpointType { get; set; }
 
+            [NameInMap("PolicyDocument")]
+            [Validation(Required=false)]
+            public string PolicyDocument { get; set; }
+
             /// <summary>
             /// The region ID of the endpoint.
             /// </summary>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// The name of the endpoint.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("EndpointName")]
         [Validation(Required=false)]
@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string EndpointType { get; set; }
 
+        [NameInMap("PolicyDocument")]
+        [Validation(Required=false)]
+        public string PolicyDocument { get; set; }
+
         /// <summary>
         /// Specifies whether to enable user authentication. This parameter is available in Security Token Service (STS) mode. Valid values:
         /// 
@@ -68,7 +72,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// The region ID of the endpoint.
         /// 
-        /// You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/120468.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -127,6 +133,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The ID of the virtual private cloud (VPC) to which the endpoint belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

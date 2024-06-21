@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The endpoint ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
@@ -38,7 +40,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// The ID of the region where the connection request from the endpoint is rejected.
         /// 
-        /// You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/120468.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -58,6 +62,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The endpoint service ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
@@ -65,6 +71,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The ID of the zone that is associated with the endpoint.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

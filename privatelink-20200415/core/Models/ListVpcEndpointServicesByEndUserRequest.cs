@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// The region ID of the endpoint.
         /// 
         /// You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

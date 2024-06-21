@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// The endpoint ID whose attributes you want to modify.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
@@ -47,14 +49,20 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// The name of the endpoint.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("EndpointName")]
         [Validation(Required=false)]
         public string EndpointName { get; set; }
 
+        [NameInMap("PolicyDocument")]
+        [Validation(Required=false)]
+        public string PolicyDocument { get; set; }
+
         /// <summary>
-        /// The region ID of the endpoint whose attributes you want to modify. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+        /// The region ID of the endpoint whose attributes you want to modify. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/120468.html) operation to query the most recent region list.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
