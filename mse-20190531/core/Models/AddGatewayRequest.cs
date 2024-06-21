@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        [NameInMap("ClbNetworkType")]
+        [Validation(Required=false)]
+        public string ClbNetworkType { get; set; }
+
         /// <summary>
         /// Specifies whether to activate Tracing Analysis.
         /// </summary>
