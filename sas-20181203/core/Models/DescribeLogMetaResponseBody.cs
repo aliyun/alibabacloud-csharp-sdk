@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The category of logs. Valid values:
             /// 
-            /// *   **host**: host logs
-            /// *   **network**: network logs
-            /// *   **security**: security logs
+            /// *   **host**
+            /// *   **network**
+            /// *   **security**
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The time period after which logs in hot storage are moved to cold storage. Unit: days.
             /// 
-            /// >  If the value is **-1**, logs that are stored in hot storage are not moved to cold storage.
+            /// >  If the value is -1, logs that are stored in hot storage are not moved to cold storage.
             /// </summary>
             [NameInMap("HotTtl")]
             [Validation(Required=false)]

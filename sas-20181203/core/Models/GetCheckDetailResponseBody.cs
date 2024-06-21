@@ -118,6 +118,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         [NameInMap("RepairReset")]
         [Validation(Required=false)]
+        [Obsolete]
         public string RepairReset { get; set; }
 
         [NameInMap("RepairSetting")]
@@ -142,13 +143,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public List<GetCheckDetailResponseBodyRepairSettingRepairConfigs> RepairConfigs { get; set; }
             public class GetCheckDetailResponseBodyRepairSettingRepairConfigs : TeaModel {
+                [NameInMap("ConsoleParamType")]
+                [Validation(Required=false)]
+                public string ConsoleParamType { get; set; }
+
                 [NameInMap("CustomFlag")]
                 [Validation(Required=false)]
                 public bool? CustomFlag { get; set; }
 
+                [NameInMap("DataTransformType")]
+                [Validation(Required=false)]
+                public string DataTransformType { get; set; }
+
                 [NameInMap("DefaultValue")]
                 [Validation(Required=false)]
                 public string DefaultValue { get; set; }
+
+                [NameInMap("EmptyParamSwitch")]
+                [Validation(Required=false)]
+                public string EmptyParamSwitch { get; set; }
 
                 [NameInMap("ExclusiveName")]
                 [Validation(Required=false)]
@@ -169,6 +182,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("TypeDefine")]
                 [Validation(Required=false)]
                 public string TypeDefine { get; set; }
+
+                [NameInMap("UsageType")]
+                [Validation(Required=false)]
+                public string UsageType { get; set; }
 
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -192,6 +209,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         [NameInMap("RepairSupportType")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? RepairSupportType { get; set; }
 
         /// <summary>

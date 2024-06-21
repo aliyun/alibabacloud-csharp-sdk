@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs> IllegalCustomConfigs { get; set; }
         public class ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs : TeaModel {
             /// <summary>
-            /// The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
+            /// The name of the custom configuration item, which is unique in a check item.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -25,10 +25,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// An array that consists of the invalid parameters required for fixing risk items.
+        /// </summary>
         [NameInMap("IllegalRepairConfigs")]
         [Validation(Required=false)]
         public List<ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs> IllegalRepairConfigs { get; set; }
         public class ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs : TeaModel {
+            /// <summary>
+            /// The name of the invalid parameter required for fixing a risk item.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddSasModuleTrialResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<AddSasModuleTrialResponseBodyDataTrialRecordList> TrialRecordList { get; set; }
             public class AddSasModuleTrialResponseBodyDataTrialRecordList : TeaModel {
                 /// <summary>
-                /// The purchased quota.
+                /// The quota.
                 /// </summary>
                 [NameInMap("AuthLimit")]
                 [Validation(Required=false)]
                 public long? AuthLimit { get; set; }
 
                 /// <summary>
-                /// List of purchased quotas.
+                /// The list of quotas. This parameter is available if the value of the ModuleCode parameter is cloudSiem. The value of this parameter consists of the log storage capacity for the threat analysis and response feature and the log data to add. Units: GB and GB-day.
                 /// </summary>
                 [NameInMap("AuthLimitList")]
                 [Validation(Required=false)]
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? GmtStart { get; set; }
 
                 /// <summary>
-                /// The code of the module. Valid values:
+                /// The code of the feature. Valid values:
                 /// 
-                /// *   **vulFix**: vulnerability fixing
-                /// *   **cloudSiem**: threat analysis
+                /// *   **vulFix**: vulnerability fixing.
+                /// *   **cloudSiem**: threat analysis and response.
                 /// </summary>
                 [NameInMap("ModuleCode")]
                 [Validation(Required=false)]
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// The status of the trial use. Valid values:
                 /// 
-                /// *   **1**: enabled
-                /// *   **0**: finished
+                /// *   **1**: The feature is in trial use.
+                /// *   **0**: The trial use ends.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

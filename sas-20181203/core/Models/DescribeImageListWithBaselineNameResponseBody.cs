@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageListWithBaselineNameResponseBody : TeaModel {
         /// <summary>
-        /// The timestamp when the last baseline check was performed. Unit: milliseconds.
+        /// The information about the images.
         /// </summary>
         [NameInMap("ImageInfos")]
         [Validation(Required=false)]
@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Digest { get; set; }
 
+            /// <summary>
+            /// The timestamp generated when the first scan was performed. Unit: milliseconds.
+            /// </summary>
             [NameInMap("FirstScanTime")]
             [Validation(Required=false)]
             public long? FirstScanTime { get; set; }
@@ -229,8 +232,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The type of the asset on which the baseline check is performed. Valid values:
             /// 
-            /// - ECS_IMAGE: image
-            /// - ECS_SNAPSHOT: snapshot
+            /// *   ECS_IMAGE
+            /// *   ECS_SNAPSHOT
             /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]

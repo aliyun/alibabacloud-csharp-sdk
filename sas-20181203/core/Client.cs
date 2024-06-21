@@ -1600,7 +1600,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary Enables the trial use of Security Center value-added features, including vulnerability fixing and threat analysis.
+         * @summary Enables the trial use of Security Center value-added features, including vulnerability fixing and threat analysis and response.
          *
          * @param request AddSasModuleTrialRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1638,7 +1638,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary Enables the trial use of Security Center value-added features, including vulnerability fixing and threat analysis.
+         * @summary Enables the trial use of Security Center value-added features, including vulnerability fixing and threat analysis and response.
          *
          * @param request AddSasModuleTrialRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1676,7 +1676,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary Enables the trial use of Security Center value-added features, including vulnerability fixing and threat analysis.
+         * @summary Enables the trial use of Security Center value-added features, including vulnerability fixing and threat analysis and response.
          *
          * @param request AddSasModuleTrialRequest
          * @return AddSasModuleTrialResponse
@@ -1688,7 +1688,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary Enables the trial use of Security Center value-added features, including vulnerability fixing and threat analysis.
+         * @summary Enables the trial use of Security Center value-added features, including vulnerability fixing and threat analysis and response.
          *
          * @param request AddSasModuleTrialRequest
          * @return AddSasModuleTrialResponse
@@ -47684,7 +47684,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary Queries the qualification information about the trial use of Security Center value-added features, including vulnerability fixing and threat analysis.
+         * @summary Queries the qualification information about the trial use of Security Center value-added features, including vulnerability fixing and threat analysis and response.
          *
          * @param request GetModuleTrialAuthInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -47722,7 +47722,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary Queries the qualification information about the trial use of Security Center value-added features, including vulnerability fixing and threat analysis.
+         * @summary Queries the qualification information about the trial use of Security Center value-added features, including vulnerability fixing and threat analysis and response.
          *
          * @param request GetModuleTrialAuthInfoRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -47760,7 +47760,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary Queries the qualification information about the trial use of Security Center value-added features, including vulnerability fixing and threat analysis.
+         * @summary Queries the qualification information about the trial use of Security Center value-added features, including vulnerability fixing and threat analysis and response.
          *
          * @param request GetModuleTrialAuthInfoRequest
          * @return GetModuleTrialAuthInfoResponse
@@ -47772,7 +47772,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary Queries the qualification information about the trial use of Security Center value-added features, including vulnerability fixing and threat analysis.
+         * @summary Queries the qualification information about the trial use of Security Center value-added features, including vulnerability fixing and threat analysis and response.
          *
          * @param request GetModuleTrialAuthInfoRequest
          * @return GetModuleTrialAuthInfoResponse
@@ -55390,6 +55390,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["IntranetIp"] = request.IntranetIp;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                query["Operation"] = request.Operation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
@@ -55467,6 +55471,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntranetIp))
             {
                 query["IntranetIp"] = request.IntranetIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                query["Operation"] = request.Operation;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {

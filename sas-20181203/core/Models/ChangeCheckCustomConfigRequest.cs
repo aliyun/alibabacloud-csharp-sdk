@@ -58,22 +58,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The parameters required for fixing risk items.
+        /// </summary>
         [NameInMap("RepairConfigs")]
         [Validation(Required=false)]
         public List<ChangeCheckCustomConfigRequestRepairConfigs> RepairConfigs { get; set; }
         public class ChangeCheckCustomConfigRequestRepairConfigs : TeaModel {
+            /// <summary>
+            /// The ID of the fixing process.
+            /// </summary>
             [NameInMap("FlowId")]
             [Validation(Required=false)]
             public string FlowId { get; set; }
 
+            /// <summary>
+            /// The name of the parameter required for fixing a risk item, which is unique in a check item.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The operation that you want to perform on the custom configuration item. This parameter is required only if you want to delete the custom configuration item. To delete the custom configuration item, set the value to DELETE.
+            /// </summary>
             [NameInMap("Operation")]
             [Validation(Required=false)]
             public string Operation { get; set; }
 
+            /// <summary>
+            /// The value of the parameter required for fixing a risk item. The value is a string.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

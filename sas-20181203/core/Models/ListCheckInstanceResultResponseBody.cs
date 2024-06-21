@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListCheckInstanceResultResponseBodyBasicData> BasicData { get; set; }
         public class ListCheckInstanceResultResponseBodyBasicData : TeaModel {
             /// <summary>
-            /// The check result ID of the instance.
+            /// The ID of the check result for the instance.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -30,32 +30,53 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// The information about the instance on which the check item is used.
+            /// </summary>
             [NameInMap("InstanceInfo")]
             [Validation(Required=false)]
             public ListCheckInstanceResultResponseBodyBasicDataInstanceInfo InstanceInfo { get; set; }
             public class ListCheckInstanceResultResponseBodyBasicDataInstanceInfo : TeaModel {
+                /// <summary>
+                /// The information about the configuration item whose risks are fixed for the instance.
+                /// </summary>
                 [NameInMap("Config")]
                 [Validation(Required=false)]
                 public List<ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig> Config { get; set; }
                 public class ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig : TeaModel {
+                    /// <summary>
+                    /// The name of the configuration item, which is unique.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The display name of the configuration item for internationalization.
+                    /// </summary>
                     [NameInMap("ShowName")]
                     [Validation(Required=false)]
                     public string ShowName { get; set; }
 
+                    /// <summary>
+                    /// The value of the configuration item specified for the instance.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The time of the first check.
+                /// </summary>
                 [NameInMap("FirstUpdateTime")]
                 [Validation(Required=false)]
                 public long? FirstUpdateTime { get; set; }
 
+                /// <summary>
+                /// The time of the last check.
+                /// </summary>
                 [NameInMap("LastUpdateTime")]
                 [Validation(Required=false)]
                 public long? LastUpdateTime { get; set; }
@@ -63,14 +84,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// The instance name.
+            /// The instance name of the server.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The ID of the region in which the instance resides.
+            /// The region ID of the instance.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -79,11 +100,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The states of check items. Multiple states are separated with commas (,). Valid values:
             /// 
-            /// *   **PASS**: The instance passed the check.
-            /// *   **NOT_PASS**: The instance failed to pass the check.
-            /// *   **CHECKING**: The instance is being checked.
-            /// *   **NOT_CHECK**: The instance is not checked.
-            /// *   **WHITELIST**: The instance is in the whitelist.
+            /// *   **PASS**: passed
+            /// *   **NOT_PASS**: failed
+            /// *   **CHECKING**: being checked
+            /// *   **NOT_CHECK**: not checked
+            /// *   **WHITELIST**: added to the whitelist
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

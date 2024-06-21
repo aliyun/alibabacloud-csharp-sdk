@@ -403,6 +403,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string MaliciousRuleStatus { get; set; }
 
+            [NameInMap("MarkList")]
+            [Validation(Required=false)]
+            public List<string> MarkList { get; set; }
+
             /// <summary>
             /// The advanced whitelist rule.
             /// </summary>

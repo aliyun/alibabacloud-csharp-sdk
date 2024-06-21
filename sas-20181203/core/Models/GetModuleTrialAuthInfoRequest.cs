@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The module code. Valid values:
+        /// The code of the feature. Valid values:
         /// 
-        /// *   **vulFix**: vulnerability fixing
-        /// *   **cloudSiem**: threat analysis
+        /// *   **vulFix**: vulnerability fixing.
+        /// *   **cloudSiem**: threat analysis and response.
         /// </summary>
         [NameInMap("ModuleCode")]
         [Validation(Required=false)]

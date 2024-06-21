@@ -59,6 +59,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IntranetIp { get; set; }
 
         /// <summary>
+        /// Type of operation on a file. eg:
+        /// 
+        /// - **DELETE**: delete the file.
+        /// - **WRITE**: write the file.
+        /// - **READ**: read the file.
+        /// - **RENAME**: rename the file.
+        /// - **CHOWN**: set the file owner and file association group operations.
+        /// </summary>
+        [NameInMap("Operation")]
+        [Validation(Required=false)]
+        public string Operation { get; set; }
+
+        /// <summary>
         /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
