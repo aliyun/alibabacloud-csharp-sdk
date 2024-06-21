@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public List<string> DeleteOptions { get; set; }
 
+        [NameInMap("Parallelism")]
+        [Validation(Required=false)]
+        public long? Parallelism { get; set; }
+
         /// <summary>
         /// The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\\
         /// ROS assumes the role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.\\

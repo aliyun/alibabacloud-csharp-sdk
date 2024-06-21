@@ -2304,6 +2304,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["DeleteOptions"] = request.DeleteOptions;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parallelism))
+            {
+                query["Parallelism"] = request.Parallelism;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
             {
                 query["RamRoleName"] = request.RamRoleName;
@@ -2357,6 +2361,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteOptions))
             {
                 query["DeleteOptions"] = request.DeleteOptions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parallelism))
+            {
+                query["Parallelism"] = request.Parallelism;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
             {
