@@ -46,6 +46,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string SurveyChannel { get; set; }
 
+        [NameInMap("SurveyTemplateId")]
+        [Validation(Required=false)]
+        public string SurveyTemplateId { get; set; }
+
+        [NameInMap("SurveyTemplateVariables")]
+        [Validation(Required=false)]
+        public string SurveyTemplateVariables { get; set; }
+
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
