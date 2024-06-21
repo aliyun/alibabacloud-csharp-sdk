@@ -1494,6 +1494,102 @@ namespace AlibabaCloud.SDK.Rtc20180111
         }
 
         /**
+         * @summary 查询录制列表
+         *
+         * @param tmpReq DescribeAppRecordingFilesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAppRecordingFilesResponse
+         */
+        public DescribeAppRecordingFilesResponse DescribeAppRecordingFilesWithOptions(DescribeAppRecordingFilesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeAppRecordingFilesShrinkRequest request = new DescribeAppRecordingFilesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIds))
+            {
+                request.TaskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIds, "TaskIds", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAppRecordingFiles",
+                Version = "2018-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppRecordingFilesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询录制列表
+         *
+         * @param tmpReq DescribeAppRecordingFilesRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeAppRecordingFilesResponse
+         */
+        public async Task<DescribeAppRecordingFilesResponse> DescribeAppRecordingFilesWithOptionsAsync(DescribeAppRecordingFilesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeAppRecordingFilesShrinkRequest request = new DescribeAppRecordingFilesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIds))
+            {
+                request.TaskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIds, "TaskIds", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAppRecordingFiles",
+                Version = "2018-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppRecordingFilesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询录制列表
+         *
+         * @param request DescribeAppRecordingFilesRequest
+         * @return DescribeAppRecordingFilesResponse
+         */
+        public DescribeAppRecordingFilesResponse DescribeAppRecordingFiles(DescribeAppRecordingFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAppRecordingFilesWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询录制列表
+         *
+         * @param request DescribeAppRecordingFilesRequest
+         * @return DescribeAppRecordingFilesResponse
+         */
+        public async Task<DescribeAppRecordingFilesResponse> DescribeAppRecordingFilesAsync(DescribeAppRecordingFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAppRecordingFilesWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 应用推流模版列表
          *
          * @param tmpReq DescribeAppStreamingOutTemplatesRequest
