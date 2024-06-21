@@ -35,13 +35,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The source IP address of the request. The system specifies this parameter.
-        /// </summary>
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        /// <summary>
         /// The type of the asset. Valid values:
         /// 
         /// *   **waf**: WAF instance
