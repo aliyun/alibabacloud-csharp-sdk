@@ -59,6 +59,18 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [Validation(Required=false)]
             public string MountPath { get; set; }
 
+            [NameInMap("OptionType")]
+            [Validation(Required=false)]
+            public string OptionType { get; set; }
+
+            [NameInMap("Options")]
+            [Validation(Required=false)]
+            public string Options { get; set; }
+
+            [NameInMap("Uri")]
+            [Validation(Required=false)]
+            public string Uri { get; set; }
+
         }
 
         [NameInMap("Driver")]
