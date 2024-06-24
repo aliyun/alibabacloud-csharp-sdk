@@ -94,6 +94,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+         * @summary Creates a package.
+         *
+         * @param request CreatePackageRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreatePackageResponse
+         */
         public CreatePackageResponse CreatePackageWithOptions(string projectName, CreatePackageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -123,6 +131,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<CreatePackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a package.
+         *
+         * @param request CreatePackageRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreatePackageResponse
+         */
         public async Task<CreatePackageResponse> CreatePackageWithOptionsAsync(string projectName, CreatePackageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -152,6 +168,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<CreatePackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a package.
+         *
+         * @param request CreatePackageRequest
+         * @return CreatePackageResponse
+         */
         public CreatePackageResponse CreatePackage(string projectName, CreatePackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -159,6 +181,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return CreatePackageWithOptions(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Creates a package.
+         *
+         * @param request CreatePackageRequest
+         * @return CreatePackageResponse
+         */
         public async Task<CreatePackageResponse> CreatePackageAsync(string projectName, CreatePackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -166,6 +194,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await CreatePackageWithOptionsAsync(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Creates a MaxCompute project.
+         *
+         * @param request CreateProjectRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateProjectResponse
+         */
         public CreateProjectResponse CreateProjectWithOptions(CreateProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -189,6 +225,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<CreateProjectResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a MaxCompute project.
+         *
+         * @param request CreateProjectRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateProjectResponse
+         */
         public async Task<CreateProjectResponse> CreateProjectWithOptionsAsync(CreateProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -212,6 +256,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<CreateProjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a MaxCompute project.
+         *
+         * @param request CreateProjectRequest
+         * @return CreateProjectResponse
+         */
         public CreateProjectResponse CreateProject(CreateProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -219,6 +269,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return CreateProjectWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Creates a MaxCompute project.
+         *
+         * @param request CreateProjectRequest
+         * @return CreateProjectResponse
+         */
         public async Task<CreateProjectResponse> CreateProjectAsync(CreateProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -226,6 +282,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await CreateProjectWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary Creates a quota plan.
+         *
+         * @param request CreateQuotaPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateQuotaPlanResponse
+         */
         public CreateQuotaPlanResponse CreateQuotaPlanWithOptions(string nickname, CreateQuotaPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -259,6 +323,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<CreateQuotaPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a quota plan.
+         *
+         * @param request CreateQuotaPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateQuotaPlanResponse
+         */
         public async Task<CreateQuotaPlanResponse> CreateQuotaPlanWithOptionsAsync(string nickname, CreateQuotaPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -292,6 +364,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<CreateQuotaPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a quota plan.
+         *
+         * @param request CreateQuotaPlanRequest
+         * @return CreateQuotaPlanResponse
+         */
         public CreateQuotaPlanResponse CreateQuotaPlan(string nickname, CreateQuotaPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -299,6 +377,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return CreateQuotaPlanWithOptions(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Creates a quota plan.
+         *
+         * @param request CreateQuotaPlanRequest
+         * @return CreateQuotaPlanResponse
+         */
         public async Task<CreateQuotaPlanResponse> CreateQuotaPlanAsync(string nickname, CreateQuotaPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -306,6 +390,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await CreateQuotaPlanWithOptionsAsync(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Creates a scheduling plan for a quota plan.
+         *
+         * @param request CreateQuotaScheduleRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateQuotaScheduleResponse
+         */
         public CreateQuotaScheduleResponse CreateQuotaScheduleWithOptions(string nickname, CreateQuotaScheduleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -339,6 +431,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<CreateQuotaScheduleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a scheduling plan for a quota plan.
+         *
+         * @param request CreateQuotaScheduleRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateQuotaScheduleResponse
+         */
         public async Task<CreateQuotaScheduleResponse> CreateQuotaScheduleWithOptionsAsync(string nickname, CreateQuotaScheduleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -372,6 +472,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<CreateQuotaScheduleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a scheduling plan for a quota plan.
+         *
+         * @param request CreateQuotaScheduleRequest
+         * @return CreateQuotaScheduleResponse
+         */
         public CreateQuotaScheduleResponse CreateQuotaSchedule(string nickname, CreateQuotaScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -379,6 +485,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return CreateQuotaScheduleWithOptions(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Creates a scheduling plan for a quota plan.
+         *
+         * @param request CreateQuotaScheduleRequest
+         * @return CreateQuotaScheduleResponse
+         */
         public async Task<CreateQuotaScheduleResponse> CreateQuotaScheduleAsync(string nickname, CreateQuotaScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -386,6 +498,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await CreateQuotaScheduleWithOptionsAsync(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Creates a role at the MaxCompute project level.
+         *
+         * @param request CreateRoleRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRoleResponse
+         */
         public CreateRoleResponse CreateRoleWithOptions(string projectName, CreateRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -409,6 +529,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<CreateRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a role at the MaxCompute project level.
+         *
+         * @param request CreateRoleRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateRoleResponse
+         */
         public async Task<CreateRoleResponse> CreateRoleWithOptionsAsync(string projectName, CreateRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -432,6 +560,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<CreateRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Creates a role at the MaxCompute project level.
+         *
+         * @param request CreateRoleRequest
+         * @return CreateRoleResponse
+         */
         public CreateRoleResponse CreateRole(string projectName, CreateRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -439,6 +573,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return CreateRoleWithOptions(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Creates a role at the MaxCompute project level.
+         *
+         * @param request CreateRoleRequest
+         * @return CreateRoleResponse
+         */
         public async Task<CreateRoleResponse> CreateRoleAsync(string projectName, CreateRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -446,6 +586,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await CreateRoleWithOptionsAsync(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Deletes a quota plan.
+         *
+         * @param request DeleteQuotaPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteQuotaPlanResponse
+         */
         public DeleteQuotaPlanResponse DeleteQuotaPlanWithOptions(string nickname, string planName, DeleteQuotaPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -478,6 +626,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<DeleteQuotaPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a quota plan.
+         *
+         * @param request DeleteQuotaPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteQuotaPlanResponse
+         */
         public async Task<DeleteQuotaPlanResponse> DeleteQuotaPlanWithOptionsAsync(string nickname, string planName, DeleteQuotaPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -510,6 +666,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<DeleteQuotaPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a quota plan.
+         *
+         * @param request DeleteQuotaPlanRequest
+         * @return DeleteQuotaPlanResponse
+         */
         public DeleteQuotaPlanResponse DeleteQuotaPlan(string nickname, string planName, DeleteQuotaPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -517,6 +679,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return DeleteQuotaPlanWithOptions(nickname, planName, request, headers, runtime);
         }
 
+        /**
+         * @summary Deletes a quota plan.
+         *
+         * @param request DeleteQuotaPlanRequest
+         * @return DeleteQuotaPlanResponse
+         */
         public async Task<DeleteQuotaPlanResponse> DeleteQuotaPlanAsync(string nickname, string planName, DeleteQuotaPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -524,6 +692,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await DeleteQuotaPlanWithOptionsAsync(nickname, planName, request, headers, runtime);
         }
 
+        /**
+         * @summary Performs statistics on all jobs that are complete on a specified day and obtains the total resource usage of each job executor on a daily basis.
+         *
+         * @param tmpReq GetJobResourceUsageRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetJobResourceUsageResponse
+         */
         public GetJobResourceUsageResponse GetJobResourceUsageWithOptions(GetJobResourceUsageRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -578,6 +754,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetJobResourceUsageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Performs statistics on all jobs that are complete on a specified day and obtains the total resource usage of each job executor on a daily basis.
+         *
+         * @param tmpReq GetJobResourceUsageRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetJobResourceUsageResponse
+         */
         public async Task<GetJobResourceUsageResponse> GetJobResourceUsageWithOptionsAsync(GetJobResourceUsageRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -632,6 +816,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetJobResourceUsageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Performs statistics on all jobs that are complete on a specified day and obtains the total resource usage of each job executor on a daily basis.
+         *
+         * @param request GetJobResourceUsageRequest
+         * @return GetJobResourceUsageResponse
+         */
         public GetJobResourceUsageResponse GetJobResourceUsage(GetJobResourceUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -639,6 +829,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetJobResourceUsageWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Performs statistics on all jobs that are complete on a specified day and obtains the total resource usage of each job executor on a daily basis.
+         *
+         * @param request GetJobResourceUsageRequest
+         * @return GetJobResourceUsageResponse
+         */
         public async Task<GetJobResourceUsageResponse> GetJobResourceUsageAsync(GetJobResourceUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -646,6 +842,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetJobResourceUsageWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the information about a package.
+         *
+         * @param request GetPackageRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetPackageResponse
+         */
         public GetPackageResponse GetPackageWithOptions(string projectName, string packageName, GetPackageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -674,6 +878,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetPackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the information about a package.
+         *
+         * @param request GetPackageRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetPackageResponse
+         */
         public async Task<GetPackageResponse> GetPackageWithOptionsAsync(string projectName, string packageName, GetPackageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -702,6 +914,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetPackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the information about a package.
+         *
+         * @param request GetPackageRequest
+         * @return GetPackageResponse
+         */
         public GetPackageResponse GetPackage(string projectName, string packageName, GetPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -709,6 +927,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetPackageWithOptions(projectName, packageName, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the information about a package.
+         *
+         * @param request GetPackageRequest
+         * @return GetPackageResponse
+         */
         public async Task<GetPackageResponse> GetPackageAsync(string projectName, string packageName, GetPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -716,6 +940,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetPackageWithOptionsAsync(projectName, packageName, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the information about a MaxCompute project.
+         *
+         * @param request GetProjectRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetProjectResponse
+         */
         public GetProjectResponse GetProjectWithOptions(string projectName, GetProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -744,6 +976,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetProjectResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about a MaxCompute project.
+         *
+         * @param request GetProjectRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetProjectResponse
+         */
         public async Task<GetProjectResponse> GetProjectWithOptionsAsync(string projectName, GetProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -772,6 +1012,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetProjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the information about a MaxCompute project.
+         *
+         * @param request GetProjectRequest
+         * @return GetProjectResponse
+         */
         public GetProjectResponse GetProject(string projectName, GetProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -779,6 +1025,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetProjectWithOptions(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the information about a MaxCompute project.
+         *
+         * @param request GetProjectRequest
+         * @return GetProjectResponse
+         */
         public async Task<GetProjectResponse> GetProjectAsync(string projectName, GetProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -786,6 +1038,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetProjectWithOptionsAsync(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the information about a specified level-1 quota.
+         *
+         * @param request GetQuotaRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetQuotaResponse
+         */
         public GetQuotaResponse GetQuotaWithOptions(string nickname, GetQuotaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -826,6 +1086,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetQuotaResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the information about a specified level-1 quota.
+         *
+         * @param request GetQuotaRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetQuotaResponse
+         */
         public async Task<GetQuotaResponse> GetQuotaWithOptionsAsync(string nickname, GetQuotaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -866,6 +1134,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the information about a specified level-1 quota.
+         *
+         * @param request GetQuotaRequest
+         * @return GetQuotaResponse
+         */
         public GetQuotaResponse GetQuota(string nickname, GetQuotaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -873,6 +1147,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetQuotaWithOptions(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the information about a specified level-1 quota.
+         *
+         * @param request GetQuotaRequest
+         * @return GetQuotaResponse
+         */
         public async Task<GetQuotaResponse> GetQuotaAsync(string nickname, GetQuotaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -880,6 +1160,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetQuotaWithOptionsAsync(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the information of a quota plan.
+         *
+         * @param request GetQuotaPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetQuotaPlanResponse
+         */
         public GetQuotaPlanResponse GetQuotaPlanWithOptions(string nickname, string planName, GetQuotaPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -912,6 +1200,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetQuotaPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the information of a quota plan.
+         *
+         * @param request GetQuotaPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetQuotaPlanResponse
+         */
         public async Task<GetQuotaPlanResponse> GetQuotaPlanWithOptionsAsync(string nickname, string planName, GetQuotaPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -944,6 +1240,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetQuotaPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the information of a quota plan.
+         *
+         * @param request GetQuotaPlanRequest
+         * @return GetQuotaPlanResponse
+         */
         public GetQuotaPlanResponse GetQuotaPlan(string nickname, string planName, GetQuotaPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -951,6 +1253,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetQuotaPlanWithOptions(nickname, planName, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the information of a quota plan.
+         *
+         * @param request GetQuotaPlanRequest
+         * @return GetQuotaPlanResponse
+         */
         public async Task<GetQuotaPlanResponse> GetQuotaPlanAsync(string nickname, string planName, GetQuotaPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -958,6 +1266,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetQuotaPlanWithOptionsAsync(nickname, planName, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the scheduling plan for a quota plan.
+         *
+         * @param request GetQuotaScheduleRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetQuotaScheduleResponse
+         */
         public GetQuotaScheduleResponse GetQuotaScheduleWithOptions(string nickname, GetQuotaScheduleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -994,6 +1310,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetQuotaScheduleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the scheduling plan for a quota plan.
+         *
+         * @param request GetQuotaScheduleRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetQuotaScheduleResponse
+         */
         public async Task<GetQuotaScheduleResponse> GetQuotaScheduleWithOptionsAsync(string nickname, GetQuotaScheduleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1030,6 +1354,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetQuotaScheduleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the scheduling plan for a quota plan.
+         *
+         * @param request GetQuotaScheduleRequest
+         * @return GetQuotaScheduleResponse
+         */
         public GetQuotaScheduleResponse GetQuotaSchedule(string nickname, GetQuotaScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1037,6 +1367,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetQuotaScheduleWithOptions(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the scheduling plan for a quota plan.
+         *
+         * @param request GetQuotaScheduleRequest
+         * @return GetQuotaScheduleResponse
+         */
         public async Task<GetQuotaScheduleResponse> GetQuotaScheduleAsync(string nickname, GetQuotaScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1044,6 +1380,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetQuotaScheduleWithOptionsAsync(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the ACL-based permissions that is granted to a project-level role.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetRoleAclResponse
+         */
         public GetRoleAclResponse GetRoleAclWithOptions(string projectName, string roleName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1065,6 +1408,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetRoleAclResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the ACL-based permissions that is granted to a project-level role.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetRoleAclResponse
+         */
         public async Task<GetRoleAclResponse> GetRoleAclWithOptionsAsync(string projectName, string roleName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1086,6 +1436,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetRoleAclResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the ACL-based permissions that is granted to a project-level role.
+         *
+         * @return GetRoleAclResponse
+         */
         public GetRoleAclResponse GetRoleAcl(string projectName, string roleName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1093,6 +1448,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetRoleAclWithOptions(projectName, roleName, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the ACL-based permissions that is granted to a project-level role.
+         *
+         * @return GetRoleAclResponse
+         */
         public async Task<GetRoleAclResponse> GetRoleAclAsync(string projectName, string roleName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1100,6 +1460,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetRoleAclWithOptionsAsync(projectName, roleName, headers, runtime);
         }
 
+        /**
+         * @summary Obtains ACL-based permissions on an object that are granted to a project-level role.
+         *
+         * @param request GetRoleAclOnObjectRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetRoleAclOnObjectResponse
+         */
         public GetRoleAclOnObjectResponse GetRoleAclOnObjectWithOptions(string projectName, string roleName, GetRoleAclOnObjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1132,6 +1500,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetRoleAclOnObjectResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains ACL-based permissions on an object that are granted to a project-level role.
+         *
+         * @param request GetRoleAclOnObjectRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetRoleAclOnObjectResponse
+         */
         public async Task<GetRoleAclOnObjectResponse> GetRoleAclOnObjectWithOptionsAsync(string projectName, string roleName, GetRoleAclOnObjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1164,6 +1540,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetRoleAclOnObjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains ACL-based permissions on an object that are granted to a project-level role.
+         *
+         * @param request GetRoleAclOnObjectRequest
+         * @return GetRoleAclOnObjectResponse
+         */
         public GetRoleAclOnObjectResponse GetRoleAclOnObject(string projectName, string roleName, GetRoleAclOnObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1171,6 +1553,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetRoleAclOnObjectWithOptions(projectName, roleName, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains ACL-based permissions on an object that are granted to a project-level role.
+         *
+         * @param request GetRoleAclOnObjectRequest
+         * @return GetRoleAclOnObjectResponse
+         */
         public async Task<GetRoleAclOnObjectResponse> GetRoleAclOnObjectAsync(string projectName, string roleName, GetRoleAclOnObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1178,6 +1566,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetRoleAclOnObjectWithOptionsAsync(projectName, roleName, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the policy that is attached to a project-level role.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetRolePolicyResponse
+         */
         public GetRolePolicyResponse GetRolePolicyWithOptions(string projectName, string roleName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1199,6 +1594,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetRolePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the policy that is attached to a project-level role.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetRolePolicyResponse
+         */
         public async Task<GetRolePolicyResponse> GetRolePolicyWithOptionsAsync(string projectName, string roleName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1220,6 +1622,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetRolePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the policy that is attached to a project-level role.
+         *
+         * @return GetRolePolicyResponse
+         */
         public GetRolePolicyResponse GetRolePolicy(string projectName, string roleName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1227,6 +1634,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetRolePolicyWithOptions(projectName, roleName, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the policy that is attached to a project-level role.
+         *
+         * @return GetRolePolicyResponse
+         */
         public async Task<GetRolePolicyResponse> GetRolePolicyAsync(string projectName, string roleName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1234,6 +1646,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetRolePolicyWithOptionsAsync(projectName, roleName, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the running state data of jobs that are in the running state in a specified period of time.
+         *
+         * @param tmpReq GetRunningJobsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetRunningJobsResponse
+         */
         public GetRunningJobsResponse GetRunningJobsWithOptions(GetRunningJobsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1292,6 +1712,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetRunningJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the running state data of jobs that are in the running state in a specified period of time.
+         *
+         * @param tmpReq GetRunningJobsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetRunningJobsResponse
+         */
         public async Task<GetRunningJobsResponse> GetRunningJobsWithOptionsAsync(GetRunningJobsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1350,6 +1778,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetRunningJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the running state data of jobs that are in the running state in a specified period of time.
+         *
+         * @param request GetRunningJobsRequest
+         * @return GetRunningJobsResponse
+         */
         public GetRunningJobsResponse GetRunningJobs(GetRunningJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1357,6 +1791,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetRunningJobsWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the running state data of jobs that are in the running state in a specified period of time.
+         *
+         * @param request GetRunningJobsRequest
+         * @return GetRunningJobsResponse
+         */
         public async Task<GetRunningJobsResponse> GetRunningJobsAsync(GetRunningJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1364,6 +1804,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetRunningJobsWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @param request GetTableInfoRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTableInfoResponse
+         */
         public GetTableInfoResponse GetTableInfoWithOptions(string projectName, string tableName, GetTableInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1396,6 +1842,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetTableInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @param request GetTableInfoRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTableInfoResponse
+         */
         public async Task<GetTableInfoResponse> GetTableInfoWithOptionsAsync(string projectName, string tableName, GetTableInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1428,6 +1880,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetTableInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @param request GetTableInfoRequest
+         * @return GetTableInfoResponse
+         */
         public GetTableInfoResponse GetTableInfo(string projectName, string tableName, GetTableInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1435,6 +1891,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetTableInfoWithOptions(projectName, tableName, request, headers, runtime);
         }
 
+        /**
+         * @param request GetTableInfoRequest
+         * @return GetTableInfoResponse
+         */
         public async Task<GetTableInfoResponse> GetTableInfoAsync(string projectName, string tableName, GetTableInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1442,6 +1902,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetTableInfoWithOptionsAsync(projectName, tableName, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the trusted projects of the current project.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTrustedProjectsResponse
+         */
         public GetTrustedProjectsResponse GetTrustedProjectsWithOptions(string projectName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1463,6 +1930,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetTrustedProjectsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the trusted projects of the current project.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTrustedProjectsResponse
+         */
         public async Task<GetTrustedProjectsResponse> GetTrustedProjectsWithOptionsAsync(string projectName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1484,6 +1958,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetTrustedProjectsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains the trusted projects of the current project.
+         *
+         * @return GetTrustedProjectsResponse
+         */
         public GetTrustedProjectsResponse GetTrustedProjects(string projectName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1491,6 +1970,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetTrustedProjectsWithOptions(projectName, headers, runtime);
         }
 
+        /**
+         * @summary Obtains the trusted projects of the current project.
+         *
+         * @return GetTrustedProjectsResponse
+         */
         public async Task<GetTrustedProjectsResponse> GetTrustedProjectsAsync(string projectName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1498,6 +1982,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetTrustedProjectsWithOptionsAsync(projectName, headers, runtime);
         }
 
+        /**
+         * @summary Terminates a running job.
+         *
+         * @param request KillJobsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return KillJobsResponse
+         */
         public KillJobsResponse KillJobsWithOptions(KillJobsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1531,6 +2023,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<KillJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Terminates a running job.
+         *
+         * @param request KillJobsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return KillJobsResponse
+         */
         public async Task<KillJobsResponse> KillJobsWithOptionsAsync(KillJobsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1564,6 +2064,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<KillJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Terminates a running job.
+         *
+         * @param request KillJobsRequest
+         * @return KillJobsResponse
+         */
         public KillJobsResponse KillJobs(KillJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1571,6 +2077,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return KillJobsWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Terminates a running job.
+         *
+         * @param request KillJobsRequest
+         * @return KillJobsResponse
+         */
         public async Task<KillJobsResponse> KillJobsAsync(KillJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1578,6 +2090,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await KillJobsWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains functions in a MaxCompute project.
+         *
+         * @param request ListFunctionsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListFunctionsResponse
+         */
         public ListFunctionsResponse ListFunctionsWithOptions(string projectName, ListFunctionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1618,6 +2138,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListFunctionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains functions in a MaxCompute project.
+         *
+         * @param request ListFunctionsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListFunctionsResponse
+         */
         public async Task<ListFunctionsResponse> ListFunctionsWithOptionsAsync(string projectName, ListFunctionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1658,6 +2186,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListFunctionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains functions in a MaxCompute project.
+         *
+         * @param request ListFunctionsRequest
+         * @return ListFunctionsResponse
+         */
         public ListFunctionsResponse ListFunctions(string projectName, ListFunctionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1665,6 +2199,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListFunctionsWithOptions(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains functions in a MaxCompute project.
+         *
+         * @param request ListFunctionsRequest
+         * @return ListFunctionsResponse
+         */
         public async Task<ListFunctionsResponse> ListFunctionsAsync(string projectName, ListFunctionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1672,6 +2212,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListFunctionsWithOptionsAsync(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Views a list of jobs.
+         *
+         * @param request ListJobInfosRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListJobInfosResponse
+         */
         public ListJobInfosResponse ListJobInfosWithOptions(ListJobInfosRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1721,6 +2269,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListJobInfosResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Views a list of jobs.
+         *
+         * @param request ListJobInfosRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListJobInfosResponse
+         */
         public async Task<ListJobInfosResponse> ListJobInfosWithOptionsAsync(ListJobInfosRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1770,6 +2326,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListJobInfosResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Views a list of jobs.
+         *
+         * @param request ListJobInfosRequest
+         * @return ListJobInfosResponse
+         */
         public ListJobInfosResponse ListJobInfos(ListJobInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1777,6 +2339,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListJobInfosWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Views a list of jobs.
+         *
+         * @param request ListJobInfosRequest
+         * @return ListJobInfosResponse
+         */
         public async Task<ListJobInfosResponse> ListJobInfosAsync(ListJobInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1784,6 +2352,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListJobInfosWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary Queries the packages in a MaxCompute project.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListPackagesResponse
+         */
         public ListPackagesResponse ListPackagesWithOptions(string projectName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1805,6 +2380,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListPackagesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the packages in a MaxCompute project.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListPackagesResponse
+         */
         public async Task<ListPackagesResponse> ListPackagesWithOptionsAsync(string projectName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1826,6 +2408,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListPackagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the packages in a MaxCompute project.
+         *
+         * @return ListPackagesResponse
+         */
         public ListPackagesResponse ListPackages(string projectName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1833,6 +2420,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListPackagesWithOptions(projectName, headers, runtime);
         }
 
+        /**
+         * @summary Queries the packages in a MaxCompute project.
+         *
+         * @return ListPackagesResponse
+         */
         public async Task<ListPackagesResponse> ListPackagesAsync(string projectName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1840,6 +2432,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListPackagesWithOptionsAsync(projectName, headers, runtime);
         }
 
+        /**
+         * @summary Queries a list of users in a project.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListProjectUsersResponse
+         */
         public ListProjectUsersResponse ListProjectUsersWithOptions(string projectName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1861,6 +2460,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListProjectUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of users in a project.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListProjectUsersResponse
+         */
         public async Task<ListProjectUsersResponse> ListProjectUsersWithOptionsAsync(string projectName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1882,6 +2488,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListProjectUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of users in a project.
+         *
+         * @return ListProjectUsersResponse
+         */
         public ListProjectUsersResponse ListProjectUsers(string projectName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1889,6 +2500,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListProjectUsersWithOptions(projectName, headers, runtime);
         }
 
+        /**
+         * @summary Queries a list of users in a project.
+         *
+         * @return ListProjectUsersResponse
+         */
         public async Task<ListProjectUsersResponse> ListProjectUsersAsync(string projectName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1896,6 +2512,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListProjectUsersWithOptionsAsync(projectName, headers, runtime);
         }
 
+        /**
+         * @summary Queries a list of MaxCompute projects.
+         *
+         * @param request ListProjectsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListProjectsResponse
+         */
         public ListProjectsResponse ListProjectsWithOptions(ListProjectsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1960,6 +2584,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListProjectsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of MaxCompute projects.
+         *
+         * @param request ListProjectsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListProjectsResponse
+         */
         public async Task<ListProjectsResponse> ListProjectsWithOptionsAsync(ListProjectsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2024,6 +2656,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListProjectsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of MaxCompute projects.
+         *
+         * @param request ListProjectsRequest
+         * @return ListProjectsResponse
+         */
         public ListProjectsResponse ListProjects(ListProjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2031,6 +2669,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListProjectsWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Queries a list of MaxCompute projects.
+         *
+         * @param request ListProjectsRequest
+         * @return ListProjectsResponse
+         */
         public async Task<ListProjectsResponse> ListProjectsAsync(ListProjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2038,6 +2682,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListProjectsWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary Queries quotas.
+         *
+         * @param request ListQuotasRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListQuotasResponse
+         */
         public ListQuotasResponse ListQuotasWithOptions(ListQuotasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2090,6 +2742,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListQuotasResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries quotas.
+         *
+         * @param request ListQuotasRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListQuotasResponse
+         */
         public async Task<ListQuotasResponse> ListQuotasWithOptionsAsync(ListQuotasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2142,6 +2802,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListQuotasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries quotas.
+         *
+         * @param request ListQuotasRequest
+         * @return ListQuotasResponse
+         */
         public ListQuotasResponse ListQuotas(ListQuotasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2149,6 +2815,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListQuotasWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Queries quotas.
+         *
+         * @param request ListQuotasRequest
+         * @return ListQuotasResponse
+         */
         public async Task<ListQuotasResponse> ListQuotasAsync(ListQuotasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2156,6 +2828,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListQuotasWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains quota plans.
+         *
+         * @param request ListQuotasPlansRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListQuotasPlansResponse
+         */
         public ListQuotasPlansResponse ListQuotasPlansWithOptions(string nickname, ListQuotasPlansRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2188,6 +2868,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListQuotasPlansResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains quota plans.
+         *
+         * @param request ListQuotasPlansRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListQuotasPlansResponse
+         */
         public async Task<ListQuotasPlansResponse> ListQuotasPlansWithOptionsAsync(string nickname, ListQuotasPlansRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2220,6 +2908,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListQuotasPlansResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains quota plans.
+         *
+         * @param request ListQuotasPlansRequest
+         * @return ListQuotasPlansResponse
+         */
         public ListQuotasPlansResponse ListQuotasPlans(string nickname, ListQuotasPlansRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2227,6 +2921,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListQuotasPlansWithOptions(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains quota plans.
+         *
+         * @param request ListQuotasPlansRequest
+         * @return ListQuotasPlansResponse
+         */
         public async Task<ListQuotasPlansResponse> ListQuotasPlansAsync(string nickname, ListQuotasPlansRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2234,6 +2934,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListQuotasPlansWithOptionsAsync(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains resources in a MaxCompute project.
+         *
+         * @param request ListResourcesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListResourcesResponse
+         */
         public ListResourcesResponse ListResourcesWithOptions(string projectName, ListResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2274,6 +2982,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains resources in a MaxCompute project.
+         *
+         * @param request ListResourcesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListResourcesResponse
+         */
         public async Task<ListResourcesResponse> ListResourcesWithOptionsAsync(string projectName, ListResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2314,6 +3030,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains resources in a MaxCompute project.
+         *
+         * @param request ListResourcesRequest
+         * @return ListResourcesResponse
+         */
         public ListResourcesResponse ListResources(string projectName, ListResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2321,6 +3043,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListResourcesWithOptions(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains resources in a MaxCompute project.
+         *
+         * @param request ListResourcesRequest
+         * @return ListResourcesResponse
+         */
         public async Task<ListResourcesResponse> ListResourcesAsync(string projectName, ListResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2328,6 +3056,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListResourcesWithOptionsAsync(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains MaxCompute project-level roles.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListRolesResponse
+         */
         public ListRolesResponse ListRolesWithOptions(string projectName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2349,6 +3084,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListRolesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains MaxCompute project-level roles.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListRolesResponse
+         */
         public async Task<ListRolesResponse> ListRolesWithOptionsAsync(string projectName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2370,6 +3112,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListRolesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains MaxCompute project-level roles.
+         *
+         * @return ListRolesResponse
+         */
         public ListRolesResponse ListRoles(string projectName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2377,6 +3124,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListRolesWithOptions(projectName, headers, runtime);
         }
 
+        /**
+         * @summary Obtains MaxCompute project-level roles.
+         *
+         * @return ListRolesResponse
+         */
         public async Task<ListRolesResponse> ListRolesAsync(string projectName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2384,6 +3136,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListRolesWithOptionsAsync(projectName, headers, runtime);
         }
 
+        /**
+         * @summary Obtains tables in a MaxCompute project.
+         *
+         * @param request ListTablesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTablesResponse
+         */
         public ListTablesResponse ListTablesWithOptions(string projectName, ListTablesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2428,6 +3188,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListTablesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains tables in a MaxCompute project.
+         *
+         * @param request ListTablesRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListTablesResponse
+         */
         public async Task<ListTablesResponse> ListTablesWithOptionsAsync(string projectName, ListTablesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2472,6 +3240,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListTablesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains tables in a MaxCompute project.
+         *
+         * @param request ListTablesRequest
+         * @return ListTablesResponse
+         */
         public ListTablesResponse ListTables(string projectName, ListTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2479,6 +3253,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListTablesWithOptions(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains tables in a MaxCompute project.
+         *
+         * @param request ListTablesRequest
+         * @return ListTablesResponse
+         */
         public async Task<ListTablesResponse> ListTablesAsync(string projectName, ListTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2486,6 +3266,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListTablesWithOptionsAsync(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Queries a list of all users under a tenant.
+         *
+         * @param request ListUsersRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUsersResponse
+         */
         public ListUsersResponse ListUsersWithOptions(ListUsersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2518,6 +3306,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of all users under a tenant.
+         *
+         * @param request ListUsersRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUsersResponse
+         */
         public async Task<ListUsersResponse> ListUsersWithOptionsAsync(ListUsersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2550,6 +3346,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries a list of all users under a tenant.
+         *
+         * @param request ListUsersRequest
+         * @return ListUsersResponse
+         */
         public ListUsersResponse ListUsers(ListUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2557,6 +3359,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListUsersWithOptions(request, headers, runtime);
         }
 
+        /**
+         * @summary Queries a list of all users under a tenant.
+         *
+         * @param request ListUsersRequest
+         * @return ListUsersResponse
+         */
         public async Task<ListUsersResponse> ListUsersAsync(ListUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2564,6 +3372,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListUsersWithOptionsAsync(request, headers, runtime);
         }
 
+        /**
+         * @summary Obtains information about the users who are assigned a project-level role.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUsersByRoleResponse
+         */
         public ListUsersByRoleResponse ListUsersByRoleWithOptions(string projectName, string roleName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2585,6 +3400,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListUsersByRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains information about the users who are assigned a project-level role.
+         *
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListUsersByRoleResponse
+         */
         public async Task<ListUsersByRoleResponse> ListUsersByRoleWithOptionsAsync(string projectName, string roleName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2606,6 +3428,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListUsersByRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Obtains information about the users who are assigned a project-level role.
+         *
+         * @return ListUsersByRoleResponse
+         */
         public ListUsersByRoleResponse ListUsersByRole(string projectName, string roleName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2613,6 +3440,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListUsersByRoleWithOptions(projectName, roleName, headers, runtime);
         }
 
+        /**
+         * @summary Obtains information about the users who are assigned a project-level role.
+         *
+         * @return ListUsersByRoleResponse
+         */
         public async Task<ListUsersByRoleResponse> ListUsersByRoleAsync(string projectName, string roleName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2620,6 +3452,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListUsersByRoleWithOptionsAsync(projectName, roleName, headers, runtime);
         }
 
+        /**
+         * @summary Updates the objects in a package and projects in which the package can be installed.
+         *
+         * @param request UpdatePackageRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdatePackageResponse
+         */
         public UpdatePackageResponse UpdatePackageWithOptions(string projectName, string packageName, UpdatePackageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2643,6 +3483,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<UpdatePackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates the objects in a package and projects in which the package can be installed.
+         *
+         * @param request UpdatePackageRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdatePackageResponse
+         */
         public async Task<UpdatePackageResponse> UpdatePackageWithOptionsAsync(string projectName, string packageName, UpdatePackageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2666,6 +3514,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<UpdatePackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates the objects in a package and projects in which the package can be installed.
+         *
+         * @param request UpdatePackageRequest
+         * @return UpdatePackageResponse
+         */
         public UpdatePackageResponse UpdatePackage(string projectName, string packageName, UpdatePackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2673,6 +3527,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return UpdatePackageWithOptions(projectName, packageName, request, headers, runtime);
         }
 
+        /**
+         * @summary Updates the objects in a package and projects in which the package can be installed.
+         *
+         * @param request UpdatePackageRequest
+         * @return UpdatePackageResponse
+         */
         public async Task<UpdatePackageResponse> UpdatePackageAsync(string projectName, string packageName, UpdatePackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2680,6 +3540,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await UpdatePackageWithOptionsAsync(projectName, packageName, request, headers, runtime);
         }
 
+        /**
+         * @summary Modifies the IP address whitelist of a MaxCompute project.
+         *
+         * @param request UpdateProjectIpWhiteListRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateProjectIpWhiteListResponse
+         */
         public UpdateProjectIpWhiteListResponse UpdateProjectIpWhiteListWithOptions(string projectName, UpdateProjectIpWhiteListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2703,6 +3571,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<UpdateProjectIpWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the IP address whitelist of a MaxCompute project.
+         *
+         * @param request UpdateProjectIpWhiteListRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateProjectIpWhiteListResponse
+         */
         public async Task<UpdateProjectIpWhiteListResponse> UpdateProjectIpWhiteListWithOptionsAsync(string projectName, UpdateProjectIpWhiteListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2726,6 +3602,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<UpdateProjectIpWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Modifies the IP address whitelist of a MaxCompute project.
+         *
+         * @param request UpdateProjectIpWhiteListRequest
+         * @return UpdateProjectIpWhiteListResponse
+         */
         public UpdateProjectIpWhiteListResponse UpdateProjectIpWhiteList(string projectName, UpdateProjectIpWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2733,6 +3615,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return UpdateProjectIpWhiteListWithOptions(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Modifies the IP address whitelist of a MaxCompute project.
+         *
+         * @param request UpdateProjectIpWhiteListRequest
+         * @return UpdateProjectIpWhiteListResponse
+         */
         public async Task<UpdateProjectIpWhiteListResponse> UpdateProjectIpWhiteListAsync(string projectName, UpdateProjectIpWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2740,6 +3628,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await UpdateProjectIpWhiteListWithOptionsAsync(projectName, request, headers, runtime);
         }
 
+        /**
+         * @summary Updates a quota.
+         *
+         * @param request UpdateQuotaRequest
+         * @param headers UpdateQuotaHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateQuotaResponse
+         */
         public UpdateQuotaResponse UpdateQuotaWithOptions(string nickname, UpdateQuotaRequest request, UpdateQuotaHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2782,6 +3678,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<UpdateQuotaResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates a quota.
+         *
+         * @param request UpdateQuotaRequest
+         * @param headers UpdateQuotaHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateQuotaResponse
+         */
         public async Task<UpdateQuotaResponse> UpdateQuotaWithOptionsAsync(string nickname, UpdateQuotaRequest request, UpdateQuotaHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2824,6 +3728,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<UpdateQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates a quota.
+         *
+         * @param request UpdateQuotaRequest
+         * @return UpdateQuotaResponse
+         */
         public UpdateQuotaResponse UpdateQuota(string nickname, UpdateQuotaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2831,6 +3741,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return UpdateQuotaWithOptions(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Updates a quota.
+         *
+         * @param request UpdateQuotaRequest
+         * @return UpdateQuotaResponse
+         */
         public async Task<UpdateQuotaResponse> UpdateQuotaAsync(string nickname, UpdateQuotaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2838,6 +3754,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await UpdateQuotaWithOptionsAsync(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Updates a quota plan.
+         *
+         * @param request UpdateQuotaPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateQuotaPlanResponse
+         */
         public UpdateQuotaPlanResponse UpdateQuotaPlanWithOptions(string nickname, string planName, UpdateQuotaPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2871,6 +3795,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<UpdateQuotaPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates a quota plan.
+         *
+         * @param request UpdateQuotaPlanRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateQuotaPlanResponse
+         */
         public async Task<UpdateQuotaPlanResponse> UpdateQuotaPlanWithOptionsAsync(string nickname, string planName, UpdateQuotaPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2904,6 +3836,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<UpdateQuotaPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates a quota plan.
+         *
+         * @param request UpdateQuotaPlanRequest
+         * @return UpdateQuotaPlanResponse
+         */
         public UpdateQuotaPlanResponse UpdateQuotaPlan(string nickname, string planName, UpdateQuotaPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2911,6 +3849,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return UpdateQuotaPlanWithOptions(nickname, planName, request, headers, runtime);
         }
 
+        /**
+         * @summary Updates a quota plan.
+         *
+         * @param request UpdateQuotaPlanRequest
+         * @return UpdateQuotaPlanResponse
+         */
         public async Task<UpdateQuotaPlanResponse> UpdateQuotaPlanAsync(string nickname, string planName, UpdateQuotaPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2918,6 +3862,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await UpdateQuotaPlanWithOptionsAsync(nickname, planName, request, headers, runtime);
         }
 
+        /**
+         * @summary Updates the scheduling plan for a quota plan.
+         *
+         * @param request UpdateQuotaScheduleRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateQuotaScheduleResponse
+         */
         public UpdateQuotaScheduleResponse UpdateQuotaScheduleWithOptions(string nickname, UpdateQuotaScheduleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2951,6 +3903,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<UpdateQuotaScheduleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates the scheduling plan for a quota plan.
+         *
+         * @param request UpdateQuotaScheduleRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateQuotaScheduleResponse
+         */
         public async Task<UpdateQuotaScheduleResponse> UpdateQuotaScheduleWithOptionsAsync(string nickname, UpdateQuotaScheduleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2984,6 +3944,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<UpdateQuotaScheduleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Updates the scheduling plan for a quota plan.
+         *
+         * @param request UpdateQuotaScheduleRequest
+         * @return UpdateQuotaScheduleResponse
+         */
         public UpdateQuotaScheduleResponse UpdateQuotaSchedule(string nickname, UpdateQuotaScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2991,6 +3957,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return UpdateQuotaScheduleWithOptions(nickname, request, headers, runtime);
         }
 
+        /**
+         * @summary Updates the scheduling plan for a quota plan.
+         *
+         * @param request UpdateQuotaScheduleRequest
+         * @return UpdateQuotaScheduleResponse
+         */
         public async Task<UpdateQuotaScheduleResponse> UpdateQuotaScheduleAsync(string nickname, UpdateQuotaScheduleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

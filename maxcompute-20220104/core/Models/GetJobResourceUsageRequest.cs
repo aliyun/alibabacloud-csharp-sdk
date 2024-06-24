@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
     public class GetJobResourceUsageRequest : TeaModel {
         /// <summary>
         /// The date that is accurate to the day part for the query. The date must be in the yyyy-MM-dd format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("date")]
         [Validation(Required=false)]

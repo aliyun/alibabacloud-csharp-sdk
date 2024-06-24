@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateRoleRequest : TeaModel {
         /// <summary>
-        /// The request body parameters. For valid values, see [MaxCompute permissions](~~27935~~).
+        /// The request body parameters. For valid values, see [MaxCompute permissions](https://help.aliyun.com/document_detail/27935.html).
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

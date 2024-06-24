@@ -120,6 +120,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public bool? EnableFdcCacheForce { get; set; }
 
+                [NameInMap("enableTieredStorage")]
+                [Validation(Required=false)]
+                public bool? EnableTieredStorage { get; set; }
+
                 /// <summary>
                 /// Indicates whether tunnel quota routing is enabled.
                 /// </summary>
@@ -248,6 +252,108 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [NameInMap("value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
+
+                }
+
+                [NameInMap("tableLifecycleConfig")]
+                [Validation(Required=false)]
+                public GetProjectResponseBodyDataPropertiesTableLifecycleConfig TableLifecycleConfig { get; set; }
+                public class GetProjectResponseBodyDataPropertiesTableLifecycleConfig : TeaModel {
+                    [NameInMap("TierToLongterm")]
+                    [Validation(Required=false)]
+                    public GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLongterm TierToLongterm { get; set; }
+                    public class GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLongterm : TeaModel {
+                        [NameInMap("daysAfterLastAccessGreaterThan")]
+                        [Validation(Required=false)]
+                        public GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLongtermDaysAfterLastAccessGreaterThan DaysAfterLastAccessGreaterThan { get; set; }
+                        public class GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLongtermDaysAfterLastAccessGreaterThan : TeaModel {
+                            [NameInMap("conditionCode")]
+                            [Validation(Required=false)]
+                            public string ConditionCode { get; set; }
+
+                            [NameInMap("value")]
+                            [Validation(Required=false)]
+                            public long? Value { get; set; }
+
+                        }
+
+                        [NameInMap("daysAfterLastModificationGreaterThan")]
+                        [Validation(Required=false)]
+                        public GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLongtermDaysAfterLastModificationGreaterThan DaysAfterLastModificationGreaterThan { get; set; }
+                        public class GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLongtermDaysAfterLastModificationGreaterThan : TeaModel {
+                            [NameInMap("conditionCode")]
+                            [Validation(Required=false)]
+                            public string ConditionCode { get; set; }
+
+                            [NameInMap("value")]
+                            [Validation(Required=false)]
+                            public long? Value { get; set; }
+
+                        }
+
+                        [NameInMap("daysAfterLastTierModificationGreaterThan")]
+                        [Validation(Required=false)]
+                        public GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLongtermDaysAfterLastTierModificationGreaterThan DaysAfterLastTierModificationGreaterThan { get; set; }
+                        public class GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLongtermDaysAfterLastTierModificationGreaterThan : TeaModel {
+                            [NameInMap("conditionCode")]
+                            [Validation(Required=false)]
+                            public string ConditionCode { get; set; }
+
+                            [NameInMap("value")]
+                            [Validation(Required=false)]
+                            public long? Value { get; set; }
+
+                        }
+
+                    }
+
+                    [NameInMap("TierToLowFrequency")]
+                    [Validation(Required=false)]
+                    public GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLowFrequency TierToLowFrequency { get; set; }
+                    public class GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLowFrequency : TeaModel {
+                        [NameInMap("daysAfterLastAccessGreaterThan")]
+                        [Validation(Required=false)]
+                        public GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLowFrequencyDaysAfterLastAccessGreaterThan DaysAfterLastAccessGreaterThan { get; set; }
+                        public class GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLowFrequencyDaysAfterLastAccessGreaterThan : TeaModel {
+                            [NameInMap("conditionCode")]
+                            [Validation(Required=false)]
+                            public string ConditionCode { get; set; }
+
+                            [NameInMap("value")]
+                            [Validation(Required=false)]
+                            public long? Value { get; set; }
+
+                        }
+
+                        [NameInMap("daysAfterLastModificationGreaterThan")]
+                        [Validation(Required=false)]
+                        public GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLowFrequencyDaysAfterLastModificationGreaterThan DaysAfterLastModificationGreaterThan { get; set; }
+                        public class GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLowFrequencyDaysAfterLastModificationGreaterThan : TeaModel {
+                            [NameInMap("conditionCode")]
+                            [Validation(Required=false)]
+                            public string ConditionCode { get; set; }
+
+                            [NameInMap("value")]
+                            [Validation(Required=false)]
+                            public long? Value { get; set; }
+
+                        }
+
+                        [NameInMap("daysAfterLastTierModificationGreaterThan")]
+                        [Validation(Required=false)]
+                        public GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLowFrequencyDaysAfterLastTierModificationGreaterThan DaysAfterLastTierModificationGreaterThan { get; set; }
+                        public class GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLowFrequencyDaysAfterLastTierModificationGreaterThan : TeaModel {
+                            [NameInMap("conditionCode")]
+                            [Validation(Required=false)]
+                            public string ConditionCode { get; set; }
+
+                            [NameInMap("value")]
+                            [Validation(Required=false)]
+                            public long? Value { get; set; }
+
+                        }
+
+                    }
 
                 }
 
