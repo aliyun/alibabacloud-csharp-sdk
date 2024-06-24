@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of clusters.
+        /// The clusters.
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The effective advanced version.
+            /// The effective advanced configuration version.
             /// </summary>
             [NameInMap("currentAdvanceConfigVersion")]
             [Validation(Required=false)]
             public string CurrentAdvanceConfigVersion { get; set; }
 
             /// <summary>
-            /// 词典配置生效版本
+            /// The effective dictionary configuration version.
             /// </summary>
             [NameInMap("currentOfflineDictConfigVersion")]
             [Validation(Required=false)]
@@ -60,35 +60,35 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string CurrentOnlineConfigVersion { get; set; }
 
             /// <summary>
-            /// 查询配置生效版本
+            /// The effective query configuration version.
             /// </summary>
             [NameInMap("currentOnlineQueryConfigVersion")]
             [Validation(Required=false)]
             public string CurrentOnlineQueryConfigVersion { get; set; }
 
             /// <summary>
-            /// The information about the node in the cluster.
+            /// The information about Searcher workers.
             /// </summary>
             [NameInMap("dataNode")]
             [Validation(Required=false)]
             public ListClustersResponseBodyResultDataNode DataNode { get; set; }
             public class ListClustersResponseBodyResultDataNode : TeaModel {
                 /// <summary>
-                /// The name of the node.
+                /// The name of the Searcher worker.
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The number of nodes.
+                /// The number of Searcher workers.
                 /// </summary>
                 [NameInMap("number")]
                 [Validation(Required=false)]
                 public int? Number { get; set; }
 
                 /// <summary>
-                /// The partition ID of the node.
+                /// The ID of the partition that is stored on the Searcher worker.
                 /// </summary>
                 [NameInMap("partition")]
                 [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string LatestAdvanceConfigVersion { get; set; }
 
             /// <summary>
-            /// 词典配置最新版本
+            /// The latest dictionary configuration version.
             /// </summary>
             [NameInMap("latestOfflineDictConfigVersion")]
             [Validation(Required=false)]
@@ -125,42 +125,42 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string LatestOnlineConfigVersion { get; set; }
 
             /// <summary>
-            /// 查询配置最新版本
+            /// The latest query configuration version.
             /// </summary>
             [NameInMap("latestOnlineQueryConfigVersion")]
             [Validation(Required=false)]
             public string LatestOnlineQueryConfigVersion { get; set; }
 
             /// <summary>
-            /// The name of the cluster.
+            /// The cluster name.
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The query node of the cluster.
+            /// The information about Query Result Searcher (QRS) workers.
             /// </summary>
             [NameInMap("queryNode")]
             [Validation(Required=false)]
             public ListClustersResponseBodyResultQueryNode QueryNode { get; set; }
             public class ListClustersResponseBodyResultQueryNode : TeaModel {
                 /// <summary>
-                /// The name of the node.
+                /// The name of the QRS worker.
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The number of nodes.
+                /// The number of QRS workers.
                 /// </summary>
                 [NameInMap("number")]
                 [Validation(Required=false)]
                 public int? Number { get; set; }
 
                 /// <summary>
-                /// The number o replicas.
+                /// The ID of the partition that is stored on the QRS worker.
                 /// </summary>
                 [NameInMap("partition")]
                 [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The status of the cluster. Valid values: running, starting, stopping, and stopped. running indicates the cluster is running, starting indicates the cluster is starting, stopping indicates the cluster is stopping, and stopped indicates the cluster has stopped.
+            /// The status of the cluster. Valid values: running: The cluster is running. starting: The cluster is being started. stopping: The cluster is being stopped. stopped: The cluster is stopped.
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
