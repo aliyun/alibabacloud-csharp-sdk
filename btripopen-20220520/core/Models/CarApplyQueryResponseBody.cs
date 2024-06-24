@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            [NameInMap("business_type")]
+            [Validation(Required=false)]
+            public string BusinessType { get; set; }
+
             [NameInMap("depart_id")]
             [Validation(Required=false)]
             public string DepartId { get; set; }

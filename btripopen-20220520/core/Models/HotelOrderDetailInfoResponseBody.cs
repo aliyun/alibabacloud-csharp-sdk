@@ -397,6 +397,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string OrderStatusDesc { get; set; }
 
+            [NameInMap("out_confirm_code")]
+            [Validation(Required=false)]
+            public string OutConfirmCode { get; set; }
+
             [NameInMap("pay_time")]
             [Validation(Required=false)]
             public string PayTime { get; set; }

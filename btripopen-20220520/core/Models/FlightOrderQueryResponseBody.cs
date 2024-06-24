@@ -241,6 +241,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrCityCode { get; set; }
 
+                [NameInMap("company_refund_ticket_fee")]
+                [Validation(Required=false)]
+                public double? CompanyRefundTicketFee { get; set; }
+
                 [NameInMap("dep_airport")]
                 [Validation(Required=false)]
                 public string DepAirport { get; set; }
@@ -272,6 +276,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("out_apply_id")]
                 [Validation(Required=false)]
                 public string OutApplyId { get; set; }
+
+                [NameInMap("personal_refund_ticket_fee")]
+                [Validation(Required=false)]
+                public double? PersonalRefundTicketFee { get; set; }
 
                 [NameInMap("refund_order_id")]
                 [Validation(Required=false)]
@@ -346,6 +354,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("pay_type")]
                 [Validation(Required=false)]
                 public int? PayType { get; set; }
+
+                [NameInMap("personal_price")]
+                [Validation(Required=false)]
+                public double? PersonalPrice { get; set; }
 
                 [NameInMap("settle_price")]
                 [Validation(Required=false)]
