@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             /// </summary>
             [NameInMap("Countries")]
             [Validation(Required=false)]
-            public List<string> Countries { get; set; }
+            public List<long?> Countries { get; set; }
 
             /// <summary>
             /// An array consisting of the codes of the administrative regions in China from which the requests are blocked.
             /// </summary>
             [NameInMap("Provinces")]
             [Validation(Required=false)]
-            public List<string> Provinces { get; set; }
+            public List<long?> Provinces { get; set; }
 
             /// <summary>
             /// The status of the Location Blacklist policy. Valid values:
