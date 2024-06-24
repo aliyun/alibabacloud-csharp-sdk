@@ -20562,6 +20562,146 @@ namespace AlibabaCloud.SDK.ICE20201109
         }
 
         /**
+         * @summary 提交视频翻译任务
+         *
+         * @param request SubmitVideoTranslationJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitVideoTranslationJobResponse
+         */
+        public SubmitVideoTranslationJobResponse SubmitVideoTranslationJobWithOptions(SubmitVideoTranslationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfig))
+            {
+                query["EditingConfig"] = request.EditingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                query["InputConfig"] = request.InputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVideoTranslationJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVideoTranslationJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交视频翻译任务
+         *
+         * @param request SubmitVideoTranslationJobRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return SubmitVideoTranslationJobResponse
+         */
+        public async Task<SubmitVideoTranslationJobResponse> SubmitVideoTranslationJobWithOptionsAsync(SubmitVideoTranslationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfig))
+            {
+                query["EditingConfig"] = request.EditingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                query["InputConfig"] = request.InputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVideoTranslationJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVideoTranslationJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 提交视频翻译任务
+         *
+         * @param request SubmitVideoTranslationJobRequest
+         * @return SubmitVideoTranslationJobResponse
+         */
+        public SubmitVideoTranslationJobResponse SubmitVideoTranslationJob(SubmitVideoTranslationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitVideoTranslationJobWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 提交视频翻译任务
+         *
+         * @param request SubmitVideoTranslationJobRequest
+         * @return SubmitVideoTranslationJobResponse
+         */
+        public async Task<SubmitVideoTranslationJobResponse> SubmitVideoTranslationJobAsync(SubmitVideoTranslationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitVideoTranslationJobWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 更新数字人训练任务信息
          *
          * @param request UpdateAvatarTrainingJobRequest
