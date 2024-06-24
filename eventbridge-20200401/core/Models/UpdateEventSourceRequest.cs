@@ -34,6 +34,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string EventSourceName { get; set; }
 
+        [NameInMap("ExternalSourceConfig")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> ExternalSourceConfig { get; set; }
+
+        [NameInMap("ExternalSourceType")]
+        [Validation(Required=false)]
+        public string ExternalSourceType { get; set; }
+
+        [NameInMap("LinkedExternalSource")]
+        [Validation(Required=false)]
+        public bool? LinkedExternalSource { get; set; }
+
         /// <summary>
         /// The parameters that are configured if the event source is HTTP events.
         /// </summary>
@@ -430,6 +442,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public string TimeZone { get; set; }
 
+            /// <summary>
+            /// The user data that is displayed in a JSON string.
+            /// </summary>
             [NameInMap("UserData")]
             [Validation(Required=false)]
             public string UserData { get; set; }

@@ -34,6 +34,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string EventSourceName { get; set; }
 
+        [NameInMap("ExternalSourceConfig")]
+        [Validation(Required=false)]
+        public string ExternalSourceConfigShrink { get; set; }
+
+        [NameInMap("ExternalSourceType")]
+        [Validation(Required=false)]
+        public string ExternalSourceType { get; set; }
+
+        [NameInMap("LinkedExternalSource")]
+        [Validation(Required=false)]
+        public bool? LinkedExternalSource { get; set; }
+
         /// <summary>
         /// The parameters that are configured if the event source is HTTP events.
         /// </summary>

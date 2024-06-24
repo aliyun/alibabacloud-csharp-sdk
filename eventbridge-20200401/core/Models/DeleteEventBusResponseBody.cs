@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public bool? Data { get; set; }
+
         /// <summary>
         /// The returned error message.
         /// </summary>

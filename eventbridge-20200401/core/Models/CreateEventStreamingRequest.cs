@@ -90,12 +90,88 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public string ErrorsTolerance { get; set; }
 
+            [NameInMap("LogDelivery")]
+            [Validation(Required=false)]
+            public CreateEventStreamingRequestRunOptionsLogDelivery LogDelivery { get; set; }
+            public class CreateEventStreamingRequestRunOptionsLogDelivery : TeaModel {
+                [NameInMap("KafkaLogParameters")]
+                [Validation(Required=false)]
+                public List<CreateEventStreamingRequestRunOptionsLogDeliveryKafkaLogParameters> KafkaLogParameters { get; set; }
+                public class CreateEventStreamingRequestRunOptionsLogDeliveryKafkaLogParameters : TeaModel {
+                    [NameInMap("Endpoint")]
+                    [Validation(Required=false)]
+                    public string Endpoint { get; set; }
+
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
+                    public string InstanceId { get; set; }
+
+                    [NameInMap("Topic")]
+                    [Validation(Required=false)]
+                    public string Topic { get; set; }
+
+                }
+
+                [NameInMap("SLSLogParameters")]
+                [Validation(Required=false)]
+                public List<CreateEventStreamingRequestRunOptionsLogDeliverySLSLogParameters> SLSLogParameters { get; set; }
+                public class CreateEventStreamingRequestRunOptionsLogDeliverySLSLogParameters : TeaModel {
+                    [NameInMap("LogstoreName")]
+                    [Validation(Required=false)]
+                    public string LogstoreName { get; set; }
+
+                    [NameInMap("ProjectName")]
+                    [Validation(Required=false)]
+                    public string ProjectName { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// The maximum number of concurrent threads.
             /// </summary>
             [NameInMap("MaximumTasks")]
             [Validation(Required=false)]
             public long? MaximumTasks { get; set; }
+
+            [NameInMap("Network")]
+            [Validation(Required=false)]
+            public CreateEventStreamingRequestRunOptionsNetwork Network { get; set; }
+            public class CreateEventStreamingRequestRunOptionsNetwork : TeaModel {
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
+                public List<string> VSwitchIds { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+            }
+
+            [NameInMap("ResourceSpec")]
+            [Validation(Required=false)]
+            public CreateEventStreamingRequestRunOptionsResourceSpec ResourceSpec { get; set; }
+            public class CreateEventStreamingRequestRunOptionsResourceSpec : TeaModel {
+                [NameInMap("Resources")]
+                [Validation(Required=false)]
+                public List<CreateEventStreamingRequestRunOptionsResourceSpecResources> Resources { get; set; }
+                public class CreateEventStreamingRequestRunOptionsResourceSpecResources : TeaModel {
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public int? Value { get; set; }
+
+                }
+
+            }
 
             /// <summary>
             /// The retry policy that you want to use if events fail to be pushed.
@@ -130,6 +206,48 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             }
 
+            [NameInMap("RoleName")]
+            [Validation(Required=false)]
+            public string RoleName { get; set; }
+
+            [NameInMap("ScaledObject")]
+            [Validation(Required=false)]
+            public CreateEventStreamingRequestRunOptionsScaledObject ScaledObject { get; set; }
+            public class CreateEventStreamingRequestRunOptionsScaledObject : TeaModel {
+                [NameInMap("MaxReplicaCount")]
+                [Validation(Required=false)]
+                public int? MaxReplicaCount { get; set; }
+
+                [NameInMap("MinReplicaCount")]
+                [Validation(Required=false)]
+                public int? MinReplicaCount { get; set; }
+
+                [NameInMap("Triggers")]
+                [Validation(Required=false)]
+                public List<CreateEventStreamingRequestRunOptionsScaledObjectTriggers> Triggers { get; set; }
+                public class CreateEventStreamingRequestRunOptionsScaledObjectTriggers : TeaModel {
+                    [NameInMap("Metadata")]
+                    [Validation(Required=false)]
+                    public CreateEventStreamingRequestRunOptionsScaledObjectTriggersMetadata Metadata { get; set; }
+                    public class CreateEventStreamingRequestRunOptionsScaledObjectTriggersMetadata : TeaModel {
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public int? Value { get; set; }
+
+                    }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+            }
+
         }
 
         /// <summary>
@@ -141,6 +259,44 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public CreateEventStreamingRequestSink Sink { get; set; }
         public class CreateEventStreamingRequestSink : TeaModel {
+            [NameInMap("SinkCustomizedKafkaConnectorParameters")]
+            [Validation(Required=false)]
+            public CreateEventStreamingRequestSinkSinkCustomizedKafkaConnectorParameters SinkCustomizedKafkaConnectorParameters { get; set; }
+            public class CreateEventStreamingRequestSinkSinkCustomizedKafkaConnectorParameters : TeaModel {
+                [NameInMap("ConnectorPackageUrl")]
+                [Validation(Required=false)]
+                public string ConnectorPackageUrl { get; set; }
+
+                [NameInMap("ConnectorParameters")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkCustomizedKafkaConnectorParametersConnectorParameters ConnectorParameters { get; set; }
+                public class CreateEventStreamingRequestSinkSinkCustomizedKafkaConnectorParametersConnectorParameters : TeaModel {
+                    [NameInMap("Config")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, object> Config { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
+                [NameInMap("WorkerParameters")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> WorkerParameters { get; set; }
+
+            }
+
+            [NameInMap("SinkCustomizedKafkaParameters")]
+            [Validation(Required=false)]
+            public CreateEventStreamingRequestSinkSinkCustomizedKafkaParameters SinkCustomizedKafkaParameters { get; set; }
+            public class CreateEventStreamingRequestSinkSinkCustomizedKafkaParameters : TeaModel {
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
+
+            }
+
             /// <summary>
             /// The parameters that are configured if you specify DataHub as the event target.
             /// </summary>
@@ -1953,6 +2109,42 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 }
 
+                [NameInMap("ContentSchema")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkSLSParametersContentSchema ContentSchema { get; set; }
+                public class CreateEventStreamingRequestSinkSinkSLSParametersContentSchema : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("ContentType")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkSLSParametersContentType ContentType { get; set; }
+                public class CreateEventStreamingRequestSinkSinkSLSParametersContentType : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
                 /// <summary>
                 /// The Simple Log Service Logstore.
                 /// </summary>
@@ -2141,6 +2333,44 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
+
+            }
+
+            [NameInMap("SourceCustomizedKafkaConnectorParameters")]
+            [Validation(Required=false)]
+            public CreateEventStreamingRequestSourceSourceCustomizedKafkaConnectorParameters SourceCustomizedKafkaConnectorParameters { get; set; }
+            public class CreateEventStreamingRequestSourceSourceCustomizedKafkaConnectorParameters : TeaModel {
+                [NameInMap("ConnectorPackageUrl")]
+                [Validation(Required=false)]
+                public string ConnectorPackageUrl { get; set; }
+
+                [NameInMap("ConnectorParameters")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSourceSourceCustomizedKafkaConnectorParametersConnectorParameters ConnectorParameters { get; set; }
+                public class CreateEventStreamingRequestSourceSourceCustomizedKafkaConnectorParametersConnectorParameters : TeaModel {
+                    [NameInMap("Config")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, object> Config { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
+                [NameInMap("WorkerParameters")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> WorkerParameters { get; set; }
+
+            }
+
+            [NameInMap("SourceCustomizedKafkaParameters")]
+            [Validation(Required=false)]
+            public CreateEventStreamingRequestSourceSourceCustomizedKafkaParameters SourceCustomizedKafkaParameters { get; set; }
+            public class CreateEventStreamingRequestSourceSourceCustomizedKafkaParameters : TeaModel {
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
 
             }
 

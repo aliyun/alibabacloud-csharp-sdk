@@ -81,6 +81,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public List<GetRuleResponseBodyDataTargets> Targets { get; set; }
             public class GetRuleResponseBodyDataTargets : TeaModel {
+                [NameInMap("ConcurrentConfig")]
+                [Validation(Required=false)]
+                public GetRuleResponseBodyDataTargetsConcurrentConfig ConcurrentConfig { get; set; }
+                public class GetRuleResponseBodyDataTargetsConcurrentConfig : TeaModel {
+                    [NameInMap("Concurrency")]
+                    [Validation(Required=false)]
+                    public long? Concurrency { get; set; }
+
+                }
+
                 /// <summary>
                 /// The dead-letter queue.
                 /// </summary>

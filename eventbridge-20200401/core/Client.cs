@@ -439,6 +439,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateEventSourceShrinkRequest request = new CreateEventSourceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExternalSourceConfig))
+            {
+                request.ExternalSourceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExternalSourceConfig, "ExternalSourceConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceHttpEventParameters))
             {
                 request.SourceHttpEventParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceHttpEventParameters, "SourceHttpEventParameters", "json");
@@ -479,6 +483,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventSourceName))
             {
                 body["EventSourceName"] = request.EventSourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalSourceConfigShrink))
+            {
+                body["ExternalSourceConfig"] = request.ExternalSourceConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalSourceType))
+            {
+                body["ExternalSourceType"] = request.ExternalSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinkedExternalSource))
+            {
+                body["LinkedExternalSource"] = request.LinkedExternalSource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceHttpEventParametersShrink))
             {
@@ -541,6 +557,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateEventSourceShrinkRequest request = new CreateEventSourceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExternalSourceConfig))
+            {
+                request.ExternalSourceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExternalSourceConfig, "ExternalSourceConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceHttpEventParameters))
             {
                 request.SourceHttpEventParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceHttpEventParameters, "SourceHttpEventParameters", "json");
@@ -581,6 +601,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventSourceName))
             {
                 body["EventSourceName"] = request.EventSourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalSourceConfigShrink))
+            {
+                body["ExternalSourceConfig"] = request.ExternalSourceConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalSourceType))
+            {
+                body["ExternalSourceType"] = request.ExternalSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinkedExternalSource))
+            {
+                body["LinkedExternalSource"] = request.LinkedExternalSource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceHttpEventParametersShrink))
             {
@@ -5183,6 +5215,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateEventSourceShrinkRequest request = new UpdateEventSourceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExternalSourceConfig))
+            {
+                request.ExternalSourceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExternalSourceConfig, "ExternalSourceConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceHttpEventParameters))
             {
                 request.SourceHttpEventParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceHttpEventParameters, "SourceHttpEventParameters", "json");
@@ -5223,6 +5259,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventSourceName))
             {
                 body["EventSourceName"] = request.EventSourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalSourceConfigShrink))
+            {
+                body["ExternalSourceConfig"] = request.ExternalSourceConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalSourceType))
+            {
+                body["ExternalSourceType"] = request.ExternalSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinkedExternalSource))
+            {
+                body["LinkedExternalSource"] = request.LinkedExternalSource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceHttpEventParametersShrink))
             {
@@ -5285,6 +5333,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateEventSourceShrinkRequest request = new UpdateEventSourceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExternalSourceConfig))
+            {
+                request.ExternalSourceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExternalSourceConfig, "ExternalSourceConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceHttpEventParameters))
             {
                 request.SourceHttpEventParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceHttpEventParameters, "SourceHttpEventParameters", "json");
@@ -5325,6 +5377,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventSourceName))
             {
                 body["EventSourceName"] = request.EventSourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalSourceConfigShrink))
+            {
+                body["ExternalSourceConfig"] = request.ExternalSourceConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalSourceType))
+            {
+                body["ExternalSourceType"] = request.ExternalSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinkedExternalSource))
+            {
+                body["LinkedExternalSource"] = request.LinkedExternalSource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceHttpEventParametersShrink))
             {
