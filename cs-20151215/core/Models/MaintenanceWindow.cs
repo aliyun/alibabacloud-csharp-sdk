@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string MaintenanceTime { get; set; }
 
+        [NameInMap("recurrence")]
+        [Validation(Required=false)]
+        public string Recurrence { get; set; }
+
         [NameInMap("weekly_period")]
         [Validation(Required=false)]
         public string WeeklyPeriod { get; set; }
