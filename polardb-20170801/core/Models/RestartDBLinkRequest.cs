@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RestartDBLinkRequest : TeaModel {
         /// <summary>
+        /// The cluster ID.
+        /// 
+        /// >  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the IDs of all clusters in an Alibaba Cloud account.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DBClusterId")]

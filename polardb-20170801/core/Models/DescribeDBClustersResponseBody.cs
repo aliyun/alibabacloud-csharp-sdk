@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClustersResponseBody : TeaModel {
         /// <summary>
-        /// The details of the cluster.
+        /// The information about the clusters.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -23,8 +23,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// The type of the AI node. Valid values:
                 /// 
-                /// *   SearchNode: search node.
-                /// *   DLNode: AI node.
+                /// *   SearchNode: search node
+                /// *   DLNode: AI node
+                /// 
+                /// Enumeration values:
+                /// 
+                /// *   SearchNode | DLNode: both
+                /// *   DLNode: AI node
+                /// *   SearchNode: search node
                 /// </summary>
                 [NameInMap("AiType")]
                 [Validation(Required=false)]
@@ -36,12 +42,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// *   **Normal**: Cluster Edition
                 /// *   **Basic**: Single Node Edition
                 /// *   **Archive**: X-Engine Edition
-                /// *   **NormalMultimaster**: Multi-master Cluster (Database/Table)
+                /// *   **NormalMultimaster**: Multi-master Cluster (Database/Table) Edition
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
+                /// <summary>
+                /// The number of CPU cores.
+                /// </summary>
                 [NameInMap("CpuCores")]
                 [Validation(Required=false)]
                 public string CpuCores { get; set; }
@@ -61,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBClusterDescription { get; set; }
 
                 /// <summary>
-                /// The ID of the cluster.
+                /// The cluster ID.
                 /// </summary>
                 [NameInMap("DBClusterId")]
                 [Validation(Required=false)]
@@ -75,14 +84,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBClusterNetworkType { get; set; }
 
                 /// <summary>
-                /// The status of the cluster.
+                /// The state of the cluster.
                 /// </summary>
                 [NameInMap("DBClusterStatus")]
                 [Validation(Required=false)]
                 public string DBClusterStatus { get; set; }
 
                 /// <summary>
-                /// The specifications of the node.
+                /// The node specifications.
                 /// </summary>
                 [NameInMap("DBNodeClass")]
                 [Validation(Required=false)]
@@ -96,7 +105,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public int? DBNodeNumber { get; set; }
 
                 /// <summary>
-                /// The nodes of the cluster.
+                /// The information about the nodes.
                 /// </summary>
                 [NameInMap("DBNodes")]
                 [Validation(Required=false)]
@@ -123,8 +132,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         /// <summary>
                         /// The role of the node. Valid values:
                         /// 
-                        /// *   **Writer**: The node is the primary node.
-                        /// *   **Reader**: The node is the read-only node.
+                        /// *   **Writer**: primary node
+                        /// *   **Reader**: read-only node
+                        /// *   **ColumnReader**: column store read-only node
+                        /// *   **AI**: AI node
                         /// </summary>
                         [NameInMap("DBNodeRole")]
                         [Validation(Required=false)]
@@ -151,24 +162,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         public string ImciSwitch { get; set; }
 
                         /// <summary>
-                        /// The ID of the region in which the node resides.
+                        /// The region ID of the node.
                         /// </summary>
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// Indicates whether the serverless feature is enabled for the current node.
+                        /// Indicates whether the serverless feature is enabled for the node.
                         /// 
                         /// *   **ON** indicates that the serverless feature is enabled.
-                        /// *   An empty value indicates that the serverless feature is disabled.
+                        /// *   No value is returned if the serverless feature is disabled.
                         /// </summary>
                         [NameInMap("Serverless")]
                         [Validation(Required=false)]
                         public string Serverless { get; set; }
 
                         /// <summary>
-                        /// The zone ID of the node.
+                        /// The zone ID of node.
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -186,7 +197,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBType { get; set; }
 
                 /// <summary>
-                /// The version of the database.
+                /// The version of the database engine.
                 /// </summary>
                 [NameInMap("DBVersion")]
                 [Validation(Required=false)]
@@ -195,17 +206,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// Indicates whether the cluster is protected from deletion. Valid values:
                 /// 
-                /// *   **0**: The cluster is not locked.
-                /// *   **1**: The cluster is locked.
+                /// *   **0**: The cluster is not protected from deletion.
+                /// *   **1**: The cluster is protected from deletion.
                 /// 
-                /// > You cannot delete clusters that are locked.
+                /// >  You cannot delete clusters that are protected from deletion.
                 /// </summary>
                 [NameInMap("DeletionLock")]
                 [Validation(Required=false)]
                 public int? DeletionLock { get; set; }
 
                 /// <summary>
-                /// The engine of the cluster.
+                /// The database engine of the cluster.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
@@ -214,7 +225,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// The expiration time of the cluster.
                 /// 
-                /// > A specific value is returned only for subscription (**Prepaid**) clusters. For pay-as-you-go (**Postpaid**) clusters, an empty string is returned.
+                /// >  A specific value is returned only for subscription (**Prepaid**) clusters. For pay-as-you-go (**Postpaid**) clusters, no value is returned.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -226,7 +237,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// *   **true**
                 /// *   **false**
                 /// 
-                /// > A specific value is returned only for subscription (**Prepaid**) clusters.
+                /// >  A specific value is returned only for subscription (**Prepaid**) clusters.
                 /// </summary>
                 [NameInMap("Expired")]
                 [Validation(Required=false)]
@@ -235,14 +246,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// The lock state of the cluster. Valid values:
                 /// 
-                /// *   **Unlock**: The cluster is not locked.
+                /// *   **Unlock**: The cluster is unlocked.
                 /// *   **ManualLock**: The cluster is manually locked.
-                /// *   **LockByExpiration**: The cluster is automatically locked due to cluster expiration.
+                /// *   **LockByExpiration**: The cluster is locked due to cluster expiration.
                 /// </summary>
                 [NameInMap("LockMode")]
                 [Validation(Required=false)]
                 public string LockMode { get; set; }
 
+                /// <summary>
+                /// The memory size for local operations. Unit: MB.
+                /// </summary>
                 [NameInMap("MemorySize")]
                 [Validation(Required=false)]
                 public string MemorySize { get; set; }
@@ -258,32 +272,35 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// The ID of the region in which the node resides.
+                /// The region ID of the cluster.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// The memory size for distributed operations. Unit: MB.
+                /// </summary>
                 [NameInMap("RemoteMemorySize")]
                 [Validation(Required=false)]
                 public string RemoteMemorySize { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the cluster is a serverless cluster. **AgileServerless** indicates a serverless cluster. An empty value indicates a common cluster.
+                /// Indicates whether the cluster is a serverless cluster. **AgileServerless** indicates a serverless cluster. No value is returned for a common cluster.
                 /// </summary>
                 [NameInMap("ServerlessType")]
                 [Validation(Required=false)]
                 public string ServerlessType { get; set; }
 
                 /// <summary>
-                /// The billing method of the storage space. Valid values:
+                /// The storage billing method of the cluster. Valid values:
                 /// 
                 /// *   **Postpaid**: pay-as-you-go
                 /// *   **Prepaid**: subscription
@@ -293,14 +310,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string StoragePayType { get; set; }
 
                 /// <summary>
-                /// The storage capacity that is billed based on the subscription billing method. Unit: byte.
+                /// The storage that is billed based on the subscription billing method. Unit: bytes.
                 /// </summary>
                 [NameInMap("StorageSpace")]
                 [Validation(Required=false)]
                 public long? StorageSpace { get; set; }
 
+                [NameInMap("StorageType")]
+                [Validation(Required=false)]
+                public string StorageType { get; set; }
+
                 /// <summary>
-                /// The storage space this is occupied by the cluster. Unit: bytes.
+                /// The used storage. Unit: bytes.
                 /// </summary>
                 [NameInMap("StorageUsed")]
                 [Validation(Required=false)]
@@ -309,19 +330,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// Indicates whether multi-zone data consistency is enabled for the cluster. Valid values:
                 /// 
-                /// *   **ON**: multi-zone data consistency is enabled, which is suitable for Standard Edition clusters of Multi-zone Edition.
-                /// *   **OFF**: multi-zone data consistency is disabled.
+                /// *   **ON**: Multi-zone data consistency is enabled. For Standard Edition clusters of Multi-zone Edition, this value is returned.
+                /// *   **OFF**: Multi-zone data consistency is disabled.
                 /// </summary>
                 [NameInMap("StrictConsistency")]
                 [Validation(Required=false)]
                 public string StrictConsistency { get; set; }
 
+                /// <summary>
+                /// The specification type of the compute node. Valid values:
+                /// 
+                /// *   **Exclusive**: dedicated.
+                /// *   **General**: general-purpose.
+                /// </summary>
                 [NameInMap("SubCategory")]
                 [Validation(Required=false)]
                 public string SubCategory { get; set; }
 
                 /// <summary>
-                /// The tags of the cluster.
+                /// The information about the tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -350,7 +377,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 }
 
                 /// <summary>
-                /// The VPC ID of the cluster.
+                /// The virtual private cloud (VPC) ID of the cluster.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

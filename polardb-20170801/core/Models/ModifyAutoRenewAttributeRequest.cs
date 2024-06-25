@@ -21,10 +21,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// The automatic renewal period.
         /// 
-        ///  
-        /// *   Valid values when **PeriodUnit** is set to **Month**: `1, 2, 3, 6, and 12`.
-        /// *   Valid values when **PeriodUnit** is set to **Year**: `1, 2, and 3`.
-        ///  
+        /// *   Valid values when you set the **PeriodUnit** parameter to **Month**: `1, 2, 3, 6, and 12`.
+        /// *   Valid values when you set the **PeriodUnit** parameter to **Year**: `1, 2, and 3`.
+        /// 
         /// Default value: **1**.
         /// </summary>
         [NameInMap("Duration")]
@@ -41,10 +40,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// The unit of the renewal period. Valid values:
-        ///  
+        /// 
         /// *   **Year**
         /// *   **Month**
-        ///  
+        /// 
         /// Default value: **Month**.
         /// </summary>
         [NameInMap("PeriodUnit")]
@@ -64,15 +63,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The auto-renewal state of the cluster. Valid values:
-        ///  
-        /// *   **AutoRenewal:** The cluster are automatically renewed.
+        /// The auto-renewal status of the cluster. Valid values:
+        /// 
+        /// *   **AutoRenewal:** The cluster is automatically renewed.
         /// *   **Normal**: The cluster is manually renewed.
         /// *   **NotRenewal:** The cluster is not renewed after expiration.
-        ///  
+        /// 
         /// Default value: **AutoRenewal**.
-        ///  
-        /// >  If this parameter is set to **NotRenewal**, the system does not send a text message for the cluster expiration, but only sends a message three days before the cluster expires to remind you that the cluster is not renewed.
+        /// 
+        /// >  If you set this parameter to **NotRenewal**, the system sends a notification that indicates the cluster is not renewed three days before the cluster expires. After the cluster expires, the system no longer sends a notification.
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]

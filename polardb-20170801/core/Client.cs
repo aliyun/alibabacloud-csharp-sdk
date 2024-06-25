@@ -12547,6 +12547,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -12626,6 +12630,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -17095,7 +17103,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-         * @summary Modifies the primary zone of a PolarDB cluster.
+         * @summary Changes the primary zone of a PolarDB cluster.
          *
          * @param request ModifyDBClusterPrimaryZoneRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17177,7 +17185,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-         * @summary Modifies the primary zone of a PolarDB cluster.
+         * @summary Changes the primary zone of a PolarDB cluster.
          *
          * @param request ModifyDBClusterPrimaryZoneRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17259,7 +17267,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-         * @summary Modifies the primary zone of a PolarDB cluster.
+         * @summary Changes the primary zone of a PolarDB cluster.
          *
          * @param request ModifyDBClusterPrimaryZoneRequest
          * @return ModifyDBClusterPrimaryZoneResponse
@@ -17271,7 +17279,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-         * @summary Modifies the primary zone of a PolarDB cluster.
+         * @summary Changes the primary zone of a PolarDB cluster.
          *
          * @param request ModifyDBClusterPrimaryZoneRequest
          * @return ModifyDBClusterPrimaryZoneResponse
@@ -20911,7 +20919,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-         * @summary 重启代理
+         * @summary Restarts database links.
          *
          * @param request RestartDBLinkRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20965,7 +20973,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-         * @summary 重启代理
+         * @summary Restarts database links.
          *
          * @param request RestartDBLinkRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21019,7 +21027,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-         * @summary 重启代理
+         * @summary Restarts database links.
          *
          * @param request RestartDBLinkRequest
          * @return RestartDBLinkResponse
@@ -21031,7 +21039,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         }
 
         /**
-         * @summary 重启代理
+         * @summary Restarts database links.
          *
          * @param request RestartDBLinkRequest
          * @return RestartDBLinkResponse

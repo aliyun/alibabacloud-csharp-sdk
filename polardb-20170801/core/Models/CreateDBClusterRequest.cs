@@ -21,6 +21,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string AllowShutDown { get; set; }
 
+        /// <summary>
+        /// The CPU architecture. Valid values:
+        /// 
+        /// *   X86
+        /// *   ARM
+        /// </summary>
         [NameInMap("Architecture")]
         [Validation(Required=false)]
         public string Architecture { get; set; }
@@ -175,9 +181,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBNodeClass { get; set; }
 
-        /// <summary>
-        /// 标准版节点个数。
-        /// </summary>
         [NameInMap("DBNodeNum")]
         [Validation(Required=false)]
         public int? DBNodeNum { get; set; }
@@ -239,32 +242,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string HotStandbyCluster { get; set; }
 
-        /// <summary>
-        /// 开启Binlog功能，取值范围如下：
-        /// 
-        /// - **ON**：集群开启Binlog功能
-        /// - **OFF**：集群关闭Binlog功能
-        /// > 当参数**DBType**为**MySQL**时，该参数才生效。
-        /// </summary>
         [NameInMap("LoosePolarLogBin")]
         [Validation(Required=false)]
         public string LoosePolarLogBin { get; set; }
 
         /// <summary>
-        /// 开启X-Engine存储引擎功能，取值范围如下：
+        /// Specifies whether to enable X-Engine. Valid values:
         /// 
-        /// - **ON**：集群开启X-Engine引擎
-        /// - **OFF**：集群关闭X-Engine引擎
-        /// > 当参数**CreationOption**不等于**CreateGdnStandby**，**DBType**为**MySQL**且**DBVersion**为**8.0**时，该参数才生效。开启X-Engine引擎的节点内存规格必须大于等于16 GB。
+        /// *   **ON**
+        /// *   **OFF**
+        /// 
+        /// >  This parameter takes effect only if you do not set **CreationOption** to **CreateGdnStandby** and you set **DBType** to **MySQL** and **DBVersion** to **8.0**. To enable X-Engine on a node, make sure that the memory of the node is greater than or equal to 8 GB in size.
         /// </summary>
         [NameInMap("LooseXEngine")]
         [Validation(Required=false)]
         public string LooseXEngine { get; set; }
 
-        /// <summary>
-        /// 设置开启X-Engine存储引擎比例，取值范围10~90的整数。
-        /// > 当参数**LooseXEngine**为**ON**时，该参数才生效。
-        /// </summary>
         [NameInMap("LooseXEngineUseMemoryPct")]
         [Validation(Required=false)]
         public string LooseXEngineUseMemoryPct { get; set; }
@@ -322,23 +315,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Period { get; set; }
 
+        /// <summary>
+        /// The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
+        /// 
+        /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
+        /// 
+        /// >  This parameter is available only if the StorageType parameter is set to ESSDAUTOPL.
+        /// </summary>
         [NameInMap("ProvisionedIops")]
         [Validation(Required=false)]
         public long? ProvisionedIops { get; set; }
 
-        /// <summary>
-        /// 标准版数据库代理规格。
-        /// </summary>
         [NameInMap("ProxyClass")]
         [Validation(Required=false)]
         public string ProxyClass { get; set; }
 
-        /// <summary>
-        /// 数据库代理类型，取值范围如下：
-        /// 
-        /// - **Exclusive**：企业独享版
-        /// - **General**：企业通用版
-        /// </summary>
         [NameInMap("ProxyType")]
         [Validation(Required=false)]
         public string ProxyType { get; set; }
@@ -433,11 +424,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SourceResourceId { get; set; }
 
-        /// <summary>
-        /// 存储热备集群的可用区。适用于标准版3AZ场景。
-        /// 
-        /// > 开启了多可用区数据强一致，该参数才生效。
-        /// </summary>
         [NameInMap("StandbyAZ")]
         [Validation(Required=false)]
         public string StandbyAZ { get; set; }
@@ -464,10 +450,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// *   **PSL4**
         /// 
         /// Valid values for Standard Edition:
-        /// 
+        /// *   **ESSDPL0**
         /// *   **ESSDPL1**
         /// *   **ESSDPL2**
         /// *   **ESSDPL3**
+        /// *   **ESSDAUTOPL**
         /// 
         /// > This parameter is invalid for serverless clusters.
         /// </summary>
@@ -480,11 +467,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? StorageUpperBound { get; set; }
 
         /// <summary>
-        /// 集群是否开启了多可用区数据强一致。取值范围：
+        /// Specifies whether to enable multi-zone data consistency. Valid values:
         /// 
-        /// - **ON**：表示开启了多可用区数据强一致，适用于标准版3AZ场景。
-        /// 
-        /// - **OFF**：表示未开启多可用区数据强一致。
+        /// *   **ON**: enables multi-zone data consistency. Set this parameter to ON for Standard Edition clusters of Multi-zone Edition.
+        /// *   **OFF**: disables multi-zone data consistency.
         /// </summary>
         [NameInMap("StrictConsistency")]
         [Validation(Required=false)]

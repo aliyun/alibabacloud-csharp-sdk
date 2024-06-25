@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+        /// The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Valid values: **30**, **50**, or **100**.
+        /// The number of entries per page. Valid values: **30**, **50**, or **100**.
         /// 
         /// Default value: **30**.
         /// </summary>
