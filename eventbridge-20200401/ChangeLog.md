@@ -1,3 +1,6 @@
+2024-06-25 Version: 3.1.3
+- Generated csharp 2020-04-01 for eventbridge.
+
 2024-06-24 Version: 3.1.2
 - Update API CreateEventSource: add param ExternalSourceConfig.
 - Update API CreateEventSource: add param ExternalSourceType.
