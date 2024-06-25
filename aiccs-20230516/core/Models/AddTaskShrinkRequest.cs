@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// 任务名称
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -121,6 +123,8 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// 任务类型
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

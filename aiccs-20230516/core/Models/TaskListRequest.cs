@@ -36,6 +36,13 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// 任务状态。1 未启用，2 启用中，4 已停止
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public long? Status { get; set; }
+
+        /// <summary>
         /// 任务ID
         /// </summary>
         [NameInMap("TaskId")]

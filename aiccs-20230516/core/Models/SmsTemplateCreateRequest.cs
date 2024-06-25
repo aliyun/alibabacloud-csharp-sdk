@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
     public class SmsTemplateCreateRequest : TeaModel {
         /// <summary>
         /// 短信内容
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// 短信签名
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Sign")]
         [Validation(Required=false)]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// 模板名称
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

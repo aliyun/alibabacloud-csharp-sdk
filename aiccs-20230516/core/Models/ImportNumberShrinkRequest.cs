@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
     public class ImportNumberShrinkRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Customers")]
         [Validation(Required=false)]
         public string CustomersShrink { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         [Validation(Required=false)]
         public long? FailReturn { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OutId")]
         [Validation(Required=false)]
         public string OutId { get; set; }
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }

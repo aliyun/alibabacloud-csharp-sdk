@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// 开始外呼时间
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CallDate")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// 结束外呼时间
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndCallDate")]
         [Validation(Required=false)]
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// 页数
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
@@ -72,6 +78,8 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// 任务ID
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

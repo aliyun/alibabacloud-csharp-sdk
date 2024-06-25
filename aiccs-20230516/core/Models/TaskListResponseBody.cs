@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
     public class TaskListResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
@@ -169,6 +173,13 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
             [NameInMap("TaskName")]
             [Validation(Required=false)]
             public string TaskName { get; set; }
+
+            /// <summary>
+            /// 话术模板Id
+            /// </summary>
+            [NameInMap("TemplateId")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
 
             /// <summary>
             /// 话术模板名称

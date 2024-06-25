@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// 外呼ID
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
