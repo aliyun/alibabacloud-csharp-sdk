@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Acm20200206.Models
 {
     public class UpdateNamespaceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("NamespaceName")]
         [Validation(Required=false)]
         public string NamespaceName { get; set; }

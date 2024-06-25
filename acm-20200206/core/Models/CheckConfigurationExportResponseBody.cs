@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Acm20200206.Models
 {
     public class CheckConfigurationExportResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,10 +21,6 @@ namespace AlibabaCloud.SDK.Acm20200206.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CheckConfigurationExportResponseBodyResult Result { get; set; }
@@ -28,7 +28,8 @@ namespace AlibabaCloud.SDK.Acm20200206.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
     }
 

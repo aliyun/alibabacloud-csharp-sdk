@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Acm20200206.Models
 {
     public class BatchExportConfigurationsResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("FileUrl")]
         [Validation(Required=false)]
         public string FileUrl { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Acm20200206.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 
