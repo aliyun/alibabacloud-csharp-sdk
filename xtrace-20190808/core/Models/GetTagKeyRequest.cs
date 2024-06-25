@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

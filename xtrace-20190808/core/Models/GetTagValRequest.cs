@@ -46,6 +46,8 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         /// <summary>
         /// The tag key.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

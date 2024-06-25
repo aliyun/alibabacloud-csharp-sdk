@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Service")]
         [Validation(Required=false)]
         public string Service { get; set; }

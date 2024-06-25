@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         /// <summary>
         /// The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -53,6 +55,8 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         /// <summary>
         /// The ID of the region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -84,6 +88,8 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         /// <summary>
         /// The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

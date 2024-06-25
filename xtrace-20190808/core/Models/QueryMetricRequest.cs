@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         /// <summary>
         /// The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -64,6 +66,8 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         /// <summary>
         /// The measures of the metric that you want to query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Measures")]
         [Validation(Required=false)]
@@ -74,6 +78,8 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
         /// 
         /// - `appstat.incall`: trace statistics 
         /// - `appstat.sql`: SQL statistics
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Metric")]
         [Validation(Required=false)]
@@ -105,6 +111,8 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         /// <summary>
         /// The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
