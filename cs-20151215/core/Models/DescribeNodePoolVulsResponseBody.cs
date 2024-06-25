@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public string Necessity { get; set; }
 
+                [NameInMap("need_reboot")]
+                [Validation(Required=false)]
+                public bool? NeedReboot { get; set; }
+
             }
 
         }

@@ -480,12 +480,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI CancelComponentUpgrade is deprecated
+         *
          * @summary You can call the CancelComponentUpgrade operation to cancel the update of a component.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return CancelComponentUpgradeResponse
          */
+        // Deprecated
         public CancelComponentUpgradeResponse CancelComponentUpgradeWithOptions(string clusterId, string componentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -508,12 +511,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI CancelComponentUpgrade is deprecated
+         *
          * @summary You can call the CancelComponentUpgrade operation to cancel the update of a component.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return CancelComponentUpgradeResponse
          */
+        // Deprecated
         public async Task<CancelComponentUpgradeResponse> CancelComponentUpgradeWithOptionsAsync(string clusterId, string componentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -536,10 +542,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI CancelComponentUpgrade is deprecated
+         *
          * @summary You can call the CancelComponentUpgrade operation to cancel the update of a component.
          *
          * @return CancelComponentUpgradeResponse
          */
+        // Deprecated
         public CancelComponentUpgradeResponse CancelComponentUpgrade(string clusterId, string componentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -548,10 +557,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI CancelComponentUpgrade is deprecated
+         *
          * @summary You can call the CancelComponentUpgrade operation to cancel the update of a component.
          *
          * @return CancelComponentUpgradeResponse
          */
+        // Deprecated
         public async Task<CancelComponentUpgradeResponse> CancelComponentUpgradeAsync(string clusterId, string componentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9296,12 +9308,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI GetUpgradeStatus is deprecated
+         *
          * @summary You can call the GetUpgradeStatus operation to query the update progress of a cluster by cluster ID.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetUpgradeStatusResponse
          */
+        // Deprecated
         public GetUpgradeStatusResponse GetUpgradeStatusWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9324,12 +9339,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI GetUpgradeStatus is deprecated
+         *
          * @summary You can call the GetUpgradeStatus operation to query the update progress of a cluster by cluster ID.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return GetUpgradeStatusResponse
          */
+        // Deprecated
         public async Task<GetUpgradeStatusResponse> GetUpgradeStatusWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9352,10 +9370,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI GetUpgradeStatus is deprecated
+         *
          * @summary You can call the GetUpgradeStatus operation to query the update progress of a cluster by cluster ID.
          *
          * @return GetUpgradeStatusResponse
          */
+        // Deprecated
         public GetUpgradeStatusResponse GetUpgradeStatus(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9364,10 +9385,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI GetUpgradeStatus is deprecated
+         *
          * @summary You can call the GetUpgradeStatus operation to query the update progress of a cluster by cluster ID.
          *
          * @return GetUpgradeStatusResponse
          */
+        // Deprecated
         public async Task<GetUpgradeStatusResponse> GetUpgradeStatusAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11364,12 +11388,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI PauseComponentUpgrade is deprecated
+         *
          * @summary You can call the PauseComponentUpgrade operation to pause the update of a component.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return PauseComponentUpgradeResponse
          */
+        // Deprecated
         public PauseComponentUpgradeResponse PauseComponentUpgradeWithOptions(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11392,12 +11419,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI PauseComponentUpgrade is deprecated
+         *
          * @summary You can call the PauseComponentUpgrade operation to pause the update of a component.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return PauseComponentUpgradeResponse
          */
+        // Deprecated
         public async Task<PauseComponentUpgradeResponse> PauseComponentUpgradeWithOptionsAsync(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11420,10 +11450,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI PauseComponentUpgrade is deprecated
+         *
          * @summary You can call the PauseComponentUpgrade operation to pause the update of a component.
          *
          * @return PauseComponentUpgradeResponse
          */
+        // Deprecated
         public PauseComponentUpgradeResponse PauseComponentUpgrade(string clusterid, string componentid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11432,10 +11465,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI PauseComponentUpgrade is deprecated
+         *
          * @summary You can call the PauseComponentUpgrade operation to pause the update of a component.
          *
          * @return PauseComponentUpgradeResponse
          */
+        // Deprecated
         public async Task<PauseComponentUpgradeResponse> PauseComponentUpgradeAsync(string clusterid, string componentid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12046,12 +12082,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI ResumeComponentUpgrade is deprecated
+         *
          * @summary You can call the ResumeComponentUpgrade operation to resume the update of a component.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return ResumeComponentUpgradeResponse
          */
+        // Deprecated
         public ResumeComponentUpgradeResponse ResumeComponentUpgradeWithOptions(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -12074,12 +12113,15 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI ResumeComponentUpgrade is deprecated
+         *
          * @summary You can call the ResumeComponentUpgrade operation to resume the update of a component.
          *
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return ResumeComponentUpgradeResponse
          */
+        // Deprecated
         public async Task<ResumeComponentUpgradeResponse> ResumeComponentUpgradeWithOptionsAsync(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -12102,10 +12144,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI ResumeComponentUpgrade is deprecated
+         *
          * @summary You can call the ResumeComponentUpgrade operation to resume the update of a component.
          *
          * @return ResumeComponentUpgradeResponse
          */
+        // Deprecated
         public ResumeComponentUpgradeResponse ResumeComponentUpgrade(string clusterid, string componentid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12114,10 +12159,13 @@ namespace AlibabaCloud.SDK.CS20151215
         }
 
         /**
+         * @deprecated OpenAPI ResumeComponentUpgrade is deprecated
+         *
          * @summary You can call the ResumeComponentUpgrade operation to resume the update of a component.
          *
          * @return ResumeComponentUpgradeResponse
          */
+        // Deprecated
         public async Task<ResumeComponentUpgradeResponse> ResumeComponentUpgradeAsync(string clusterid, string componentid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
