@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [Validation(Required=false)]
             public int? PayType { get; set; }
 
+            [NameInMap("ProductCode")]
+            [Validation(Required=false)]
+            public string ProductCode { get; set; }
+
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
