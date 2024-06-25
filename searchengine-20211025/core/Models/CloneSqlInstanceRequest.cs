@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
-    public class ModifyDataSourceResponseBody : TeaModel {
+    public class CloneSqlInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the request
+        /// This parameter is required.
         /// </summary>
-        [NameInMap("requestId")]
+        [NameInMap("name")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
-        /// The result returned
+        /// This parameter is required.
         /// </summary>
-        [NameInMap("result")]
+        [NameInMap("targetFolderId")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Result { get; set; }
+        public long? TargetFolderId { get; set; }
 
     }
 

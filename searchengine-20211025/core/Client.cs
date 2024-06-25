@@ -310,6 +310,104 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
+         * @param request CloneSqlInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CloneSqlInstanceResponse
+         */
+        public CloneSqlInstanceResponse CloneSqlInstanceWithOptions(string instanceId, string database, string sqlInstanceId, CloneSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFolderId))
+            {
+                body["targetFolderId"] = request.TargetFolderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloneSqlInstance",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId) + "/actions/clone",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloneSqlInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request CloneSqlInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CloneSqlInstanceResponse
+         */
+        public async Task<CloneSqlInstanceResponse> CloneSqlInstanceWithOptionsAsync(string instanceId, string database, string sqlInstanceId, CloneSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFolderId))
+            {
+                body["targetFolderId"] = request.TargetFolderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloneSqlInstance",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId) + "/actions/clone",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloneSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request CloneSqlInstanceRequest
+         * @return CloneSqlInstanceResponse
+         */
+        public CloneSqlInstanceResponse CloneSqlInstance(string instanceId, string database, string sqlInstanceId, CloneSqlInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CloneSqlInstanceWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
+        }
+
+        /**
+         * @param request CloneSqlInstanceRequest
+         * @return CloneSqlInstanceResponse
+         */
+        public async Task<CloneSqlInstanceResponse> CloneSqlInstanceAsync(string instanceId, string database, string sqlInstanceId, CloneSqlInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CloneSqlInstanceWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
+        }
+
+        /**
          * @summary Creates a cluster.
          *
          * @description ### Method
@@ -814,6 +912,112 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
+         * @param request CreateFolderRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateFolderResponse
+         */
+        public CreateFolderResponse CreateFolderWithOptions(string instanceId, string database, CreateFolderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parent))
+            {
+                body["parent"] = request.Parent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFolder",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/folders",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFolderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request CreateFolderRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateFolderResponse
+         */
+        public async Task<CreateFolderResponse> CreateFolderWithOptionsAsync(string instanceId, string database, CreateFolderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parent))
+            {
+                body["parent"] = request.Parent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFolder",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/folders",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFolderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request CreateFolderRequest
+         * @return CreateFolderResponse
+         */
+        public CreateFolderResponse CreateFolder(string instanceId, string database, CreateFolderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateFolderWithOptions(instanceId, database, request, headers, runtime);
+        }
+
+        /**
+         * @param request CreateFolderRequest
+         * @return CreateFolderResponse
+         */
+        public async Task<CreateFolderResponse> CreateFolderAsync(string instanceId, string database, CreateFolderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateFolderWithOptionsAsync(instanceId, database, request, headers, runtime);
+        }
+
+        /**
          * @summary Creates an index.
          *
          * @description ### Method
@@ -1235,6 +1439,104 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreatePublicUrlWithOptionsAsync(instanceId, headers, runtime);
+        }
+
+        /**
+         * @param request CreateSqlInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSqlInstanceResponse
+         */
+        public CreateSqlInstanceResponse CreateSqlInstanceWithOptions(string instanceId, string database, CreateSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parent))
+            {
+                body["parent"] = request.Parent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSqlInstance",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSqlInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request CreateSqlInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSqlInstanceResponse
+         */
+        public async Task<CreateSqlInstanceResponse> CreateSqlInstanceWithOptionsAsync(string instanceId, string database, CreateSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parent))
+            {
+                body["parent"] = request.Parent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSqlInstance",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request CreateSqlInstanceRequest
+         * @return CreateSqlInstanceResponse
+         */
+        public CreateSqlInstanceResponse CreateSqlInstance(string instanceId, string database, CreateSqlInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateSqlInstanceWithOptions(instanceId, database, request, headers, runtime);
+        }
+
+        /**
+         * @param request CreateSqlInstanceRequest
+         * @return CreateSqlInstanceResponse
+         */
+        public async Task<CreateSqlInstanceResponse> CreateSqlInstanceAsync(string instanceId, string database, CreateSqlInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateSqlInstanceWithOptionsAsync(instanceId, database, request, headers, runtime);
         }
 
         /**
@@ -1808,6 +2110,78 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteFolderResponse
+         */
+        public DeleteFolderResponse DeleteFolderWithOptions(string instanceId, string database, string folderId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFolder",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/folders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(folderId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFolderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteFolderResponse
+         */
+        public async Task<DeleteFolderResponse> DeleteFolderWithOptionsAsync(string instanceId, string database, string folderId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFolder",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/folders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(folderId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFolderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @return DeleteFolderResponse
+         */
+        public DeleteFolderResponse DeleteFolder(string instanceId, string database, string folderId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteFolderWithOptions(instanceId, database, folderId, headers, runtime);
+        }
+
+        /**
+         * @return DeleteFolderResponse
+         */
+        public async Task<DeleteFolderResponse> DeleteFolderAsync(string instanceId, string database, string folderId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteFolderWithOptionsAsync(instanceId, database, folderId, headers, runtime);
+        }
+
+        /**
          * @summary Deletes an index.
          *
          * @description ## Method
@@ -2214,6 +2588,78 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSqlInstanceResponse
+         */
+        public DeleteSqlInstanceResponse DeleteSqlInstanceWithOptions(string instanceId, string database, string sqlInstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSqlInstance",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSqlInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteSqlInstanceResponse
+         */
+        public async Task<DeleteSqlInstanceResponse> DeleteSqlInstanceWithOptionsAsync(string instanceId, string database, string sqlInstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSqlInstance",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @return DeleteSqlInstanceResponse
+         */
+        public DeleteSqlInstanceResponse DeleteSqlInstance(string instanceId, string database, string sqlInstanceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteSqlInstanceWithOptions(instanceId, database, sqlInstanceId, headers, runtime);
+        }
+
+        /**
+         * @return DeleteSqlInstanceResponse
+         */
+        public async Task<DeleteSqlInstanceResponse> DeleteSqlInstanceAsync(string instanceId, string database, string sqlInstanceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteSqlInstanceWithOptionsAsync(instanceId, database, sqlInstanceId, headers, runtime);
+        }
+
+        /**
          * @summary 删除索引表V2
          *
          * @param headers map
@@ -2381,6 +2827,144 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DescribeRegionsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @param request ExecuteSqlInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExecuteSqlInstanceResponse
+         */
+        public ExecuteSqlInstanceResponse ExecuteSqlInstanceWithOptions(string instanceId, string database, string sqlInstanceId, ExecuteSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CombineParam))
+            {
+                body["combineParam"] = request.CombineParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                body["domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DynamicParam))
+            {
+                body["dynamicParam"] = request.DynamicParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kvpair))
+            {
+                body["kvpair"] = request.Kvpair;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StaticParam))
+            {
+                body["staticParam"] = request.StaticParam;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteSqlInstance",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId) + "/actions/execution",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteSqlInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request ExecuteSqlInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExecuteSqlInstanceResponse
+         */
+        public async Task<ExecuteSqlInstanceResponse> ExecuteSqlInstanceWithOptionsAsync(string instanceId, string database, string sqlInstanceId, ExecuteSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CombineParam))
+            {
+                body["combineParam"] = request.CombineParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                body["domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DynamicParam))
+            {
+                body["dynamicParam"] = request.DynamicParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kvpair))
+            {
+                body["kvpair"] = request.Kvpair;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StaticParam))
+            {
+                body["staticParam"] = request.StaticParam;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteSqlInstance",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId) + "/actions/execution",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request ExecuteSqlInstanceRequest
+         * @return ExecuteSqlInstanceResponse
+         */
+        public ExecuteSqlInstanceResponse ExecuteSqlInstance(string instanceId, string database, string sqlInstanceId, ExecuteSqlInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecuteSqlInstanceWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
+        }
+
+        /**
+         * @param request ExecuteSqlInstanceRequest
+         * @return ExecuteSqlInstanceResponse
+         */
+        public async Task<ExecuteSqlInstanceResponse> ExecuteSqlInstanceAsync(string instanceId, string database, string sqlInstanceId, ExecuteSqlInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecuteSqlInstanceWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
         /**
@@ -3116,6 +3700,78 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetDatabaseSchemaResponse
+         */
+        public GetDatabaseSchemaResponse GetDatabaseSchemaWithOptions(string instanceId, string database, string tableName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDatabaseSchema",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/tables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tableName) + "/schema",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDatabaseSchemaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetDatabaseSchemaResponse
+         */
+        public async Task<GetDatabaseSchemaResponse> GetDatabaseSchemaWithOptionsAsync(string instanceId, string database, string tableName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDatabaseSchema",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/tables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tableName) + "/schema",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDatabaseSchemaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @return GetDatabaseSchemaResponse
+         */
+        public GetDatabaseSchemaResponse GetDatabaseSchema(string instanceId, string database, string tableName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDatabaseSchemaWithOptions(instanceId, database, tableName, headers, runtime);
+        }
+
+        /**
+         * @return GetDatabaseSchemaResponse
+         */
+        public async Task<GetDatabaseSchemaResponse> GetDatabaseSchemaAsync(string instanceId, string database, string tableName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDatabaseSchemaWithOptionsAsync(instanceId, database, tableName, headers, runtime);
+        }
+
+        /**
          * @summary Displays the overview of the deployment.
          *
          * @description ## Method
@@ -3813,6 +4469,96 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetNodeConfigWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /**
+         * @param request GetSqlInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSqlInstanceResponse
+         */
+        public GetSqlInstanceResponse GetSqlInstanceWithOptions(string instanceId, string database, string sqlInstanceId, GetSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSqlInstance",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSqlInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request GetSqlInstanceRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetSqlInstanceResponse
+         */
+        public async Task<GetSqlInstanceResponse> GetSqlInstanceWithOptionsAsync(string instanceId, string database, string sqlInstanceId, GetSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSqlInstance",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request GetSqlInstanceRequest
+         * @return GetSqlInstanceResponse
+         */
+        public GetSqlInstanceResponse GetSqlInstance(string instanceId, string database, string sqlInstanceId, GetSqlInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSqlInstanceWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
+        }
+
+        /**
+         * @param request GetSqlInstanceRequest
+         * @return GetSqlInstanceResponse
+         */
+        public async Task<GetSqlInstanceResponse> GetSqlInstanceAsync(string instanceId, string database, string sqlInstanceId, GetSqlInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSqlInstanceWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
         /**
@@ -4873,6 +5619,78 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListDataSourcesWithOptionsAsync(instanceId, headers, runtime);
+        }
+
+        /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListDatabasesResponse
+         */
+        public ListDatabasesResponse ListDatabasesWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDatabases",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDatabasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListDatabasesResponse
+         */
+        public async Task<ListDatabasesResponse> ListDatabasesWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDatabases",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDatabasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @return ListDatabasesResponse
+         */
+        public ListDatabasesResponse ListDatabases(string instanceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListDatabasesWithOptions(instanceId, headers, runtime);
+        }
+
+        /**
+         * @return ListDatabasesResponse
+         */
+        public async Task<ListDatabasesResponse> ListDatabasesAsync(string instanceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListDatabasesWithOptionsAsync(instanceId, headers, runtime);
         }
 
         /**
@@ -7432,136 +8250,6 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
-         * @summary Modifies a data source.
-         *
-         * @description ## Method
-         * `PUT`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-         *
-         * @param request ModifyDataSourceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDataSourceResponse
-         */
-        public ModifyDataSourceResponse ModifyDataSourceWithOptions(string instanceId, string dataSourceName, ModifyDataSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
-            {
-                query["dryRun"] = request.DryRun;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
-            {
-                body["body"] = request.Body;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ModifyDataSource",
-                Version = "2021-10-25",
-                Protocol = "HTTPS",
-                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/data-sources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(dataSourceName),
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ModifyDataSourceResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary Modifies a data source.
-         *
-         * @description ## Method
-         * `PUT`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-         *
-         * @param request ModifyDataSourceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDataSourceResponse
-         */
-        public async Task<ModifyDataSourceResponse> ModifyDataSourceWithOptionsAsync(string instanceId, string dataSourceName, ModifyDataSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
-            {
-                query["dryRun"] = request.DryRun;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
-            {
-                body["body"] = request.Body;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ModifyDataSource",
-                Version = "2021-10-25",
-                Protocol = "HTTPS",
-                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/data-sources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(dataSourceName),
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ModifyDataSourceResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary Modifies a data source.
-         *
-         * @description ## Method
-         * `PUT`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-         *
-         * @param request ModifyDataSourceRequest
-         * @return ModifyDataSourceResponse
-         */
-        public ModifyDataSourceResponse ModifyDataSource(string instanceId, string dataSourceName, ModifyDataSourceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ModifyDataSourceWithOptions(instanceId, dataSourceName, request, headers, runtime);
-        }
-
-        /**
-         * @summary Modifies a data source.
-         *
-         * @description ## Method
-         * `PUT`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-         *
-         * @param request ModifyDataSourceRequest
-         * @return ModifyDataSourceResponse
-         */
-        public async Task<ModifyDataSourceResponse> ModifyDataSourceAsync(string instanceId, string dataSourceName, ModifyDataSourceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ModifyDataSourceWithOptionsAsync(instanceId, dataSourceName, request, headers, runtime);
-        }
-
-        /**
          * @summary 修改数据源部署信息
          *
          * @param request ModifyDataSourceDeployRequest
@@ -9928,6 +10616,96 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
+         * @param request RenameFolderRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenameFolderResponse
+         */
+        public RenameFolderResponse RenameFolderWithOptions(string instanceId, string database, string folderId, RenameFolderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenameFolder",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/folders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(folderId) + "/name",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenameFolderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request RenameFolderRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return RenameFolderResponse
+         */
+        public async Task<RenameFolderResponse> RenameFolderWithOptionsAsync(string instanceId, string database, string folderId, RenameFolderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenameFolder",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/folders/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(folderId) + "/name",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenameFolderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request RenameFolderRequest
+         * @return RenameFolderResponse
+         */
+        public RenameFolderResponse RenameFolder(string instanceId, string database, string folderId, RenameFolderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RenameFolderWithOptions(instanceId, database, folderId, request, headers, runtime);
+        }
+
+        /**
+         * @param request RenameFolderRequest
+         * @return RenameFolderResponse
+         */
+        public async Task<RenameFolderResponse> RenameFolderAsync(string instanceId, string database, string folderId, RenameFolderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RenameFolderWithOptionsAsync(instanceId, database, folderId, request, headers, runtime);
+        }
+
+        /**
          * @param headers map
          * @param runtime runtime options for this request RuntimeOptions
          * @return StartIndexResponse
@@ -10575,6 +11353,308 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateInstanceWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /**
+         * @param request UpdateSqlInstanceContentRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateSqlInstanceContentResponse
+         */
+        public UpdateSqlInstanceContentResponse UpdateSqlInstanceContentWithOptions(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceContentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSqlInstanceContent",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId) + "/content",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSqlInstanceContentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request UpdateSqlInstanceContentRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateSqlInstanceContentResponse
+         */
+        public async Task<UpdateSqlInstanceContentResponse> UpdateSqlInstanceContentWithOptionsAsync(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceContentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSqlInstanceContent",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId) + "/content",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSqlInstanceContentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request UpdateSqlInstanceContentRequest
+         * @return UpdateSqlInstanceContentResponse
+         */
+        public UpdateSqlInstanceContentResponse UpdateSqlInstanceContent(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceContentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateSqlInstanceContentWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
+        }
+
+        /**
+         * @param request UpdateSqlInstanceContentRequest
+         * @return UpdateSqlInstanceContentResponse
+         */
+        public async Task<UpdateSqlInstanceContentResponse> UpdateSqlInstanceContentAsync(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceContentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateSqlInstanceContentWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
+        }
+
+        /**
+         * @param request UpdateSqlInstanceNameRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateSqlInstanceNameResponse
+         */
+        public UpdateSqlInstanceNameResponse UpdateSqlInstanceNameWithOptions(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSqlInstanceName",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId) + "/name",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSqlInstanceNameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request UpdateSqlInstanceNameRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateSqlInstanceNameResponse
+         */
+        public async Task<UpdateSqlInstanceNameResponse> UpdateSqlInstanceNameWithOptionsAsync(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSqlInstanceName",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId) + "/name",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSqlInstanceNameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request UpdateSqlInstanceNameRequest
+         * @return UpdateSqlInstanceNameResponse
+         */
+        public UpdateSqlInstanceNameResponse UpdateSqlInstanceName(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateSqlInstanceNameWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
+        }
+
+        /**
+         * @param request UpdateSqlInstanceNameRequest
+         * @return UpdateSqlInstanceNameResponse
+         */
+        public async Task<UpdateSqlInstanceNameResponse> UpdateSqlInstanceNameAsync(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateSqlInstanceNameWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
+        }
+
+        /**
+         * @param request UpdateSqlInstanceParamsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateSqlInstanceParamsResponse
+         */
+        public UpdateSqlInstanceParamsResponse UpdateSqlInstanceParamsWithOptions(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceParamsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CombineParam))
+            {
+                body["combineParam"] = request.CombineParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DynamicParam))
+            {
+                body["dynamicParam"] = request.DynamicParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kvpair))
+            {
+                body["kvpair"] = request.Kvpair;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StaticParam))
+            {
+                body["staticParam"] = request.StaticParam;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSqlInstanceParams",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId) + "/params",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSqlInstanceParamsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request UpdateSqlInstanceParamsRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateSqlInstanceParamsResponse
+         */
+        public async Task<UpdateSqlInstanceParamsResponse> UpdateSqlInstanceParamsWithOptionsAsync(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceParamsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CombineParam))
+            {
+                body["combineParam"] = request.CombineParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DynamicParam))
+            {
+                body["dynamicParam"] = request.DynamicParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kvpair))
+            {
+                body["kvpair"] = request.Kvpair;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                body["params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StaticParam))
+            {
+                body["staticParam"] = request.StaticParam;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSqlInstanceParams",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/sql-studio/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/sql-instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlInstanceId) + "/params",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSqlInstanceParamsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request UpdateSqlInstanceParamsRequest
+         * @return UpdateSqlInstanceParamsResponse
+         */
+        public UpdateSqlInstanceParamsResponse UpdateSqlInstanceParams(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceParamsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateSqlInstanceParamsWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
+        }
+
+        /**
+         * @param request UpdateSqlInstanceParamsRequest
+         * @return UpdateSqlInstanceParamsResponse
+         */
+        public async Task<UpdateSqlInstanceParamsResponse> UpdateSqlInstanceParamsAsync(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceParamsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateSqlInstanceParamsWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
     }

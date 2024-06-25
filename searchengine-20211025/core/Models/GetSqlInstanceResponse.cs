@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
-    public class ModifyDataSourceResponse : TeaModel {
+    public class GetSqlInstanceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ModifyDataSourceResponseBody Body { get; set; }
+        public GetSqlInstanceResponseBody Body { get; set; }
 
     }
 
