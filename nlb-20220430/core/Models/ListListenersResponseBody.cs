@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// The name of the listener.
             /// 
-            /// The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).
+            /// The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).
             /// </summary>
             [NameInMap("ListenerDescription")]
             [Validation(Required=false)]

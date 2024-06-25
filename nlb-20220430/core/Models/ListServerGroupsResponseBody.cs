@@ -131,8 +131,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 [Validation(Required=false)]
                 public bool? HealthCheckEnabled { get; set; }
 
+                [NameInMap("HealthCheckExp")]
+                [Validation(Required=false)]
+                public string HealthCheckExp { get; set; }
+
                 /// <summary>
-                /// The HTTP status codes returned for health checks. Multiple HTTP status codes are separated by commas (,). Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.
+                /// The HTTP status codes returned for health checks. Multiple HTTP status codes are separated by commas (,). Valid values: **http_2xx**, **http_3xx**, **http_4xx**, and **http_5xx**.
                 /// 
                 /// > This parameter takes effect only when **HealthCheckType** is set to **HTTP**.
                 /// </summary>
@@ -148,6 +152,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 [NameInMap("HealthCheckInterval")]
                 [Validation(Required=false)]
                 public int? HealthCheckInterval { get; set; }
+
+                [NameInMap("HealthCheckReq")]
+                [Validation(Required=false)]
+                public string HealthCheckReq { get; set; }
 
                 /// <summary>
                 /// The protocol that is used for health checks. Valid values: **TCP** and **HTTP**.

@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// The NLB instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The region ID of the NLB instance.
         /// 
-        /// You can call the [DescribeRegions](~~443657~~) operation to obtain the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to obtain the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// The ID of the security group to be disassociated.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]

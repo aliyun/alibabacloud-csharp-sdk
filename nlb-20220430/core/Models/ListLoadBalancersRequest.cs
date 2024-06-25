@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The ID of the region where the NLB instance is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<string> VpcIds { get; set; }
 
         /// <summary>
-        /// The name of the zone. You can call the [DescribeZones](~~443890~~) operation to query the most recent zone list.
+        /// The name of the zone. You can call the [DescribeZones](https://help.aliyun.com/document_detail/443890.html) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

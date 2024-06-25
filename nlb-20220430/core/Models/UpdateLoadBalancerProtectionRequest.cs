@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? DeletionProtectionEnabled { get; set; }
 
         /// <summary>
-        /// The reason why deletion protection is enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.
+        /// The reason why deletion protection is enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.
         /// 
         /// > This parameter takes effect only when **DeletionProtectionEnabled** is set to **true**.
         /// </summary>
@@ -51,13 +51,15 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// The NLB instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// The reason why the configuration read-only mode is enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.
+        /// The reason why the configuration read-only mode is enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.
         /// 
         /// > This parameter takes effect only if **Status** is set to **ConsoleProtection**.
         /// </summary>
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The region ID of the NLB instance.
         /// 
-        /// You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

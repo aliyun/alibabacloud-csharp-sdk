@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The ID of the region where the NLB instance is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -44,6 +44,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// The ID of the server group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]
@@ -51,6 +53,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// A list of backend servers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Servers")]
         [Validation(Required=false)]
@@ -59,7 +63,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// The description of the servers.
             /// 
-            /// The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).
+            /// The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).
             /// 
             /// >  You can specify at most 40 servers in each call.
             /// </summary>
@@ -81,6 +85,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// 
             /// *   If the server group type is **Instance**, set the ServerId parameter to the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
             /// *   If the server group type is **Ip**, set the ServerId parameter to an IP address.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
@@ -104,6 +110,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// *   **Ip**: an IP address
             /// 
             /// >  You can specify at most 40 servers in each call.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ServerType")]
             [Validation(Required=false)]

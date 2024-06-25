@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public string EnabledTime { get; set; }
 
                 /// <summary>
-                /// The reason why the deletion protection feature is enabled or disabled. The reason must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.
+                /// The reason why the deletion protection feature is enabled or disabled. The reason must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public string EnabledTime { get; set; }
 
                 /// <summary>
-                /// The reason why the configuration read-only mode is enabled. The reason must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.
+                /// The reason why the configuration read-only mode is enabled. The reason must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.
                 /// 
                 /// This parameter takes effect only if **Status** is set to **ConsoleProtection**.
                 /// </summary>
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The name of the zone. You can call the [DescribeZones](~~443890~~) operation to query the zones.
+                /// The name of the zone. You can call the [DescribeZones](https://help.aliyun.com/document_detail/443890.html) operation to query the zones.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

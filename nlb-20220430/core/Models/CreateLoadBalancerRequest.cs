@@ -25,7 +25,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// *   **Internet**: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.
         /// *   **Intranet**: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the virtual private cloud (VPC) where the NLB instance is deployed.
         /// 
-        /// >  To enable a public IPv6 address for an NLB instance, call the [EnableLoadBalancerIpv6Internet](~~445878~~) operation.
+        /// >  To enable a public IPv6 address for an NLB instance, call the [EnableLoadBalancerIpv6Internet](https://help.aliyun.com/document_detail/445878.html) operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddressType")]
         [Validation(Required=false)]
@@ -67,7 +69,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// The reason why the deletion protection feature is enabled or disabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.
+            /// The reason why the deletion protection feature is enabled or disabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
@@ -106,7 +108,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The name of the NLB instance.
         /// 
-        /// The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.
+        /// The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.
         /// </summary>
         [NameInMap("LoadBalancerName")]
         [Validation(Required=false)]
@@ -127,7 +129,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public CreateLoadBalancerRequestModificationProtectionConfig ModificationProtectionConfig { get; set; }
         public class CreateLoadBalancerRequestModificationProtectionConfig : TeaModel {
             /// <summary>
-            /// The reason why the configuration read-only mode is enabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.
+            /// The reason why the configuration read-only mode is enabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.
             /// 
             /// >  This parameter takes effect only if the **Status** parameter is set to **ConsoleProtection**.
             /// </summary>
@@ -152,7 +154,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The ID of the region where the NLB instance is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -194,6 +196,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// The ID of the VPC where the NLB instance is deployed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
@@ -201,6 +205,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// The mappings between zones and vSwitches. You must add at least two zones. You can add a maximum of 10 zones.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
@@ -234,6 +240,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
             /// <summary>
             /// The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an NLB instance. You must add at least two zones. You can add a maximum of 10 zones.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
@@ -242,7 +250,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// The ID of the zone of the NLB instance. You must add at least two zones. You can add a maximum of 10 zones.
             /// 
-            /// You can call the [DescribeZones](~~443890~~) operation to query the most recent zone list.
+            /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/443890.html) operation to query the most recent zone list.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

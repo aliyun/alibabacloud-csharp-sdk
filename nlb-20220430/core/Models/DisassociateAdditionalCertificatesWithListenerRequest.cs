@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
     public class DisassociateAdditionalCertificatesWithListenerRequest : TeaModel {
         /// <summary>
         /// The additional certificates. You can disassociate up to 15 additional certificates from a listener in each request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AdditionalCertificateIds")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// The listener ID. You must specify the ID of a listener that uses SSL over TCP.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The region ID of the Network Load Balancer (NLB) instance.
         /// 
-        /// You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

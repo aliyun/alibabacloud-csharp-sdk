@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// The NLB instance ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The region ID of the NLB instance.
         /// 
-        /// You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -50,6 +52,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// The mappings between zones and vSwitches.
         /// 
         /// > You can remove only one zone in each call.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
@@ -57,6 +61,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public class StartShiftLoadBalancerZonesRequestZoneMappings : TeaModel {
             /// <summary>
             /// The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
@@ -67,7 +73,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// 
             /// > You can remove only one zone in each call.
             /// 
-            /// You can call the [DescribeZones](~~443890~~) operation to query the most recent zone list.
+            /// You can call the [DescribeZones](https://help.aliyun.com/document_detail/443890.html) operation to query the most recent zone list.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

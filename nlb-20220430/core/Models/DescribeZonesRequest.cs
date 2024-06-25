@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the zone belongs. You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+        /// The ID of the region to which the zone belongs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string EnabledTime { get; set; }
 
             /// <summary>
-            /// The reason why the deletion protection feature is enabled or disabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.
+            /// The reason why the deletion protection feature is enabled or disabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The NLB instance name.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("LoadBalancerName")]
         [Validation(Required=false)]
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string EnabledTime { get; set; }
 
             /// <summary>
-            /// The reason why the configuration read-only mode is enabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.
+            /// The reason why the configuration read-only mode is enabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.
             /// 
             /// >  This parameter takes effect only if the **Status** parameter is set to **ConsoleProtection**.
             /// </summary>
@@ -403,7 +403,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The ID of the zone. You can call the [DescribeZones](~~443890~~) operation to query the most recent zone list.
+            /// The ID of the zone. You can call the [DescribeZones](https://help.aliyun.com/document_detail/443890.html) operation to query the most recent zone list.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

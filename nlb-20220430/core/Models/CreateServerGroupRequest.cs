@@ -114,8 +114,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             [Validation(Required=false)]
             public bool? HealthCheckEnabled { get; set; }
 
+            [NameInMap("HealthCheckExp")]
+            [Validation(Required=false)]
+            public string HealthCheckExp { get; set; }
+
             /// <summary>
-            /// The HTTP status codes to return for health checks. Separate multiple HTTP status codes with commas (,). Valid values: **http\_2xx** (default), **http\_3xx**, **http\_4xx**, and **http\_5xx**.
+            /// The HTTP status codes to return for health checks. Separate multiple HTTP status codes with commas (,). Valid values: **http_2xx** (default), **http_3xx**, **http_4xx**, and **http_5xx**.
             /// 
             /// > This parameter takes effect only when **HealthCheckType** is set to **HTTP**.
             /// </summary>
@@ -133,6 +137,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             [NameInMap("HealthCheckInterval")]
             [Validation(Required=false)]
             public int? HealthCheckInterval { get; set; }
+
+            [NameInMap("HealthCheckReq")]
+            [Validation(Required=false)]
+            public string HealthCheckReq { get; set; }
 
             /// <summary>
             /// The protocol that you want to use for health checks. Valid values: **TCP** (default) and **HTTP**.
@@ -209,7 +217,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The region ID of the NLB instance.
         /// 
-        /// You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -238,7 +246,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The name of the server group.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerGroupName")]
         [Validation(Required=false)]
@@ -285,6 +295,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// The ID of the virtual private cloud (VPC) to which the server group belongs.
         /// 
         /// > If **ServerGroupType** is set to **Instance**, only servers in the specified VPC can be added to the server group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

@@ -90,8 +90,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             [Validation(Required=false)]
             public bool? HealthCheckEnabled { get; set; }
 
+            [NameInMap("HealthCheckExp")]
+            [Validation(Required=false)]
+            public string HealthCheckExp { get; set; }
+
             /// <summary>
-            /// The HTTP status codes to return for health checks. Separate multiple HTTP status codes with commas (,). Valid values: **http\_2xx** (default), **http\_3xx**, **http\_4xx**, and **http\_5xx**.
+            /// The HTTP status codes to return for health checks. Separate multiple HTTP status codes with commas (,). Valid values: **http_2xx** (default), **http_3xx**, **http_4xx**, and **http_5xx**.
             /// 
             /// > This parameter takes effect only when **HealthCheckType** is set to **HTTP**.
             /// </summary>
@@ -108,6 +112,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             [Validation(Required=false)]
             public int? HealthCheckInterval { get; set; }
 
+            [NameInMap("HealthCheckReq")]
+            [Validation(Required=false)]
+            public string HealthCheckReq { get; set; }
+
             /// <summary>
             /// The protocol that you want to use for health checks. Valid values: **TCP** and **HTTP**.
             /// </summary>
@@ -118,7 +126,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// The path to which health check requests are sent.
             /// 
-            /// The path must be 1 to 80 characters in length, and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The path must start with a forward slash (/).
+            /// The path must be 1 to 80 characters in length, and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \\" , +`. The path must start with a forward slash (/).
             /// 
             /// > This parameter takes effect only when **HealthCheckType** is set to **HTTP**.
             /// </summary>
@@ -164,7 +172,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The region ID of the NLB instance.
         /// 
-        /// You can call the [DescribeRegions](~~443657~~) operation to obtain the region ID.
+        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to obtain the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -185,6 +193,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// The server group ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]
@@ -193,7 +203,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// The new name of the server group.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("ServerGroupName")]
         [Validation(Required=false)]
