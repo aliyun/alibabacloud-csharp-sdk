@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class GetMediaResourceIdResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public GetMediaResourceIdResponseBody Body { get; set; }
 
     }

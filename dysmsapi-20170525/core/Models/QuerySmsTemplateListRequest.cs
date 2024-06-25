@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The page number. Default value: **1**.
+        /// </summary>
         [NameInMap("PageIndex")]
         [Validation(Required=false)]
         public int? PageIndex { get; set; }
 
+        /// <summary>
+        /// The number of templates per page. Valid values: **1 to 50**.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

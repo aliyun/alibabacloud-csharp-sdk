@@ -21,6 +21,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The source address. The address can be up to 1,000 characters in length.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SourceUrl")]
         [Validation(Required=false)]
         public string SourceUrl { get; set; }

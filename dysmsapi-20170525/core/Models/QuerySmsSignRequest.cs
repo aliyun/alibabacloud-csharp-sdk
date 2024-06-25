@@ -21,6 +21,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The signature.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SignName")]
         [Validation(Required=false)]
         public string SignName { get; set; }

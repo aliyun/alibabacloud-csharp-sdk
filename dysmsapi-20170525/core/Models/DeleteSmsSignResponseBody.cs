@@ -9,18 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class DeleteSmsSignResponseBody : TeaModel {
+        /// <summary>
+        /// The response code.
+        /// 
+        /// *   If OK is returned, the request is successful.
+        /// *   Other values indicate that the request fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/101346.html).
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The returned message.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The signature.
+        /// </summary>
         [NameInMap("SignName")]
         [Validation(Required=false)]
         public string SignName { get; set; }
