@@ -28,6 +28,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("TimeRangeEnd")]
+        [Validation(Required=false)]
+        public string TimeRangeEnd { get; set; }
+
+        [NameInMap("TimeRangeStart")]
+        [Validation(Required=false)]
+        public string TimeRangeStart { get; set; }
+
     }
 
 }

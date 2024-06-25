@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TrafficControlTaskTraffic")]
+        [NameInMap("TrafficControlTaskTrafficInfo")]
         [Validation(Required=false)]
-        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTraffic TrafficControlTaskTraffic { get; set; }
-        public class GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTraffic : TeaModel {
+        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo TrafficControlTaskTrafficInfo { get; set; }
+        public class GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo : TeaModel {
             [NameInMap("TargetTraffics")]
             [Validation(Required=false)]
-            public List<GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficTargetTraffics> TargetTraffics { get; set; }
-            public class GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficTargetTraffics : TeaModel {
+            public List<GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics> TargetTraffics { get; set; }
+            public class GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics : TeaModel {
                 [NameInMap("Data")]
                 [Validation(Required=false)]
                 public List<Dictionary<string, object>> Data { get; set; }

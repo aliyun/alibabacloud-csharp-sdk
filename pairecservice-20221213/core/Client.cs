@@ -5679,7 +5679,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
                 Action = "GenerateTrafficControlTaskCode",
                 Version = "2022-12-13",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/code",
+                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/generatecode",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5715,7 +5715,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
                 Action = "GenerateTrafficControlTaskCode",
                 Version = "2022-12-13",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/code",
+                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/generatecode",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5777,7 +5777,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
                 Action = "GenerateTrafficControlTaskConfig",
                 Version = "2022-12-13",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/config",
+                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/generateconfig",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5813,7 +5813,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
                 Action = "GenerateTrafficControlTaskConfig",
                 Version = "2022-12-13",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/config",
+                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/generateconfig",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7621,7 +7621,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
                 Action = "GetTrafficControlTaskTraffic",
                 Version = "2022-12-13",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/traffic",
+                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/trafficinfo",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7661,7 +7661,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
                 Action = "GetTrafficControlTaskTraffic",
                 Version = "2022-12-13",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/traffic",
+                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/trafficinfo",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -8351,6 +8351,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRangeEnd))
+            {
+                query["TimeRangeEnd"] = request.TimeRangeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRangeStart))
+            {
+                query["TimeRangeStart"] = request.TimeRangeStart;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8398,6 +8406,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRangeEnd))
+            {
+                query["TimeRangeEnd"] = request.TimeRangeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRangeStart))
+            {
+                query["TimeRangeStart"] = request.TimeRangeStart;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10243,7 +10259,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
                 Action = "ListTrafficControlTargetTrafficHistory",
                 Version = "2022-12-13",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/trafficcontroltargets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTargetId) + "/action/traffichistory",
+                Pathname = "/api/v1/trafficcontroltargets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTargetId) + "/traffichistories",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -10307,7 +10323,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
                 Action = "ListTrafficControlTargetTrafficHistory",
                 Version = "2022-12-13",
                 Protocol = "HTTPS",
-                Pathname = "/api/v1/trafficcontroltargets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTargetId) + "/action/traffichistory",
+                Pathname = "/api/v1/trafficcontroltargets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTargetId) + "/traffichistories",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
