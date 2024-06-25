@@ -401,6 +401,118 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         }
 
         /**
+         * @summary 策略绑定
+         *
+         * @param tmpReq AttachToPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachToPolicyResponse
+         */
+        public AttachToPolicyResponse AttachToPolicyWithOptions(AttachToPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachToPolicyShrinkRequest request = new AttachToPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IpPortProtocolList))
+            {
+                request.IpPortProtocolListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IpPortProtocolList, "IpPortProtocolList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpPortProtocolListShrink))
+            {
+                query["IpPortProtocolList"] = request.IpPortProtocolListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                query["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachToPolicy",
+                Version = "2018-07-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachToPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 策略绑定
+         *
+         * @param tmpReq AttachToPolicyRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AttachToPolicyResponse
+         */
+        public async Task<AttachToPolicyResponse> AttachToPolicyWithOptionsAsync(AttachToPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachToPolicyShrinkRequest request = new AttachToPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IpPortProtocolList))
+            {
+                request.IpPortProtocolListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IpPortProtocolList, "IpPortProtocolList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpPortProtocolListShrink))
+            {
+                query["IpPortProtocolList"] = request.IpPortProtocolListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                query["PolicyId"] = request.PolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachToPolicy",
+                Version = "2018-07-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachToPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 策略绑定
+         *
+         * @param request AttachToPolicyRequest
+         * @return AttachToPolicyResponse
+         */
+        public AttachToPolicyResponse AttachToPolicy(AttachToPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AttachToPolicyWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 策略绑定
+         *
+         * @param request AttachToPolicyRequest
+         * @return AttachToPolicyResponse
+         */
+        public async Task<AttachToPolicyResponse> AttachToPolicyAsync(AttachToPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AttachToPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Checks whether Anti-DDoS Origin is authorized to access Log Service.
          *
          * @param request CheckAccessLogAuthRequest
