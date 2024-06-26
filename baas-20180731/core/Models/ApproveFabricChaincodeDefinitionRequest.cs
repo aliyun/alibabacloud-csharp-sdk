@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public string Location { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OrganizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }

@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Location")]
         [Validation(Required=false)]
         public string Location { get; set; }
@@ -29,6 +35,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public string MajorVersion { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -41,6 +50,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SpecName")]
         [Validation(Required=false)]
         public string SpecName { get; set; }

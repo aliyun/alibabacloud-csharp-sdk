@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public int? BatchTimeout { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChannelName")]
         [Validation(Required=false)]
         public string ChannelName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ConsortiumId")]
         [Validation(Required=false)]
         public string ConsortiumId { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public int? MaxMessageCount { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Organization")]
         [Validation(Required=false)]
         public List<CreateChannelRequestOrganization> Organization { get; set; }

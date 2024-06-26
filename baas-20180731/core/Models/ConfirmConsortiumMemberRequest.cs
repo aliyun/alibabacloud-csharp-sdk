@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20180731.Models
 {
     public class ConfirmConsortiumMemberRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ConsortiumId")]
         [Validation(Required=false)]
         public string ConsortiumId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Organization")]
         [Validation(Required=false)]
         public List<ConfirmConsortiumMemberRequestOrganization> Organization { get; set; }

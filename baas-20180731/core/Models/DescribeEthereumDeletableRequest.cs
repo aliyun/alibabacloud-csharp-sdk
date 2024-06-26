@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20180731.Models
 {
     public class DescribeEthereumDeletableRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("EthereumId")]
         [Validation(Required=false)]
         public string EthereumId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20180731.Models
 {
     public class InstallChaincodeRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChaincodeId")]
         [Validation(Required=false)]
         public string ChaincodeId { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public string Location { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OrganizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }

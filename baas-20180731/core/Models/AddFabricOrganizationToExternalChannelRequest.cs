@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20180731.Models
 {
     public class AddFabricOrganizationToExternalChannelRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("JoinResponse")]
         [Validation(Required=false)]
         public string JoinResponse { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OrganizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }

@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20180731.Models
 {
     public class SubmitFabricChaincodeDefinitionRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChaincodePackageId")]
         [Validation(Required=false)]
         public string ChaincodePackageId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChaincodeVersion")]
         [Validation(Required=false)]
         public string ChaincodeVersion { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChannelId")]
         [Validation(Required=false)]
         public string ChannelId { get; set; }
@@ -37,10 +46,16 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public string Location { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OrganizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20180731.Models
 {
     public class CreateEcosphereRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ChannelPolicy")]
         [Validation(Required=false)]
         public string ChannelPolicy { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ConsortiumName")]
         [Validation(Required=false)]
         public string ConsortiumName { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Location")]
         [Validation(Required=false)]
         public string Location { get; set; }
@@ -33,10 +42,16 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public string MajorVersion { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OrdererDomain")]
         [Validation(Required=false)]
         public string OrdererDomain { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OrdererType")]
         [Validation(Required=false)]
         public string OrdererType { get; set; }
@@ -45,6 +60,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public int? OrderersCount { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Organization")]
         [Validation(Required=false)]
         public List<CreateEcosphereRequestOrganization> Organization { get; set; }
@@ -71,6 +89,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("SpecName")]
         [Validation(Required=false)]
         public string SpecName { get; set; }

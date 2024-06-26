@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20180731.Models
 {
     public class DescribeAntChainBlockRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AntChainId")]
         [Validation(Required=false)]
         public string AntChainId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Height")]
         [Validation(Required=false)]
         public long? Height { get; set; }

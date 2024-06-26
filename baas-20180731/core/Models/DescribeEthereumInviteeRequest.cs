@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20180731.Models
 {
     public class DescribeEthereumInviteeRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }

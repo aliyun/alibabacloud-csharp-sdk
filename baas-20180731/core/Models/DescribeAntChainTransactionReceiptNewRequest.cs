@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20180731.Models
 {
     public class DescribeAntChainTransactionReceiptNewRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AntChainId")]
         [Validation(Required=false)]
         public string AntChainId { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public string ConsortiumId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Hash")]
         [Validation(Required=false)]
         public string Hash { get; set; }

@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public int? Size { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Start")]
         [Validation(Required=false)]
         public int? Start { get; set; }

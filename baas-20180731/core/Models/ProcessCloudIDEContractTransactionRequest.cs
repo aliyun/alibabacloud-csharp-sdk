@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Baas20180731.Models
 {
     public class ProcessCloudIDEContractTransactionRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AntChainId")]
         [Validation(Required=false)]
         public string AntChainId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Transaction")]
         [Validation(Required=false)]
         public string Transaction { get; set; }

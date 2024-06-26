@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Baas20180731.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ContentId")]
         [Validation(Required=false)]
         public string ContentId { get; set; }
