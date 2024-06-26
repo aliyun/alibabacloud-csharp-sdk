@@ -9166,6 +9166,114 @@ namespace AlibabaCloud.SDK.ICE20201109
         }
 
         /**
+         * @summary 获取存储地址列表
+         *
+         * @param request GetStorageListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetStorageListResponse
+         */
+        public GetStorageListResponse GetStorageListWithOptions(GetStorageListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStorageList",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStorageListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取存储地址列表
+         *
+         * @param request GetStorageListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetStorageListResponse
+         */
+        public async Task<GetStorageListResponse> GetStorageListWithOptionsAsync(GetStorageListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStorageList",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStorageListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取存储地址列表
+         *
+         * @param request GetStorageListRequest
+         * @return GetStorageListResponse
+         */
+        public GetStorageListResponse GetStorageList(GetStorageListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetStorageListWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取存储地址列表
+         *
+         * @param request GetStorageListRequest
+         * @return GetStorageListResponse
+         */
+        public async Task<GetStorageListResponse> GetStorageListAsync(GetStorageListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetStorageListWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 获取单个媒体处理系统模板
          *
          * @param request GetSystemTemplateRequest
