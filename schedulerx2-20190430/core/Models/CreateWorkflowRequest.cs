@@ -81,6 +81,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// 
         /// *   1: cron
         /// *   100: api
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TimeType")]
         [Validation(Required=false)]

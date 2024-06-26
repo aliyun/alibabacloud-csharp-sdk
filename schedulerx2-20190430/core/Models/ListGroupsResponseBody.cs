@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
+                [NameInMap("AppVersion")]
+                [Validation(Required=false)]
+                public int? AppVersion { get; set; }
+
                 /// <summary>
                 /// The description of the application.
                 /// </summary>
@@ -64,10 +68,6 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
-
-                [NameInMap("Version")]
-                [Validation(Required=false)]
-                public int? Version { get; set; }
 
             }
 

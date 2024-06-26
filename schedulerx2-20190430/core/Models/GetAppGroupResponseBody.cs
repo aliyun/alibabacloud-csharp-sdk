@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            [NameInMap("AppVersion")]
+            [Validation(Required=false)]
+            public string AppVersion { get; set; }
+
             [NameInMap("CurJobs")]
             [Validation(Required=false)]
             public int? CurJobs { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class UpdateAppGroupRequest : TeaModel {
+        [NameInMap("AppVersion")]
+        [Validation(Required=false)]
+        public int? AppVersion { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -37,10 +41,6 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public int? Version { get; set; }
 
     }
 

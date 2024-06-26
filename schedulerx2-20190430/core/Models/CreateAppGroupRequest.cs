@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public int? AppType { get; set; }
 
+        [NameInMap("AppVersion")]
+        [Validation(Required=false)]
+        public int? AppVersion { get; set; }
+
         /// <summary>
         /// The description of the application.
         /// </summary>
@@ -119,10 +123,6 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [NameInMap("ScheduleBusyWorkers")]
         [Validation(Required=false)]
         public bool? ScheduleBusyWorkers { get; set; }
-
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public int? Version { get; set; }
 
     }
 
