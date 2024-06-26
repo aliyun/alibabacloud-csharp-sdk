@@ -6981,6 +6981,114 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
+         * @summary 获取用户暂停防护状态
+         *
+         * @param request DescribePauseProtectionStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePauseProtectionStatusResponse
+         */
+        public DescribePauseProtectionStatusResponse DescribePauseProtectionStatusWithOptions(DescribePauseProtectionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePauseProtectionStatus",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePauseProtectionStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取用户暂停防护状态
+         *
+         * @param request DescribePauseProtectionStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribePauseProtectionStatusResponse
+         */
+        public async Task<DescribePauseProtectionStatusResponse> DescribePauseProtectionStatusWithOptionsAsync(DescribePauseProtectionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePauseProtectionStatus",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePauseProtectionStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取用户暂停防护状态
+         *
+         * @param request DescribePauseProtectionStatusRequest
+         * @return DescribePauseProtectionStatusResponse
+         */
+        public DescribePauseProtectionStatusResponse DescribePauseProtectionStatus(DescribePauseProtectionStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePauseProtectionStatusWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取用户暂停防护状态
+         *
+         * @param request DescribePauseProtectionStatusRequest
+         * @return DescribePauseProtectionStatusResponse
+         */
+        public async Task<DescribePauseProtectionStatusResponse> DescribePauseProtectionStatusAsync(DescribePauseProtectionStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePauseProtectionStatusWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Queries the queries per second (QPS) statistics of a WAF instance.
          *
          * @param request DescribePeakTrendRequest
@@ -12450,6 +12558,122 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyMemberAccountWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 修改用户暂停防护状态
+         *
+         * @param request ModifyPauseProtectionStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyPauseProtectionStatusResponse
+         */
+        public ModifyPauseProtectionStatusResponse ModifyPauseProtectionStatusWithOptions(ModifyPauseProtectionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PauseStatus))
+            {
+                query["PauseStatus"] = request.PauseStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyPauseProtectionStatus",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyPauseProtectionStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改用户暂停防护状态
+         *
+         * @param request ModifyPauseProtectionStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyPauseProtectionStatusResponse
+         */
+        public async Task<ModifyPauseProtectionStatusResponse> ModifyPauseProtectionStatusWithOptionsAsync(ModifyPauseProtectionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PauseStatus))
+            {
+                query["PauseStatus"] = request.PauseStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyPauseProtectionStatus",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyPauseProtectionStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改用户暂停防护状态
+         *
+         * @param request ModifyPauseProtectionStatusRequest
+         * @return ModifyPauseProtectionStatusResponse
+         */
+        public ModifyPauseProtectionStatusResponse ModifyPauseProtectionStatus(ModifyPauseProtectionStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyPauseProtectionStatusWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 修改用户暂停防护状态
+         *
+         * @param request ModifyPauseProtectionStatusRequest
+         * @return ModifyPauseProtectionStatusResponse
+         */
+        public async Task<ModifyPauseProtectionStatusResponse> ModifyPauseProtectionStatusAsync(ModifyPauseProtectionStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyPauseProtectionStatusWithOptionsAsync(request, runtime);
         }
 
         /**

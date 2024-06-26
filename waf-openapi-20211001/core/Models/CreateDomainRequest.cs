@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? CnameEnabled { get; set; }
 
             /// <summary>
-            /// The timeout period of connections. Unit: seconds. Valid values: 1 to 3600.
+            /// The timeout period for connections. Unit: seconds. Valid values: 1 to 3600.
             /// </summary>
             [NameInMap("ConnectTimeout")]
             [Validation(Required=false)]
@@ -265,9 +265,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? KeepaliveRequests { get; set; }
 
             /// <summary>
-            /// The timeout period of idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.
+            /// The timeout period for idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.
             /// 
-            /// >  This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.
+            /// >  This parameter specifies the time for which a reused persistent connection can remain in the Idle state before the persistent connection is closed.
             /// </summary>
             [NameInMap("KeepaliveTimeout")]
             [Validation(Required=false)]
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Loadbalance { get; set; }
 
             /// <summary>
-            /// The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.
+            /// The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.
             /// </summary>
             [NameInMap("ReadTimeout")]
             [Validation(Required=false)]
@@ -352,21 +352,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// The value of the SNI field. If you do not specify this parameter, the value of the **Host** field is automatically used. This parameter is optional. If you want WAF to use an SNI field value that is different from the Host field value in back-to-origin requests, you can specify a custom value for the SNI field.
             /// 
-            /// >  This parameter is required only if you set **SniEnalbed** to **true**.
+            /// >  This parameter is required only if you set **SniEnabled** to **true**.
             /// </summary>
             [NameInMap("SniHost")]
             [Validation(Required=false)]
             public string SniHost { get; set; }
 
             /// <summary>
-            /// The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.
+            /// The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.
             /// </summary>
             [NameInMap("WriteTimeout")]
             [Validation(Required=false)]
             public int? WriteTimeout { get; set; }
 
             /// <summary>
-            /// Indicates whether the X-Forward-For-Proto header is used to identify the protocol used by WAF to forward requests to the origin server. Valid values:
+            /// Specifies whether to use X-Forward-For-Proto to pass the protocol used by WAF to forward requests to the origin server. Valid values:
             /// 
             /// *   **true** (default)
             /// *   **false**
