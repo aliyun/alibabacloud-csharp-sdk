@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class UpdateProjectConfigRequest : TeaModel {
+        [NameInMap("CommonTransferConfig")]
+        [Validation(Required=false)]
+        public UpdateProjectConfigRequestCommonTransferConfig CommonTransferConfig { get; set; }
+        public class UpdateProjectConfigRequestCommonTransferConfig : TeaModel {
+            [NameInMap("SinkStoreFormat")]
+            [Validation(Required=false)]
+            public string SinkStoreFormat { get; set; }
+
+            [NameInMap("SourceStoreFormat")]
+            [Validation(Required=false)]
+            public string SourceStoreFormat { get; set; }
+
+        }
+
         [NameInMap("FullTransferConfig")]
         [Validation(Required=false)]
         public UpdateProjectConfigRequestFullTransferConfig FullTransferConfig { get; set; }

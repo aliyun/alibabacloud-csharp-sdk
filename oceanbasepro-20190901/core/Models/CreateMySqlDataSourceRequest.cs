@@ -54,6 +54,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        [NameInMap("UseSsl")]
+        [Validation(Required=false)]
+        public bool? UseSsl { get; set; }
+
         /// <summary>
         /// This parameter is required.
         /// </summary>

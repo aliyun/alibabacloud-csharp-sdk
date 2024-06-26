@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class UpdateProjectConfigShrinkRequest : TeaModel {
+        [NameInMap("CommonTransferConfig")]
+        [Validation(Required=false)]
+        public string CommonTransferConfigShrink { get; set; }
+
         [NameInMap("FullTransferConfig")]
         [Validation(Required=false)]
         public string FullTransferConfigShrink { get; set; }

@@ -99,6 +99,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public long? RocketMqSendMsgTimeout { get; set; }
 
+                [NameInMap("SinkStoreFormat")]
+                [Validation(Required=false)]
+                public string SinkStoreFormat { get; set; }
+
+                [NameInMap("SourceStoreFormat")]
+                [Validation(Required=false)]
+                public string SourceStoreFormat { get; set; }
+
                 [NameInMap("TableCategory")]
                 [Validation(Required=false)]
                 public string TableCategory { get; set; }

@@ -852,6 +852,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             {
                 body["Type"] = request.Type;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
+            {
+                body["UseSsl"] = request.UseSsl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
             {
                 body["UserName"] = request.UserName;
@@ -925,6 +929,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
+            {
+                body["UseSsl"] = request.UseSsl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
             {
@@ -15661,6 +15669,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateProjectConfigShrinkRequest request = new UpdateProjectConfigShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CommonTransferConfig))
+            {
+                request.CommonTransferConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CommonTransferConfig, "CommonTransferConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FullTransferConfig))
             {
                 request.FullTransferConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FullTransferConfig, "FullTransferConfig", "json");
@@ -15674,6 +15686,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
                 request.ReverseIncrTransferConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReverseIncrTransferConfig, "ReverseIncrTransferConfig", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonTransferConfigShrink))
+            {
+                body["CommonTransferConfig"] = request.CommonTransferConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FullTransferConfigShrink))
             {
                 body["FullTransferConfig"] = request.FullTransferConfigShrink;
@@ -15721,6 +15737,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateProjectConfigShrinkRequest request = new UpdateProjectConfigShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CommonTransferConfig))
+            {
+                request.CommonTransferConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CommonTransferConfig, "CommonTransferConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FullTransferConfig))
             {
                 request.FullTransferConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FullTransferConfig, "FullTransferConfig", "json");
@@ -15734,6 +15754,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
                 request.ReverseIncrTransferConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReverseIncrTransferConfig, "ReverseIncrTransferConfig", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonTransferConfigShrink))
+            {
+                body["CommonTransferConfig"] = request.CommonTransferConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FullTransferConfigShrink))
             {
                 body["FullTransferConfig"] = request.FullTransferConfigShrink;
