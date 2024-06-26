@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class MassPushRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public long? AppKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PushTask")]
         [Validation(Required=false)]
         public List<MassPushRequestPushTask> PushTask { get; set; }
@@ -176,10 +182,16 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string AndroidXiaomiImageUrl { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Body")]
             [Validation(Required=false)]
             public string Body { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("DeviceType")]
             [Validation(Required=false)]
             public string DeviceType { get; set; }
@@ -187,6 +199,66 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
+
+            [NameInMap("HarmonyAction")]
+            [Validation(Required=false)]
+            public string HarmonyAction { get; set; }
+
+            [NameInMap("HarmonyActionType")]
+            [Validation(Required=false)]
+            public string HarmonyActionType { get; set; }
+
+            [NameInMap("HarmonyCategory")]
+            [Validation(Required=false)]
+            public string HarmonyCategory { get; set; }
+
+            [NameInMap("HarmonyExtParameters")]
+            [Validation(Required=false)]
+            public string HarmonyExtParameters { get; set; }
+
+            [NameInMap("HarmonyImageUrl")]
+            [Validation(Required=false)]
+            public string HarmonyImageUrl { get; set; }
+
+            [NameInMap("HarmonyInboxContent")]
+            [Validation(Required=false)]
+            public string HarmonyInboxContent { get; set; }
+
+            [NameInMap("HarmonyNotificationSlotType")]
+            [Validation(Required=false)]
+            public string HarmonyNotificationSlotType { get; set; }
+
+            [NameInMap("HarmonyNotifyId")]
+            [Validation(Required=false)]
+            public int? HarmonyNotifyId { get; set; }
+
+            [NameInMap("HarmonyReceiptId")]
+            [Validation(Required=false)]
+            public string HarmonyReceiptId { get; set; }
+
+            [NameInMap("HarmonyRemind")]
+            [Validation(Required=false)]
+            public bool? HarmonyRemind { get; set; }
+
+            [NameInMap("HarmonyRemindBody")]
+            [Validation(Required=false)]
+            public string HarmonyRemindBody { get; set; }
+
+            [NameInMap("HarmonyRemindTitle")]
+            [Validation(Required=false)]
+            public string HarmonyRemindTitle { get; set; }
+
+            [NameInMap("HarmonyRenderStyle")]
+            [Validation(Required=false)]
+            public string HarmonyRenderStyle { get; set; }
+
+            [NameInMap("HarmonyTestMessage")]
+            [Validation(Required=false)]
+            public bool? HarmonyTestMessage { get; set; }
+
+            [NameInMap("HarmonyUri")]
+            [Validation(Required=false)]
+            public string HarmonyUri { get; set; }
 
             [NameInMap("JobKey")]
             [Validation(Required=false)]
@@ -196,6 +268,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string PushTime { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("PushType")]
             [Validation(Required=false)]
             public string PushType { get; set; }
@@ -213,10 +288,16 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public bool? StoreOffline { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("Target")]
             [Validation(Required=false)]
             public string Target { get; set; }
 
+            /// <summary>
+            /// This parameter is required.
+            /// </summary>
             [NameInMap("TargetValue")]
             [Validation(Required=false)]
             public string TargetValue { get; set; }

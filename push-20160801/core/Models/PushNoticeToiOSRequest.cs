@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class PushNoticeToiOSRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ApnsEnv")]
         [Validation(Required=false)]
         public string ApnsEnv { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public long? AppKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Body")]
         [Validation(Required=false)]
         public string Body { get; set; }
@@ -29,10 +38,16 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public string JobKey { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]
         public string Target { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TargetValue")]
         [Validation(Required=false)]
         public string TargetValue { get; set; }
