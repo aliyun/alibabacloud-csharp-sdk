@@ -17,18 +17,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// An array that consists of de-identification tasks.
+        /// A list of de-identification tasks.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDataMaskingTasksResponseBodyItems> Items { get; set; }
         public class DescribeDataMaskingTasksResponseBodyItems : TeaModel {
+            /// <summary>
+            /// The member account to which the desensitization target belongs.
+            /// </summary>
             [NameInMap("DstMemberAccount")]
             [Validation(Required=false)]
             public long? DstMemberAccount { get; set; }
 
             /// <summary>
-            /// The destination directory.
+            /// The destination path.
             /// </summary>
             [NameInMap("DstPath")]
             [Validation(Required=false)]
@@ -42,14 +45,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? DstType { get; set; }
 
             /// <summary>
-            /// The service to which the de-identified data belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
+            /// The type of the service to which the de-identified data belongs. Valid values: **MaxCompute, OSS, ADS, OTS, and RDS**.
             /// </summary>
             [NameInMap("DstTypeCode")]
             [Validation(Required=false)]
             public string DstTypeCode { get; set; }
 
             /// <summary>
-            /// The time when the task was created. The value is a UNIX timestamp. Unit: milliseconds.
+            /// The time when the de-identification task is created. The value is a UNIX timestamp. Unit: milliseconds.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? HasUnfinishProcess { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// The task ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -90,6 +93,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public int? RunCount { get; set; }
 
+            /// <summary>
+            /// The member account to which the desensitization source belongs.
+            /// </summary>
             [NameInMap("SrcMemberAccount")]
             [Validation(Required=false)]
             public long? SrcMemberAccount { get; set; }
@@ -102,14 +108,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string SrcPath { get; set; }
 
             /// <summary>
-            /// The code of the service to which the data to be de-identified belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
+            /// The type of the service to which the data to be de-identified belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
             /// </summary>
             [NameInMap("SrcType")]
             [Validation(Required=false)]
             public int? SrcType { get; set; }
 
             /// <summary>
-            /// The service to which the data to be de-identified belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
+            /// The type of the service to which the data to be de-identified belongs. Valid values: **MaxCompute, OSS, ADS, OTS, and RDS**.
             /// </summary>
             [NameInMap("SrcTypeCode")]
             [Validation(Required=false)]

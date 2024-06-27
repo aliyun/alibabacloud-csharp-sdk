@@ -85,12 +85,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public DescribeEventDetailResponseBodyEventDetail Detail { get; set; }
             public class DescribeEventDetailResponseBodyEventDetail : TeaModel {
                 /// <summary>
-                /// An array that consists of the baseline behavior chart of the anomalous event.
+                /// The baseline behavior chart of the anomalous event.
                 /// </summary>
                 [NameInMap("Chart")]
                 [Validation(Required=false)]
                 public List<DescribeEventDetailResponseBodyEventDetailChart> Chart { get; set; }
                 public class DescribeEventDetailResponseBodyEventDetailChart : TeaModel {
+                    /// <summary>
+                    /// The type of the chart. Valid values:
+                    /// 
+                    /// *   **1**: column chart
+                    /// *   **2**: line chart
+                    /// 
+                    /// >This field will be returned only when NewAlarm is true.
+                    /// </summary>
                     [NameInMap("ChatType")]
                     [Validation(Required=false)]
                     public int? ChatType { get; set; }
@@ -103,19 +111,22 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     public DescribeEventDetailResponseBodyEventDetailChartData Data { get; set; }
                     public class DescribeEventDetailResponseBodyEventDetailChartData : TeaModel {
                         /// <summary>
-                        /// The values of data on the x-axis.
+                        /// The value of the data item on the X axis.
                         /// </summary>
                         [NameInMap("X")]
                         [Validation(Required=false)]
                         public List<string> X { get; set; }
 
                         /// <summary>
-                        /// The values of data on the y-axis.
+                        /// The value of the data item on the Y axis.
                         /// </summary>
                         [NameInMap("Y")]
                         [Validation(Required=false)]
                         public List<string> Y { get; set; }
 
+                        /// <summary>
+                        /// The value of the data item for the Z axis.
+                        /// </summary>
                         [NameInMap("Z")]
                         [Validation(Required=false)]
                         public List<string> Z { get; set; }
@@ -129,6 +140,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     [Validation(Required=false)]
                     public string Label { get; set; }
 
+                    /// <summary>
+                    /// Icon title.
+                    /// 
+                    /// >This field will be returned only when NewAlarm is true.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
@@ -144,19 +160,24 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// The descriptive label of data on the x-axis.
+                    /// The descriptive label of data items on the X axis.
                     /// </summary>
                     [NameInMap("XLabel")]
                     [Validation(Required=false)]
                     public string XLabel { get; set; }
 
                     /// <summary>
-                    /// The descriptive label of data on the y-axis.
+                    /// The descriptive label of data items on the Y axis.
                     /// </summary>
                     [NameInMap("YLabel")]
                     [Validation(Required=false)]
                     public string YLabel { get; set; }
 
+                    /// <summary>
+                    /// The descriptive label of data items on the Z axis.
+                    /// 
+                    /// >This field will be returned only when NewAlarm is true.
+                    /// </summary>
                     [NameInMap("ZLabel")]
                     [Validation(Required=false)]
                     public string ZLabel { get; set; }
@@ -164,7 +185,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 }
 
                 /// <summary>
-                /// An array that consists of the content in the anomalous event.
+                /// The content in the anomalous event.
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
@@ -177,6 +198,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     [Validation(Required=false)]
                     public string Label { get; set; }
 
+                    /// <summary>
+                    /// Exception event name.
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
@@ -244,14 +268,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string CurrentValue { get; set; }
 
                 /// <summary>
-                /// The point in time when the account was locked. The value is a UNIX timestamp. Unit: milliseconds.
+                /// The time when the account is disabled. The value is a UNIX timestamp. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("DisableTime")]
                 [Validation(Required=false)]
                 public long? DisableTime { get; set; }
 
                 /// <summary>
-                /// The point in time when the account was unlocked. The value is a UNIX timestamp. Unit: milliseconds.
+                /// The time when the disabled account is enabled. The value is a UNIX timestamp. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("EnableTime")]
                 [Validation(Required=false)]
@@ -279,7 +303,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public int? HandlerValue { get; set; }
 
                 /// <summary>
-                /// The ID of the handling record.
+                /// The ID of the handling rule.
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -288,9 +312,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 /// <summary>
                 /// The status of the account that triggered the anomalous event. Valid values:
                 /// 
-                /// *   **0**: locked
-                /// *   **1**: unlocked
-                /// *   **-1**: failed to unlock the account
+                /// *   **0**: disabled
+                /// *   **1**: enabled
+                /// *   **-1**: failed to disable the account
                 /// *   **-2**: failed to enable the account
                 /// </summary>
                 [NameInMap("Status")]
@@ -320,6 +344,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string LoginName { get; set; }
 
+            /// <summary>
+            /// Whether it is a new version of the alarm. Value:
+            /// - **true**: Yes. 
+            /// - **false**: No.
+            /// </summary>
             [NameInMap("NewAlarm")]
             [Validation(Required=false)]
             public bool? NewAlarm { get; set; }

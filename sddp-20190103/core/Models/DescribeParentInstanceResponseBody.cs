@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public int? AuthStatus { get; set; }
 
+            [NameInMap("AuthTime")]
+            [Validation(Required=false)]
+            public long? AuthTime { get; set; }
+
             [NameInMap("ClusterStatus")]
             [Validation(Required=false)]
             public string ClusterStatus { get; set; }

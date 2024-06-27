@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// An array that consists of the data assets.
+        /// A list of data assets.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// *   **0**: The data detection is ready.
             /// *   **1**: The data detection is running.
             /// *   **2**: The connectivity test is in progress.
-            /// *   **3**: The connectivity test passed.
+            /// *   **3**: The connectivity test is passed.
             /// *   **4**: The connectivity test failed.
             /// </summary>
             [NameInMap("CheckStatus")]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? DatamaskStatus { get; set; }
 
             /// <summary>
-            /// The database engine version of the instance.
+            /// The database engine version.
             /// </summary>
             [NameInMap("DbVersion")]
             [Validation(Required=false)]
             public string DbVersion { get; set; }
 
             /// <summary>
-            /// Indicates whether DSC has the data detection permissions on the data asset. Valid values:
+            /// Indicates whether DSC has the data identification permissions on the data asset. Valid values:
             /// 
             /// *   **1**: yes
             /// *   **0**: no
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string EngineType { get; set; }
 
             /// <summary>
-            /// The error code that is returned.
+            /// The error code.
             /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// Indicates whether the data leak prevention feature is enabled. Valid values:
             /// 
             /// *   **0**: no
-            /// *   **1**: yes (default value)
+            /// *   **1**: yes (default)
             /// </summary>
             [NameInMap("EventStatus")]
             [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// The ID of the data asset.
+            /// The unique ID of the data asset.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -143,14 +143,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string InstanceDescription { get; set; }
 
             /// <summary>
-            /// The ID of the instance to which the table belongs.
+            /// The ID of the data asset to which the table belongs.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The time when the last scan was finished.
+            /// The time when the last scan is performed.
             /// 
             /// *   The value is a UNIX timestamp.
             /// *   Unit: milliseconds.
@@ -173,6 +173,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public int? LogStoreDay { get; set; }
 
+            /// <summary>
+            /// The ID of the member.
+            /// </summary>
             [NameInMap("MemberAccount")]
             [Validation(Required=false)]
             public long? MemberAccount { get; set; }
@@ -195,7 +198,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? OcrStatus { get; set; }
 
             /// <summary>
-            /// The parent ID of the data asset. Valid values include **bucket, db, and project**.
+            /// The parent ID of the data asset that you want to query. Valid values include **bucket, db, and project**.
             /// </summary>
             [NameInMap("ParentId")]
             [Validation(Required=false)]
@@ -229,7 +232,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? ProcessTotalCount { get; set; }
 
             /// <summary>
-            /// The region in which the data asset resides.
+            /// The region in which the asset resides.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -250,7 +253,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? ResourceType { get; set; }
 
             /// <summary>
-            /// The code of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
+            /// The code of the service to which the data asset belongs. Valid values: **MaxCompute, OSS, ADS, OTS, and RDS**.
             /// </summary>
             [NameInMap("ResourceTypeCode")]
             [Validation(Required=false)]
@@ -264,7 +267,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? SamplingSize { get; set; }
 
             /// <summary>
-            /// The array consisting of the IDs of the security groups that are used by PrivateLink when you install the DSC agent.
+            /// A list of the IDs of the security groups that are used by PrivateLink when you install the DSC agent.
             /// </summary>
             [NameInMap("SecurityGroupIdList")]
             [Validation(Required=false)]
@@ -281,7 +284,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? SupportAudit { get; set; }
 
             /// <summary>
-            /// Indicates whether data de-identification is supported. Valid values:
+            /// Indicates whether the data de-identification feature is supported. Valid values:
             /// 
             /// *   **true**: yes
             /// *   **false**: no
@@ -293,8 +296,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// Indicates whether anomalous event detection is supported. Valid values:
             /// 
-            /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **true**
+            /// *   **false**
             /// </summary>
             [NameInMap("SupportEvent")]
             [Validation(Required=false)]
@@ -342,7 +345,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string UserName { get; set; }
 
             /// <summary>
-            /// The array consisting of the IDs of the vSwitches that are used by PrivateLink when you install the DSC agent.
+            /// A list of the IDs of the vSwitches that are used by PrivateLink when you install the DSC agent.
             /// </summary>
             [NameInMap("VSwitchIdList")]
             [Validation(Required=false)]

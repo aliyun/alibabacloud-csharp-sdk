@@ -90,6 +90,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The ID of the member.
+        /// </summary>
         [NameInMap("MemberAccount")]
         [Validation(Required=false)]
         public long? MemberAccount { get; set; }
@@ -113,7 +116,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ParentId { get; set; }
 
         /// <summary>
-        /// The type of the service to which the data asset to be queried belongs. Valid values:
+        /// The type of the service to which the data asset belongs. This parameter is required. Valid values:
         /// 
         /// *   **1**: MaxCompute
         /// *   **2**: Object Storage Service (OSS)

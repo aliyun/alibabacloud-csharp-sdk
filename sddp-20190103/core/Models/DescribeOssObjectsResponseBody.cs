@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public long? InstanceId { get; set; }
 
+            /// <summary>
+            /// The time when the file was last modified.
+            /// </summary>
             [NameInMap("LastModifiedTime")]
             [Validation(Required=false)]
             public long? LastModifiedTime { get; set; }
