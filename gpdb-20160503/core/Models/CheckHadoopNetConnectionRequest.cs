@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CheckHadoopNetConnectionRequest : TeaModel {
         /// <summary>
+        /// The instance ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
@@ -17,6 +19,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// The E-MapReduce (EMR) Hadoop cluster ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("EmrInstanceId")]

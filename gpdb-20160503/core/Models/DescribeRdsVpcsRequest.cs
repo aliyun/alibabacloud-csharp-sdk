@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs.
+        /// This parameter is no longer used.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

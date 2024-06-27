@@ -12,6 +12,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The name of the collection.
         /// 
+        /// >  You can call the [ListCollections](https://help.aliyun.com/document_detail/2401503.html) operation to query a list of collections.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Collection")]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The name of the manager account that has the rds_superuser permission.
         /// 
+        /// >  You can create an account on the **Account Management** page of the AnalyticDB for PostgreSQL console or by calling the [CreateAccount](https://help.aliyun.com/document_detail/2361789.html) operation.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ManagerAccount")]
@@ -48,7 +52,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ManagerAccountPassword { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// The name of the namespace. Default value: public.
+        /// 
+        /// >  You can call the [ListNamespaces](https://help.aliyun.com/document_detail/2401502.html) operation to query a list of namespaces.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -60,8 +66,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The region ID of the instance.
-        /// 
-        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
         /// 
         /// This parameter is required.
         /// </summary>

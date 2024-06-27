@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeHadoopConfigsRequest : TeaModel {
         /// <summary>
+        /// The name of the configuration file. Valid values:
+        /// 
+        /// *   hdfs-site
+        /// *   core-site
+        /// *   yarn-site
+        /// *   mapred-site
+        /// *   hive-site
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigName")]
@@ -17,6 +25,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ConfigName { get; set; }
 
         /// <summary>
+        /// The instance ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
@@ -24,6 +34,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// The E-MapReduce (EMR) Hadoop cluster ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("EmrInstanceId")]

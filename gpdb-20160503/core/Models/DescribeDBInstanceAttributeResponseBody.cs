@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The version of the database engine.
+                /// The database engine version of the instance.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// *   **ManualLock**: The instance is manually locked.
                 /// *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
                 /// *   **LockByRestoration**: The instance is automatically locked due to instance restoration.
-                /// *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage.
+                /// *   **LockByDiskQuota**: The instance is a read-only instance and is automatically locked when the disk space is full.
                 /// </summary>
                 [NameInMap("LockMode")]
                 [Validation(Required=false)]
@@ -283,14 +283,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// The end time of the maintenance window of the instance.
+                /// The end time of the maintenance window.
                 /// </summary>
                 [NameInMap("MaintainEndTime")]
                 [Validation(Required=false)]
                 public string MaintainEndTime { get; set; }
 
                 /// <summary>
-                /// The start time of the maintenance window of the instance.
+                /// The start time of the maintenance window.
                 /// </summary>
                 [NameInMap("MaintainStartTime")]
                 [Validation(Required=false)]
@@ -514,7 +514,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public bool? SupportRestore { get; set; }
 
                 /// <summary>
-                /// The tags of the instance. Each tag is a key-value pair.
+                /// The tags that are added to the instance.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]

@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tag value.
+        /// The tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -128,6 +128,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         }
 
+        /// <summary>
+        /// The VPC ID. You can use this parameter to filter instances that reside in the specified VPC.
+        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

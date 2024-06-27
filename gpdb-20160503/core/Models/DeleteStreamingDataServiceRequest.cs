@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DeleteStreamingDataServiceRequest : TeaModel {
         /// <summary>
+        /// The instance ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// The service ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceId")]

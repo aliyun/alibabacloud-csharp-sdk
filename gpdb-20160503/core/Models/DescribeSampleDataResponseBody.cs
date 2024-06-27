@@ -40,6 +40,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The loading status of the sample dataset. Valid values:
+        /// 
+        /// *   **loaded**
+        /// *   **loading**
+        /// *   **unload**
+        /// </summary>
         [NameInMap("SampleDataStatus")]
         [Validation(Required=false)]
         public string SampleDataStatus { get; set; }

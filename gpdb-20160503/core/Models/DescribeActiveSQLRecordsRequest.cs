@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeActiveSQLRecordsRequest : TeaModel {
         /// <summary>
+        /// The instance ID.
+        /// 
+        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
@@ -44,6 +48,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// The name of the database account.
+        /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public string User { get; set; }

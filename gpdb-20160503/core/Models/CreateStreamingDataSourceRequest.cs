@@ -46,6 +46,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// The real-time data service ID.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceId")]

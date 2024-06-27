@@ -31,18 +31,30 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DataSourceType { get; set; }
 
+        /// <summary>
+        /// The JDBC connection string.
+        /// </summary>
         [NameInMap("JDBCConnectionString")]
         [Validation(Required=false)]
         public string JDBCConnectionString { get; set; }
 
+        /// <summary>
+        /// The password of the database account.
+        /// </summary>
         [NameInMap("JDBCPassword")]
         [Validation(Required=false)]
         public string JDBCPassword { get; set; }
 
+        /// <summary>
+        /// The name of the database account.
+        /// </summary>
         [NameInMap("JDBCUserName")]
         [Validation(Required=false)]
         public string JDBCUserName { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

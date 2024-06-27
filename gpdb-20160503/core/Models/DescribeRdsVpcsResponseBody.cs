@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the VPCs.
+        /// The queried VPCs.
         /// </summary>
         [NameInMap("Vpcs")]
         [Validation(Required=false)]
         public DescribeRdsVpcsResponseBodyVpcs Vpcs { get; set; }
         public class DescribeRdsVpcsResponseBodyVpcs : TeaModel {
             /// <summary>
-            /// Details of the VPC.
+            /// The queried VPC.
             /// </summary>
             [NameInMap("Vpc")]
             [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID of the instance.
                 /// </summary>
                 [NameInMap("RegionNo")]
                 [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// Details of the vSwitches.
+                /// The queried vSwitches.
                 /// </summary>
                 [NameInMap("VSwitchs")]
                 [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// The ID of the vSwitch.
+                    /// The vSwitch ID.
                     /// </summary>
                     [NameInMap("VSwitchId")]
                     [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 }
 
                 /// <summary>
-                /// The ID of VPC.
+                /// The VPC ID.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

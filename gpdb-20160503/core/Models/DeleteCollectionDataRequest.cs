@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string CollectionData { get; set; }
 
         /// <summary>
-        /// The data filter to delete.
+        /// The filter conditions for the data to be deleted.
         /// </summary>
         [NameInMap("CollectionDataFilter")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The region ID of the instance.
         /// 
-        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
         /// 
         /// This parameter is required.
         /// </summary>

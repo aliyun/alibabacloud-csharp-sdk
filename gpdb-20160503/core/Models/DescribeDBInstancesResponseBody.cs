@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string DBInstanceNetType { get; set; }
 
                 /// <summary>
-                /// The state of the instance. For more information, see [Instance statuses](https://help.aliyun.com/document_detail/86944.html).
+                /// The status of the instance. For more information, see [Instance statuses](https://help.aliyun.com/document_detail/86944.html).
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The version of the database engine.
+                /// The database engine version of the instance.
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// The expiration time of the instance. The time is displayed in UTC.
                 /// 
-                /// > The expiration time of a pay-as-you-go instance is `2999-09-08T16:00:00Z`.
+                /// >  The expiration time of a pay-as-you-go instance is `2999-09-08T16:00:00Z`.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
                 /// *   **LockByRestoration**: The instance is automatically locked due to instance restoration.
                 /// *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage.
-                /// *   **LockReadInstanceByDiskQuota**: The instance is a read-only instance and is automatically locked due to exhausted storage.
+                /// *   **LockReadInstanceByDiskQuota**: The instance is a read-only instance and is automatically locked when the disk space is full.
                 /// </summary>
                 [NameInMap("LockMode")]
                 [Validation(Required=false)]
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// *   **3**: The instance is automatically locked due to instance restoration.
                 /// *   **4**: The instance is automatically locked due to exhausted storage.
                 /// 
-                /// > If the instance is in reserved storage mode and unlocked, null is returned.
+                /// >  If the instance is in reserved storage mode and is not locked, null is returned.
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// *   **Manual**: manual scheduling.
                 /// *   **Auto**: automatic scheduling.
                 /// 
-                /// > This parameter is returned only for instances in Serverless mode.
+                /// >  This parameter is returned only for instances in Serverless mode.
                 /// </summary>
                 [NameInMap("ServerlessMode")]
                 [Validation(Required=false)]
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The VPC ID.
+                /// The VPC ID of the instance.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The storage capacity of each compute node. Unit: GB. Valid values: 50 to 6000, in 50 increments.
         /// 
-        /// > This parameter is available only for instances in elastic storage mode.
+        /// >  This parameter is available only for instances in elastic storage mode.
         /// </summary>
         [NameInMap("StorageSize")]
         [Validation(Required=false)]

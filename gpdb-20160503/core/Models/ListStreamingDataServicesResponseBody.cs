@@ -37,9 +37,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string ServiceIp { get; set; }
 
+            [NameInMap("ServiceManaged")]
+            [Validation(Required=false)]
+            public bool? ServiceManaged { get; set; }
+
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
+
+            [NameInMap("ServiceOwnerId")]
+            [Validation(Required=false)]
+            public string ServiceOwnerId { get; set; }
 
             [NameInMap("ServicePort")]
             [Validation(Required=false)]

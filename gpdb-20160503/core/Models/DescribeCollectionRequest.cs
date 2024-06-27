@@ -12,6 +12,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// The name of the collection.
         /// 
+        /// >  You can call the [ListCollections](https://help.aliyun.com/document_detail/2401503.html) operation to query a list of collections.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Collection")]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The name of the namespace.
+        /// 
+        /// >  You can call the [ListNamespaces](https://help.aliyun.com/document_detail/2401502.html) operation to query a list of namespaces.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -51,8 +55,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// The region ID of the instance.
-        /// 
-        /// > You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
         /// 
         /// This parameter is required.
         /// </summary>

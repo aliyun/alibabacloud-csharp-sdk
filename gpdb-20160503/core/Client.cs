@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 将资源组与数据库角色进行绑定
+         * @summary Binds a resource group to a database role.
          *
          * @param tmpReq BindDBResourceGroupWithRoleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 将资源组与数据库角色进行绑定
+         * @summary Binds a resource group to a database role.
          *
          * @param tmpReq BindDBResourceGroupWithRoleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 将资源组与数据库角色进行绑定
+         * @summary Binds a resource group to a database role.
          *
          * @param request BindDBResourceGroupWithRoleRequest
          * @return BindDBResourceGroupWithRoleResponse
@@ -326,7 +326,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 将资源组与数据库角色进行绑定
+         * @summary Binds a resource group to a database role.
          *
          * @param request BindDBResourceGroupWithRoleRequest
          * @return BindDBResourceGroupWithRoleResponse
@@ -338,7 +338,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 取消上传文档任务
+         * @summary Cancels an asynchronous document upload job based on the job ID.
+         *
+         * @description This operation is related to the UploadDocumentAsync operation. You can call this operation to cancel a document upload job.
+         * >  If the canceling operation is complete, failed, or is canceled, you cannot call the operation again. The canceling operation only interrupts the document upload job. To remove the uploaded data, you must manually remove it or call the DeleteCollectionData operation. You can also call the document upload operation to overwrite the data by using the same FileName parameter.
          *
          * @param request CancelUploadDocumentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -398,7 +401,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 取消上传文档任务
+         * @summary Cancels an asynchronous document upload job based on the job ID.
+         *
+         * @description This operation is related to the UploadDocumentAsync operation. You can call this operation to cancel a document upload job.
+         * >  If the canceling operation is complete, failed, or is canceled, you cannot call the operation again. The canceling operation only interrupts the document upload job. To remove the uploaded data, you must manually remove it or call the DeleteCollectionData operation. You can also call the document upload operation to overwrite the data by using the same FileName parameter.
          *
          * @param request CancelUploadDocumentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -458,7 +464,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 取消上传文档任务
+         * @summary Cancels an asynchronous document upload job based on the job ID.
+         *
+         * @description This operation is related to the UploadDocumentAsync operation. You can call this operation to cancel a document upload job.
+         * >  If the canceling operation is complete, failed, or is canceled, you cannot call the operation again. The canceling operation only interrupts the document upload job. To remove the uploaded data, you must manually remove it or call the DeleteCollectionData operation. You can also call the document upload operation to overwrite the data by using the same FileName parameter.
          *
          * @param request CancelUploadDocumentJobRequest
          * @return CancelUploadDocumentJobResponse
@@ -470,7 +479,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 取消上传文档任务
+         * @summary Cancels an asynchronous document upload job based on the job ID.
+         *
+         * @description This operation is related to the UploadDocumentAsync operation. You can call this operation to cancel a document upload job.
+         * >  If the canceling operation is complete, failed, or is canceled, you cannot call the operation again. The canceling operation only interrupts the document upload job. To remove the uploaded data, you must manually remove it or call the DeleteCollectionData operation. You can also call the document upload operation to overwrite the data by using the same FileName parameter.
          *
          * @param request CancelUploadDocumentJobRequest
          * @return CancelUploadDocumentJobResponse
@@ -482,7 +494,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 取消上传数据任务
+         * @summary Cancels an asynchronous vector data upload job by using a job ID.
+         *
+         * @description This operation is related to the `UpsertCollectionDataAsync` operation. You can call this operation to cancel an upload job.
+         * >  If the canceling operation is complete, failed, or is canceled, you cannot call the operation again. The canceling operation only interrupts the upload job. To remove the uploaded data, you must manually remove it or call the DeleteCollectionData operation.
          *
          * @param request CancelUpsertCollectionDataJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -542,7 +557,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 取消上传数据任务
+         * @summary Cancels an asynchronous vector data upload job by using a job ID.
+         *
+         * @description This operation is related to the `UpsertCollectionDataAsync` operation. You can call this operation to cancel an upload job.
+         * >  If the canceling operation is complete, failed, or is canceled, you cannot call the operation again. The canceling operation only interrupts the upload job. To remove the uploaded data, you must manually remove it or call the DeleteCollectionData operation.
          *
          * @param request CancelUpsertCollectionDataJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -602,7 +620,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 取消上传数据任务
+         * @summary Cancels an asynchronous vector data upload job by using a job ID.
+         *
+         * @description This operation is related to the `UpsertCollectionDataAsync` operation. You can call this operation to cancel an upload job.
+         * >  If the canceling operation is complete, failed, or is canceled, you cannot call the operation again. The canceling operation only interrupts the upload job. To remove the uploaded data, you must manually remove it or call the DeleteCollectionData operation.
          *
          * @param request CancelUpsertCollectionDataJobRequest
          * @return CancelUpsertCollectionDataJobResponse
@@ -614,7 +635,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 取消上传数据任务
+         * @summary Cancels an asynchronous vector data upload job by using a job ID.
+         *
+         * @description This operation is related to the `UpsertCollectionDataAsync` operation. You can call this operation to cancel an upload job.
+         * >  If the canceling operation is complete, failed, or is canceled, you cannot call the operation again. The canceling operation only interrupts the upload job. To remove the uploaded data, you must manually remove it or call the DeleteCollectionData operation.
          *
          * @param request CancelUpsertCollectionDataJobRequest
          * @return CancelUpsertCollectionDataJobResponse
@@ -626,7 +650,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 检查hadoop数据源配置
+         * @summary Checks the configurations of a Hadoop data source.
          *
          * @param request CheckHadoopDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -672,7 +696,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 检查hadoop数据源配置
+         * @summary Checks the configurations of a Hadoop data source.
          *
          * @param request CheckHadoopDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -718,7 +742,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 检查hadoop数据源配置
+         * @summary Checks the configurations of a Hadoop data source.
          *
          * @param request CheckHadoopDataSourceRequest
          * @return CheckHadoopDataSourceResponse
@@ -730,7 +754,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 检查hadoop数据源配置
+         * @summary Checks the configurations of a Hadoop data source.
          *
          * @param request CheckHadoopDataSourceRequest
          * @return CheckHadoopDataSourceResponse
@@ -850,7 +874,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 检查jdbc连接串网络连通性
+         * @summary Checks the network connectivity of a connection specified by a Java Database Connectivity (JDBC) connection string.
          *
          * @param request CheckJDBCSourceNetConnectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -892,7 +916,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 检查jdbc连接串网络连通性
+         * @summary Checks the network connectivity of a connection specified by a Java Database Connectivity (JDBC) connection string.
          *
          * @param request CheckJDBCSourceNetConnectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -934,7 +958,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 检查jdbc连接串网络连通性
+         * @summary Checks the network connectivity of a connection specified by a Java Database Connectivity (JDBC) connection string.
          *
          * @param request CheckJDBCSourceNetConnectionRequest
          * @return CheckJDBCSourceNetConnectionResponse
@@ -946,7 +970,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 检查jdbc连接串网络连通性
+         * @summary Checks the network connectivity of a connection specified by a Java Database Connectivity (JDBC) connection string.
          *
          * @param request CheckJDBCSourceNetConnectionRequest
          * @return CheckJDBCSourceNetConnectionResponse
@@ -1210,7 +1234,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建Collection
+         * @summary Creates a vector collection.
          *
          * @param request CreateCollectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1300,7 +1324,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建Collection
+         * @summary Creates a vector collection.
          *
          * @param request CreateCollectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1390,7 +1414,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建Collection
+         * @summary Creates a vector collection.
          *
          * @param request CreateCollectionRequest
          * @return CreateCollectionResponse
@@ -1402,7 +1426,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建Collection
+         * @summary Creates a vector collection.
          *
          * @param request CreateCollectionRequest
          * @return CreateCollectionResponse
@@ -2010,7 +2034,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建资源组
+         * @summary Creates a resource group.
          *
          * @param request CreateDBResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2056,7 +2080,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建资源组
+         * @summary Creates a resource group.
          *
          * @param request CreateDBResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2102,7 +2126,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建资源组
+         * @summary Creates a resource group.
          *
          * @param request CreateDBResourceGroupRequest
          * @return CreateDBResourceGroupResponse
@@ -2114,7 +2138,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建资源组
+         * @summary Creates a resource group.
          *
          * @param request CreateDBResourceGroupRequest
          * @return CreateDBResourceGroupResponse
@@ -2126,7 +2150,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建知识库
+         * @summary Creates a document collection.
          *
          * @param request CreateDocumentCollectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2216,7 +2240,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建知识库
+         * @summary Creates a document collection.
          *
          * @param request CreateDocumentCollectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2306,7 +2330,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建知识库
+         * @summary Creates a document collection.
          *
          * @param request CreateDocumentCollectionRequest
          * @return CreateDocumentCollectionResponse
@@ -2318,7 +2342,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建知识库
+         * @summary Creates a document collection.
          *
          * @param request CreateDocumentCollectionRequest
          * @return CreateDocumentCollectionResponse
@@ -2330,7 +2354,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 安装插件
+         * @summary Install extensions.
          *
          * @param request CreateExtensionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2376,7 +2400,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 安装插件
+         * @summary Install extensions.
          *
          * @param request CreateExtensionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2422,7 +2446,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 安装插件
+         * @summary Install extensions.
          *
          * @param request CreateExtensionsRequest
          * @return CreateExtensionsResponse
@@ -2434,7 +2458,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 安装插件
+         * @summary Install extensions.
          *
          * @param request CreateExtensionsRequest
          * @return CreateExtensionsResponse
@@ -2446,7 +2470,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据服务
+         * @summary Creates an external data service.
          *
          * @param request CreateExternalDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2496,7 +2520,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据服务
+         * @summary Creates an external data service.
          *
          * @param request CreateExternalDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2546,7 +2570,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据服务
+         * @summary Creates an external data service.
          *
          * @param request CreateExternalDataServiceRequest
          * @return CreateExternalDataServiceResponse
@@ -2558,7 +2582,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据服务
+         * @summary Creates an external data service.
          *
          * @param request CreateExternalDataServiceRequest
          * @return CreateExternalDataServiceResponse
@@ -2570,7 +2594,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建hadoop数据源配置
+         * @summary Creates the configurations for a Hadoop data source.
          *
          * @param request CreateHadoopDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2652,7 +2676,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建hadoop数据源配置
+         * @summary Creates the configurations for a Hadoop data source.
          *
          * @param request CreateHadoopDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2734,7 +2758,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建hadoop数据源配置
+         * @summary Creates the configurations for a Hadoop data source.
          *
          * @param request CreateHadoopDataSourceRequest
          * @return CreateHadoopDataSourceResponse
@@ -2746,7 +2770,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建hadoop数据源配置
+         * @summary Creates the configurations for a Hadoop data source.
          *
          * @param request CreateHadoopDataSourceRequest
          * @return CreateHadoopDataSourceResponse
@@ -2758,7 +2782,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建JDBC数据源配置
+         * @summary Creates a Java Database Connectivity (JDBC) data source.
          *
          * @param request CreateJDBCDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2820,7 +2844,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建JDBC数据源配置
+         * @summary Creates a Java Database Connectivity (JDBC) data source.
          *
          * @param request CreateJDBCDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2882,7 +2906,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建JDBC数据源配置
+         * @summary Creates a Java Database Connectivity (JDBC) data source.
          *
          * @param request CreateJDBCDataSourceRequest
          * @return CreateJDBCDataSourceResponse
@@ -2894,7 +2918,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建JDBC数据源配置
+         * @summary Creates a Java Database Connectivity (JDBC) data source.
          *
          * @param request CreateJDBCDataSourceRequest
          * @return CreateJDBCDataSourceResponse
@@ -3048,14 +3072,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /**
          * @summary Creates a sample dataset for an AnalyticDB for PostgreSQL instance.
          *
-         * @description You can call this operation to load a sample dataset to an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see [Dataset information and query examples](https://help.aliyun.com/document_detail/452277.html).
-         * ## Precautions
-         * - If your instance is in elastic storage mode, the sample dataset is supported only for V6.3.10.3 or later. If your instance is in Serverless mode, the sample dataset is supported only for V1.0.4.0 or later. For more information about how to update the minor engine version of an instance, see [Update the minor engine version](/help/en/analyticdb-for-postgresql/latest/upgrade-the-engine-version).
-         * - The sample dataset is about 10 GB in size. Make sure that your instance has sufficient storage space.
-         * - The sample dataset contains a database named `ADB_SampleData_TPCH`. Make sure that your instance does not have a database with the same name. Otherwise, the dataset may fail to be loaded.
-         * - It may take 6 to 8 minutes to load the sample dataset. During this period, operations on your instance such as adding nodes or changing node specifications may be affected.
-         * ## Limits
-         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * @description *   You can call this operation to create a sample dataset for an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to use or test your instance. For more information about query statements, see [Dataset information and query examples](https://help.aliyun.com/document_detail/452277.html).
+         * *   This operation is supported only for AnalyticDB for PostgreSQL V6.3.8.8 and V6.3.10.3 or later, excluding the versions from V6.3.9.0 to V6.3.10.2.
          *
          * @param request CreateSampleDataRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3095,14 +3113,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /**
          * @summary Creates a sample dataset for an AnalyticDB for PostgreSQL instance.
          *
-         * @description You can call this operation to load a sample dataset to an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see [Dataset information and query examples](https://help.aliyun.com/document_detail/452277.html).
-         * ## Precautions
-         * - If your instance is in elastic storage mode, the sample dataset is supported only for V6.3.10.3 or later. If your instance is in Serverless mode, the sample dataset is supported only for V1.0.4.0 or later. For more information about how to update the minor engine version of an instance, see [Update the minor engine version](/help/en/analyticdb-for-postgresql/latest/upgrade-the-engine-version).
-         * - The sample dataset is about 10 GB in size. Make sure that your instance has sufficient storage space.
-         * - The sample dataset contains a database named `ADB_SampleData_TPCH`. Make sure that your instance does not have a database with the same name. Otherwise, the dataset may fail to be loaded.
-         * - It may take 6 to 8 minutes to load the sample dataset. During this period, operations on your instance such as adding nodes or changing node specifications may be affected.
-         * ## Limits
-         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * @description *   You can call this operation to create a sample dataset for an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to use or test your instance. For more information about query statements, see [Dataset information and query examples](https://help.aliyun.com/document_detail/452277.html).
+         * *   This operation is supported only for AnalyticDB for PostgreSQL V6.3.8.8 and V6.3.10.3 or later, excluding the versions from V6.3.9.0 to V6.3.10.2.
          *
          * @param request CreateSampleDataRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3142,14 +3154,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /**
          * @summary Creates a sample dataset for an AnalyticDB for PostgreSQL instance.
          *
-         * @description You can call this operation to load a sample dataset to an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see [Dataset information and query examples](https://help.aliyun.com/document_detail/452277.html).
-         * ## Precautions
-         * - If your instance is in elastic storage mode, the sample dataset is supported only for V6.3.10.3 or later. If your instance is in Serverless mode, the sample dataset is supported only for V1.0.4.0 or later. For more information about how to update the minor engine version of an instance, see [Update the minor engine version](/help/en/analyticdb-for-postgresql/latest/upgrade-the-engine-version).
-         * - The sample dataset is about 10 GB in size. Make sure that your instance has sufficient storage space.
-         * - The sample dataset contains a database named `ADB_SampleData_TPCH`. Make sure that your instance does not have a database with the same name. Otherwise, the dataset may fail to be loaded.
-         * - It may take 6 to 8 minutes to load the sample dataset. During this period, operations on your instance such as adding nodes or changing node specifications may be affected.
-         * ## Limits
-         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * @description *   You can call this operation to create a sample dataset for an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to use or test your instance. For more information about query statements, see [Dataset information and query examples](https://help.aliyun.com/document_detail/452277.html).
+         * *   This operation is supported only for AnalyticDB for PostgreSQL V6.3.8.8 and V6.3.10.3 or later, excluding the versions from V6.3.9.0 to V6.3.10.2.
          *
          * @param request CreateSampleDataRequest
          * @return CreateSampleDataResponse
@@ -3163,14 +3169,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /**
          * @summary Creates a sample dataset for an AnalyticDB for PostgreSQL instance.
          *
-         * @description You can call this operation to load a sample dataset to an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to experience or test your instance. For more information about query statements, see [Dataset information and query examples](https://help.aliyun.com/document_detail/452277.html).
-         * ## Precautions
-         * - If your instance is in elastic storage mode, the sample dataset is supported only for V6.3.10.3 or later. If your instance is in Serverless mode, the sample dataset is supported only for V1.0.4.0 or later. For more information about how to update the minor engine version of an instance, see [Update the minor engine version](/help/en/analyticdb-for-postgresql/latest/upgrade-the-engine-version).
-         * - The sample dataset is about 10 GB in size. Make sure that your instance has sufficient storage space.
-         * - The sample dataset contains a database named `ADB_SampleData_TPCH`. Make sure that your instance does not have a database with the same name. Otherwise, the dataset may fail to be loaded.
-         * - It may take 6 to 8 minutes to load the sample dataset. During this period, operations on your instance such as adding nodes or changing node specifications may be affected.
-         * ## Limits
-         * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * @description *   You can call this operation to create a sample dataset for an AnalyticDB for PostgreSQL instance. Then, you can execute query statements on the sample dataset to use or test your instance. For more information about query statements, see [Dataset information and query examples](https://help.aliyun.com/document_detail/452277.html).
+         * *   This operation is supported only for AnalyticDB for PostgreSQL V6.3.8.8 and V6.3.10.3 or later, excluding the versions from V6.3.9.0 to V6.3.10.2.
          *
          * @param request CreateSampleDataRequest
          * @return CreateSampleDataResponse
@@ -3282,7 +3282,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Creates a real-time data service.
          *
          * @param request CreateStreamingDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3332,7 +3332,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Creates a real-time data service.
          *
          * @param request CreateStreamingDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3382,7 +3382,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Creates a real-time data service.
          *
          * @param request CreateStreamingDataServiceRequest
          * @return CreateStreamingDataServiceResponse
@@ -3394,7 +3394,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Creates a real-time data service.
          *
          * @param request CreateStreamingDataServiceRequest
          * @return CreateStreamingDataServiceResponse
@@ -3406,7 +3406,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Creates a real-time data source.
          *
          * @param request CreateStreamingDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3464,7 +3464,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Creates a real-time data source.
          *
          * @param request CreateStreamingDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3522,7 +3522,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Creates a real-time data source.
          *
          * @param request CreateStreamingDataSourceRequest
          * @return CreateStreamingDataSourceResponse
@@ -3534,7 +3534,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Creates a real-time data source.
          *
          * @param request CreateStreamingDataSourceRequest
          * @return CreateStreamingDataSourceResponse
@@ -3842,7 +3842,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建向量索引
+         * @summary Creates a vector index.
          *
          * @param request CreateVectorIndexRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3920,7 +3920,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建向量索引
+         * @summary Creates a vector index.
          *
          * @param request CreateVectorIndexRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3998,7 +3998,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建向量索引
+         * @summary Creates a vector index.
          *
          * @param request CreateVectorIndexRequest
          * @return CreateVectorIndexResponse
@@ -4010,7 +4010,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建向量索引
+         * @summary Creates a vector index.
          *
          * @param request CreateVectorIndexRequest
          * @return CreateVectorIndexResponse
@@ -4562,7 +4562,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除资源组
+         * @summary Deletes a resource group.
          *
          * @param request DeleteDBResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4604,7 +4604,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除资源组
+         * @summary Deletes a resource group.
          *
          * @param request DeleteDBResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4646,7 +4646,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除资源组
+         * @summary Deletes a resource group.
          *
          * @param request DeleteDBResourceGroupRequest
          * @return DeleteDBResourceGroupResponse
@@ -4658,7 +4658,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除资源组
+         * @summary Deletes a resource group.
          *
          * @param request DeleteDBResourceGroupRequest
          * @return DeleteDBResourceGroupResponse
@@ -4670,7 +4670,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除文档
+         * @summary Deletes a document from a document collection.
          *
          * @param request DeleteDocumentRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4728,7 +4728,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除文档
+         * @summary Deletes a document from a document collection.
          *
          * @param request DeleteDocumentRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4786,7 +4786,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除文档
+         * @summary Deletes a document from a document collection.
          *
          * @param request DeleteDocumentRequest
          * @return DeleteDocumentResponse
@@ -4798,7 +4798,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除文档
+         * @summary Deletes a document from a document collection.
          *
          * @param request DeleteDocumentRequest
          * @return DeleteDocumentResponse
@@ -4810,7 +4810,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除知识库
+         * @summary Deletes a document collection.
          *
          * @param request DeleteDocumentCollectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4864,7 +4864,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除知识库
+         * @summary Deletes a document collection.
          *
          * @param request DeleteDocumentCollectionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4918,7 +4918,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除知识库
+         * @summary Deletes a document collection.
          *
          * @param request DeleteDocumentCollectionRequest
          * @return DeleteDocumentCollectionResponse
@@ -4930,7 +4930,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除知识库
+         * @summary Deletes a document collection.
          *
          * @param request DeleteDocumentCollectionRequest
          * @return DeleteDocumentCollectionResponse
@@ -4942,7 +4942,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除插件
+         * @summary Uninstall an extension.
          *
          * @param request DeleteExtensionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4988,7 +4988,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除插件
+         * @summary Uninstall an extension.
          *
          * @param request DeleteExtensionRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5034,7 +5034,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除插件
+         * @summary Uninstall an extension.
          *
          * @param request DeleteExtensionRequest
          * @return DeleteExtensionResponse
@@ -5046,7 +5046,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除插件
+         * @summary Uninstall an extension.
          *
          * @param request DeleteExtensionRequest
          * @return DeleteExtensionResponse
@@ -5274,7 +5274,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除jdbc数据源
+         * @summary Deletes a Java Database Connectivity (JDBC) data source.
          *
          * @param request DeleteJDBCDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5316,7 +5316,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除jdbc数据源
+         * @summary Deletes a Java Database Connectivity (JDBC) data source.
          *
          * @param request DeleteJDBCDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5358,7 +5358,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除jdbc数据源
+         * @summary Deletes a Java Database Connectivity (JDBC) data source.
          *
          * @param request DeleteJDBCDataSourceRequest
          * @return DeleteJDBCDataSourceResponse
@@ -5370,7 +5370,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除jdbc数据源
+         * @summary Deletes a Java Database Connectivity (JDBC) data source.
          *
          * @param request DeleteJDBCDataSourceRequest
          * @return DeleteJDBCDataSourceResponse
@@ -5514,7 +5514,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Deletes a real-time data service.
          *
          * @param request DeleteStreamingDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5556,7 +5556,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Deletes a real-time data service.
          *
          * @param request DeleteStreamingDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5598,7 +5598,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Deletes a real-time data service.
          *
          * @param request DeleteStreamingDataServiceRequest
          * @return DeleteStreamingDataServiceResponse
@@ -5610,7 +5610,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Deletes a real-time data service.
          *
          * @param request DeleteStreamingDataServiceRequest
          * @return DeleteStreamingDataServiceResponse
@@ -5622,7 +5622,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Deletes a real-time data source.
          *
          * @param request DeleteStreamingDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5664,7 +5664,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Deletes a real-time data source.
          *
          * @param request DeleteStreamingDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5706,7 +5706,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Deletes a real-time data source.
          *
          * @param request DeleteStreamingDataSourceRequest
          * @return DeleteStreamingDataSourceResponse
@@ -5718,7 +5718,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Deletes a real-time data source.
          *
          * @param request DeleteStreamingDataSourceRequest
          * @return DeleteStreamingDataSourceResponse
@@ -5730,7 +5730,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Deletes a real-time data service job.
          *
          * @param request DeleteStreamingJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5772,7 +5772,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Deletes a real-time data service job.
          *
          * @param request DeleteStreamingJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -5814,7 +5814,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Deletes a real-time data service job.
          *
          * @param request DeleteStreamingJobRequest
          * @return DeleteStreamingJobResponse
@@ -5826,7 +5826,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Deletes a real-time data service job.
          *
          * @param request DeleteStreamingJobRequest
          * @return DeleteStreamingJobResponse
@@ -6094,7 +6094,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取实例活跃的SQL列表
+         * @summary Queries active SQL records.
          *
          * @param request DescribeActiveSQLRecordsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6160,7 +6160,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取实例活跃的SQL列表
+         * @summary Queries active SQL records.
          *
          * @param request DescribeActiveSQLRecordsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -6226,7 +6226,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取实例活跃的SQL列表
+         * @summary Queries active SQL records.
          *
          * @param request DescribeActiveSQLRecordsRequest
          * @return DescribeActiveSQLRecordsResponse
@@ -6238,7 +6238,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取实例活跃的SQL列表
+         * @summary Queries active SQL records.
          *
          * @param request DescribeActiveSQLRecordsRequest
          * @return DescribeActiveSQLRecordsResponse
@@ -8286,7 +8286,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询实例最大吞吐和IOPS
+         * @summary Queries the maximum performance of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DescribeDBInstanceSupportMaxPerformanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8324,7 +8324,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询实例最大吞吐和IOPS
+         * @summary Queries the maximum performance of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DescribeDBInstanceSupportMaxPerformanceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8362,7 +8362,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询实例最大吞吐和IOPS
+         * @summary Queries the maximum performance of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DescribeDBInstanceSupportMaxPerformanceRequest
          * @return DescribeDBInstanceSupportMaxPerformanceResponse
@@ -8374,7 +8374,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询实例最大吞吐和IOPS
+         * @summary Queries the maximum performance of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DescribeDBInstanceSupportMaxPerformanceRequest
          * @return DescribeDBInstanceSupportMaxPerformanceResponse
@@ -8638,7 +8638,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取资源组信息
+         * @summary Queries the information about resource groups.
          *
          * @param request DescribeDBResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8680,7 +8680,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取资源组信息
+         * @summary Queries the information about resource groups.
          *
          * @param request DescribeDBResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8722,7 +8722,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取资源组信息
+         * @summary Queries the information about resource groups.
          *
          * @param request DescribeDBResourceGroupRequest
          * @return DescribeDBResourceGroupResponse
@@ -8734,7 +8734,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取资源组信息
+         * @summary Queries the information about resource groups.
          *
          * @param request DescribeDBResourceGroupRequest
          * @return DescribeDBResourceGroupResponse
@@ -8746,7 +8746,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取资源管理模式
+         * @summary Queries the resource management mode of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DescribeDBResourceManagementModeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8784,7 +8784,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取资源管理模式
+         * @summary Queries the resource management mode of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DescribeDBResourceManagementModeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -8822,7 +8822,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取资源管理模式
+         * @summary Queries the resource management mode of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DescribeDBResourceManagementModeRequest
          * @return DescribeDBResourceManagementModeResponse
@@ -8834,7 +8834,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取资源管理模式
+         * @summary Queries the resource management mode of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DescribeDBResourceManagementModeRequest
          * @return DescribeDBResourceManagementModeResponse
@@ -10070,7 +10070,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取文档详情
+         * @summary Queries the information about a document.
          *
          * @param request DescribeDocumentRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10128,7 +10128,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取文档详情
+         * @summary Queries the information about a document.
          *
          * @param request DescribeDocumentRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10186,7 +10186,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取文档详情
+         * @summary Queries the information about a document.
          *
          * @param request DescribeDocumentRequest
          * @return DescribeDocumentResponse
@@ -10198,7 +10198,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取文档详情
+         * @summary Queries the information about a document.
          *
          * @param request DescribeDocumentRequest
          * @return DescribeDocumentResponse
@@ -10514,7 +10514,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取同网络下的Hadoop集群列表
+         * @summary Queries E-MapReduce (EMR) Hadoop clusters in a specific virtual private cloud (VPC).
          *
          * @param request DescribeHadoopClustersInSameNetRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10552,7 +10552,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取同网络下的Hadoop集群列表
+         * @summary Queries E-MapReduce (EMR) Hadoop clusters in a specific virtual private cloud (VPC).
          *
          * @param request DescribeHadoopClustersInSameNetRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10590,7 +10590,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取同网络下的Hadoop集群列表
+         * @summary Queries E-MapReduce (EMR) Hadoop clusters in a specific virtual private cloud (VPC).
          *
          * @param request DescribeHadoopClustersInSameNetRequest
          * @return DescribeHadoopClustersInSameNetResponse
@@ -10602,7 +10602,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取同网络下的Hadoop集群列表
+         * @summary Queries E-MapReduce (EMR) Hadoop clusters in a specific virtual private cloud (VPC).
          *
          * @param request DescribeHadoopClustersInSameNetRequest
          * @return DescribeHadoopClustersInSameNetResponse
@@ -10730,7 +10730,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取hadoop数据源配置信息
+         * @summary Obtains the configurations of a Hadoop data source.
          *
          * @param request DescribeHadoopDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10772,7 +10772,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取hadoop数据源配置信息
+         * @summary Obtains the configurations of a Hadoop data source.
          *
          * @param request DescribeHadoopDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10814,7 +10814,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取hadoop数据源配置信息
+         * @summary Obtains the configurations of a Hadoop data source.
          *
          * @param request DescribeHadoopDataSourceRequest
          * @return DescribeHadoopDataSourceResponse
@@ -10826,7 +10826,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取hadoop数据源配置信息
+         * @summary Obtains the configurations of a Hadoop data source.
          *
          * @param request DescribeHadoopDataSourceRequest
          * @return DescribeHadoopDataSourceResponse
@@ -10954,7 +10954,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询实时物化视图信息
+         * @summary Queries the information about real-time materialized views of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DescribeIMVInfosRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10996,7 +10996,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询实时物化视图信息
+         * @summary Queries the information about real-time materialized views of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DescribeIMVInfosRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -11038,7 +11038,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询实时物化视图信息
+         * @summary Queries the information about real-time materialized views of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DescribeIMVInfosRequest
          * @return DescribeIMVInfosResponse
@@ -11050,7 +11050,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询实时物化视图信息
+         * @summary Queries the information about real-time materialized views of an AnalyticDB for PostgreSQL instance.
          *
          * @param request DescribeIMVInfosRequest
          * @return DescribeIMVInfosResponse
@@ -11062,7 +11062,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取jdbc数据源配置信息
+         * @summary Queries the configurations of a Java Database Connectivity (JDBC) data source.
          *
          * @param request DescribeJDBCDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -11100,7 +11100,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取jdbc数据源配置信息
+         * @summary Queries the configurations of a Java Database Connectivity (JDBC) data source.
          *
          * @param request DescribeJDBCDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -11138,7 +11138,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取jdbc数据源配置信息
+         * @summary Queries the configurations of a Java Database Connectivity (JDBC) data source.
          *
          * @param request DescribeJDBCDataSourceRequest
          * @return DescribeJDBCDataSourceResponse
@@ -11150,7 +11150,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取jdbc数据源配置信息
+         * @summary Queries the configurations of a Java Database Connectivity (JDBC) data source.
          *
          * @param request DescribeJDBCDataSourceRequest
          * @return DescribeJDBCDataSourceResponse
@@ -12078,7 +12078,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取角色列表
+         * @summary Queries a list of roles.
          *
          * @param request DescribeRolesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12116,7 +12116,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取角色列表
+         * @summary Queries a list of roles.
          *
          * @param request DescribeRolesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12154,7 +12154,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取角色列表
+         * @summary Queries a list of roles.
          *
          * @param request DescribeRolesRequest
          * @return DescribeRolesResponse
@@ -12166,7 +12166,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取角色列表
+         * @summary Queries a list of roles.
          *
          * @param request DescribeRolesRequest
          * @return DescribeRolesResponse
@@ -12930,7 +12930,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Queries a real-time data service.
          *
          * @param request DescribeStreamingDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12972,7 +12972,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Queries a real-time data service.
          *
          * @param request DescribeStreamingDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13014,7 +13014,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Queries a real-time data service.
          *
          * @param request DescribeStreamingDataServiceRequest
          * @return DescribeStreamingDataServiceResponse
@@ -13026,7 +13026,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Queries a real-time data service.
          *
          * @param request DescribeStreamingDataServiceRequest
          * @return DescribeStreamingDataServiceResponse
@@ -13038,7 +13038,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取外部数据源配置信息
+         * @summary Queries a real-time data source.
          *
          * @param request DescribeStreamingDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13080,7 +13080,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取外部数据源配置信息
+         * @summary Queries a real-time data source.
          *
          * @param request DescribeStreamingDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13122,7 +13122,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取外部数据源配置信息
+         * @summary Queries a real-time data source.
          *
          * @param request DescribeStreamingDataSourceRequest
          * @return DescribeStreamingDataSourceResponse
@@ -13134,7 +13134,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取外部数据源配置信息
+         * @summary Queries a real-time data source.
          *
          * @param request DescribeStreamingDataSourceRequest
          * @return DescribeStreamingDataSourceResponse
@@ -13146,7 +13146,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Queries a real-time data service.
          *
          * @param request DescribeStreamingJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13188,7 +13188,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Queries a real-time data service.
          *
          * @param request DescribeStreamingJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13230,7 +13230,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Queries a real-time data service.
          *
          * @param request DescribeStreamingJobRequest
          * @return DescribeStreamingJobResponse
@@ -13242,7 +13242,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Queries a real-time data service.
          *
          * @param request DescribeStreamingJobRequest
          * @return DescribeStreamingJobResponse
@@ -13906,7 +13906,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 关闭资源组
+         * @summary Disables resource group management for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode. After you disable resource group management, the resource management method of the instance switches from resource group management to resource queue management.
+         *
+         * @description *   You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.
+         * *   You can call this operation to disable resource group management only for AnalyticDB for PostgreSQL instances that are in the **Running** state.
+         * *   **Note: When the resource management method is switched, your AnalyticDB for PostgreSQL instance restarts and becomes unavailable for approximately 5 minutes. To prevent your business from being affected, call this operation during off-peak hours.
          *
          * @param request DisableDBResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13944,7 +13948,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 关闭资源组
+         * @summary Disables resource group management for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode. After you disable resource group management, the resource management method of the instance switches from resource group management to resource queue management.
+         *
+         * @description *   You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.
+         * *   You can call this operation to disable resource group management only for AnalyticDB for PostgreSQL instances that are in the **Running** state.
+         * *   **Note: When the resource management method is switched, your AnalyticDB for PostgreSQL instance restarts and becomes unavailable for approximately 5 minutes. To prevent your business from being affected, call this operation during off-peak hours.
          *
          * @param request DisableDBResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13982,7 +13990,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 关闭资源组
+         * @summary Disables resource group management for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode. After you disable resource group management, the resource management method of the instance switches from resource group management to resource queue management.
+         *
+         * @description *   You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.
+         * *   You can call this operation to disable resource group management only for AnalyticDB for PostgreSQL instances that are in the **Running** state.
+         * *   **Note: When the resource management method is switched, your AnalyticDB for PostgreSQL instance restarts and becomes unavailable for approximately 5 minutes. To prevent your business from being affected, call this operation during off-peak hours.
          *
          * @param request DisableDBResourceGroupRequest
          * @return DisableDBResourceGroupResponse
@@ -13994,7 +14006,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 关闭资源组
+         * @summary Disables resource group management for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode. After you disable resource group management, the resource management method of the instance switches from resource group management to resource queue management.
+         *
+         * @description *   You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.
+         * *   You can call this operation to disable resource group management only for AnalyticDB for PostgreSQL instances that are in the **Running** state.
+         * *   **Note: When the resource management method is switched, your AnalyticDB for PostgreSQL instance restarts and becomes unavailable for approximately 5 minutes. To prevent your business from being affected, call this operation during off-peak hours.
          *
          * @param request DisableDBResourceGroupRequest
          * @return DisableDBResourceGroupResponse
@@ -14386,7 +14402,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 开启资源组
+         * @summary Enables resource group management for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode. After resource group management is enabled, the resource management mode of the instance is changed from resource queue to resource group.
+         *
+         * @description *   You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.
+         * *   You can call this operation to enable resource group management only for AnalyticDB for PostgreSQL instances that are in the **Running** state.
+         * *   **Note: When the resource management mode is changed, your AnalyticDB for PostgreSQL instance is restarted and remains unavailable within 5 minutes. To prevent your business from being affected, call this operation during off-peak hours.
          *
          * @param request EnableDBResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14424,7 +14444,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 开启资源组
+         * @summary Enables resource group management for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode. After resource group management is enabled, the resource management mode of the instance is changed from resource queue to resource group.
+         *
+         * @description *   You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.
+         * *   You can call this operation to enable resource group management only for AnalyticDB for PostgreSQL instances that are in the **Running** state.
+         * *   **Note: When the resource management mode is changed, your AnalyticDB for PostgreSQL instance is restarted and remains unavailable within 5 minutes. To prevent your business from being affected, call this operation during off-peak hours.
          *
          * @param request EnableDBResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14462,7 +14486,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 开启资源组
+         * @summary Enables resource group management for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode. After resource group management is enabled, the resource management mode of the instance is changed from resource queue to resource group.
+         *
+         * @description *   You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.
+         * *   You can call this operation to enable resource group management only for AnalyticDB for PostgreSQL instances that are in the **Running** state.
+         * *   **Note: When the resource management mode is changed, your AnalyticDB for PostgreSQL instance is restarted and remains unavailable within 5 minutes. To prevent your business from being affected, call this operation during off-peak hours.
          *
          * @param request EnableDBResourceGroupRequest
          * @return EnableDBResourceGroupResponse
@@ -14474,7 +14502,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 开启资源组
+         * @summary Enables resource group management for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode. After resource group management is enabled, the resource management mode of the instance is changed from resource queue to resource group.
+         *
+         * @description *   You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.
+         * *   You can call this operation to enable resource group management only for AnalyticDB for PostgreSQL instances that are in the **Running** state.
+         * *   **Note: When the resource management mode is changed, your AnalyticDB for PostgreSQL instance is restarted and remains unavailable within 5 minutes. To prevent your business from being affected, call this operation during off-peak hours.
          *
          * @param request EnableDBResourceGroupRequest
          * @return EnableDBResourceGroupResponse
@@ -14486,7 +14518,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询上传文档任务的状态
+         * @summary Queries the progress and result of an asynchronous document upload job based on the job ID.
+         *
+         * @description This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.
+         * >  Suggestions:
+         * *   Determine whether the document upload job times out based on the document complexity and the number of tokens after chunking. In most cases, a job that lasts more than 2 hours is considered timeout.
          *
          * @param request GetUploadDocumentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14546,7 +14582,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询上传文档任务的状态
+         * @summary Queries the progress and result of an asynchronous document upload job based on the job ID.
+         *
+         * @description This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.
+         * >  Suggestions:
+         * *   Determine whether the document upload job times out based on the document complexity and the number of tokens after chunking. In most cases, a job that lasts more than 2 hours is considered timeout.
          *
          * @param request GetUploadDocumentJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14606,7 +14646,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询上传文档任务的状态
+         * @summary Queries the progress and result of an asynchronous document upload job based on the job ID.
+         *
+         * @description This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.
+         * >  Suggestions:
+         * *   Determine whether the document upload job times out based on the document complexity and the number of tokens after chunking. In most cases, a job that lasts more than 2 hours is considered timeout.
          *
          * @param request GetUploadDocumentJobRequest
          * @return GetUploadDocumentJobResponse
@@ -14618,7 +14662,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询上传文档任务的状态
+         * @summary Queries the progress and result of an asynchronous document upload job based on the job ID.
+         *
+         * @description This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.
+         * >  Suggestions:
+         * *   Determine whether the document upload job times out based on the document complexity and the number of tokens after chunking. In most cases, a job that lasts more than 2 hours is considered timeout.
          *
          * @param request GetUploadDocumentJobRequest
          * @return GetUploadDocumentJobResponse
@@ -14630,7 +14678,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询上传向量任务结果
+         * @summary Queries the progress and result of an asynchronous vector data upload job by using a job ID.
+         *
+         * @description This operation is related to the `UpsertCollectionDataAsync` operation. You can call the `UpsertCollectionDataAsync` operation to create an upload job and obtain a job ID, and then call the GetUpsertCollectionDataJob operation to query the execution information of the job.
+         * >  We recommend that you evaluate the amount of time required for the upload job based on 1,000 data entries every second, and then query the job progress every 5 seconds. The timeout period can be set to 30 minutes after the evaluated amount of time.
          *
          * @param request GetUpsertCollectionDataJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14690,7 +14741,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询上传向量任务结果
+         * @summary Queries the progress and result of an asynchronous vector data upload job by using a job ID.
+         *
+         * @description This operation is related to the `UpsertCollectionDataAsync` operation. You can call the `UpsertCollectionDataAsync` operation to create an upload job and obtain a job ID, and then call the GetUpsertCollectionDataJob operation to query the execution information of the job.
+         * >  We recommend that you evaluate the amount of time required for the upload job based on 1,000 data entries every second, and then query the job progress every 5 seconds. The timeout period can be set to 30 minutes after the evaluated amount of time.
          *
          * @param request GetUpsertCollectionDataJobRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14750,7 +14804,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询上传向量任务结果
+         * @summary Queries the progress and result of an asynchronous vector data upload job by using a job ID.
+         *
+         * @description This operation is related to the `UpsertCollectionDataAsync` operation. You can call the `UpsertCollectionDataAsync` operation to create an upload job and obtain a job ID, and then call the GetUpsertCollectionDataJob operation to query the execution information of the job.
+         * >  We recommend that you evaluate the amount of time required for the upload job based on 1,000 data entries every second, and then query the job progress every 5 seconds. The timeout period can be set to 30 minutes after the evaluated amount of time.
          *
          * @param request GetUpsertCollectionDataJobRequest
          * @return GetUpsertCollectionDataJobResponse
@@ -14762,7 +14819,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询上传向量任务结果
+         * @summary Queries the progress and result of an asynchronous vector data upload job by using a job ID.
+         *
+         * @description This operation is related to the `UpsertCollectionDataAsync` operation. You can call the `UpsertCollectionDataAsync` operation to create an upload job and obtain a job ID, and then call the GetUpsertCollectionDataJob operation to query the execution information of the job.
+         * >  We recommend that you evaluate the amount of time required for the upload job based on 1,000 data entries every second, and then query the job progress every 5 seconds. The timeout period can be set to 30 minutes after the evaluated amount of time.
          *
          * @param request GetUpsertCollectionDataJobRequest
          * @return GetUpsertCollectionDataJobResponse
@@ -14930,7 +14990,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 处理指定的查询SQL
+         * @summary Processes active queries.
          *
          * @param request HandleActiveSQLRecordRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -14972,7 +15032,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 处理指定的查询SQL
+         * @summary Processes active queries.
          *
          * @param request HandleActiveSQLRecordRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15014,7 +15074,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 处理指定的查询SQL
+         * @summary Processes active queries.
          *
          * @param request HandleActiveSQLRecordRequest
          * @return HandleActiveSQLRecordResponse
@@ -15026,7 +15086,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 处理指定的查询SQL
+         * @summary Processes active queries.
          *
          * @param request HandleActiveSQLRecordRequest
          * @return HandleActiveSQLRecordResponse
@@ -15286,7 +15346,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取知识库列表
+         * @summary Queries a list of document collections.
          *
          * @param request ListDocumentCollectionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15336,7 +15396,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取知识库列表
+         * @summary Queries a list of document collections.
          *
          * @param request ListDocumentCollectionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15386,7 +15446,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取知识库列表
+         * @summary Queries a list of document collections.
          *
          * @param request ListDocumentCollectionsRequest
          * @return ListDocumentCollectionsResponse
@@ -15398,7 +15458,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取知识库列表
+         * @summary Queries a list of document collections.
          *
          * @param request ListDocumentCollectionsRequest
          * @return ListDocumentCollectionsResponse
@@ -15410,7 +15470,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询文档列表
+         * @summary Queries a list of documents in a collection.
          *
          * @param request ListDocumentsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15464,7 +15524,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询文档列表
+         * @summary Queries a list of documents in a collection.
          *
          * @param request ListDocumentsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15518,7 +15578,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询文档列表
+         * @summary Queries a list of documents in a collection.
          *
          * @param request ListDocumentsRequest
          * @return ListDocumentsResponse
@@ -15530,7 +15590,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询文档列表
+         * @summary Queries a list of documents in a collection.
          *
          * @param request ListDocumentsRequest
          * @return ListDocumentsResponse
@@ -15542,7 +15602,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取外部数据服务列表
+         * @summary Queries a list of external data sources.
          *
          * @param request ListExternalDataServicesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15588,7 +15648,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取外部数据服务列表
+         * @summary Queries a list of external data sources.
          *
          * @param request ListExternalDataServicesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15634,7 +15694,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取外部数据服务列表
+         * @summary Queries a list of external data sources.
          *
          * @param request ListExternalDataServicesRequest
          * @return ListExternalDataServicesResponse
@@ -15646,7 +15706,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取外部数据服务列表
+         * @summary Queries a list of external data sources.
          *
          * @param request ListExternalDataServicesRequest
          * @return ListExternalDataServicesResponse
@@ -15774,7 +15834,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取实例插件列表
+         * @summary Queries a list of extensions.
          *
          * @param request ListInstanceExtensionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15828,7 +15888,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取实例插件列表
+         * @summary Queries a list of extensions.
          *
          * @param request ListInstanceExtensionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -15882,7 +15942,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取实例插件列表
+         * @summary Queries a list of extensions.
          *
          * @param request ListInstanceExtensionsRequest
          * @return ListInstanceExtensionsResponse
@@ -15894,7 +15954,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取实例插件列表
+         * @summary Queries a list of extensions.
          *
          * @param request ListInstanceExtensionsRequest
          * @return ListInstanceExtensionsResponse
@@ -16030,7 +16090,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Queries the information about real-time data services.
          *
          * @param request ListStreamingDataServicesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16076,7 +16136,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Queries the information about real-time data services.
          *
          * @param request ListStreamingDataServicesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16122,7 +16182,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Queries the information about real-time data services.
          *
          * @param request ListStreamingDataServicesRequest
          * @return ListStreamingDataServicesResponse
@@ -16134,7 +16194,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Queries the information about real-time data services.
          *
          * @param request ListStreamingDataServicesRequest
          * @return ListStreamingDataServicesResponse
@@ -16146,7 +16206,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取实例外表配置列表
+         * @summary Queries real-time service data sources.
          *
          * @param request ListStreamingDataSourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16192,7 +16252,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取实例外表配置列表
+         * @summary Queries real-time service data sources.
          *
          * @param request ListStreamingDataSourcesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16238,7 +16298,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取实例外表配置列表
+         * @summary Queries real-time service data sources.
          *
          * @param request ListStreamingDataSourcesRequest
          * @return ListStreamingDataSourcesResponse
@@ -16250,7 +16310,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 获取实例外表配置列表
+         * @summary Queries real-time service data sources.
          *
          * @param request ListStreamingDataSourcesRequest
          * @return ListStreamingDataSourcesResponse
@@ -16262,7 +16322,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Queries real-time data service jobs.
          *
          * @param request ListStreamingJobsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16308,7 +16368,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Queries real-time data service jobs.
          *
          * @param request ListStreamingJobsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -16354,7 +16414,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Queries real-time data service jobs.
          *
          * @param request ListStreamingJobsRequest
          * @return ListStreamingJobsResponse
@@ -16366,7 +16426,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 删除外部数据源配置
+         * @summary Queries real-time data service jobs.
          *
          * @param request ListStreamingJobsRequest
          * @return ListStreamingJobsResponse
@@ -17526,7 +17586,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改资源组
+         * @summary Modifies the configurations of a resource group.
          *
          * @param tmpReq ModifyDBResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17574,7 +17634,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改资源组
+         * @summary Modifies the configurations of a resource group.
          *
          * @param tmpReq ModifyDBResourceGroupRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17622,7 +17682,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改资源组
+         * @summary Modifies the configurations of a resource group.
          *
          * @param request ModifyDBResourceGroupRequest
          * @return ModifyDBResourceGroupResponse
@@ -17634,7 +17694,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改资源组
+         * @summary Modifies the configurations of a resource group.
          *
          * @param request ModifyDBResourceGroupRequest
          * @return ModifyDBResourceGroupResponse
@@ -17646,7 +17706,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改外部数据服务
+         * @summary Modifies an external data service.
          *
          * @param request ModifyExternalDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17696,7 +17756,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改外部数据服务
+         * @summary Modifies an external data service.
          *
          * @param request ModifyExternalDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17746,7 +17806,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改外部数据服务
+         * @summary Modifies an external data service.
          *
          * @param request ModifyExternalDataServiceRequest
          * @return ModifyExternalDataServiceResponse
@@ -17758,7 +17818,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改外部数据服务
+         * @summary Modifies an external data service.
          *
          * @param request ModifyExternalDataServiceRequest
          * @return ModifyExternalDataServiceResponse
@@ -17770,7 +17830,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改hadoop数据源配置
+         * @summary Modifies the configurations of a Hadoop data source.
          *
          * @param request ModifyHadoopDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17852,7 +17912,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改hadoop数据源配置
+         * @summary Modifies the configurations of a Hadoop data source.
          *
          * @param request ModifyHadoopDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -17934,7 +17994,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改hadoop数据源配置
+         * @summary Modifies the configurations of a Hadoop data source.
          *
          * @param request ModifyHadoopDataSourceRequest
          * @return ModifyHadoopDataSourceResponse
@@ -17946,7 +18006,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改hadoop数据源配置
+         * @summary Modifies the configurations of a Hadoop data source.
          *
          * @param request ModifyHadoopDataSourceRequest
          * @return ModifyHadoopDataSourceResponse
@@ -17958,7 +18018,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改jdbc数据源配置
+         * @summary Modifies the configurations of a Java Database Connectivity (JDBC) data source.
          *
          * @param request ModifyJDBCDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18020,7 +18080,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改jdbc数据源配置
+         * @summary Modifies the configurations of a Java Database Connectivity (JDBC) data source.
          *
          * @param request ModifyJDBCDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18082,7 +18142,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改jdbc数据源配置
+         * @summary Modifies the configurations of a Java Database Connectivity (JDBC) data source.
          *
          * @param request ModifyJDBCDataSourceRequest
          * @return ModifyJDBCDataSourceResponse
@@ -18094,7 +18154,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改jdbc数据源配置
+         * @summary Modifies the configurations of a Java Database Connectivity (JDBC) data source.
          *
          * @param request ModifyJDBCDataSourceRequest
          * @return ModifyJDBCDataSourceResponse
@@ -18106,7 +18166,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改master规格
+         * @summary Changes the specifications of coordinator node resources for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not available for instances in reserved storage mode.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
          *
          * @param request ModifyMasterSpecRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18152,7 +18215,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改master规格
+         * @summary Changes the specifications of coordinator node resources for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not available for instances in reserved storage mode.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
          *
          * @param request ModifyMasterSpecRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18198,7 +18264,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改master规格
+         * @summary Changes the specifications of coordinator node resources for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not available for instances in reserved storage mode.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
          *
          * @param request ModifyMasterSpecRequest
          * @return ModifyMasterSpecResponse
@@ -18210,7 +18279,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改master规格
+         * @summary Changes the specifications of coordinator node resources for an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not available for instances in reserved storage mode.
+         * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](https://help.aliyun.com/document_detail/35406.html) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
          *
          * @param request ModifyMasterSpecRequest
          * @return ModifyMasterSpecResponse
@@ -18594,7 +18666,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Modifies a real-time data service.
          *
          * @param request ModifyStreamingDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18644,7 +18716,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Modifies a real-time data service.
          *
          * @param request ModifyStreamingDataServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18694,7 +18766,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Modifies a real-time data service.
          *
          * @param request ModifyStreamingDataServiceRequest
          * @return ModifyStreamingDataServiceResponse
@@ -18706,7 +18778,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 创建外部数据源配置
+         * @summary Modifies a real-time data service.
          *
          * @param request ModifyStreamingDataServiceRequest
          * @return ModifyStreamingDataServiceResponse
@@ -18718,7 +18790,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改外部数据源配置
+         * @summary Modifies a real-time service data source.
          *
          * @param request ModifyStreamingDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18768,7 +18840,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改外部数据源配置
+         * @summary Modifies a real-time service data source.
          *
          * @param request ModifyStreamingDataSourceRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -18818,7 +18890,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改外部数据源配置
+         * @summary Modifies a real-time service data source.
          *
          * @param request ModifyStreamingDataSourceRequest
          * @return ModifyStreamingDataSourceResponse
@@ -18830,7 +18902,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 修改外部数据源配置
+         * @summary Modifies a real-time service data source.
          *
          * @param request ModifyStreamingDataSourceRequest
          * @return ModifyStreamingDataSourceResponse
@@ -19230,7 +19302,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 暂停数据重分布
+         * @summary Pauses data redistribution.
          *
          * @param request PauseDataRedistributeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -19268,7 +19340,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 暂停数据重分布
+         * @summary Pauses data redistribution.
          *
          * @param request PauseDataRedistributeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -19306,7 +19378,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 暂停数据重分布
+         * @summary Pauses data redistribution.
          *
          * @param request PauseDataRedistributeRequest
          * @return PauseDataRedistributeResponse
@@ -19318,7 +19390,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 暂停数据重分布
+         * @summary Pauses data redistribution.
          *
          * @param request PauseDataRedistributeRequest
          * @return PauseDataRedistributeResponse
@@ -19454,7 +19526,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询向量数据
+         * @summary Retrieves vector data.
          *
          * @param tmpReq QueryCollectionDataRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -19562,7 +19634,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询向量数据
+         * @summary Retrieves vector data.
          *
          * @param tmpReq QueryCollectionDataRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -19670,7 +19742,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询向量数据
+         * @summary Retrieves vector data.
          *
          * @param request QueryCollectionDataRequest
          * @return QueryCollectionDataResponse
@@ -19682,7 +19754,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 查询向量数据
+         * @summary Retrieves vector data.
          *
          * @param request QueryCollectionDataRequest
          * @return QueryCollectionDataResponse
@@ -20430,7 +20502,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 重置IMV统计信息
+         * @summary Resets the IMV statistics.
          *
          * @param request ResetIMVMonitorDataRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20468,7 +20540,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 重置IMV统计信息
+         * @summary Resets the IMV statistics.
          *
          * @param request ResetIMVMonitorDataRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20506,7 +20578,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 重置IMV统计信息
+         * @summary Resets the IMV statistics.
          *
          * @param request ResetIMVMonitorDataRequest
          * @return ResetIMVMonitorDataResponse
@@ -20518,7 +20590,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 重置IMV统计信息
+         * @summary Resets the IMV statistics.
          *
          * @param request ResetIMVMonitorDataRequest
          * @return ResetIMVMonitorDataResponse
@@ -20646,7 +20718,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 恢复数据重分布
+         * @summary Resumes data redistribution.
          *
          * @param request ResumeDataRedistributeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20684,7 +20756,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 恢复数据重分布
+         * @summary Resumes data redistribution.
          *
          * @param request ResumeDataRedistributeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -20722,7 +20794,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 恢复数据重分布
+         * @summary Resumes data redistribution.
          *
          * @param request ResumeDataRedistributeRequest
          * @return ResumeDataRedistributeResponse
@@ -20734,7 +20806,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 恢复数据重分布
+         * @summary Resumes data redistribution.
          *
          * @param request ResumeDataRedistributeRequest
          * @return ResumeDataRedistributeResponse
@@ -21146,7 +21218,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary Switches the internal or public endpoint for an AnalyticDB for PostgreSQL instance.
+         * @summary Switches between the internal and public endpoints of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not supported for AnalyticDB for PostgreSQL instances in elastic storage mode or Serverless mode.
          *
          * @param request SwitchDBInstanceNetTypeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21188,7 +21262,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary Switches the internal or public endpoint for an AnalyticDB for PostgreSQL instance.
+         * @summary Switches between the internal and public endpoints of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not supported for AnalyticDB for PostgreSQL instances in elastic storage mode or Serverless mode.
          *
          * @param request SwitchDBInstanceNetTypeRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21230,7 +21306,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary Switches the internal or public endpoint for an AnalyticDB for PostgreSQL instance.
+         * @summary Switches between the internal and public endpoints of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not supported for AnalyticDB for PostgreSQL instances in elastic storage mode or Serverless mode.
          *
          * @param request SwitchDBInstanceNetTypeRequest
          * @return SwitchDBInstanceNetTypeResponse
@@ -21242,7 +21320,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary Switches the internal or public endpoint for an AnalyticDB for PostgreSQL instance.
+         * @summary Switches between the internal and public endpoints of an AnalyticDB for PostgreSQL instance.
+         *
+         * @description This operation is not supported for AnalyticDB for PostgreSQL instances in elastic storage mode or Serverless mode.
          *
          * @param request SwitchDBInstanceNetTypeRequest
          * @return SwitchDBInstanceNetTypeResponse
@@ -21402,7 +21482,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 将资源组与数据库角色进行解绑
+         * @summary Unbinds database roles from a resource group.
          *
          * @param tmpReq UnbindDBResourceGroupWithRoleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21454,7 +21534,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 将资源组与数据库角色进行解绑
+         * @summary Unbinds database roles from a resource group.
          *
          * @param tmpReq UnbindDBResourceGroupWithRoleRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21506,7 +21586,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 将资源组与数据库角色进行解绑
+         * @summary Unbinds database roles from a resource group.
          *
          * @param request UnbindDBResourceGroupWithRoleRequest
          * @return UnbindDBResourceGroupWithRoleResponse
@@ -21518,7 +21598,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 将资源组与数据库角色进行解绑
+         * @summary Unbinds database roles from a resource group.
          *
          * @param request UnbindDBResourceGroupWithRoleRequest
          * @return UnbindDBResourceGroupWithRoleResponse
@@ -21802,7 +21882,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 更新Collection Data的Metadata数据
+         * @summary Updates metadata in the vector data.
          *
          * @param tmpReq UpdateCollectionDataMetadataRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21878,7 +21958,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 更新Collection Data的Metadata数据
+         * @summary Updates metadata in the vector data.
          *
          * @param tmpReq UpdateCollectionDataMetadataRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -21954,7 +22034,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 更新Collection Data的Metadata数据
+         * @summary Updates metadata in the vector data.
          *
          * @param request UpdateCollectionDataMetadataRequest
          * @return UpdateCollectionDataMetadataResponse
@@ -21966,7 +22046,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 更新Collection Data的Metadata数据
+         * @summary Updates metadata in the vector data.
          *
          * @param request UpdateCollectionDataMetadataRequest
          * @return UpdateCollectionDataMetadataResponse
@@ -22490,7 +22570,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 升级插件
+         * @summary Updates extensions.
          *
          * @param request UpgradeExtensionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -22532,7 +22612,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 升级插件
+         * @summary Updates extensions.
          *
          * @param request UpgradeExtensionsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -22574,7 +22654,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 升级插件
+         * @summary Updates extensions.
          *
          * @param request UpgradeExtensionsRequest
          * @return UpgradeExtensionsResponse
@@ -22586,7 +22666,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 升级插件
+         * @summary Updates extensions.
          *
          * @param request UpgradeExtensionsRequest
          * @return UpgradeExtensionsResponse
@@ -22598,7 +22678,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 异步上传文档
+         * @summary Uploads a document in an asynchronous manner by using an on-premises file or an Internet-accessible file URL. After a document is uploaded, the server loads, chunks, embeds, and stores the document. A document can be up to 200 MB in size.
+         *
+         * @description The server loads and chunks a document based on the file extension, performs vectorization by using the embedding model that is specified when you call the CreateDocumentCollection operation, and then writes the document to the specified document collection. This operation supports multi-modal embedding for various formats of text and images.
+         * Related operations:
+         * *   You can call the GetUploadDocumentJob operation to query the progress and result of a document upload job.
+         * *   You can call the CancelUploadDocumentJob operation to cancel a document upload job.
+         * > 
+         * *   After a document upload request is submitted, the request is queued for processing. Up to 20 documents in the Pending and Running states can be processed within a Resource Access Management (RAM) user or Alibaba Cloud account.
+         * *   A text document can be split into up to 100,000 chunks.
+         * *   If a document collection uses the OnePeace model, each RAM user or Alibaba Cloud account can upload and query up to 10,000 images.
          *
          * @param tmpReq UploadDocumentAsyncRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -22704,7 +22793,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 异步上传文档
+         * @summary Uploads a document in an asynchronous manner by using an on-premises file or an Internet-accessible file URL. After a document is uploaded, the server loads, chunks, embeds, and stores the document. A document can be up to 200 MB in size.
+         *
+         * @description The server loads and chunks a document based on the file extension, performs vectorization by using the embedding model that is specified when you call the CreateDocumentCollection operation, and then writes the document to the specified document collection. This operation supports multi-modal embedding for various formats of text and images.
+         * Related operations:
+         * *   You can call the GetUploadDocumentJob operation to query the progress and result of a document upload job.
+         * *   You can call the CancelUploadDocumentJob operation to cancel a document upload job.
+         * > 
+         * *   After a document upload request is submitted, the request is queued for processing. Up to 20 documents in the Pending and Running states can be processed within a Resource Access Management (RAM) user or Alibaba Cloud account.
+         * *   A text document can be split into up to 100,000 chunks.
+         * *   If a document collection uses the OnePeace model, each RAM user or Alibaba Cloud account can upload and query up to 10,000 images.
          *
          * @param tmpReq UploadDocumentAsyncRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -22810,7 +22908,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 异步上传文档
+         * @summary Uploads a document in an asynchronous manner by using an on-premises file or an Internet-accessible file URL. After a document is uploaded, the server loads, chunks, embeds, and stores the document. A document can be up to 200 MB in size.
+         *
+         * @description The server loads and chunks a document based on the file extension, performs vectorization by using the embedding model that is specified when you call the CreateDocumentCollection operation, and then writes the document to the specified document collection. This operation supports multi-modal embedding for various formats of text and images.
+         * Related operations:
+         * *   You can call the GetUploadDocumentJob operation to query the progress and result of a document upload job.
+         * *   You can call the CancelUploadDocumentJob operation to cancel a document upload job.
+         * > 
+         * *   After a document upload request is submitted, the request is queued for processing. Up to 20 documents in the Pending and Running states can be processed within a Resource Access Management (RAM) user or Alibaba Cloud account.
+         * *   A text document can be split into up to 100,000 chunks.
+         * *   If a document collection uses the OnePeace model, each RAM user or Alibaba Cloud account can upload and query up to 10,000 images.
          *
          * @param request UploadDocumentAsyncRequest
          * @return UploadDocumentAsyncResponse
@@ -22822,7 +22929,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 异步上传文档
+         * @summary Uploads a document in an asynchronous manner by using an on-premises file or an Internet-accessible file URL. After a document is uploaded, the server loads, chunks, embeds, and stores the document. A document can be up to 200 MB in size.
+         *
+         * @description The server loads and chunks a document based on the file extension, performs vectorization by using the embedding model that is specified when you call the CreateDocumentCollection operation, and then writes the document to the specified document collection. This operation supports multi-modal embedding for various formats of text and images.
+         * Related operations:
+         * *   You can call the GetUploadDocumentJob operation to query the progress and result of a document upload job.
+         * *   You can call the CancelUploadDocumentJob operation to cancel a document upload job.
+         * > 
+         * *   After a document upload request is submitted, the request is queued for processing. Up to 20 documents in the Pending and Running states can be processed within a Resource Access Management (RAM) user or Alibaba Cloud account.
+         * *   A text document can be split into up to 100,000 chunks.
+         * *   If a document collection uses the OnePeace model, each RAM user or Alibaba Cloud account can upload and query up to 10,000 images.
          *
          * @param request UploadDocumentAsyncRequest
          * @return UploadDocumentAsyncResponse
@@ -22998,7 +23114,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 上传切分后的文本
+         * @summary Splits a document into chunks and uploads the vectorized chunks to a document collection.
          *
          * @param tmpReq UpsertChunksRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -23068,7 +23184,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 上传切分后的文本
+         * @summary Splits a document into chunks and uploads the vectorized chunks to a document collection.
          *
          * @param tmpReq UpsertChunksRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -23138,7 +23254,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 上传切分后的文本
+         * @summary Splits a document into chunks and uploads the vectorized chunks to a document collection.
          *
          * @param request UpsertChunksRequest
          * @return UpsertChunksResponse
@@ -23150,7 +23266,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 上传切分后的文本
+         * @summary Splits a document into chunks and uploads the vectorized chunks to a document collection.
          *
          * @param request UpsertChunksRequest
          * @return UpsertChunksResponse
@@ -23318,7 +23434,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 上传向量数据异步接口
+         * @summary Uploads vector data in an asynchronous manner by using an on-premises file or a password-free Internet-accessible file URL. The vector data can be up to 200 MB in size.
+         *
+         * @description This operation is the asynchronous operation of `UpsertCollectionData`. The `UpsertCollectionData` operation supports up to 10 MB of data, and this operation supports up to 200 MB of data.
+         * >  Related operations:
+         * *   You can call the GetUpsertCollectionDataJob operation to query the progress and result of an upload job.
+         * *   You can call the CancelUpsertCollectionDataJob operation to cancel an upload job.
+         * > You can upload data for the same collection only in a serial manner.
          *
          * @param request UpsertCollectionDataAsyncRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -23378,7 +23500,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 上传向量数据异步接口
+         * @summary Uploads vector data in an asynchronous manner by using an on-premises file or a password-free Internet-accessible file URL. The vector data can be up to 200 MB in size.
+         *
+         * @description This operation is the asynchronous operation of `UpsertCollectionData`. The `UpsertCollectionData` operation supports up to 10 MB of data, and this operation supports up to 200 MB of data.
+         * >  Related operations:
+         * *   You can call the GetUpsertCollectionDataJob operation to query the progress and result of an upload job.
+         * *   You can call the CancelUpsertCollectionDataJob operation to cancel an upload job.
+         * > You can upload data for the same collection only in a serial manner.
          *
          * @param request UpsertCollectionDataAsyncRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -23438,7 +23566,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 上传向量数据异步接口
+         * @summary Uploads vector data in an asynchronous manner by using an on-premises file or a password-free Internet-accessible file URL. The vector data can be up to 200 MB in size.
+         *
+         * @description This operation is the asynchronous operation of `UpsertCollectionData`. The `UpsertCollectionData` operation supports up to 10 MB of data, and this operation supports up to 200 MB of data.
+         * >  Related operations:
+         * *   You can call the GetUpsertCollectionDataJob operation to query the progress and result of an upload job.
+         * *   You can call the CancelUpsertCollectionDataJob operation to cancel an upload job.
+         * > You can upload data for the same collection only in a serial manner.
          *
          * @param request UpsertCollectionDataAsyncRequest
          * @return UpsertCollectionDataAsyncResponse
@@ -23450,7 +23584,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
         /**
-         * @summary 上传向量数据异步接口
+         * @summary Uploads vector data in an asynchronous manner by using an on-premises file or a password-free Internet-accessible file URL. The vector data can be up to 200 MB in size.
+         *
+         * @description This operation is the asynchronous operation of `UpsertCollectionData`. The `UpsertCollectionData` operation supports up to 10 MB of data, and this operation supports up to 200 MB of data.
+         * >  Related operations:
+         * *   You can call the GetUpsertCollectionDataJob operation to query the progress and result of an upload job.
+         * *   You can call the CancelUpsertCollectionDataJob operation to cancel an upload job.
+         * > You can upload data for the same collection only in a serial manner.
          *
          * @param request UpsertCollectionDataAsyncRequest
          * @return UpsertCollectionDataAsyncResponse

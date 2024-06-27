@@ -45,6 +45,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public int? ServiceId { get; set; }
 
+        /// <summary>
+        /// The status of the service. Valid values:
+        /// 
+        /// *   init
+        /// *   running
+        /// *   exception
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

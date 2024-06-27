@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpdateCollectionDataMetadataRequest : TeaModel {
         /// <summary>
+        /// The name of the collection.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("Collection")]
@@ -17,25 +19,32 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Collection { get; set; }
 
         /// <summary>
+        /// The instance ID.
+        /// 
+        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause. You cannot leave both this parameter and Ids empty.
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
 
         /// <summary>
-        /// The row IDs of the data that you want to update. You must specify one of the Ids and Filter parameters.
+        /// The row IDs of the data to be updated. You cannot leave both this parameter and Filter empty.
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public List<string> Ids { get; set; }
 
         /// <summary>
-        /// The data that you want to update, which is a JSON string in the MAP format. In the JSON string, key specifies the field name and value specifies the new data value.
+        /// The data to be updated, which is a JSON string in the MAP format. In the JSON string, key specifies the field name and value specifies the new data value.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -43,11 +52,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Metadata { get; set; }
 
+        /// <summary>
+        /// The name of the namespace.
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
+        /// The password of the namespace.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("NamespacePassword")]
@@ -59,7 +73,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// The region ID.
+        /// 
+        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
         /// 
         /// This parameter is required.
         /// </summary>
