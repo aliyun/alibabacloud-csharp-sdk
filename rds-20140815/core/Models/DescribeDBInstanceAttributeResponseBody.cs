@@ -439,6 +439,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                     }
 
+                    [NameInMap("RecoveryModel")]
+                    [Validation(Required=false)]
+                    public string RecoveryModel { get; set; }
+
                 }
 
                 /// <summary>

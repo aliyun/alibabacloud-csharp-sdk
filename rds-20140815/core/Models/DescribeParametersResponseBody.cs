@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyRunningParametersDBInstanceParameter> DBInstanceParameter { get; set; }
             public class DescribeParametersResponseBodyRunningParametersDBInstanceParameter : TeaModel {
+                [NameInMap("ParameterDefaultValue")]
+                [Validation(Required=false)]
+                public string ParameterDefaultValue { get; set; }
+
                 /// <summary>
                 /// The description of the parameter.
                 /// </summary>
@@ -136,6 +140,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
                 public string ParameterValue { get; set; }
+
+                [NameInMap("ParameterValueRange")]
+                [Validation(Required=false)]
+                public string ParameterValueRange { get; set; }
 
             }
 
