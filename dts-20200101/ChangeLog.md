@@ -1,3 +1,8 @@
+2024-06-27 Version: 1.4.4
+- Update API DescribeDtsJobs: add param DestProductType.
+- Update API DescribeDtsJobs: add param SrcProductType.
+
+
 2024-06-13 Version: 1.4.3
 - Update API ConfigureSubscription: add param SrcCaCertificateOssUrl.
 - Update API ConfigureSubscription: add param SrcCaCertificatePassword.

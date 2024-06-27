@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string DedicatedClusterId { get; set; }
 
+        [NameInMap("DestProductType")]
+        [Validation(Required=false)]
+        public string DestProductType { get; set; }
+
         /// <summary>
         /// The environment tag of the DTS instance. Valid values:
         /// 
@@ -138,6 +142,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("SrcProductType")]
+        [Validation(Required=false)]
+        public string SrcProductType { get; set; }
 
         /// <summary>
         /// The state of the DTS task.

@@ -7217,6 +7217,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["DedicatedClusterId"] = request.DedicatedClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestProductType))
+            {
+                query["DestProductType"] = request.DestProductType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsBisLabel))
             {
                 query["DtsBisLabel"] = request.DtsBisLabel;
@@ -7280,6 +7284,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcProductType))
+            {
+                query["SrcProductType"] = request.SrcProductType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -7338,6 +7346,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["DedicatedClusterId"] = request.DedicatedClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestProductType))
+            {
+                query["DestProductType"] = request.DestProductType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsBisLabel))
             {
                 query["DtsBisLabel"] = request.DtsBisLabel;
@@ -7401,6 +7413,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcProductType))
+            {
+                query["SrcProductType"] = request.SrcProductType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
