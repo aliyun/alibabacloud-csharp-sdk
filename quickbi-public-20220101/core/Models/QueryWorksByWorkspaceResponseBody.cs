@@ -113,6 +113,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public string OwnerName { get; set; }
 
+                [NameInMap("PublicFlag")]
+                [Validation(Required=false)]
+                public bool? PublicFlag { get; set; }
+
+                [NameInMap("PublicInvalidTime")]
+                [Validation(Required=false)]
+                public long? PublicInvalidTime { get; set; }
+
                 /// <summary>
                 /// Security policies for collaborative authorization of works. Valid values:
                 /// 

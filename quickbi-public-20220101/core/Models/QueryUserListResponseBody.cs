@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public bool? AuthAdminUser { get; set; }
 
+                [NameInMap("JoinedDate")]
+                [Validation(Required=false)]
+                public long? JoinedDate { get; set; }
+
+                [NameInMap("LastLoginTime")]
+                [Validation(Required=false)]
+                public long? LastLoginTime { get; set; }
+
                 [NameInMap("NickName")]
                 [Validation(Required=false)]
                 public string NickName { get; set; }
