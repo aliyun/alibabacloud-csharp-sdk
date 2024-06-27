@@ -26,6 +26,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ClusterId { get; set; }
 
         /// <summary>

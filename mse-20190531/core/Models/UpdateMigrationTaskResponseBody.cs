@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string ProjectDesc { get; set; }
 
+            [NameInMap("SyncType")]
+            [Validation(Required=false)]
+            public string SyncType { get; set; }
+
             /// <summary>
             /// The name of the destination instance.
             /// </summary>
