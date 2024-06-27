@@ -58,10 +58,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// The name of the database. When you restore data to a new instance, the format of the database name is `Original database name 1,New database name 2`.
         /// 
-        /// *   If you want to restore databases to a new instance, the value is in the format of `Original database name 1,New database name 2`.
-        /// *   If you want to restore databases to an existing instance, the value is in the format of `{"Original database name 1":"New database name 1","Original database name 2":"New database name 2"`.
+        /// >  For more information about how to restore data to an existing instance, see [CopyDatabaseBetweenInstances](https://help.aliyun.com/document_detail/2628854.html).
         /// 
         /// This parameter is required.
         /// </summary>
