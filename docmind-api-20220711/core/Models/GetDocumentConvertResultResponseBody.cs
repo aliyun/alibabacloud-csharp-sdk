@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Completed")]
         [Validation(Required=false)]
         public bool? Completed { get; set; }
@@ -47,6 +50,9 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

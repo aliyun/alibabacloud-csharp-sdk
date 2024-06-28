@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
     public class SubmitDocStructureJobAdvanceRequest : TeaModel {
+        [NameInMap("AllowPptFormat")]
+        [Validation(Required=false)]
+        public bool? AllowPptFormat { get; set; }
+
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
