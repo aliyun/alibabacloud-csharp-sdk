@@ -2310,6 +2310,10 @@ namespace AlibabaCloud.SDK.Eci20180808
             {
                 query["ContainerGroupId"] = request.ContainerGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -2373,6 +2377,10 @@ namespace AlibabaCloud.SDK.Eci20180808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerGroupId))
             {
                 query["ContainerGroupId"] = request.ContainerGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
