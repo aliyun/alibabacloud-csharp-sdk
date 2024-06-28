@@ -1641,6 +1641,24 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 }
 
+                [NameInMap("InstanceEndpoint")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkRocketMQParametersInstanceEndpoint InstanceEndpoint { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkRocketMQParametersInstanceEndpoint : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
                 /// <summary>
                 /// The ID of the ApsaraMQ for RocketMQ instance.
                 /// </summary>
@@ -1665,6 +1683,60 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     /// <summary>
                     /// The ID of the ApsaraMQ for RocketMQ instance.
                     /// </summary>
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("InstancePassword")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkRocketMQParametersInstancePassword InstancePassword { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkRocketMQParametersInstancePassword : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkRocketMQParametersInstanceType InstanceType { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkRocketMQParametersInstanceType : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("InstanceUsername")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkRocketMQParametersInstanceUsername InstanceUsername { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkRocketMQParametersInstanceUsername : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
@@ -1701,6 +1773,24 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 }
 
+                [NameInMap("Network")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkRocketMQParametersNetwork Network { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkRocketMQParametersNetwork : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
                 /// <summary>
                 /// The attributes that you want to use to filter messages.
                 /// </summary>
@@ -1725,6 +1815,24 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     /// <summary>
                     /// The value before transformation.
                     /// </summary>
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkRocketMQParametersSecurityGroupId SecurityGroupId { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkRocketMQParametersSecurityGroupId : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
@@ -1785,6 +1893,42 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     /// <summary>
                     /// The topic on the ApsaraMQ for RocketMQ instance.
                     /// </summary>
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkRocketMQParametersVSwitchIds VSwitchIds { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkRocketMQParametersVSwitchIds : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkRocketMQParametersVpcId VpcId { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkRocketMQParametersVpcId : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
