@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class QuerySavingsPlansDiscountRequest : TeaModel {
         /// <summary>
         /// The code of the service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The cycle based on which queries are performed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Cycle")]
         [Validation(Required=false)]
@@ -53,6 +57,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The payment mode.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayMode")]
         [Validation(Required=false)]
@@ -74,6 +80,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The type of the savings plan.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SpnType")]
         [Validation(Required=false)]

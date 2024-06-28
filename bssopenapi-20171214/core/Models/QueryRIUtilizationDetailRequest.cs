@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The time when the RI expires. Specify the time in the YYYY-MM-DD HH:mm:ss format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -49,6 +51,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// 
         /// *   ecsRi: ECS RI.
         /// *   scu_bag: storage capacity unit (SCU).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RICommodityCode")]
         [Validation(Required=false)]
@@ -63,6 +67,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The time when the RI was created. Specify the time in the YYYY-MM-DD HH:mm:ss format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

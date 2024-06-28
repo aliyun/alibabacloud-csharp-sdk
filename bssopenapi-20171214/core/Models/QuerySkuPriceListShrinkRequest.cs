@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class QuerySkuPriceListShrinkRequest : TeaModel {
         /// <summary>
         /// The code of the service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The number of entries to be returned on each page. Maximum value: 50.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The code of the pricing object.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PriceEntityCode")]
         [Validation(Required=false)]

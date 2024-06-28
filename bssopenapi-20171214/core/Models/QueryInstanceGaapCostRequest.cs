@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryInstanceGaapCostRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
         public string BillingCycle { get; set; }

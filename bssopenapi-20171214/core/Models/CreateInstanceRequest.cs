@@ -36,6 +36,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public class CreateInstanceRequestParameter : TeaModel {
             /// <summary>
             /// The code property of the Nth module. Value of N: 1 to 100. If multiple module property parameters are involved, concatenate multiple parameters based on the value of N in sequence.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
@@ -43,6 +45,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
             /// <summary>
             /// The value property of the Nth module. Value of N: 1 to 100.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -61,6 +65,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The code of the service to which the instance belongs. You can query the service code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud Services**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -99,6 +105,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// 
         /// *   Subscription: the subscription billing method.
         /// *   PayAsYouGo: the pay-as-you-go billing method.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]

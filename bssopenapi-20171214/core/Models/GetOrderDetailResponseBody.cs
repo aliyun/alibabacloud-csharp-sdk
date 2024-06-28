@@ -76,6 +76,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     [Validation(Required=false)]
                     public string Currency { get; set; }
 
+                    /// <summary>
+                    /// The order extension information.
+                    /// </summary>
                     [NameInMap("ExtendInfos")]
                     [Validation(Required=false)]
                     public Dictionary<string, string> ExtendInfos { get; set; }

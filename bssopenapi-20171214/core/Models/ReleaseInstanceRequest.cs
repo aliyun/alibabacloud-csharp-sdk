@@ -11,17 +11,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class ReleaseInstanceRequest : TeaModel {
         /// <summary>
         /// The ID of the instance. Separate multiple IDs with commas (,). A maximum of 100 IDs can be specified.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
         /// <summary>
         /// The code of the service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -60,6 +67,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// Subscription: the subscription billing method.
         /// 
         /// PayAsYouGo: the pay-as-you-go billing method.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]

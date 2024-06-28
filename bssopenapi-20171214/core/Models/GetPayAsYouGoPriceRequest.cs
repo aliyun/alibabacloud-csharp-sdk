@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class GetPayAsYouGoPriceRequest : TeaModel {
         /// <summary>
         /// The details of pricing modules.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ModuleList")]
         [Validation(Required=false)]
@@ -19,7 +21,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             /// <summary>
             /// The configuration of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.
             /// 
-            /// >  You can call the [DescribePricingModule](~~96469~~) operation to obtain the configuration parameters of the pricing module.
+            /// >  You can call the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html) operation to obtain the configuration parameters of the pricing module.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
@@ -28,7 +32,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             /// <summary>
             /// The code of the Nth pricing module.
             /// 
-            /// >  You can call the [DescribePricingModule](~~96469~~) operation to obtain the module code.
+            /// >  You can call the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html) operation to obtain the module code.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ModuleCode")]
             [Validation(Required=false)]
@@ -42,7 +48,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             /// *   Month: monthly price
             /// *   Year: annual price
             /// 
-            /// >  You can call the [DescribePricingModule](~~96469~~) operation to obtain the configuration parameters of the pricing module.
+            /// >  You can call the [DescribePricingModule](https://help.aliyun.com/document_detail/96469.html) operation to obtain the configuration parameters of the pricing module.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("PriceType")]
             [Validation(Required=false)]
@@ -56,6 +64,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The code of the service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -77,6 +87,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The billing method. Set the value to PayAsYouGo.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]

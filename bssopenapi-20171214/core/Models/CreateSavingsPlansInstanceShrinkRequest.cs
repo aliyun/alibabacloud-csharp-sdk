@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class CreateSavingsPlansInstanceShrinkRequest : TeaModel {
         /// <summary>
         /// The code of the service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The service duration. This parameter is used together with the PricingCycle parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   total: all upfront
         /// *   half: partial upfront
         /// *   zero: no upfront
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PayMode")]
         [Validation(Required=false)]
@@ -47,6 +53,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The contracted amount. unit: CNY
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PoolValue")]
         [Validation(Required=false)]
@@ -57,6 +65,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// 
         /// *   Year
         /// *   Month
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
@@ -92,6 +102,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   universal: general-purpose type
         /// *   ecs: ECS compute type
         /// *   elasticy: elastic type
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

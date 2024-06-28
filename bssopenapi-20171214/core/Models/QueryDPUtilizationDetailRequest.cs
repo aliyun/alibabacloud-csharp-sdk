@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The end of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// 
         /// *   true: queries the resource plan usage of linked accounts.
         /// *   false: does not query the resource plan usage of linked accounts.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("IncludeShare")]
         [Validation(Required=false)]
@@ -77,6 +81,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The beginning of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

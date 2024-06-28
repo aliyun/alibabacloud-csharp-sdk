@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The billing cycle. Specify the parameter in the YYYY-MM format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
@@ -70,6 +72,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PipCode")]
+        [Validation(Required=false)]
+        public string PipCode { get; set; }
 
         /// <summary>
         /// The code of the service.

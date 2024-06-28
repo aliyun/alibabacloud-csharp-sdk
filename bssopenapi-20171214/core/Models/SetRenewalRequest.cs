@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class SetRenewalRequest : TeaModel {
         /// <summary>
         /// The ID of the instance. You can enable auto-renewal for up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceIDs")]
         [Validation(Required=false)]
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The code of the service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -67,6 +71,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   AutoRenewal: The instance is automatically renewed.
         /// *   ManualRenewal: The instance is manually renewed.
         /// *   NotRenewal: The instance is not renewed.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]

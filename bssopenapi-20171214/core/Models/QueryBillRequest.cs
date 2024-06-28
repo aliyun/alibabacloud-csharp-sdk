@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The billing cycle, in the YYYY-MM format.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]

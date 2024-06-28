@@ -48,6 +48,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The email address used to log on to the account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("LoginEmail")]
         [Validation(Required=false)]

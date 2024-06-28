@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   child_agree: The member accepts the invitation.
         /// *   child_disagree: The member rejects the invitation.
         /// *   Canceled by the master account: The management account cancels the confirmation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfirmCode")]
         [Validation(Required=false)]
@@ -44,6 +46,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   CHECK_FINANCE_INFO: requests to view information about the financial relationship.
         /// *   MANAGE_TARGET_INVOICE: allows the member to manage invoices.
         /// *   CHECK_TARGET_CONSUMPTION: allows the member to view the bills.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PermissionCodes")]
         [Validation(Required=false)]
@@ -65,6 +69,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The unique ID of the request.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

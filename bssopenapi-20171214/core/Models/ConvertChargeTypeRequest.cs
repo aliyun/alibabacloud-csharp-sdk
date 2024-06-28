@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class ConvertChargeTypeRequest : TeaModel {
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The code of the service to which the instance belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -53,6 +57,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   PayAsYouGo: pay-as-you-go
         /// 
         /// >  After the call is successful, the billing method of the instance is switched.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]

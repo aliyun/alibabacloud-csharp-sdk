@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The time granularity at which coverage details are queried. Valid values: MONTH, DAY, and HOUR.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PeriodType")]
         [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The type of deduction plans whose coverage details are queried. Valid values: RI and SCU.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -55,6 +59,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// The beginning of the time range to query.
         /// 
         /// The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartPeriod")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class QueryProductListRequest : TeaModel {
         /// <summary>
         /// The page number of the page to return.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]

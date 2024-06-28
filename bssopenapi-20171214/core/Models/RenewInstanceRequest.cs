@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The ID of the instance
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The code of the service to which the instance belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   12
         /// *   24
         /// *   36
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RenewPeriod")]
         [Validation(Required=false)]

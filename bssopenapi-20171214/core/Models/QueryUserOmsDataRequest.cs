@@ -16,6 +16,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   Hour
         /// *   Day
         /// *   Month
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DataType")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// The end of the time range to query.
         /// 
         /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -52,6 +56,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// The beginning of the time range to query.
         /// 
         /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -59,6 +65,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The service whose usage data you want to query and the details of the usage data. The parameter value is usually set to the code of a service. Various usage models are provided for different services.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Table")]
         [Validation(Required=false)]

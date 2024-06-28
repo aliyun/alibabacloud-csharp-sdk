@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The information about the pricing module.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ModuleList")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public class GetSubscriptionPriceRequestModuleList : TeaModel {
             /// <summary>
             /// The configurations of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
             /// <summary>
             /// The identifier of the Nth pricing module.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ModuleCode")]
             [Validation(Required=false)]
@@ -64,6 +70,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   NewOrder: purchases an instance of an Alibaba Cloud service.
         /// *   Renewal: renews an instance of an Alibaba Cloud service.
         /// *   Upgrade: upgrades an instance of an Alibaba Cloud service.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -75,6 +83,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The code of the service. For more information about the service code, see **Codes of Alibaba Cloud Services**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -120,6 +130,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The billing method. Set the value to Subscription.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]

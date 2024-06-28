@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? BillOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
         public string BillingCycle { get; set; }

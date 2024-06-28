@@ -42,12 +42,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string MultAccountRelSubscribe { get; set; }
 
+        /// <summary>
+        /// The upper limit of the number of lines in a single file. When the bill file exceeds the upper limit, it will be split into multiple files and merged into a compressed package.
+        /// </summary>
         [NameInMap("RowLimitPerFile")]
         [Validation(Required=false)]
         public int? RowLimitPerFile { get; set; }
 
         /// <summary>
         /// The OSS bucket that stores the bills to which you want to subscribe.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscribeBucket")]
         [Validation(Required=false)]
@@ -66,6 +71,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("SubscribeType")]
         [Validation(Required=false)]
         public string SubscribeType { get; set; }
+
+        /// <summary>
+        /// Whether to protect network communications through the SSL (Secure Sockets Layer) encryption protocol. When this parameter is set to true, it means that SSL encryption is enabled to ensure the security and integrity of data transmission.
+        /// </summary>
+        [NameInMap("UsingSsl")]
+        [Validation(Required=false)]
+        public string UsingSsl { get; set; }
 
     }
 

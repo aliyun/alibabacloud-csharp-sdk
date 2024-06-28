@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class CreateResourcePackageRequest : TeaModel {
         /// <summary>
         /// The validity period of the resource plan.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The type of the resource plan. Set this parameter to the code of the **resource plan** returned by calling the **DescribeResourcePackageProduct** operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PackageType")]
         [Validation(Required=false)]
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The code of the service. You can query the code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud services**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -57,6 +63,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The specifications of the resource plan. Set this parameter to the value of the **specifications** returned by calling the **DescribeResourcePackageProduct** operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Specification")]
         [Validation(Required=false)]

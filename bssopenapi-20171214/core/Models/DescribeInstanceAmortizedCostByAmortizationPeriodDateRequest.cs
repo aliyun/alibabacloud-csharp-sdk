@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AmortizationDateEnd")]
         [Validation(Required=false)]
         public string AmortizationDateEnd { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AmortizationDateStart")]
         [Validation(Required=false)]
         public string AmortizationDateStart { get; set; }

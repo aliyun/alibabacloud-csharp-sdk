@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class RenewResourcePackageRequest : TeaModel {
         /// <summary>
         /// The renewal period of the resource plan.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The ID of the resource plan.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   Year
         /// 
         /// Default value: Month.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]

@@ -57,6 +57,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// 
         /// *   ADD
         /// *   DELETE
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RelationOperation")]
         [Validation(Required=false)]
@@ -71,6 +73,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

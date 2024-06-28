@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class TagResourcesRequest : TeaModel {
         /// <summary>
         /// The IDs of resources.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The type of the resource. Specify savings plan instance as the type of the resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The tags.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
             /// The key of the tag. You can create N tag keys at a time. Valid values of N: 1 to 20. The value of this parameter can be an empty string.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -39,6 +47,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
             /// <summary>
             /// The value of the tag N. Valid values of N: 1 to 20.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

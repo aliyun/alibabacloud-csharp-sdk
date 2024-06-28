@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class QueryCostUnitResourceRequest : TeaModel {
         /// <summary>
         /// The user ID of the cost center owner.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OwnerUid")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The ID of the cost center.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("UnitId")]
         [Validation(Required=false)]

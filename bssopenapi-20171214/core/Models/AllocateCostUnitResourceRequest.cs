@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// 
         /// *   A value of 0 indicates that the resources to be transferred have not been allocated to a cost center.
         /// *   A value greater than 0 indicates the ID of an existing cost center.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FromUnitId")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The user ID of the owner of the source cost center.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("FromUnitUserId")]
         [Validation(Required=false)]
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The resource instances to be transferred.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceInstanceList")]
         [Validation(Required=false)]
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
             /// <summary>
             /// The commodity code of the resource instance.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("CommodityCode")]
             [Validation(Required=false)]
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
             /// <summary>
             /// The ID of the resource instance.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
@@ -59,6 +69,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
             /// <summary>
             /// The user ID of the resource instance owner.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("ResourceUserId")]
             [Validation(Required=false)]
@@ -71,6 +83,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// 
         /// *   A value of -1 indicates that the allocated resources are changed to unallocated.
         /// *   A value greater than 0 indicates the ID of an existing cost center.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ToUnitId")]
         [Validation(Required=false)]
@@ -78,6 +92,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The user ID of the owner of the destination cost center.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ToUnitUserId")]
         [Validation(Required=false)]

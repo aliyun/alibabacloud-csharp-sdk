@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class ChangeResellerConsumeAmountRequest : TeaModel {
         /// <summary>
         /// The type of the consumption amount adjustment. Valid values: increase: The consumption amount increases because new consumption occurs. decrease: The consumption amount decreases because funds are added to the account. This parameter is required.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AdjustType")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The amount to be adjusted. Unit: CNY
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Amount")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The type of the business.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BusinessType")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The type of the currency.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Currency")]
         [Validation(Required=false)]
@@ -46,17 +54,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The ID of the primary key for external business. The ID is used for idempotence verification.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OutBizId")]
         [Validation(Required=false)]
         public string OutBizId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
         /// <summary>
         /// The source of the request. Specify the system name for the parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

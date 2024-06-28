@@ -167,6 +167,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string CommodityName { get; set; }
 
+                [NameInMap("PipCode")]
+                [Validation(Required=false)]
+                public string PipCode { get; set; }
+
                 /// <summary>
                 /// The resources related to the resource instance.
                 /// </summary>
@@ -194,6 +198,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [NameInMap("ResourceNick")]
                 [Validation(Required=false)]
                 public string ResourceNick { get; set; }
+
+                [NameInMap("ResourceSource")]
+                [Validation(Required=false)]
+                public string ResourceSource { get; set; }
 
                 /// <summary>
                 /// The status of the resource.

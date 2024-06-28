@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
     public class ApplyInvoiceRequest : TeaModel {
         /// <summary>
         /// The ID of the address to which the invoice is delivered. This parameter is required if the invoice is a paper invoice. Set the ID to the value of the AddressId parameter returned by calling the QueryCustomerAddressList operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AddressId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The nickname of the applicant. The system does not verify the nickname.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ApplyUserNick")]
         [Validation(Required=false)]
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The ID of the customer. Set the ID to the value of the CustomerId parameter returned by calling the QueryInvoicingCustomerList operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("CustomerId")]
         [Validation(Required=false)]
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The amount of the invoice. Unit: Cent.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InvoiceAmount")]
         [Validation(Required=false)]
@@ -67,6 +75,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The IDs of the selected invoicing items. Set the IDs to the IDs returned by calling the QueryEvaluateList operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SelectedIds")]
         [Validation(Required=false)]

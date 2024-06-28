@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The ID of the Alibaba Cloud account that is used as the member.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ChildUserId")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The ID of the Alibaba Cloud account that is used as the management account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ParentUserId")]
         [Validation(Required=false)]
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The type of the financial relationship. Set the value to enterprise_group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RelationType")]
         [Validation(Required=false)]
@@ -57,6 +63,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

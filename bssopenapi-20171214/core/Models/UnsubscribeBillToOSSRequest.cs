@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// *   InstanceDetailMonthly: instance-based bills summarized by billing cycle
         /// *   SplitItemDetailDaily: split bills summarized by day
         /// *   MonthBill: monthly bills in the PDF format You can subscribe to the monthly PDF bills only of the master account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscribeType")]
         [Validation(Required=false)]

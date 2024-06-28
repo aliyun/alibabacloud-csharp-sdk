@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The allocation month. Format: YYYY-MM.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]

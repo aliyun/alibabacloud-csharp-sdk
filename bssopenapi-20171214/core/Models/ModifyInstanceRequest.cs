@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// 
         /// *   Upgrade: upgrades the configurations of the instance.
         /// *   Downgrade: downgrades the configurations of the instance.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ModifyType")]
         [Validation(Required=false)]
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             /// The code of the parameter n. Valid values of n: 1 to 100. Multiple parameters are concatenated in the order of n.
             /// 
             /// >  Only the parameters of the attributes that you want to modify for the instance must be configured. For example, if the instance has Attribute A and Attribute B and only Attribute A must be modified, configure only the parameter of Attribute A.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
@@ -55,6 +59,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
             /// <summary>
             /// The value of the parameter n. Valid values of n: 1 to 100.
+            /// 
+            /// This parameter is required.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -64,6 +70,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// The code of the service to which the instance belongs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -81,6 +89,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// 
         /// *   Subscription: subscription
         /// *   PayAsYouGo: pay-as-you-go
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]
