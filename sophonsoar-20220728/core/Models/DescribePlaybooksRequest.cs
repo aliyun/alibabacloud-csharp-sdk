@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
         /// <summary>
         /// The type of the playbook. Valid values:
         /// 
@@ -79,6 +83,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]
         public string PlaybookUuid { get; set; }
+
+        [NameInMap("Sort")]
+        [Validation(Required=false)]
+        public string Sort { get; set; }
 
         /// <summary>
         /// The beginning of the time range to query. The value is a 13-digit timestamp.

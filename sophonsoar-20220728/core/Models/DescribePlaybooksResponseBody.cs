@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
+            [NameInMap("GmtModified")]
+            [Validation(Required=false)]
+            public string GmtModified { get; set; }
+
             /// <summary>
             /// The time when the playbook was last run. The value is a 13-digit timestamp.
             /// </summary>

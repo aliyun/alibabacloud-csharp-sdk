@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         /// <summary>
         /// The new name of the node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewNodeName")]
         [Validation(Required=false)]
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         /// <summary>
         /// The original name of the node.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OldNodeName")]
         [Validation(Required=false)]
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The UUID of the playbook.
         /// 
         /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]

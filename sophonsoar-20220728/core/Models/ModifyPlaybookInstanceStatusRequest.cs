@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// 
         /// *   **1**: starts the playbook.
         /// *   **0**: stops the playbook.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Active")]
         [Validation(Required=false)]
@@ -33,6 +35,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The playbook UUID.
         /// 
         /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
     public class ModifyComponentAssetRequest : TeaModel {
         /// <summary>
         /// The configuration of the asset. The value is a JSON object.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AssetConfig")]
         [Validation(Required=false)]

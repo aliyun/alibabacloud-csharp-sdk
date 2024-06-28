@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
     public class DescribeSoarRecordsResponseBody : TeaModel {
         /// <summary>
         /// The pagination information.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]

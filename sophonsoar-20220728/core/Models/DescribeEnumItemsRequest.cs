@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The type of the enumeration item. Valid values:
         /// 
         /// *   **process**: scenarios
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EnumType")]
         [Validation(Required=false)]

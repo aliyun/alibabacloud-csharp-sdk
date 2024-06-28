@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
     public class DescribeComponentAssetFormRequest : TeaModel {
         /// <summary>
         /// The component name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ComponentName")]
         [Validation(Required=false)]

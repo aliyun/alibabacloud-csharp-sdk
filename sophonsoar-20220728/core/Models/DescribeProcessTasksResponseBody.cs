@@ -68,6 +68,27 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string EntityType { get; set; }
 
             /// <summary>
+            /// The error code returned if the call failed.
+            /// </summary>
+            [NameInMap("ErrCode")]
+            [Validation(Required=false)]
+            public string ErrCode { get; set; }
+
+            /// <summary>
+            /// The error message returned if the call failed.
+            /// </summary>
+            [NameInMap("ErrMsg")]
+            [Validation(Required=false)]
+            public string ErrMsg { get; set; }
+
+            /// <summary>
+            /// The error tip returned if the call failed.
+            /// </summary>
+            [NameInMap("ErrTip")]
+            [Validation(Required=false)]
+            public string ErrTip { get; set; }
+
+            /// <summary>
             /// The creation time of the handling task. The value is a 13-digit timestamp.
             /// </summary>
             [NameInMap("GmtCreateMillis")]
@@ -157,18 +178,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [NameInMap("YunCode")]
             [Validation(Required=false)]
             public string YunCode { get; set; }
-
-            [NameInMap("errCode")]
-            [Validation(Required=false)]
-            public string ErrCode { get; set; }
-
-            [NameInMap("errMsg")]
-            [Validation(Required=false)]
-            public string ErrMsg { get; set; }
-
-            [NameInMap("errTip")]
-            [Validation(Required=false)]
-            public string ErrTip { get; set; }
 
         }
 

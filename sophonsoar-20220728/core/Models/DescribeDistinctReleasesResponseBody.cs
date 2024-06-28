@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public string TaskflowMd5 { get; set; }
 
+            [NameInMap("TaskflowType")]
+            [Validation(Required=false)]
+            public string TaskflowType { get; set; }
+
         }
 
         /// <summary>

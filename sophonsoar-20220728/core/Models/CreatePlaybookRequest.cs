@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         /// <summary>
         /// The name of the playbook.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
@@ -32,6 +34,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        [NameInMap("TaskflowType")]
+        [Validation(Required=false)]
+        public string TaskflowType { get; set; }
 
     }
 

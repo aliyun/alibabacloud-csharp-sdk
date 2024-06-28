@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The key of the global configuration. Valid values:
         /// 
         /// *   **soar_filed_tags**: queries the input template of the playbook.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("QueryKey")]
         [Validation(Required=false)]

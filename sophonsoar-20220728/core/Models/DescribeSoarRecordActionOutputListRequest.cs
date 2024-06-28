@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The UUID of the component action.
         /// 
         /// >  You can call the [DescribeSoarTaskAndActions](~~DescribeSoarTaskAndActions~~) operation to query the UUID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ActionUuid")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         /// <summary>
         /// The page number. Default value: 1. Pages start from page 1.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.
         /// 
         /// >  We recommend that you do not leave this parameter empty.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

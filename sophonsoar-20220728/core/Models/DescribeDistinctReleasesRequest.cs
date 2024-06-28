@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The playbook UUID.
         /// 
         /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]

@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The UUID that is returned when the Python3 script is run.
         /// 
         /// >  You can call the [RunPython3Script](~~RunPython3Script~~) operation to query the UUID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RequestUuid")]
         [Validation(Required=false)]

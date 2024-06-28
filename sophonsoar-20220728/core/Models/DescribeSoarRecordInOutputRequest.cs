@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The UUID of the component action.
         /// 
         /// >  You can call the [DescribeSoarTaskAndActions](~~DescribeSoarTaskAndActions~~) operation to query the UUIDs of component actions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ActionUuid")]
         [Validation(Required=false)]

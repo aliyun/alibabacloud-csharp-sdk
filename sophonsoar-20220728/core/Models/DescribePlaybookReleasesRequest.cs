@@ -37,6 +37,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         /// <summary>
         /// The playbook UUID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]

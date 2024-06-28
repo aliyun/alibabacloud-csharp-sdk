@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         /// <summary>
         /// The input parameters of the command or playbook that you want to trigger.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("InputParams")]
         [Validation(Required=false)]

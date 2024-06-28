@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         /// <summary>
         /// The node name of the component.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The playbook UUID.
         /// 
         /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]

@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The version of the playbook that you want to publish.
         /// 
         /// >  You can call the [DescribePlaybookReleases](~~DescribePlaybookReleases~~) operation to query the playbook version.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PlayReleaseId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The UUID of the playbook.
         /// 
         /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]

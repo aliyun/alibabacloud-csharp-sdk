@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// 
         /// *   **remove**: cancels blocking or isolation.
         /// *   **retry**: submits the task again.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ActionType")]
         [Validation(Required=false)]
@@ -23,6 +25,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The ID of the handling task.
         /// 
         /// >  You can call the [DescribeProcessTasks](~~DescribeProcessTasks~~) operation to query the IDs of handling tasks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
     public class VerifyPythonFileRequest : TeaModel {
         /// <summary>
         /// The Python code snippet.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

@@ -129,6 +129,11 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public string Taskflow { get; set; }
 
+            /// <summary>
+            /// The playbook configuration type.
+            /// *   **xml**: XML format.
+            /// *   **x6**: JSON format.
+            /// </summary>
             [NameInMap("TaskflowType")]
             [Validation(Required=false)]
             public string TaskflowType { get; set; }

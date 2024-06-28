@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// The UUID of the handling policy.
         /// 
-        /// >  You can call the [ListDisposeStrategy](~~2584440~~) operation to query the UUID of the handling policy.
+        /// >  You can call the [ListDisposeStrategy](https://help.aliyun.com/document_detail/2584440.html) operation to query the UUID of the handling policy.
         /// </summary>
         [NameInMap("ProcessStrategyUuid")]
         [Validation(Required=false)]

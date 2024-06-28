@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [Validation(Required=false)]
         public DescribePlaybookInputOutputResponseBodyConfig Config { get; set; }
         public class DescribePlaybookInputOutputResponseBodyConfig : TeaModel {
+            /// <summary>
+            /// The execution method of the playbook is in JSONObject format.
+            /// </summary>
             [NameInMap("ExeConfig")]
             [Validation(Required=false)]
             public string ExeConfig { get; set; }

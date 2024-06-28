@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The UUID of the second version.
         /// 
         /// >  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the UUIDs of versions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NewPlaybookReleaseId")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The UUID of the first version.
         /// 
         /// >  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the UUIDs of versions.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("OldPlaybookReleaseId")]
         [Validation(Required=false)]
@@ -41,6 +45,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The UUID of the playbook.
         /// 
         /// >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]

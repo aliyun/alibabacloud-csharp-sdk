@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
     public class DescribePopApiVersionListRequest : TeaModel {
         /// <summary>
         /// The environment in which the API operation parameters are used. Set the value to **online**.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The POP code of the Alibaba Cloud service.
         /// 
         /// >  You can call the [DescribeApiList](~~DescribeApiList~~) operation to query the POP code.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PopCode")]
         [Validation(Required=false)]

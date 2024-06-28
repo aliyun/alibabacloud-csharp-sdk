@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// The ID of the asset.
         /// 
         /// >  You can call the [DescribeComponentAssets](~~DescribeComponentAssets~~) operation to query the ID.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AssetId")]
         [Validation(Required=false)]
