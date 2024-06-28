@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ReleaseArtifactRequest : TeaModel {
         /// <summary>
+        /// The ID of the artifact.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ArtifactId")]

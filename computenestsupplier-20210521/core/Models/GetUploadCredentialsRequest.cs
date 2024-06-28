@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string FileName { get; set; }
 
+        [NameInMap("Visibility")]
+        [Validation(Required=false)]
+        public string Visibility { get; set; }
+
     }
 
 }

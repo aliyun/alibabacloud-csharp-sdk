@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Adds a shared account of a service.
+         *
          * @param request AddServiceSharedAccountsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return AddServiceSharedAccountsResponse
@@ -86,6 +88,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Adds a shared account of a service.
+         *
          * @param request AddServiceSharedAccountsRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return AddServiceSharedAccountsResponse
@@ -134,6 +138,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Adds a shared account of a service.
+         *
          * @param request AddServiceSharedAccountsRequest
          * @return AddServiceSharedAccountsResponse
          */
@@ -144,6 +150,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Adds a shared account of a service.
+         *
          * @param request AddServiceSharedAccountsRequest
          * @return AddServiceSharedAccountsResponse
          */
@@ -1030,6 +1038,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Deletes a service.
+         *
          * @param request DeleteServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteServiceResponse
@@ -1074,6 +1084,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Deletes a service.
+         *
          * @param request DeleteServiceRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteServiceResponse
@@ -1118,6 +1130,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Deletes a service.
+         *
          * @param request DeleteServiceRequest
          * @return DeleteServiceResponse
          */
@@ -1128,6 +1142,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
+         * @summary Deletes a service.
+         *
          * @param request DeleteServiceRequest
          * @return DeleteServiceResponse
          */
@@ -2114,6 +2130,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             {
                 query["FileName"] = request.FileName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
+            {
+                query["Visibility"] = request.Visibility;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2145,6 +2165,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
+            {
+                query["Visibility"] = request.Visibility;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3338,7 +3362,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 发布部署物
+         * @summary Publishes an artifact.
          *
          * @param request ReleaseArtifactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3372,7 +3396,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 发布部署物
+         * @summary Publishes an artifact.
          *
          * @param request ReleaseArtifactRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3406,7 +3430,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 发布部署物
+         * @summary Publishes an artifact.
          *
          * @param request ReleaseArtifactRequest
          * @return ReleaseArtifactResponse
@@ -3418,7 +3442,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 发布部署物
+         * @summary Publishes an artifact.
          *
          * @param request ReleaseArtifactRequest
          * @return ReleaseArtifactResponse
@@ -4270,7 +4294,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 变配服务实例
+         * @summary Updates the configurations of a service instance.
          *
          * @param tmpReq UpdateServiceInstanceSpecRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4330,7 +4354,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 变配服务实例
+         * @summary Updates the configurations of a service instance.
          *
          * @param tmpReq UpdateServiceInstanceSpecRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -4390,7 +4414,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 变配服务实例
+         * @summary Updates the configurations of a service instance.
          *
          * @param request UpdateServiceInstanceSpecRequest
          * @return UpdateServiceInstanceSpecResponse
@@ -4402,7 +4426,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         }
 
         /**
-         * @summary 变配服务实例
+         * @summary Updates the configurations of a service instance.
          *
          * @param request UpdateServiceInstanceSpecRequest
          * @return UpdateServiceInstanceSpecResponse
