@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6Address> Ipv6Address { get; set; }
             public class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6Address : TeaModel {
+                [NameInMap("AddressType")]
+                [Validation(Required=false)]
+                public string AddressType { get; set; }
+
                 /// <summary>
                 /// The time when the IPv6 address was created.
                 /// </summary>

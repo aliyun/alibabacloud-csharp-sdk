@@ -2303,6 +2303,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -2389,6 +2393,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -13213,6 +13221,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary 创建端口初装费订单
+         *
          * @param request CreatePhysicalConnectionSetupOrderRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreatePhysicalConnectionSetupOrderResponse
@@ -13289,6 +13299,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary 创建端口初装费订单
+         *
          * @param request CreatePhysicalConnectionSetupOrderRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreatePhysicalConnectionSetupOrderResponse
@@ -13365,6 +13377,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary 创建端口初装费订单
+         *
          * @param request CreatePhysicalConnectionSetupOrderRequest
          * @return CreatePhysicalConnectionSetupOrderResponse
          */
@@ -13375,6 +13389,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary 创建端口初装费订单
+         *
          * @param request CreatePhysicalConnectionSetupOrderRequest
          * @return CreatePhysicalConnectionSetupOrderResponse
          */
@@ -33291,6 +33307,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociatedInstanceId))
             {
                 query["AssociatedInstanceId"] = request.AssociatedInstanceId;
@@ -33405,6 +33425,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociatedInstanceId))
             {
                 query["AssociatedInstanceId"] = request.AssociatedInstanceId;
@@ -33533,6 +33557,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary 查询创建的仅主动出规则。
+         *
          * @param request DescribeIpv6EgressOnlyRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeIpv6EgressOnlyRulesResponse
@@ -33613,6 +33639,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary 查询创建的仅主动出规则。
+         *
          * @param request DescribeIpv6EgressOnlyRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeIpv6EgressOnlyRulesResponse
@@ -33693,6 +33721,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary 查询创建的仅主动出规则。
+         *
          * @param request DescribeIpv6EgressOnlyRulesRequest
          * @return DescribeIpv6EgressOnlyRulesResponse
          */
@@ -33703,6 +33733,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         }
 
         /**
+         * @summary 查询创建的仅主动出规则。
+         *
          * @param request DescribeIpv6EgressOnlyRulesRequest
          * @return DescribeIpv6EgressOnlyRulesResponse
          */
@@ -43662,6 +43694,146 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetPhysicalConnectionServiceStatusWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询IP地址池功能的开通状态。
+         *
+         * @param request GetPublicIpAddressPoolServiceStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetPublicIpAddressPoolServiceStatusResponse
+         */
+        public GetPublicIpAddressPoolServiceStatusResponse GetPublicIpAddressPoolServiceStatusWithOptions(GetPublicIpAddressPoolServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPublicIpAddressPoolServiceStatus",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPublicIpAddressPoolServiceStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询IP地址池功能的开通状态。
+         *
+         * @param request GetPublicIpAddressPoolServiceStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetPublicIpAddressPoolServiceStatusResponse
+         */
+        public async Task<GetPublicIpAddressPoolServiceStatusResponse> GetPublicIpAddressPoolServiceStatusWithOptionsAsync(GetPublicIpAddressPoolServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPublicIpAddressPoolServiceStatus",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPublicIpAddressPoolServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询IP地址池功能的开通状态。
+         *
+         * @param request GetPublicIpAddressPoolServiceStatusRequest
+         * @return GetPublicIpAddressPoolServiceStatusResponse
+         */
+        public GetPublicIpAddressPoolServiceStatusResponse GetPublicIpAddressPoolServiceStatus(GetPublicIpAddressPoolServiceStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetPublicIpAddressPoolServiceStatusWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询IP地址池功能的开通状态。
+         *
+         * @param request GetPublicIpAddressPoolServiceStatusRequest
+         * @return GetPublicIpAddressPoolServiceStatusResponse
+         */
+        public async Task<GetPublicIpAddressPoolServiceStatusResponse> GetPublicIpAddressPoolServiceStatusAsync(GetPublicIpAddressPoolServiceStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetPublicIpAddressPoolServiceStatusWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -54813,6 +54985,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutePropagationEnable))
+            {
+                query["RoutePropagationEnable"] = request.RoutePropagationEnable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableId))
             {
                 query["RouteTableId"] = request.RouteTableId;
@@ -54876,6 +55052,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutePropagationEnable))
+            {
+                query["RoutePropagationEnable"] = request.RoutePropagationEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableId))
             {
@@ -59666,6 +59846,146 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OpenPhysicalConnectionServiceWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 开通IP地址池功能。
+         *
+         * @param request OpenPublicIpAddressPoolServiceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return OpenPublicIpAddressPoolServiceResponse
+         */
+        public OpenPublicIpAddressPoolServiceResponse OpenPublicIpAddressPoolServiceWithOptions(OpenPublicIpAddressPoolServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenPublicIpAddressPoolService",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenPublicIpAddressPoolServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 开通IP地址池功能。
+         *
+         * @param request OpenPublicIpAddressPoolServiceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return OpenPublicIpAddressPoolServiceResponse
+         */
+        public async Task<OpenPublicIpAddressPoolServiceResponse> OpenPublicIpAddressPoolServiceWithOptionsAsync(OpenPublicIpAddressPoolServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenPublicIpAddressPoolService",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenPublicIpAddressPoolServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 开通IP地址池功能。
+         *
+         * @param request OpenPublicIpAddressPoolServiceRequest
+         * @return OpenPublicIpAddressPoolServiceResponse
+         */
+        public OpenPublicIpAddressPoolServiceResponse OpenPublicIpAddressPoolService(OpenPublicIpAddressPoolServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OpenPublicIpAddressPoolServiceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 开通IP地址池功能。
+         *
+         * @param request OpenPublicIpAddressPoolServiceRequest
+         * @return OpenPublicIpAddressPoolServiceResponse
+         */
+        public async Task<OpenPublicIpAddressPoolServiceResponse> OpenPublicIpAddressPoolServiceAsync(OpenPublicIpAddressPoolServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OpenPublicIpAddressPoolServiceWithOptionsAsync(request, runtime);
         }
 
         /**

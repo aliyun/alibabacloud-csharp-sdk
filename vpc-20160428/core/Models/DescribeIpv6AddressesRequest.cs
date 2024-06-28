@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIpv6AddressesRequest : TeaModel {
+        [NameInMap("AddressType")]
+        [Validation(Required=false)]
+        public string AddressType { get; set; }
+
         /// <summary>
         /// The ID of the instance that is assigned the IPv6 address.
         /// </summary>

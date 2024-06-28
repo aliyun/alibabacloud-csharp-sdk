@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OwnerAccount { get; set; }
 
         /// <summary>
-        /// The ID of the region where the IPsec-VPN connection is established.
+        /// The region ID of the IPsec-VPN connection.
         /// 
         /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
         /// 

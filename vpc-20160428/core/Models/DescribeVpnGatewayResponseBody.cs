@@ -91,6 +91,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// The ENIs created by the system for the VPN gateway.
+        /// </summary>
         [NameInMap("EniInstanceIds")]
         [Validation(Required=false)]
         public DescribeVpnGatewayResponseBodyEniInstanceIds EniInstanceIds { get; set; }
@@ -319,14 +322,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeVpnGatewayResponseBodyTagsTag> Tag { get; set; }
             public class DescribeVpnGatewayResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// The key of tag N.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of tag N.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
