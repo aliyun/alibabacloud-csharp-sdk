@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string IdOcrPictureUrl { get; set; }
 
+        [NameInMap("IdThreshold")]
+        [Validation(Required=false)]
+        public string IdThreshold { get; set; }
+
         [NameInMap("MerchantBizId")]
         [Validation(Required=false)]
         public string MerchantBizId { get; set; }

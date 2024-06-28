@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string DocType { get; set; }
 
+        [NameInMap("DocVideo")]
+        [Validation(Required=false)]
+        public string DocVideo { get; set; }
+
         [NameInMap("ExperienceCode")]
         [Validation(Required=false)]
         public string ExperienceCode { get; set; }
@@ -53,6 +57,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string IdSpoof { get; set; }
 
+        [NameInMap("IdThreshold")]
+        [Validation(Required=false)]
+        public string IdThreshold { get; set; }
+
         [NameInMap("LanguageConfig")]
         [Validation(Required=false)]
         public string LanguageConfig { get; set; }
@@ -68,6 +76,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [NameInMap("MetaInfo")]
         [Validation(Required=false)]
         public string MetaInfo { get; set; }
+
+        [NameInMap("Model")]
+        [Validation(Required=false)]
+        public string Model { get; set; }
 
         /// <summary>
         /// OCR。
