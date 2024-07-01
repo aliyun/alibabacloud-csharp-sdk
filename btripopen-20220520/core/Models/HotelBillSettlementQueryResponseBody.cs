@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<HotelBillSettlementQueryResponseBodyModuleDataList> DataList { get; set; }
             public class HotelBillSettlementQueryResponseBodyModuleDataList : TeaModel {
+                [NameInMap("agreement_promotion_fee")]
+                [Validation(Required=false)]
+                public double? AgreementPromotionFee { get; set; }
+
                 [NameInMap("alipay_trade_no")]
                 [Validation(Required=false)]
                 public string AlipayTradeNo { get; set; }

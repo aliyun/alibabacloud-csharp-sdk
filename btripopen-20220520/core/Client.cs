@@ -136,6 +136,462 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         }
 
         /**
+         * @summary 创建企业部门
+         *
+         * @param tmpReq AddDepartmentRequest
+         * @param headers AddDepartmentHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddDepartmentResponse
+         */
+        public AddDepartmentResponse AddDepartmentWithOptions(AddDepartmentRequest tmpReq, AddDepartmentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddDepartmentShrinkRequest request = new AddDepartmentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ManagerEmployeeIdList))
+            {
+                request.ManagerEmployeeIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ManagerEmployeeIdList, "manager_employee_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeptName))
+            {
+                body["dept_name"] = request.DeptName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerEmployeeIdListShrink))
+            {
+                body["manager_employee_id_list"] = request.ManagerEmployeeIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptId))
+            {
+                body["out_dept_id"] = request.OutDeptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptPid))
+            {
+                body["out_dept_pid"] = request.OutDeptPid;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDepartment",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/department/v2/add",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDepartmentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建企业部门
+         *
+         * @param tmpReq AddDepartmentRequest
+         * @param headers AddDepartmentHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddDepartmentResponse
+         */
+        public async Task<AddDepartmentResponse> AddDepartmentWithOptionsAsync(AddDepartmentRequest tmpReq, AddDepartmentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddDepartmentShrinkRequest request = new AddDepartmentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ManagerEmployeeIdList))
+            {
+                request.ManagerEmployeeIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ManagerEmployeeIdList, "manager_employee_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeptName))
+            {
+                body["dept_name"] = request.DeptName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerEmployeeIdListShrink))
+            {
+                body["manager_employee_id_list"] = request.ManagerEmployeeIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptId))
+            {
+                body["out_dept_id"] = request.OutDeptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptPid))
+            {
+                body["out_dept_pid"] = request.OutDeptPid;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDepartment",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/department/v2/add",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDepartmentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建企业部门
+         *
+         * @param request AddDepartmentRequest
+         * @return AddDepartmentResponse
+         */
+        public AddDepartmentResponse AddDepartment(AddDepartmentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AddDepartmentHeaders headers = new AddDepartmentHeaders();
+            return AddDepartmentWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 创建企业部门
+         *
+         * @param request AddDepartmentRequest
+         * @return AddDepartmentResponse
+         */
+        public async Task<AddDepartmentResponse> AddDepartmentAsync(AddDepartmentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AddDepartmentHeaders headers = new AddDepartmentHeaders();
+            return await AddDepartmentWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 添加员工
+         *
+         * @param tmpReq AddEmployeeRequest
+         * @param headers AddEmployeeHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddEmployeeResponse
+         */
+        public AddEmployeeResponse AddEmployeeWithOptions(AddEmployeeRequest tmpReq, AddEmployeeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddEmployeeShrinkRequest request = new AddEmployeeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BaseCityCodeList))
+            {
+                request.BaseCityCodeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BaseCityCodeList, "base_city_code_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CertList))
+            {
+                request.CertListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CertList, "cert_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CustomRoleCodeList))
+            {
+                request.CustomRoleCodeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomRoleCodeList, "custom_role_code_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutDeptIdList))
+            {
+                request.OutDeptIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutDeptIdList, "out_dept_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Avatar))
+            {
+                body["avatar"] = request.Avatar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseCityCodeListShrink))
+            {
+                body["base_city_code_list"] = request.BaseCityCodeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Birthday))
+            {
+                body["birthday"] = request.Birthday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertListShrink))
+            {
+                body["cert_list"] = request.CertListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomRoleCodeListShrink))
+            {
+                body["custom_role_code_list"] = request.CustomRoleCodeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                body["email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                body["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAdmin))
+            {
+                body["is_admin"] = request.IsAdmin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsBoss))
+            {
+                body["is_boss"] = request.IsBoss;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDeptLeader))
+            {
+                body["is_dept_leader"] = request.IsDeptLeader;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobNo))
+            {
+                body["job_no"] = request.JobNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerUserId))
+            {
+                body["manager_user_id"] = request.ManagerUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptIdListShrink))
+            {
+                body["out_dept_id_list"] = request.OutDeptIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PositionLevel))
+            {
+                body["position_level"] = request.PositionLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealName))
+            {
+                body["real_name"] = request.RealName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNameEn))
+            {
+                body["real_name_en"] = request.RealNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnionId))
+            {
+                body["union_id"] = request.UnionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserNick))
+            {
+                body["user_nick"] = request.UserNick;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddEmployee",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/employee/v2/add",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddEmployeeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 添加员工
+         *
+         * @param tmpReq AddEmployeeRequest
+         * @param headers AddEmployeeHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return AddEmployeeResponse
+         */
+        public async Task<AddEmployeeResponse> AddEmployeeWithOptionsAsync(AddEmployeeRequest tmpReq, AddEmployeeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddEmployeeShrinkRequest request = new AddEmployeeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BaseCityCodeList))
+            {
+                request.BaseCityCodeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BaseCityCodeList, "base_city_code_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CertList))
+            {
+                request.CertListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CertList, "cert_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CustomRoleCodeList))
+            {
+                request.CustomRoleCodeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomRoleCodeList, "custom_role_code_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutDeptIdList))
+            {
+                request.OutDeptIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutDeptIdList, "out_dept_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Avatar))
+            {
+                body["avatar"] = request.Avatar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseCityCodeListShrink))
+            {
+                body["base_city_code_list"] = request.BaseCityCodeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Birthday))
+            {
+                body["birthday"] = request.Birthday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertListShrink))
+            {
+                body["cert_list"] = request.CertListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomRoleCodeListShrink))
+            {
+                body["custom_role_code_list"] = request.CustomRoleCodeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                body["email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                body["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAdmin))
+            {
+                body["is_admin"] = request.IsAdmin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsBoss))
+            {
+                body["is_boss"] = request.IsBoss;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDeptLeader))
+            {
+                body["is_dept_leader"] = request.IsDeptLeader;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobNo))
+            {
+                body["job_no"] = request.JobNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerUserId))
+            {
+                body["manager_user_id"] = request.ManagerUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptIdListShrink))
+            {
+                body["out_dept_id_list"] = request.OutDeptIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PositionLevel))
+            {
+                body["position_level"] = request.PositionLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealName))
+            {
+                body["real_name"] = request.RealName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNameEn))
+            {
+                body["real_name_en"] = request.RealNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnionId))
+            {
+                body["union_id"] = request.UnionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserNick))
+            {
+                body["user_nick"] = request.UserNick;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddEmployee",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/employee/v2/add",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddEmployeeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 添加员工
+         *
+         * @param request AddEmployeeRequest
+         * @return AddEmployeeResponse
+         */
+        public AddEmployeeResponse AddEmployee(AddEmployeeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AddEmployeeHeaders headers = new AddEmployeeHeaders();
+            return AddEmployeeWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 添加员工
+         *
+         * @param request AddEmployeeRequest
+         * @return AddEmployeeResponse
+         */
+        public async Task<AddEmployeeResponse> AddEmployeeAsync(AddEmployeeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AddEmployeeHeaders headers = new AddEmployeeHeaders();
+            return await AddEmployeeWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary 批量新增企业自定义角色下人员
          *
          * @param tmpReq AddEmployeesToCustomRoleRequest
@@ -5996,6 +6452,122 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         }
 
         /**
+         * @summary 删除企业部门
+         *
+         * @param request DeleteDepartmentRequest
+         * @param headers DeleteDepartmentHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDepartmentResponse
+         */
+        public DeleteDepartmentResponse DeleteDepartmentWithOptions(DeleteDepartmentRequest request, DeleteDepartmentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptId))
+            {
+                body["out_dept_id"] = request.OutDeptId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDepartment",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/department/v2/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDepartmentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除企业部门
+         *
+         * @param request DeleteDepartmentRequest
+         * @param headers DeleteDepartmentHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDepartmentResponse
+         */
+        public async Task<DeleteDepartmentResponse> DeleteDepartmentWithOptionsAsync(DeleteDepartmentRequest request, DeleteDepartmentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptId))
+            {
+                body["out_dept_id"] = request.OutDeptId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDepartment",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/department/v2/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDepartmentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除企业部门
+         *
+         * @param request DeleteDepartmentRequest
+         * @return DeleteDepartmentResponse
+         */
+        public DeleteDepartmentResponse DeleteDepartment(DeleteDepartmentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteDepartmentHeaders headers = new DeleteDepartmentHeaders();
+            return DeleteDepartmentWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除企业部门
+         *
+         * @param request DeleteDepartmentRequest
+         * @return DeleteDepartmentResponse
+         */
+        public async Task<DeleteDepartmentResponse> DeleteDepartmentAsync(DeleteDepartmentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteDepartmentHeaders headers = new DeleteDepartmentHeaders();
+            return await DeleteDepartmentWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
          * @summary 批量删除企业自定义角色下人员
          *
          * @param tmpReq DeleteEmployeesFromCustomRoleRequest
@@ -7149,6 +7721,456 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             ExceedApplySyncHeaders headers = new ExceedApplySyncHeaders();
             return await ExceedApplySyncWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 添加外部出行人与证件信息
+         *
+         * @param tmpReq ExternalUserAddRequest
+         * @param headers ExternalUserAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExternalUserAddResponse
+         */
+        public ExternalUserAddResponse ExternalUserAddWithOptions(ExternalUserAddRequest tmpReq, ExternalUserAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ExternalUserAddShrinkRequest request = new ExternalUserAddShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CertRequestList))
+            {
+                request.CertRequestListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CertRequestList, "cert_request_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Birthday))
+            {
+                body["birthday"] = request.Birthday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRequestListShrink))
+            {
+                body["cert_request_list"] = request.CertRequestListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                body["email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["external_user_id"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealName))
+            {
+                body["real_name"] = request.RealName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNameEn))
+            {
+                body["real_name_en"] = request.RealNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserType))
+            {
+                body["user_type"] = request.UserType;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExternalUserAdd",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/user/v1/externalUsers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExternalUserAddResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 添加外部出行人与证件信息
+         *
+         * @param tmpReq ExternalUserAddRequest
+         * @param headers ExternalUserAddHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExternalUserAddResponse
+         */
+        public async Task<ExternalUserAddResponse> ExternalUserAddWithOptionsAsync(ExternalUserAddRequest tmpReq, ExternalUserAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ExternalUserAddShrinkRequest request = new ExternalUserAddShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CertRequestList))
+            {
+                request.CertRequestListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CertRequestList, "cert_request_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Birthday))
+            {
+                body["birthday"] = request.Birthday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRequestListShrink))
+            {
+                body["cert_request_list"] = request.CertRequestListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                body["email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["external_user_id"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealName))
+            {
+                body["real_name"] = request.RealName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNameEn))
+            {
+                body["real_name_en"] = request.RealNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserType))
+            {
+                body["user_type"] = request.UserType;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExternalUserAdd",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/user/v1/externalUsers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExternalUserAddResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 添加外部出行人与证件信息
+         *
+         * @param request ExternalUserAddRequest
+         * @return ExternalUserAddResponse
+         */
+        public ExternalUserAddResponse ExternalUserAdd(ExternalUserAddRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ExternalUserAddHeaders headers = new ExternalUserAddHeaders();
+            return ExternalUserAddWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 添加外部出行人与证件信息
+         *
+         * @param request ExternalUserAddRequest
+         * @return ExternalUserAddResponse
+         */
+        public async Task<ExternalUserAddResponse> ExternalUserAddAsync(ExternalUserAddRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ExternalUserAddHeaders headers = new ExternalUserAddHeaders();
+            return await ExternalUserAddWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 删除外部出行人
+         *
+         * @param headers ExternalUserDeleteHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExternalUserDeleteResponse
+         */
+        public ExternalUserDeleteResponse ExternalUserDeleteWithOptions(string externalUserId, ExternalUserDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExternalUserDelete",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/user/v1/externalUsers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalUserId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExternalUserDeleteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除外部出行人
+         *
+         * @param headers ExternalUserDeleteHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExternalUserDeleteResponse
+         */
+        public async Task<ExternalUserDeleteResponse> ExternalUserDeleteWithOptionsAsync(string externalUserId, ExternalUserDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExternalUserDelete",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/user/v1/externalUsers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalUserId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExternalUserDeleteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除外部出行人
+         *
+         * @return ExternalUserDeleteResponse
+         */
+        public ExternalUserDeleteResponse ExternalUserDelete(string externalUserId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ExternalUserDeleteHeaders headers = new ExternalUserDeleteHeaders();
+            return ExternalUserDeleteWithOptions(externalUserId, headers, runtime);
+        }
+
+        /**
+         * @summary 删除外部出行人
+         *
+         * @return ExternalUserDeleteResponse
+         */
+        public async Task<ExternalUserDeleteResponse> ExternalUserDeleteAsync(string externalUserId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ExternalUserDeleteHeaders headers = new ExternalUserDeleteHeaders();
+            return await ExternalUserDeleteWithOptionsAsync(externalUserId, headers, runtime);
+        }
+
+        /**
+         * @summary 修改外部出行人与证件信息
+         *
+         * @param tmpReq ExternalUserUpdateRequest
+         * @param headers ExternalUserUpdateHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExternalUserUpdateResponse
+         */
+        public ExternalUserUpdateResponse ExternalUserUpdateWithOptions(string externalUserId, ExternalUserUpdateRequest tmpReq, ExternalUserUpdateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ExternalUserUpdateShrinkRequest request = new ExternalUserUpdateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CertRequestList))
+            {
+                request.CertRequestListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CertRequestList, "cert_request_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Birthday))
+            {
+                body["birthday"] = request.Birthday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRequestListShrink))
+            {
+                body["cert_request_list"] = request.CertRequestListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                body["email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealName))
+            {
+                body["real_name"] = request.RealName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNameEn))
+            {
+                body["real_name_en"] = request.RealNameEn;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExternalUserUpdate",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/user/v1/externalUsers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalUserId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExternalUserUpdateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改外部出行人与证件信息
+         *
+         * @param tmpReq ExternalUserUpdateRequest
+         * @param headers ExternalUserUpdateHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ExternalUserUpdateResponse
+         */
+        public async Task<ExternalUserUpdateResponse> ExternalUserUpdateWithOptionsAsync(string externalUserId, ExternalUserUpdateRequest tmpReq, ExternalUserUpdateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ExternalUserUpdateShrinkRequest request = new ExternalUserUpdateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CertRequestList))
+            {
+                request.CertRequestListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CertRequestList, "cert_request_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Birthday))
+            {
+                body["birthday"] = request.Birthday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRequestListShrink))
+            {
+                body["cert_request_list"] = request.CertRequestListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                body["email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealName))
+            {
+                body["real_name"] = request.RealName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNameEn))
+            {
+                body["real_name_en"] = request.RealNameEn;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExternalUserUpdate",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/user/v1/externalUsers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(externalUserId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExternalUserUpdateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改外部出行人与证件信息
+         *
+         * @param request ExternalUserUpdateRequest
+         * @return ExternalUserUpdateResponse
+         */
+        public ExternalUserUpdateResponse ExternalUserUpdate(string externalUserId, ExternalUserUpdateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ExternalUserUpdateHeaders headers = new ExternalUserUpdateHeaders();
+            return ExternalUserUpdateWithOptions(externalUserId, request, headers, runtime);
+        }
+
+        /**
+         * @summary 修改外部出行人与证件信息
+         *
+         * @param request ExternalUserUpdateRequest
+         * @return ExternalUserUpdateResponse
+         */
+        public async Task<ExternalUserUpdateResponse> ExternalUserUpdateAsync(string externalUserId, ExternalUserUpdateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ExternalUserUpdateHeaders headers = new ExternalUserUpdateHeaders();
+            return await ExternalUserUpdateWithOptionsAsync(externalUserId, request, headers, runtime);
         }
 
         /**
@@ -15889,6 +16911,162 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             HotelStaticInfoHeaders headers = new HotelStaticInfoHeaders();
             return await HotelStaticInfoWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 酒店关键词搜索
+         *
+         * @param request HotelSuggestRequest
+         * @param headers HotelSuggestHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelSuggestResponse
+         */
+        public HotelSuggestResponse HotelSuggestWithOptions(HotelSuggestRequest request, HotelSuggestHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripUserId))
+            {
+                query["btrip_user_id"] = request.BtripUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckIn))
+            {
+                query["check_in"] = request.CheckIn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckOut))
+            {
+                query["check_out"] = request.CheckOut;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CityCode))
+            {
+                query["city_code"] = request.CityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
+            {
+                query["search_type"] = request.SearchType;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HotelSuggest",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/dtb-hotel/v1/suggest-infos",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HotelSuggestResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 酒店关键词搜索
+         *
+         * @param request HotelSuggestRequest
+         * @param headers HotelSuggestHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return HotelSuggestResponse
+         */
+        public async Task<HotelSuggestResponse> HotelSuggestWithOptionsAsync(HotelSuggestRequest request, HotelSuggestHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripUserId))
+            {
+                query["btrip_user_id"] = request.BtripUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckIn))
+            {
+                query["check_in"] = request.CheckIn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckOut))
+            {
+                query["check_out"] = request.CheckOut;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CityCode))
+            {
+                query["city_code"] = request.CityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
+            {
+                query["search_type"] = request.SearchType;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HotelSuggest",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/dtb-hotel/v1/suggest-infos",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HotelSuggestResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 酒店关键词搜索
+         *
+         * @param request HotelSuggestRequest
+         * @return HotelSuggestResponse
+         */
+        public HotelSuggestResponse HotelSuggest(HotelSuggestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            HotelSuggestHeaders headers = new HotelSuggestHeaders();
+            return HotelSuggestWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 酒店关键词搜索
+         *
+         * @param request HotelSuggestRequest
+         * @return HotelSuggestResponse
+         */
+        public async Task<HotelSuggestResponse> HotelSuggestAsync(HotelSuggestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            HotelSuggestHeaders headers = new HotelSuggestHeaders();
+            return await HotelSuggestWithOptionsAsync(request, headers, runtime);
         }
 
         /**
@@ -27079,6 +28257,578 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             UpdateCustomRoleHeaders headers = new UpdateCustomRoleHeaders();
             return await UpdateCustomRoleWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 修改企业部门
+         *
+         * @param tmpReq UpdateDepartmentRequest
+         * @param headers UpdateDepartmentHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateDepartmentResponse
+         */
+        public UpdateDepartmentResponse UpdateDepartmentWithOptions(UpdateDepartmentRequest tmpReq, UpdateDepartmentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDepartmentShrinkRequest request = new UpdateDepartmentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ManagerEmployeeIdList))
+            {
+                request.ManagerEmployeeIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ManagerEmployeeIdList, "manager_employee_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeptName))
+            {
+                body["dept_name"] = request.DeptName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerEmployeeIdListShrink))
+            {
+                body["manager_employee_id_list"] = request.ManagerEmployeeIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptId))
+            {
+                body["out_dept_id"] = request.OutDeptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptPid))
+            {
+                body["out_dept_pid"] = request.OutDeptPid;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDepartment",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/department/v2/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDepartmentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改企业部门
+         *
+         * @param tmpReq UpdateDepartmentRequest
+         * @param headers UpdateDepartmentHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateDepartmentResponse
+         */
+        public async Task<UpdateDepartmentResponse> UpdateDepartmentWithOptionsAsync(UpdateDepartmentRequest tmpReq, UpdateDepartmentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDepartmentShrinkRequest request = new UpdateDepartmentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ManagerEmployeeIdList))
+            {
+                request.ManagerEmployeeIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ManagerEmployeeIdList, "manager_employee_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeptName))
+            {
+                body["dept_name"] = request.DeptName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerEmployeeIdListShrink))
+            {
+                body["manager_employee_id_list"] = request.ManagerEmployeeIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptId))
+            {
+                body["out_dept_id"] = request.OutDeptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptPid))
+            {
+                body["out_dept_pid"] = request.OutDeptPid;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDepartment",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/department/v2/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDepartmentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改企业部门
+         *
+         * @param request UpdateDepartmentRequest
+         * @return UpdateDepartmentResponse
+         */
+        public UpdateDepartmentResponse UpdateDepartment(UpdateDepartmentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateDepartmentHeaders headers = new UpdateDepartmentHeaders();
+            return UpdateDepartmentWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 修改企业部门
+         *
+         * @param request UpdateDepartmentRequest
+         * @return UpdateDepartmentResponse
+         */
+        public async Task<UpdateDepartmentResponse> UpdateDepartmentAsync(UpdateDepartmentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateDepartmentHeaders headers = new UpdateDepartmentHeaders();
+            return await UpdateDepartmentWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新员工信息
+         *
+         * @param tmpReq UpdateEmployeeRequest
+         * @param headers UpdateEmployeeHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateEmployeeResponse
+         */
+        public UpdateEmployeeResponse UpdateEmployeeWithOptions(UpdateEmployeeRequest tmpReq, UpdateEmployeeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateEmployeeShrinkRequest request = new UpdateEmployeeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BaseCityCodeList))
+            {
+                request.BaseCityCodeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BaseCityCodeList, "base_city_code_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CertList))
+            {
+                request.CertListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CertList, "cert_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CustomRoleCodeList))
+            {
+                request.CustomRoleCodeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomRoleCodeList, "custom_role_code_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutDeptIdList))
+            {
+                request.OutDeptIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutDeptIdList, "out_dept_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Avatar))
+            {
+                body["avatar"] = request.Avatar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseCityCodeListShrink))
+            {
+                body["base_city_code_list"] = request.BaseCityCodeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Birthday))
+            {
+                body["birthday"] = request.Birthday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertListShrink))
+            {
+                body["cert_list"] = request.CertListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomRoleCodeListShrink))
+            {
+                body["custom_role_code_list"] = request.CustomRoleCodeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                body["email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                body["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAdmin))
+            {
+                body["is_admin"] = request.IsAdmin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsBoss))
+            {
+                body["is_boss"] = request.IsBoss;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDeptLeader))
+            {
+                body["is_dept_leader"] = request.IsDeptLeader;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobNo))
+            {
+                body["job_no"] = request.JobNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerUserId))
+            {
+                body["manager_user_id"] = request.ManagerUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptIdListShrink))
+            {
+                body["out_dept_id_list"] = request.OutDeptIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PositionLevel))
+            {
+                body["position_level"] = request.PositionLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealName))
+            {
+                body["real_name"] = request.RealName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNameEn))
+            {
+                body["real_name_en"] = request.RealNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserNick))
+            {
+                body["user_nick"] = request.UserNick;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEmployee",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/employee/v2/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEmployeeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新员工信息
+         *
+         * @param tmpReq UpdateEmployeeRequest
+         * @param headers UpdateEmployeeHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateEmployeeResponse
+         */
+        public async Task<UpdateEmployeeResponse> UpdateEmployeeWithOptionsAsync(UpdateEmployeeRequest tmpReq, UpdateEmployeeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateEmployeeShrinkRequest request = new UpdateEmployeeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BaseCityCodeList))
+            {
+                request.BaseCityCodeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BaseCityCodeList, "base_city_code_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CertList))
+            {
+                request.CertListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CertList, "cert_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CustomRoleCodeList))
+            {
+                request.CustomRoleCodeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomRoleCodeList, "custom_role_code_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutDeptIdList))
+            {
+                request.OutDeptIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutDeptIdList, "out_dept_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Avatar))
+            {
+                body["avatar"] = request.Avatar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseCityCodeListShrink))
+            {
+                body["base_city_code_list"] = request.BaseCityCodeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Birthday))
+            {
+                body["birthday"] = request.Birthday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertListShrink))
+            {
+                body["cert_list"] = request.CertListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomRoleCodeListShrink))
+            {
+                body["custom_role_code_list"] = request.CustomRoleCodeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                body["email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                body["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAdmin))
+            {
+                body["is_admin"] = request.IsAdmin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsBoss))
+            {
+                body["is_boss"] = request.IsBoss;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDeptLeader))
+            {
+                body["is_dept_leader"] = request.IsDeptLeader;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobNo))
+            {
+                body["job_no"] = request.JobNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerUserId))
+            {
+                body["manager_user_id"] = request.ManagerUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutDeptIdListShrink))
+            {
+                body["out_dept_id_list"] = request.OutDeptIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PositionLevel))
+            {
+                body["position_level"] = request.PositionLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealName))
+            {
+                body["real_name"] = request.RealName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNameEn))
+            {
+                body["real_name_en"] = request.RealNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserNick))
+            {
+                body["user_nick"] = request.UserNick;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEmployee",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/employee/v2/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEmployeeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新员工信息
+         *
+         * @param request UpdateEmployeeRequest
+         * @return UpdateEmployeeResponse
+         */
+        public UpdateEmployeeResponse UpdateEmployee(UpdateEmployeeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateEmployeeHeaders headers = new UpdateEmployeeHeaders();
+            return UpdateEmployeeWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新员工信息
+         *
+         * @param request UpdateEmployeeRequest
+         * @return UpdateEmployeeResponse
+         */
+        public async Task<UpdateEmployeeResponse> UpdateEmployeeAsync(UpdateEmployeeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateEmployeeHeaders headers = new UpdateEmployeeHeaders();
+            return await UpdateEmployeeWithOptionsAsync(request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新员工在职状态
+         *
+         * @param request UpdateEmployeeLeaveStatusRequest
+         * @param headers UpdateEmployeeLeaveStatusHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateEmployeeLeaveStatusResponse
+         */
+        public UpdateEmployeeLeaveStatusResponse UpdateEmployeeLeaveStatusWithOptions(UpdateEmployeeLeaveStatusRequest request, UpdateEmployeeLeaveStatusHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsLeave))
+            {
+                body["is_leave"] = request.IsLeave;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEmployeeLeaveStatus",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/employee/v2/updateLeaveStatus",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEmployeeLeaveStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新员工在职状态
+         *
+         * @param request UpdateEmployeeLeaveStatusRequest
+         * @param headers UpdateEmployeeLeaveStatusHeaders
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return UpdateEmployeeLeaveStatusResponse
+         */
+        public async Task<UpdateEmployeeLeaveStatusResponse> UpdateEmployeeLeaveStatusWithOptionsAsync(UpdateEmployeeLeaveStatusRequest request, UpdateEmployeeLeaveStatusHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsLeave))
+            {
+                body["is_leave"] = request.IsLeave;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEmployeeLeaveStatus",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/employee/v2/updateLeaveStatus",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEmployeeLeaveStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 更新员工在职状态
+         *
+         * @param request UpdateEmployeeLeaveStatusRequest
+         * @return UpdateEmployeeLeaveStatusResponse
+         */
+        public UpdateEmployeeLeaveStatusResponse UpdateEmployeeLeaveStatus(UpdateEmployeeLeaveStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateEmployeeLeaveStatusHeaders headers = new UpdateEmployeeLeaveStatusHeaders();
+            return UpdateEmployeeLeaveStatusWithOptions(request, headers, runtime);
+        }
+
+        /**
+         * @summary 更新员工在职状态
+         *
+         * @param request UpdateEmployeeLeaveStatusRequest
+         * @return UpdateEmployeeLeaveStatusResponse
+         */
+        public async Task<UpdateEmployeeLeaveStatusResponse> UpdateEmployeeLeaveStatusAsync(UpdateEmployeeLeaveStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateEmployeeLeaveStatusHeaders headers = new UpdateEmployeeLeaveStatusHeaders();
+            return await UpdateEmployeeLeaveStatusWithOptionsAsync(request, headers, runtime);
         }
 
         /**

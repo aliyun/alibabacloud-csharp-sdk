@@ -133,6 +133,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string MachineCode { get; set; }
 
+                [NameInMap("ofd_oss_url")]
+                [Validation(Required=false)]
+                public string OfdOssUrl { get; set; }
+
                 [NameInMap("oss_url")]
                 [Validation(Required=false)]
                 public string OssUrl { get; set; }

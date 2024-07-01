@@ -253,6 +253,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ThirdpartApplyId { get; set; }
 
+            [NameInMap("thirdpart_business_id")]
+            [Validation(Required=false)]
+            public string ThirdpartBusinessId { get; set; }
+
             [NameInMap("thirdpart_itinerary_id")]
             [Validation(Required=false)]
             public string ThirdpartItineraryId { get; set; }

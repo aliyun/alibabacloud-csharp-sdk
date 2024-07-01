@@ -24,6 +24,166 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public FlightModifyOtaSearchV2ResponseBodyModule Module { get; set; }
         public class FlightModifyOtaSearchV2ResponseBodyModule : TeaModel {
+            [NameInMap("agentInfos")]
+            [Validation(Required=false)]
+            public List<FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos> AgentInfos { get; set; }
+            public class FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos : TeaModel {
+                [NameInMap("attribute_show_info_map")]
+                [Validation(Required=false)]
+                public Dictionary<string, List<ModuleAgentInfosAttributeShowInfoMapValue>> AttributeShowInfoMap { get; set; }
+
+                [NameInMap("best_discount")]
+                [Validation(Required=false)]
+                public double? BestDiscount { get; set; }
+
+                [NameInMap("cabin_class_info")]
+                [Validation(Required=false)]
+                public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo CabinClassInfo { get; set; }
+                public class FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo : TeaModel {
+                    [NameInMap("cabin_class")]
+                    [Validation(Required=false)]
+                    public string CabinClass { get; set; }
+
+                    [NameInMap("class_name")]
+                    [Validation(Required=false)]
+                    public string ClassName { get; set; }
+
+                    [NameInMap("inner_cabin_class")]
+                    [Validation(Required=false)]
+                    public int? InnerCabinClass { get; set; }
+
+                    [NameInMap("quantity")]
+                    [Validation(Required=false)]
+                    public string Quantity { get; set; }
+
+                }
+
+                [NameInMap("cabin_code")]
+                [Validation(Required=false)]
+                public int? CabinCode { get; set; }
+
+                [NameInMap("cabin_name")]
+                [Validation(Required=false)]
+                public string CabinName { get; set; }
+
+                [NameInMap("item_id")]
+                [Validation(Required=false)]
+                public string ItemId { get; set; }
+
+                [NameInMap("modify_type_desc")]
+                [Validation(Required=false)]
+                public string ModifyTypeDesc { get; set; }
+
+                [NameInMap("modify_type_name")]
+                [Validation(Required=false)]
+                public string ModifyTypeName { get; set; }
+
+                [NameInMap("price_info_d_t_o")]
+                [Validation(Required=false)]
+                public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO PriceInfoDTO { get; set; }
+                public class FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO : TeaModel {
+                    [NameInMap("adult_price")]
+                    [Validation(Required=false)]
+                    public int? AdultPrice { get; set; }
+
+                    [NameInMap("adult_tax")]
+                    [Validation(Required=false)]
+                    public int? AdultTax { get; set; }
+
+                    [NameInMap("adult_total_price")]
+                    [Validation(Required=false)]
+                    public int? AdultTotalPrice { get; set; }
+
+                    [NameInMap("before_control_price")]
+                    [Validation(Required=false)]
+                    public int? BeforeControlPrice { get; set; }
+
+                    [NameInMap("child_price")]
+                    [Validation(Required=false)]
+                    public int? ChildPrice { get; set; }
+
+                    [NameInMap("child_tax")]
+                    [Validation(Required=false)]
+                    public int? ChildTax { get; set; }
+
+                    [NameInMap("child_total_price")]
+                    [Validation(Required=false)]
+                    public int? ChildTotalPrice { get; set; }
+
+                    [NameInMap("infant_price")]
+                    [Validation(Required=false)]
+                    public int? InfantPrice { get; set; }
+
+                    [NameInMap("infant_tax")]
+                    [Validation(Required=false)]
+                    public int? InfantTax { get; set; }
+
+                    [NameInMap("infant_total_price")]
+                    [Validation(Required=false)]
+                    public int? InfantTotalPrice { get; set; }
+
+                    [NameInMap("original_adult_price")]
+                    [Validation(Required=false)]
+                    public int? OriginalAdultPrice { get; set; }
+
+                    [NameInMap("original_adult_total_price")]
+                    [Validation(Required=false)]
+                    public int? OriginalAdultTotalPrice { get; set; }
+
+                    [NameInMap("re_shop_price_info_d_t_o")]
+                    [Validation(Required=false)]
+                    public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO ReShopPriceInfoDTO { get; set; }
+                    public class FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO : TeaModel {
+                        [NameInMap("re_shop_adult_change_fee")]
+                        [Validation(Required=false)]
+                        public int? ReShopAdultChangeFee { get; set; }
+
+                        [NameInMap("re_shop_adult_price")]
+                        [Validation(Required=false)]
+                        public int? ReShopAdultPrice { get; set; }
+
+                        [NameInMap("re_shop_adult_price_gap")]
+                        [Validation(Required=false)]
+                        public int? ReShopAdultPriceGap { get; set; }
+
+                        [NameInMap("re_shop_child_change_fee")]
+                        [Validation(Required=false)]
+                        public int? ReShopChildChangeFee { get; set; }
+
+                        [NameInMap("re_shop_child_price")]
+                        [Validation(Required=false)]
+                        public int? ReShopChildPrice { get; set; }
+
+                        [NameInMap("re_shop_child_price_gap")]
+                        [Validation(Required=false)]
+                        public int? ReShopChildPriceGap { get; set; }
+
+                        [NameInMap("re_shop_inf_change_fee")]
+                        [Validation(Required=false)]
+                        public int? ReShopInfChangeFee { get; set; }
+
+                        [NameInMap("re_shop_inf_price")]
+                        [Validation(Required=false)]
+                        public int? ReShopInfPrice { get; set; }
+
+                        [NameInMap("re_shop_inf_price_gap")]
+                        [Validation(Required=false)]
+                        public int? ReShopInfPriceGap { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("quantity")]
+                [Validation(Required=false)]
+                public int? Quantity { get; set; }
+
+                [NameInMap("support_child_ticket")]
+                [Validation(Required=false)]
+                public bool? SupportChildTicket { get; set; }
+
+            }
+
             [NameInMap("agent_info")]
             [Validation(Required=false)]
             public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfo AgentInfo { get; set; }
