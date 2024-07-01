@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         [Validation(Required=false)]
         public bool? AddTransferLock { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ContactType")]
         [Validation(Required=false)]
         public string ContactType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public List<string> DomainName { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RegistrantProfileId")]
         [Validation(Required=false)]
         public long? RegistrantProfileId { get; set; }

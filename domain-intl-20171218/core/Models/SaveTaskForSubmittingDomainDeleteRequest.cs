@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class SaveTaskForSubmittingDomainDeleteRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

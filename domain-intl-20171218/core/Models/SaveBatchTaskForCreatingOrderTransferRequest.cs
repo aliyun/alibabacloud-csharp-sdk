@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("OrderTransferParam")]
         [Validation(Required=false)]
         public List<SaveBatchTaskForCreatingOrderTransferRequestOrderTransferParam> OrderTransferParam { get; set; }

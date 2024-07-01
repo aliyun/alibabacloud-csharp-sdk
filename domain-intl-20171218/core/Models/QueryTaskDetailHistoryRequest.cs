@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         [Validation(Required=false)]
         public string TaskDetailNoCursor { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TaskNo")]
         [Validation(Required=false)]
         public string TaskNo { get; set; }

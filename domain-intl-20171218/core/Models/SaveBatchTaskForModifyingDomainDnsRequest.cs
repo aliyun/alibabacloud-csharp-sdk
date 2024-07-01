@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class SaveBatchTaskForModifyingDomainDnsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AliyunDns")]
         [Validation(Required=false)]
         public bool? AliyunDns { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public List<string> DomainName { get; set; }

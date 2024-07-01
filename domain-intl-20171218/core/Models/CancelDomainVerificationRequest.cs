@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class CancelDomainVerificationRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ActionType")]
         [Validation(Required=false)]
         public string ActionType { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

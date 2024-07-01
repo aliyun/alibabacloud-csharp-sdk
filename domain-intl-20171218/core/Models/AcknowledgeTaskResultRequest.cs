@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TaskDetailNo")]
         [Validation(Required=false)]
         public List<string> TaskDetailNo { get; set; }

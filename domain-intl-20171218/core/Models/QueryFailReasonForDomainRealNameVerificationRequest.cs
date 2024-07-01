@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class QueryFailReasonForDomainRealNameVerificationRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("RealNameVerificationAction")]
         [Validation(Required=false)]
         public string RealNameVerificationAction { get; set; }

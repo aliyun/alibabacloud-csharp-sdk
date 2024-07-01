@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class SaveBatchTaskForDomainNameProxyServiceRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public List<string> DomainName { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public bool? Status { get; set; }

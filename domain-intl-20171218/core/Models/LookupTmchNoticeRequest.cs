@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class LookupTmchNoticeRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ClaimKey")]
         [Validation(Required=false)]
         public string ClaimKey { get; set; }
