@@ -340,6 +340,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceAutoPay))
+            {
+                query["ResourceAutoPay"] = request.ResourceAutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -445,6 +449,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceAutoPay))
+            {
+                query["ResourceAutoPay"] = request.ResourceAutoPay;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {

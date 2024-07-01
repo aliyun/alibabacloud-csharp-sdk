@@ -102,6 +102,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceAutoPay")]
+        [Validation(Required=false)]
+        public bool? ResourceAutoPay { get; set; }
+
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
