@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListQuotaApplicationsRequest : TeaModel {
-        [NameInMap("AcceptLanguage")]
-        [Validation(Required=false)]
-        public string AcceptLanguage { get; set; }
-
         /// <summary>
         /// The quota dimensions.
         /// </summary>
@@ -23,7 +19,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// The key of the dimension.
             /// 
-            /// > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// >  The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -32,7 +28,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// The value of the dimension.
             /// 
-            /// > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// >  The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -65,8 +61,6 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
         /// <summary>
         /// The abbreviation of the Alibaba Cloud service name.
-        /// 
-        /// > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]

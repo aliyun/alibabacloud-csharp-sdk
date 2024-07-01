@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// The key of the dimension.
             /// 
-            /// > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// >  The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// The value of the dimension.
             /// 
-            /// > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// >  The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -69,14 +69,16 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The abbreviation of the Alibaba Cloud service name.
         /// 
-        /// > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+        /// >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](https://help.aliyun.com/document_detail/440555.html) operation and check the value of the `ProductCode` parameter.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The ID of the quota.
+        /// The quota ID.
         /// </summary>
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]
@@ -94,21 +96,25 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string QuotaCategory { get; set; }
 
         /// <summary>
-        /// The field based on which you want to sort the returned records. This parameter is available only for quotas that belong to ECS Quotas by Instance Type. Valid values:
+        /// The field based on which you want to sort the returned records. Valid values:
         /// 
         /// *   TIME: The returned records are sorted by the last update time.
         /// *   TOTAL: The returned records are sorted by the usage of the total quota.
         /// *   RESERVED: The returned records are sorted by the usage of the reserved quota.
+        /// 
+        /// >  This parameter is available only for quotas that belong to ECS Quotas by Instance Type. You can leave this parameter empty.
         /// </summary>
         [NameInMap("SortField")]
         [Validation(Required=false)]
         public string SortField { get; set; }
 
         /// <summary>
-        /// The order in which you want to sort the returned records. This parameter is available only for quotas that belong to ECS Quotas by Instance Type. Valid values:
+        /// The order in which you want to sort the returned records. Valid values:
         /// 
         /// *   Ascending: ascending order
         /// *   Descending: descending order
+        /// 
+        /// >  This parameter is available only for quotas that belong to ECS Quotas by Instance Type. You can leave this parameter empty.
         /// </summary>
         [NameInMap("SortOrder")]
         [Validation(Required=false)]

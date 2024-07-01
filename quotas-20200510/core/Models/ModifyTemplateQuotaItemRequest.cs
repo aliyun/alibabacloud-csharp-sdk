@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }

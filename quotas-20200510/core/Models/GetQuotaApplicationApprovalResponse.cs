@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductQuotaDimensionsResponse : TeaModel {
+    public class GetQuotaApplicationApprovalResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ListProductQuotaDimensionsResponseBody Body { get; set; }
+        public GetQuotaApplicationApprovalResponseBody Body { get; set; }
 
     }
 

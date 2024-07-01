@@ -46,7 +46,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The abbreviation of the Alibaba Cloud service name.
         /// 
-        /// > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+        /// > For more information, see [Alibaba Cloud services that support Quota Center](https://help.aliyun.com/document_detail/182368.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]

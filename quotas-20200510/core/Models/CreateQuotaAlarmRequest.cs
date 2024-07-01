@@ -12,14 +12,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class CreateQuotaAlarmRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AlarmName")]
         [Validation(Required=false)]
         public string AlarmName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]
         public string QuotaActionCode { get; set; }

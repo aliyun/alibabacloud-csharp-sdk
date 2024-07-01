@@ -19,7 +19,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// The key of the dimension.
             /// 
-            /// > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// > 
+            /// 
+            /// *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// 
+            /// *   You must specify both Key and Value for each quota dimension.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -28,7 +32,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// The value of the dimension.
             /// 
-            /// > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// > 
+            /// 
+            /// *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// 
+            /// *   You must specify both Key and Value for each quota dimension.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -62,7 +70,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The abbreviation of the Alibaba Cloud service name.
         /// 
-        /// > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+        /// >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](https://help.aliyun.com/document_detail/440555.html) operation and check the value of `ProductCode` in the response.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]

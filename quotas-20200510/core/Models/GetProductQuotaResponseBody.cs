@@ -260,6 +260,24 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [Validation(Required=false)]
             public string UnadjustableDetail { get; set; }
 
+            [NameInMap("UsageMetric")]
+            [Validation(Required=false)]
+            public GetProductQuotaResponseBodyQuotaUsageMetric UsageMetric { get; set; }
+            public class GetProductQuotaResponseBodyQuotaUsageMetric : TeaModel {
+                [NameInMap("MetricDimensions")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> MetricDimensions { get; set; }
+
+                [NameInMap("MetricName")]
+                [Validation(Required=false)]
+                public string MetricName { get; set; }
+
+                [NameInMap("MetricNamespace")]
+                [Validation(Required=false)]
+                public string MetricNamespace { get; set; }
+
+            }
+
         }
 
         /// <summary>

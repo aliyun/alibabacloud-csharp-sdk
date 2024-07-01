@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The ID of the quota.
+        /// The quota ID.
         /// </summary>
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string QuotaName { get; set; }
 
         /// <summary>
-        /// The unit of the new quota value.
+        /// The unit of the quota.
         /// </summary>
         [NameInMap("QuotaUnit")]
         [Validation(Required=false)]

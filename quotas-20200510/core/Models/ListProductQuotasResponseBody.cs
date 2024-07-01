@@ -33,15 +33,15 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// Indicates whether the quota is adjustable. Valid values:
             /// 
-            /// *   true: The quota is adjustable.
-            /// *   false: The quota is not adjustable.
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("Adjustable")]
             [Validation(Required=false)]
             public bool? Adjustable { get; set; }
 
             /// <summary>
-            /// None.
+            /// N/A
             /// </summary>
             [NameInMap("ApplicableRange")]
             [Validation(Required=false)]
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// Indicates whether the system shows the used value of the quota. Valid values:
             /// 
-            /// *   true: The system shows the used value of the quota.
-            /// *   false: The system does not show the used value of the quota.
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("Consumable")]
             [Validation(Required=false)]
@@ -98,8 +98,8 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// Indicates whether the quota is a global quota. Valid values:
             /// 
-            /// *   true: The quota is shared in all regions.
-            /// *   false: The quota is independently used in a region.
+            /// *   true
+            /// *   false
             /// </summary>
             [NameInMap("GlobalQuota")]
             [Validation(Required=false)]
@@ -189,8 +189,6 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
                 /// <summary>
                 /// The unit of the quota.
-                /// 
-                /// >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
                 /// </summary>
                 [NameInMap("QuotaUnit")]
                 [Validation(Required=false)]
@@ -234,15 +232,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
             /// <summary>
             /// The unit of the quota.
-            /// 
-            /// >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
             /// </summary>
             [NameInMap("QuotaUnit")]
             [Validation(Required=false)]
             public string QuotaUnit { get; set; }
 
             /// <summary>
-            /// None.
+            /// N/A
             /// </summary>
             [NameInMap("SupportedRange")]
             [Validation(Required=false)]
@@ -272,6 +268,24 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("UnadjustableDetail")]
             [Validation(Required=false)]
             public string UnadjustableDetail { get; set; }
+
+            [NameInMap("UsageMetric")]
+            [Validation(Required=false)]
+            public ListProductQuotasResponseBodyQuotasUsageMetric UsageMetric { get; set; }
+            public class ListProductQuotasResponseBodyQuotasUsageMetric : TeaModel {
+                [NameInMap("MetricDimensions")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> MetricDimensions { get; set; }
+
+                [NameInMap("MetricName")]
+                [Validation(Required=false)]
+                public string MetricName { get; set; }
+
+                [NameInMap("MetricNamespace")]
+                [Validation(Required=false)]
+                public string MetricNamespace { get; set; }
+
+            }
 
         }
 

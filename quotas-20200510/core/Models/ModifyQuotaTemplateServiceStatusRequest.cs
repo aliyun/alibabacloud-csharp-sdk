@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ModifyQuotaTemplateServiceStatusRequest : TeaModel {
         /// <summary>
-        /// The state of the quota template. Valid values:
+        /// The status of the quota template. Valid values:
         /// 
-        /// *   \-1: The quota template is disabled.
+        /// *   \\-1: The quota template is disabled.
         /// *   1: The quota template is enabled.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ServiceStatus")]
         [Validation(Required=false)]

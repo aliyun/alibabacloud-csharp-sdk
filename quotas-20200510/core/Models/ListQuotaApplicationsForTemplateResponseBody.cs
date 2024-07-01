@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public List<ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplications> QuotaBatchApplications { get; set; }
         public class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplications : TeaModel {
             /// <summary>
-            /// The Alibaba Cloud accounts for which the quotas are applied.
+            /// The Alibaba Cloud accounts that correspond to the resource directory members for which the quotas are applied.
             /// </summary>
             [NameInMap("AliyunUids")]
             [Validation(Required=false)]
@@ -52,18 +52,18 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public List<ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplicationsAuditStatusVos> AuditStatusVos { get; set; }
             public class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplicationsAuditStatusVos : TeaModel {
                 /// <summary>
-                /// The number of approval documents.
+                /// The number of approval tickets.
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// The approval status of the quota increase application. Valid values:
+                /// The approval state of the quota increase application. Valid values:
                 /// 
                 /// *   Disagree: The application is rejected.
                 /// *   Agree: The application is approved.
-                /// *   Process: The application is pending approval.
+                /// *   Process: The application is in review.
                 /// *   Cancel: The application is canceled.
                 /// </summary>
                 [NameInMap("Status")]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// The quota dimensions.
             /// 
-            /// Format: {"regionId":"cn-hangzhou"}.
+            /// Format example: {"regionId":"cn-hangzhou"}.
             /// </summary>
             [NameInMap("Dimensions")]
             [Validation(Required=false)]

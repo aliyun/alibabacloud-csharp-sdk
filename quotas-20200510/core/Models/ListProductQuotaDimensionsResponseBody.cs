@@ -57,6 +57,29 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail> DimensionValueDetail { get; set; }
             public class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail : TeaModel {
                 /// <summary>
+                /// The quota dimensions on which the quota dimension that you want to query is dependent.
+                /// </summary>
+                [NameInMap("DependentDimensions")]
+                [Validation(Required=false)]
+                public List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions> DependentDimensions { get; set; }
+                public class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions : TeaModel {
+                    /// <summary>
+                    /// The key of the quota dimension on which the quota dimension that you want to query is dependent.
+                    /// </summary>
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    /// <summary>
+                    /// The value of the quota dimension on which the quota dimension that you want to query is dependent.
+                    /// </summary>
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                /// <summary>
                 /// The name of the quota dimension.
                 /// </summary>
                 [NameInMap("Name")]

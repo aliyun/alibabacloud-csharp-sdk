@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ModifyQuotaTemplateServiceStatusResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ModifyQuotaTemplateServiceStatusResponseBody Body { get; set; }
 
     }

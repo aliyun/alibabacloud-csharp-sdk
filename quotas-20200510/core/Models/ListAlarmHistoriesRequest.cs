@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListAlarmHistoriesRequest : TeaModel {
         /// <summary>
+        /// The ID of the alert.
+        /// </summary>
+        [NameInMap("AlarmId")]
+        [Validation(Required=false)]
+        public string AlarmId { get; set; }
+
+        /// <summary>
         /// The end of the time range to query.
         /// </summary>
         [NameInMap("EndTime")]
@@ -42,7 +49,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The abbreviation of the Alibaba Cloud service name.
         /// 
-        /// > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+        /// > For more information, see [Alibaba Cloud services that support Quota Center](https://help.aliyun.com/document_detail/182368.html).
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]

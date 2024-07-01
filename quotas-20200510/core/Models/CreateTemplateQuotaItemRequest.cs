@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     public class CreateTemplateQuotaItemRequest : TeaModel {
         /// <summary>
         /// The requested value of the quota.
+        /// 
+        /// > 
+        /// 
+        /// *   You can specify DesireValue based on the values of `TotalUsage` and `ApplicableRange` in the response to the [ListProductQuotas](https://help.aliyun.com/document_detail/440554.html) operation.
+        /// 
+        /// *   Applications are reviewed by the technical support team for each cloud service. To increase the success rate of your application, specify a reasonable quota value and a detailed reason.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DesireValue")]
         [Validation(Required=false)]
@@ -26,9 +34,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// The key of the dimension.
             /// 
-            /// The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// > 
             /// 
-            /// > This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
+            /// *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// 
+            /// *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -37,9 +47,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// The value of the dimension.
             /// 
-            /// The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// > 
             /// 
-            /// > This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
+            /// *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// 
+            /// *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -88,14 +100,20 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The abbreviation of the Alibaba Cloud service name.
         /// 
-        /// > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+        /// >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](https://help.aliyun.com/document_detail/440555.html) operation and check the value of `ProductCode` in the response.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The ID of the quota.
+        /// The quota ID.
+        /// 
+        /// >  To obtain the quota ID of an Alibaba Cloud service, call the [ListProductQuotas](https://help.aliyun.com/document_detail/440554.html) operation and check the value of `QuotaActionCode` in the response.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]

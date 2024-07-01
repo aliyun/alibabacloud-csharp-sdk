@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class CreateQuotaApplicationsForTemplateRequest : TeaModel {
         /// <summary>
-        /// The Alibaba Cloud accounts that correspond to the resource directory member accounts for which the quotas are applied.
+        /// The Alibaba Cloud accounts that correspond to the resource directory members for which the quotas are applied.
         /// 
-        /// >  You can apply for a quota increase for up to 50 member accounts in each request. For more information about the member accounts in a resource directory, see [ListAccounts](~~604207~~).
+        /// >  You can submit a quota increase application for a maximum of 50 members at a time. For more information about the members of a resource directory, see [ListAccounts](https://help.aliyun.com/document_detail/604207.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AliyunUids")]
         [Validation(Required=false)]
@@ -21,7 +23,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The requested value of the quota.
         /// 
-        /// >  Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit the application.
+        /// > 
+        /// 
+        /// *   You can specify DesireValue based on the values of `TotalUsage` and `ApplicableRange` in the response to the [ListProductQuotas](https://help.aliyun.com/document_detail/440554.html) operation.
+        /// 
+        /// *   Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, specify a reasonable quota value and a detailed reason.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DesireValue")]
         [Validation(Required=false)]
@@ -35,20 +43,26 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public List<CreateQuotaApplicationsForTemplateRequestDimensions> Dimensions { get; set; }
         public class CreateQuotaApplicationsForTemplateRequestDimensions : TeaModel {
             /// <summary>
-            /// The key of the quota dimension.
+            /// The key of the dimension.
             /// 
-            /// The value range of N varies based on the number of dimensions that are supported by the Alibaba Cloud service.
+            /// > 
             /// 
-            /// >  This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
+            /// *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// 
+            /// *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the quota dimension.
+            /// The value of the dimension.
             /// 
-            /// >  The value range of N varies based on the number of dimensions that are supported by the Alibaba Cloud service.
+            /// > 
+            /// 
+            /// *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+            /// 
+            /// *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -97,7 +111,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The abbreviation of the Alibaba Cloud service name.
         /// 
-        /// >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+        /// >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](https://help.aliyun.com/document_detail/440555.html) operation and check the value of `ProductCode` in the response.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -105,6 +121,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
         /// <summary>
         /// The quota ID.
+        /// 
+        /// >  To query the quota ID of an Alibaba Cloud service, call the [ListProductQuotas](https://help.aliyun.com/document_detail/440554.html) and check the value of `QuotaActionCode` in the response.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]
@@ -113,9 +133,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// The quota type. Valid values:
         /// 
-        /// *   CommonQuota (default): general quota
+        /// *   CommonQuota: general quota
         /// *   FlowControl: API rate limit
         /// *   WhiteListLabel: privilege
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("QuotaCategory")]
         [Validation(Required=false)]
@@ -125,6 +147,8 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// The reason for the quota application.
         /// 
         /// >  Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit the application.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
