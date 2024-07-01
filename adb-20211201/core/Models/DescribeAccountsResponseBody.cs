@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// The state of the database account. Valid values:
+                /// The status of the database account. Valid values:
                 /// 
                 /// *   **Creating**
                 /// *   **Available**
@@ -55,8 +55,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string AccountType { get; set; }
 
+                [NameInMap("Engine")]
+                [Validation(Required=false)]
+                public string Engine { get; set; }
+
                 /// <summary>
-                /// The ID of the RAM user.
+                /// The ID of the Resource Access Management (RAM) user.
                 /// </summary>
                 [NameInMap("RamUsers")]
                 [Validation(Required=false)]

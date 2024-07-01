@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the preemptible instance feature for the resource group. After you enable the preemptible instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the preemptible instance feature only for job resource groups. Valid values:
+        /// Specifies whether to enable the spot instance feature for the resource group. After you enable the spot instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the spot instance feature only for job resource groups. Valid values:
         /// 
         /// *   **True**
         /// *   **False**
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// 
             /// *   The name can be up to 255 characters in length.
             /// *   The name must start with a letter or digit.
-            /// *   The name can contain letters, digits, hyphens (_), and underscores (_).
+            /// *   The name can contain letters, digits, hyphens (-), and underscores (_).
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]

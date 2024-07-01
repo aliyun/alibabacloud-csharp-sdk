@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// The name of the database account.
         /// 
-        /// > You can call the [DescribeAccounts](https://help.aliyun.com/document_detail/612430.html) operation to query the information about database accounts in a cluster, including the database account name.
+        /// >  You can call the [DescribeAccounts](https://help.aliyun.com/document_detail/612430.html) operation to query the information about database accounts for a cluster, including the account name.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
 
     }
 

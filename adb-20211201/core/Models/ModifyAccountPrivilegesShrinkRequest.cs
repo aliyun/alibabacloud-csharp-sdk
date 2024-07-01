@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The permissions of the database account.
+        /// The permissions that you want to grant to the database account.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The region ID of the cluster.
+        /// The region ID.
         /// 
         /// This parameter is required.
         /// </summary>

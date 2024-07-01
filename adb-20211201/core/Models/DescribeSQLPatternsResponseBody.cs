@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSQLPatternsResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         /// <summary>
         /// The page number.
         /// </summary>
@@ -66,12 +70,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? AverageScanSize { get; set; }
 
             /// <summary>
-            /// Indicates whether the execution of the SQL pattern can be blocked. Valid values:
+            /// Indicates whether the execution of the SQL pattern can be intercepted. Valid values:
             /// 
             /// *   **true**
             /// *   **false**
             /// 
-            /// >  Only SELECT and INSERT statements can be blocked.
+            /// >  Only SELECT and INSERT statements can be intercepted.
             /// </summary>
             [NameInMap("Blockable")]
             [Validation(Required=false)]
@@ -148,7 +152,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Tables { get; set; }
 
             /// <summary>
-            /// The database username that is used to commit the SQL pattern.
+            /// The name of the database account that is used to commit the SQL pattern.
             /// </summary>
             [NameInMap("User")]
             [Validation(Required=false)]

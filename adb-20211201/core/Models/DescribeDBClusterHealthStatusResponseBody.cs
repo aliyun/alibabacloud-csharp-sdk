@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClusterHealthStatusResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         /// <summary>
         /// The access nodes of the queried cluster.
         /// </summary>

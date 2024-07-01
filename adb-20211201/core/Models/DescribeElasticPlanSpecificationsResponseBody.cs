@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeElasticPlanSpecificationsResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of resource specifications returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The resource specifications that can be scaled.
+        /// The queried resource specifications.
         /// </summary>
         [NameInMap("Specifications")]
         [Validation(Required=false)]
         public List<string> Specifications { get; set; }
 
         /// <summary>
-        /// The number of resource specifications that can be scaled.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -65,6 +65,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     [Validation(Required=false)]
                     public float? ReservedAcuNumber { get; set; }
 
+                    [NameInMap("SpotAcuNumber")]
+                    [Validation(Required=false)]
+                    public float? SpotAcuNumber { get; set; }
+
+                    [NameInMap("SpotAcuPercentage")]
+                    [Validation(Required=false)]
+                    public float? SpotAcuPercentage { get; set; }
+
                     /// <summary>
                     /// The total number of ACUs.
                     /// </summary>

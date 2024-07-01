@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? MaxExecutor { get; set; }
 
         /// <summary>
-        /// The minimum number of executors that are required to execute SQL statements. Valid values: 0 to 2000. A value of 0 indicates that no executors are permanent if no SQL statements are executed. If this value exceeds the total number of executes that are supported by the resource group, the Spark SQL engine fails to be started. The value must be less than the value of MaxExecutor.
+        /// The minimum number of executors that are required to execute SQL statements. Valid values: 0 to 2000. A value of 0 indicates that no executors are permanent if no SQL statements are executed. If this value exceeds the total number of executors that are supported by the resource group, the Spark SQL engine fails to be started. The value must be less than the value of MaxExecutor.
         /// </summary>
         [NameInMap("MinExecutor")]
         [Validation(Required=false)]

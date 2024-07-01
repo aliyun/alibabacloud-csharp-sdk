@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyAuditLogConfigRequest : TeaModel {
         /// <summary>
-        /// Modifies the status of SQL audit. Valid values:
+        /// The status to which you want to change the SQL audit feature. Valid values:
         /// 
-        /// *   **on**: enables SQL audit.
-        /// *   **off**: disables SQL audit.
+        /// *   **on**
+        /// *   **off**
         /// 
-        /// >  After you disable the SQL audit feature, all SQL audit logs are deleted. You must query and export SQL audit logs before you disable SQL audit. For more information, see Query and export SQL audit logs. When you re-enable SQL audit, audit logs that are generated from the last time when SQL audit was enabled are available for queries.
+        /// >  After you disable the SQL audit feature, all SQL audit logs are deleted. You must query and export SQL audit logs before you disable SQL audit. For more information, see [DescribeAuditLogRecords](https://help.aliyun.com/document_detail/612426.html). When you re-enable SQL audit, audit logs that are generated from the time when SQL audit was last enabled are available for queries.
         /// 
         /// This parameter is required.
         /// </summary>

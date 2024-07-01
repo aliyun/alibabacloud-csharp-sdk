@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// Details of the table.
+        /// The queried table.
         /// </summary>
         [NameInMap("Table")]
         [Validation(Required=false)]

@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The order by which to sort query results. Specify the parameter value in the JSON string format. Example: `[{"Field":"AverageQueryTime","Type":"Asc"}]`.
+        /// The order by which to sort query results. Specify the parameter value in the JSON format. Example: `[{"Field":"AverageQueryTime","Type":"Asc"}]`.
         /// 
         /// *   `Field` specifies the field by which to sort the query results. Valid values:
         /// 

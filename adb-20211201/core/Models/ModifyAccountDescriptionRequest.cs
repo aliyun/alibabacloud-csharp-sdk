@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
+
     }
 
 }

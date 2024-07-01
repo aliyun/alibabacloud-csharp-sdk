@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDownloadRecordsResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         /// <summary>
         /// The queried download tasks.
         /// </summary>
@@ -17,14 +21,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<DescribeDownloadRecordsResponseBodyRecords> Records { get; set; }
         public class DescribeDownloadRecordsResponseBodyRecords : TeaModel {
             /// <summary>
-            /// The download task ID.
+            /// The download job ID.
             /// </summary>
             [NameInMap("DownloadId")]
             [Validation(Required=false)]
             public long? DownloadId { get; set; }
 
             /// <summary>
-            /// The error message returned if the download task failed.
+            /// The error message returned if the download job failed.
             /// </summary>
             [NameInMap("ExceptionMsg")]
             [Validation(Required=false)]
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// The state of the download task. Valid values:
+            /// The status of the download job. Valid values:
             /// 
             /// *   **running**
             /// *   **finished**

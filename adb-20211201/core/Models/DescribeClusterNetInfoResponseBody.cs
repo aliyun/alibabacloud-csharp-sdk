@@ -74,6 +74,26 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
+                [NameInMap("Ports")]
+                [Validation(Required=false)]
+                public DescribeClusterNetInfoResponseBodyItemsAddressPorts Ports { get; set; }
+                public class DescribeClusterNetInfoResponseBodyItemsAddressPorts : TeaModel {
+                    [NameInMap("ports")]
+                    [Validation(Required=false)]
+                    public List<DescribeClusterNetInfoResponseBodyItemsAddressPortsPorts> Ports { get; set; }
+                    public class DescribeClusterNetInfoResponseBodyItemsAddressPortsPorts : TeaModel {
+                        [NameInMap("Port")]
+                        [Validation(Required=false)]
+                        public string Port { get; set; }
+
+                        [NameInMap("Protocol")]
+                        [Validation(Required=false)]
+                        public string Protocol { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// The VPC ID.
                 /// 

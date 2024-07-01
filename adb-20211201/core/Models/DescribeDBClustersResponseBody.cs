@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClustersResponseBody : TeaModel {
         /// <summary>
-        /// The queried cluster.
+        /// The queried clusters.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// The specifications of reserved computing resources. Each ACU is equivalent to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
+                /// The specifications of reserved computing resources. Each ACU is approximately equal to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
                 /// </summary>
                 [NameInMap("ComputeResource")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string DBClusterNetworkType { get; set; }
 
                 /// <summary>
-                /// The state of the cluster. Valid values:
+                /// The status of the cluster. Valid values:
                 /// 
                 /// *   **Preparing**
                 /// 
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? DBNodeStorage { get; set; }
 
                 /// <summary>
-                /// The version of AnalyticDB for MySQL Data Lakehouse Edition. **5.0** is returned.
+                /// The engine version of the AnalyticDB for MySQL Data Lakehouse Edition cluster. **5.0** is returned.
                 /// </summary>
                 [NameInMap("DBVersion")]
                 [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public int? ElasticIOResource { get; set; }
 
                 /// <summary>
-                /// The database engine of the cluster. **AnalyticDB** is returned.
+                /// The engine of the cluster. **AnalyticDB** is returned.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
@@ -152,10 +152,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ExecutorCount { get; set; }
 
                 /// <summary>
-                /// The time when the cluster expired. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
+                /// The time when the cluster expires. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
                 /// 
-                /// > - The expiration time is returned for a subscription cluster.
-                /// > - Anempty string is returned for a pay-as-you-go cluster.
+                /// > 
+                /// 
+                /// *   If the billing method of the cluster is subscription, the actual expiration time is returned.
+                /// 
+                /// *   If the billing method of the cluster is pay-as-you-go, null is returned.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -167,8 +170,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// *   **true**
                 /// *   **false**
                 /// 
-                /// > - If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew expired clusters. For more information, see [Renewal policy](https://help.aliyun.com/document_detail/135246.html).
-                /// > - This parameter is not returned for pay-as-you-go clusters.
+                /// > 
+                /// 
+                /// *   If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](https://help.aliyun.com/document_detail/135246.html).
+                /// 
+                /// *   This parameter is not returned for pay-as-you-go clusters.
                 /// </summary>
                 [NameInMap("Expired")]
                 [Validation(Required=false)]
@@ -183,7 +189,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string InnerPort { get; set; }
 
                 /// <summary>
-                /// The lock state of the cluster. Valid values:
+                /// The lock status of the cluster. Valid values:
                 /// 
                 /// *   **Unlock**: The cluster is not locked.
                 /// *   **ManualLock**: The cluster is manually locked.
@@ -230,6 +236,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string ProductForm { get; set; }
 
+                [NameInMap("ProductVersion")]
+                [Validation(Required=false)]
+                public string ProductVersion { get; set; }
+
                 [NameInMap("RdsInstanceId")]
                 [Validation(Required=false)]
                 public string RdsInstanceId { get; set; }
@@ -242,7 +252,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The amount of remaining reserved computing resources that are available in the cluster. Each ACU is equivalent to 1 core and 4 GB memory.
+                /// The remaining reserved computing resources that are available in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.
                 /// </summary>
                 [NameInMap("ReservedACU")]
                 [Validation(Required=false)]
@@ -264,7 +274,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is equivalent to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
+                /// The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is approximately equal to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
                 /// </summary>
                 [NameInMap("StorageResource")]
                 [Validation(Required=false)]

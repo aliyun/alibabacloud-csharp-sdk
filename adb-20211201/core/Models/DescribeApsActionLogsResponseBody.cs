@@ -10,7 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsActionLogsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the logs.
+        /// The information about the request denial.
+        /// </summary>
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
+        /// <summary>
+        /// The queried logs.
         /// </summary>
         [NameInMap("ActionLogs")]
         [Validation(Required=false)]
@@ -24,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Context { get; set; }
 
             /// <summary>
-            /// The task phase during which the logs are generated. Valid values:
+            /// The phase during which the log was generated. Valid values:
             /// 
             /// *   **StructureMigrate**: schema migration.
             /// *   **FullDataSync**: full data synchronization.
@@ -46,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string State { get; set; }
 
             /// <summary>
-            /// The time when the log is generated. The time follows the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format. The time is displayed in UTC.
+            /// The time when the log was generated. The time follows the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]
@@ -62,21 +69,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -90,7 +97,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TotalCount { get; set; }
 
         /// <summary>
-        /// The ID of the real-time data ingestion task.
+        /// The ID of the real-time data ingestion job.
         /// </summary>
         [NameInMap("WorkloadId")]
         [Validation(Required=false)]

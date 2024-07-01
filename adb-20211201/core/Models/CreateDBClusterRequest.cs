@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterVersion { get; set; }
 
+        [NameInMap("DiskEncryption")]
+        [Validation(Required=false)]
+        public bool? DiskEncryption { get; set; }
+
         /// <summary>
         /// Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:
         /// 
@@ -62,6 +66,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("EnableDefaultResourcePool")]
         [Validation(Required=false)]
         public bool? EnableDefaultResourcePool { get; set; }
+
+        [NameInMap("KmsId")]
+        [Validation(Required=false)]
+        public string KmsId { get; set; }
 
         /// <summary>
         /// The billing method of the cluster. Valid values:

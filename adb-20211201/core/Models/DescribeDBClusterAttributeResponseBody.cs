@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClusterAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The queried AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster information.
+        /// The queried information about the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public List<DescribeDBClusterAttributeResponseBodyItemsDBCluster> DBCluster { get; set; }
             public class DescribeDBClusterAttributeResponseBodyItemsDBCluster : TeaModel {
+                [NameInMap("ClickhouseEngineCacheSize")]
+                [Validation(Required=false)]
+                public int? ClickhouseEngineCacheSize { get; set; }
+
+                [NameInMap("ClickhouseEngineEnabled")]
+                [Validation(Required=false)]
+                public bool? ClickhouseEngineEnabled { get; set; }
+
                 /// <summary>
                 /// The billing method of the cluster. Valid values:
                 /// 
@@ -31,14 +39,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// The specifications of reserved computing resources. Each ACU is equivalent to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
+                /// The specifications of reserved computing resources. Each ACU is approximately equal to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
                 /// </summary>
                 [NameInMap("ComputeResource")]
                 [Validation(Required=false)]
                 public string ComputeResource { get; set; }
 
                 /// <summary>
-                /// The total amount of computing resources in the cluster. Each ACU is equivalent to 1 core and 4 GB memory.
+                /// The total amount of computing resources in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.
                 /// </summary>
                 [NameInMap("ComputeResourceTotal")]
                 [Validation(Required=false)]
@@ -52,7 +60,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// The time when the cluster was created. The time follows the ISO 8601 standard in the `yyyy-MM-ddThh:mm:ssZ` format. The time is displayed in UTC.
+                /// The time when the cluster was created. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -80,7 +88,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string DBClusterNetworkType { get; set; }
 
                 /// <summary>
-                /// The state of the cluster. Valid values:
+                /// The status of the cluster. Valid values:
                 /// 
                 /// *   **Preparing**
                 /// *   **Creating**
@@ -97,7 +105,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string DBClusterStatus { get; set; }
 
                 /// <summary>
-                /// The cluster type. By default, **Common** is returned, which indicates a common cluster.
+                /// The type of the cluster. By default, **Common** is returned, which indicates a common cluster.
                 /// </summary>
                 [NameInMap("DBClusterType")]
                 [Validation(Required=false)]
@@ -125,7 +133,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string EngineVersion { get; set; }
 
                 /// <summary>
-                /// The expiration time of the cluster.
+                /// The time when the cluster expires.
                 /// 
                 /// *   If the billing method of the cluster is subscription, the actual expiration time is returned.
                 /// *   If the billing method of the cluster is pay-as-you-go, null is returned.
@@ -140,13 +148,19 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// *   **true**
                 /// *   **false**
                 /// 
+                /// > 
                 /// 
-                /// > - If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](https://help.aliyun.com/document_detail/135248.html).
-                /// > - This parameter is not returned for pay-as-you-go clusters.
+                /// *   If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](https://help.aliyun.com/document_detail/135248.html).
+                /// 
+                /// *   This parameter is not returned for pay-as-you-go clusters.
                 /// </summary>
                 [NameInMap("Expired")]
                 [Validation(Required=false)]
                 public string Expired { get; set; }
+
+                [NameInMap("KmsId")]
+                [Validation(Required=false)]
+                public string KmsId { get; set; }
 
                 /// <summary>
                 /// The lock mode of the cluster. Valid values:
@@ -205,6 +219,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string ProductForm { get; set; }
 
+                [NameInMap("ProductVersion")]
+                [Validation(Required=false)]
+                public string ProductVersion { get; set; }
+
                 /// <summary>
                 /// The region ID of the cluster.
                 /// </summary>
@@ -213,7 +231,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The remaining reserved computing resources that are available in the cluster. Each ACU is equivalent to 1 core and 4 GB memory.
+                /// The amount of remaining reserved computing resources that are available in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.
                 /// </summary>
                 [NameInMap("ReservedACU")]
                 [Validation(Required=false)]
@@ -235,14 +253,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is equivalent to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
+                /// The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is approximately equal to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
                 /// </summary>
                 [NameInMap("StorageResource")]
                 [Validation(Required=false)]
                 public string StorageResource { get; set; }
 
                 /// <summary>
-                /// The total amount of storage resources in the cluster. Each ACU is equivalent to 1 core and 4 GB memory.
+                /// The total amount of storage resources in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.
                 /// </summary>
                 [NameInMap("StorageResourceTotal")]
                 [Validation(Required=false)]
