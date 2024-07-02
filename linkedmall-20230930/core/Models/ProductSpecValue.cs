@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string Value { get; set; }
 
+        [NameInMap("valueAlias")]
+        [Validation(Required=false)]
+        public string ValueAlias { get; set; }
+
         [NameInMap("valueId")]
         [Validation(Required=false)]
         public long? ValueId { get; set; }

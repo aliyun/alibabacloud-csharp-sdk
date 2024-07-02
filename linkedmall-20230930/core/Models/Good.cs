@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public int? Quantity { get; set; }
 
+        [NameInMap("skuId")]
+        [Validation(Required=false)]
+        public string SkuId { get; set; }
+
+        [NameInMap("skuTitle")]
+        [Validation(Required=false)]
+        public string SkuTitle { get; set; }
+
     }
 
 }
