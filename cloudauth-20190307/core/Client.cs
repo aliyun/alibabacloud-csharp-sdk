@@ -2782,6 +2782,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["ValidityDate"] = request.ValidityDate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoEvidence))
+            {
+                query["VideoEvidence"] = request.VideoEvidence;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoluntaryCustomizedContent))
             {
                 query["VoluntaryCustomizedContent"] = request.VoluntaryCustomizedContent;
@@ -2947,6 +2951,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityDate))
             {
                 query["ValidityDate"] = request.ValidityDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoEvidence))
+            {
+                query["VideoEvidence"] = request.VideoEvidence;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoluntaryCustomizedContent))
             {

@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string ValidityDate { get; set; }
 
+        [NameInMap("VideoEvidence")]
+        [Validation(Required=false)]
+        public string VideoEvidence { get; set; }
+
         [NameInMap("VoluntaryCustomizedContent")]
         [Validation(Required=false)]
         public string VoluntaryCustomizedContent { get; set; }
