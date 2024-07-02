@@ -49,23 +49,6 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         }
 
-        [NameInMap("Dimensions")]
-        [Validation(Required=false)]
-        public List<RunCompletionRequestDimensions> Dimensions { get; set; }
-        public class RunCompletionRequestDimensions : TeaModel {
-            [NameInMap("Desc")]
-            [Validation(Required=false)]
-            public string Desc { get; set; }
-
-            /// <summary>
-            /// This parameter is required.
-            /// </summary>
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-        }
-
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public List<RunCompletionRequestFields> Fields { get; set; }
@@ -78,9 +61,22 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [Validation(Required=false)]
             public string Desc { get; set; }
 
-            [NameInMap("Enums")]
+            [NameInMap("EnumValues")]
             [Validation(Required=false)]
-            public List<string> Enums { get; set; }
+            public List<RunCompletionRequestFieldsEnumValues> EnumValues { get; set; }
+            public class RunCompletionRequestFieldsEnumValues : TeaModel {
+                [NameInMap("Desc")]
+                [Validation(Required=false)]
+                public string Desc { get; set; }
+
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
+                [NameInMap("EnumValue")]
+                [Validation(Required=false)]
+                public string EnumValue { get; set; }
+
+            }
 
             /// <summary>
             /// This parameter is required.
@@ -94,6 +90,37 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [NameInMap("ModelCode")]
         [Validation(Required=false)]
         public string ModelCode { get; set; }
+
+        [NameInMap("ServiceInspection")]
+        [Validation(Required=false)]
+        public RunCompletionRequestServiceInspection ServiceInspection { get; set; }
+        public class RunCompletionRequestServiceInspection : TeaModel {
+            [NameInMap("InspectionContents")]
+            [Validation(Required=false)]
+            public List<RunCompletionRequestServiceInspectionInspectionContents> InspectionContents { get; set; }
+            public class RunCompletionRequestServiceInspectionInspectionContents : TeaModel {
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+                /// <summary>
+                /// This parameter is required.
+                /// </summary>
+                [NameInMap("Title")]
+                [Validation(Required=false)]
+                public string Title { get; set; }
+
+            }
+
+            [NameInMap("InspectionIntroduction")]
+            [Validation(Required=false)]
+            public string InspectionIntroduction { get; set; }
+
+            [NameInMap("SceneIntroduction")]
+            [Validation(Required=false)]
+            public string SceneIntroduction { get; set; }
+
+        }
 
         [NameInMap("Stream")]
         [Validation(Required=false)]
