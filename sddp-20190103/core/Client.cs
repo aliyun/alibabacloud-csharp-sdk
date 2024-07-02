@@ -232,6 +232,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["FeatureType"] = request.FeatureType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstantlyScan))
+            {
+                query["InstantlyScan"] = request.InstantlyScan;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -337,6 +341,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureType))
             {
                 query["FeatureType"] = request.FeatureType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstantlyScan))
+            {
+                query["InstantlyScan"] = request.InstantlyScan;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
