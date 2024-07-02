@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
-    public class DescribeTenantReadableScnRequest : TeaModel {
+    public class DescribeSessionListRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
-        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("InstanceId")]
@@ -19,8 +17,6 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
-        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("TenantId")]

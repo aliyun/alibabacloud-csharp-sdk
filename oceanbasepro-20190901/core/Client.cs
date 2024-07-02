@@ -146,6 +146,114 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
+         * @summary 异步关闭集群租户的会话信息；关闭oceanbase云服务和业务之间的会话信息
+         *
+         * @param request BatchKillSessionListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchKillSessionListResponse
+         */
+        public BatchKillSessionListResponse BatchKillSessionListWithOptions(BatchKillSessionListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionList))
+            {
+                body["SessionList"] = request.SessionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchKillSessionList",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchKillSessionListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 异步关闭集群租户的会话信息；关闭oceanbase云服务和业务之间的会话信息
+         *
+         * @param request BatchKillSessionListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return BatchKillSessionListResponse
+         */
+        public async Task<BatchKillSessionListResponse> BatchKillSessionListWithOptionsAsync(BatchKillSessionListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionList))
+            {
+                body["SessionList"] = request.SessionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchKillSessionList",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchKillSessionListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 异步关闭集群租户的会话信息；关闭oceanbase云服务和业务之间的会话信息
+         *
+         * @param request BatchKillSessionListRequest
+         * @return BatchKillSessionListResponse
+         */
+        public BatchKillSessionListResponse BatchKillSessionList(BatchKillSessionListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchKillSessionListWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 异步关闭集群租户的会话信息；关闭oceanbase云服务和业务之间的会话信息
+         *
+         * @param request BatchKillSessionListRequest
+         * @return BatchKillSessionListResponse
+         */
+        public async Task<BatchKillSessionListResponse> BatchKillSessionListAsync(BatchKillSessionListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchKillSessionListWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 根据记录id取消修改操作 （仅支持处于 PENDING 状态的修改记录）
          *
          * @param request CancelProjectModifyRecordRequest
@@ -9170,6 +9278,106 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
+         * @summary 查询集群租户的会话信息；展示oceanbase云服务和业务之间的会话信息
+         *
+         * @param request DescribeSessionListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSessionListResponse
+         */
+        public DescribeSessionListResponse DescribeSessionListWithOptions(DescribeSessionListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSessionList",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSessionListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询集群租户的会话信息；展示oceanbase云服务和业务之间的会话信息
+         *
+         * @param request DescribeSessionListRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeSessionListResponse
+         */
+        public async Task<DescribeSessionListResponse> DescribeSessionListWithOptionsAsync(DescribeSessionListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSessionList",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSessionListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询集群租户的会话信息；展示oceanbase云服务和业务之间的会话信息
+         *
+         * @param request DescribeSessionListRequest
+         * @return DescribeSessionListResponse
+         */
+        public DescribeSessionListResponse DescribeSessionList(DescribeSessionListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSessionListWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询集群租户的会话信息；展示oceanbase云服务和业务之间的会话信息
+         *
+         * @param request DescribeSessionListRequest
+         * @return DescribeSessionListResponse
+         */
+        public async Task<DescribeSessionListResponse> DescribeSessionListAsync(DescribeSessionListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSessionListWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary You can call this operation to query the execution history of an SQL statement by SQL ID that is determined as a slow SQL statement during a specified period of time.
          *
          * @param request DescribeSlowSQLHistoryListRequest
@@ -9990,7 +10198,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary 查询租户同步位点信息
+         * @summary You can call this operation to query the maximum readable timestamp of a tenant.
          *
          * @param request DescribeTenantReadableScnRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10028,7 +10236,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary 查询租户同步位点信息
+         * @summary You can call this operation to query the maximum readable timestamp of a tenant.
          *
          * @param request DescribeTenantReadableScnRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10066,7 +10274,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary 查询租户同步位点信息
+         * @summary You can call this operation to query the maximum readable timestamp of a tenant.
          *
          * @param request DescribeTenantReadableScnRequest
          * @return DescribeTenantReadableScnResponse
@@ -10078,7 +10286,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-         * @summary 查询租户同步位点信息
+         * @summary You can call this operation to query the maximum readable timestamp of a tenant.
          *
          * @param request DescribeTenantReadableScnRequest
          * @return DescribeTenantReadableScnResponse
