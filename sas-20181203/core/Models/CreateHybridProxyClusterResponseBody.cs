@@ -8,10 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DeleteVulAutoRepairConfigResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
+    public class CreateHybridProxyClusterResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -17,7 +17,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliasName { get; set; }
 
         /// <summary>
-        /// The configuration ID of the vulnerability. You can call the [ListVulAutoRepairConfig](~~ListVulAutoRepairConfig~~) operation to query the configuration IDs of the vulnerability.
+        /// The IDs of the configurations.
+        /// 
+        /// >  You can call the [ListVulAutoRepairConfig](~~ListVulAutoRepairConfig~~) operation to query the IDs.
         /// </summary>
         [NameInMap("ConfigIdList")]
         [Validation(Required=false)]
@@ -26,8 +28,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The type of the vulnerability. Valid values:
         /// 
-        /// *   **cve**: Linux software vulnerability
-        /// *   **sys**: Windows system vulnerability
+        /// *   cve: Linux software vulnerability
+        /// *   sys: Windows system vulnerability
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

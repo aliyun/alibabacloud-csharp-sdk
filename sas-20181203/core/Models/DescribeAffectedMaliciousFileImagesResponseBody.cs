@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string HighLight { get; set; }
 
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
             /// <summary>
             /// The name of the image.
             /// </summary>

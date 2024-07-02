@@ -249,6 +249,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string VulStatus { get; set; }
 
+            [NameInMap("lastScanTime")]
+            [Validation(Required=false)]
+            public long? LastScanTime { get; set; }
+
         }
 
         /// <summary>

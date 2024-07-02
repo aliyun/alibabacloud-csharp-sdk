@@ -88,6 +88,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeImageSensitiveFileListResponseBodySensitiveFileList> SensitiveFileList { get; set; }
         public class DescribeImageSensitiveFileListResponseBodySensitiveFileList : TeaModel {
+            [NameInMap("Advice")]
+            [Validation(Required=false)]
+            public string Advice { get; set; }
+
             /// <summary>
             /// The key of the sensitive file type.
             /// </summary>
@@ -108,6 +112,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
 
             /// <summary>
             /// The timestamp generated when the first scan was performed. Unit: milliseconds.

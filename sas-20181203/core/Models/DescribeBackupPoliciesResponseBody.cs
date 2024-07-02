@@ -98,6 +98,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            [NameInMap("LastStatusSyncTime")]
+            [Validation(Required=false)]
+            public long? LastStatusSyncTime { get; set; }
+
             /// <summary>
             /// The name of the anti-ransomware policy.
             /// </summary>
@@ -157,6 +161,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("PolicyVersion")]
             [Validation(Required=false)]
             public string PolicyVersion { get; set; }
+
+            [NameInMap("PreStatus")]
+            [Validation(Required=false)]
+            public string PreStatus { get; set; }
 
             /// <summary>
             /// The UUIDs that are returned based on the value of the MachineRemark request parameter.

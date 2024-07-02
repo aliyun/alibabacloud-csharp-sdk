@@ -10,22 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUuidsByVulNamesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the statistics about the assets.
+        /// The statistics about the servers.
         /// </summary>
         [NameInMap("MachineInfoStatistics")]
         [Validation(Required=false)]
         public List<DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics> MachineInfoStatistics { get; set; }
         public class DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics : TeaModel {
+            /// <summary>
+            /// The public IP address of the server on which the exception was detected.
+            /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
+            /// <summary>
+            /// The private IP address of the server on which the exception was detected.
+            /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// The instance ID.
+            /// The instance ID of the server.
             /// </summary>
             [NameInMap("MachineInstanceId")]
             [Validation(Required=false)]
@@ -53,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Os { get; set; }
 
             /// <summary>
-            /// The ID of the region in which the server resides.
+            /// The region ID of the server.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]

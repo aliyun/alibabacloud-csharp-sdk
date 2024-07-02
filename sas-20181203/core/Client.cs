@@ -5992,6 +5992,114 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
+         * @summary 创建代理集群
+         *
+         * @param request CreateHybridProxyClusterRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateHybridProxyClusterResponse
+         */
+        public CreateHybridProxyClusterResponse CreateHybridProxyClusterWithOptions(CreateHybridProxyClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
+            {
+                query["ClusterName"] = request.ClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
+            {
+                query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateHybridProxyCluster",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateHybridProxyClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建代理集群
+         *
+         * @param request CreateHybridProxyClusterRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateHybridProxyClusterResponse
+         */
+        public async Task<CreateHybridProxyClusterResponse> CreateHybridProxyClusterWithOptionsAsync(CreateHybridProxyClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
+            {
+                query["ClusterName"] = request.ClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
+            {
+                query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateHybridProxyCluster",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateHybridProxyClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建代理集群
+         *
+         * @param request CreateHybridProxyClusterRequest
+         * @return CreateHybridProxyClusterResponse
+         */
+        public CreateHybridProxyClusterResponse CreateHybridProxyCluster(CreateHybridProxyClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateHybridProxyClusterWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建代理集群
+         *
+         * @param request CreateHybridProxyClusterRequest
+         * @return CreateHybridProxyClusterResponse
+         */
+        public async Task<CreateHybridProxyClusterResponse> CreateHybridProxyClusterAsync(CreateHybridProxyClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateHybridProxyClusterWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Creates a defense rule in the container firewall module.
          *
          * @param tmpReq CreateInterceptionRuleRequest
@@ -12304,7 +12412,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary Delete a list of vulnerabilities that can be automatically fixed. After the list is deleted, you can not select the list when you create a vulnerability fixing task on the Playbook page.
+         * @summary Deletes configurations of of an automatic vulnerability fixing task at a time on the Playbook page.
          *
          * @param request DeleteVulAutoRepairConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12346,7 +12454,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary Delete a list of vulnerabilities that can be automatically fixed. After the list is deleted, you can not select the list when you create a vulnerability fixing task on the Playbook page.
+         * @summary Deletes configurations of of an automatic vulnerability fixing task at a time on the Playbook page.
          *
          * @param request DeleteVulAutoRepairConfigRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -12388,7 +12496,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary Delete a list of vulnerabilities that can be automatically fixed. After the list is deleted, you can not select the list when you create a vulnerability fixing task on the Playbook page.
+         * @summary Deletes configurations of of an automatic vulnerability fixing task at a time on the Playbook page.
          *
          * @param request DeleteVulAutoRepairConfigRequest
          * @return DeleteVulAutoRepairConfigResponse
@@ -12400,7 +12508,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary Delete a list of vulnerabilities that can be automatically fixed. After the list is deleted, you can not select the list when you create a vulnerability fixing task on the Playbook page.
+         * @summary Deletes configurations of of an automatic vulnerability fixing task at a time on the Playbook page.
          *
          * @param request DeleteVulAutoRepairConfigRequest
          * @return DeleteVulAutoRepairConfigResponse
@@ -37632,7 +37740,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary 查询漏洞rasp防御统计
+         * @summary Queries the vulnerability defense statistics in Security Center.
          *
          * @param request DescribeVulDefendCountStatisticsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -37666,7 +37774,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary 查询漏洞rasp防御统计
+         * @summary Queries the vulnerability defense statistics in Security Center.
          *
          * @param request DescribeVulDefendCountStatisticsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -37700,7 +37808,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary 查询漏洞rasp防御统计
+         * @summary Queries the vulnerability defense statistics in Security Center.
          *
          * @param request DescribeVulDefendCountStatisticsRequest
          * @return DescribeVulDefendCountStatisticsResponse
@@ -37712,7 +37820,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary 查询漏洞rasp防御统计
+         * @summary Queries the vulnerability defense statistics in Security Center.
          *
          * @param request DescribeVulDefendCountStatisticsRequest
          * @return DescribeVulDefendCountStatisticsResponse
@@ -38380,7 +38488,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary 查询漏洞库信息统计
+         * @summary Queries the statistics of vulnerabilities in Security Center.
          *
          * @param request DescribeVulMetaCountStatisticsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -38405,7 +38513,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary 查询漏洞库信息统计
+         * @summary Queries the statistics of vulnerabilities in Security Center.
          *
          * @param request DescribeVulMetaCountStatisticsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -38430,7 +38538,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary 查询漏洞库信息统计
+         * @summary Queries the statistics of vulnerabilities in Security Center.
          *
          * @return DescribeVulMetaCountStatisticsResponse
          */
@@ -38441,7 +38549,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-         * @summary 查询漏洞库信息统计
+         * @summary Queries the statistics of vulnerabilities in Security Center.
          *
          * @return DescribeVulMetaCountStatisticsResponse
          */

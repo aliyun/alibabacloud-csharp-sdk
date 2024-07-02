@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? AgentlessMalicious { get; set; }
 
+            [NameInMap("AgentlessSensitiveFile")]
+            [Validation(Required=false)]
+            public int? AgentlessSensitiveFile { get; set; }
+
             /// <summary>
             /// The number of system vulnerabilities detected by the agentless detection feature.
             /// </summary>
