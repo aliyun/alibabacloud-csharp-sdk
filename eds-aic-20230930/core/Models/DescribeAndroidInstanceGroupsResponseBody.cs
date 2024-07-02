@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             }
 
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }

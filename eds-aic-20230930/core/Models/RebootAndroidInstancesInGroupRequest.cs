@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
+        [NameInMap("ForceStop")]
+        [Validation(Required=false)]
+        public bool? ForceStop { get; set; }
+
     }
 
 }

@@ -489,6 +489,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
@@ -571,6 +575,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
@@ -1611,7 +1619,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         }
 
         /**
-         * @summary 查询安卓实例组
+         * @summary 查询实例组
          *
          * @param request DescribeAndroidInstanceGroupsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1681,7 +1689,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         }
 
         /**
-         * @summary 查询安卓实例组
+         * @summary 查询实例组
          *
          * @param request DescribeAndroidInstanceGroupsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1751,7 +1759,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         }
 
         /**
-         * @summary 查询安卓实例组
+         * @summary 查询实例组
          *
          * @param request DescribeAndroidInstanceGroupsRequest
          * @return DescribeAndroidInstanceGroupsResponse
@@ -1763,7 +1771,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         }
 
         /**
-         * @summary 查询安卓实例组
+         * @summary 查询实例组
          *
          * @param request DescribeAndroidInstanceGroupsRequest
          * @return DescribeAndroidInstanceGroupsResponse
@@ -4173,6 +4181,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AndroidInstanceIds"] = request.AndroidInstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStop))
+            {
+                query["ForceStop"] = request.ForceStop;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4206,6 +4218,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
             {
                 query["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStop))
+            {
+                query["ForceStop"] = request.ForceStop;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5005,6 +5021,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AndroidInstanceIds"] = request.AndroidInstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStop))
+            {
+                query["ForceStop"] = request.ForceStop;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5038,6 +5058,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
             {
                 query["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStop))
+            {
+                query["ForceStop"] = request.ForceStop;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
