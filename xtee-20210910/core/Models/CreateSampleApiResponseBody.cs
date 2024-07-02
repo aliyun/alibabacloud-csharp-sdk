@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateSampleApiResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
