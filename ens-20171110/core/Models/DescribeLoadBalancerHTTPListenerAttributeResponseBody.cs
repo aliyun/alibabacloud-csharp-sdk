@@ -106,11 +106,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   Valid values: **1** to **300**.
         /// *   Unit: seconds.
         /// 
-        /// > 
-        /// 
-        /// *   This parameter is returned only if you set HealthCheck to on.
-        /// 
-        /// *   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+        /// >*   This parameter is returned only if you set HealthCheck to on.
+        /// >*   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
         /// </summary>
         [NameInMap("HealthCheckTimeout")]
         [Validation(Required=false)]
@@ -119,11 +116,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The Uniform Resource Identifier (URI) that is used for health checks. The URI must be **1** to **80** characters in length.
         /// 
-        /// > 
-        /// 
-        /// *   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
-        /// 
-        /// *   This parameter is returned only if you set HealthCheck to on.
+        /// >*   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
+        /// >*   This parameter is returned only if you set HealthCheck to on.
         /// </summary>
         [NameInMap("HealthCheckURI")]
         [Validation(Required=false)]
@@ -222,6 +216,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("UnhealthyThreshold")]
         [Validation(Required=false)]
         public int? UnhealthyThreshold { get; set; }
+
+        /// <summary>
+        /// Specifies whether to use the X-Forwarded-For header to obtain the real IP address of the client. Valid values:
+        /// 
+        /// *   **on**
+        /// *   **off** (default)
+        /// </summary>
+        [NameInMap("XForwardedFor")]
+        [Validation(Required=false)]
+        public string XForwardedFor { get; set; }
 
     }
 

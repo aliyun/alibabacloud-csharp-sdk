@@ -29,7 +29,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// Specifies whether to use coupons. Valid values: true and false Default value: true.
+        /// Specifies whether to use coupons. Valid values:
+        /// 
+        /// *   true
+        /// *   false (default)
         /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
@@ -61,29 +64,29 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The specification of the Android in Container (AIC) instance. Valid values:
+        /// The specification of the Android in Container (AIC) instance. Examples:
         /// 
-        /// *   aic.cf53r.c1.np
-        /// *   aic.cf53r.c2.np
-        /// *   aic.cf53r.c3.np
-        /// *   aic.cf53r.c4.np
-        /// *   aic.cf53r.c5.np
-        /// *   aic.cf53r.c6.np
-        /// *   aic.cf53r.c7.np
-        /// *   aic.cf53r.c8.np
-        /// *   ens.a6c2
-        /// *   aic.cf52m1r.c1.np
-        /// *   aic.cf52m1r.c2.np
-        /// *   aic.cf52m1r.c3.np
-        /// *   aic.cf52m1r.c4.np
-        /// *   aic.cf52m1r.c5.np
-        /// *   aic.cf53r.c6
-        /// *   aic.cf52m1r.c6
-        /// *   aic.cf53r.c7
         /// *   aic.cf52r.c1.np
         /// *   aic.cf52r.c2.np
-        /// *   aic.cf52r.c3.np
+        /// *   aic.cf53r.c2.np
         /// *   aic.cf52r.c4.np
+        /// *   aic.cf53r.c3.np
+        /// *   aic.cf52r.c3.np
+        /// *   aic.cf53r.c1.np
+        /// *   aic.cf53r.c5.np
+        /// *   aic.cf53r.c6
+        /// *   aic.cf53r.c4.np
+        /// *   aic.cf53r.c6.np
+        /// *   aic.cf53r.c7.np
+        /// *   aic.cf52m1r.c5.np
+        /// *   aic.cf53r.c8.np
+        /// *   aic.cf53r.c7
+        /// *   aic.cf52m1r.c2.np
+        /// *   aic.cf52m1r.c1.np
+        /// *   aic.cf52m1r.c3.np
+        /// *   aic.cf52m1r.c4.np
+        /// *   aic.cf52m1r.c6
+        /// *   ens.a6c2
         /// 
         /// This parameter is required.
         /// </summary>
@@ -99,7 +102,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// The namespace.
         /// </summary>
         [NameInMap("NameSpace")]
         [Validation(Required=false)]
@@ -143,26 +146,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The resolution. Valid values:
+        /// The resolution. Examples:
         /// 
-        /// *   1920\\*1080
+        /// *   1920\\*864
         /// *   1080\\*1920
-        /// *   1280\\*720
+        /// *   1920\\*1080
         /// *   720\\*1280
         /// *   2400\\*1080
-        /// *   1920\\*864
         /// *   1080\\*2400
-        /// *   864\\*1920
-        /// 
-        /// <!---->
-        /// 
-        /// *   1920\\*1080
-        /// *   1080\\*1920
         /// *   1280\\*720
-        /// *   720\\*1280
-        /// *   2400\\*1080
-        /// *   1920\\*864
-        /// *   1080\\*2400
         /// *   864\\*1920
         /// 
         /// This parameter is required.
@@ -179,7 +171,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ServerName { get; set; }
 
         /// <summary>
-        /// The specification of the ARM server. Valid values:
+        /// The specification of the ARM server. Examples:
         /// 
         /// *   cas.cf53r
         /// *   cas.cf52r

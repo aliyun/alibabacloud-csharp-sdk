@@ -179,6 +179,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? UnhealthyThreshold { get; set; }
 
+        [NameInMap("XForwardedFor")]
+        [Validation(Required=false)]
+        public string XForwardedFor { get; set; }
+
     }
 
 }

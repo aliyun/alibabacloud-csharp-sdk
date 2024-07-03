@@ -21,9 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BucketAcl { get; set; }
 
         /// <summary>
-        /// The name of the bucket.
-        /// 
-        /// This parameter can contain 3 to 50 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).
+        /// The name of the bucket. This parameter can contain 3 to 50 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).
         /// 
         /// This parameter is required.
         /// </summary>
@@ -37,6 +35,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
+
+        [NameInMap("DispatchScope")]
+        [Validation(Required=false)]
+        public string DispatchScope { get; set; }
 
         /// <summary>
         /// The ID of the region where the node is located. If this parameter is not specified, the node is the global default node.

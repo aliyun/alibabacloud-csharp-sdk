@@ -8,40 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DeleteSDGResponseBody : TeaModel {
+    public class PreloadRegionSDGResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public DeleteSDGResponseBodyData Data { get; set; }
-        public class DeleteSDGResponseBodyData : TeaModel {
+        public PreloadRegionSDGResponseBodyData Data { get; set; }
+        public class PreloadRegionSDGResponseBodyData : TeaModel {
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             [NameInMap("Result")]
             [Validation(Required=false)]
-            public DeleteSDGResponseBodyDataResult Result { get; set; }
-            public class DeleteSDGResponseBodyDataResult : TeaModel {
+            public PreloadRegionSDGResponseBodyDataResult Result { get; set; }
+            public class PreloadRegionSDGResponseBodyDataResult : TeaModel {
                 [NameInMap("FailedCount")]
                 [Validation(Required=false)]
                 public long? FailedCount { get; set; }
 
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]
-                public List<DeleteSDGResponseBodyDataResultFailedItems> FailedItems { get; set; }
-                public class DeleteSDGResponseBodyDataResultFailedItems : TeaModel {
-                    [NameInMap("ErrMessage")]
+                public List<PreloadRegionSDGResponseBodyDataResultFailedItems> FailedItems { get; set; }
+                public class PreloadRegionSDGResponseBodyDataResultFailedItems : TeaModel {
+                    [NameInMap("DestinationRegionId")]
                     [Validation(Required=false)]
-                    public string ErrMessage { get; set; }
+                    public string DestinationRegionId { get; set; }
 
-                    [NameInMap("Item")]
+                    [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
-                    public DeleteSDGResponseBodyDataResultFailedItemsItem Item { get; set; }
-                    public class DeleteSDGResponseBodyDataResultFailedItemsItem : TeaModel {
-                        [NameInMap("SdgId")]
-                        [Validation(Required=false)]
-                        public string SdgId { get; set; }
-
-                    }
+                    public string ErrorMessage { get; set; }
 
                 }
 
@@ -57,9 +51,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
-        /// <summary>
-        /// The request ID.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

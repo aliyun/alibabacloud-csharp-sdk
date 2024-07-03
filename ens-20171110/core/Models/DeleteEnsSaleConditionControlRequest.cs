@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteEnsSaleConditionControlRequest : TeaModel {
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
         [NameInMap("AliUidAccount")]
         [Validation(Required=false)]
         public string AliUidAccount { get; set; }
@@ -22,6 +19,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
+
+        [NameInMap("CustomAccount")]
+        [Validation(Required=false)]
+        public string CustomAccount { get; set; }
 
         /// <summary>
         /// This parameter is required.

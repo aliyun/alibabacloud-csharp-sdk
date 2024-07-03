@@ -71,6 +71,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceResourceType { get; set; }
 
         /// <summary>
+        /// The instance type.
+        /// </summary>
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
+        /// <summary>
         /// The internal IP address of the instance.
         /// </summary>
         [NameInMap("IntranetIp")]
@@ -94,7 +101,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OrderByParams { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page **1**.
+        /// The page number. Pages start from page **1**.
         /// 
         /// Default value: **1**.
         /// </summary>
@@ -136,6 +143,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// The tags that are added to the resource.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeInstancesRequestTags> Tags { get; set; }

@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public class ListBucketsResponseBodyBucketInfos : TeaModel {
             /// <summary>
             /// The access control list (ACL) of the bucket.
+            /// 
+            /// *   **public-read-write**
+            /// *   **public-read**
+            /// *   **private** (default)
             /// </summary>
             [NameInMap("BucketAcl")]
             [Validation(Required=false)]
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// The time when the bucket was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// The time when the bucket was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -52,14 +56,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// Single-node storage. Set the value to sink.
+            /// The type of the single-node storage. Set the value to sink.
             /// </summary>
             [NameInMap("LogicalBucketType")]
             [Validation(Required=false)]
             public string LogicalBucketType { get; set; }
 
             /// <summary>
-            /// The time when the bucket was modified. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// The time when the bucket was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]

@@ -8,42 +8,41 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DeleteEnsSaleControlRequest : TeaModel {
-        [NameInMap("AliUidAccount")]
+    public class TagResourcesRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public string AliUidAccount { get; set; }
+        public List<string> ResourceId { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("CommodityCode")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string CommodityCode { get; set; }
-
-        [NameInMap("CustomAccount")]
-        [Validation(Required=false)]
-        public string CustomAccount { get; set; }
+        public string ResourceType { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("SaleControls")]
+        [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<DeleteEnsSaleControlRequestSaleControls> SaleControls { get; set; }
-        public class DeleteEnsSaleControlRequestSaleControls : TeaModel {
+        public List<TagResourcesRequestTag> Tag { get; set; }
+        public class TagResourcesRequestTag : TeaModel {
             /// <summary>
             /// This parameter is required.
             /// </summary>
-            [NameInMap("ModuleCode")]
+            [NameInMap("Key")]
             [Validation(Required=false)]
-            public string ModuleCode { get; set; }
+            public string Key { get; set; }
 
             /// <summary>
             /// This parameter is required.
             /// </summary>
-            [NameInMap("OrderType")]
+            [NameInMap("Value")]
             [Validation(Required=false)]
-            public string OrderType { get; set; }
+            public string Value { get; set; }
 
         }
 

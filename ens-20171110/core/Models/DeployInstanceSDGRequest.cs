@@ -8,28 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class CreateEnsSaleControlShrinkRequest : TeaModel {
-        [NameInMap("AliUidAccount")]
+    public class DeployInstanceSDGRequest : TeaModel {
+        [NameInMap("DeploymentType")]
         [Validation(Required=false)]
-        public string AliUidAccount { get; set; }
+        public string DeploymentType { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("CommodityCode")]
+        [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public string CommodityCode { get; set; }
-
-        [NameInMap("CustomAccount")]
-        [Validation(Required=false)]
-        public string CustomAccount { get; set; }
+        public List<string> InstanceIds { get; set; }
 
         /// <summary>
         /// This parameter is required.
         /// </summary>
-        [NameInMap("SaleControls")]
+        [NameInMap("SDGId")]
         [Validation(Required=false)]
-        public string SaleControlsShrink { get; set; }
+        public string SDGId { get; set; }
 
     }
 

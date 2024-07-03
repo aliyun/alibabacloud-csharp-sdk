@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class ReinitInstanceResponseBody : TeaModel {
+    public class RemoveInstanceSDGShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// This parameter is required.
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string InstanceIdsShrink { get; set; }
 
     }
 

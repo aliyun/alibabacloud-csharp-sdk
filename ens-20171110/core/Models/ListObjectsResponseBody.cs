@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// The container for all object names between Prefix and the next occurrence of the string specified by a delimiter. A response can contain CommonPrefixes only if you specify a delimiter.
+        /// If the delimiter parameter is specified in the request, the response contains CommonPrefixes. Objects whose names contain the same string from the prefix to the next occurrence of the delimiter are grouped as a single result element in CommonPrefixes.
         /// </summary>
         [NameInMap("CommonPrefixes")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// The entity tag (ETag). When an object is created, an ETag is created to identify the content of the object.
             /// 
             /// *   For an object that is created by calling the PutObject operation, the ETag value of the object is the MD5 hash of the object content.
-            /// *   If an object is created by using other methods, the ETag value of the object is the UUID of the object content.
+            /// *   For an object that is not created by calling the PutObject operation, the ETag value of the object is the UUID of the object content.
             /// *   The ETag of an object can be used to check whether the object content is modified. However, we recommend that you use the MD5 hash of an object rather than the ETag value of the object to verify data integrity.
             /// </summary>
             [NameInMap("ETag")]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// The number of objects returned for this request.
+        /// The number of keys returned for this request.
         /// </summary>
         [NameInMap("KeyCount")]
         [Validation(Required=false)]

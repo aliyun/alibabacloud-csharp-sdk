@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AppVersions { get; set; }
 
         /// <summary>
-        /// The region level by which edge resources of the application are collected. The value must be of the enumerated data type. Valid values:
+        /// The region level by which edge resources of the application are collected. The value is of the enumeration type. Valid values:
         /// 
         /// *   National: Chinese mainland
         /// *   Big: area
@@ -47,6 +47,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string OutDetailStatParams { get; set; }
 
+        /// <summary>
+        /// The resource filter.
+        /// </summary>
         [NameInMap("ResourceSelector")]
         [Validation(Required=false)]
         public string ResourceSelector { get; set; }

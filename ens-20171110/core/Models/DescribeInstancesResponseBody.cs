@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeInstancesResponseBodyInstancesInstance : TeaModel {
+                /// <summary>
+                /// The automatic release time of the instance.
+                /// </summary>
                 [NameInMap("AutoReleaseTime")]
                 [Validation(Required=false)]
                 public string AutoReleaseTime { get; set; }
@@ -81,6 +84,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                         [Validation(Required=false)]
                         public string DiskName { get; set; }
 
+                        /// <summary>
+                        /// The size of the disk. Unit: GiB.
+                        /// </summary>
                         [NameInMap("DiskSize")]
                         [Validation(Required=false)]
                         public int? DiskSize { get; set; }
@@ -163,7 +169,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// 
                 /// *   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
                 /// *   For a Windows instance, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.
-                /// *   For other operating systems: The hostname must be 2 to 64 characters in length and can contain letters, digits, and hyphens (-). It can be separated by periods (.).
+                /// *   For an instance that runs another operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
                 /// </summary>
                 [NameInMap("HostName")]
                 [Validation(Required=false)]
@@ -197,14 +203,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the virtual private cloud (VPC).
+                /// The name of the instance.
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// The type of the instance. Valid values:
+                /// The category of the instance. Valid values:
                 /// 
                 /// *   EnsInstance: ENS instances that you purchase.
                 /// *   EnsService: ENS instances that belong to edge services.
@@ -279,7 +285,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     }
 
                     /// <summary>
-                    /// The ID of the vSwitch.
+                    /// The vSwitch ID.
                     /// </summary>
                     [NameInMap("VSwitchId")]
                     [Validation(Required=false)]
@@ -399,6 +405,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string SpecName { get; set; }
 
+                /// <summary>
+                /// The bidding policy of the preemptible instance.
+                /// </summary>
                 [NameInMap("SpotStrategy")]
                 [Validation(Required=false)]
                 public string SpotStrategy { get; set; }
@@ -497,6 +506,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
                 }
 
+                /// <summary>
+                /// The tags of the instance.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceTags Tags { get; set; }
@@ -505,10 +517,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     [Validation(Required=false)]
                     public List<DescribeInstancesResponseBodyInstancesInstanceTagsTags> Tags { get; set; }
                     public class DescribeInstancesResponseBodyInstancesInstanceTagsTags : TeaModel {
+                        /// <summary>
+                        /// The tag key.
+                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
+                        /// <summary>
+                        /// The tag value.
+                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }
