@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogRecordsRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+        /// The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public List<DescribeSqlLogRecordsRequestFilters> Filters { get; set; }
         public class DescribeSqlLogRecordsRequestFilters : TeaModel {
             /// <summary>
-            /// The name of the filter parameter.
+            /// The filter parameter.
             /// 
-            /// >  For more information about the supported filter parameters and their valid values, see the following **supplement about the Key parameter**.
+            /// >  For more information about the supported filter parameters and their valid values, see the **Supported parameters and values for Key** section of this topic.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The ID of the database instance.
+        /// The database instance ID.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// The node ID.
         /// 
-        /// *   For ApsaraDB RDS for MySQL and PolarDB for MySQL, this parameter is available only for Cluster Edition instances. By default, if this parameter is not specified, the information about the logs of the primary node is returned.
-        /// *   Set this parameter to **polarx_cn** or **polarx_dn** if the node that you want to query belongs to a PolarDB-X 2.0 database instance. A value of polarx_cn indicates a compute node. A value of polarx_dn indicates a data node.
+        /// *   For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter is valid only for instances of the Cluster Edition. If you do not specify this parameter, the log details of the primary node is queried by default.
+        /// *   For PolarDB-X 2.0 instances, set this parameter to **polarx_cn** if the node is a compute node, or **polarx_dn** if the node is a data node.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The role of the node of the PolarDB-X 2.0 database instance. Valid values:
+        /// The role of the node of the PolarDB-X 2.0 instance. Valid values:
         /// 
         /// *   \\*\\*polarx_cn\\*\\*: compute node
         /// *   \\*\\*polarx_dn\\*\\*: data node
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+        /// The beginning of the time range to query. This value is a UNIX timestamp. Unit: millisecond.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

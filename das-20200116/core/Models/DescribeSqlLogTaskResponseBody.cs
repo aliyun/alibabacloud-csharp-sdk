@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
+                [NameInMap("Collection")]
+                [Validation(Required=false)]
+                public string Collection { get; set; }
+
                 /// <summary>
                 /// The execution duration. Unit: millisecond.
                 /// </summary>

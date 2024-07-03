@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// The HTTP status code that is returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data that is returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSqlLogRecordsResponseBodyData Data { get; set; }
         public class DescribeSqlLogRecordsResponseBodyData : TeaModel {
             /// <summary>
-            /// The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
@@ -33,10 +33,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// Indicates whether the task was complete. Valid values:
             /// 
-            /// *   **0**: The task failed.
-            /// *   **1**: The task was complete.
+            /// *   **0**: no
+            /// *   **1**: yes
             /// 
-            /// >  If the value of **Finish** is 0 and the value of **JobId** is returned, the request is an asynchronous request and the return result cannot be directly obtained. You must query the return result by using the value of **JobId**. Specify JobId as the key of **Filters** and the value of **JobId** as the value of Filters. Example: `Filters=[{"Key": "JobId", "Value": "******"}]`.
+            /// >  If the value of **Finish** is 0 and the value of **JobId** is returned, the request is an asynchronous request and the return result cannot be directly obtained. You must query the return result based on the value of **JobId**. Specify JobId as the key of **Filters** and the value of **JobId** as the value of Filters. Example: `Filters=[{"Key": "JobId", "Value": "******"}]`.
             /// </summary>
             [NameInMap("Finish")]
             [Validation(Required=false)]
@@ -64,35 +64,35 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string AccountName { get; set; }
 
                     /// <summary>
-                    /// This is a reserved parameter.
+                    /// A reserved parameter.
                     /// </summary>
                     [NameInMap("Collection")]
                     [Validation(Required=false)]
                     public string Collection { get; set; }
 
                     /// <summary>
-                    /// The duration of the query. Unit: milliseconds.
+                    /// The amount of time that is consumed to execute the SQL statement. Unit: millisecond.
                     /// </summary>
                     [NameInMap("Consume")]
                     [Validation(Required=false)]
                     public long? Consume { get; set; }
 
                     /// <summary>
-                    /// The CPU execution duration. Unit: microseconds.
+                    /// The CPU execution duration. Unit: microsecond.
                     /// </summary>
                     [NameInMap("CpuTime")]
                     [Validation(Required=false)]
                     public long? CpuTime { get; set; }
 
                     /// <summary>
-                    /// The name of the database.
+                    /// The database name.
                     /// </summary>
                     [NameInMap("DBName")]
                     [Validation(Required=false)]
                     public string DBName { get; set; }
 
                     /// <summary>
-                    /// The time when the query was performed. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+                    /// The time when the SQL statement was executed. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
                     /// </summary>
                     [NameInMap("ExecuteTime")]
                     [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Ext { get; set; }
 
                     /// <summary>
-                    /// The number of rows that are pulled by the compute nodes of the PolarDB-X 2.0 database instance.
+                    /// The number of rows that are pulled by the compute nodes of the PolarDB-X 2.0 instance.
                     /// </summary>
                     [NameInMap("Frows")]
                     [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string HostAddress { get; set; }
 
                     /// <summary>
-                    /// The lock wait duration. Unit: milliseconds.
+                    /// The lock wait duration. Unit: millisecond.
                     /// </summary>
                     [NameInMap("LockTime")]
                     [Validation(Required=false)]
@@ -141,21 +141,21 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string NodeId { get; set; }
 
                     /// <summary>
-                    /// The time when the query was performed. The value of this parameter is a UNIX timestamp. Unit: milliseconds.
+                    /// The timestamp generated when the SQL statement was executed. The value of this parameter is a UNIX timestamp. Unit: millisecond.
                     /// </summary>
                     [NameInMap("OriginTime")]
                     [Validation(Required=false)]
                     public long? OriginTime { get; set; }
 
                     /// <summary>
-                    /// The parallel queue time of the PolarDB for MySQL instance. Unit: milliseconds.
+                    /// The parallel queue time of the PolarDB for MySQL instance. Unit: millisecond.
                     /// </summary>
                     [NameInMap("ParallelDegree")]
                     [Validation(Required=false)]
                     public string ParallelDegree { get; set; }
 
                     /// <summary>
-                    /// The parallelism of the PolarDB for MySQL instance.
+                    /// The parallelism of the PolarDB for MySQL cluster.
                     /// </summary>
                     [NameInMap("ParallelQueueTime")]
                     [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? PhysicAsyncRead { get; set; }
 
                     /// <summary>
-                    /// The number of physical reads.
+                    /// The total number of physical reads.
                     /// </summary>
                     [NameInMap("PhysicRead")]
                     [Validation(Required=false)]
@@ -183,28 +183,28 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? PhysicSyncRead { get; set; }
 
                     /// <summary>
-                    /// The number of rows that are returned.
+                    /// The number of rows returned by the SQL statement.
                     /// </summary>
                     [NameInMap("ReturnRows")]
                     [Validation(Required=false)]
                     public long? ReturnRows { get; set; }
 
                     /// <summary>
-                    /// The total number of rows that are updated or returned by the compute nodes of the PolarDB-X 2.0 database instance.
+                    /// The total number of rows that are updated or returned by the compute nodes of the PolarDB-X 2.0 instance.
                     /// </summary>
                     [NameInMap("Rows")]
                     [Validation(Required=false)]
                     public long? Rows { get; set; }
 
                     /// <summary>
-                    /// The number of rows that are scanned.
+                    /// The number of scanned rows.
                     /// </summary>
                     [NameInMap("ScanRows")]
                     [Validation(Required=false)]
                     public long? ScanRows { get; set; }
 
                     /// <summary>
-                    /// The number of requests that are sent to the data nodes by the compute nodes of the PolarDB-X 2.0 database instance.
+                    /// The number of requests that are sent from the compute nodes to the data nodes of the PolarDB-X 2.0 instance.
                     /// </summary>
                     [NameInMap("Scnt")]
                     [Validation(Required=false)]
@@ -232,10 +232,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string SqlType { get; set; }
 
                     /// <summary>
-                    /// The state of the query. Valid values:
+                    /// The execution status of the SQL statement.
                     /// 
-                    /// *   **0**: The query was successful.
-                    /// *   **1**: The query failed to be performed.
+                    /// *   **0**: The execution was successful.
+                    /// *   **1**: The execution failed.
                     /// </summary>
                     [NameInMap("State")]
                     [Validation(Required=false)]
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? ThreadId { get; set; }
 
                     /// <summary>
-                    /// The trace ID of the PolarDB-X 2.0 database instance. The value is the execution ID of the SQL statement on the data nodes.
+                    /// The trace ID of the PolarDB-X 2.0 instance. The value is the execution ID of the SQL statement on the data node.
                     /// </summary>
                     [NameInMap("TraceId")]
                     [Validation(Required=false)]
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? UpdateRows { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the In-Memory Column Index (IMCI) feature is enabled for the PolarDB for MySQL instance. Valid values:
+                    /// Indicates whether the In-Memory Column Index (IMCI) feature is enabled for the PolarDB for MySQL cluster. Valid values:
                     /// 
                     /// *   **true**
                     /// *   **false**
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Vip { get; set; }
 
                     /// <summary>
-                    /// The number of writes that are performed by the ApsaraDB RDS for SQL Server engine.
+                    /// The number of writes to the ApsaraDB RDS for SQL Server instance.
                     /// </summary>
                     [NameInMap("Writes")]
                     [Validation(Required=false)]
@@ -305,14 +305,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+            /// The beginning of the time range to query. This value is a UNIX timestamp. Unit: millisecond.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// The total number of entries.
             /// </summary>
             [NameInMap("TotalRecords")]
             [Validation(Required=false)]
@@ -321,9 +321,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// The message that is returned.
         /// 
-        /// >  If the request was successful, **Successful** is returned. If the request failed, error information such as an error code is returned.
+        /// >  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

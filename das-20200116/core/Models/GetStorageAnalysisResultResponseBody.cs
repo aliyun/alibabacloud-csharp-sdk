@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -92,13 +92,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// The optimization suggestion. Valid values:
                     /// 
-                    /// *   **NEED_ANALYZE_TABLE**: Execute the `ANALYZE TABLE` statement on the table during off-peak hours.
-                    /// *   **NEED_OPTIMIZE_TABLE**: Reclaim space fragments during off-peak hours.
-                    /// *   **CHANGE_TABLE_ENGINE_IF_NECESSARY**: Change the storage engine type of a table after risk assessment.
-                    /// *   **AUTO_INCREMENT_ID_BE_TO_RUN_OUT**: Pay attention to the usage of auto-increment IDs.
-                    /// *   **DUPLICATE_INDEX**: Optimize indexes of tables.
-                    /// *   **TABLE_SIZE**: Pay attention to the table size.
-                    /// *   **TABLE_ROWS_AND_AVG_ROW_LENGTH**: Pay attention to the number of rows in a table and the average row length.
+                    /// *   **NEED_ANALYZE_TABLE**: You can execute the `ANALYZE TABLE` statement on the table during off-peak hours. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+                    /// *   **NEED_OPTIMIZE_TABLE**: You can reclaim fragments during off-peak hours.
+                    /// *   **CHANGE_TABLE_ENGINE_IF_NECESSARY**: Change the storage engine type of a table after risk assessment. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+                    /// *   **AUTO_INCREMENT_ID_BE_TO_RUN_OUT**: Pay attention to the usage of auto-increment IDs. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+                    /// *   **DUPLICATE_INDEX**: Optimize indexes of tables. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+                    /// *   **TABLE_SIZE**: Pay attention to the table size. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+                    /// *   **TABLE_ROWS_AND_AVG_ROW_LENGTH**: Pay attention to the number of rows in a table and the average row length. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
                     /// *   **STORAGE_USED_PERCENT**: Pay attention to the space usage to prevent the instance from being locked if the instance is full.
                     /// </summary>
                     [NameInMap("OptimizeAdvice")]
@@ -108,14 +108,25 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// The item to be optimized. Valid values:
                     /// 
-                    /// *   **NEED_ANALYZE_TABLE**: tables whose storage statistics obtained from `information_schema.tables` are 50 GB larger or smaller than the physical file sizes.
-                    /// *   **NEED_OPTIMIZE_TABLE**: tables whose space fragments are larger than 6 GB and whose fragmentation rates are greater than 30%. The fragmentation rate of a table is generally calculated based on the following formula: `Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)`. In this topic, PhyTotalSize = DataSize + IndexSize + DataFree. Thus, the fragmentation rate can be calculated based on the following formula: `Fragmentation rate = DataFree/PhyTotalSize`.
-                    /// *   **TABLE_ENGINE**: tables whose storage engines are not InnoDB or XEngine.
-                    /// *   **AUTO_INCREMENT_ID_BE_TO_RUN_OUT**: tables whose usages of auto-increment IDs exceed 80%.
-                    /// *   **DUPLICATE_INDEX**: tables whose indexes are redundant or duplicate.
-                    /// *   **TABLE_SIZE**: single tables whose sizes are larger than 50 GB.
-                    /// *   **TABLE_ROWS_AND_AVG_ROW_LENGTH**: single tables that contain more than 5 million rows and whose average row lengths exceed 10 KB.
-                    /// *   **TOTAL_DATA_FREE**: instances whose reclaimable spaces are larger than 60 GB and whose total fragmentation rate is larger than 5%.
+                    /// *   **NEED_ANALYZE_TABLE**: tables whose storage statistics obtained from `information_schema.tables` are 50 GB larger or smaller than the physical file sizes. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+                    /// 
+                    /// *   **NEED_OPTIMIZE_TABLE**: tables whose space fragments are larger than 6 GB and whose fragmentation rates are greater than 30%. The fragmentation rate of a table is generally calculated based on the following formulas:
+                    /// 
+                    ///     *   ApsaraDB RDS for MySQL and PolarDB for MySQL: `Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)`. In this topic, PhyTotalSize = DataSize + IndexSize + DataFree. Thus, the fragmentation rate can be calculated based on the following formula: `Fragmentation rate = DataFree/PhyTotalSize`.
+                    ///     *   ApsaraDB for MongoDB: `Fragmentation rate = FragmentSize/PhyTotalSize`.
+                    /// 
+                    /// *   **TABLE_ENGINE**: tables whose storage engines are not InnoDB or XEngine. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+                    /// 
+                    /// *   **AUTO_INCREMENT_ID_BE_TO_RUN_OUT**: tables whose usages of auto-increment IDs exceed 80%. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+                    /// 
+                    /// *   **DUPLICATE_INDEX**: tables whose indexes are redundant or duplicate. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+                    /// 
+                    /// *   **TABLE_SIZE**: single tables whose sizes are larger than 50 GB. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+                    /// 
+                    /// *   **TABLE_ROWS_AND_AVG_ROW_LENGTH**: single tables that contain more than 5 million rows and whose average row lengths exceed 10 KB. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+                    /// 
+                    /// *   **TOTAL_DATA_FREE**: instances whose reclaimable space is larger than 60 GB and whose total fragmentation rate is larger than 5%.
+                    /// 
                     /// *   **STORAGE_USED_PERCENT**: instances whose space usage is larger than 90%.
                     /// </summary>
                     [NameInMap("OptimizeItemName")]
@@ -147,13 +158,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
                     /// <summary>
                     /// The size of space fragments. Unit: bytes.
+                    /// 
+                    /// >  This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. The fragmentation rate of a table is generally calculated based on the following formula: `Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)`. In this topic, `Fragmentation rate = DataFree/PhyTotalSize`.
                     /// </summary>
                     [NameInMap("DataFree")]
                     [Validation(Required=false)]
                     public long? DataFree { get; set; }
 
                     /// <summary>
-                    /// The storage space occupied by data. Unit: bytes.
+                    /// *   For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by data. Unit: bytes.
+                    /// *   For ApsaraDB for MongoDB instances, this parameter indicates the size of uncompressed data, that is, the amount of data. Unit: bytes.
                     /// </summary>
                     [NameInMap("DataSize")]
                     [Validation(Required=false)]
@@ -168,15 +182,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
                     /// <summary>
                     /// The type of the storage engine used by the table.
+                    /// 
+                    /// >  This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
                     /// </summary>
                     [NameInMap("Engine")]
                     [Validation(Required=false)]
                     public string Engine { get; set; }
 
                     /// <summary>
-                    /// 可回收空间大小（碎片空间大小），单位为Byte。
+                    /// The size of space that can be reclaimed. Unit: bytes.
                     /// 
-                    /// > 该参数仅适用于MongoDB实例。表碎片率计算方式为：`FragmentSize/PhyTotalSize`。
+                    /// >  This parameter is applicable only to ApsaraDB for MongoDB instances. `Fragmentation rate = FragmentSize/PhyTotalSize`.
                     /// </summary>
                     [NameInMap("FragmentSize")]
                     [Validation(Required=false)]
@@ -192,7 +208,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// The storage space of the table. Unit: bytes.
                     /// 
-                    /// >  The value of this parameter is the sum of the values of **DataSize**, **IndexSize**, and **DataFree**.
+                    /// >  For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, the value of the parameter is the sum of **DataSize**, **IndexSize**, and **DataFree**. For ApsaraDB for MongoDB instances, the value of this parameter is the sum of **DataSize** and **IndexSize**.
                     /// </summary>
                     [NameInMap("PhyTotalSize")]
                     [Validation(Required=false)]
@@ -201,7 +217,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// The physical file size of the table. Unit: bytes.
                     /// 
-                    /// >  You may fail to obtain the physical file size because of the deployment mode of the database instance.
+                    /// >  This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. Data of specific database instances cannot be obtained due to deployment mode.
                     /// </summary>
                     [NameInMap("PhysicalFileSize")]
                     [Validation(Required=false)]
@@ -223,15 +239,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
                     /// <summary>
                     /// The type of the table.
+                    /// 
+                    /// >  This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
                     /// </summary>
                     [NameInMap("TableType")]
                     [Validation(Required=false)]
                     public string TableType { get; set; }
 
                     /// <summary>
-                    /// The storage space occupied by table data and indexes. Unit: bytes.
-                    /// 
-                    /// >  The value of this parameter is the sum of the values of **DataSize** and **IndexSize**.
+                    /// *   For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by table data and indexes. Unit: bytes. The value is the sum of **DataSize** and **IndexSize**.
+                    /// *   For ApsaraDB for MongoDB instances, this parameter indicates the actual size of space allocated by Block Manager. Unit: Bytes. The compression ratio of an ApsaraDB for MongoDB instance is calculated based on the following formula: `Compression ratio = TotalSize/DataSize`.
                     /// </summary>
                     [NameInMap("TotalSize")]
                     [Validation(Required=false)]
