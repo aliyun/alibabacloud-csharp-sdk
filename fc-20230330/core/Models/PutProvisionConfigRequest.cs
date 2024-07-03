@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
     public class PutProvisionConfigRequest : TeaModel {
         /// <summary>
         /// The information about the provisioned configuration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

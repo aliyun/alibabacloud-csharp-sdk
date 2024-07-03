@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// The resource identifiers.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// The resource type.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

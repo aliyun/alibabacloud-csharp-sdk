@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
     public class CreateFunctionRequest : TeaModel {
         /// <summary>
         /// The information about function configurations.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

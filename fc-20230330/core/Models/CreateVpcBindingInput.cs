@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateVpcBindingInput : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("vpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

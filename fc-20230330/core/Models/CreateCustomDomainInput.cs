@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public CertConfig CertConfig { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("domainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

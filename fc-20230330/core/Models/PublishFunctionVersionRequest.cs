@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
     public class PublishFunctionVersionRequest : TeaModel {
         /// <summary>
         /// The information about the function version.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

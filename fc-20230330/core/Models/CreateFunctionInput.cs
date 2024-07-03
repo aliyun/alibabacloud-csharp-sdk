@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("functionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }
@@ -49,6 +52,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public GPUConfig GpuConfig { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("handler")]
         [Validation(Required=false)]
         public string Handler { get; set; }
@@ -89,6 +95,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string Role { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("runtime")]
         [Validation(Required=false)]
         public string Runtime { get; set; }

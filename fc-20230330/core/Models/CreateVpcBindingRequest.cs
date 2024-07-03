@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
     public class CreateVpcBindingRequest : TeaModel {
         /// <summary>
         /// The configurations of the virtual private cloud (VPC) binding.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

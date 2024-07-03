@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PathConfig : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("functionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public List<string> Methods { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("path")]
         [Validation(Required=false)]
         public string Path { get; set; }

@@ -25,14 +25,23 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string SourceArn { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("triggerConfig")]
         [Validation(Required=false)]
         public string TriggerConfig { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("triggerName")]
         [Validation(Required=false)]
         public string TriggerName { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("triggerType")]
         [Validation(Required=false)]
         public string TriggerType { get; set; }
