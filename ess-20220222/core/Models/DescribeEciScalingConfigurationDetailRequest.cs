@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeEciScalingConfigurationDetailRequest : TeaModel {
         /// <summary>
-        /// The output format. Set the value to yaml.
+        /// The output format. Set the value to YAML.
         /// </summary>
         [NameInMap("OutputFormat")]
         [Validation(Required=false)]

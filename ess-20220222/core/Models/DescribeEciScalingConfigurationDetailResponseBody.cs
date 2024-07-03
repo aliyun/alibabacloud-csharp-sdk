@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<DescribeEciScalingConfigurationDetailResponseBodyScalingConfigurationAcrRegistryInfos> AcrRegistryInfos { get; set; }
             public class DescribeEciScalingConfigurationDetailResponseBodyScalingConfigurationAcrRegistryInfos : TeaModel {
                 /// <summary>
-                /// The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the Container Registry Enterprise Edition instance are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).
+                /// The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. Multiple domain names are separated by commas (,).
                 /// </summary>
                 [NameInMap("Domains")]
                 [Validation(Required=false)]
@@ -103,21 +103,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ContainerGroupName { get; set; }
 
             /// <summary>
-            /// The containers that are run on the instance.
+            /// The containers in the elastic container instance.
             /// </summary>
             [NameInMap("Containers")]
             [Validation(Required=false)]
             public List<DescribeEciScalingConfigurationDetailResponseBodyScalingConfigurationContainers> Containers { get; set; }
             public class DescribeEciScalingConfigurationDetailResponseBodyScalingConfigurationContainers : TeaModel {
                 /// <summary>
-                /// The startup arguments of the container.
+                /// The arguments that are passed to the container startup commands.
                 /// </summary>
                 [NameInMap("Args")]
                 [Validation(Required=false)]
                 public List<string> Args { get; set; }
 
                 /// <summary>
-                /// The startup commands of the container.
+                /// The container startup commands.
                 /// </summary>
                 [NameInMap("Commands")]
                 [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public string FieldRefFieldPath { get; set; }
 
                     /// <summary>
-                    /// The key of the environment variable.
+                    /// The name of the environment variable.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
@@ -182,105 +182,105 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string ImagePullPolicy { get; set; }
 
                 /// <summary>
-                /// The commands that are run by using the CLI in the container to specify the postStart callback function.
+                /// The commands that are run by using a CLI for configuring the postStart callback function within the container.
                 /// </summary>
                 [NameInMap("LifecyclePostStartHandlerExecs")]
                 [Validation(Required=false)]
                 public List<string> LifecyclePostStartHandlerExecs { get; set; }
 
                 /// <summary>
-                /// The host IP address detected by the HTTP GET requests that are used to specify the postStart callback function.
+                /// The IP address of the host to the HTTP GET requests for configuring the postStart callback function are sent.
                 /// </summary>
                 [NameInMap("LifecyclePostStartHandlerHttpGetHost")]
                 [Validation(Required=false)]
                 public string LifecyclePostStartHandlerHttpGetHost { get; set; }
 
                 /// <summary>
-                /// The path detected by the HTTP GET requests that are used to specify the postStart callback function.
+                /// The path to the HTTP GET requests for configuring the postStart callback function are sent.
                 /// </summary>
                 [NameInMap("LifecyclePostStartHandlerHttpGetPath")]
                 [Validation(Required=false)]
                 public string LifecyclePostStartHandlerHttpGetPath { get; set; }
 
                 /// <summary>
-                /// The port number detected by the HTTP Get requests that are used to specify the postStart callback function.
+                /// The port over which the HTTP GET requests for configuring the postStart callback function are sent.
                 /// </summary>
                 [NameInMap("LifecyclePostStartHandlerHttpGetPort")]
                 [Validation(Required=false)]
                 public int? LifecyclePostStartHandlerHttpGetPort { get; set; }
 
                 /// <summary>
-                /// The protocol type of the HTTP Get requests that are used to specify the postStart callback function.
+                /// The protocol type of the HTTP Get requests that are used for configuring the postStart callback function.
                 /// </summary>
                 [NameInMap("LifecyclePostStartHandlerHttpGetScheme")]
                 [Validation(Required=false)]
                 public string LifecyclePostStartHandlerHttpGetScheme { get; set; }
 
                 /// <summary>
-                /// The host IP address detected by the TCP sockets that are used to specify the postStart callback function.
+                /// The IP address of the host detected by the TCP sockets that are used for configuring the postStart callback function.
                 /// </summary>
                 [NameInMap("LifecyclePostStartHandlerTcpSocketHost")]
                 [Validation(Required=false)]
                 public string LifecyclePostStartHandlerTcpSocketHost { get; set; }
 
                 /// <summary>
-                /// The port number detected by the TCP sockets that are used to specify the postStart callback function.
+                /// The port detected by the TCP sockets that are used for configuring the postStart callback function.
                 /// </summary>
                 [NameInMap("LifecyclePostStartHandlerTcpSocketPort")]
                 [Validation(Required=false)]
                 public int? LifecyclePostStartHandlerTcpSocketPort { get; set; }
 
                 /// <summary>
-                /// The commands that are run by using the CLI in the container to specify the preStop callback function.
+                /// The commands that are run by using a CLI for configuring the preStop callback function within the container.
                 /// </summary>
                 [NameInMap("LifecyclePreStopHandlerExecs")]
                 [Validation(Required=false)]
                 public List<string> LifecyclePreStopHandlerExecs { get; set; }
 
                 /// <summary>
-                /// The host IP address detected by the HTTP Get requests that are used to specify the preStop callback function.
+                /// The IP address of the host to which the HTTP GET requests for configuring the preStop callback function are sent.
                 /// </summary>
                 [NameInMap("LifecyclePreStopHandlerHttpGetHost")]
                 [Validation(Required=false)]
                 public string LifecyclePreStopHandlerHttpGetHost { get; set; }
 
                 /// <summary>
-                /// The path detected by the HTTP Get requests that are used to specify the preStop callback function.
+                /// The path to which the HTTP GET requests for configuring the preStop callback function are sent.
                 /// </summary>
                 [NameInMap("LifecyclePreStopHandlerHttpGetPath")]
                 [Validation(Required=false)]
                 public string LifecyclePreStopHandlerHttpGetPath { get; set; }
 
                 /// <summary>
-                /// The port number detected by the HTTP Get requests that are used to specify the preStop callback function.
+                /// The port over which the HTTP GET requests for configuring the preStop callback function are sent.
                 /// </summary>
                 [NameInMap("LifecyclePreStopHandlerHttpGetPort")]
                 [Validation(Required=false)]
                 public int? LifecyclePreStopHandlerHttpGetPort { get; set; }
 
                 /// <summary>
-                /// The protocol type of the HTTP Get requests that are used to specify the preStop callback function.
+                /// The protocol type of the HTTP Get requests that are used for configuring the preStop callback function.
                 /// </summary>
                 [NameInMap("LifecyclePreStopHandlerHttpGetScheme")]
                 [Validation(Required=false)]
                 public string LifecyclePreStopHandlerHttpGetScheme { get; set; }
 
                 /// <summary>
-                /// The host IP address detected by the TCP sockets that are used to specify the preStop callback function.
+                /// The IP address of the host detected by the TCP sockets that are used for configuring the preStop callback function.
                 /// </summary>
                 [NameInMap("LifecyclePreStopHandlerTcpSocketHost")]
                 [Validation(Required=false)]
                 public string LifecyclePreStopHandlerTcpSocketHost { get; set; }
 
                 /// <summary>
-                /// The port number detected by the TCP sockets that are used to specify the preStop callback function.
+                /// The port detected by the TCP sockets that are used for configuring the preStop callback function.
                 /// </summary>
                 [NameInMap("LifecyclePreStopHandlerTcpSocketPort")]
                 [Validation(Required=false)]
                 public int? LifecyclePreStopHandlerTcpSocketPort { get; set; }
 
                 /// <summary>
-                /// The commands that are run in the container when you use the command line interface (CLI) to perform liveness probes.
+                /// The commands that are run in the container when you use a CLI to perform liveness probes.
                 /// </summary>
                 [NameInMap("LivenessProbeExecCommands")]
                 [Validation(Required=false)]
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? LivenessProbeTcpSocketPort { get; set; }
 
                 /// <summary>
-                /// The timeout period of the liveness probe. Default value: 1. Minimum value: 1. Unit: seconds.
+                /// The timeout period of a liveness probe. Default value: 1. Minimum value: 1. Unit: seconds.
                 /// </summary>
                 [NameInMap("LivenessProbeTimeoutSeconds")]
                 [Validation(Required=false)]
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The exposed ports and protocols of the container.
+                /// The exposed ports and protocols.
                 /// </summary>
                 [NameInMap("Ports")]
                 [Validation(Required=false)]
@@ -395,7 +395,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// The commands that are run in the container when you use the CLI to perform readiness probes.
+                /// The commands that are run in the container when you use a CLI to perform readiness probes.
                 /// </summary>
                 [NameInMap("ReadinessProbeExecCommands")]
                 [Validation(Required=false)]
@@ -418,7 +418,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string ReadinessProbeHttpGetPath { get; set; }
 
                 /// <summary>
-                /// The path to which HTTP Get requests are sent when you use the HTTP requests to perform readiness probes.
+                /// The path to which HTTP Get requests are sent when you use the HTTP Get requests to perform readiness probes.
                 /// </summary>
                 [NameInMap("ReadinessProbeHttpGetPort")]
                 [Validation(Required=false)]
@@ -463,7 +463,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? ReadinessProbeTcpSocketPort { get; set; }
 
                 /// <summary>
-                /// The timeout period of the readiness probe. Default value: 1. Minimum value: 1. Unit: seconds.
+                /// The timeout period of a readiness probe. Default value: 1. Minimum value: 1. Unit: seconds.
                 /// </summary>
                 [NameInMap("ReadinessProbeTimeoutSeconds")]
                 [Validation(Required=false)]
@@ -477,7 +477,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public List<string> SecurityContextCapabilityAdds { get; set; }
 
                 /// <summary>
-                /// Indicates whether the root file system is read-only. Valid value: true.
+                /// Indicates whether the root file system on which the container runs is read-only. Valid value: true.
                 /// </summary>
                 [NameInMap("SecurityContextReadOnlyRootFilesystem")]
                 [Validation(Required=false)]
@@ -491,7 +491,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public long? SecurityContextRunAsUser { get; set; }
 
                 /// <summary>
-                /// Indicates whether the container allocates buffer resources to standard input streams when the container is run. If this parameter is not specified, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
+                /// Indicates whether the container allocates buffer resources to standard input streams when the container is running. If this parameter is not specified, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
                 /// </summary>
                 [NameInMap("Stdin")]
                 [Validation(Required=false)]
@@ -500,14 +500,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 /// <summary>
                 /// Indicates whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected among multiple sessions.
                 /// 
-                /// If StdinOnce is set to true, stdin is opened upon container startup, but remains empty until the first client attaches to stdin, and then remains open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.
+                /// If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container restarts.
                 /// </summary>
                 [NameInMap("StdinOnce")]
                 [Validation(Required=false)]
                 public bool? StdinOnce { get; set; }
 
                 /// <summary>
-                /// Indicates whether Interaction is enabled. Valid values:
+                /// Specifies whether to enable the Interaction feature. Valid values:
                 /// 
                 /// *   true
                 /// *   false
@@ -521,7 +521,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public bool? Tty { get; set; }
 
                 /// <summary>
-                /// The mounted volumes.
+                /// The volumes that are mounted to the container.
                 /// </summary>
                 [NameInMap("VolumeMounts")]
                 [Validation(Required=false)]
@@ -530,18 +530,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     /// <summary>
                     /// The directory in which the container mounts the volume.
                     /// 
-                    /// >  Data in this directory is overwritten by data on the volume. Specify this parameter with caution.
+                    /// >  Data in this directory is overwritten by the data on the volume. Proceed with caution if you specify this parameter.
                     /// </summary>
                     [NameInMap("MountPath")]
                     [Validation(Required=false)]
                     public string MountPath { get; set; }
 
                     /// <summary>
-                    /// The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+                    /// The mount propagation setting of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:
                     /// 
-                    /// *   None: The volume mount does not receive subsequent mounts that are performed on the volume or on the subdirectories of the volume.
-                    /// *   HostToCotainer: The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume.
-                    /// *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
+                    /// *   None: Subsequent mounts executed either on the volume itself or its subdirectories do not propagate to the already established volume mount.
+                    /// *   HostToCotainer: Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount.
+                    /// *   Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount. In addition, any volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.
                     /// 
                     /// Default value: None.
                     /// </summary>
@@ -550,7 +550,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public string MountPropagation { get; set; }
 
                     /// <summary>
-                    /// The name of the mounted volume.
+                    /// The volume name.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -857,7 +857,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? Gpu { get; set; }
 
                 /// <summary>
-                /// The init container image.
+                /// The image of the init container.
                 /// </summary>
                 [NameInMap("Image")]
                 [Validation(Required=false)]
@@ -871,14 +871,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string ImagePullPolicy { get; set; }
 
                 /// <summary>
-                /// The startup arguments of the init container.
+                /// The arguments that are passed to the startup commands of the init container.
                 /// </summary>
                 [NameInMap("InitContainerArgs")]
                 [Validation(Required=false)]
                 public List<string> InitContainerArgs { get; set; }
 
                 /// <summary>
-                /// The startup commands of the init container.
+                /// The commands that are used to start the init container.
                 /// </summary>
                 [NameInMap("InitContainerCommands")]
                 [Validation(Required=false)]
@@ -899,7 +899,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public string FieldRefFieldPath { get; set; }
 
                     /// <summary>
-                    /// The key of the environment variable.
+                    /// The name of the environment variable.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
@@ -950,18 +950,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     /// <summary>
                     /// The directory to which the init container mounts the volume.
                     /// 
-                    /// >  Data in this directory is overwritten by the data on the volume. Specify this parameter with caution.
+                    /// >  Data in this directory is overwritten by the data on the volume. Proceed with caution if you specify this parameter.
                     /// </summary>
                     [NameInMap("MountPath")]
                     [Validation(Required=false)]
                     public string MountPath { get; set; }
 
                     /// <summary>
-                    /// The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one init container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+                    /// The mount propagation setting of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:
                     /// 
-                    /// *   None: The volume mount does not receive subsequent mounts that are performed on the volume or on the subdirectories of the volume.
-                    /// *   HostToCotainer: The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume.
-                    /// *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume. In addition, all volume mounts that are performed on the init container are propagated back to the host and all containers of all pods that use the same volume.
+                    /// *   None: Subsequent mounts executed either on the volume itself or its subdirectories do not propagate to the already established volume mount.
+                    /// *   HostToCotainer: Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount.
+                    /// *   Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount. In addition, any volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.
                     /// 
                     /// Default value: None.
                     /// </summary>
@@ -970,7 +970,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public string MountPropagation { get; set; }
 
                     /// <summary>
-                    /// The name of the mounted volume.
+                    /// The volume name.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -995,7 +995,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// The memory size that is allocated to the init container.
+                /// The memory size of the init container.
                 /// </summary>
                 [NameInMap("Memory")]
                 [Validation(Required=false)]
@@ -1016,14 +1016,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public List<string> SecurityContextCapabilityAdds { get; set; }
 
                 /// <summary>
-                /// Indicates whether the root file system is read-only. Valid value: true.
+                /// Indicates whether the root file system on which the init container runs is read-only. Valid value: true.
                 /// </summary>
                 [NameInMap("SecurityContextReadOnlyRootFilesystem")]
                 [Validation(Required=false)]
                 public bool? SecurityContextReadOnlyRootFilesystem { get; set; }
 
                 /// <summary>
-                /// The ID of the user that runs the entry point of the init container.
+                /// The ID of the user that runs the init container.
                 /// </summary>
                 [NameInMap("SecurityContextRunAsUser")]
                 [Validation(Required=false)]
@@ -1306,7 +1306,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string DiskVolumeFsType { get; set; }
 
                 /// <summary>
-                /// The storage medium of the emptyDir volume. If you do not specify a storage medium for the emptyDir volume, the volume stores data in the file system of a node by default. We recommend that you set this parameter to memory. In this case, the emptyDir volume stores data in the specified memory.
+                /// The storage medium of the emptyDir volume. If you do not specify a storage medium for the emptyDir volume, the volume stores data in the file system of the node by default. We recommend that you set this parameter to memory. In this case, the emptyDir volume stores data in the specified memory.
                 /// </summary>
                 [NameInMap("EmptyDirVolumeMedium")]
                 [Validation(Required=false)]
@@ -1371,7 +1371,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public bool? NFSVolumeReadOnly { get; set; }
 
                 /// <summary>
-                /// The address of the Network File System (NFS) server.
+                /// The endpoint of the NFS server.
                 /// </summary>
                 [NameInMap("NFSVolumeServer")]
                 [Validation(Required=false)]

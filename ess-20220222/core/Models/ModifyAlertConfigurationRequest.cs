@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// The region ID of the scaling group.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
@@ -24,11 +26,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// The status of the scaling activities that prompt text message or email notifications.
+        /// </summary>
         [NameInMap("ScaleStatuses")]
         [Validation(Required=false)]
         public List<string> ScaleStatuses { get; set; }
 
         /// <summary>
+        /// The ID of the scaling group.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]

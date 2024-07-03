@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinAdjustmentMagnitude { get; set; }
 
         /// <summary>
-        /// The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out.
+        /// The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out event.
         /// </summary>
         [NameInMap("Overrides")]
         [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public List<string> Args { get; set; }
 
                 /// <summary>
-                /// The startup commands of the container. You can specify up to 20 commands. Each command can contain up to 256 characters.
+                /// The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.
                 /// </summary>
                 [NameInMap("Commands")]
                 [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public List<ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars> EnvironmentVars { get; set; }
                 public class ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars : TeaModel {
                     /// <summary>
-                    /// The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. It cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.
+                    /// The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]

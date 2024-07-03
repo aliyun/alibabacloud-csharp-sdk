@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// The performance mode of the burstable instances. Valid values:
             /// 
-            /// *   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).
+            /// *   Standard: the standard mode. For more information, see the "Standard mode" section in the [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html) topic.
             /// *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).
             /// </summary>
             [NameInMap("CreditSpecification")]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// 
             /// If Auto Scaling cannot create ECS instances by using the custom ECS instance type + vSwitch combination of the highest priority, Auto Scaling creates ECS instances by using the custom ECS instance type + vSwitch combination of the next highest priority.
             /// 
-            /// >  If you specified the priorities of only partial custom ECS instance type + vSwitch combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have specified priorities. If the custom combinations that have specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have specified priorities based on the specified orders of vSwitches and instance types.
+            /// >  If you specify the priorities of only a portion of custom ECS instance type + vSwitch combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have specified priorities. If the custom combinations that have specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have specified priorities based on the specified orders of vSwitches and instance types.
             /// 
             /// *   Example: the specified order of vSwitches for your scaling group is vsw1 and vsw2 and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify ["vsw2+type2", "vsw1+type2"]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.
             /// </summary>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsCustomPriorities> CustomPriorities { get; set; }
             public class DescribeScalingConfigurationsResponseBodyScalingConfigurationsCustomPriorities : TeaModel {
                 /// <summary>
-                /// The instance type of the ECS instances.
+                /// The ECS instance type.
                 /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
@@ -246,6 +246,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
             }
 
+            /// <summary>
+            /// The ID of the dedicated host cluster.
+            /// </summary>
             [NameInMap("DedicatedHostClusterId")]
             [Validation(Required=false)]
             public string DedicatedHostClusterId { get; set; }
@@ -265,7 +268,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// *   true: Release Protection is enabled for the ECS instances. You cannot delete the ECS instances by using the ECS console or calling the DeleteInstance operation.
             /// *   false: Release Protection is disabled for the ECS instances. You can delete the ECS instances by using the ECS console or calling the DeleteInstance operation.
             /// 
-            /// >  You can enable Release Protection for only pay-as-you-go instances to prevent unexpected instance deletion during scale-ins. The Release Protection feature does not affect normal scaling activities. In other words, an instance that meets the criteria of scale-in policies can be removed from a scaling group during a scale-in even if you enabled Release Protection for the instance.
+            /// >  You can enable Release Protection for only pay-as-you-go instances to prevent unexpected instance deletion during scale-in events. The Release Protection feature does not affect normal scaling activities. In other words, an instance that meets the criteria of scale-in policies may be removed from a scaling group during a scale-in event even if you enabled Release Protection for the instance.
             /// </summary>
             [NameInMap("DeletionProtection")]
             [Validation(Required=false)]
@@ -293,7 +296,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string HpcClusterId { get; set; }
 
             /// <summary>
-            /// The name of the image family. You can specify this parameter to obtain the latest available images in the current image family for instance creation. If you specify `ImageId`, you cannot specify this parameter.
+            /// The name of the image family. You can specify this parameter to obtain the latest available images in the current image family for instance creation. If you specify ImageId, you cannot specify `ImageFamily`.
             /// </summary>
             [NameInMap("ImageFamily")]
             [Validation(Required=false)]
@@ -324,7 +327,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? ImageOptionsLoginAsNonRoot { get; set; }
 
             /// <summary>
-            /// The source of the image. Valid values:
+            /// The image source. Valid values:
             /// 
             /// *   system: a public image provided by Alibaba Cloud
             /// *   self: a custom image that you created
@@ -419,8 +422,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 /// <summary>
                 /// The level of the instance family.
                 /// 
-                /// *   EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).
-                /// *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
+                /// *   EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).
+                /// *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for scenarios that require high stability. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).
                 /// *   CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).
                 /// </summary>
                 [NameInMap("InstanceFamilyLevel")]
@@ -432,7 +435,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public List<string> InstanceTypeFamilies { get; set; }
 
                 /// <summary>
-                /// The maximum hourly price for pay-as-you-go or preemptible instances.
+                /// The maximum hourly price for the pay-as-you-go or preemptible instances.
                 /// </summary>
                 [NameInMap("MaxPrice")]
                 [Validation(Required=false)]
@@ -496,7 +499,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// The instance type of the ECS instances.
+            /// The instance types of the ECS instances.
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
@@ -563,8 +566,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// The status of the scaling configuration in the scaling group. Valid values:
             /// 
-            /// *   Active: The scaling configuration is active in the scaling group. Auto Scaling uses the scaling configuration that is in the Active state to create ECS instances during scale-outs.
-            /// *   Inactive: The scaling configuration is inactive in the scaling group. Scaling configurations that are in the Inactive state are still contained in the scaling group, but Auto Scaling does not use the inactive scaling configurations to create ECS instances during scale-outs.
+            /// *   Active: The scaling configuration is active in the scaling group. Auto Scaling uses the scaling configuration that is in the Active state to create ECS instances during scale-out events.
+            /// *   Inactive: The scaling configuration is inactive in the scaling group. Scaling configurations that are in the Inactive state are still contained in the scaling group, but Auto Scaling does not use the inactive scaling configurations to create ECS instances during scale-out events.
             /// </summary>
             [NameInMap("LifecycleState")]
             [Validation(Required=false)]
@@ -637,6 +640,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("PasswordInherit")]
             [Validation(Required=false)]
             public bool? PasswordInherit { get; set; }
+
+            [NameInMap("PasswordSetted")]
+            [Validation(Required=false)]
+            public bool? PasswordSetted { get; set; }
 
             [NameInMap("PrivatePoolOptions.Id")]
             [Validation(Required=false)]
@@ -736,7 +743,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string SpotInterruptionBehavior { get; set; }
 
             /// <summary>
-            /// The information about the preemptible instances.
+            /// The preemptible instances.
             /// </summary>
             [NameInMap("SpotPriceLimits")]
             [Validation(Required=false)]
@@ -759,11 +766,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// The preemption policy that is applied to the pay-as-you-go instance. Valid values:
+            /// The preemption policy that is applied to pay-as-you-go instances. Valid values:
             /// 
-            /// *   NoSpot: The instance is created as a pay-as-you-go instance.
-            /// *   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.
-            /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
+            /// *   NoSpot: The instances are created as regular pay-as-you-go instances.
+            /// *   SpotWithPriceLimit: The instances are created as preemptible instances that have a user-defined maximum hourly price.
+            /// *   SpotAsPriceGo: The instances are preemptible instances for which the market price at the time of purchase is automatically used as the bid price.
             /// </summary>
             [NameInMap("SpotStrategy")]
             [Validation(Required=false)]
@@ -821,7 +828,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// *   cloud_efficiency: ultra disk
             /// *   cloud_ssd: standard SSD
             /// *   ephemeral_ssd: local SSD
-            /// *   cloud_essd: enhanced SSD (ESSD)
+            /// *   cloud_essd: enterprise SSD (ESSD)
             /// *   cloud_auto: ESSD AutoPL
             /// </summary>
             [NameInMap("SystemDiskCategory")]
@@ -902,7 +909,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 /// <summary>
                 /// The tag key of the ECS instance. You can specify up to 20 tags for each ECS instance.
                 /// 
-                /// The tag key cannot be an empty string. The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
+                /// The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with `acs:` or `aliyun` and cannot contain `http://` or `https://`.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]

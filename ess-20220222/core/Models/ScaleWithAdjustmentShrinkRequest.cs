@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinAdjustmentMagnitude { get; set; }
 
         /// <summary>
-        /// The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out.
+        /// The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out event.
         /// </summary>
         [NameInMap("Overrides")]
         [Validation(Required=false)]

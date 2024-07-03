@@ -117,18 +117,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The ID of the scaling group whose number of instances must be modified when the scheduled task is triggered. If you specify the `ScalingGroupId` parameter for a scheduled task, you must specify the minimum, maximum, or expected numbers of instances for a scaling group in the scheduled task. That is, you must specify at least one of the `MinValue`, `MaxValue`, and `DesiredCapacity` parameters.
+        /// The ID of the scaling group. If you specify this parameter, the number of instances in the scaling group will be changed when the scheduled task is triggered.
         /// 
-        /// > You cannot specify the `ScheduledAction` and `ScalingGroupId` parameters at the same time.
+        /// If you specify `ScalingGroupId`, you must also specify at least one of the following parameters: `MinValue`, `MaxValue`, and `DesiredCapacity`. You cannot specify `ScheduledAction` and `ScalingGroupId` at the same time.
         /// </summary>
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// The scaling rule that you want to execute when the scheduled task is triggered. Specify the unique identifier of the scaling rule. If you specify the `ScheduledAction` parameter, you must select an existing scaling rule for the scheduled task.
+        /// The scaling rule that you want to execute when the scheduled task is triggered. Specify the unique identifier of the scaling rule.
         /// 
-        /// > You cannot specify the `ScheduledAction` and `ScalingGroupId` parameters at the same time.
+        /// If you specify `ScheduledAction`, the scheduled task uses an existing scaling rule. You cannot specify `ScheduledAction` and `ScalingGroupId` at the same time.
         /// </summary>
         [NameInMap("ScheduledAction")]
         [Validation(Required=false)]

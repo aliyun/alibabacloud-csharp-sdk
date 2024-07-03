@@ -10,30 +10,30 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class CreateScalingGroupRequest : TeaModel {
         /// <summary>
-        /// Details of the Application Load Balancer (ALB) server groups that you want to associate with the scaling group.
+        /// The Application Load Balancer (ALB) server groups.
         /// </summary>
         [NameInMap("AlbServerGroups")]
         [Validation(Required=false)]
         public List<CreateScalingGroupRequestAlbServerGroups> AlbServerGroups { get; set; }
         public class CreateScalingGroupRequestAlbServerGroups : TeaModel {
             /// <summary>
-            /// The ID of the ALB server group that you want to associate with the scaling group.
+            /// The ID of the ALB server group.
             /// 
-            /// You can associate only a limited number of ALB server groups with a scaling group. Go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas) to check the maximum number of ALB server groups that you can associate with a scaling group.
+            /// You can attach only a limited number of ALB server groups to a scaling group. To view the predefined quota limit or manually request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
             /// </summary>
             [NameInMap("AlbServerGroupId")]
             [Validation(Required=false)]
             public string AlbServerGroupId { get; set; }
 
             /// <summary>
-            /// The port number that is used by an ECS instance after Auto Scaling adds the ECS instance to the ALB server group. Valid values: 1 to 65535.
+            /// The port number used by each ECS instance as a backend server in the ALB server group. Valid values: 1 to 65535.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// The weight of an ECS instance after Auto Scaling adds the ECS instance to the ALB server group as a backend server. If you increase the weight of an ECS instance in the ALB server group, the number of access requests that are forwarded to the ECS instance increases. If you set the Weight parameter for an ECS instance in the ALB server group to 0, no access requests are forwarded to the ECS instance. Valid values: 0 to 100.
+            /// The weight of an ECS instance as a backend server in the ALB server group. If you increase the weight for an ECS instance, the number of requests that are forwarded to the ECS instance also increases. If you set the weight for an ECS instance to 0, no requests are forwarded to the ECS instance. Valid values: 0 to 100.
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
@@ -54,10 +54,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string AllocationStrategy { get; set; }
 
         /// <summary>
-        /// Specifies whether to evenly distribute instances in the scaling group across zones. This parameter is available only if you set the `MultiAZPolicy` parameter to `COMPOSABLE`. Valid values:
+        /// Specifies whether to evenly distribute instances in the scaling group across multiple zones. This parameter takes effect only if you set `MultiAZPolicy` to `COMPOSABLE`. Valid values:
         /// 
         /// *   true
         /// *   false
+        /// 
+        /// >  If you set `MultiAZPolicy` to `COMPOSABLE` and enable `AzBalance` to `true`, this setting has an equivalent effect to setting `MultiAZPolicy` to `BALANCE`.
         /// 
         /// Default value: false.
         /// </summary>
@@ -66,7 +68,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? AzBalance { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -117,8 +121,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// The mode in which you want to attach the database to the scaling group. Valid values:
             /// 
-            /// *   SecurityIp: the mode in which Auto Scaling automatically adds the private IP addresses of the scaled out instances to the IP address whitelist of the database. This mode is supported only if you set Type to RDS.
-            /// *   SecurityGroup: the mode in which Auto Scaling adds the security group of the applied scaling configuration in the scaling group to the security group whitelist of the database to enable secure access from instances to the database.
+            /// *   SecurityIp: the mode in which Auto Scaling automatically adds the private IP addresses of ECS instances to the IP address whitelist of the database during scale-out events. You can set the value to SecurityIp only if you set Type to RDS.
+            /// *   SecurityGroup: the mode in which Auto Scaling adds the security group of the applied scaling configuration to the security group whitelist of the database. This setting allows ECS instances created from the scaling configuration to access the database.
             /// </summary>
             [NameInMap("AttachMode")]
             [Validation(Required=false)]
@@ -147,9 +151,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// The cooldown period of the scaling group after a scaling activity is complete. Valid values: 0 to 86400. Unit: seconds.
+        /// The cooldown period of the scaling group after a scaling activity is complete in the scaling group. Valid values: 0 to 86400. Unit: seconds.
         /// 
-        /// During the cooldown period, Auto Scaling executes only scaling activities that are triggered by CloudMonitor event-triggered tasks.
+        /// During the cooldown period, Auto Scaling does not execute scaling activities that are triggered by CloudMonitor event-triggered tasks.
         /// 
         /// Default value: 300.
         /// </summary>
@@ -158,7 +162,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? DefaultCooldown { get; set; }
 
         /// <summary>
-        /// The expected number of ECS instances in the scaling group. Auto Scaling automatically maintains the expected number of ECS instances. The value of the DesiredCapacity parameter cannot be greater than the value of the MaxSize parameter and less than the value of the MinSize parameter.
+        /// The expected number of ECS instances in the scaling group. Auto Scaling automatically maintains the specified expected number of ECS instances. The DesiredCapacity value cannot be greater than the MaxSize value or less than the MinSize value.
         /// </summary>
         [NameInMap("DesiredCapacity")]
         [Validation(Required=false)]
@@ -191,9 +195,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The health check mode of the scaling group. Valid values:
         /// 
-        /// *   NONE: Auto Scaling does not check the health status of instances in the scaling group.
+        /// *   NONE: Auto Scaling does not check the health status of instances.
         /// *   ECS: Auto Scaling checks the health status of ECS instances in the scaling group.
-        /// *   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB) instances are not supported as the health check basis for instances in the scaling group.
+        /// *   ECI: Auto Scaling checks the health status of elastic container instances in the scaling group.
+        /// *   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis for instances in the scaling group.
         /// 
         /// Default value: ECS.
         /// </summary>
@@ -204,9 +209,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The health check modes of the scaling group. Valid values:
         /// 
-        /// *   NONE: Auto Scaling does not check the health status of instances in the scaling group.
+        /// *   NONE: Auto Scaling does not check the health status of instances.
         /// *   ECS: Auto Scaling checks the health status of ECS instances in the scaling group.
-        /// *   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis for instances in the scaling group.
+        /// *   ECI: Auto Scaling checks the health status of elastic container instances in the scaling group.
+        /// *   LOAD_BALANCER: Auto Scaling checks the health status of instances based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis for instances in the scaling group.
+        /// 
+        /// >  HealthCheckTypes has the same effect as `HealthCheckType`. You can select one of them to specify based on your business requirements. If you specify `HealthCheckType`, `HealthCheckTypes` is ignored. HealthCheckTypes is optional.
         /// 
         /// Default value: ECS.
         /// </summary>
@@ -215,7 +223,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> HealthCheckTypes { get; set; }
 
         /// <summary>
-        /// The ID of the existing ECS instance that provides instance configurations for Auto Scaling to create a scaling configuration.
+        /// The ID of the ECS instance. When you create a scaling group, you can specify an existing ECS instance. Auto Scaling obtains the configurations of the ECS instance and automatically creates a scaling configuration from the obtained configurations.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -301,12 +309,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<CreateScalingGroupRequestLifecycleHooks> LifecycleHooks { get; set; }
         public class CreateScalingGroupRequestLifecycleHooks : TeaModel {
             /// <summary>
-            /// The action that Auto Scaling performs after the lifecycle hook of the scaling group times out. Valid values:
+            /// The action that Auto Scaling performs when the lifecycle hook times out. Valid values:
             /// 
-            /// *   CONTINUE: continues to respond to scaling requests.
-            /// *   ABANDON: releases ECS instances that are created during scale-out activities, or removes ECS instances from the scaling group during scale-in activities.
+            /// *   CONTINUE: Auto Scaling continues to respond to a scale-in or scale-out request.
+            /// *   ABANDON: Auto Scaling releases ECS instances that are created during scale-out events, or removes ECS instances from the scaling group during scale-in events.
             /// 
-            /// If multiple lifecycle hooks in the scaling group are triggered during scale-in activities and you set the LifecycleHook.N.DefaultResult parameter to ABANDON for one of the lifecycle hooks, Auto Scaling immediately performs the action after the lifecycle hook whose DefaultResult parameter is set to ABANDON times out. In this case, other lifecycle hooks time out ahead of schedule. In other cases, Auto Scaling performs the action only after all lifecycle hooks time out. The action that Auto Scaling performs is determined by the value of the DefaultResult parameter that you set for the lifecycle hook that last times out.
+            /// If multiple lifecycle hooks in the scaling group are triggered during scale-in events, and you set DefaultResult to ABANDON for one of the lifecycle hooks, Auto Scaling immediately performs the action after the lifecycle hook whose DefaultResult is set to ABANDON times out. In this case, other lifecycle hooks time out ahead of schedule. In other cases, Auto Scaling performs the action only after all lifecycle hooks time out. The action that Auto Scaling performs is determined by the value of DefaultResult that you specify for the lifecycle hook that most recently times out.
             /// 
             /// Default value: CONTINUE.
             /// </summary>
@@ -315,9 +323,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string DefaultResult { get; set; }
 
             /// <summary>
-            /// The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action specified by the DefaultResult parameter. Valid values: 30 to 21600. Unit: seconds.
+            /// The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that is specified by DefaultResult. Valid values: 30 to 21600. Unit: seconds.
             /// 
-            /// After you create a lifecycle hook, you can call the RecordLifecycleActionHeartbeat operation to extend the timeout period of the lifecycle hook. You can also call the CompleteLifecycleAction operation to end the timeout period ahead of schedule.
+            /// After you create a lifecycle hook, you can call the RecordLifecycleActionHeartbeat operation to extend the timeout period of the lifecycle hook. You can also call the CompleteLifecycleAction operation to end the timeout period of the lifecycle hook ahead of scheduled.
             /// 
             /// Default value: 600.
             /// </summary>
@@ -326,29 +334,29 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? HeartbeatTimeout { get; set; }
 
             /// <summary>
-            /// The name of the lifecycle hook. After you specify this parameter, you cannot change the value of this parameter. If you do not specify this parameter, the ID of the lifecycle hook is used.
+            /// The name of the lifecycle hook. After you specify this parameter, you cannot change the name of the lifecycle hook. If you do not specify this parameter, the name of the lifecycle hook is the same as the ID of the lifecycle hook.
             /// </summary>
             [NameInMap("LifecycleHookName")]
             [Validation(Required=false)]
             public string LifecycleHookName { get; set; }
 
             /// <summary>
-            /// The type of the scaling activity for which you create the lifecycle hook. Valid values:
+            /// The type of the scaling activity to which you want to apply the lifecycle hook. Valid values:
             /// 
-            /// *   SCALE_OUT: scale-out activity
-            /// *   SCALE_IN: scale-in activity
+            /// *   SCALE_OUT
+            /// *   SCALE_IN
             /// 
-            /// > If you create lifecycle hooks for your scaling group, you must specify the LifecycleTransition parameter.
+            /// >  If you specify lifecycle hooks for the scaling group, you must specify LifecycleTransition. Other parameters are optional.
             /// </summary>
             [NameInMap("LifecycleTransition")]
             [Validation(Required=false)]
             public string LifecycleTransition { get; set; }
 
             /// <summary>
-            /// The Alibaba Cloud Resource Name (ARN) of the notification method that Auto Scaling uses to send a notification when a lifecycle hook takes effect. This notification method can be a Message Service (MNS) queue or an MNS topic. Specify the value of this parameter in the following format: acs:ess:{region}:{account-id}:{resource-relative-id}.
+            /// The identifier of the notification recipient party when the lifecycle hook takes effect. You can specify a Message Service (MNS) topic or queue as the notification recipient party. Specify the value in the acs:ess:{region}:{account-id}:{resource-relative-id} format.
             /// 
-            /// *   region: the region where the scaling group resides
-            /// *   account-id: the ID of the Alibaba Cloud account
+            /// *   region: the region ID of the scaling group
+            /// *   account-id: the ID of your Alibaba Cloud account.
             /// 
             /// Examples:
             /// 
@@ -360,7 +368,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string NotificationArn { get; set; }
 
             /// <summary>
-            /// The fixed string that is included in a notification. Auto Scaling sends the notification when the lifecycle hook takes effect. The value of this parameter cannot exceed 4,096 characters in length. Auto Scaling sends the value of the notificationmetadata parameter together with the notification. This way, you can categorize and manage your notifications in an efficient manner. If you specify the notificationmetadata parameter, you must also specify the notificationarn parameter.
+            /// The fixed string that you want to include in a notification. When a lifecycle hook takes effect, Auto Scaling sends a notification. The fixed string can contain up to 4,096 characters in length. When Auto Scaling sends a notification to the recipient party, it includes predefined notification metadata into the notification. This helps in managing and labeling notifications of different categories. notificationmetadata takes effect only if you specify notificationarn.
             /// </summary>
             [NameInMap("NotificationMetadata")]
             [Validation(Required=false)]
@@ -368,14 +376,23 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         }
 
+        /// <summary>
+        /// The load balancer configurations.
+        /// </summary>
         [NameInMap("LoadBalancerConfigs")]
         [Validation(Required=false)]
         public List<CreateScalingGroupRequestLoadBalancerConfigs> LoadBalancerConfigs { get; set; }
         public class CreateScalingGroupRequestLoadBalancerConfigs : TeaModel {
+            /// <summary>
+            /// The ID of the CLB instance.
+            /// </summary>
             [NameInMap("LoadBalancerId")]
             [Validation(Required=false)]
             public string LoadBalancerId { get; set; }
 
+            /// <summary>
+            /// The weight of each ECS instance as a backend server in the CLB backend server group. If you increase the weight for an ECS instance, the number of requests that are forwarded to the ECS instance also increases. If you set the weight for an ECS instance to 0, no requests are forwarded to the ECS instance. Valid values: 0 to 100.
+            /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
             public int? Weight { get; set; }
@@ -403,11 +420,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MaxInstanceLifetime { get; set; }
 
         /// <summary>
-        /// The maximum number of ECS instances that can be contained in the scaling group. If the number of ECS instances in the scaling group is greater than the value of the MaxSize parameter, Auto Scaling removes ECS instances from the scaling group to ensure that the number of ECS instances is equal to the value of the MaxSize parameter.
+        /// The maximum number of instances that can be contained in the scaling group. When the total number of ECS instances in the scaling group exceeds the value of MaxSize, Auto Scaling automatically removes ECS instances from the scaling group until the total number equals the maximum number.
         /// 
-        /// The value range of the MaxSize parameter varies based on the instance quota. You can go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas) to check the maximum number of instances that a scaling group can contain.
+        /// The value range of MaxSize is directly correlated with the degree of dependency your business has on Auto Scaling. You can go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas) to check **the maximum number of instances that a single scaling group can contain.**
         /// 
-        /// For example, if the instance quota is 2,000, the value range of the **MaxSize** parameter is 0 to 2000.
+        /// If **a single scaling group can contain up to 2,000 ECS instances**, the value range of MaxSize is 0 to 2,000.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -416,9 +433,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MaxSize { get; set; }
 
         /// <summary>
-        /// The minimum number of ECS instances that must be contained in the scaling group. If the number of ECS instances in the scaling group is less than the value of the MinSize parameter, Auto Scaling adds ECS instances to the scaling group to ensure that the number of ECS instances in the scaling group is equal to the value of the MinSize parameter.
+        /// The minimum number of instances that must be contained in the scaling group. When the total number of ECS instances in the scaling group is less than the value of MinSize, Auto Scaling automatically creates ECS instances in the scaling group until the total number reaches the minimum number.
         /// 
-        /// > The value of the MinSize parameter must be less than or equal to the value of the MaxSize parameter.
+        /// >  The value of MinSize must be less than or equal to the value of MaxSize.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -427,15 +444,23 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinSize { get; set; }
 
         /// <summary>
-        /// The scaling policy for the multi-zone scaling group that contains ECS instances. Valid values:
+        /// The scaling policy for ECS instances in the multi-zone scaling group. Valid values:
         /// 
-        /// *   PRIORITY: scales ECS instances based on the priority of the vSwitch that is specified by the VSwitchIds parameter. Auto Scaling preferentially scales instances in the zone where the vSwitch that has the highest priority resides. If the scaling fails, Auto Scaling scales instances in the zone where the vSwitch that has the next highest priority resides.
+        /// *   PRIORITY: scale ECS instances based on the priority of the vSwitches specified by VSwitchIds. Auto Scaling preferentially scales instances in the zone where the vSwitch of the highest priority resides. If the scaling fails, Auto Scaling scales instances in the zone where the vSwitch of the next highest priority resides.
         /// 
-        /// *   COST_OPTIMIZED: scales ECS instances based on the unit price of vCPUs. Auto Scaling preferentially scales out ECS instances whose vCPUs are provided at the lowest price and scales in ECS instances whose vCPUs are provided at the highest price. If preemptible instance types are specified in the scaling configuration, Auto Scaling preferentially scales out preemptible instances. You can use the CompensateWithOnDemand parameter to specify whether to automatically create pay-as-you-go instances when preemptible instances cannot be created due to insufficient resources.
+        /// *   COST_OPTIMIZED: create ECS instances that have the lowest unit price of vCPUs during scale-out events and removes ECS instances that have the highest unit price of vCPUs during scale-in events. If you specify preemptible instance types in your scaling configuration, Auto Scaling will preferentially create preemptible instances. You can also specify CompensateWithOnDemand to allow Auto Scaling to create pay-as-you-go instances in the case that preemptible instances cannot be created due to limited stock.
         /// 
-        ///     **Note** The COST_OPTIMIZED setting takes effect only when multiple instance types are specified or at least one preemptible instance type is specified.
+        ///     **
         /// 
-        /// *   BALANCE: evenly distributes ECS instances across zones that are specified for the scaling group. If ECS instances are unevenly distributed across zones due to insufficient resources, you can call the [RebalanceInstance](https://help.aliyun.com/document_detail/71516.html) operation to evenly redistribute the instances across the zones.
+        ///     **Note** The COST_OPTIMIZED setting takes effect only when your scaling configuration contains multiple instance types or specifically contains preemptible instance types.
+        /// 
+        /// *   BALANCE: evenly distribute ECS instances across the zones that are specified for the scaling group. If ECS instances are unevenly distributed across the specified zones due to insufficient inventory, you can call the [RebalanceInstance](https://help.aliyun.com/document_detail/71516.html) operation to evenly distribute the instances across the zones.
+        /// 
+        ///     **
+        /// 
+        ///     **Note** When you set `MultiAZPolicy` to `BALANCE`, this setting has an equivalent effect to setting `MultiAZPolicy` to `COMPOSABLE` and enabling `AzBalance` to `true`.
+        /// 
+        /// *   COMPOSABLE: combine the preceding policies into a custom scaling policy based on your business requirements. Alternatively, you can specify custom parameters to finely control the capacity of the scaling group.
         /// 
         /// Default value: PRIORITY.
         /// </summary>
@@ -517,26 +542,39 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// The reclaim mode of the scaling group. Valid values:
         /// 
-        /// *   recycle: economical mode.
-        /// *   release: release mode.
+        /// *   recycle: the economical mode
         /// 
-        /// The ScalingPolicy parameter specifies the reclaim mode of the scaling group. The RemovePolicy parameter of the RemoveInstances operation specifies how to remove instances in a specific manner.
+        /// *   release: the release mode
+        /// 
+        /// *   forcerelease: the forced release mode
+        /// 
+        ///     **
+        /// 
+        ///     **Note** If you set the value to forcerelease, Auto Scaling will forcibly release the ECS instances that are in the `Running` state during the scale-out events. Forced release equates to an immediate power-off, resulting in the irreversible deletion of all ephemeral data stored on the instance. Once executed, this action cannot be undone and the lost data cannot be recovered. Exercise caution when you select this option.
+        /// 
+        /// *   forcerecycle: the forced recycle mode
+        /// 
+        ///     **
+        /// 
+        ///     **Note** If you set the value to forcerecycle, Auto Scaling will forcibly shut down the ECS instances that are in the `Running` state during the scale-out events. Forced recycle equates to an immediate power-off, resulting in the irreversible deletion of all ephemeral data stored on the instance. Once executed, this action cannot be undone and the lost data cannot be recovered. Exercise caution when you select this option.
+        /// 
+        /// ScalingPolicy specifies the reclaim mode of the scaling group. RemovePolicy of the RemoveInstances operation specifies the specific instance removal action. For more information, see [RemoveInstances](https://help.aliyun.com/document_detail/25955.html).
         /// </summary>
         [NameInMap("ScalingPolicy")]
         [Validation(Required=false)]
         public string ScalingPolicy { get; set; }
 
         /// <summary>
-        /// Details of the server groups.
+        /// The server groups.
         /// 
-        /// >  You cannot use the AlbServerGroups parameter and the ServerGroups parameter to specify the same server group.
+        /// >  You cannot use AlbServerGroups and ServerGroups to specify the same server group.
         /// </summary>
         [NameInMap("ServerGroups")]
         [Validation(Required=false)]
         public List<CreateScalingGroupRequestServerGroups> ServerGroups { get; set; }
         public class CreateScalingGroupRequestServerGroups : TeaModel {
             /// <summary>
-            /// The port number that is used by an ECS instance after Auto Scaling adds the ECS instance to the server group. Valid values: 1 to 65535.
+            /// The port number used by each ECS instance as backend server in the vServer group. Valid values: 1 to 65535.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
@@ -552,17 +590,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// The type of the server group. Valid values:
             /// 
-            /// *   ALB: Application Load Balancer (ALB) server group
-            /// *   NLB: Network Load Balancer (NLB) server group
+            /// *   ALB
+            /// *   NLB
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The weight of an Elastic Compute Service (ECS) instance in the scaling group as a backend server after Auto Scaling adds the ECS instance to the server group. Valid values: 0 to 100.
+            /// The weight of each ECS instance as a backend server in the server group. Valid values: 0 to 100.
             /// 
-            /// If you increase the weight of an ECS instance in the server group, the number of access requests that are forwarded to the ECS instance also increases. If you set the Weight parameter of an ECS instance in the server group to 0, no access requests are forwarded to the ECS instance.
+            /// If you increase the weight for an ECS instance, the number of requests that are forwarded to the ECS instance also increases. If you set the weight for an ECS instance to 0, no requests are forwarded to the ECS instance.
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
@@ -639,7 +677,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// Details of the backend vServer groups that you want to associate with the scaling group.
+        /// The backend vServer group that you want to associate with the scaling group.
         /// </summary>
         [NameInMap("VServerGroups")]
         [Validation(Required=false)]
@@ -653,28 +691,30 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LoadBalancerId { get; set; }
 
             /// <summary>
-            /// The attributes of the backend vServer groups.
+            /// The attributes of the backend vServer group.
             /// </summary>
             [NameInMap("VServerGroupAttributes")]
             [Validation(Required=false)]
             public List<CreateScalingGroupRequestVServerGroupsVServerGroupAttributes> VServerGroupAttributes { get; set; }
             public class CreateScalingGroupRequestVServerGroupsVServerGroupAttributes : TeaModel {
                 /// <summary>
-                /// The port number that is used by an ECS instance after Auto Scaling adds the ECS instance to the backend vServer group. Valid values: 1 to 65535.
+                /// The port number used by each ECS instance as a backend server in the vServer group. Valid values: 1 to 65535.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The ID of the backend vServer group.
+                /// The ID of the vServer group.
                 /// </summary>
                 [NameInMap("VServerGroupId")]
                 [Validation(Required=false)]
                 public string VServerGroupId { get; set; }
 
                 /// <summary>
-                /// The weight of an ECS instance after Auto Scaling adds the ECS instance to the backend vServer group as a backend server. If you increase the weight of an ECS instance in the backend vServer group, the number of access requests that are forwarded to the ECS instance also increases. If you set the Weight parameter of an ECS instance in the backend vServer group to 0, no access requests are forwarded to the ECS instance. Valid values: 0 to 100. Default value: 50.
+                /// The weight of each ECS instance as a backend server in the vServer group. If you increase the weight for an ECS instance, the number of requests that are forwarded to the ECS instance also increases. If you set the weight for an ECS instance to 0, no requests are forwarded to the ECS instance. Valid values: 0 to 100.
+                /// 
+                /// Default value: 50.
                 /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
@@ -694,15 +734,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The IDs of vSwitches. If you specify the VSwitchIds parameter, the VSwitchId parameter is ignored. If you specify the VSwitchIds parameter, the network type of the scaling group is VPC.
+        /// The IDs of the vSwitches. If you specify VSwitchIds, VSwitchId is ignored. If you specify VSwitchIds, the network type of the scaling group is VPC.
         /// 
         /// If you specify multiple vSwitches, take note of the following items:
         /// 
         /// *   The vSwitches must belong to the same VPC.
         /// *   The vSwitches can belong to different zones.
-        /// *   The vSwitches are sorted in ascending order of priority. The first vSwitch that is specified by the VSwitchIds parameter has the highest priority. If Auto Scaling fails to create ECS instances in the zone where the vSwitch that has the highest priority resides, Auto Scaling creates ECS instances in the zone where the vSwitch that has the next highest priority resides.
+        /// *   vSwitches are sorted in ascending order based on their priorities. The first vSwitch has the highest priority. If Auto Scaling fails to create ECS instances in the zone where the vSwitch of the highest priority resides, Auto Scaling attempts to create ECS instances in the zone where the vSwitch of the next highest priority resides.
         /// 
-        /// > If you do not specify the VSwitchId or VSwitchIds parameter, the network type of the scaling group is classic network.
+        /// >  If you do not specify VSwitchId or VSwitchIds for your scaling group, the network type of the scaling group is classic network.
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

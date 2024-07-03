@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingActivityDetailResponseBody : TeaModel {
         /// <summary>
-        /// Details of the scaling activity.
+        /// The details of the scaling activity. If the status of the scaling activity is Rejected, no result is displayed.
         /// </summary>
         [NameInMap("Detail")]
         [Validation(Required=false)]

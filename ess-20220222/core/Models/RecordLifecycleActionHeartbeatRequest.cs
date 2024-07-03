@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The period of time before the lifecycle hook ends. Auto Scaling performs the specified action after the lifecycle hook ends. Valid values: 30 to 21600. Unit: seconds.
+        /// The time window during which the desired ECS instance stays in a Pending state. When the time window ends, Auto Scaling executes the default action. Valid values: 30 to 21600. Unit: seconds.
         /// 
-        /// You can call this operation to prolong the length of a lifecycle hook. You can also call the CompleteLifecycleAction operation to end a lifecycle hook ahead of schedule.
+        /// After you create a lifecycle hook, you can call this operation to extend the time window during which the desired ECS instance stays in a Pending state. You can also call the [CompleteLifecycleAction](https://help.aliyun.com/document_detail/459335.html) operation to remove the desired ECS instance from a Pending state ahead of schedule.
         /// 
         /// Default value: 600.
         /// </summary>
@@ -40,7 +40,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? HeartbeatTimeout { get; set; }
 
         /// <summary>
-        /// The token of the lifecycle hook. You can obtain this token by using a Message Service (MNS) queue or an MNS topic that is specified for the lifecycle hook.
+        /// The action token of the lifecycle hook. You can obtain the token from the details page of the Message Service (MNS) queue specified for the lifecycle hook when the desired ECS instance enters a Pending state.\\
+        /// You can also call the [DescribeLifecycleActions](https://help.aliyun.com/document_detail/459333.html) operation to obtain the action token of the lifecycle hook.\\
+        /// If you specified an MNS topic for the lifecycle hook, you can obtain the token from the MNS topic.
         /// 
         /// This parameter is required.
         /// </summary>

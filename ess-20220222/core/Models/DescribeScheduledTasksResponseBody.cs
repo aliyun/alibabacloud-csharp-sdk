@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the scheduled tasks.
+        /// The information collection of the scheduled tasks.
         /// </summary>
         [NameInMap("ScheduledTasks")]
         [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The expected number of instances in the scaling group if you specify the ScalingGroupId parameter.
+            /// The expected number of instances in the scaling group. If you set `Scaling Method` to `Configure Number of Instances in Scaling Group`, you can specify this parameter.
             /// </summary>
             [NameInMap("DesiredCapacity")]
             [Validation(Required=false)]
             public int? DesiredCapacity { get; set; }
 
             /// <summary>
-            /// The time period during which the failed scheduled task is retried. Unit: seconds. Valid values: 0 to 21600.
+            /// The time window during which the scheduled task can be retried. Unit: seconds. Valid values: 0 to 21600.
             /// </summary>
             [NameInMap("LaunchExpirationTime")]
             [Validation(Required=false)]
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LaunchTime { get; set; }
 
             /// <summary>
-            /// The maximum number of instances in the scaling group if you specify the ScalingGroupId parameter.
+            /// The maximum number of instances that must be contained in the scaling group. If you set `Scaling Method` to `Configure Number of Instances in Scaling Group`, you can specify this parameter.
             /// </summary>
             [NameInMap("MaxValue")]
             [Validation(Required=false)]
             public int? MaxValue { get; set; }
 
             /// <summary>
-            /// The minimum number of instances in the scaling group if you specify the ScalingGroupId parameter.
+            /// The minimum number of instances that must be contained in the scaling group. If you set `Scaling Method` to `Configure Number of Instances in Scaling Group`, you can specify this parameter.
             /// </summary>
             [NameInMap("MinValue")]
             [Validation(Required=false)]
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string RecurrenceEndTime { get; set; }
 
             /// <summary>
-            /// The interval at which the scheduled task is repeated.
+            /// The recurring interval of the scheduled task.
             /// </summary>
             [NameInMap("RecurrenceType")]
             [Validation(Required=false)]
             public string RecurrenceType { get; set; }
 
             /// <summary>
-            /// The number of recurrences of the scheduled task.
+            /// The frequency of recurrence of the scheduled task.
             /// </summary>
             [NameInMap("RecurrenceValue")]
             [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ScalingGroupId { get; set; }
 
             /// <summary>
-            /// The scaling rule that is executed when the scheduled task is triggered. This parameter is returned only after a scaling rule is specified for the scheduled task.
+            /// The scaling rule of the scheduled task. A value is returned for this parameter only after you specify ScheduledActions.
             /// </summary>
             [NameInMap("ScheduledAction")]
             [Validation(Required=false)]

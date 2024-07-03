@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// The scaling rule that you want to execute when the scheduled task is triggered. Specify the unique identifier of the scaling rule. If you specify the `ScheduledAction` parameter, you must select an existing scaling rule for the scheduled task.
+        /// The scaling rule that you want to execute when the scheduled task is triggered. Enter the ID of the scaling rule. To obtain the ID of a scaling rule, go to the scaling rule details page. If you specify `ScheduledAction`, you must select an existing scaling rule for the scheduled task.
         /// 
-        /// > You cannot specify the `ScheduledAction` and `ScalingGroupId` parameters at the same time.
+        /// >  You can specify only one of `ScheduledAction` and `ScalingGroupId`.
         /// </summary>
         [NameInMap("ScheduledAction")]
         [Validation(Required=false)]

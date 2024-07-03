@@ -418,6 +418,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         }
 
+        /// <summary>
+        /// The ID of the dedicated host cluster.
+        /// </summary>
         [NameInMap("DedicatedHostClusterId")]
         [Validation(Required=false)]
         public string DedicatedHostClusterId { get; set; }
@@ -1009,7 +1012,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string Tenancy { get; set; }
 
         /// <summary>
-        /// The user data of the ECS instance. The data must be encoded in Base64. The maximum size of the data before encoding is 16 KB.
+        /// The user data of the Elastic Compute Service (ECS) instance. The user data must be encoded in Base64 format. The size of raw data before Base64 encoding cannot exceed 32 KB.
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

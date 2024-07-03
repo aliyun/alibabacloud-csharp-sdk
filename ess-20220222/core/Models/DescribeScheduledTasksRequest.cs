@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1.
+        /// The page number. Pages start from page 1.
         /// 
         /// Default value: 1.
         /// </summary>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to 50.
+        /// The number of entries per page. Maximum value: 50.
         /// 
         /// Default value: 10.
         /// </summary>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// The actions that you want Auto Scaling to perform when the scheduled task is triggered.
+        /// The scaling rules of the scheduled tasks. Once the scheduled tasks are triggered, the scaling rules are executed.
         /// </summary>
         [NameInMap("ScheduledActions")]
         [Validation(Required=false)]
         public List<string> ScheduledActions { get; set; }
 
         /// <summary>
-        /// The ID of the scheduled task that you want to query.
+        /// The IDs of the scheduled tasks that you want to query.
         /// </summary>
         [NameInMap("ScheduledTaskIds")]
         [Validation(Required=false)]

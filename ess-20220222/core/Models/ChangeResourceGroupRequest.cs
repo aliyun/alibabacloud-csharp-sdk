@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// The region ID of the scaling group.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeLifecycleHooksRequest : TeaModel {
         /// <summary>
-        /// The ID of the lifecycle hook.
+        /// The IDs of the lifecycle hooks that you want to query.
         /// </summary>
         [NameInMap("LifecycleHookIds")]
         [Validation(Required=false)]

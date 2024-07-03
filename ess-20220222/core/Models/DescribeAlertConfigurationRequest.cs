@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// The region ID of the event-triggered task.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
+        /// The ID of the scaling group.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("ScalingGroupId")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ExitStandbyRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to asynchronously move the ECS instance out of the Standby state. Valid values:
+        /// Specifies whether to remove the instance from the Standby state in an asynchronous manner. Valid values:
         /// 
         /// *   true
         /// *   false
@@ -22,16 +22,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? Async { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
+        /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The IDs of the ECS instances. The value of this parameter can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).
+        /// The IDs of the ECS instances. The value can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).
         /// 
         /// This parameter is required.
         /// </summary>

@@ -10,38 +10,38 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeLifecycleActionsResponseBody : TeaModel {
         /// <summary>
-        /// The lifecycle actions.
+        /// The actions of the lifecycle hook.
         /// </summary>
         [NameInMap("LifecycleActions")]
         [Validation(Required=false)]
         public List<DescribeLifecycleActionsResponseBodyLifecycleActions> LifecycleActions { get; set; }
         public class DescribeLifecycleActionsResponseBodyLifecycleActions : TeaModel {
             /// <summary>
-            /// The IDs of the ECS instances to which the lifecycle hook applies.
+            /// The IDs of the ECS instances on which the lifecycle hook takes effect
             /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
             public List<string> InstanceIds { get; set; }
 
             /// <summary>
-            /// The action that is performed after the lifecycle action triggered by the lifecycle hook is complete. Valid values:
+            /// The subsequent action that Auto Scaling performs after the lifecycle hook times out. Valid values:
             /// 
-            /// *   CONTINUE: Auto Scaling continues to add ECS instances to the scaling group, or continues to remove ECS instances from the scaling group.
-            /// *   ABANDON: Auto Scaling stops adding ECS instances to the scaling group and releases the ECS instances, or continues to respond to scale-in requests and remove ECS instances from the scaling group.
+            /// *   CONTINUE: Auto Scaling continues to respond to a scale-in or scale-out request.
+            /// *   ABANDON: Auto Scaling releases ECS instances that are created during scale-out events, or removes ECS instances from the scaling group during scale-in events.
             /// </summary>
             [NameInMap("LifecycleActionResult")]
             [Validation(Required=false)]
             public string LifecycleActionResult { get; set; }
 
             /// <summary>
-            /// The status of the lifecycle action.
+            /// The status of the lifecycle hook action.
             /// </summary>
             [NameInMap("LifecycleActionStatus")]
             [Validation(Required=false)]
             public string LifecycleActionStatus { get; set; }
 
             /// <summary>
-            /// The token of the lifecycle action.
+            /// The token of the lifecycle hook action.
             /// </summary>
             [NameInMap("LifecycleActionToken")]
             [Validation(Required=false)]
