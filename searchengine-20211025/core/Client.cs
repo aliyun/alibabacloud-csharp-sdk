@@ -408,6 +408,116 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
+         * @param request CreateAliasRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAliasResponse
+         */
+        public CreateAliasResponse CreateAliasWithOptions(string instanceId, CreateAliasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewMode))
+            {
+                query["newMode"] = request.NewMode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
+            {
+                body["alias"] = request.Alias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Index))
+            {
+                body["index"] = request.Index;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAlias",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/aliases",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAliasResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request CreateAliasRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAliasResponse
+         */
+        public async Task<CreateAliasResponse> CreateAliasWithOptionsAsync(string instanceId, CreateAliasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewMode))
+            {
+                query["newMode"] = request.NewMode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
+            {
+                body["alias"] = request.Alias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Index))
+            {
+                body["index"] = request.Index;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAlias",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/aliases",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAliasResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request CreateAliasRequest
+         * @return CreateAliasResponse
+         */
+        public CreateAliasResponse CreateAlias(string instanceId, CreateAliasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAliasWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /**
+         * @param request CreateAliasRequest
+         * @return CreateAliasResponse
+         */
+        public async Task<CreateAliasResponse> CreateAliasAsync(string instanceId, CreateAliasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAliasWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /**
          * @summary Creates a cluster.
          *
          * @description ### Method
@@ -1811,6 +1921,78 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteAdvanceConfigWithOptionsAsync(instanceId, configName, headers, runtime);
+        }
+
+        /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAliasResponse
+         */
+        public DeleteAliasResponse DeleteAliasWithOptions(string instanceId, string alias, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlias",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/aliases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(alias),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAliasResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteAliasResponse
+         */
+        public async Task<DeleteAliasResponse> DeleteAliasWithOptionsAsync(string instanceId, string alias, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlias",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/aliases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(alias),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAliasResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @return DeleteAliasResponse
+         */
+        public DeleteAliasResponse DeleteAlias(string instanceId, string alias)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAliasWithOptions(instanceId, alias, headers, runtime);
+        }
+
+        /**
+         * @return DeleteAliasResponse
+         */
+        public async Task<DeleteAliasResponse> DeleteAliasAsync(string instanceId, string alias)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAliasWithOptionsAsync(instanceId, alias, headers, runtime);
         }
 
         /**
@@ -4974,6 +5156,78 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         }
 
         /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAliasesResponse
+         */
+        public ListAliasesResponse ListAliasesWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAliases",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/aliases",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAliasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ListAliasesResponse
+         */
+        public async Task<ListAliasesResponse> ListAliasesWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAliases",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/aliases",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAliasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @return ListAliasesResponse
+         */
+        public ListAliasesResponse ListAliases(string instanceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAliasesWithOptions(instanceId, headers, runtime);
+        }
+
+        /**
+         * @return ListAliasesResponse
+         */
+        public async Task<ListAliasesResponse> ListAliasesAsync(string instanceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAliasesWithOptionsAsync(instanceId, headers, runtime);
+        }
+
+        /**
          * @summary Queries cluster names.
          *
          * @description ### Method
@@ -7959,6 +8213,104 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModifyAdvanceConfigFileWithOptionsAsync(instanceId, configName, request, headers, runtime);
+        }
+
+        /**
+         * @param request ModifyAliasRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAliasResponse
+         */
+        public ModifyAliasResponse ModifyAliasWithOptions(string instanceId, string alias, ModifyAliasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
+            {
+                body["alias"] = request.Alias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Index))
+            {
+                body["index"] = request.Index;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAlias",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/aliases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(alias),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAliasResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request ModifyAliasRequest
+         * @param headers map
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyAliasResponse
+         */
+        public async Task<ModifyAliasResponse> ModifyAliasWithOptionsAsync(string instanceId, string alias, ModifyAliasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
+            {
+                body["alias"] = request.Alias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Index))
+            {
+                body["index"] = request.Index;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAlias",
+                Version = "2021-10-25",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/ha3/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/aliases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(alias),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAliasResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request ModifyAliasRequest
+         * @return ModifyAliasResponse
+         */
+        public ModifyAliasResponse ModifyAlias(string instanceId, string alias, ModifyAliasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModifyAliasWithOptions(instanceId, alias, request, headers, runtime);
+        }
+
+        /**
+         * @param request ModifyAliasRequest
+         * @return ModifyAliasResponse
+         */
+        public async Task<ModifyAliasResponse> ModifyAliasAsync(string instanceId, string alias, ModifyAliasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModifyAliasWithOptionsAsync(instanceId, alias, request, headers, runtime);
         }
 
         /**
