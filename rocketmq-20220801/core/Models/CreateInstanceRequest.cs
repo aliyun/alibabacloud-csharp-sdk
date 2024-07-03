@@ -141,12 +141,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// The ID of the vSwitch with which you want to associate the instance, If there are multiple vSwitchs, please concatenate them using the "|" character.
                 /// 
                 /// >  After an ApsaraMQ for RocketMQ instance is created, you cannot change the vSwitch with which the instance is associated. If you want to change the vSwitch with which the instance is associated, you must release the instance and purchase a new instance.
-                /// 
-                /// This parameter is required.
                 /// </summary>
                 [NameInMap("vSwitchId")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string VSwitchId { get; set; }
+
+                [NameInMap("vSwitches")]
+                [Validation(Required=false)]
+                public List<CreateInstanceRequestNetworkInfoVpcInfoVSwitches> VSwitches { get; set; }
+                public class CreateInstanceRequestNetworkInfoVpcInfoVSwitches : TeaModel {
+                    [NameInMap("vSwitchId")]
+                    [Validation(Required=false)]
+                    public string VSwitchId { get; set; }
+
+                }
 
                 /// <summary>
                 /// The ID of the VPC in which you want to deploy the instance.
