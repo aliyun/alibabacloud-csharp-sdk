@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Nlp_automl20190701.Models
 {
-    public class PredictMTModelResponse : TeaModel {
+    public class AddMTInterveneWordResponseBody : TeaModel {
         [NameInMap("Code")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Message")]
-        [Validation(Required=true)]
-        public int? Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public string Data { get; set; }
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("RequestId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("WordId")]
+        [Validation(Required=false)]
+        public long? WordId { get; set; }
 
     }
 

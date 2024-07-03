@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Nlp_automl20190701.Models
 {
     public class PredictMTModelByDocResponse : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
+        [NameInMap("headers")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DocId")]
-        [Validation(Required=true)]
-        public string DocId { get; set; }
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public PredictMTModelByDocResponseBody Body { get; set; }
 
     }
 

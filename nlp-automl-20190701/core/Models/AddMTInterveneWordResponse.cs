@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Nlp_automl20190701.Models
 {
     public class AddMTInterveneWordResponse : TeaModel {
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public int? Code { get; set; }
+        [NameInMap("headers")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=true)]
-        public int? Message { get; set; }
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
 
-        [NameInMap("WordId")]
-        [Validation(Required=true)]
-        public string WordId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public AddMTInterveneWordResponseBody Body { get; set; }
 
     }
 

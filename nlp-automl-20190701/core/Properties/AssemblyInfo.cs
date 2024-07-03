@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-nlp-automl")]
 [assembly: AssemblyDescription("Alibaba Cloud nlp-automl (20190701) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("32b555d0-1dab-11eb-ba96-71b5f86de14c")]
+[assembly: Guid("bcc7e260-395e-11ef-b1aa-99c90cf62eb2")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -8,17 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Nlp_automl20190701.Models
 {
-    public class GetPredictDocRequest : TeaModel {
-        /// <summary>
-        /// This parameter is required.
-        /// </summary>
+    public class PredictMTModelByDocResponseBody : TeaModel {
         [NameInMap("DocId")]
         [Validation(Required=false)]
-        public long? DocId { get; set; }
+        public string DocId { get; set; }
 
-        [NameInMap("Product")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Product { get; set; }
+        public string RequestId { get; set; }
 
     }
 
