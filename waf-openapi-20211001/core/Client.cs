@@ -1265,6 +1265,154 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
+         * @summary 上传国密证书
+         *
+         * @param request CreateSM2CertRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSM2CertResponse
+         */
+        public CreateSM2CertResponse CreateSM2CertWithOptions(CreateSM2CertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                query["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptCertificate))
+            {
+                query["EncryptCertificate"] = request.EncryptCertificate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptPrivateKey))
+            {
+                query["EncryptPrivateKey"] = request.EncryptPrivateKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignCertificate))
+            {
+                query["SignCertificate"] = request.SignCertificate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignPrivateKey))
+            {
+                query["SignPrivateKey"] = request.SignPrivateKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSM2Cert",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSM2CertResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 上传国密证书
+         *
+         * @param request CreateSM2CertRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateSM2CertResponse
+         */
+        public async Task<CreateSM2CertResponse> CreateSM2CertWithOptionsAsync(CreateSM2CertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                query["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptCertificate))
+            {
+                query["EncryptCertificate"] = request.EncryptCertificate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptPrivateKey))
+            {
+                query["EncryptPrivateKey"] = request.EncryptPrivateKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignCertificate))
+            {
+                query["SignCertificate"] = request.SignCertificate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignPrivateKey))
+            {
+                query["SignPrivateKey"] = request.SignPrivateKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSM2Cert",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSM2CertResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 上传国密证书
+         *
+         * @param request CreateSM2CertRequest
+         * @return CreateSM2CertResponse
+         */
+        public CreateSM2CertResponse CreateSM2Cert(CreateSM2CertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSM2CertWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 上传国密证书
+         *
+         * @param request CreateSM2CertRequest
+         * @return CreateSM2CertResponse
+         */
+        public async Task<CreateSM2CertResponse> CreateSM2CertAsync(CreateSM2CertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSM2CertWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary 删除API安全风险
          *
          * @param request DeleteApisecAbnormalRequest
@@ -2841,7 +2989,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 获取API安全日志订阅列表
+         * @summary Queries the configurations of API security log subscription.
          *
          * @param request DescribeApisecLogDeliveriesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2883,7 +3031,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 获取API安全日志订阅列表
+         * @summary Queries the configurations of API security log subscription.
          *
          * @param request DescribeApisecLogDeliveriesRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -2925,7 +3073,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 获取API安全日志订阅列表
+         * @summary Queries the configurations of API security log subscription.
          *
          * @param request DescribeApisecLogDeliveriesRequest
          * @return DescribeApisecLogDeliveriesResponse
@@ -2937,7 +3085,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 获取API安全日志订阅列表
+         * @summary Queries the configurations of API security log subscription.
          *
          * @param request DescribeApisecLogDeliveriesRequest
          * @return DescribeApisecLogDeliveriesResponse
@@ -3121,7 +3269,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 查询日志服务SLS的LogStore列表
+         * @summary Queries the Logstores whose names start with apisec- in Simple Log Service.
          *
          * @param request DescribeApisecSlsLogStoresRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3171,7 +3319,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 查询日志服务SLS的LogStore列表
+         * @summary Queries the Logstores whose names start with apisec- in Simple Log Service.
          *
          * @param request DescribeApisecSlsLogStoresRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3221,7 +3369,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 查询日志服务SLS的LogStore列表
+         * @summary Queries the Logstores whose names start with apisec- in Simple Log Service.
          *
          * @param request DescribeApisecSlsLogStoresRequest
          * @return DescribeApisecSlsLogStoresResponse
@@ -3233,7 +3381,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 查询日志服务SLS的LogStore列表
+         * @summary Queries the Logstores whose names start with apisec- in Simple Log Service.
          *
          * @param request DescribeApisecSlsLogStoresRequest
          * @return DescribeApisecSlsLogStoresResponse
@@ -3245,7 +3393,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 查询日志服务SLS的Project列表
+         * @summary Queries the projects whose names start with apisec- in Simple Log Service.
          *
          * @param request DescribeApisecSlsProjectsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3291,7 +3439,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 查询日志服务SLS的Project列表
+         * @summary Queries the projects whose names start with apisec- in Simple Log Service.
          *
          * @param request DescribeApisecSlsProjectsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -3337,7 +3485,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 查询日志服务SLS的Project列表
+         * @summary Queries the projects whose names start with apisec- in Simple Log Service.
          *
          * @param request DescribeApisecSlsProjectsRequest
          * @return DescribeApisecSlsProjectsResponse
@@ -3349,7 +3497,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 查询日志服务SLS的Project列表
+         * @summary Queries the projects whose names start with apisec- in Simple Log Service.
          *
          * @param request DescribeApisecSlsProjectsRequest
          * @return DescribeApisecSlsProjectsResponse
@@ -3802,6 +3950,114 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.
+         *
+         * @param request DescribeDDoSStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDoSStatusResponse
+         */
+        public DescribeDDoSStatusResponse DescribeDDoSStatusWithOptions(DescribeDDoSStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDDoSStatus",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDDoSStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.
+         *
+         * @param request DescribeDDoSStatusRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDDoSStatusResponse
+         */
+        public async Task<DescribeDDoSStatusResponse> DescribeDDoSStatusWithOptionsAsync(DescribeDDoSStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDDoSStatus",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDDoSStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.
+         *
+         * @param request DescribeDDoSStatusRequest
+         * @return DescribeDDoSStatusResponse
+         */
+        public DescribeDDoSStatusResponse DescribeDDoSStatus(DescribeDDoSStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDDoSStatusWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.
+         *
+         * @param request DescribeDDoSStatusRequest
+         * @return DescribeDDoSStatusResponse
+         */
+        public async Task<DescribeDDoSStatusResponse> DescribeDDoSStatusAsync(DescribeDDoSStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDDoSStatusWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -10701,7 +10957,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 修改API安全日志订阅
+         * @summary Modifies the configurations of API security log subscription.
          *
          * @param request ModifyApisecLogDeliveryRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10759,7 +11015,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 修改API安全日志订阅
+         * @summary Modifies the configurations of API security log subscription.
          *
          * @param request ModifyApisecLogDeliveryRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10817,7 +11073,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 修改API安全日志订阅
+         * @summary Modifies the configurations of API security log subscription.
          *
          * @param request ModifyApisecLogDeliveryRequest
          * @return ModifyApisecLogDeliveryResponse
@@ -10829,7 +11085,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 修改API安全日志订阅
+         * @summary Modifies the configurations of API security log subscription.
          *
          * @param request ModifyApisecLogDeliveryRequest
          * @return ModifyApisecLogDeliveryResponse
@@ -10841,7 +11097,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 修改API安全日志订阅状态
+         * @summary Modifies the status of API security log subscription.
          *
          * @param request ModifyApisecLogDeliveryStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10891,7 +11147,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 修改API安全日志订阅状态
+         * @summary Modifies the status of API security log subscription.
          *
          * @param request ModifyApisecLogDeliveryStatusRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -10941,7 +11197,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 修改API安全日志订阅状态
+         * @summary Modifies the status of API security log subscription.
          *
          * @param request ModifyApisecLogDeliveryStatusRequest
          * @return ModifyApisecLogDeliveryStatusResponse
@@ -10953,7 +11209,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 修改API安全日志订阅状态
+         * @summary Modifies the status of API security log subscription.
          *
          * @param request ModifyApisecLogDeliveryStatusRequest
          * @return ModifyApisecLogDeliveryStatusResponse

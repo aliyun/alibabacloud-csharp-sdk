@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreatePostpaidInstanceRequest : TeaModel {
         /// <summary>
-        /// The region in which the WAF instance is deployed. Valid values:
+        /// The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
         /// 
         /// *   **cn-hangzhou**: Chinese mainland.
         /// *   **ap-southeast-1**: outside the Chinese mainland.

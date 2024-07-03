@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DescribeApisecSlsProjectsRequest : TeaModel {
+    public class DescribeDDoSStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the Web Application Firewall (WAF) instance.
+        /// The ID of the WAF instance that you want to query.
         /// 
-        /// >  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.
+        /// >  You can call the [DescribeInstanceInfo](https://help.aliyun.com/document_detail/140857.html) operation to query the ID of the WAF instance.
         /// 
         /// This parameter is required.
         /// </summary>
@@ -21,18 +21,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the region where logs are stored.
-        /// 
-        /// >  You can call the [DescribeUserSlsLogRegions](https://help.aliyun.com/document_detail/2712598.html) operation to query available log storage regions.
-        /// 
-        /// This parameter is required.
-        /// </summary>
-        [NameInMap("LogRegionId")]
-        [Validation(Required=false)]
-        public string LogRegionId { get; set; }
-
-        /// <summary>
-        /// The region where the WAF instance is deployed. Valid values:
+        /// The region in which the WAF instance is deployed. Valid values:
         /// 
         /// *   **cn-hangzhou**: Chinese mainland.
         /// *   **ap-southeast-1**: outside the Chinese mainland.
