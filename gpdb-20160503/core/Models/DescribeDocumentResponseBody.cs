@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDocumentResponseBody : TeaModel {
+        [NameInMap("ChunkFileUrl")]
+        [Validation(Required=false)]
+        public string ChunkFileUrl { get; set; }
+
         [NameInMap("DocsCount")]
         [Validation(Required=false)]
         public int? DocsCount { get; set; }
@@ -37,6 +41,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public long? FileSize { get; set; }
 
+        [NameInMap("FileUrl")]
+        [Validation(Required=false)]
+        public string FileUrl { get; set; }
+
         [NameInMap("FileVersion")]
         [Validation(Required=false)]
         public int? FileVersion { get; set; }
@@ -44,6 +52,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("PlainChunkFileUrl")]
+        [Validation(Required=false)]
+        public string PlainChunkFileUrl { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
