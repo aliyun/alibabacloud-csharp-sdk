@@ -192,6 +192,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string Encryption { get; set; }
 
+                [NameInMap("Engine")]
+                [Validation(Required=false)]
+                public string Engine { get; set; }
+
+                [NameInMap("EngineVersion")]
+                [Validation(Required=false)]
+                public string EngineVersion { get; set; }
+
                 /// <summary>
                 /// The ID of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.
                 /// </summary>

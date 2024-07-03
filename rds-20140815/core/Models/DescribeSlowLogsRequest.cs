@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*Z format. The time must be in UTC.
         /// 
+        /// >  If the end date of the query is the same as the start date of the query, you can query the logs that are generated at 08:00 on the start date of the query. You can query the slow logs within a maximum time range of 24 hours.
+        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]

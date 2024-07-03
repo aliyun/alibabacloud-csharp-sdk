@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// Specifies whether the instance expires. Valid values:
         /// 
-        /// *   **True**: The instance expires.
-        /// *   **False:** The instance does not expire.
+        /// *   **True**
+        /// *   **False**
         /// </summary>
         [NameInMap("Expired")]
         [Validation(Required=false)]

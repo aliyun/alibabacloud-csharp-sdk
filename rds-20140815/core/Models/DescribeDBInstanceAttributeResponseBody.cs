@@ -100,6 +100,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public bool? BurstingEnabled { get; set; }
 
+                /// <summary>
+                /// Indicates whether the conditions for a temporary upgrade are met.
+                /// 
+                /// >  Pay-as-you-go instances do not support temporary upgrades.
+                /// </summary>
                 [NameInMap("CanTempUpgrade")]
                 [Validation(Required=false)]
                 public bool? CanTempUpgrade { get; set; }
@@ -119,7 +124,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// A reserved parameter. You do not need to specify this parameter.
+                /// A reserved parameter.
                 /// </summary>
                 [NameInMap("ColdDataEnabled")]
                 [Validation(Required=false)]
@@ -249,7 +254,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string NodeZoneId { get; set; }
 
                         /// <summary>
-                        /// The node status. Default value: true. Valid values:
+                        /// The node status. Valid values:
                         /// 
                         /// *   active
                         /// *   creating
@@ -348,7 +353,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// 
                 /// *   **local_ssd** or **ephemeral_ssd**: local SSD
                 /// *   **cloud_ssd**: standard SSD
-                /// *   **cloud_essd**: Enterprise SSD (ESSD)
+                /// *   **cloud_essd**: Enterprise SSD (ESSD).
                 /// *   **general_essd**: general ESSD
                 /// </summary>
                 [NameInMap("DBInstanceStorageType")]
@@ -356,7 +361,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceStorageType { get; set; }
 
                 /// <summary>
-                /// The instance type. Valid values:
+                /// The type of the instance. Valid values:
                 /// 
                 /// *   **Primary**: primary instance
                 /// *   **Readonly**: read-only instance
@@ -375,7 +380,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? DBMaxQuantity { get; set; }
 
                 /// <summary>
-                /// The ID of the dedicated cluster to which the instances belong.
+                /// The ID of the dedicated cluster to which the instance belongs.
                 /// </summary>
                 [NameInMap("DedicatedHostGroupId")]
                 [Validation(Required=false)]
@@ -586,7 +591,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// 
                 /// *   **Postpaid**: pay-as-you-go
                 /// *   **Prepaid**: subscription
-                /// *   **SERVERLESS**: serverless
+                /// *   **SERVERLESS**
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
@@ -756,10 +761,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string TempDBInstanceId { get; set; }
 
+                /// <summary>
+                /// The end time of the temporary upgrade of the instance.
+                /// 
+                /// >  This parameter is unavailable for pay-as-you-go instances.
+                /// </summary>
                 [NameInMap("TempUpgradeTimeEnd")]
                 [Validation(Required=false)]
                 public string TempUpgradeTimeEnd { get; set; }
 
+                /// <summary>
+                /// The start time of the temporary upgrade of the instance.
+                /// 
+                /// >  This parameter is unavailable for pay-as-you-go instances.
+                /// </summary>
                 [NameInMap("TempUpgradeTimeStart")]
                 [Validation(Required=false)]
                 public string TempUpgradeTimeStart { get; set; }
@@ -796,7 +811,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the instance. This parameter is returned only when the instance resides in a VPC.
+                /// The ID of the VPC. This parameter is returned only when the instance resides in a VPC.
                 /// </summary>
                 [NameInMap("VpcCloudInstanceId")]
                 [Validation(Required=false)]

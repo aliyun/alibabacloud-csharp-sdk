@@ -91,19 +91,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// 
         /// *   Regular RDS instance
         /// 
-        ///     *   **Basic**: RDS Basic Edition.
-        ///     *   **HighAvailability**: RDS High-availability Edition.
-        ///     *   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL.
-        ///     *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server.
-        ///     *   **Finance**: RDS Enterprise Edition.
+        ///     *   **Basic**: RDS Basic Edition
+        ///     *   **HighAvailability**: RDS High-availability Edition
+        ///     *   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL or PostgreSQL
+        ///     *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server
+        ///     *   **Finance**: RDS Basic Edition for serverless instances
         /// 
         /// *   Serverless instance
         /// 
-        ///     *   **serverless_basic**: RDS Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.
-        ///     *   **serverless_standard**: RDS High-availability Edition. This edition is available only for instances that run MySQL and PostgreSQL.
-        ///     *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.
+        ///     *   **serverless_basic**: RDS Basic Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.
+        ///     *   **serverless_standard**: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.
+        ///     *   **serverless_ha**: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.
         /// 
-        /// > This parameter is required when you create a serverless instance.
+        ///     **
+        /// 
+        ///     **Note** This parameter is required when you create a serverless instance.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]

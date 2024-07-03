@@ -5438,6 +5438,162 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+         * @summary 创建实例主机安全组规则
+         *
+         * @param request CreateDBInstanceSecurityGroupRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDBInstanceSecurityGroupRuleResponse
+         */
+        public CreateDBInstanceSecurityGroupRuleResponse CreateDBInstanceSecurityGroupRuleWithOptions(CreateDBInstanceSecurityGroupRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpProtocol))
+            {
+                query["IpProtocol"] = request.IpProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortRange))
+            {
+                query["PortRange"] = request.PortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCidrIp))
+            {
+                query["SourceCidrIp"] = request.SourceCidrIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDBInstanceSecurityGroupRule",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDBInstanceSecurityGroupRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建实例主机安全组规则
+         *
+         * @param request CreateDBInstanceSecurityGroupRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateDBInstanceSecurityGroupRuleResponse
+         */
+        public async Task<CreateDBInstanceSecurityGroupRuleResponse> CreateDBInstanceSecurityGroupRuleWithOptionsAsync(CreateDBInstanceSecurityGroupRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpProtocol))
+            {
+                query["IpProtocol"] = request.IpProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortRange))
+            {
+                query["PortRange"] = request.PortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCidrIp))
+            {
+                query["SourceCidrIp"] = request.SourceCidrIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDBInstanceSecurityGroupRule",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDBInstanceSecurityGroupRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 创建实例主机安全组规则
+         *
+         * @param request CreateDBInstanceSecurityGroupRuleRequest
+         * @return CreateDBInstanceSecurityGroupRuleResponse
+         */
+        public CreateDBInstanceSecurityGroupRuleResponse CreateDBInstanceSecurityGroupRule(CreateDBInstanceSecurityGroupRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDBInstanceSecurityGroupRuleWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 创建实例主机安全组规则
+         *
+         * @param request CreateDBInstanceSecurityGroupRuleRequest
+         * @return CreateDBInstanceSecurityGroupRuleResponse
+         */
+        public async Task<CreateDBInstanceSecurityGroupRuleResponse> CreateDBInstanceSecurityGroupRuleAsync(CreateDBInstanceSecurityGroupRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDBInstanceSecurityGroupRuleWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Adds a node to an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition. An RDS instance that runs RDS Cluster Edition is referred to as an RDS cluster.
          *
          * @description ### Supported database engines
@@ -10275,6 +10431,154 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDBInstanceEndpointAddressWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 删除实例主机安全组规则
+         *
+         * @param request DeleteDBInstanceSecurityGroupRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDBInstanceSecurityGroupRuleResponse
+         */
+        public DeleteDBInstanceSecurityGroupRuleResponse DeleteDBInstanceSecurityGroupRuleWithOptions(DeleteDBInstanceSecurityGroupRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupRuleIds))
+            {
+                query["SecurityGroupRuleIds"] = request.SecurityGroupRuleIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDBInstanceSecurityGroupRule",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDBInstanceSecurityGroupRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除实例主机安全组规则
+         *
+         * @param request DeleteDBInstanceSecurityGroupRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteDBInstanceSecurityGroupRuleResponse
+         */
+        public async Task<DeleteDBInstanceSecurityGroupRuleResponse> DeleteDBInstanceSecurityGroupRuleWithOptionsAsync(DeleteDBInstanceSecurityGroupRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupRuleIds))
+            {
+                query["SecurityGroupRuleIds"] = request.SecurityGroupRuleIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDBInstanceSecurityGroupRule",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDBInstanceSecurityGroupRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 删除实例主机安全组规则
+         *
+         * @param request DeleteDBInstanceSecurityGroupRuleRequest
+         * @return DeleteDBInstanceSecurityGroupRuleResponse
+         */
+        public DeleteDBInstanceSecurityGroupRuleResponse DeleteDBInstanceSecurityGroupRule(DeleteDBInstanceSecurityGroupRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDBInstanceSecurityGroupRuleWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 删除实例主机安全组规则
+         *
+         * @param request DeleteDBInstanceSecurityGroupRuleRequest
+         * @return DeleteDBInstanceSecurityGroupRuleResponse
+         */
+        public async Task<DeleteDBInstanceSecurityGroupRuleResponse> DeleteDBInstanceSecurityGroupRuleAsync(DeleteDBInstanceSecurityGroupRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDBInstanceSecurityGroupRuleWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -19331,6 +19635,130 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceSSLWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 描述实例主机安全组规则
+         *
+         * @param request DescribeDBInstanceSecurityGroupRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceSecurityGroupRuleResponse
+         */
+        public DescribeDBInstanceSecurityGroupRuleResponse DescribeDBInstanceSecurityGroupRuleWithOptions(DescribeDBInstanceSecurityGroupRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDBInstanceSecurityGroupRule",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDBInstanceSecurityGroupRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 描述实例主机安全组规则
+         *
+         * @param request DescribeDBInstanceSecurityGroupRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDBInstanceSecurityGroupRuleResponse
+         */
+        public async Task<DescribeDBInstanceSecurityGroupRuleResponse> DescribeDBInstanceSecurityGroupRuleWithOptionsAsync(DescribeDBInstanceSecurityGroupRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDBInstanceSecurityGroupRule",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDBInstanceSecurityGroupRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 描述实例主机安全组规则
+         *
+         * @param request DescribeDBInstanceSecurityGroupRuleRequest
+         * @return DescribeDBInstanceSecurityGroupRuleResponse
+         */
+        public DescribeDBInstanceSecurityGroupRuleResponse DescribeDBInstanceSecurityGroupRule(DescribeDBInstanceSecurityGroupRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDBInstanceSecurityGroupRuleWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 描述实例主机安全组规则
+         *
+         * @param request DescribeDBInstanceSecurityGroupRuleRequest
+         * @return DescribeDBInstanceSecurityGroupRuleResponse
+         */
+        public async Task<DescribeDBInstanceSecurityGroupRuleResponse> DescribeDBInstanceSecurityGroupRuleAsync(DescribeDBInstanceSecurityGroupRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDBInstanceSecurityGroupRuleWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -30981,16 +31409,17 @@ namespace AlibabaCloud.SDK.Rds20140815
          * @summary Queries the statistics on slow query logs.
          *
          * @description ### [](#)Supported database engines
-         * *   MySQL
+         * *   RDS MySQL
          *     **
          *     **Note** This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
-         * *   SQL Server
+         * *   RDS SQL Server
          *     **
          *     **Note** This operation is supported only for RDS instances that run SQL Server 2008 R2.
-         * *   MariaDB
+         * *   RDS MariaDB
          * ### [](#)Precautions
          * *   Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.
-         * *   If the return result is empty, check whether the StartTime and EndTime parameters meet the UTC format. If the parameters meet the UTC format, no slow logs are generated within the specified time range.
+         * *   If the return result is empty, check whether the StartTime and EndTime parameters are in UTC. If yes, no slow logs are generated within the specified time range.
+         * *   Starting from December 13, 2023, the optimized template algorithm is used for slow queries. As a result, different **SQLHash** values are generated for the same SQLText before and after optimization. For more information, see [[Notice\\] Optimization of the template algorithm for slow queries](~~2637024~~).
          *
          * @param request DescribeSlowLogsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -31067,16 +31496,17 @@ namespace AlibabaCloud.SDK.Rds20140815
          * @summary Queries the statistics on slow query logs.
          *
          * @description ### [](#)Supported database engines
-         * *   MySQL
+         * *   RDS MySQL
          *     **
          *     **Note** This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
-         * *   SQL Server
+         * *   RDS SQL Server
          *     **
          *     **Note** This operation is supported only for RDS instances that run SQL Server 2008 R2.
-         * *   MariaDB
+         * *   RDS MariaDB
          * ### [](#)Precautions
          * *   Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.
-         * *   If the return result is empty, check whether the StartTime and EndTime parameters meet the UTC format. If the parameters meet the UTC format, no slow logs are generated within the specified time range.
+         * *   If the return result is empty, check whether the StartTime and EndTime parameters are in UTC. If yes, no slow logs are generated within the specified time range.
+         * *   Starting from December 13, 2023, the optimized template algorithm is used for slow queries. As a result, different **SQLHash** values are generated for the same SQLText before and after optimization. For more information, see [[Notice\\] Optimization of the template algorithm for slow queries](~~2637024~~).
          *
          * @param request DescribeSlowLogsRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -31153,16 +31583,17 @@ namespace AlibabaCloud.SDK.Rds20140815
          * @summary Queries the statistics on slow query logs.
          *
          * @description ### [](#)Supported database engines
-         * *   MySQL
+         * *   RDS MySQL
          *     **
          *     **Note** This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
-         * *   SQL Server
+         * *   RDS SQL Server
          *     **
          *     **Note** This operation is supported only for RDS instances that run SQL Server 2008 R2.
-         * *   MariaDB
+         * *   RDS MariaDB
          * ### [](#)Precautions
          * *   Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.
-         * *   If the return result is empty, check whether the StartTime and EndTime parameters meet the UTC format. If the parameters meet the UTC format, no slow logs are generated within the specified time range.
+         * *   If the return result is empty, check whether the StartTime and EndTime parameters are in UTC. If yes, no slow logs are generated within the specified time range.
+         * *   Starting from December 13, 2023, the optimized template algorithm is used for slow queries. As a result, different **SQLHash** values are generated for the same SQLText before and after optimization. For more information, see [[Notice\\] Optimization of the template algorithm for slow queries](~~2637024~~).
          *
          * @param request DescribeSlowLogsRequest
          * @return DescribeSlowLogsResponse
@@ -31177,16 +31608,17 @@ namespace AlibabaCloud.SDK.Rds20140815
          * @summary Queries the statistics on slow query logs.
          *
          * @description ### [](#)Supported database engines
-         * *   MySQL
+         * *   RDS MySQL
          *     **
          *     **Note** This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
-         * *   SQL Server
+         * *   RDS SQL Server
          *     **
          *     **Note** This operation is supported only for RDS instances that run SQL Server 2008 R2.
-         * *   MariaDB
+         * *   RDS MariaDB
          * ### [](#)Precautions
          * *   Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.
-         * *   If the return result is empty, check whether the StartTime and EndTime parameters meet the UTC format. If the parameters meet the UTC format, no slow logs are generated within the specified time range.
+         * *   If the return result is empty, check whether the StartTime and EndTime parameters are in UTC. If yes, no slow logs are generated within the specified time range.
+         * *   Starting from December 13, 2023, the optimized template algorithm is used for slow queries. As a result, different **SQLHash** values are generated for the same SQLText before and after optimization. For more information, see [[Notice\\] Optimization of the template algorithm for slow queries](~~2637024~~).
          *
          * @param request DescribeSlowLogsRequest
          * @return DescribeSlowLogsResponse
@@ -31690,12 +32122,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Queries the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance.
+         * @summary Queries the check report for a major engine version upgrade of an ApsaraDB RDS for MySQL instance or ApsaraDB RDS for PostgreSQL instance.
          *
          * @description ### [](#)Supported database engines
+         * MySQL
          * PostgreSQL
          * ### [](#)References
-         * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+         * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+         * *   [Check report for the major engine version upgrade of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/2794383.html)
          * *   [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/203309.html)
          * *   [Introduction to the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/218391.html)
          *
@@ -31763,12 +32197,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Queries the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance.
+         * @summary Queries the check report for a major engine version upgrade of an ApsaraDB RDS for MySQL instance or ApsaraDB RDS for PostgreSQL instance.
          *
          * @description ### [](#)Supported database engines
+         * MySQL
          * PostgreSQL
          * ### [](#)References
-         * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+         * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+         * *   [Check report for the major engine version upgrade of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/2794383.html)
          * *   [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/203309.html)
          * *   [Introduction to the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/218391.html)
          *
@@ -31836,12 +32272,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Queries the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance.
+         * @summary Queries the check report for a major engine version upgrade of an ApsaraDB RDS for MySQL instance or ApsaraDB RDS for PostgreSQL instance.
          *
          * @description ### [](#)Supported database engines
+         * MySQL
          * PostgreSQL
          * ### [](#)References
-         * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+         * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+         * *   [Check report for the major engine version upgrade of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/2794383.html)
          * *   [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/203309.html)
          * *   [Introduction to the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/218391.html)
          *
@@ -31855,12 +32293,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-         * @summary Queries the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance.
+         * @summary Queries the check report for a major engine version upgrade of an ApsaraDB RDS for MySQL instance or ApsaraDB RDS for PostgreSQL instance.
          *
          * @description ### [](#)Supported database engines
+         * MySQL
          * PostgreSQL
          * ### [](#)References
-         * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+         * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+         * *   [Check report for the major engine version upgrade of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/2794383.html)
          * *   [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/203309.html)
          * *   [Introduction to the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/218391.html)
          *
@@ -40155,6 +40595,170 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceSSLWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 修改实例主机安全组规则
+         *
+         * @param request ModifyDBInstanceSecurityGroupRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceSecurityGroupRuleResponse
+         */
+        public ModifyDBInstanceSecurityGroupRuleResponse ModifyDBInstanceSecurityGroupRuleWithOptions(ModifyDBInstanceSecurityGroupRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpProtocol))
+            {
+                query["IpProtocol"] = request.IpProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortRange))
+            {
+                query["PortRange"] = request.PortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupRuleId))
+            {
+                query["SecurityGroupRuleId"] = request.SecurityGroupRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCidrIp))
+            {
+                query["SourceCidrIp"] = request.SourceCidrIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBInstanceSecurityGroupRule",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBInstanceSecurityGroupRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改实例主机安全组规则
+         *
+         * @param request ModifyDBInstanceSecurityGroupRuleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ModifyDBInstanceSecurityGroupRuleResponse
+         */
+        public async Task<ModifyDBInstanceSecurityGroupRuleResponse> ModifyDBInstanceSecurityGroupRuleWithOptionsAsync(ModifyDBInstanceSecurityGroupRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpProtocol))
+            {
+                query["IpProtocol"] = request.IpProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortRange))
+            {
+                query["PortRange"] = request.PortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupRuleId))
+            {
+                query["SecurityGroupRuleId"] = request.SecurityGroupRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCidrIp))
+            {
+                query["SourceCidrIp"] = request.SourceCidrIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBInstanceSecurityGroupRule",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBInstanceSecurityGroupRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 修改实例主机安全组规则
+         *
+         * @param request ModifyDBInstanceSecurityGroupRuleRequest
+         * @return ModifyDBInstanceSecurityGroupRuleResponse
+         */
+        public ModifyDBInstanceSecurityGroupRuleResponse ModifyDBInstanceSecurityGroupRule(ModifyDBInstanceSecurityGroupRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDBInstanceSecurityGroupRuleWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 修改实例主机安全组规则
+         *
+         * @param request ModifyDBInstanceSecurityGroupRuleRequest
+         * @return ModifyDBInstanceSecurityGroupRuleResponse
+         */
+        public async Task<ModifyDBInstanceSecurityGroupRuleResponse> ModifyDBInstanceSecurityGroupRuleAsync(ModifyDBInstanceSecurityGroupRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDBInstanceSecurityGroupRuleWithOptionsAsync(request, runtime);
         }
 
         /**
