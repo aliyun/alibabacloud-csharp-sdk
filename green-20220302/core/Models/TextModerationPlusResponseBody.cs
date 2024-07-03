@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             }
 
+            [NameInMap("RiskLevel")]
+            [Validation(Required=false)]
+            public string RiskLevel { get; set; }
+
             [NameInMap("Score")]
             [Validation(Required=false)]
             public float? Score { get; set; }

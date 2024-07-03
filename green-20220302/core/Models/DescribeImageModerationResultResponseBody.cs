@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             }
 
+            [NameInMap("RiskLevel")]
+            [Validation(Required=false)]
+            public string RiskLevel { get; set; }
+
         }
 
         [NameInMap("Msg")]
