@@ -70,12 +70,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthCheckInterval { get; set; }
 
         /// <summary>
-        /// The health check method used in HTTP health checks. Valid values:
+        /// The HTTP request method for health checks. Examples:
         /// 
         /// *   **head**
         /// *   **get**
         /// 
-        /// >  This parameter takes effect only if you set HealthCheck to on.
+        /// >  This parameter takes effect only if the HealthCheck parameter is set to on.
         /// </summary>
         [NameInMap("HealthCheckMethod")]
         [Validation(Required=false)]
@@ -88,11 +88,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// *   Valid values: **1** to **300**.
         /// *   Unit: seconds.
         /// 
-        /// > 
-        /// 
-        /// *   This parameter takes effect only if you set HealthCheck to on.
-        /// 
-        /// *   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+        /// > *   This parameter takes effect only if you set HealthCheck to on.
+        /// >*   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
         /// </summary>
         [NameInMap("HealthCheckTimeout")]
         [Validation(Required=false)]
@@ -101,11 +98,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// The Uniform Resource Identifier (URI) that is used for health checks. The URI must be **1** to **80** characters in length.
         /// 
-        /// > 
-        /// 
-        /// *   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
-        /// 
-        /// *   This parameter takes effect only if you set HealthCheck to on.
+        /// > *   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
+        /// >*   This parameter takes effect only if you set HealthCheck to on.
         /// </summary>
         [NameInMap("HealthCheckURI")]
         [Validation(Required=false)]
@@ -157,14 +151,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? RequestTimeout { get; set; }
 
         /// <summary>
-        /// The routing algorithm. Valid values:
+        /// The scheduling algorithm. Examples:
         /// 
         /// *   **wrr**: Backend servers with higher weights receive more requests than those with lower weights.
-        /// *   **wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections to a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.
+        /// *   **wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.
         /// *   **rr**: Requests are distributed to backend servers in sequence.
-        /// *   **sch**: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.
-        /// *   **qch**: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.
-        /// *   **iqch**: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.
+        /// *   **sch**: Consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.
+        /// *   **qch**: Consistent hashing based on Quick UDP Internet Connection (QUIC) IDs. Requests that contain the same QUIC ID are scheduled to the same backend server.
+        /// *   **iqch**: Consistent hashing based on three specific bytes of iQUIC CID. Requests with the same second, third, and forth bytes are scheduled to the same backend server.
         /// </summary>
         [NameInMap("Scheduler")]
         [Validation(Required=false)]
@@ -179,6 +173,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? UnhealthyThreshold { get; set; }
 
+        /// <summary>
+        /// Specifies whether to use the X-Forwarded-For header to obtain the real IP address of the client. Valid values:
+        /// 
+        /// *   **on**
+        /// *   **off** (default)
+        /// </summary>
         [NameInMap("XForwardedFor")]
         [Validation(Required=false)]
         public string XForwardedFor { get; set; }

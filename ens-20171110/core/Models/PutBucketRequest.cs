@@ -36,6 +36,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Comment { get; set; }
 
+        /// <summary>
+        /// Scheduling Scope, this parameter is only effective for globally scheduled Buckets.
+        /// 
+        /// - domestic
+        /// 
+        /// - oversea
+        /// </summary>
         [NameInMap("DispatchScope")]
         [Validation(Required=false)]
         public string DispatchScope { get; set; }

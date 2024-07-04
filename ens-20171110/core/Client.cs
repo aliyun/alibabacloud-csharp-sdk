@@ -5890,6 +5890,110 @@ namespace AlibabaCloud.SDK.Ens20171110
         }
 
         /**
+         * @summary Creates a storage gateway.
+         *
+         * @param tmpReq CreateStorageGatewayRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateStorageGatewayResponse
+         */
+        public CreateStorageGatewayResponse CreateStorageGatewayWithOptions(CreateStorageGatewayRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateStorageGatewayShrinkRequest request = new CreateStorageGatewayShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OrderDetails))
+            {
+                request.OrderDetailsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OrderDetails, "OrderDetails", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDetailsShrink))
+            {
+                query["OrderDetails"] = request.OrderDetailsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateStorageGateway",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateStorageGatewayResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Creates a storage gateway.
+         *
+         * @param tmpReq CreateStorageGatewayRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateStorageGatewayResponse
+         */
+        public async Task<CreateStorageGatewayResponse> CreateStorageGatewayWithOptionsAsync(CreateStorageGatewayRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateStorageGatewayShrinkRequest request = new CreateStorageGatewayShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OrderDetails))
+            {
+                request.OrderDetailsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OrderDetails, "OrderDetails", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDetailsShrink))
+            {
+                query["OrderDetails"] = request.OrderDetailsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateStorageGateway",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateStorageGatewayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Creates a storage gateway.
+         *
+         * @param request CreateStorageGatewayRequest
+         * @return CreateStorageGatewayResponse
+         */
+        public CreateStorageGatewayResponse CreateStorageGateway(CreateStorageGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateStorageGatewayWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Creates a storage gateway.
+         *
+         * @param request CreateStorageGatewayRequest
+         * @return CreateStorageGatewayResponse
+         */
+        public async Task<CreateStorageGatewayResponse> CreateStorageGatewayAsync(CreateStorageGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateStorageGatewayWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary Creates a vSwitch.
          *
          * @param request CreateVSwitchRequest
@@ -8531,6 +8635,98 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSnatIpForSnatEntryWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Deletes a storage gateway.
+         *
+         * @param request DeleteStorageGatewayRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteStorageGatewayResponse
+         */
+        public DeleteStorageGatewayResponse DeleteStorageGatewayWithOptions(DeleteStorageGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["GatewayId"] = request.GatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteStorageGateway",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteStorageGatewayResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary Deletes a storage gateway.
+         *
+         * @param request DeleteStorageGatewayRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteStorageGatewayResponse
+         */
+        public async Task<DeleteStorageGatewayResponse> DeleteStorageGatewayWithOptionsAsync(DeleteStorageGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["GatewayId"] = request.GatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteStorageGateway",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteStorageGatewayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary Deletes a storage gateway.
+         *
+         * @param request DeleteStorageGatewayRequest
+         * @return DeleteStorageGatewayResponse
+         */
+        public DeleteStorageGatewayResponse DeleteStorageGateway(DeleteStorageGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteStorageGatewayWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary Deletes a storage gateway.
+         *
+         * @param request DeleteStorageGatewayRequest
+         * @return DeleteStorageGatewayResponse
+         */
+        public async Task<DeleteStorageGatewayResponse> DeleteStorageGatewayAsync(DeleteStorageGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteStorageGatewayWithOptionsAsync(request, runtime);
         }
 
         /**
