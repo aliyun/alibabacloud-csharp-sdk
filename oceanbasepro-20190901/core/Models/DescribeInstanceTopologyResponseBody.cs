@@ -339,82 +339,44 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     /// </summary>
                     [NameInMap("NodeResource")]
                     [Validation(Required=false)]
-                    public List<DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource> NodeResource { get; set; }
+                    public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource NodeResource { get; set; }
                     public class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource : TeaModel {
-                        /// <summary>
-                        /// The memory size of the tenant, in GB.
-                        /// </summary>
                         [NameInMap("Cpu")]
                         [Validation(Required=false)]
                         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceCpu Cpu { get; set; }
                         public class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceCpu : TeaModel {
-                            /// <summary>
-                            /// The size of used storage space of the node, in GB.
-                            /// </summary>
                             [NameInMap("TotalCpu")]
                             [Validation(Required=false)]
                             public int? TotalCpu { get; set; }
 
-                            /// <summary>
-                            /// Indicates whether migration can be performed.
-                            /// </summary>
                             [NameInMap("UsedCpu")]
                             [Validation(Required=false)]
                             public float? UsedCpu { get; set; }
 
                         }
 
-                        /// <summary>
-                        /// The information about the CPU resources of the node.
-                        /// </summary>
                         [NameInMap("DiskSize")]
                         [Validation(Required=false)]
                         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize DiskSize { get; set; }
                         public class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize : TeaModel {
-                            /// <summary>
-                            /// The deployment type of the primary zone.
-                            /// </summary>
                             [NameInMap("TotalDiskSize")]
                             [Validation(Required=false)]
                             public double? TotalDiskSize { get; set; }
 
-                            /// <summary>
-                            /// The status of the tenant.   
-                            /// - PENDING_CREATE: The tenant is being created.   
-                            /// - RESTORE: The tenant is being recovered.   
-                            /// - ONLINE: The tenant is running.   
-                            /// - SPEC_MODIFYING: The specification of the tenant is being modified.   
-                            /// - ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.   
-                            /// - PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.   
-                            /// - PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.   
-                            /// - PARAMETER_MODIFYING: Parameters are being modified.   
-                            /// - WHITE_LIST_MODIFYING: The whitelist is being modified.
-                            /// </summary>
                             [NameInMap("UsedDiskSize")]
                             [Validation(Required=false)]
                             public double? UsedDiskSize { get; set; }
 
                         }
 
-                        /// <summary>
-                        /// The role to access the zone. Valid values:   
-                        ///  - ReadWrite: a role that has the read and write privileges.
-                        ///  - ReadOnly: a role that has only the read-only privilege.
-                        /// </summary>
                         [NameInMap("Memory")]
                         [Validation(Required=false)]
                         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceMemory Memory { get; set; }
                         public class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceMemory : TeaModel {
-                            /// <summary>
-                            /// The ID of the replica node.
-                            /// </summary>
                             [NameInMap("TotalMemory")]
                             [Validation(Required=false)]
                             public long? TotalMemory { get; set; }
 
-                            /// <summary>
-                            /// The information of node resources.
-                            /// </summary>
                             [NameInMap("UsedMemory")]
                             [Validation(Required=false)]
                             public float? UsedMemory { get; set; }
