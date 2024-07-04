@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
     public class DeleteNetworkPathRequest : TeaModel {
         /// <summary>
         /// The IDs of network paths.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkPathIds")]
         [Validation(Required=false)]

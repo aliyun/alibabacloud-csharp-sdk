@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 
         /// <summary>
         /// The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
@@ -58,6 +60,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// 
         /// *   **in**: traffic from a data center to Alibaba Cloud
         /// *   **out**: traffic from Alibaba Cloud to a data center
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
@@ -65,6 +69,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 
         /// <summary>
         /// The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -79,6 +85,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// *   **CloudPort**: queries the rankings of hybrid cloud traffic data for the local ports.
         /// *   **OtherPort**: queries the rankings of hybrid cloud traffic data for the remote ports.
         /// *   **Protocol**: queries the rankings of hybrid cloud traffic data for the protocols.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupBy")]
         [Validation(Required=false)]
@@ -118,6 +126,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 
         /// <summary>
         /// The local region.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

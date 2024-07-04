@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
     public class DeleteNetworkReachableAnalysisShrinkRequest : TeaModel {
         /// <summary>
         /// The IDs of the tasks for analyzing network reachability.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkReachableAnalysisIds")]
         [Validation(Required=false)]

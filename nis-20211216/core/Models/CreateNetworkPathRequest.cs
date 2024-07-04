@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 
         /// <summary>
         /// The name of the network path.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkPathName")]
         [Validation(Required=false)]
@@ -50,6 +52,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 
         /// <summary>
         /// The ID of the source resource.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceId")]
         [Validation(Required=false)]
@@ -77,6 +81,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// *   **vsw**: the vSwitch
         /// *   **vpn**: the VPN gateway
         /// *   **vbr**: the virtual border router (VBR)
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]

@@ -38,11 +38,13 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
-          *
-          * @param request CreateAndAnalyzeNetworkPathRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateAndAnalyzeNetworkPathResponse
+         * @summary Initiates a task for analyzing network reachability.
+         *
+         * @description You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
+         *
+         * @param request CreateAndAnalyzeNetworkPathRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAndAnalyzeNetworkPathResponse
          */
         public CreateAndAnalyzeNetworkPathResponse CreateAndAnalyzeNetworkPathWithOptions(CreateAndAnalyzeNetworkPathRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -68,11 +70,13 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
-          *
-          * @param request CreateAndAnalyzeNetworkPathRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateAndAnalyzeNetworkPathResponse
+         * @summary Initiates a task for analyzing network reachability.
+         *
+         * @description You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
+         *
+         * @param request CreateAndAnalyzeNetworkPathRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateAndAnalyzeNetworkPathResponse
          */
         public async Task<CreateAndAnalyzeNetworkPathResponse> CreateAndAnalyzeNetworkPathWithOptionsAsync(CreateAndAnalyzeNetworkPathRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -98,10 +102,12 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
-          *
-          * @param request CreateAndAnalyzeNetworkPathRequest
-          * @return CreateAndAnalyzeNetworkPathResponse
+         * @summary Initiates a task for analyzing network reachability.
+         *
+         * @description You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
+         *
+         * @param request CreateAndAnalyzeNetworkPathRequest
+         * @return CreateAndAnalyzeNetworkPathResponse
          */
         public CreateAndAnalyzeNetworkPathResponse CreateAndAnalyzeNetworkPath(CreateAndAnalyzeNetworkPathRequest request)
         {
@@ -110,10 +116,12 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
-          *
-          * @param request CreateAndAnalyzeNetworkPathRequest
-          * @return CreateAndAnalyzeNetworkPathResponse
+         * @summary Initiates a task for analyzing network reachability.
+         *
+         * @description You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
+         *
+         * @param request CreateAndAnalyzeNetworkPathRequest
+         * @return CreateAndAnalyzeNetworkPathResponse
          */
         public async Task<CreateAndAnalyzeNetworkPathResponse> CreateAndAnalyzeNetworkPathAsync(CreateAndAnalyzeNetworkPathRequest request)
         {
@@ -122,12 +130,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
-          * *   You can create up to 100 network paths within one Alibaba Cloud account.
-          *
-          * @param request CreateNetworkPathRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateNetworkPathResponse
+         * @summary Creates a network path in the cloud for reachability analysis.
+         *
+         * @description *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
+         * *   You can create up to 100 network paths within one Alibaba Cloud account.
+         *
+         * @param request CreateNetworkPathRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateNetworkPathResponse
          */
         public CreateNetworkPathResponse CreateNetworkPathWithOptions(CreateNetworkPathRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -209,12 +219,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
-          * *   You can create up to 100 network paths within one Alibaba Cloud account.
-          *
-          * @param request CreateNetworkPathRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateNetworkPathResponse
+         * @summary Creates a network path in the cloud for reachability analysis.
+         *
+         * @description *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
+         * *   You can create up to 100 network paths within one Alibaba Cloud account.
+         *
+         * @param request CreateNetworkPathRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateNetworkPathResponse
          */
         public async Task<CreateNetworkPathResponse> CreateNetworkPathWithOptionsAsync(CreateNetworkPathRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -296,11 +308,13 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
-          * *   You can create up to 100 network paths within one Alibaba Cloud account.
-          *
-          * @param request CreateNetworkPathRequest
-          * @return CreateNetworkPathResponse
+         * @summary Creates a network path in the cloud for reachability analysis.
+         *
+         * @description *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
+         * *   You can create up to 100 network paths within one Alibaba Cloud account.
+         *
+         * @param request CreateNetworkPathRequest
+         * @return CreateNetworkPathResponse
          */
         public CreateNetworkPathResponse CreateNetworkPath(CreateNetworkPathRequest request)
         {
@@ -309,11 +323,13 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
-          * *   You can create up to 100 network paths within one Alibaba Cloud account.
-          *
-          * @param request CreateNetworkPathRequest
-          * @return CreateNetworkPathResponse
+         * @summary Creates a network path in the cloud for reachability analysis.
+         *
+         * @description *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
+         * *   You can create up to 100 network paths within one Alibaba Cloud account.
+         *
+         * @param request CreateNetworkPathRequest
+         * @return CreateNetworkPathResponse
          */
         public async Task<CreateNetworkPathResponse> CreateNetworkPathAsync(CreateNetworkPathRequest request)
         {
@@ -322,13 +338,15 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
-          * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
-          * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
-          *
-          * @param request CreateNetworkReachableAnalysisRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateNetworkReachableAnalysisResponse
+         * @summary Creates a task for analyzing network reachability.
+         *
+         * @description *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
+         * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
+         * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
+         *
+         * @param request CreateNetworkReachableAnalysisRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateNetworkReachableAnalysisResponse
          */
         public CreateNetworkReachableAnalysisResponse CreateNetworkReachableAnalysisWithOptions(CreateNetworkReachableAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -366,13 +384,15 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
-          * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
-          * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
-          *
-          * @param request CreateNetworkReachableAnalysisRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateNetworkReachableAnalysisResponse
+         * @summary Creates a task for analyzing network reachability.
+         *
+         * @description *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
+         * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
+         * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
+         *
+         * @param request CreateNetworkReachableAnalysisRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return CreateNetworkReachableAnalysisResponse
          */
         public async Task<CreateNetworkReachableAnalysisResponse> CreateNetworkReachableAnalysisWithOptionsAsync(CreateNetworkReachableAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -410,12 +430,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
-          * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
-          * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
-          *
-          * @param request CreateNetworkReachableAnalysisRequest
-          * @return CreateNetworkReachableAnalysisResponse
+         * @summary Creates a task for analyzing network reachability.
+         *
+         * @description *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
+         * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
+         * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
+         *
+         * @param request CreateNetworkReachableAnalysisRequest
+         * @return CreateNetworkReachableAnalysisResponse
          */
         public CreateNetworkReachableAnalysisResponse CreateNetworkReachableAnalysis(CreateNetworkReachableAnalysisRequest request)
         {
@@ -424,12 +446,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
-          * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
-          * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
-          *
-          * @param request CreateNetworkReachableAnalysisRequest
-          * @return CreateNetworkReachableAnalysisResponse
+         * @summary Creates a task for analyzing network reachability.
+         *
+         * @description *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
+         * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
+         * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
+         *
+         * @param request CreateNetworkReachableAnalysisRequest
+         * @return CreateNetworkReachableAnalysisResponse
          */
         public async Task<CreateNetworkReachableAnalysisResponse> CreateNetworkReachableAnalysisAsync(CreateNetworkReachableAnalysisRequest request)
         {
@@ -437,6 +461,13 @@ namespace AlibabaCloud.SDK.Nis20211216
             return await CreateNetworkReachableAnalysisWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a network path.
+         *
+         * @param tmpReq DeleteNetworkPathRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNetworkPathResponse
+         */
         public DeleteNetworkPathResponse DeleteNetworkPathWithOptions(DeleteNetworkPathRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -474,6 +505,13 @@ namespace AlibabaCloud.SDK.Nis20211216
             return TeaModel.ToObject<DeleteNetworkPathResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a network path.
+         *
+         * @param tmpReq DeleteNetworkPathRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNetworkPathResponse
+         */
         public async Task<DeleteNetworkPathResponse> DeleteNetworkPathWithOptionsAsync(DeleteNetworkPathRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -511,18 +549,37 @@ namespace AlibabaCloud.SDK.Nis20211216
             return TeaModel.ToObject<DeleteNetworkPathResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a network path.
+         *
+         * @param request DeleteNetworkPathRequest
+         * @return DeleteNetworkPathResponse
+         */
         public DeleteNetworkPathResponse DeleteNetworkPath(DeleteNetworkPathRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNetworkPathWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a network path.
+         *
+         * @param request DeleteNetworkPathRequest
+         * @return DeleteNetworkPathResponse
+         */
         public async Task<DeleteNetworkPathResponse> DeleteNetworkPathAsync(DeleteNetworkPathRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNetworkPathWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Deletes a task for analyzing network reachability.
+         *
+         * @param tmpReq DeleteNetworkReachableAnalysisRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNetworkReachableAnalysisResponse
+         */
         public DeleteNetworkReachableAnalysisResponse DeleteNetworkReachableAnalysisWithOptions(DeleteNetworkReachableAnalysisRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -560,6 +617,13 @@ namespace AlibabaCloud.SDK.Nis20211216
             return TeaModel.ToObject<DeleteNetworkReachableAnalysisResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a task for analyzing network reachability.
+         *
+         * @param tmpReq DeleteNetworkReachableAnalysisRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DeleteNetworkReachableAnalysisResponse
+         */
         public async Task<DeleteNetworkReachableAnalysisResponse> DeleteNetworkReachableAnalysisWithOptionsAsync(DeleteNetworkReachableAnalysisRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -597,18 +661,37 @@ namespace AlibabaCloud.SDK.Nis20211216
             return TeaModel.ToObject<DeleteNetworkReachableAnalysisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Deletes a task for analyzing network reachability.
+         *
+         * @param request DeleteNetworkReachableAnalysisRequest
+         * @return DeleteNetworkReachableAnalysisResponse
+         */
         public DeleteNetworkReachableAnalysisResponse DeleteNetworkReachableAnalysis(DeleteNetworkReachableAnalysisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNetworkReachableAnalysisWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Deletes a task for analyzing network reachability.
+         *
+         * @param request DeleteNetworkReachableAnalysisRequest
+         * @return DeleteNetworkReachableAnalysisResponse
+         */
         public async Task<DeleteNetworkReachableAnalysisResponse> DeleteNetworkReachableAnalysisAsync(DeleteNetworkReachableAnalysisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNetworkReachableAnalysisWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the rankings of Internet traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Internet traffic data can be ranked by metrics such as traffic volumes and the number of packets.
+         *
+         * @param tmpReq GetInternetTupleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetInternetTupleResponse
+         */
         public GetInternetTupleResponse GetInternetTupleWithOptions(GetInternetTupleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -730,6 +813,13 @@ namespace AlibabaCloud.SDK.Nis20211216
             return TeaModel.ToObject<GetInternetTupleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the rankings of Internet traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Internet traffic data can be ranked by metrics such as traffic volumes and the number of packets.
+         *
+         * @param tmpReq GetInternetTupleRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetInternetTupleResponse
+         */
         public async Task<GetInternetTupleResponse> GetInternetTupleWithOptionsAsync(GetInternetTupleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -851,18 +941,37 @@ namespace AlibabaCloud.SDK.Nis20211216
             return TeaModel.ToObject<GetInternetTupleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the rankings of Internet traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Internet traffic data can be ranked by metrics such as traffic volumes and the number of packets.
+         *
+         * @param request GetInternetTupleRequest
+         * @return GetInternetTupleResponse
+         */
         public GetInternetTupleResponse GetInternetTuple(GetInternetTupleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetInternetTupleWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the rankings of Internet traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Internet traffic data can be ranked by metrics such as traffic volumes and the number of packets.
+         *
+         * @param request GetInternetTupleRequest
+         * @return GetInternetTupleResponse
+         */
         public async Task<GetInternetTupleResponse> GetInternetTupleAsync(GetInternetTupleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInternetTupleWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the real-time SNAT performance ranking of a NAT gateway.
+         *
+         * @param request GetNatTopNRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetNatTopNResponse
+         */
         public GetNatTopNResponse GetNatTopNWithOptions(GetNatTopNRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -914,6 +1023,13 @@ namespace AlibabaCloud.SDK.Nis20211216
             return TeaModel.ToObject<GetNatTopNResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the real-time SNAT performance ranking of a NAT gateway.
+         *
+         * @param request GetNatTopNRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetNatTopNResponse
+         */
         public async Task<GetNatTopNResponse> GetNatTopNWithOptionsAsync(GetNatTopNRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -965,12 +1081,24 @@ namespace AlibabaCloud.SDK.Nis20211216
             return TeaModel.ToObject<GetNatTopNResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the real-time SNAT performance ranking of a NAT gateway.
+         *
+         * @param request GetNatTopNRequest
+         * @return GetNatTopNResponse
+         */
         public GetNatTopNResponse GetNatTopN(GetNatTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetNatTopNWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the real-time SNAT performance ranking of a NAT gateway.
+         *
+         * @param request GetNatTopNRequest
+         * @return GetNatTopNResponse
+         */
         public async Task<GetNatTopNResponse> GetNatTopNAsync(GetNatTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -978,13 +1106,15 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
-          * *   The **init** state indicates that the task is in progress.
-          * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
-          *
-          * @param request GetNetworkReachableAnalysisRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetNetworkReachableAnalysisResponse
+         * @summary Obtains the results of network reachability analysis.
+         *
+         * @description **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
+         * *   The **init** state indicates that the task is in progress.
+         * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
+         *
+         * @param request GetNetworkReachableAnalysisRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetNetworkReachableAnalysisResponse
          */
         public GetNetworkReachableAnalysisResponse GetNetworkReachableAnalysisWithOptions(GetNetworkReachableAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1018,13 +1148,15 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
-          * *   The **init** state indicates that the task is in progress.
-          * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
-          *
-          * @param request GetNetworkReachableAnalysisRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetNetworkReachableAnalysisResponse
+         * @summary Obtains the results of network reachability analysis.
+         *
+         * @description **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
+         * *   The **init** state indicates that the task is in progress.
+         * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
+         *
+         * @param request GetNetworkReachableAnalysisRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetNetworkReachableAnalysisResponse
          */
         public async Task<GetNetworkReachableAnalysisResponse> GetNetworkReachableAnalysisWithOptionsAsync(GetNetworkReachableAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1058,12 +1190,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
-          * *   The **init** state indicates that the task is in progress.
-          * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
-          *
-          * @param request GetNetworkReachableAnalysisRequest
-          * @return GetNetworkReachableAnalysisResponse
+         * @summary Obtains the results of network reachability analysis.
+         *
+         * @description **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
+         * *   The **init** state indicates that the task is in progress.
+         * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
+         *
+         * @param request GetNetworkReachableAnalysisRequest
+         * @return GetNetworkReachableAnalysisResponse
          */
         public GetNetworkReachableAnalysisResponse GetNetworkReachableAnalysis(GetNetworkReachableAnalysisRequest request)
         {
@@ -1072,12 +1206,14 @@ namespace AlibabaCloud.SDK.Nis20211216
         }
 
         /**
-          * **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
-          * *   The **init** state indicates that the task is in progress.
-          * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
-          *
-          * @param request GetNetworkReachableAnalysisRequest
-          * @return GetNetworkReachableAnalysisResponse
+         * @summary Obtains the results of network reachability analysis.
+         *
+         * @description **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
+         * *   The **init** state indicates that the task is in progress.
+         * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
+         *
+         * @param request GetNetworkReachableAnalysisRequest
+         * @return GetNetworkReachableAnalysisResponse
          */
         public async Task<GetNetworkReachableAnalysisResponse> GetNetworkReachableAnalysisAsync(GetNetworkReachableAnalysisRequest request)
         {
@@ -1085,6 +1221,373 @@ namespace AlibabaCloud.SDK.Nis20211216
             return await GetNetworkReachableAnalysisWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary 获取云网络指标趋势
+         *
+         * @param tmpReq GetNisNetworkMetricsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetNisNetworkMetricsResponse
+         */
+        public GetNisNetworkMetricsResponse GetNisNetworkMetricsWithOptions(GetNisNetworkMetricsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetNisNetworkMetricsShrinkRequest request = new GetNisNetworkMetricsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Dimensions))
+            {
+                request.DimensionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Dimensions, "Dimensions", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIds))
+            {
+                query["AccountIds"] = request.AccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DimensionsShrink))
+            {
+                query["Dimensions"] = request.DimensionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricName))
+            {
+                query["MetricName"] = request.MetricName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanBy))
+            {
+                query["ScanBy"] = request.ScanBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseCrossAccount))
+            {
+                query["UseCrossAccount"] = request.UseCrossAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNisNetworkMetrics",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNisNetworkMetricsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取云网络指标趋势
+         *
+         * @param tmpReq GetNisNetworkMetricsRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetNisNetworkMetricsResponse
+         */
+        public async Task<GetNisNetworkMetricsResponse> GetNisNetworkMetricsWithOptionsAsync(GetNisNetworkMetricsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetNisNetworkMetricsShrinkRequest request = new GetNisNetworkMetricsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Dimensions))
+            {
+                request.DimensionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Dimensions, "Dimensions", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIds))
+            {
+                query["AccountIds"] = request.AccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DimensionsShrink))
+            {
+                query["Dimensions"] = request.DimensionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricName))
+            {
+                query["MetricName"] = request.MetricName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanBy))
+            {
+                query["ScanBy"] = request.ScanBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseCrossAccount))
+            {
+                query["UseCrossAccount"] = request.UseCrossAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNisNetworkMetrics",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNisNetworkMetricsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取云网络指标趋势
+         *
+         * @param request GetNisNetworkMetricsRequest
+         * @return GetNisNetworkMetricsResponse
+         */
+        public GetNisNetworkMetricsResponse GetNisNetworkMetrics(GetNisNetworkMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetNisNetworkMetricsWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取云网络指标趋势
+         *
+         * @param request GetNisNetworkMetricsRequest
+         * @return GetNisNetworkMetricsResponse
+         */
+        public async Task<GetNisNetworkMetricsResponse> GetNisNetworkMetricsAsync(GetNisNetworkMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetNisNetworkMetricsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 获取云网络指标排名
+         *
+         * @param tmpReq GetNisNetworkRankingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetNisNetworkRankingResponse
+         */
+        public GetNisNetworkRankingResponse GetNisNetworkRankingWithOptions(GetNisNetworkRankingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetNisNetworkRankingShrinkRequest request = new GetNisNetworkRankingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "Filter", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIds))
+            {
+                query["AccountIds"] = request.AccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["Filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
+            {
+                query["GroupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopN))
+            {
+                query["TopN"] = request.TopN;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseCrossAccount))
+            {
+                query["UseCrossAccount"] = request.UseCrossAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNisNetworkRanking",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNisNetworkRankingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取云网络指标排名
+         *
+         * @param tmpReq GetNisNetworkRankingRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetNisNetworkRankingResponse
+         */
+        public async Task<GetNisNetworkRankingResponse> GetNisNetworkRankingWithOptionsAsync(GetNisNetworkRankingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetNisNetworkRankingShrinkRequest request = new GetNisNetworkRankingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "Filter", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIds))
+            {
+                query["AccountIds"] = request.AccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["Filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
+            {
+                query["GroupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopN))
+            {
+                query["TopN"] = request.TopN;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseCrossAccount))
+            {
+                query["UseCrossAccount"] = request.UseCrossAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNisNetworkRanking",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNisNetworkRankingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 获取云网络指标排名
+         *
+         * @param request GetNisNetworkRankingRequest
+         * @return GetNisNetworkRankingResponse
+         */
+        public GetNisNetworkRankingResponse GetNisNetworkRanking(GetNisNetworkRankingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetNisNetworkRankingWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 获取云网络指标排名
+         *
+         * @param request GetNisNetworkRankingRequest
+         * @return GetNisNetworkRankingResponse
+         */
+        public async Task<GetNisNetworkRankingResponse> GetNisNetworkRankingAsync(GetNisNetworkRankingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetNisNetworkRankingWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary Queries the rankings of inter-region traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Inter-region traffic data can be ranked by metrics such as traffic volumes and the number of packets.
+         *
+         * @param tmpReq GetTransitRouterFlowTopNRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTransitRouterFlowTopNResponse
+         */
         public GetTransitRouterFlowTopNResponse GetTransitRouterFlowTopNWithOptions(GetTransitRouterFlowTopNRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1186,6 +1689,13 @@ namespace AlibabaCloud.SDK.Nis20211216
             return TeaModel.ToObject<GetTransitRouterFlowTopNResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the rankings of inter-region traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Inter-region traffic data can be ranked by metrics such as traffic volumes and the number of packets.
+         *
+         * @param tmpReq GetTransitRouterFlowTopNRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetTransitRouterFlowTopNResponse
+         */
         public async Task<GetTransitRouterFlowTopNResponse> GetTransitRouterFlowTopNWithOptionsAsync(GetTransitRouterFlowTopNRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1287,18 +1797,37 @@ namespace AlibabaCloud.SDK.Nis20211216
             return TeaModel.ToObject<GetTransitRouterFlowTopNResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the rankings of inter-region traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Inter-region traffic data can be ranked by metrics such as traffic volumes and the number of packets.
+         *
+         * @param request GetTransitRouterFlowTopNRequest
+         * @return GetTransitRouterFlowTopNResponse
+         */
         public GetTransitRouterFlowTopNResponse GetTransitRouterFlowTopN(GetTransitRouterFlowTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTransitRouterFlowTopNWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the rankings of inter-region traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Inter-region traffic data can be ranked by metrics such as traffic volumes and the number of packets.
+         *
+         * @param request GetTransitRouterFlowTopNRequest
+         * @return GetTransitRouterFlowTopNResponse
+         */
         public async Task<GetTransitRouterFlowTopNResponse> GetTransitRouterFlowTopNAsync(GetTransitRouterFlowTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTransitRouterFlowTopNWithOptionsAsync(request, runtime);
         }
 
+        /**
+         * @summary Queries the rankings of hybrid cloud traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Hybrid cloud traffic data can be ranked by metrics such as traffic volumes and the number of packets.
+         *
+         * @param tmpReq GetVbrFlowTopNRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetVbrFlowTopNResponse
+         */
         public GetVbrFlowTopNResponse GetVbrFlowTopNWithOptions(GetVbrFlowTopNRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1400,6 +1929,13 @@ namespace AlibabaCloud.SDK.Nis20211216
             return TeaModel.ToObject<GetVbrFlowTopNResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the rankings of hybrid cloud traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Hybrid cloud traffic data can be ranked by metrics such as traffic volumes and the number of packets.
+         *
+         * @param tmpReq GetVbrFlowTopNRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return GetVbrFlowTopNResponse
+         */
         public async Task<GetVbrFlowTopNResponse> GetVbrFlowTopNWithOptionsAsync(GetVbrFlowTopNRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1501,12 +2037,24 @@ namespace AlibabaCloud.SDK.Nis20211216
             return TeaModel.ToObject<GetVbrFlowTopNResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+         * @summary Queries the rankings of hybrid cloud traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Hybrid cloud traffic data can be ranked by metrics such as traffic volumes and the number of packets.
+         *
+         * @param request GetVbrFlowTopNRequest
+         * @return GetVbrFlowTopNResponse
+         */
         public GetVbrFlowTopNResponse GetVbrFlowTopN(GetVbrFlowTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetVbrFlowTopNWithOptions(request, runtime);
         }
 
+        /**
+         * @summary Queries the rankings of hybrid cloud traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Hybrid cloud traffic data can be ranked by metrics such as traffic volumes and the number of packets.
+         *
+         * @param request GetVbrFlowTopNRequest
+         * @return GetVbrFlowTopNResponse
+         */
         public async Task<GetVbrFlowTopNResponse> GetVbrFlowTopNAsync(GetVbrFlowTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

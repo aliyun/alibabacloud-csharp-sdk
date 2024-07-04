@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class CreateNetworkReachableAnalysisRequest : TeaModel {
         /// <summary>
-        /// The ID of the network path. You can call the [CreateNetworkPath](~~2366522~~) operation to obtain the ID of the network path.
+        /// The ID of the network path. You can call the [CreateNetworkPath](https://help.aliyun.com/document_detail/2366522.html) operation to obtain the ID of the network path.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkPathId")]
         [Validation(Required=false)]

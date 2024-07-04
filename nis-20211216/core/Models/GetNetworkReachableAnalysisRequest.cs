@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
     public class GetNetworkReachableAnalysisRequest : TeaModel {
         /// <summary>
         /// The ID of the task for analyzing network reachability. You can call the **CreateNetworkRearchableAnalysis** operation to obtain the ID of the task for analyzing network reachability.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NetworkReachableAnalysisId")]
         [Validation(Required=false)]

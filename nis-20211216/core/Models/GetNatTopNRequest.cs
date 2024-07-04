@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
     public class GetNatTopNRequest : TeaModel {
         /// <summary>
         /// The beginning of the time range to query in milliseconds. If you do not specify **EndTime**, the point in time specified by **BeginTime** is queried.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 
         /// <summary>
         /// The ID of the NAT gateway.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]

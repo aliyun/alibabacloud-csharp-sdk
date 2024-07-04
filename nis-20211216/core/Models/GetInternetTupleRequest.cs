@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 
         /// <summary>
         /// The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
@@ -60,6 +62,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// 
         /// *   **in**: inbound
         /// *   **out**: outbound
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
@@ -67,6 +71,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 
         /// <summary>
         /// The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -94,19 +100,6 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// *   Rtt
         /// *   ByteCount
         /// *   PacketCount
-        /// *   InByteCount
-        /// *   OutByteCount
-        /// *   InPacketCount
-        /// *   OutPacketCount
-        /// *   InRetranCount
-        /// *   OutRetranCount
-        /// *   InDupAckCount
-        /// *   OutDupAckCount
-        /// *   InOutOrderCount
-        /// *   OutOutOrderCount
-        /// *   RetranCount
-        /// *   OutOrderCount
-        /// *   DupAckCount
         /// *   RetransmitRate
         /// </summary>
         [NameInMap("OrderBy")]
@@ -169,6 +162,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 
         /// <summary>
         /// The ID of the region for which you want to query the Internet traffic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -197,6 +192,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// *   **1**: 1-tuple
         /// *   **2**: 2-tuple
         /// *   **5**: 5-tuple
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TupleType")]
         [Validation(Required=false)]

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class DeleteNetworkPathResponseBody : TeaModel {
+        /// <summary>
+        /// Result of operation.
+        /// 
+        /// - **true**: Delete Success.
+        /// - **false**: Delete Fail.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }

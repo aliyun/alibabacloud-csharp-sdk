@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 
         /// <summary>
         /// The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// 
         /// *   **in**: inbound traffic
         /// *   **out**: outbound traffic
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
@@ -49,6 +53,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 
         /// <summary>
         /// The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -64,6 +70,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// *   **RegionPair**: queries the rankings of inter-region traffic data for the local and remote regions.
         /// *   **Port**: queries the rankings of inter-region traffic data for the local and remote ports.
         /// *   **Protocol**: queries the rankings of inter-region traffic data for the protocols.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("GroupBy")]
         [Validation(Required=false)]
