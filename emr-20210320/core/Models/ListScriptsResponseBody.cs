@@ -30,93 +30,109 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The scripts.
+        /// </summary>
         [NameInMap("Scripts")]
         [Validation(Required=false)]
         public List<ListScriptsResponseBodyScripts> Scripts { get; set; }
         public class ListScriptsResponseBodyScripts : TeaModel {
             /// <summary>
-            /// API名称。
+            /// The name of the API operation.
             /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
             /// <summary>
-            /// 结束执行时间。
+            /// The time when the system finishes the running of the script. This parameter is returned only if the ScriptType parameter is set to NORMAL.
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// 执行失败策略。
+            /// The policy that is used to handle execution failures of the script. Valid values:
+            /// 
+            /// *   FAILED_CONTINUE
+            /// *   FAILED_BLOCK
             /// </summary>
             [NameInMap("ExecutionFailStrategy")]
             [Validation(Required=false)]
             public string ExecutionFailStrategy { get; set; }
 
             /// <summary>
-            /// 执行时机。
+            /// The time based on which the system runs the script. Valid values:
+            /// 
+            /// *   BEFORE_INSTALL
+            /// *   AFTER_STARTED
             /// </summary>
             [NameInMap("ExecutionMoment")]
             [Validation(Required=false)]
             public string ExecutionMoment { get; set; }
 
+            /// <summary>
+            /// The status of the script. This parameter is returned only if the `ScriptType` parameter is set to `NORMAL`. Valid values:
+            /// 
+            /// *   SCRIPT_COMPLETED
+            /// *   SCRIPT_SUBMISSION_FAILED
+            /// *   SCRIPT_RUNNING
+            /// </summary>
             [NameInMap("ExecutionState")]
             [Validation(Required=false)]
             public string ExecutionState { get; set; }
 
             /// <summary>
-            /// 最近一次编辑时间。
+            /// The time when the script was last modified.
             /// </summary>
             [NameInMap("LastUpdateTime")]
             [Validation(Required=false)]
             public long? LastUpdateTime { get; set; }
 
             /// <summary>
-            /// 节点选择器。
+            /// The node selector.
             /// </summary>
             [NameInMap("NodeSelector")]
             [Validation(Required=false)]
             public NodeSelector NodeSelector { get; set; }
 
             /// <summary>
-            /// 区域ID。
+            /// The region ID.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// 集群脚本执行参数。
+            /// The runtime parameters of the script.
             /// </summary>
             [NameInMap("ScriptArgs")]
             [Validation(Required=false)]
             public string ScriptArgs { get; set; }
 
             /// <summary>
-            /// 脚本ID。
+            /// The script ID.
             /// </summary>
             [NameInMap("ScriptId")]
             [Validation(Required=false)]
             public string ScriptId { get; set; }
 
             /// <summary>
-            /// 集群脚本名称。
+            /// The name of the script.
             /// </summary>
             [NameInMap("ScriptName")]
             [Validation(Required=false)]
             public string ScriptName { get; set; }
 
             /// <summary>
-            /// 集群脚本路径。
+            /// The path in which the script is stored.
             /// </summary>
             [NameInMap("ScriptPath")]
             [Validation(Required=false)]
             public string ScriptPath { get; set; }
 
             /// <summary>
-            /// 开始执行时间。
+            /// The time when the system starts to run the script. This parameter is returned only if the ScriptType parameter is set to NORMAL.
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]

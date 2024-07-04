@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListInstanceTypesResponseBody : TeaModel {
+        /// <summary>
+        /// The instance types.
+        /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         public List<InstanceType> InstanceTypes { get; set; }

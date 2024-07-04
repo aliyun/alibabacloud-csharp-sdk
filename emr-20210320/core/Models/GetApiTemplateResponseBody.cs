@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetApiTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// The content of the API operation template.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         [Obsolete]

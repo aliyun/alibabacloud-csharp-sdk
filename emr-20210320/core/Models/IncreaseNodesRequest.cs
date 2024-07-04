@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public bool? AutoPayOrder { get; set; }
 
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
         /// <summary>
         /// The ID of the cluster.
         /// 
@@ -46,6 +50,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public int? IncreaseNodeCount { get; set; }
 
+        /// <summary>
+        /// The minimum number of nodes that can be added. Valid values: 1 to 500.
+        /// 
+        /// *   If you configure this parameter, and the number of available Elastic Compute Service (ECS) instances is less than the value of the IncreaseNodeCount parameter, the system tries to add nodes based on the number specified by the `MinIncreaseNodeCount` parameter. If the minimum number of nodes are added, the scale-out status is `PARTIAL_COMPLETED`.
+        /// *   If you do not configure this parameter, and the number of available ECS instances is less than the value of the IncreaseNodeCount parameter, the scale-out process fails. The scale-out status is `FAILED`.
+        /// </summary>
         [NameInMap("MinIncreaseNodeCount")]
         [Validation(Required=false)]
         public int? MinIncreaseNodeCount { get; set; }

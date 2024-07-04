@@ -79,6 +79,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeId { get; set; }
 
         /// <summary>
+        /// Specifies whether to refresh the configurations.
+        /// </summary>
+        [NameInMap("RefreshConfig")]
+        [Validation(Required=false)]
+        public bool? RefreshConfig { get; set; }
+
+        /// <summary>
         /// The region ID.
         /// 
         /// This parameter is required.

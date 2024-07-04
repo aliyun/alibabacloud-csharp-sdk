@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListClustersResponseBody : TeaModel {
         /// <summary>
-        /// The list of clusters.
+        /// The clusters.
         /// </summary>
         [NameInMap("Clusters")]
         [Validation(Required=false)]

@@ -61,34 +61,6 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <summary>
         /// The region ID.
         /// 
-        /// Valid values:
-        /// 
-        /// *   cn-qingdao
-        /// *   cn-beijing
-        /// *   cn-zhangjiakou
-        /// *   cn-huhehaote
-        /// *   cn-hangzhou
-        /// *   cn-shanghai
-        /// *   cn-shenzhen
-        /// *   cn-chengdu
-        /// *   cn-hongkong
-        /// *   cn-wulanchabu
-        /// *   cn-heyuan-acdr-1
-        /// *   cn-qingdao-acdr-ut-1
-        /// *   ap-northeast-1
-        /// *   ap-southeast-1
-        /// *   ap-southeast-2
-        /// *   ap-southeast-3
-        /// *   ap-southeast-5
-        /// *   ap-south-1
-        /// *   us-east-1
-        /// *   us-west-1
-        /// *   me-east-1
-        /// *   me-central-1
-        /// *   eu-central-1
-        /// *   eu-west-1
-        /// *   cn-north-2-gov-1
-        /// 
         /// This parameter is required.
         /// </summary>
         [NameInMap("RegionId")]

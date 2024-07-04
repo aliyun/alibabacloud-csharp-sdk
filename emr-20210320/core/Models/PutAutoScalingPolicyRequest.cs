@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 最大最小值约束。
+        /// The maximum and minimum numbers of nodes in a node group.
         /// </summary>
         [NameInMap("Constraints")]
         [Validation(Required=false)]
@@ -44,8 +44,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 弹性伸缩规则描述列表。
-        /// <p>
+        /// The auto scaling rules. Number of elements in the array: 0 to 100.
         /// </summary>
         [NameInMap("ScalingRules")]
         [Validation(Required=false)]

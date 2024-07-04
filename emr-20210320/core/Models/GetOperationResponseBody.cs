@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetOperationResponseBody : TeaModel {
         /// <summary>
-        /// The operation that is performed.
+        /// The operation that was performed.
         /// </summary>
         [NameInMap("Operation")]
         [Validation(Required=false)]

@@ -8,20 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class GetClusterResponseBody : TeaModel {
+    public class CreateScriptResponseBody : TeaModel {
         /// <summary>
-        /// The details of the cluster.
-        /// </summary>
-        [NameInMap("Cluster")]
-        [Validation(Required=false)]
-        public Cluster Cluster { get; set; }
-
-        /// <summary>
-        /// The ID of the request.
+        /// 请求ID。
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("ScriptId")]
+        [Validation(Required=false)]
+        public string ScriptId { get; set; }
 
     }
 

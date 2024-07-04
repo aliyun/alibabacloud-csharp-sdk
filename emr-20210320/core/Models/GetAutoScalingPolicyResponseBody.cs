@@ -68,17 +68,17 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ScalingPolicyId { get; set; }
 
             /// <summary>
-            /// The scaling rules.
+            /// The auto scaling rules.
             /// </summary>
             [NameInMap("ScalingRules")]
             [Validation(Required=false)]
             public List<GetAutoScalingPolicyResponseBodyScalingPolicyScalingRules> ScalingRules { get; set; }
             public class GetAutoScalingPolicyResponseBodyScalingPolicyScalingRules : TeaModel {
                 /// <summary>
-                /// The type of the scaling activity. Valid values:
+                /// The scaling type. Valid values:
                 /// 
-                /// *   SCALE_OUT: scale-out rules
-                /// *   SCALE_IN: scale-in rules
+                /// *   SCALE_OUT
+                /// *   SCALE_IN
                 /// </summary>
                 [NameInMap("ActivityType")]
                 [Validation(Required=false)]
@@ -92,22 +92,18 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public string AdjustmentType { get; set; }
 
                 /// <summary>
-                /// The adjustment value. The value must be a positive number, which indicates the number of instances to be scaled out or in.
+                /// The adjustment value. The parameter value must be a positive integer, which indicates the number of instances that you want to add or remove.
                 /// </summary>
                 [NameInMap("AdjustmentValue")]
                 [Validation(Required=false)]
                 public int? AdjustmentValue { get; set; }
 
                 /// <summary>
-                /// The description of scaling by load.
+                /// The description of load-based scaling.
                 /// </summary>
                 [NameInMap("MetricsTrigger")]
                 [Validation(Required=false)]
                 public MetricsTrigger MetricsTrigger { get; set; }
-
-                [NameInMap("MinAdjustmentValue")]
-                [Validation(Required=false)]
-                public int? MinAdjustmentValue { get; set; }
 
                 /// <summary>
                 /// The name of the auto scaling rule.
@@ -117,17 +113,17 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// The description of scaling by time.
+                /// The description of time-based scaling.
                 /// </summary>
                 [NameInMap("TimeTrigger")]
                 [Validation(Required=false)]
                 public TimeTrigger TimeTrigger { get; set; }
 
                 /// <summary>
-                /// The type of the scaling rule. Valid values:
+                /// The type of the auto scaling rule. Valid values:
                 /// 
-                /// *   TIME_TRIGGER: scaling by time.
-                /// *   METRICS_TRIGGER: scaling by load.
+                /// *   TIME_TRIGGER: time-based scaling
+                /// *   METRICS_TRIGGER: load-based scaling
                 /// </summary>
                 [NameInMap("TriggerType")]
                 [Validation(Required=false)]

@@ -8,9 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class TagResourcesRequest : TeaModel {
+    public class UpdateScriptShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the region in which you want to create the instance.
+        /// 集群ID。
+        /// 
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
+        /// <summary>
+        /// 区域ID。
         /// 
         /// This parameter is required.
         /// </summary>
@@ -19,33 +28,31 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The list of resource IDs. Valid values of N: 1 to 1.
+        /// 集群脚本。
         /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("ResourceIds")]
+        [NameInMap("Script")]
         [Validation(Required=false)]
-        public List<string> ResourceIds { get; set; }
+        public string ScriptShrink { get; set; }
 
         /// <summary>
-        /// The type of the resource to which the tag belongs. Valid values:
-        /// 
-        /// *   cluster: cluster
+        /// 脚本ID。
         /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("ResourceType")]
+        [NameInMap("ScriptId")]
         [Validation(Required=false)]
-        public string ResourceType { get; set; }
+        public string ScriptId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// 集群脚本类型。
         /// 
         /// This parameter is required.
         /// </summary>
-        [NameInMap("Tags")]
+        [NameInMap("ScriptType")]
         [Validation(Required=false)]
-        public List<Tag> Tags { get; set; }
+        public string ScriptType { get; set; }
 
     }
 

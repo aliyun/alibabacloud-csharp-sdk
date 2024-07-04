@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class JoinResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The region ID.
+        /// The ID of the region in which you want to create the instance.
         /// 
         /// This parameter is required.
         /// </summary>
