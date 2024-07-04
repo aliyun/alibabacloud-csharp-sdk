@@ -8485,6 +8485,14 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecurrenceType))
+            {
+                query["RecurrenceType"] = request.RecurrenceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecurrenceValue))
+            {
+                query["RecurrenceValue"] = request.RecurrenceValue;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -8512,6 +8520,14 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduledTaskNames))
             {
                 query["ScheduledTaskNames"] = request.ScheduledTaskNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskEnabled))
+            {
+                query["TaskEnabled"] = request.TaskEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                query["TaskName"] = request.TaskName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8561,6 +8577,14 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecurrenceType))
+            {
+                query["RecurrenceType"] = request.RecurrenceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecurrenceValue))
+            {
+                query["RecurrenceValue"] = request.RecurrenceValue;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -8588,6 +8612,14 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduledTaskNames))
             {
                 query["ScheduledTaskNames"] = request.ScheduledTaskNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskEnabled))
+            {
+                query["TaskEnabled"] = request.TaskEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                query["TaskName"] = request.TaskName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -35,6 +35,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RecurrenceType")]
+        [Validation(Required=false)]
+        public string RecurrenceType { get; set; }
+
+        [NameInMap("RecurrenceValue")]
+        [Validation(Required=false)]
+        public string RecurrenceValue { get; set; }
+
         /// <summary>
         /// The region ID of the scaling group to which the scheduled task belongs.
         /// 
@@ -79,6 +87,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [NameInMap("ScheduledTaskNames")]
         [Validation(Required=false)]
         public List<string> ScheduledTaskNames { get; set; }
+
+        [NameInMap("TaskEnabled")]
+        [Validation(Required=false)]
+        public bool? TaskEnabled { get; set; }
+
+        [NameInMap("TaskName")]
+        [Validation(Required=false)]
+        public string TaskName { get; set; }
 
     }
 
