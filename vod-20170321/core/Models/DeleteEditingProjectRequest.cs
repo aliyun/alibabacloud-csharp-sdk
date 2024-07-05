@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The ID of the online editing project. Separate multiple IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectIds")]
         [Validation(Required=false)]

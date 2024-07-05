@@ -10,43 +10,51 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddWatermarkRequest : TeaModel {
         /// <summary>
-        /// The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+        /// The ID of the application. Default value: **app-1000000**. If you have activated the multi-application service, specify the ID of the application to add the watermark template in the specified application. For more information, see [Overview](https://help.aliyun.com/document_detail/113600.html).
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The Object Storage Service (OSS) URL of the watermark file. This parameter is required if you add image watermarks.
+        /// The URL of the watermark file. The URL must be an Object Storage Service (OSS) URL and cannot contain the information used for URL signing.
+        /// 
+        /// > *   This parameter is required if you set `Type` to `Image`.
+        /// > *  You can obtain the URL from the `FileURL` parameter in the response to the [CreateUploadAttachedMedia](~~CreateUploadAttachedMedia~~) operation that you call to upload the watermark image to ApsaraVideo VOD.
         /// </summary>
         [NameInMap("FileUrl")]
         [Validation(Required=false)]
         public string FileUrl { get; set; }
 
         /// <summary>
-        /// The name of the watermark. The name can contain only letters and digits.
+        /// The name of the watermark template.
         /// 
-        /// *   The name can be up to 128 bytes in length.
+        /// *   Only letters and digits are supported.
+        /// *   The name cannot exceed 128 bytes.
         /// *   The value must be encoded in UTF-8.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The type of the watermark. Valid values:
+        /// The type of the watermark template. Valid values:
         /// 
-        /// *   **Image** (default)
-        /// *   **Text**
+        /// *   **Image** (default): image watermark template
+        /// *   **Text**: text watermark template
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The configurations such as the position and effect of the text watermark or image watermark. The value must be a JSON string.
+        /// The configuration information of the watermark such as the display position and special effects. The value must be a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see [WatermarkConfig](~~98618#section-h01-44s-2lr~~).
         /// 
-        /// > The value of this parameter varies based on the watermark type. For more information about the data structure, see [WatermarkConfig](~~98618~~).
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WatermarkConfig")]
         [Validation(Required=false)]

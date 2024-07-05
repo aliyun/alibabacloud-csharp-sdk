@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The domain name that is secured by the certificate. The domain name must use HTTPS acceleration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// 
         /// *   **on**
         /// *   **off**
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]

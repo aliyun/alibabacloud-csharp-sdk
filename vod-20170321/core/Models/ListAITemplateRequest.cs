@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// 
         /// *   **AIMediaAudit**: automated review
         /// *   **AIImage**: smart thumbnail
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

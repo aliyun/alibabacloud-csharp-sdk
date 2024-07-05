@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitDigitalWatermarkExtractJobResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the job.
+        /// The ID of the watermark extraction job.
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

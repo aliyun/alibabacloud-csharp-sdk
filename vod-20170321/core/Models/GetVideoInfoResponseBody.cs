@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// The review status of the video. Valid values:
+            /// The final review result of the audio or video file. Valid values:
             /// 
             /// *   **Normal**: pass
-            /// *   **Blocked**: failed
+            /// *   **Blocked**: blocked
             /// </summary>
             [NameInMap("AuditStatus")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The custom information about the media file.\n\n> This parameter has been deprecated. This parameter is no longer returned after you call the operation.
+            /// The custom information about the media file.\\n\\n> This parameter has been deprecated. This parameter is no longer returned after you call the operation.
             /// </summary>
             [NameInMap("CustomMediaInfo")]
             [Validation(Required=false)]
@@ -83,6 +83,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// Indicates whether the offline download feature is enabled. If you enable the offline download feature, users can download and play videos by using the ApsaraVideo Player on a local PC. For more information, see [Configure download settings](https://help.aliyun.com/document_detail/86107.html). Valid values:
+            /// 
+            /// *   **on**: the offline download feature is enabled.
+            /// *   **off**: the offline download feature is not enabled.
+            /// </summary>
+            [NameInMap("DownloadSwitch")]
+            [Validation(Required=false)]
+            public string DownloadSwitch { get; set; }
+
+            /// <summary>
             /// The duration of the media file. Unit: seconds.
             /// </summary>
             [NameInMap("Duration")]
@@ -90,7 +100,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public float? Duration { get; set; }
 
             /// <summary>
-            /// The time when the media file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the audio or video file was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("ModificationTime")]
             [Validation(Required=false)]
@@ -142,15 +152,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// The status of the video. For information about the operations that can be performed on videos in different statuses and limits, see the Status: the status of a video section of the [Basic data types](~~52839~~) topic. Valid values:
+            /// The status of the media file. For more information about the operations that you can perform on files in different statuses and usage limits, see [Status: the status of a video](~~52839#title-vqg-8cz-7p8~~). Valid values:
             /// 
-            /// *   **Uploading**: The video is being uploaded.
-            /// *   **UploadFail**: The video failed to be uploaded.
-            /// *   **UploadSucc**: The video has been uploaded.
-            /// *   **Transcoding**: The video is being transcoded.
-            /// *   **TranscodeFail**: The video failed to be transcoded.
-            /// *   **Blocked**: The video is blocked.
-            /// *   **Normal**: The video is normal.
+            /// *   **Uploading**
+            /// *   **UploadFail**
+            /// *   **UploadSucc**
+            /// *   **Transcoding**
+            /// *   **TranscodeFail**
+            /// *   **Blocked**
+            /// *   **Normal**
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -181,7 +191,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string StorageLocation { get; set; }
 
             /// <summary>
-            /// The tags of the media file. Multiple tags are separated by commas (,).
+            /// The tags of the audio or video file. Multiple tags are separated by commas (,).
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

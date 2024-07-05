@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainTrafficDataResponseBody : TeaModel {
         /// <summary>
-        /// The time interval between the entries returned. Unit: seconds.
+        /// The time interval at which data is returned, which is the time granularity. Unit: seconds.
         /// </summary>
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// The end of the time range.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// The beginning of the time range.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string TotalTraffic { get; set; }
 
         /// <summary>
-        /// The network traffic that was collected at each interval.
+        /// The amount of network traffic at each time interval.
         /// </summary>
         [NameInMap("TrafficDataPerInterval")]
         [Validation(Required=false)]
@@ -98,14 +98,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string OverseasValue { get; set; }
 
                 /// <summary>
-                /// The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
                 /// <summary>
-                /// The total amount of network traffic. Unit: bytes.
+                /// The total traffic. Unit: bytes.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

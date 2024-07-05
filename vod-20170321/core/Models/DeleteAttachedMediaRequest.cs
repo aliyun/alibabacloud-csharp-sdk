@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteAttachedMediaRequest : TeaModel {
         /// <summary>
-        /// The list of auxiliary media asset IDs.
+        /// The ID of the auxiliary media asset that you want to delete. You can obtain the ID of the auxiliary media asset from the MediaId parameter in the response to the [CreateUploadAttachedMedia](https://help.aliyun.com/document_detail/98467.html) operation.
         /// 
         /// *   Separate multiple IDs with commas (,).
-        /// *   A maximum of 20 IDs can be specified.
+        /// *   You can specify a maximum of 20 IDs.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MediaIds")]
         [Validation(Required=false)]

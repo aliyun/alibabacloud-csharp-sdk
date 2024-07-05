@@ -148,6 +148,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
+                    /// <summary>
+                    /// The weight of the origin server if multiple origin servers have been specified.
+                    /// </summary>
+                    [NameInMap("Weight")]
+                    [Validation(Required=false)]
+                    public string Weight { get; set; }
+
                 }
 
             }

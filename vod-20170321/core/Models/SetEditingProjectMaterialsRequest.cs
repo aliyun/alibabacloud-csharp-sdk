@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetEditingProjectMaterialsRequest : TeaModel {
         /// <summary>
-        /// The ID of the material. A material is a media asset, such as a video, an image, or an auxiliary media asset. Separate multiple material IDs with commas (,).
+        /// The ID of the media asset. You can specify IDs of media assets such as videos, images, or auxiliary media assets. Separate multiple IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MaterialIds")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The ID of the online editing project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

@@ -9,8 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class PreloadVodObjectCachesRequest : TeaModel {
+        [NameInMap("Area")]
+        [Validation(Required=false)]
+        public string Area { get; set; }
+
+        [NameInMap("L2Preload")]
+        [Validation(Required=false)]
+        public bool? L2Preload { get; set; }
+
         /// <summary>
-        /// The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).
+        /// The URL of the file to be prefetched. Separate multiple URLs with line breaks (\\n or \\r\\n).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ObjectPath")]
         [Validation(Required=false)]
@@ -23,6 +33,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        [NameInMap("WithHeader")]
+        [Validation(Required=false)]
+        public string WithHeader { get; set; }
 
     }
 

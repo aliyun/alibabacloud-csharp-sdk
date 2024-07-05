@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the snapshot template. You can call the [SubmitSnapshotJob](~~72213~~) operation to submit snapshot jobs.
+        /// The ID of the snapshot template. You can call the [SubmitSnapshotJob](https://help.aliyun.com/document_detail/72213.html) operation to submit snapshot jobs.
         /// </summary>
         [NameInMap("VodTemplateId")]
         [Validation(Required=false)]

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The ID of the video associated with the animated stickers whose information you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]

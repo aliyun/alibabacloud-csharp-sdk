@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The ID of the refresh or prefetch job. It is the value of the MediaRefreshJobId parameter that is returned from the call to the [RefreshMediaPlayUrls](~~RefreshMediaPlayUrls~~) operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MediaRefreshJobId")]
         [Validation(Required=false)]

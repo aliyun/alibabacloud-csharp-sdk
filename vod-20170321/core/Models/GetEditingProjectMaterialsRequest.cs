@@ -33,6 +33,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// 
         /// *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Production Center** > **Video Editing** to obtain the ID of the specified online editing project.
         /// *   Call the **AddEditingProject** operation. The value of the response parameter ProjectId is the ID of the specified online editing project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

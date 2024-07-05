@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CancelUrlUploadJobsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the upload jobs. You can obtain the job IDs from PlayInfo in the response to the [GetPlayInfo](~~56124~~) operation.
+        /// The IDs of the upload jobs. You can obtain the job IDs from PlayInfo in the response to the [GetPlayInfo](https://help.aliyun.com/document_detail/56124.html) operation.
         /// 
         /// *   You can specify a maximum of 10 IDs.
         /// *   Separate multiple IDs with commas (,).

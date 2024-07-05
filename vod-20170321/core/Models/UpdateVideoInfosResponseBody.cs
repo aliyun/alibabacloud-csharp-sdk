@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateVideoInfosResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required [permissions](~~113600~~).
+        /// The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required [permissions](https://help.aliyun.com/document_detail/113600.html).
         /// </summary>
         [NameInMap("ForbiddenVideoIds")]
         [Validation(Required=false)]

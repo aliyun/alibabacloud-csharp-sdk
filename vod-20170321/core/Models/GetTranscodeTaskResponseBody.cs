@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// *   **4K**: 4K
                 /// *   **SQ**: standard sound quality
                 /// *   **HQ**: high sound quality
-                /// *   **AUTO**: adaptive bitrate Adaptive bitrate streams are returned only if PackageSetting is set in the transcoding template. For more information, see [Basic structures](~~52839~~).
+                /// *   **AUTO**: adaptive bitrate Adaptive bitrate streams are returned only if PackageSetting is set in the transcoding template. For more information, see [Basic structures](https://help.aliyun.com/document_detail/52839.html).
                 /// 
                 /// > This parameter indicates the definition that is configured in the transcoding template and does not indicate the actual resolution of the output video.
                 /// </summary>

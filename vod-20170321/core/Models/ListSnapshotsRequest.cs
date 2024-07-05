@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// The validity period of the snapshot URL. Unit: seconds. Default value: **3600**. Minimum value: **3600**.
         /// 
-        /// *   This parameter only takes effect when [URL authentication](~~57007~~) is enabled.
+        /// *   This parameter only takes effect when [URL authentication](https://help.aliyun.com/document_detail/57007.html) is enabled.
         /// *   If the specified validity period is less than **3600** seconds, the default value is **3600**.
         /// *   If an Object Storage Service (OSS) URL is returned, the maximum validity period is limited to **2592000** seconds (30 days) to reduce security risks of the origin.
         /// </summary>
@@ -49,6 +49,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The ID of the video.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]

@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class AddAITemplateRequest : TeaModel {
         /// <summary>
         /// The detailed configurations of the AI template. The value must be a JSON string. For more information, see [AITemplateConfig](~~89863#title-vd3-499-o36~~).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The name of the AI template. The name can be up to 128 bytes in length.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// 
         /// *   **AIMediaAudit**: automated review
         /// *   **AIImage**: smart thumbnail
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

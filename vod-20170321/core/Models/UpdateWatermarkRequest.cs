@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateWatermarkRequest : TeaModel {
         /// <summary>
-        /// The name of the watermark. Only letters and digits are supported.
-        /// *   The name can be up to 128 bytes in length.
+        /// The name of the watermark template to which you want to change.
+        /// 
+        /// *   Only letters and digits are supported.
+        /// *   The name cannot exceed 128 bytes.
         /// *   The value must be encoded in UTF-8.
         /// </summary>
         [NameInMap("Name")]
@@ -19,15 +21,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string.
-        /// > The value of this parameter varies with the watermark type. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
+        /// The configuration information of the watermark such as the display position and special effects. The value must be a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see [WatermarkConfig](~~98618#section-h01-44s-2lr~~).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WatermarkConfig")]
         [Validation(Required=false)]
         public string WatermarkConfig { get; set; }
 
         /// <summary>
-        /// The ID of the watermark.
+        /// The ID of the watermark template. You can specify only one watermark template ID. You can obtain the ID by using one of the following methods:
+        /// 
+        /// *   Obtain the watermark template ID from the response to the [AddWatermark](~~AddWatermark~~) operation that you call to create a watermark template.
+        /// *   Obtain the watermark template ID from the response to the [ListWatermark](~~ListWatermark~~) operation that you call to query all watermark templates within your account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WatermarkId")]
         [Validation(Required=false)]

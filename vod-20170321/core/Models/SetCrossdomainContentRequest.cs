@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class SetCrossdomainContentRequest : TeaModel {
         /// <summary>
         /// The content of the cross-domain policy file. The file must be in the XML format and can contain up to 2,048 characters.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The URL of the Object Storage Service (OSS) bucket.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StorageLocation")]
         [Validation(Required=false)]

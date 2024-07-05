@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class DescribeVodDomainCertificateInfoRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

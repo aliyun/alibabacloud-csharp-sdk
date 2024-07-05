@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The ID of the video.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]

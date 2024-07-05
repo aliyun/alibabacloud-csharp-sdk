@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class DeleteVodDomainRequest : TeaModel {
         /// <summary>
         /// The domain name for CDN that you want to delete.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

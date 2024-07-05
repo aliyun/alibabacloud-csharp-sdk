@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The ID of the transcoding template group.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("TranscodeTemplateGroupId")]
         [Validation(Required=false)]

@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// 
         /// - You can specify a maximum of 10 IDs.
         /// - Separate multiple IDs with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AIImageInfoIds")]
         [Validation(Required=false)]

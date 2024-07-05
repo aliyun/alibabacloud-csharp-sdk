@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class DeleteVodSpecificConfigRequest : TeaModel {
         /// <summary>
         /// The ID of the configuration.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The domain name for CDN.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

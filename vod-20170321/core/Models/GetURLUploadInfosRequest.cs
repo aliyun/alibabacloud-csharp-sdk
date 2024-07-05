@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetURLUploadInfosRequest : TeaModel {
         /// <summary>
-        /// The one or more IDs of upload jobs. You can obtain the job IDs in the response parameter JobId of the [UploadMediaByURL](~~86311~~) operation.
+        /// The one or more IDs of upload jobs. You can obtain the job IDs in the response parameter JobId of the [UploadMediaByURL](https://help.aliyun.com/document_detail/86311.html) operation.
         /// 
         /// - You can specify a maximum of 10 IDs.
         /// - Separate multiple IDs with commas (,).

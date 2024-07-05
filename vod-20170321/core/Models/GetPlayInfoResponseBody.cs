@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// *   **SD**: high definition
                 /// *   **HD**: ultra-high definition
                 /// *   **OD**: original definition
-                /// *   **2K**: 2K
-                /// *   **4K**: 4K
+                /// *   **2K**
+                /// *   **4K**
                 /// *   **SQ**: standard sound quality
                 /// *   **HQ**: high sound quality
                 /// *   **AUTO**: adaptive bitrate
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// The format of the media stream.
                 /// 
                 /// *   If the media file is a video file, the valid values are **mp4** and **m3u8**.
-                /// *   If the media file is an audio-only file, the value is **mp3**.
+                /// *   If the media asset is an audio-only file, the value is **mp3**.
                 /// </summary>
                 [NameInMap("Format")]
                 [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// The type of the digital watermark. Valid values:
                 /// 
-                /// *   **1**: tracing watermark
+                /// *   **1**: user-tracing watermark
                 /// *   **2**: copyright watermark
                 /// </summary>
                 [NameInMap("JobType")]
@@ -158,20 +158,18 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string ModificationTime { get; set; }
 
                 /// <summary>
-                /// The type of Narrowband HD transcoding. Valid values:
+                /// The transcoding type. Valid values:
                 /// 
                 /// *   **0**: regular transcoding
                 /// *   **1.0**: Narrowband HD™ 1.0 transcoding
                 /// *   **2.0**: Narrowband HD™ 2.0 transcoding
-                /// 
-                /// This parameter is returned only when a definition that is available in the built-in Narrowband HD™ 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.
                 /// </summary>
                 [NameInMap("NarrowBandType")]
                 [Validation(Required=false)]
                 public string NarrowBandType { get; set; }
 
                 /// <summary>
-                /// The playback URL of the media stream.
+                /// The playback URL of the video stream.
                 /// </summary>
                 [NameInMap("PlayURL")]
                 [Validation(Required=false)]
@@ -185,7 +183,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// The specifications of transcoded audio and video streams. For more information about the valid values, see [Output specifications](~~124671~~).
+                /// The specifications of transcoded audio and video streams. For more information about the valid values, see [Output specifications](~~124671#section-6bv-l0g-opq~~).
                 /// </summary>
                 [NameInMap("Specification")]
                 [Validation(Required=false)]
@@ -279,7 +277,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaType { get; set; }
 
             /// <summary>
-            /// The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.
+            /// The status of the media file. For more information about the value range and description, see the [Status](~~52839#title-vqg-8cz-7p8~~) table.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

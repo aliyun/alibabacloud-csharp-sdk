@@ -17,28 +17,30 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the watermark.
+        /// The information about the watermark template.
         /// </summary>
         [NameInMap("WatermarkInfo")]
         [Validation(Required=false)]
         public AddWatermarkResponseBodyWatermarkInfo WatermarkInfo { get; set; }
         public class AddWatermarkResponseBodyWatermarkInfo : TeaModel {
             /// <summary>
-            /// The time when the watermark was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the watermark template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The OSS URL or Alibaba Cloud CDN URL of the watermark file. This parameter does not apply to text watermarks.
+            /// The URL of the watermark file. The URL is an Object Storage Service (OSS) URL or an Alibaba Cloud CDN URL.
+            /// 
+            /// >  This parameter is returned only for image watermark templates.
             /// </summary>
             [NameInMap("FileUrl")]
             [Validation(Required=false)]
             public string FileUrl { get; set; }
 
             /// <summary>
-            /// Indicates whether the default watermark was used. Valid values:
+            /// Indicates whether the watermark template is the default one. Valid values:
             /// 
             /// *   **Default**
             /// *   **NotDefault**
@@ -48,33 +50,31 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string IsDefault { get; set; }
 
             /// <summary>
-            /// The name of the watermark.
+            /// The name of the watermark template.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The type of the watermark. Valid values:
+            /// The type of the watermark template.
             /// 
-            /// *   **Image** (default)
-            /// *   **Text**
+            /// *   **Image**: image watermark template
+            /// *   **Text**: text watermark template
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON string.
-            /// 
-            /// > The value of this parameter varies based on the watermark type. For more information about the data structure, see [WatermarkConfig](~~98618~~).
+            /// The configuration information of the watermark such as the display position and special effects. The value is a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see [WatermarkConfig](~~98618#section-h01-44s-2lr~~).
             /// </summary>
             [NameInMap("WatermarkConfig")]
             [Validation(Required=false)]
             public string WatermarkConfig { get; set; }
 
             /// <summary>
-            /// The ID of the watermark.
+            /// The ID of the watermark template.
             /// </summary>
             [NameInMap("WatermarkId")]
             [Validation(Required=false)]

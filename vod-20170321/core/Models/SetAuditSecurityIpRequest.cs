@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// 
         /// *   IP address: 192.168.0.1
         /// *   CIDR block: 192.168.0.1/24. /24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges `from 1 to 32`.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Ips")]
         [Validation(Required=false)]

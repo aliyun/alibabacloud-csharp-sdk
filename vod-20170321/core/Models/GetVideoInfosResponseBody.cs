@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CoverURL { get; set; }
 
             /// <summary>
-            /// The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the media file was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -73,28 +73,38 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The duration of the audio or video file. Unit: seconds. 86,400 seconds is equivalent to 24 hours.
+            /// Indicates whether the offline download feature is enabled. If you enable the offline download feature, users can download and play videos by using the ApsaraVideo Player on a local PC. For more information, see [Configure download settings](https://help.aliyun.com/document_detail/86107.html). Valid values:
+            /// 
+            /// *   **on**: the offline download feature is enabled.
+            /// *   **off**: the offline download feature is not enabled.
+            /// </summary>
+            [NameInMap("DownloadSwitch")]
+            [Validation(Required=false)]
+            public string DownloadSwitch { get; set; }
+
+            /// <summary>
+            /// The duration of the audio or video file. Unit: seconds.
             /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public float? Duration { get; set; }
 
             /// <summary>
-            /// The time when the audio or video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+            /// The time when the audio or video file was last updated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("ModificationTime")]
             [Validation(Required=false)]
             public string ModificationTime { get; set; }
 
             /// <summary>
-            /// The period of time in which the audio or video file remains in the restored state.
+            /// The period of time in which the audio file remains in the restored state.
             /// </summary>
             [NameInMap("RestoreExpiration")]
             [Validation(Required=false)]
             public string RestoreExpiration { get; set; }
 
             /// <summary>
-            /// The restoration status of the audio or video file. Valid values:
+            /// The restoration status of the audio file. Valid values:
             /// 
             /// *   **Processing**
             /// *   **Success**
@@ -112,7 +122,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// The URL array of video snapshots.
+            /// The video snapshot URLs.
             /// </summary>
             [NameInMap("Snapshots")]
             [Validation(Required=false)]
@@ -121,20 +131,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// The status of the video. Valid values:
             /// 
-            /// *   **Uploading**: The video is being uploaded.
-            /// *   **UploadFail**: The video failed to be uploaded.
-            /// *   **UploadSucc**: The video is uploaded.
-            /// *   **Transcoding**: The video is being transcoded.
-            /// *   **TranscodeFail**: The video failed to be transcoded.
-            /// *   **Blocked**: The video is blocked.
-            /// *   **Normal**: The video is normal.
+            /// *   **Uploading**
+            /// *   **UploadFail**
+            /// *   **UploadSucc**
+            /// *   **Transcoding**
+            /// *   **TranscodeFail**
+            /// *   **Blocked**
+            /// *   **Normal**
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The storage class of the audio or video file. Valid values:
+            /// The storage class of the audio file. Valid values:
             /// 
             /// *   **Standard**: All media resources are stored as Standard objects.
             /// *   **IA**: All media resources are stored as IA objects.
@@ -142,8 +152,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// *   **ColdArchive**: All media resources are stored as Cold Archive objects.
             /// *   **SourceIA**: Only the source files are IA objects.
             /// *   **SourceArchive**: Only the source files are Archive objects.
-            /// *   **SourceColdArchive**: Only the source files are Cold Archive objects.
-            /// *   **Changing**: The storage class of the audio or video file is being changed.
+            /// *   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.
+            /// *   **Changing**: The storage class of the video file is being changed.
             /// *   **SourceChanging**: The storage class of the source file is being changed.
             /// </summary>
             [NameInMap("StorageClass")]

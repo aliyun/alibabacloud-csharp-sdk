@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetCategoriesResponseBody : TeaModel {
         /// <summary>
-        /// The information about the specified category.
+        /// The information about the category.
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public GetCategoriesResponseBodyCategory Category { get; set; }
         public class GetCategoriesResponseBodyCategory : TeaModel {
             /// <summary>
-            /// The ID of the video category.
+            /// The ID of the category.
             /// </summary>
             [NameInMap("CateId")]
             [Validation(Required=false)]
@@ -25,22 +25,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// The name of the category.
-            /// *   The value can be up to 64 bytes in length.
-            /// *   The string must be encoded in the UTF-8 format.
             /// </summary>
             [NameInMap("CateName")]
             [Validation(Required=false)]
             public string CateName { get; set; }
 
             /// <summary>
-            /// The level of the category. A value of **0** indicates a level 1 category.
+            /// The level of the category. Valid values:
+            /// 
+            /// *   **0**: level 1 category
+            /// *   **1**: level 2 category
+            /// *   **2**: level 3 category
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
             public long? Level { get; set; }
 
             /// <summary>
-            /// The ID of the parent category. The parent category ID of a level 1 category is **-1**.
+            /// The ID of the parent category.
             /// </summary>
             [NameInMap("ParentId")]
             [Validation(Required=false)]
@@ -48,8 +50,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// The type of the category. Valid values:
-            /// *   **default** (default): default category
-            /// *   **material**: material category
+            /// 
+            /// *   **default**: audio, video, and image files
+            /// *   **material**: short video materials
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of subcategories.
+        /// The details of the subcategory.
         /// </summary>
         [NameInMap("SubCategories")]
         [Validation(Required=false)]
@@ -76,7 +79,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<GetCategoriesResponseBodySubCategoriesCategory> Category { get; set; }
             public class GetCategoriesResponseBodySubCategoriesCategory : TeaModel {
                 /// <summary>
-                /// The ID of the video category.
+                /// The ID of the category.
                 /// </summary>
                 [NameInMap("CateId")]
                 [Validation(Required=false)]
@@ -84,22 +87,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
                 /// <summary>
                 /// The name of the category.
-                /// *   The value can be up to 64 bytes in length.
-                /// *   The string must be encoded in the UTF-8 format.
                 /// </summary>
                 [NameInMap("CateName")]
                 [Validation(Required=false)]
                 public string CateName { get; set; }
 
                 /// <summary>
-                /// The level of the category. A value of **0** indicates a level 1 category.
+                /// The level of the category. Valid values:
+                /// 
+                /// *   **0**: level 1 category
+                /// *   **1**: level 2 category
+                /// *   **2**: level 3 category
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public long? Level { get; set; }
 
                 /// <summary>
-                /// The ID of the parent category. The parent category ID of a level 1 category is **-1**.
+                /// The ID of the parent category.
                 /// </summary>
                 [NameInMap("ParentId")]
                 [Validation(Required=false)]
@@ -113,10 +118,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? SubTotal { get; set; }
 
                 /// <summary>
-                /// The type of the category. Valid values:
+                /// The type of the subcategory. Valid values:
                 /// 
-                /// *   **default** (default): default category
-                /// *   **material**: material category
+                /// *   **default**: audio, video, and image files
+                /// *   **material**: short video materials
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

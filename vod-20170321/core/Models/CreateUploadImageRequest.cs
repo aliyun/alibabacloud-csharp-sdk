@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CreateUploadImageRequest : TeaModel {
         /// <summary>
-        /// The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+        /// The ID of the application. Default value: **app-1000000**. For more information, see [Overview](https://help.aliyun.com/document_detail/113600.html).
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// The category ID of the image. You can use one of the following methods to obtain the category ID:
         /// 
         /// *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories**. On the Categories page, you can view the category ID of the image.
-        /// *   Obtain the value of CateId from the response to the [AddCategory](~~56401~~) operation.
-        /// *   Obtain the value of CateId from the response to the [GetCategories](~~56406~~) operation.
+        /// *   Obtain the value of CateId from the response to the [AddCategory](https://help.aliyun.com/document_detail/56401.html) operation.
+        /// *   Obtain the value of CateId from the response to the [GetCategories](https://help.aliyun.com/document_detail/56406.html) operation.
         /// </summary>
         [NameInMap("CateId")]
         [Validation(Required=false)]
@@ -56,6 +56,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// *   **cover**: the thumbnail.
         /// 
         /// > You can manage only images of the **default** type in the ApsaraVideo VOD console.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageType")]
         [Validation(Required=false)]
@@ -102,10 +104,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// The custom configurations, including callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+        /// The custom configurations, including callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](https://help.aliyun.com/document_detail/86952.html) topic.
         /// 
-        /// > *   The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
-        /// >*   If you want to enable the upload acceleration feature, [submit a request on Yida](https://yida.alibaba-inc.com/o/ticketapply). For more information, see [Overview](~~55396~~).
+        /// > *   The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](https://help.aliyun.com/document_detail/86071.html).
+        /// >*   If you want to enable the upload acceleration feature, [submit a request on Yida](https://yida.alibaba-inc.com/o/ticketapply). For more information, see [Overview](https://help.aliyun.com/document_detail/55396.html).
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

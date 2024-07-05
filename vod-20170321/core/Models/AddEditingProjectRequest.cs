@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The timeline of the online editing project, in JSON format. For more information about the structure, see [Timeline](~~52839~~).
+        /// The timeline of the online editing project, in JSON format. For more information about the structure, see [Timeline](https://help.aliyun.com/document_detail/52839.html).
         /// 
         /// If you do not specify this parameter, an empty timeline is created and the duration of the online editing project is zero.
         /// </summary>
@@ -57,6 +57,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The title of the online editing project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

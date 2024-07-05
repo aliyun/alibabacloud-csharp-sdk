@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetWatermarkRequest : TeaModel {
         /// <summary>
-        /// The ID of the watermark.
+        /// The ID of the watermark template. You can specify only one watermark template ID. You can obtain the ID by using one of the following methods:
+        /// 
+        /// *   Obtain the watermark template ID from the response to the [AddWatermark](~~AddWatermark~~) operation that you call to create a watermark template.
+        /// *   Obtain the watermark template ID from the response to the [ListWatermark](~~ListWatermark~~) operation that you call to query all watermarks within your account.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("WatermarkId")]
         [Validation(Required=false)]

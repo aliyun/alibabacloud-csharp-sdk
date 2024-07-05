@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddEditingProjectResponseBody : TeaModel {
         /// <summary>
-        /// The information about the online editing project. For more information about the structure, see [EditingProject](~~52839~~).
+        /// The information about the online editing project. For more information about the structure, see [EditingProject](https://help.aliyun.com/document_detail/52839.html).
         /// </summary>
         [NameInMap("Project")]
         [Validation(Required=false)]

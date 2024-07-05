@@ -33,6 +33,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The ID of the online editing project.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The timeline of the online editing project. For more information about the structure, see [Timeline](~~52839~~).
+        /// The timeline of the online editing project. For more information about the structure, see [Timeline](https://help.aliyun.com/document_detail/52839.html).
         /// </summary>
         [NameInMap("Timeline")]
         [Validation(Required=false)]

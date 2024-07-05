@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.
+        /// The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](https://help.aliyun.com/document_detail/98618.html) topic.
         /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The ID of the snapshot template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VodTemplateId")]
         [Validation(Required=false)]

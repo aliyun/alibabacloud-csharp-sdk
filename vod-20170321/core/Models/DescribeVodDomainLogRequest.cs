@@ -13,6 +13,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// The domain name.
         /// 
         /// >  You can specify only one domain name in each query.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

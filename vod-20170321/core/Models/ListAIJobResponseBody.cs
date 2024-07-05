@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The returned data. The value is a JSON string. For more information, see [AITemplateConfig](~~89863~~).
+                /// The returned data. The value is a JSON string. For more information, see [AITemplateConfig](https://help.aliyun.com/document_detail/89863.html).
                 /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]

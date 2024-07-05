@@ -403,7 +403,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Profile { get; set; }
 
                 /// <summary>
-                /// The rotation angle of the video. Valid values: **\[0,360)**.
+                /// The rotation angle of the video. Valid values: **[0,360)**.
                 /// </summary>
                 [NameInMap("Rotate")]
                 [Validation(Required=false)]

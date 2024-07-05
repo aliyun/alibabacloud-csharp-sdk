@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class SubmitPreprocessJobsRequest : TeaModel {
         /// <summary>
         /// The preprocessing type. Set the value to **LivePreprocess**, which indicates that the video is preprocessed in the production studio.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PreprocessType")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The ID of the video.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]

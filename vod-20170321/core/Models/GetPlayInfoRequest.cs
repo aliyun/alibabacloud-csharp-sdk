@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetPlayInfoRequest : TeaModel {
         /// <summary>
-        /// The URL of the masked live comment data. Set the value to **danmu**.
+        /// The URL of the masked live comment data. Value: **danmu**.
         /// 
-        /// > This parameter takes effect only when the outputType parameter is set to **cdn**.
+        /// >  This parameter takes effect only when the `outputType` parameter is set to `cdn`.
         /// </summary>
         [NameInMap("AdditionType")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// 
         /// *   If you set OutputType to **cdn**:
         /// 
-        ///     *   The playback URL has a validity period only if URL signing is enabled. Otherwise, the playback URL is permanently valid. For more information about how to enable and configure URL signing, see [URL signing](~~86090~~).
+        ///     *   The playback URL has a validity period only if URL signing is enabled. Otherwise, the playback URL is permanently valid. For more information about how to enable and configure URL signing, see [URL signing](https://help.aliyun.com/document_detail/86090.html).
         ///     *   Minimum value: **1**.
         ///     *   Maximum value: unlimited.
         ///     *   Default value: The default validity period that is specified in URL signing is used.
@@ -47,13 +47,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// *   **SD**: high definition
         /// *   **HD**: ultra-high definition
         /// *   **OD**: original definition
-        /// *   **2K**: 2K
-        /// *   **4K**: 4K
+        /// *   **2K**
+        /// *   **4K**
         /// *   **SQ**: standard sound quality
         /// *   **HQ**: high sound quality
         /// *   **AUTO**: adaptive bitrate
         /// 
-        /// > By default, ApsaraVideo VOD returns video streams in all preceding qualities. However, video streams for adaptive bitrate streaming are returned only if the PackageSetting parameter is specified in the transcoding template. For more information, see the [PackageSetting parameter in the TranscodeTemplate](~~52839~~) table.
+        /// > *   By default, ApsaraVideo VOD returns video streams in all the preceding qualities.
+        /// > *   However, video streams for adaptive bitrate streaming are returned only if the PackageSetting parameter is specified in the transcoding template. For more information, see the [PackageSetting parameter in the TranscodeTemplate table](~~52839#title-4fk-cg8-gzx~~).
         /// </summary>
         [NameInMap("Definition")]
         [Validation(Required=false)]
@@ -75,9 +76,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// *   **mp4**
         /// *   **m3u8**
         /// *   **mp3**
+        /// *   **flv**
         /// *   **mpd**
         /// 
-        /// > By default, ApsaraVideo VOD returns video streams in all the preceding formats. However, video streams in the MPD format are returned only if the MPD container format is specified in the transcoding template. For more information, see the [Container parameter in the TranscodeTemplate](~~52839~~) table.
+        /// > *   By default, ApsaraVideo VOD returns video streams in all the preceding formats.
+        /// >*   However, video streams in the MPD format are returned only if the `dash` container format is specified in the transcoding template. For more information, see the [Container parameter in the TranscodeTemplate table](~~52839#title-7rr-3hj-gy5~~).
         /// </summary>
         [NameInMap("Formats")]
         [Validation(Required=false)]
@@ -94,17 +97,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OutputType { get; set; }
 
         /// <summary>
-        /// The custom playback configuration. The value must be a JSON string. You can specify a domain name for playback. For more information, see [PlayConfig](~~86952~~).
+        /// The custom playback configuration. The value must be a JSON string. You can specify a domain name for playback. For more information, see [PlayConfig](~~86952#section-9g7-s9b-v7z~~).
         /// 
         /// > *   If you do not set the PlayConfig parameter or the `PlayDomain` parameter that is nested under the PlayConfig parameter, the default domain name specified in ApsaraVideo VOD is used in this operation. If no default domain name is specified, the domain names are queried in reverse chronological order based on the time when the domain names were last modified. To prevent domain name issues, we recommend that you perform the following steps to specify the default playback domain name: Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**. Find the domain name that you want to configure and click **Manage** in the Actions column. On the page that appears, set the default playback domain name in the **Origin Domain Name** section.
-        /// >*   If you set the `EncryptType` parameter nested under the PlayConfig parameter to `AliyunVoDEncryption`, the playback URLs of videos encrypted by using Alibaba Cloud proprietary cryptography are not automatically returned to ensure video security. To return playback URLs of videos encrypted by using Alibaba Cloud proprietary cryptography, you must set the `ResultType` parameter to `Multiple`.
+        /// > *   If you set the `EncryptType` parameter nested under the PlayConfig parameter to `AliyunVoDEncryption`, the playback URLs of videos encrypted by using Alibaba Cloud proprietary cryptography are not automatically returned to ensure video security. To return playback URLs of videos encrypted by using Alibaba Cloud proprietary cryptography, you must set the `ResultType` parameter to `Multiple`.
         /// </summary>
         [NameInMap("PlayConfig")]
         [Validation(Required=false)]
         public string PlayConfig { get; set; }
 
         /// <summary>
-        /// The CDN reauthentication configuration. The value is a JSON string. If CDN reauthentication is enabled, you can use this parameter to specify the UID and rand fields for URL authentication. For more information, see [URL authentication](~~57007~~).
+        /// The CDN reauthentication configuration. The value must be a JSON string. If CDN reauthentication is enabled, you can use this parameter to specify the `UID` and `rand` fields for URL authentication. For more information, see [URL authentication](https://help.aliyun.com/document_detail/2249352.html).
         /// </summary>
         [NameInMap("ReAuthInfo")]
         [Validation(Required=false)]
@@ -143,11 +146,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Trace { get; set; }
 
         /// <summary>
-        /// The ID of the media file. You can specify only one ID. You can use one of the following methods to obtain the media ID:
+        /// The ID of the media file. You can specify only one ID. You can use one of the following methods to obtain the ID:
         /// 
-        /// *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, you can view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
-        /// *   Obtain the value of the VideoId parameter from the response to the [CreateUploadVideo](~~55407~~) operation.
-        /// *   Obtain the value of the VideoId parameter from the response to the [SearchMedia](~~86044~~) operation. This method is applicable to files that have been uploaded.
+        /// *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the page that appears, view the media ID.
+        /// *   Obtain the value of the VideoId parameter in the response to the [CreateUploadVideo](https://help.aliyun.com/document_detail/55407.html) operation that you called to upload the audio or video file.
+        /// *   Obtain the value of VideoId by calling the [SearchMedia](https://help.aliyun.com/document_detail/86044.html) operation. This method is applicable to files that have been uploaded.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]

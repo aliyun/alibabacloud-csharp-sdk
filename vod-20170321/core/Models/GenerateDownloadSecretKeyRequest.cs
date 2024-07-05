@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class GenerateDownloadSecretKeyRequest : TeaModel {
         /// <summary>
         /// A custom string of 16 to 32 characters in length. The string must contain uppercase letters, lowercase letters, and digits.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppDecryptKey")]
         [Validation(Required=false)]
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// *   Windows: the serial number in the digital signature certificate.
         /// 
         /// For more information about how to obtain the unique identifier of an app, see [Obtain the unique app identifier](~~86107#section-wtj-9d7-lg2~~).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("AppIdentification")]
         [Validation(Required=false)]

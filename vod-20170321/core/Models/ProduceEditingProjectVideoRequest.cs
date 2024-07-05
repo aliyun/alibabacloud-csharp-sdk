@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ProduceEditingProjectVideoRequest : TeaModel {
         /// <summary>
-        /// The ID of the application. Default value: **app-1000000**. For more information, see [Multi-application service](~~113600~~).
+        /// The ID of the application. Default value: **app-1000000**. For more information, see [Multi-application service](https://help.aliyun.com/document_detail/113600.html).
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The video metadata. The value must be in JSON format. For more information about the parameter structure, see [MediaMetadata](~~52839#title_rtf_ry5\_gjp~~).
+        /// The video metadata. The value must be in JSON format. For more information about the parameter structure, see [MediaMetadata](~~52839#title_rtf_ry5_gjp~~).
         /// </summary>
         [NameInMap("MediaMetadata")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:
         /// 
         /// *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Production Center** > **Video Editing** to view the ID of the online editing project.
-        /// *   Obtain the value of ProjectId from the response to the [AddEditingProject](~~69048~~) operation.
+        /// *   Obtain the value of ProjectId from the response to the [AddEditingProject](https://help.aliyun.com/document_detail/69048.html) operation.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// The custom configurations, such as the callback configuration. The value must be a JSON string. For more information about the parameter structure, see [UserData](~~86952#title_vz7\_xzs\_0c5~~).
+        /// The custom configurations, such as the callback configuration. The value must be a JSON string. For more information about the parameter structure, see [UserData](~~86952#title_vz7_xzs_0c5~~).
         /// 
         /// > The callback configurations take effect only after you specify an HTTP URL for receiving callback notifications and select the event types in the ApsaraVideo VOD console.
         /// </summary>

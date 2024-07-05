@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// [The information about the auxiliary media asset](~~86991~~).
+            /// [The information about the auxiliary media asset](https://help.aliyun.com/document_detail/86991.html).
             /// </summary>
             [NameInMap("AttachedMedia")]
             [Validation(Required=false)]
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// [The information about the audio](~~86991~~).
+            /// [The information about the audio](https://help.aliyun.com/document_detail/86991.html).
             /// </summary>
             [NameInMap("Audio")]
             [Validation(Required=false)]
@@ -360,8 +360,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// The source of the audio file. Valid values:
                 /// 
                 /// *   **general**: The audio file is uploaded by using ApsaraVideo VOD.
-                /// *   **short_video**: The audio file is uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see [Introduction](~~53407~~).
-                /// *   **editing**: The audio file is uploaded to ApsaraVideo VOD after online editing and production. For more information, see [ProduceEditingProjectVideo](~~68536~~).
+                /// *   **short_video**: The audio file is uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see [Introduction](https://help.aliyun.com/document_detail/53407.html).
+                /// *   **editing**: The audio file is uploaded to ApsaraVideo VOD after online editing and production. For more information, see [ProduceEditingProjectVideo](https://help.aliyun.com/document_detail/68536.html).
                 /// *   **live**: The audio file is recorded and uploaded as a file to ApsaraVideo VOD.
                 /// </summary>
                 [NameInMap("MediaSource")]
@@ -496,7 +496,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// [The information about the image](~~86991~~).
+            /// [The information about the image](https://help.aliyun.com/document_detail/86991.html).
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
@@ -612,7 +612,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaType { get; set; }
 
             /// <summary>
-            /// [The information about the video](~~86991~~).
+            /// [The information about the video](https://help.aliyun.com/document_detail/86991.html).
             /// </summary>
             [NameInMap("Video")]
             [Validation(Required=false)]

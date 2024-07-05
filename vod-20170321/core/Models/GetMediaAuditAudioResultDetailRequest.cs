@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditAudioResultDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the video. You can query the video ID by using the ApsaraVideo VOD console or calling the [SearchMedia](~~86044~~) operation.
+        /// The ID of the video. You can query the video ID by using the ApsaraVideo VOD console or calling the [SearchMedia](https://help.aliyun.com/document_detail/86044.html) operation.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]

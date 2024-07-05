@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class GetVodTemplateRequest : TeaModel {
         /// <summary>
         /// The ID of the snapshot template.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("VodTemplateId")]
         [Validation(Required=false)]

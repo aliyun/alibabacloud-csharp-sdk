@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddTranscodeTemplateGroupRequest : TeaModel {
         /// <summary>
-        /// The application ID. Default value: **app-1000000**. For more information, see [Use the multi-application service](~~113600~~).
+        /// The application ID. Default value: **app-1000000**. For more information, see [Use the multi-application service](https://help.aliyun.com/document_detail/113600.html).
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string TranscodeTemplateGroupId { get; set; }
 
         /// <summary>
-        /// The configurations of the transcoding template. The value is a string in JSON format. For more information about the data structure, see [TranscodeTemplate](~~52839~~).
+        /// The configurations of the transcoding template. The value is a string in JSON format. For more information about the data structure, see [TranscodeTemplate](https://help.aliyun.com/document_detail/52839.html).
         /// 
         /// > *   If you do not specify this parameter, the transcoding job cannot be automatically created after you upload a video.
         /// > *   If you do not need to set Width or Height, do not specify the corresponding parameter. You cannot set the value to an empty string, such as "Height":"".

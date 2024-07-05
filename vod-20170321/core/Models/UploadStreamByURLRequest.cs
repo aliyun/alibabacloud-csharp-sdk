@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// The quality of the video stream.
         /// 
-        /// For more information about valid values of this parameter, see [Parameters for media assets](~~124671~~).
+        /// For more information about valid values of this parameter, see [Parameters for media assets](https://help.aliyun.com/document_detail/124671.html).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Definition")]
         [Validation(Required=false)]
@@ -21,7 +23,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// The file name extension of the transcoded stream.
         /// 
-        /// For more information, see the Supported media file formats section in [Overview](~~55396~~).
+        /// For more information, see the Supported media file formats section in [Overview](https://help.aliyun.com/document_detail/55396.html).
         /// 
         /// If you set a value for this parameter, the file name extension specified in StreamURL is overwritten.
         /// 
@@ -53,6 +55,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The media ID in ApsaraVideo VOD.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
@@ -62,15 +66,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// The URL of the transcoded stream.
         /// 
         /// If URL authentication is required, you must pass authentication information in this parameter and make sure that the URL can be accessed over the Internet.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("StreamURL")]
         [Validation(Required=false)]
         public string StreamURL { get; set; }
 
         /// <summary>
-        /// The user-defined parameter. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+        /// The user-defined parameter. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](https://help.aliyun.com/document_detail/86952.html) topic.
         /// 
-        /// >  The callback configurations you specify for this parameter take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+        /// >  The callback configurations you specify for this parameter take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](https://help.aliyun.com/document_detail/86071.html).
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class BatchStartVodDomainRequest : TeaModel {
         /// <summary>
         /// The accelerated domain name. Separate multiple domain names with commas (,).
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]

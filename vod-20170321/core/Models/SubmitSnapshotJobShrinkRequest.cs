@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// The ID of the snapshot template.
         /// 
-        /// *   We recommend that you create a snapshot template before you specify the template ID. For more information about how to create a snapshot template, see [AddVodTemplate](~~99406~~).
+        /// *   We recommend that you create a snapshot template before you specify the template ID. For more information about how to create a snapshot template, see [AddVodTemplate](https://help.aliyun.com/document_detail/99406.html).
         /// *   If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.
         /// </summary>
         [NameInMap("SnapshotTemplateId")]
@@ -62,14 +62,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SpecifiedOffsetTimesShrink { get; set; }
 
         /// <summary>
-        /// The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see [SpriteSnapshotConfig](~~86952~~).
+        /// The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see [SpriteSnapshotConfig](https://help.aliyun.com/document_detail/86952.html).
         /// </summary>
         [NameInMap("SpriteSnapshotConfig")]
         [Validation(Required=false)]
         public string SpriteSnapshotConfig { get; set; }
 
         /// <summary>
-        /// The custom configurations including the configuration of transparent data transmission and callback configurations. The value must be a JSON string. For more information, see [UserData](~~86952~~).
+        /// The custom configurations including the configuration of transparent data transmission and callback configurations. The value must be a JSON string. For more information, see [UserData](https://help.aliyun.com/document_detail/86952.html).
         /// 
         /// >  To use the message callback feature, you must specify an HTTP callback URL and the callback events in the ApsaraVideo VOD console. Otherwise, the callback settings do not take effect.
         /// </summary>
@@ -81,8 +81,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// The ID of the video. You can use one of the following methods to obtain the ID:
         /// 
         /// *   After you upload a video in the ApsaraVideo VOD console, you can log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com) and choose **Media Files** > **Audio/Video** to view the ID of the video.
-        /// *   Obtain the video ID from the response to the [CreateUploadVideo](~~55407~~) operation that you called to obtain the upload URL and credential.
-        /// *   Obtain the video ID from the response to the [SearchMedia](~~86044~~) operation that you called to query media information after the audio or video file is uploaded.
+        /// *   Obtain the video ID from the response to the [CreateUploadVideo](https://help.aliyun.com/document_detail/55407.html) operation that you called to obtain the upload URL and credential.
+        /// *   Obtain the video ID from the response to the [SearchMedia](https://help.aliyun.com/document_detail/86044.html) operation that you called to query media information after the audio or video file is uploaded.
         /// </summary>
         [NameInMap("VideoId")]
         [Validation(Required=false)]

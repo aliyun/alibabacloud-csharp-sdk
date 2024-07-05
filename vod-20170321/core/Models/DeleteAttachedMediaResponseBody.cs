@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteAttachedMediaResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the auxiliary media asset that failed to be deleted.
+        /// The IDs of the auxiliary media assets that failed to be deleted.
         /// </summary>
         [NameInMap("NonExistMediaIds")]
         [Validation(Required=false)]

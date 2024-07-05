@@ -12,14 +12,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// The media asset fields to return in the query results.
         /// 
-        /// By default, only the basic media asset fields are returned. You can specify additional media asset fields that need to be returned in the request. For more information, see the "API examples" section of the [Search for media asset information](~~99179~~) topic.
+        /// By default, only the basic media asset fields are returned. You can specify additional media asset fields that need to be returned in the request. For more information, see the "API examples" section of the [Search for media asset information](https://help.aliyun.com/document_detail/99179.html) topic.
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public string Fields { get; set; }
 
         /// <summary>
-        /// The filter condition. For more information about the syntax, see [Protocol for media asset search](~~86991~~).
+        /// The filter condition. For more information about the syntax, see [Protocol for media asset search](https://help.aliyun.com/document_detail/86991.html).
         /// </summary>
         [NameInMap("Match")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// *   **CreationTime:Desc**: The results are sorted in reverse chronological order based on the creation time.
         /// *   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.
         /// 
-        /// > * For more information about the sort field, see "Sort field" in the [Search for media asset information](~~99179~~) topic.
+        /// > * For more information about the sort field, see "Sort field" in the [Search for media asset information](https://help.aliyun.com/document_detail/99179.html) topic.
         /// > * To obtain the first 5,000 data records that meet the specified filter criteria, you can specify a maximum of three sort fields.
         /// > * To obtain all the data records that meet the specified filter criteria, you can specify only one sort field.
         /// </summary>

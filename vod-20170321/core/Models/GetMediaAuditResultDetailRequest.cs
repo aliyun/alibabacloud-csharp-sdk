@@ -11,6 +11,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class GetMediaAuditResultDetailRequest : TeaModel {
         /// <summary>
         /// The ID of the video.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The page number of the review result to return. The default value is **1**. A maximum of **20** records can be returned on each page.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]

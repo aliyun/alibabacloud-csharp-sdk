@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetCategoriesRequest : TeaModel {
         /// <summary>
-        /// The ID of the category. Default value: **-1**, which indicates the parent category ID of a level 1 category.
+        /// The ID of the category. If you specify this parameter, the system queries the category based on the ID. You can specify only one category ID. You can use one of the following methods to obtain the ID:
+        /// 
+        /// *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). Choose **Configuration Management** > **Media Management** > **Categories**. On the Audio and Video / Image Category or Short Video Material Category tab, view the category ID.
+        /// *   Obtain the category ID from the response to the [AddCategory](~~AddCategory~~) operation.
         /// </summary>
         [NameInMap("CateId")]
         [Validation(Required=false)]
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The method for sorting the results. Valid values:
+        /// The sorting method of the results. Valid values:
         /// 
         /// *   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.
         /// *   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.
@@ -41,10 +44,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// The type of the category. Valid values:
+        /// The type of the category. If you specify this parameter, the system queries the category based on the type. Valid values:
         /// 
-        /// *   **default** (default): default category
-        /// *   **material**: material category
+        /// *   **default** (default): audio, video, and image files
+        /// *   **material**: short video materials
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

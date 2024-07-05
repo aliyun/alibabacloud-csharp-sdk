@@ -34,8 +34,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// The image IDs. Separate multiple IDs with commas (,). You can specify a maximum of 20 image IDs. You can use one of the following methods to obtain the image ID:
         /// 
         /// *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/) and choose Media Files > Images in the left-side navigation pane. This method is applicable to images that are uploaded by using the ApsaraVideo VOD console.
-        /// *   Obtain the value of ImageId from the response to the [CreateUploadImage](~~436544~~) operation that you call to obtain the upload URL and credential.
-        /// *   Obtain the value of ImageId from the response to the [SearchMedia](~~436559~~) operation after you upload images.
+        /// *   Obtain the value of ImageId from the response to the [CreateUploadImage](https://help.aliyun.com/document_detail/436544.html) operation that you call to obtain the upload URL and credential.
+        /// *   Obtain the value of ImageId from the response to the [SearchMedia](https://help.aliyun.com/document_detail/436559.html) operation after you upload images.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("ImageIds")]
         [Validation(Required=false)]

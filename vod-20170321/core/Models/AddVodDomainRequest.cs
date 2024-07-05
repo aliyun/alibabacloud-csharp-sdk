@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The domain name that you want to accelerate. Wildcard domain names that start with periods (.) are supported. Example: .example.com.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The information about the addresses of origin servers. For more information, see the **Sources** table in this topic.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]

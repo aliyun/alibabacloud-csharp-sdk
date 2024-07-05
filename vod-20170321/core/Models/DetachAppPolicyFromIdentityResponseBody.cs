@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DetachAppPolicyFromIdentityResponseBody : TeaModel {
         /// <summary>
-        /// The name of the policy that failed to be detached from the identity.
+        /// The names of the policies that failed to be granted to the RAM user or RAM role.
         /// </summary>
         [NameInMap("FailedPolicyNames")]
         [Validation(Required=false)]

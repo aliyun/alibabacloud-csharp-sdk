@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetDigitalWatermarkExtractResultResponseBody : TeaModel {
         /// <summary>
-        /// The information about the job.
+        /// The details of the watermark extraction job.
         /// </summary>
         [NameInMap("AiExtractResultList")]
         [Validation(Required=false)]
         public List<GetDigitalWatermarkExtractResultResponseBodyAiExtractResultList> AiExtractResultList { get; set; }
         public class GetDigitalWatermarkExtractResultResponseBodyAiExtractResultList : TeaModel {
             /// <summary>
-            /// The time when the job was created.
+            /// The time when the watermark extraction job was created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -31,21 +31,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// The ID of the job.
+            /// The ID of the watermark extraction job.
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
 
             /// <summary>
-            /// The time when the job was modified.
+            /// The time when the watermark extraction job was last updated.
             /// </summary>
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// The status of the job. Valid values:
+            /// The status of the watermark extraction job. Valid values:
             /// 
             /// *   **Success**
             /// *   **Failed**
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The extracted watermark text.
+            /// The extracted watermark content.
             /// </summary>
             [NameInMap("WaterMarkText")]
             [Validation(Required=false)]

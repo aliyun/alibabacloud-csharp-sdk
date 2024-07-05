@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// The ID of the auxiliary media asset. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified.
+        /// 
+        /// This parameter is required.
         /// </summary>
         [NameInMap("MediaIds")]
         [Validation(Required=false)]
