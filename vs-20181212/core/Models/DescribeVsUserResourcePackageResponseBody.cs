@@ -21,14 +21,33 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo> ResourcePackageInfo { get; set; }
             public class DescribeVsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo : TeaModel {
+                [NameInMap("CommodityCode")]
+                [Validation(Required=false)]
                 public string CommodityCode { get; set; }
+
+                [NameInMap("CurrCapacity")]
+                [Validation(Required=false)]
                 public string CurrCapacity { get; set; }
+
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
                 public string DisplayName { get; set; }
+
+                [NameInMap("InitCapacity")]
+                [Validation(Required=false)]
                 public string InitCapacity { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
     }
 

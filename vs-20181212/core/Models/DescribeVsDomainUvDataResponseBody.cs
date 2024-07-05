@@ -37,10 +37,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsDomainUvDataResponseBodyUvDataIntervalUsageData> UsageData { get; set; }
             public class DescribeVsDomainUvDataResponseBodyUvDataIntervalUsageData : TeaModel {
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
     }
 

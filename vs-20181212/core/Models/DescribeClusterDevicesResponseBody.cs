@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string EdgeNodeName { get; set; }
 
+            [NameInMap("HostRom")]
+            [Validation(Required=false)]
+            public string HostRom { get; set; }
+
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
@@ -132,6 +136,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 [NameInMap("PodId")]
                 [Validation(Required=false)]
                 public string PodId { get; set; }
+
+                [NameInMap("PodIp")]
+                [Validation(Required=false)]
+                public string PodIp { get; set; }
 
                 [NameInMap("Status")]
                 [Validation(Required=false)]

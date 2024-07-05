@@ -25,21 +25,61 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo> LiveStreamPublishInfo { get; set; }
             public class DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo : TeaModel {
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
                 public string AppName { get; set; }
+
+                [NameInMap("ClientAddr")]
+                [Validation(Required=false)]
                 public string ClientAddr { get; set; }
+
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("EdgeNodeAddr")]
+                [Validation(Required=false)]
                 public string EdgeNodeAddr { get; set; }
+
+                [NameInMap("PublishDomain")]
+                [Validation(Required=false)]
                 public string PublishDomain { get; set; }
+
+                [NameInMap("PublishTime")]
+                [Validation(Required=false)]
                 public string PublishTime { get; set; }
+
+                [NameInMap("PublishType")]
+                [Validation(Required=false)]
                 public string PublishType { get; set; }
+
+                [NameInMap("PublishUrl")]
+                [Validation(Required=false)]
                 public string PublishUrl { get; set; }
+
+                [NameInMap("StopTime")]
+                [Validation(Required=false)]
                 public string StopTime { get; set; }
+
+                [NameInMap("StreamName")]
+                [Validation(Required=false)]
                 public string StreamName { get; set; }
+
+                [NameInMap("StreamUrl")]
+                [Validation(Required=false)]
                 public string StreamUrl { get; set; }
+
+                [NameInMap("TranscodeId")]
+                [Validation(Required=false)]
                 public string TranscodeId { get; set; }
+
+                [NameInMap("Transcoded")]
+                [Validation(Required=false)]
                 public string Transcoded { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

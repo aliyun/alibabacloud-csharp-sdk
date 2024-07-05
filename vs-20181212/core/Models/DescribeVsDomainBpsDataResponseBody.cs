@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsDomainBpsDataResponseBodyBpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVsDomainBpsDataResponseBodyBpsDataPerIntervalDataModule : TeaModel {
+                [NameInMap("BpsValue")]
+                [Validation(Required=false)]
                 public string BpsValue { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("DataInterval")]
         [Validation(Required=false)]

@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsDevicesDataResponseBodyDevicesDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVsDevicesDataResponseBodyDevicesDataPerIntervalDataModule : TeaModel {
+                [NameInMap("DevicesDataValue")]
+                [Validation(Required=false)]
                 public string DevicesDataValue { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

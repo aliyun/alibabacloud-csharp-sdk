@@ -17,11 +17,21 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule : TeaModel {
+                [NameInMap("RecordValue")]
+                [Validation(Required=false)]
                 public string RecordValue { get; set; }
+
+                [NameInMap("StreamCountValue")]
+                [Validation(Required=false)]
                 public string StreamCountValue { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

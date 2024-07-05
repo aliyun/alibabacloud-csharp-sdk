@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData> DescribeVsUpPeakPublishStreamData { get; set; }
             public class DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData : TeaModel {
+                [NameInMap("BandWidth")]
+                [Validation(Required=false)]
                 public string BandWidth { get; set; }
+
+                [NameInMap("PeakTime")]
+                [Validation(Required=false)]
                 public string PeakTime { get; set; }
+
+                [NameInMap("PublishStreamNum")]
+                [Validation(Required=false)]
                 public int? PublishStreamNum { get; set; }
+
+                [NameInMap("QueryTime")]
+                [Validation(Required=false)]
                 public string QueryTime { get; set; }
+
+                [NameInMap("StatName")]
+                [Validation(Required=false)]
                 public string StatName { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

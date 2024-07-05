@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo> ResumeResultInfo { get; set; }
             public class BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo : TeaModel {
+                [NameInMap("Channels")]
+                [Validation(Required=false)]
                 public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels Channels { get; set; }
                 public class BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels : TeaModel {
                     [NameInMap("Channel")]
@@ -28,11 +30,22 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                     public List<string> Channel { get; set; }
 
                 }
+
+                [NameInMap("Count")]
+                [Validation(Required=false)]
                 public int? Count { get; set; }
+
+                [NameInMap("Detail")]
+                [Validation(Required=false)]
                 public string Detail { get; set; }
+
+                [NameInMap("Result")]
+                [Validation(Required=false)]
                 public string Result { get; set; }
+
             }
-        };
+
+        }
 
     }
 

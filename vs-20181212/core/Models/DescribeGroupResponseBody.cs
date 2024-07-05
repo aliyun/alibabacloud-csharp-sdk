@@ -96,16 +96,20 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [NameInMap("DeviceNum")]
             [Validation(Required=false)]
             public long? DeviceNum { get; set; }
+
             [NameInMap("IedNum")]
             [Validation(Required=false)]
             public long? IedNum { get; set; }
+
             [NameInMap("IpcNum")]
             [Validation(Required=false)]
             public long? IpcNum { get; set; }
+
             [NameInMap("PlatformNum")]
             [Validation(Required=false)]
             public long? PlatformNum { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

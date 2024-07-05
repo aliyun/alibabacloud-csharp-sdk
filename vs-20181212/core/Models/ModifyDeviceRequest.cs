@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string AlarmMethod { get; set; }
 
+        [NameInMap("AutoDirectory")]
+        [Validation(Required=false)]
+        public bool? AutoDirectory { get; set; }
+
         [NameInMap("AutoPos")]
         [Validation(Required=false)]
         public bool? AutoPos { get; set; }
@@ -37,6 +41,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }

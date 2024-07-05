@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string AlarmMethod { get; set; }
 
+        [NameInMap("AutoDirectory")]
+        [Validation(Required=false)]
+        public bool? AutoDirectory { get; set; }
+
         [NameInMap("AutoPos")]
         [Validation(Required=false)]
         public bool? AutoPos { get; set; }
@@ -40,22 +44,28 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [NameInMap("CreatedTime")]
             [Validation(Required=false)]
             public string CreatedTime { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("ParentId")]
             [Validation(Required=false)]
             public string ParentId { get; set; }
-        };
+
+        }
 
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
@@ -136,19 +146,24 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [NameInMap("ChannelNum")]
             [Validation(Required=false)]
             public long? ChannelNum { get; set; }
+
             [NameInMap("FailedNum")]
             [Validation(Required=false)]
             public long? FailedNum { get; set; }
+
             [NameInMap("OfflineNum")]
             [Validation(Required=false)]
             public long? OfflineNum { get; set; }
+
             [NameInMap("OnlineNum")]
             [Validation(Required=false)]
             public long? OnlineNum { get; set; }
+
             [NameInMap("StreamNum")]
             [Validation(Required=false)]
             public long? StreamNum { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
