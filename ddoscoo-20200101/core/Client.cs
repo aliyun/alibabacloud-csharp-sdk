@@ -2738,10 +2738,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI CreateWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+         *
          * @param request CreateWebCCRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateWebCCRuleResponse
          */
+        // Deprecated
         public CreateWebCCRuleResponse CreateWebCCRuleWithOptions(CreateWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2802,10 +2805,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI CreateWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+         *
          * @param request CreateWebCCRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return CreateWebCCRuleResponse
          */
+        // Deprecated
         public async Task<CreateWebCCRuleResponse> CreateWebCCRuleWithOptionsAsync(CreateWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2866,9 +2872,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI CreateWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+         *
          * @param request CreateWebCCRuleRequest
          * @return CreateWebCCRuleResponse
          */
+        // Deprecated
         public CreateWebCCRuleResponse CreateWebCCRule(CreateWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2876,9 +2885,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI CreateWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+         *
          * @param request CreateWebCCRuleRequest
          * @return CreateWebCCRuleResponse
          */
+        // Deprecated
         public async Task<CreateWebCCRuleResponse> CreateWebCCRuleAsync(CreateWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3990,12 +4002,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
+         *
          * @summary Deletes a custom frequency control rule of a website.
          *
          * @param request DeleteWebCCRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteWebCCRuleResponse
          */
+        // Deprecated
         public DeleteWebCCRuleResponse DeleteWebCCRuleWithOptions(DeleteWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4032,12 +4047,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
+         *
          * @summary Deletes a custom frequency control rule of a website.
          *
          * @param request DeleteWebCCRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DeleteWebCCRuleResponse
          */
+        // Deprecated
         public async Task<DeleteWebCCRuleResponse> DeleteWebCCRuleWithOptionsAsync(DeleteWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4074,11 +4092,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
+         *
          * @summary Deletes a custom frequency control rule of a website.
          *
          * @param request DeleteWebCCRuleRequest
          * @return DeleteWebCCRuleResponse
          */
+        // Deprecated
         public DeleteWebCCRuleResponse DeleteWebCCRule(DeleteWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4086,11 +4107,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
+         *
          * @summary Deletes a custom frequency control rule of a website.
          *
          * @param request DeleteWebCCRuleRequest
          * @return DeleteWebCCRuleResponse
          */
+        // Deprecated
         public async Task<DeleteWebCCRuleResponse> DeleteWebCCRuleAsync(DeleteWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5898,6 +5922,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             {
                 query["Ip"] = request.Ip;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
+            {
+                query["Range"] = request.Range;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -5941,6 +5969,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
             {
                 query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
+            {
+                query["Range"] = request.Range;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -6130,6 +6162,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             {
                 query["Ip"] = request.Ip;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
+            {
+                query["Range"] = request.Range;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -6173,6 +6209,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
             {
                 query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
+            {
+                query["Range"] = request.Range;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -6699,6 +6739,130 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDefenseRecordsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 查询目的端口事件
+         *
+         * @param request DescribeDestinationPortEventRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDestinationPortEventResponse
+         */
+        public DescribeDestinationPortEventResponse DescribeDestinationPortEventWithOptions(DescribeDestinationPortEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["EventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
+            {
+                query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
+            {
+                query["Range"] = request.Range;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDestinationPortEvent",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDestinationPortEventResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询目的端口事件
+         *
+         * @param request DescribeDestinationPortEventRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return DescribeDestinationPortEventResponse
+         */
+        public async Task<DescribeDestinationPortEventResponse> DescribeDestinationPortEventWithOptionsAsync(DescribeDestinationPortEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["EventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
+            {
+                query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
+            {
+                query["Range"] = request.Range;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDestinationPortEvent",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDestinationPortEventResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 查询目的端口事件
+         *
+         * @param request DescribeDestinationPortEventRequest
+         * @return DescribeDestinationPortEventResponse
+         */
+        public DescribeDestinationPortEventResponse DescribeDestinationPortEvent(DescribeDestinationPortEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDestinationPortEventWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 查询目的端口事件
+         *
+         * @param request DescribeDestinationPortEventRequest
+         * @return DescribeDestinationPortEventResponse
+         */
+        public async Task<DescribeDestinationPortEventResponse> DescribeDestinationPortEventAsync(DescribeDestinationPortEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDestinationPortEventWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -14078,12 +14242,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI DescribeWebCCRules is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+         *
          * @summary Queries the custom frequency control rules that are created for a website.
          *
          * @param request DescribeWebCCRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeWebCCRulesResponse
          */
+        // Deprecated
         public DescribeWebCCRulesResponse DescribeWebCCRulesWithOptions(DescribeWebCCRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14124,12 +14291,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI DescribeWebCCRules is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+         *
          * @summary Queries the custom frequency control rules that are created for a website.
          *
          * @param request DescribeWebCCRulesRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return DescribeWebCCRulesResponse
          */
+        // Deprecated
         public async Task<DescribeWebCCRulesResponse> DescribeWebCCRulesWithOptionsAsync(DescribeWebCCRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14170,11 +14340,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI DescribeWebCCRules is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+         *
          * @summary Queries the custom frequency control rules that are created for a website.
          *
          * @param request DescribeWebCCRulesRequest
          * @return DescribeWebCCRulesResponse
          */
+        // Deprecated
         public DescribeWebCCRulesResponse DescribeWebCCRules(DescribeWebCCRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14182,11 +14355,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI DescribeWebCCRules is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+         *
          * @summary Queries the custom frequency control rules that are created for a website.
          *
          * @param request DescribeWebCCRulesRequest
          * @return DescribeWebCCRulesResponse
          */
+        // Deprecated
         public async Task<DescribeWebCCRulesResponse> DescribeWebCCRulesAsync(DescribeWebCCRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19286,10 +19462,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI ModifyWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+         *
          * @param request ModifyWebCCRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyWebCCRuleResponse
          */
+        // Deprecated
         public ModifyWebCCRuleResponse ModifyWebCCRuleWithOptions(ModifyWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19350,10 +19529,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI ModifyWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+         *
          * @param request ModifyWebCCRuleRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyWebCCRuleResponse
          */
+        // Deprecated
         public async Task<ModifyWebCCRuleResponse> ModifyWebCCRuleWithOptionsAsync(ModifyWebCCRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19414,9 +19596,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI ModifyWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+         *
          * @param request ModifyWebCCRuleRequest
          * @return ModifyWebCCRuleResponse
          */
+        // Deprecated
         public ModifyWebCCRuleResponse ModifyWebCCRule(ModifyWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19424,9 +19609,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         }
 
         /**
+         * @deprecated OpenAPI ModifyWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+         *
          * @param request ModifyWebCCRuleRequest
          * @return ModifyWebCCRuleResponse
          */
+        // Deprecated
         public async Task<ModifyWebCCRuleResponse> ModifyWebCCRuleAsync(ModifyWebCCRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

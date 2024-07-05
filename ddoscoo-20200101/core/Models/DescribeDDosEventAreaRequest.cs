@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public string Ip { get; set; }
 
+        [NameInMap("Range")]
+        [Validation(Required=false)]
+        public long? Range { get; set; }
+
         /// <summary>
         /// The UNIX timestamp when the query starts. Unit: seconds.
         /// 
