@@ -1265,7 +1265,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 上传国密证书
+         * @summary Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
          *
          * @param request CreateSM2CertRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1327,7 +1327,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 上传国密证书
+         * @summary Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
          *
          * @param request CreateSM2CertRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -1389,7 +1389,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 上传国密证书
+         * @summary Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
          *
          * @param request CreateSM2CertRequest
          * @return CreateSM2CertResponse
@@ -1401,7 +1401,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         }
 
         /**
-         * @summary 上传国密证书
+         * @summary Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
          *
          * @param request CreateSM2CertRequest
          * @return CreateSM2CertResponse
@@ -13202,6 +13202,114 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyTemplateResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /**
+         * @summary 释放实例
+         *
+         * @param request ReleaseInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReleaseInstanceResponse
+         */
+        public ReleaseInstanceResponse ReleaseInstanceWithOptions(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleaseInstance",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleaseInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @summary 释放实例
+         *
+         * @param request ReleaseInstanceRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return ReleaseInstanceResponse
+         */
+        public async Task<ReleaseInstanceResponse> ReleaseInstanceWithOptionsAsync(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleaseInstance",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @summary 释放实例
+         *
+         * @param request ReleaseInstanceRequest
+         * @return ReleaseInstanceResponse
+         */
+        public ReleaseInstanceResponse ReleaseInstance(ReleaseInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReleaseInstanceWithOptions(request, runtime);
+        }
+
+        /**
+         * @summary 释放实例
+         *
+         * @param request ReleaseInstanceRequest
+         * @return ReleaseInstanceResponse
+         */
+        public async Task<ReleaseInstanceResponse> ReleaseInstanceAsync(ReleaseInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReleaseInstanceWithOptionsAsync(request, runtime);
         }
 
         /**
