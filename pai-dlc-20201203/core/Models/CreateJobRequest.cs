@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         }
 
+        [NameInMap("CredentialConfig")]
+        [Validation(Required=false)]
+        public CredentialConfig CredentialConfig { get; set; }
+
         [NameInMap("DataSources")]
         [Validation(Required=false)]
         public List<CreateJobRequestDataSources> DataSources { get; set; }
