@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class DeleteTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the custom transcoding template that is deleted.
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }

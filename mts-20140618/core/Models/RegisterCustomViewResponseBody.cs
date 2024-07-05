@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
-    public class QueryVideoQualityJobRequest : TeaModel {
-        [NameInMap("JobId")]
+    public class RegisterCustomViewResponseBody : TeaModel {
+        [NameInMap("CustomViewId")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string CustomViewId { get; set; }
 
-        [NameInMap("UserId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? UserId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

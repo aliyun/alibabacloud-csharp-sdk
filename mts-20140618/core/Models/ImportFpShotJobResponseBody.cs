@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ImportFpShotJobResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the import job. We recommend that you save this ID for subsequent operations.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

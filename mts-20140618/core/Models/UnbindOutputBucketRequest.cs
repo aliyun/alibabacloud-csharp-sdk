@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class UnbindOutputBucketRequest : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Bucket")]
         [Validation(Required=false)]
         public string Bucket { get; set; }

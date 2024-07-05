@@ -12,6 +12,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ActivateMediaWorkflowRequest : TeaModel {
+        /// <summary>
+        /// The ID of the media workflow. You can obtain the ID from the response of the [AddMediaWorkflow](https://help.aliyun.com/document_detail/44437.html) operation.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MediaWorkflowId")]
         [Validation(Required=false)]
         public string MediaWorkflowId { get; set; }

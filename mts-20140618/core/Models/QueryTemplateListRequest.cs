@@ -25,6 +25,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The response parameters.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateIds")]
         [Validation(Required=false)]
         public string TemplateIds { get; set; }

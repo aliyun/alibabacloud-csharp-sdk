@@ -8,14 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
-    public class ReportFpShotJobResultRequest : TeaModel {
-        [NameInMap("Details")]
+    public class DeleteCustomEntityRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("Algorithm")]
         [Validation(Required=false)]
-        public string Details { get; set; }
+        public string Algorithm { get; set; }
 
-        [NameInMap("JobId")]
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("CustomEntityId")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string CustomEntityId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("CustomGroupId")]
+        [Validation(Required=false)]
+        public string CustomGroupId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -32,10 +45,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("Result")]
-        [Validation(Required=false)]
-        public string Result { get; set; }
 
     }
 

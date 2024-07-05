@@ -17,6 +17,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the MPS queue that you want to delete. To obtain the ID of the MPS queue, you can log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
         public string PipelineId { get; set; }

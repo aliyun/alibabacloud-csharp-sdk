@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
-    public class QueryEditingJobListRequest : TeaModel {
-        [NameInMap("JobIds")]
+    public class ListCustomGroupsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("Algorithm")]
         [Validation(Required=false)]
-        public string JobIds { get; set; }
+        public string Algorithm { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -20,6 +23,20 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

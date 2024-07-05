@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryMediaWorkflowListRequest : TeaModel {
+        /// <summary>
+        /// The IDs of the media workflows that you want to query. To obtain the IDs of the media workflows, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Workflow Settings** in the left-side navigation pane. You can query up to 10 media workflows at a time. Separate multiple IDs of media workflows with commas (,).
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MediaWorkflowIds")]
         [Validation(Required=false)]
         public string MediaWorkflowIds { get; set; }

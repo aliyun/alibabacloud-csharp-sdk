@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class SubmitIProductionJobRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("FunctionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }

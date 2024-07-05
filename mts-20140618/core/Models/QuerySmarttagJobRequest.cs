@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QuerySmarttagJobRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }

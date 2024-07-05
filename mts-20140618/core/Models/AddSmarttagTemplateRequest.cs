@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class AddSmarttagTemplateRequest : TeaModel {
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AnalyseTypes")]
         [Validation(Required=false)]
         public string AnalyseTypes { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string FaceCustomParamsConfig { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Industry")]
         [Validation(Required=false)]
         public string Industry { get; set; }
@@ -45,6 +51,14 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string LabelVersion { get; set; }
 
+        [NameInMap("LandmarkGroupIds")]
+        [Validation(Required=false)]
+        public string LandmarkGroupIds { get; set; }
+
+        [NameInMap("ObjectGroupIds")]
+        [Validation(Required=false)]
+        public string ObjectGroupIds { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -61,10 +75,16 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Scene")]
         [Validation(Required=false)]
         public string Scene { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }

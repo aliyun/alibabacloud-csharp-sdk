@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string LabelVersion { get; set; }
 
+        [NameInMap("LandmarkGroupIds")]
+        [Validation(Required=false)]
+        public string LandmarkGroupIds { get; set; }
+
+        [NameInMap("ObjectGroupIds")]
+        [Validation(Required=false)]
+        public string ObjectGroupIds { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -65,6 +73,9 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string Scene { get; set; }
 
+        /// <summary>
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }

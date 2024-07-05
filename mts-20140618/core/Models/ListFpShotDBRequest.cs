@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ListFpShotDBRequest : TeaModel {
+        /// <summary>
+        /// The ID of the media fingerprint library. You can obtain the library ID from the response parameters of the [CreateFpShotDB](https://help.aliyun.com/document_detail/170149.html) operation. You can query up to 10 libraries at a time. Separate multiple library IDs with commas (,).
+        /// </summary>
         [NameInMap("FpDBIds")]
         [Validation(Required=false)]
         public string FpDBIds { get; set; }

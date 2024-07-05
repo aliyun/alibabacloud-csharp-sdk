@@ -25,6 +25,11 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the watermark template that you want to delete. To obtain the template ID, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Global Settings** > **Watermark Templates** in the left-side navigation pane.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("WaterMarkTemplateId")]
         [Validation(Required=false)]
         public string WaterMarkTemplateId { get; set; }

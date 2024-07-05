@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryAnalysisJobListRequest : TeaModel {
+        /// <summary>
+        /// The template analysis job ID list.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("AnalysisJobIds")]
         [Validation(Required=false)]
         public string AnalysisJobIds { get; set; }

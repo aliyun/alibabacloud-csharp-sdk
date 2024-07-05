@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
-    public class ReportFpShotJobResultResponseBody : TeaModel {
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
-
+    public class DeleteCustomViewResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

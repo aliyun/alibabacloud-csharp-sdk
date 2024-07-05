@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class UpdateMediaPublishStateRequest : TeaModel {
+        /// <summary>
+        /// The ID of the media file whose publishing status you want to update. You can obtain the ID of a media file from the response of the [AddMedia](https://help.aliyun.com/document_detail/44458.html) operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the required video and click **Manage**. The ID of the video is displayed on the Basics tab.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
@@ -21,6 +26,12 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The publishing status. Default value: **Initialed**. Valid values:
+        /// 
+        /// *   **true**: published.
+        /// *   **false**: unpublished.
+        /// </summary>
         [NameInMap("Publish")]
         [Validation(Required=false)]
         public bool? Publish { get; set; }

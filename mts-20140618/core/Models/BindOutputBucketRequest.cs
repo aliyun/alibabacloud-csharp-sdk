@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class BindOutputBucketRequest : TeaModel {
+        /// <summary>
+        /// The name of the Object Storage Service (OSS) bucket that you want to bind. The name can be up to 64 bytes in size and can contain letters, digits, and hyphens (-). The name cannot start with a special character.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("Bucket")]
         [Validation(Required=false)]
         public string Bucket { get; set; }
@@ -28,10 +33,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RoleArn")]
-        [Validation(Required=false)]
-        public string RoleArn { get; set; }
 
     }
 

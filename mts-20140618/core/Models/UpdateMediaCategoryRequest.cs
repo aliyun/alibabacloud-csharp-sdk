@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class UpdateMediaCategoryRequest : TeaModel {
+        /// <summary>
+        /// The ID of the category. The value cannot be negative.
+        /// </summary>
         [NameInMap("CateId")]
         [Validation(Required=false)]
         public long? CateId { get; set; }
 
+        /// <summary>
+        /// The ID of the media file whose category you want to update.
+        /// 
+        /// > To obtain the ID of a media file, you can call the [AddMedia](https://help.aliyun.com/document_detail/44458.html) operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management > Media List**. Find the required video and click **Manage** in the Actions column. The ID of the video is displayed on the Basics tab.
+        /// 
+        /// This parameter is required.
+        /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }

@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
-    public class SubmitEditingJobsResponse : TeaModel {
+    public class DeleteCustomEntityResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
-        public SubmitEditingJobsResponseBody Body { get; set; }
+        [Validation(Required=false)]
+        public DeleteCustomEntityResponseBody Body { get; set; }
 
     }
 
