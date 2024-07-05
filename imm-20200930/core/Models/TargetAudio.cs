@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public string BitrateOption { get; set; }
 
+            [NameInMap("BitsPerSample")]
+            [Validation(Required=false)]
+            public int? BitsPerSample { get; set; }
+
             [NameInMap("Channel")]
             [Validation(Required=false)]
             public int? Channel { get; set; }

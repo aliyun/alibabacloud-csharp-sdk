@@ -8,22 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class ElementContent : TeaModel {
-        [NameInMap("Content")]
+    public class SceneElement : TeaModel {
+        [NameInMap("FrameTimes")]
         [Validation(Required=false)]
-        public string Content { get; set; }
+        public List<long?> FrameTimes { get; set; }
 
         [NameInMap("TimeRange")]
         [Validation(Required=false)]
         public List<long?> TimeRange { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("URL")]
-        [Validation(Required=false)]
-        public string URL { get; set; }
 
     }
 

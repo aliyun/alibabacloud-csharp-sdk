@@ -133,6 +133,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string FileModifiedTime { get; set; }
 
+        [NameInMap("FileStatus")]
+        [Validation(Required=false)]
+        public string FileStatus { get; set; }
+
         [NameInMap("Filename")]
         [Validation(Required=false)]
         public string Filename { get; set; }
@@ -260,6 +264,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
+
+        [NameInMap("Reason")]
+        [Validation(Required=false)]
+        public string Reason { get; set; }
+
+        [NameInMap("SceneElements")]
+        [Validation(Required=false)]
+        public List<SceneElement> SceneElements { get; set; }
 
         [NameInMap("SemanticTypes")]
         [Validation(Required=false)]
