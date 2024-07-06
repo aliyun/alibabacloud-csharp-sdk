@@ -6323,6 +6323,114 @@ namespace AlibabaCloud.SDK.CCC20200701
         }
 
         /**
+         * @param request FinishTicketTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FinishTicketTaskResponse
+         */
+        public FinishTicketTaskResponse FinishTicketTaskWithOptions(FinishTicketTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketId))
+            {
+                query["TicketId"] = request.TicketId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FinishTicketTask",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FinishTicketTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+         * @param request FinishTicketTaskRequest
+         * @param runtime runtime options for this request RuntimeOptions
+         * @return FinishTicketTaskResponse
+         */
+        public async Task<FinishTicketTaskResponse> FinishTicketTaskWithOptionsAsync(FinishTicketTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketId))
+            {
+                query["TicketId"] = request.TicketId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FinishTicketTask",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FinishTicketTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+         * @param request FinishTicketTaskRequest
+         * @return FinishTicketTaskResponse
+         */
+        public FinishTicketTaskResponse FinishTicketTask(FinishTicketTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FinishTicketTaskWithOptions(request, runtime);
+        }
+
+        /**
+         * @param request FinishTicketTaskRequest
+         * @return FinishTicketTaskResponse
+         */
+        public async Task<FinishTicketTaskResponse> FinishTicketTaskAsync(FinishTicketTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FinishTicketTaskWithOptionsAsync(request, runtime);
+        }
+
+        /**
          * @summary GetAccessChannelOfStaging
          *
          * @param request GetAccessChannelOfStagingRequest
