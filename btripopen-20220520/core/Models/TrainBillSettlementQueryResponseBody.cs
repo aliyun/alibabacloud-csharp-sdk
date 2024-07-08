@@ -116,6 +116,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CascadeDepartment { get; set; }
 
+                [NameInMap("change_affiliate_no")]
+                [Validation(Required=false)]
+                public string ChangeAffiliateNo { get; set; }
+
+                [NameInMap("change_apply_id")]
+                [Validation(Required=false)]
+                public string ChangeApplyId { get; set; }
+
                 [NameInMap("change_fee")]
                 [Validation(Required=false)]
                 public double? ChangeFee { get; set; }
@@ -224,6 +232,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ProjectName { get; set; }
 
+                [NameInMap("refund_affiliate_no")]
+                [Validation(Required=false)]
+                public string RefundAffiliateNo { get; set; }
+
+                [NameInMap("refund_apply_id")]
+                [Validation(Required=false)]
+                public string RefundApplyId { get; set; }
+
                 [NameInMap("refund_fee")]
                 [Validation(Required=false)]
                 public double? RefundFee { get; set; }
@@ -275,6 +291,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("short_ticket_no")]
                 [Validation(Required=false)]
                 public string ShortTicketNo { get; set; }
+
+                [NameInMap("speed_package_fee")]
+                [Validation(Required=false)]
+                public double? SpeedPackageFee { get; set; }
 
                 [NameInMap("status")]
                 [Validation(Required=false)]

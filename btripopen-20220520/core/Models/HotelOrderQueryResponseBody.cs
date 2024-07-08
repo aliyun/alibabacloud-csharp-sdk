@@ -28,6 +28,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public HotelOrderQueryResponseBodyModuleHotelInfo HotelInfo { get; set; }
             public class HotelOrderQueryResponseBodyModuleHotelInfo : TeaModel {
+                [NameInMap("brand_code")]
+                [Validation(Required=false)]
+                public string BrandCode { get; set; }
+
+                [NameInMap("brand_group")]
+                [Validation(Required=false)]
+                public string BrandGroup { get; set; }
+
+                [NameInMap("brand_name")]
+                [Validation(Required=false)]
+                public string BrandName { get; set; }
+
                 [NameInMap("check_in")]
                 [Validation(Required=false)]
                 public long? CheckIn { get; set; }

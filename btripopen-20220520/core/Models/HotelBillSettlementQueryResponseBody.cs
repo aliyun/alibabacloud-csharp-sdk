@@ -192,6 +192,22 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Index { get; set; }
 
+                [NameInMap("ins_order_id")]
+                [Validation(Required=false)]
+                public string InsOrderId { get; set; }
+
+                [NameInMap("insurance_number")]
+                [Validation(Required=false)]
+                public string InsuranceNumber { get; set; }
+
+                [NameInMap("insurance_price")]
+                [Validation(Required=false)]
+                public double? InsurancePrice { get; set; }
+
+                [NameInMap("insurance_product_name")]
+                [Validation(Required=false)]
+                public string InsuranceProductName { get; set; }
+
                 [NameInMap("invoice_title")]
                 [Validation(Required=false)]
                 public string InvoiceTitle { get; set; }

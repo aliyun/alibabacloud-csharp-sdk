@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BillDate { get; set; }
 
+                [NameInMap("category")]
+                [Validation(Required=false)]
+                public int? Category { get; set; }
+
                 /// <summary>
                 /// 校验码
                 /// </summary>
@@ -176,12 +180,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string InvoiceTitle { get; set; }
 
+                [NameInMap("invoice_type")]
+                [Validation(Required=false)]
+                public int? InvoiceType { get; set; }
+
                 /// <summary>
                 /// 机器码
                 /// </summary>
                 [NameInMap("machine_code")]
                 [Validation(Required=false)]
                 public string MachineCode { get; set; }
+
+                [NameInMap("ofd_oss_url")]
+                [Validation(Required=false)]
+                public string OfdOssUrl { get; set; }
 
                 [NameInMap("order_id")]
                 [Validation(Required=false)]
@@ -292,6 +304,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("total_amount_in_words")]
                 [Validation(Required=false)]
                 public string TotalAmountInWords { get; set; }
+
+                [NameInMap("xml_oss_url")]
+                [Validation(Required=false)]
+                public string XmlOssUrl { get; set; }
 
             }
 

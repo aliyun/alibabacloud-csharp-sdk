@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public MealOrderDetailQueryResponseBodyModule Module { get; set; }
         public class MealOrderDetailQueryResponseBodyModule : TeaModel {
+            [NameInMap("apply_id")]
+            [Validation(Required=false)]
+            public long? ApplyId { get; set; }
+
             [NameInMap("corp_code_order_id")]
             [Validation(Required=false)]
             public string CorpCodeOrderId { get; set; }
