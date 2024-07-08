@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<DescribeAccessRulesResponseBodyAccessRulesAccessRule> AccessRule { get; set; }
             public class DescribeAccessRulesResponseBodyAccessRulesAccessRule : TeaModel {
+                /// <summary>
+                /// The name of the permission group.
+                /// </summary>
                 [NameInMap("AccessGroupName")]
                 [Validation(Required=false)]
                 public string AccessGroupName { get; set; }
@@ -31,6 +34,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string AccessRuleId { get; set; }
 
+                /// <summary>
+                /// The type of the file system.
+                /// 
+                /// Valid values:
+                /// 
+                /// *   standard: General-purpose Apsara File Storage NAS (NAS) file system
+                /// *   extreme: Extreme NAS file system
+                /// </summary>
                 [NameInMap("FileSystemType")]
                 [Validation(Required=false)]
                 public string FileSystemType { get; set; }
@@ -65,6 +76,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string RWAccess { get; set; }
 
+                /// <summary>
+                /// The region ID.
+                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }

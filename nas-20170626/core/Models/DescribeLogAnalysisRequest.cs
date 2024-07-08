@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeLogAnalysisRequest : TeaModel {
+        /// <summary>
+        /// The type of the file system.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   standard: General-purpose NAS file system
+        /// *   extreme: Extreme NAS file system
+        /// *   all (default): all types
+        /// </summary>
         [NameInMap("FileSystemType")]
         [Validation(Required=false)]
         public string FileSystemType { get; set; }

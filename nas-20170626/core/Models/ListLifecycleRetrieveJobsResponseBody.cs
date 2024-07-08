@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string JobId { get; set; }
 
+            /// <summary>
+            /// The execution path of the data retrieval task.
+            /// </summary>
             [NameInMap("Paths")]
             [Validation(Required=false)]
             public List<string> Paths { get; set; }
@@ -69,6 +72,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// The storage class.
+            /// 
+            /// *   InfrequentAccess: the IA storage class.
+            /// *   Archive: the Archive storage class.
+            /// </summary>
             [NameInMap("StorageType")]
             [Validation(Required=false)]
             public string StorageType { get; set; }

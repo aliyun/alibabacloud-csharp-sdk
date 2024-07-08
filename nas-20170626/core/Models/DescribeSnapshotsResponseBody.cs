@@ -69,6 +69,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public int? EncryptType { get; set; }
 
+                /// <summary>
+                /// The type of the file system.
+                /// </summary>
                 [NameInMap("FileSystemType")]
                 [Validation(Required=false)]
                 public string FileSystemType { get; set; }
@@ -119,6 +122,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string SnapshotName { get; set; }
 
+                /// <summary>
+                /// The snapshot type. Valid values:
+                /// 
+                /// *   auto: automatically created snapshots
+                /// *   user: manually created snapshots
+                /// </summary>
                 [NameInMap("SnapshotType")]
                 [Validation(Required=false)]
                 public string SnapshotType { get; set; }

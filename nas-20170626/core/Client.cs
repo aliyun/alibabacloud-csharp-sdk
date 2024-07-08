@@ -9832,7 +9832,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         }
 
         /**
-         * @summary Queries whether a specified directory contains files stored in the IA storage medium or whether a specified file is stored in the IA storage medium.
+         * @summary Queries whether a directory contains files that are stored in the Infrequent Access (IA) or Archive storage class, or whether a file is stored in the IA or Archive storage class.
          *
          * @description Only General-purpose NAS file systems support this operation.
          *
@@ -9872,7 +9872,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         }
 
         /**
-         * @summary Queries whether a specified directory contains files stored in the IA storage medium or whether a specified file is stored in the IA storage medium.
+         * @summary Queries whether a directory contains files that are stored in the Infrequent Access (IA) or Archive storage class, or whether a file is stored in the IA or Archive storage class.
          *
          * @description Only General-purpose NAS file systems support this operation.
          *
@@ -9912,7 +9912,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         }
 
         /**
-         * @summary Queries whether a specified directory contains files stored in the IA storage medium or whether a specified file is stored in the IA storage medium.
+         * @summary Queries whether a directory contains files that are stored in the Infrequent Access (IA) or Archive storage class, or whether a file is stored in the IA or Archive storage class.
          *
          * @description Only General-purpose NAS file systems support this operation.
          *
@@ -9926,7 +9926,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         }
 
         /**
-         * @summary Queries whether a specified directory contains files stored in the IA storage medium or whether a specified file is stored in the IA storage medium.
+         * @summary Queries whether a directory contains files that are stored in the Infrequent Access (IA) or Archive storage class, or whether a file is stored in the IA or Archive storage class.
          *
          * @description Only General-purpose NAS file systems support this operation.
          *
@@ -11530,13 +11530,19 @@ namespace AlibabaCloud.SDK.NAS20170626
         /**
          * @summary Modifies the description of a file system.
          *
-         * @param request ModifyFileSystemRequest
+         * @param tmpReq ModifyFileSystemRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyFileSystemResponse
          */
-        public ModifyFileSystemResponse ModifyFileSystemWithOptions(ModifyFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyFileSystemResponse ModifyFileSystemWithOptions(ModifyFileSystemRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyFileSystemShrinkRequest request = new ModifyFileSystemShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
+            {
+                request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -11545,6 +11551,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
             {
                 query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionsShrink))
+            {
+                query["Options"] = request.OptionsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11568,13 +11578,19 @@ namespace AlibabaCloud.SDK.NAS20170626
         /**
          * @summary Modifies the description of a file system.
          *
-         * @param request ModifyFileSystemRequest
+         * @param tmpReq ModifyFileSystemRequest
          * @param runtime runtime options for this request RuntimeOptions
          * @return ModifyFileSystemResponse
          */
-        public async Task<ModifyFileSystemResponse> ModifyFileSystemWithOptionsAsync(ModifyFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyFileSystemResponse> ModifyFileSystemWithOptionsAsync(ModifyFileSystemRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyFileSystemShrinkRequest request = new ModifyFileSystemShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
+            {
+                request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -11583,6 +11599,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
             {
                 query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionsShrink))
+            {
+                query["Options"] = request.OptionsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13074,7 +13094,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /**
          * @summary Creates a directory quota for a file system.
          *
-         * @description Only General-purpose NFS file systems support the directory quota feature.
+         * @description Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.
          *
          * @param request SetDirQuotaRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13134,7 +13154,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /**
          * @summary Creates a directory quota for a file system.
          *
-         * @description Only General-purpose NFS file systems support the directory quota feature.
+         * @description Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.
          *
          * @param request SetDirQuotaRequest
          * @param runtime runtime options for this request RuntimeOptions
@@ -13194,7 +13214,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /**
          * @summary Creates a directory quota for a file system.
          *
-         * @description Only General-purpose NFS file systems support the directory quota feature.
+         * @description Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.
          *
          * @param request SetDirQuotaRequest
          * @return SetDirQuotaResponse
@@ -13208,7 +13228,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /**
          * @summary Creates a directory quota for a file system.
          *
-         * @description Only General-purpose NFS file systems support the directory quota feature.
+         * @description Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.
          *
          * @param request SetDirQuotaRequest
          * @return SetDirQuotaResponse

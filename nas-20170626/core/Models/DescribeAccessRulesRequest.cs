@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessGroupName { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// The rule ID.
         /// </summary>
         [NameInMap("AccessRuleId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class GetDirectoryOrFilePropertiesResponseBody : TeaModel {
         /// <summary>
-        /// The details about the file or directory.
+        /// The details about the files or directories.
         /// </summary>
         [NameInMap("Entry")]
         [Validation(Required=false)]
@@ -38,6 +38,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string CTime { get; set; }
 
+            /// <summary>
+            /// Indicates whether the directory contains files stored in the Archive storage class.
+            /// 
+            /// This parameter is returned only if the Type parameter is set to Directory.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   true: The directory contains files stored in the Archive storage class.
+            /// *   false: The directory does not contain files stored in the Archive storage class.
+            /// </summary>
             [NameInMap("HasArchiveFile")]
             [Validation(Required=false)]
             public bool? HasArchiveFile { get; set; }

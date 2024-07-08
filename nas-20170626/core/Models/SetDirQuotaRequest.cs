@@ -30,7 +30,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// The absolute path of a directory.
+        /// The absolute path of the directory in the file system.
+        /// 
+        /// > *   You can set quotas only for the directories that have been created in a NAS file system. The path of the directory that you specify for a quota is the absolute path of the directory in the NAS file system, but not the local path of the compute node, such as an Elastic Compute Service (ECS) instance or a container.
+        /// > *   Directories whose names contain Chinese characters are not supported.
         /// 
         /// This parameter is required.
         /// </summary>

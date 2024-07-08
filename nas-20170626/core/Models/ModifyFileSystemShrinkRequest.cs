@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
-    public class ModifyFileSystemRequest : TeaModel {
+    public class ModifyFileSystemShrinkRequest : TeaModel {
         /// <summary>
         /// The description of the file system.
         /// 
@@ -38,13 +38,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         [NameInMap("Options")]
         [Validation(Required=false)]
-        public ModifyFileSystemRequestOptions Options { get; set; }
-        public class ModifyFileSystemRequestOptions : TeaModel {
-            [NameInMap("EnableOplock")]
-            [Validation(Required=false)]
-            public bool? EnableOplock { get; set; }
-
-        }
+        public string OptionsShrink { get; set; }
 
     }
 

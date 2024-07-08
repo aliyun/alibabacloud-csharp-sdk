@@ -50,6 +50,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public int? FileSystemNums { get; set; }
 
+                /// <summary>
+                /// The type of the file system.
+                /// </summary>
                 [NameInMap("FileSystemType")]
                 [Validation(Required=false)]
                 public string FileSystemType { get; set; }

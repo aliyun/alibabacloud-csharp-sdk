@@ -314,6 +314,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 }
 
+                [NameInMap("Options")]
+                [Validation(Required=false)]
+                public DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions Options { get; set; }
+                public class DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions : TeaModel {
+                    [NameInMap("EnableOplock")]
+                    [Validation(Required=false)]
+                    public bool? EnableOplock { get; set; }
+
+                }
+
                 /// <summary>
                 /// The information about storage plans.
                 /// </summary>
