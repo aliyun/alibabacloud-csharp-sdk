@@ -21,6 +21,22 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public long? AccumulatedRunningTimeInMs { get; set; }
 
+        [NameInMap("Affinity")]
+        [Validation(Required=false)]
+        public GetInstanceResponseBodyAffinity Affinity { get; set; }
+        public class GetInstanceResponseBodyAffinity : TeaModel {
+            [NameInMap("CPU")]
+            [Validation(Required=false)]
+            public GetInstanceResponseBodyAffinityCPU CPU { get; set; }
+            public class GetInstanceResponseBodyAffinityCPU : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+            }
+
+        }
+
         [NameInMap("CloudDisks")]
         [Validation(Required=false)]
         public List<GetInstanceResponseBodyCloudDisks> CloudDisks { get; set; }

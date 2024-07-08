@@ -159,6 +159,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 body["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Affinity))
+            {
+                body["Affinity"] = request.Affinity;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudDisks))
             {
                 body["CloudDisks"] = request.CloudDisks;
@@ -258,6 +262,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
             {
                 body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Affinity))
+            {
+                body["Affinity"] = request.Affinity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudDisks))
             {
@@ -2767,6 +2775,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 body["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Affinity))
+            {
+                body["Affinity"] = request.Affinity;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudDisks))
             {
                 body["CloudDisks"] = request.CloudDisks;
@@ -2866,6 +2878,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
             {
                 body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Affinity))
+            {
+                body["Affinity"] = request.Affinity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudDisks))
             {

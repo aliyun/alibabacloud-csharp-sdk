@@ -13,6 +13,22 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        [NameInMap("Affinity")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestAffinity Affinity { get; set; }
+        public class CreateInstanceRequestAffinity : TeaModel {
+            [NameInMap("CPU")]
+            [Validation(Required=false)]
+            public CreateInstanceRequestAffinityCPU CPU { get; set; }
+            public class CreateInstanceRequestAffinityCPU : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+            }
+
+        }
+
         [NameInMap("CloudDisks")]
         [Validation(Required=false)]
         public List<CreateInstanceRequestCloudDisks> CloudDisks { get; set; }
