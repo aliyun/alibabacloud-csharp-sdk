@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
+        [NameInMap("FlowName")]
+        [Validation(Required=false)]
+        public string FlowName { get; set; }
+
         /// <summary>
         /// The phone number to be queried.
         /// 
@@ -61,6 +65,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ResultCount")]
+        [Validation(Required=false)]
+        public string ResultCount { get; set; }
 
     }
 
